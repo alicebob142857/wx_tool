@@ -584,9 +584,19 @@ async function listJobHistory(request: Request, env: Env): Promise<Response> {
 }
 
 async function downloadJobHistoryCsv(request: Request, env: Env): Promise<Response> {
-  const rows = await env.JOB_DB.prepare(`${JOB_SELECT}
-    ORDER BY p.report_date DESC, p.ranking_key DESC, p.recommendation_score DESC LIMIT 20000`).all<any>();
-  return historyCsvResponse(request, env, rows.results || []);
+  const allRows: any[] = [];
+  let offset = 0;
+  const batchSize = 5000;
+  while (true) {
+    const rows = await env.JOB_DB.prepare(`${JOB_SELECT}
+      ORDER BY p.report_date DESC, p.ranking_key DESC, p.recommendation_score DESC
+      LIMIT ? OFFSET ?`).bind(batchSize, offset).all<any>();
+    const batch = rows.results || [];
+    allRows.push(...batch);
+    if (batch.length < batchSize) break;
+    offset += batch.length;
+  }
+  return historyCsvResponse(request, env, allRows);
 }
 
 export default {

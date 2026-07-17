@@ -252,10 +252,28 @@ function populateAccounts() {
   }
 }
 
+async function loadAllHistory(base) {
+  const jobs = [];
+  let offset = 0;
+  let total = 0;
+  let firstPage = null;
+  do {
+    const page = await getJson(`${base}/api/job-history?limit=5000&offset=${offset}`);
+    if (!page) break;
+    if (!firstPage) firstPage = page;
+    total = Number(page.total || 0);
+    const batch = Array.isArray(page.jobs) ? page.jobs : [];
+    jobs.push(...batch);
+    offset += batch.length;
+    if (!batch.length) break;
+  } while (jobs.length < total);
+  return firstPage ? { ...firstPage, jobs, total } : null;
+}
+
 async function loadReport(date) {
   const base = state.runtime?.authServiceUrl?.replace(/\/$/, "");
   let report = null;
-  if (date === "__all__" && base) report = await getJson(`${base}/api/job-history?limit=5000`);
+  if (date === "__all__" && base) report = await loadAllHistory(base);
   else if (date && base) report = await getJson(`${base}/api/jobs?date=${encodeURIComponent(date)}&limit=1000`);
   if ((!report || !report.jobs?.length) && date && date !== "__all__") {
     const fallback = await getJson(`data/daily/${date}.json`, { date, items: [], stats: state.status?.stats || null });
