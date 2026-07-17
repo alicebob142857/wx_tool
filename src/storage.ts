@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import type { DailyReport, ReportItem, SiteStatus } from "./types.js";
 import { sortPositions } from "./recommendation.js";
+import { buildStaticHistory } from "./static-history.js";
 
 interface SeenFile {
   version: 1;
@@ -94,6 +95,7 @@ export async function writeDailyReport(
   index.days = [entry, ...index.days.filter(day => day.date !== report.date)].slice(0, 365);
   index.generatedAt = merged.generatedAt;
   await writeJson(indexFile, index);
+  await buildStaticHistory(rootDir);
   return merged;
 }
 

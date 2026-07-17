@@ -5,7 +5,10 @@ const text = (selector, value) => { const node = $(selector); if (node) node.tex
 
 async function getJson(url, fallback = null) {
   try {
-    const response = await fetch(`${url}${url.includes("?") ? "&" : "?"}v=${Date.now()}`, { cache: "no-store" });
+    const response = await fetch(`${url}${url.includes("?") ? "&" : "?"}v=${Date.now()}`, {
+      cache: "no-store",
+      signal: AbortSignal.timeout(8000),
+    });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
   } catch (error) {
@@ -253,6 +256,9 @@ function populateAccounts() {
 }
 
 async function loadAllHistory(base) {
+  const staticHistory = await getJson("data/job-history.json");
+  if (staticHistory?.jobs) return staticHistory;
+  if (!base) return null;
   const jobs = [];
   let offset = 0;
   let total = 0;
@@ -273,13 +279,14 @@ async function loadAllHistory(base) {
 async function loadReport(date) {
   const base = state.runtime?.authServiceUrl?.replace(/\/$/, "");
   let report = null;
-  if (date === "__all__" && base) report = await loadAllHistory(base);
-  else if (date && base) report = await getJson(`${base}/api/jobs?date=${encodeURIComponent(date)}&limit=1000`);
-  if ((!report || !report.jobs?.length) && date && date !== "__all__") {
+  if (date === "__all__") report = await loadAllHistory(base);
+  else if (date) {
     const fallback = await getJson(`data/daily/${date}.json`, { date, items: [], stats: state.status?.stats || null });
     const fallbackJobs = flattenStaticReport(fallback);
-    if (!report || fallbackJobs.length) {
+    if (fallbackJobs.length) {
       report = { date, generatedAt: fallback.generatedAt, stats: fallback.stats, jobs: fallbackJobs };
+    } else if (base) {
+      report = await getJson(`${base}/api/jobs?date=${encodeURIComponent(date)}&limit=1000`);
     }
   }
   state.report = report || { date, jobs: [], stats: state.status?.stats || null };
@@ -294,8 +301,11 @@ async function setupDates() {
   const select = $("#date-select");
   select.replaceChildren();
   const base = state.runtime?.authServiceUrl?.replace(/\/$/, "");
-  const remoteDays = base ? await getJson(`${base}/api/job-days`) : null;
-  const days = remoteDays?.days?.some(day => Number(day.positionCount) > 0) ? remoteDays.days : state.index?.days || [];
+  let days = state.index?.days || [];
+  if (!days.length && base) {
+    const remoteDays = await getJson(`${base}/api/job-days`);
+    days = remoteDays?.days || [];
+  }
   if (!days.length) {
     const option = node("option", "", "暂无报告");
     option.value = "";
@@ -331,7 +341,13 @@ async function monitorRemoteAuth() {
     return;
   }
   const remote = await getJson(`${base}/api/status`);
-  if (!remote) return;
+  if (!remote) {
+    if (state.status?.state === "auth_required") {
+      showAuthPanel("授权服务当前无法访问，请切换网络后刷新页面并扫码。");
+      setServiceStatus("warning", "授权服务无法访问");
+    }
+    return;
+  }
   if (remote.auth?.valid) { hideAuthPanel(); setServiceStatus("ok", "授权正常"); return; }
   showAuthPanel();
   setServiceStatus("warning", "等待扫码授权");
@@ -366,7 +382,7 @@ async function init() {
   text("#footer-meta", state.status?.lastRunAt ? `最后运行：${fmtDateTime(state.status.lastRunAt)}` : "数据由 GitHub Actions 自动生成");
   const base = state.runtime?.authServiceUrl?.replace(/\/$/, "");
   const download = $("#download-excel");
-  if (download && base) download.href = `${base}/api/jobs.csv`;
+  if (download) download.href = "data/jobs.csv";
   if (state.status?.state === "ok") setServiceStatus("ok", "今日任务完成");
   else if (state.status?.state === "partial") setServiceStatus("warning", "部分任务失败");
   else if (state.status?.state === "auth_required") setServiceStatus("warning", "授权已过期");
