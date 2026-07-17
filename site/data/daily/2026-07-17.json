@@ -1,6 +1,6 @@
 {
   "date": "2026-07-17",
-  "generatedAt": "2026-07-17T05:58:29.685Z",
+  "generatedAt": "2026-07-17T06:19:57.982Z",
   "stats": {
     "accountsConfigured": 10,
     "accountsSucceeded": 10,
@@ -9,7 +9,7 @@
     "candidateArticles": 54,
     "relevantArticles": 50,
     "positionsExtracted": 42,
-    "failedArticles": 1
+    "failedArticles": 2
   },
   "items": [
     {
