@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="每日监测指定微信公众号中的文科与管理类招聘信息" />
+    <meta name="referrer" content="no-referrer" />
+    <title>文管求职雷达</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="返回今日结果">
+          <span class="brand-mark" aria-hidden="true">文</span>
+          <span>
+            <strong>文管求职雷达</strong>
+            <small>Humanities &amp; Management Jobs</small>
+          </span>
+        </a>
+        <div id="service-status" class="service-status is-loading">
+          <span class="status-dot"></span>
+          <span>正在读取状态</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">每日 10:00 自动更新</p>
+            <h1>从公众号推送里，<br /><span>筛出真正适合你的岗位。</span></h1>
+            <p class="hero-description">
+              监测 10 个高校就业与央国企招聘公众号，结合正文、图片 OCR 与 AI 判断，聚焦文科和管理类毕业生。
+            </p>
+          </div>
+          <div class="run-card">
+            <span class="run-label">当前报告</span>
+            <strong id="current-date">—</strong>
+            <span id="last-run">尚未运行</span>
+          </div>
+        </section>
+
+        <section id="auth-panel" class="auth-panel" hidden>
+          <div class="auth-copy">
+            <p class="eyebrow danger">需要操作</p>
+            <h2>微信公众号授权已过期</h2>
+            <p id="auth-message">请使用微信扫描右侧二维码，选择你管理的订阅号或服务号完成授权。</p>
+            <ol>
+              <li>微信扫码</li>
+              <li>选择公众号，而不是小程序</li>
+              <li>在手机上确认登录</li>
+            </ol>
+            <div id="scan-status" class="scan-status">等待二维码</div>
+          </div>
+          <div class="qr-wrap">
+            <div class="qr-frame">
+              <img id="auth-qr" alt="微信公众号登录二维码" hidden />
+              <div id="qr-placeholder" class="qr-placeholder">正在生成二维码…</div>
+            </div>
+            <small>二维码只用于恢复文章搜索权限</small>
+          </div>
+        </section>
+
+        <section class="stats" aria-label="今日采集统计">
+          <article>
+            <span>公众号</span>
+            <strong id="stat-accounts">—</strong>
+            <small>成功检查</small>
+          </article>
+          <article>
+            <span>推文</span>
+            <strong id="stat-articles">—</strong>
+            <small>本轮扫描</small>
+          </article>
+          <article>
+            <span>新文章</span>
+            <strong id="stat-new">—</strong>
+            <small>进入增量流程</small>
+          </article>
+          <article class="highlight-stat">
+            <span>值得关注</span>
+            <strong id="stat-relevant">—</strong>
+            <small>文科 / 管理类</small>
+          </article>
+        </section>
+
+        <section class="toolbar" aria-label="筛选报告">
+          <label>
+            <span>报告日期</span>
+            <select id="date-select" aria-label="选择报告日期"></select>
+          </label>
+          <label>
+            <span>公众号</span>
+            <select id="account-select" aria-label="筛选公众号">
+              <option value="">全部公众号</option>
+            </select>
+          </label>
+          <label class="search-field">
+            <span>搜索</span>
+            <input id="search-input" type="search" placeholder="岗位、专业或机构" />
+          </label>
+        </section>
+
+        <section class="results-heading">
+          <div>
+            <p class="eyebrow">Daily briefing</p>
+            <h2>今日值得关注</h2>
+          </div>
+          <span id="result-count">0 条结果</span>
+        </section>
+
+        <section id="results" class="results" aria-live="polite"></section>
+        <section id="empty-state" class="empty-state" hidden>
+          <div class="empty-icon">✓</div>
+          <h3>当前筛选条件下没有结果</h3>
+          <p>这不代表采集失败；可能只是今天没有发现明确适合文科或管理类毕业生的推送。</p>
+        </section>
+      </main>
+
+      <footer>
+        <p>自动筛选仅用于减少信息噪声，岗位要求请以公众号原文与招聘单位官网为准。</p>
+        <p id="footer-meta">数据由 GitHub Actions 自动生成</p>
+      </footer>
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
+

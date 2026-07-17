@@ -1,0 +1,92 @@
+name: Daily WeChat job scan
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [wechat_auth_refreshed]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: wx-job-monitor-daily
+  cancel-in-progress: false
+
+jobs:
+  collect-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install Chinese OCR
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-chi-sim
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate project
+        run: npm run check
+
+      - name: Collect and classify articles
+        id: collect
+        continue-on-error: true
+        env:
+          AUTH_SERVICE_URL: ${{ secrets.AUTH_SERVICE_URL }}
+          AUTH_SERVICE_TOKEN: ${{ secrets.AUTH_SERVICE_TOKEN }}
+          WX_EXPORTER_BASE_URL: https://down.mptext.top
+          WX_EXPORTER_AUTH_KEY: ${{ secrets.WX_EXPORTER_AUTH_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: deepseek-chat
+          DEEPSEEK_BASE_URL: https://api.deepseek.com
+          CLASSIFIER_MODE: deepseek
+          LOOKBACK_HOURS: "36"
+          MAX_ARTICLES_PER_RUN: "60"
+          OCR_MAX_IMAGES: "8"
+          OCR_TIMEOUT_MS: "60000"
+        run: npm run collect
+
+      - name: Persist daily data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data state/seen.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: update daily WeChat job report"
+            git push
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Report collector failure
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo "The collector failed; the status page was still deployed."
+          exit 1
+

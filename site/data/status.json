@@ -1,0 +1,12 @@
+{
+  "state": "never_run",
+  "message": "等待首次采集。",
+  "lastRunAt": null,
+  "auth": {
+    "status": "unknown",
+    "expiresAt": null,
+    "qrAvailable": false
+  },
+  "stats": null
+}
+
