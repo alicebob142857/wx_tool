@@ -1,16 +1,16 @@
 {
   "date": "all",
-  "generatedAt": "2026-07-17T07:58:06.082Z",
-  "total": 132,
+  "generatedAt": "2026-07-17T08:10:56.119Z",
+  "total": 131,
   "stats": {
     "accountsConfigured": 8,
     "accountsSucceeded": 8,
-    "articlesScanned": 26,
-    "newArticles": 26,
-    "candidateArticles": 26,
-    "relevantArticles": 26,
-    "positionsExtracted": 132,
-    "failedArticles": 4
+    "articlesScanned": 25,
+    "newArticles": 25,
+    "candidateArticles": 25,
+    "relevantArticles": 25,
+    "positionsExtracted": 131,
+    "failedArticles": 3
   },
   "jobs": [
     {
@@ -158,71 +158,6 @@
       "article": {
         "title": "中核集团2026年度夏季校园招聘",
         "url": "https://mp.weixin.qq.com/s/h8keZoxLPYjwb5pgLzbgbw",
-        "publishedAt": "2026-07-17T04:29:55.000Z",
-        "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-        "ocrUsed": false,
-        "ocrImageCount": 0,
-        "analysisSource": "heuristic",
-        "extractionComplete": false
-      }
-    },
-    {
-      "organization": "详见原文",
-      "jobTitle": "中兴微电子2027届校园招聘提前批",
-      "locations": [],
-      "headcount": null,
-      "employmentTypes": [
-        "提前批",
-        "校招",
-        "秋招",
-        "实习",
-        "春招"
-      ],
-      "education": {
-        "summary": "未明确",
-        "minimum": null,
-        "preferred": null,
-        "tier": "unspecified",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "金融、教育",
-        "accepted": [
-          "金融",
-          "教育"
-        ],
-        "fit": "humanities"
-      },
-      "applicationRequirements": [],
-      "compensation": {
-        "summary": "未完成模型提取",
-        "salary": null,
-        "benefits": [],
-        "quality": 0
-      },
-      "deadline": null,
-      "applicationMethod": null,
-      "recommendation": {
-        "score": 56,
-        "rankingKey": 1420257,
-        "level": "medium",
-        "reasons": [
-          "专业面向文科社科方向",
-          "学历要求未明确，需进一步核实",
-          "命中专业关键词：金融、教育"
-        ],
-        "concerns": [
-          "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
-        ]
-      },
-      "accessibility": 2,
-      "evidence": [],
-      "confidence": 0.58,
-      "id": "85f92d4786fa2a41",
-      "account": "央企求职网",
-      "article": {
-        "title": "中兴微电子2027届校园招聘提前批",
-        "url": "https://mp.weixin.qq.com/s/KzeQv3c5lEhUoSJEkk8xCA",
         "publishedAt": "2026-07-17T04:29:55.000Z",
         "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
         "ocrUsed": false,
