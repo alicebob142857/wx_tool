@@ -226,31 +226,46 @@ export async function analyzeArticle(
 
 对每个岗位详细但简洁地提取：岗位、岗位方向、单位、企业性质、行业、地点、人数、招聘类型、适用届别、往届生能否投递、学历要求、专业要求、全部硬性报考条件、薪资、福利、截止时间、报名方式、网申地址和内推码。企业性质可使用央企、国企、事业单位、党政机关、高校、民企、外企、社会组织等原文可支持的类别。网申地址必须来自原文中的真实 URL，不要编造。每个岗位分别给出 2-4 条推荐理由和 1-4 条不推荐/风险理由。理由只能基于原文；信息缺失要写“未披露”或放入风险。
 
+如果文章包含大量岗位，同一单位、学历和专业要求相同的岗位必须合并成岗位组，并把具体方向放入 job_directions；positions 最多 30 项。所有数组字段只保留最重要的 8 项，避免输出被截断，但不得省略学历、专业、报名和待遇的关键限制。
+
 枚举要求：majors.fit 只能是 administrative_management、management、humanities、broad、uncertain、mismatch；education.tier 只能是 master、bachelor_associate、unspecified、phd_required；previous_graduates_eligible 只能是 yes、no、uncertain。compensation.quality 和 accessibility 为 0-5 整数。hard_phd_required 只有硬性博士起报时才为 true。
 
 只返回 JSON，不要 Markdown：
 {"is_recruitment":true,"summary":"文章一句话摘要","extraction_complete":true,"notes":[],"positions":[{"organization":"单位","organization_nature":"央企","industry":"公共服务","job_title":"岗位","job_directions":["综合行政"],"locations":["地点"],"headcount":null,"employment_types":["校招"],"graduate_scope":"2027届","previous_graduates_eligible":"no","education":{"summary":"详细学历要求","minimum":"本科","preferred":"硕士","tier":"master","hard_phd_required":false},"majors":{"summary":"详细专业要求","accepted":["行政管理"],"fit":"administrative_management"},"application_requirements":["年龄、证书、经历、政治面貌等硬性条件"],"compensation":{"summary":"薪酬福利概述","salary":"具体薪资或null","benefits":["六险二金"],"quality":4},"deadline":null,"application_method":null,"application_url":null,"referral_code":null,"recommendation_reasons":["理由"],"non_recommendation_reasons":["风险"],"accessibility":4,"evidence":["支持判断的短句"],"confidence":0.9}]}`;
 
-  const response = await fetch(`${config.deepseekBaseUrl}/chat/completions`, {
-    method: "POST",
-    headers: { Authorization: `Bearer ${config.deepseekApiKey}`, "Content-Type": "application/json" },
-    body: JSON.stringify({
-      model: config.deepseekModel,
-      temperature: 0.05,
-      max_tokens: 8192,
-      response_format: { type: "json_object" },
-      messages: [{ role: "system", content: system }, { role: "user", content: input }],
-    }),
-    signal: AbortSignal.timeout(150_000),
-  });
-  if (!response.ok) {
-    const body = await response.text();
-    throw new Error(`DeepSeek 请求失败（HTTP ${response.status}）：${body.slice(0, 180)}`);
+  const requestAnalysis = async (retryInstruction = ""): Promise<string> => {
+    const response = await fetch(`${config.deepseekBaseUrl}/chat/completions`, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${config.deepseekApiKey}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        model: config.deepseekModel,
+        temperature: retryInstruction ? 0 : 0.05,
+        max_tokens: 8192,
+        response_format: { type: "json_object" },
+        messages: [
+          { role: "system", content: `${system}${retryInstruction}` },
+          { role: "user", content: input },
+        ],
+      }),
+      signal: AbortSignal.timeout(150_000),
+    });
+    if (!response.ok) {
+      const body = await response.text();
+      throw new Error(`DeepSeek 请求失败（HTTP ${response.status}）：${body.slice(0, 180)}`);
+    }
+    const payload: any = await response.json();
+    const raw = payload?.choices?.[0]?.message?.content;
+    if (!raw) throw new Error("DeepSeek 返回内容为空");
+    return raw;
+  };
+
+  const first = await requestAnalysis();
+  try {
+    return parseArticleAnalysis(first, articleUrl);
+  } catch {
+    const retry = await requestAnalysis("\n\n上一次响应因 JSON 过长或格式错误而无法解析。请重新完整输出合法 JSON，强制合并相同条件岗位组，positions 不超过 20 项，每个数组不超过 6 项，不要输出任何额外文字。");
+    return parseArticleAnalysis(retry, articleUrl);
   }
-  const payload: any = await response.json();
-  const raw = payload?.choices?.[0]?.message?.content;
-  if (!raw) throw new Error("DeepSeek 返回内容为空");
-  return parseArticleAnalysis(raw, articleUrl);
 }
 
 export function heuristicClassify(title: string, text: string): Classification {

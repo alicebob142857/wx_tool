@@ -163,6 +163,9 @@ async function main(): Promise<void> {
   stats.relevantArticles = items.length;
   stats.positionsExtracted = items.reduce((sum, item) => sum + item.positions.length, 0);
   await saveSeen(config.rootDir, seen);
+  const replaceItemIds = selected
+    .filter(({ article }) => !failedUrls.has(article.link))
+    .map(({ article }) => stableId(article.link));
 
   const report: DailyReport = {
     date: dateInShanghai(),
@@ -171,12 +174,12 @@ async function main(): Promise<void> {
     items,
     errors,
   };
-  let mergedReport = await writeDailyReport(config.rootDir, report);
+  let mergedReport = await writeDailyReport(config.rootDir, report, replaceItemIds);
   try {
     await client.saveReport(mergedReport);
   } catch (error) {
     errors.push(`数据库写入失败：${error instanceof Error ? error.message : String(error)}`);
-    mergedReport = await writeDailyReport(config.rootDir, { ...report, errors });
+    mergedReport = await writeDailyReport(config.rootDir, { ...report, errors }, replaceItemIds);
   }
   const state = errors.length ? "partial" : "ok";
   await writeStatus(config.rootDir, {

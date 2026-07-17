@@ -50,17 +50,22 @@ export async function saveSeen(rootDir: string, seen: SeenFile): Promise<void> {
   await writeJson(path.join(rootDir, "state", "seen.json"), seen);
 }
 
-function mergeItems(existing: ReportItem[], current: ReportItem[]): ReportItem[] {
-  const byId = new Map(existing.map(item => [item.id, item]));
+function mergeItems(existing: ReportItem[], current: ReportItem[], replaceItemIds: string[]): ReportItem[] {
+  const replaced = new Set(replaceItemIds);
+  const byId = new Map(existing.filter(item => !replaced.has(item.id)).map(item => [item.id, item]));
   for (const item of current) byId.set(item.id, { ...item, positions: sortPositions(item.positions || []) });
   return [...byId.values()].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
 }
 
-export async function writeDailyReport(rootDir: string, report: DailyReport): Promise<DailyReport> {
+export async function writeDailyReport(
+  rootDir: string,
+  report: DailyReport,
+  replaceItemIds: string[] = [],
+): Promise<DailyReport> {
   const dataDir = path.join(rootDir, "site", "data");
   const dailyFile = path.join(dataDir, "daily", `${report.date}.json`);
   const existing = await readJson<DailyReport | null>(dailyFile, null);
-  const mergedItems = mergeItems(existing?.items || [], report.items);
+  const mergedItems = mergeItems(existing?.items || [], report.items, replaceItemIds);
   const merged: DailyReport = {
     ...report,
     stats: {
