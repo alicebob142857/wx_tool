@@ -1,4 +1,4 @@
-import type { Account, WechatArticle } from "./types.js";
+import type { Account, DailyReport, WechatArticle } from "./types.js";
 import type { AppConfig } from "./config.js";
 
 export class AuthExpiredError extends Error {
@@ -125,5 +125,19 @@ export class ExporterClient {
     });
     if (!response.ok) throw new Error(`Exporter 正文下载失败（HTTP ${response.status}）`);
     return response.text();
+  }
+
+  async saveReport(report: DailyReport): Promise<void> {
+    if (!this.usesAuthService || !this.config.authServiceToken) return;
+    const response = await fetch(`${this.config.authServiceUrl}/api/reports`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${this.config.authServiceToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(report),
+      signal: AbortSignal.timeout(90_000),
+    });
+    await parseJsonResponse(response);
   }
 }

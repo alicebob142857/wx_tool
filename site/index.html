@@ -30,7 +30,7 @@
             <p class="eyebrow">每日 10:00 自动更新</p>
             <h1>从公众号推送里，<br /><span>筛出真正适合你的岗位。</span></h1>
             <p class="hero-description">
-              监测 10 个高校就业与央国企招聘公众号，结合正文、图片 OCR 与 AI 判断，聚焦文科和管理类毕业生。
+              监测 10 个高校就业与央国企招聘公众号，逐岗位提取学历、专业、报考条件和待遇，并优先推荐行政管理与文管方向。
             </p>
           </div>
           <div class="run-card">
@@ -78,9 +78,9 @@
             <small>进入增量流程</small>
           </article>
           <article class="highlight-stat">
-            <span>值得关注</span>
+            <span>岗位</span>
             <strong id="stat-relevant">—</strong>
-            <small>文科 / 管理类</small>
+            <small>完成结构化分析</small>
           </article>
         </section>
 
@@ -95,6 +95,15 @@
               <option value="">全部公众号</option>
             </select>
           </label>
+          <label>
+            <span>推荐等级</span>
+            <select id="level-select" aria-label="筛选推荐等级">
+              <option value="">全部等级</option>
+              <option value="high">优先推荐</option>
+              <option value="medium">可以考虑</option>
+              <option value="low">谨慎考虑</option>
+            </select>
+          </label>
           <label class="search-field">
             <span>搜索</span>
             <input id="search-input" type="search" placeholder="岗位、专业或机构" />
@@ -104,7 +113,7 @@
         <section class="results-heading">
           <div>
             <p class="eyebrow">Daily briefing</p>
-            <h2>今日值得关注</h2>
+            <h2>岗位推荐清单</h2>
           </div>
           <span id="result-count">0 条结果</span>
         </section>
@@ -125,4 +134,3 @@
     <script type="module" src="app.js"></script>
   </body>
 </html>
-

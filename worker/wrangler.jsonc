@@ -14,6 +14,14 @@
       "id": "4634e79382f14e939d31666ff6ce6953"
     }
   ],
+  "d1_databases": [
+    {
+      "binding": "JOB_DB",
+      "database_name": "wx-job-monitor-db",
+      "database_id": "1146b9de-77da-4750-ab31-884a9d26c03d",
+      "migrations_dir": "migrations"
+    }
+  ],
   "vars": {
     "ALLOWED_ORIGIN": "https://alicebob142857.github.io",
     "GITHUB_REPOSITORY": "alicebob142857/wx_tool"

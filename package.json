@@ -13,7 +13,8 @@
     "test": "node --import tsx --test tests/**/*.test.ts",
     "site:serve": "npx --yes http-server site -p 4173 -c-1",
     "worker:dev": "wrangler dev --config worker/wrangler.jsonc",
-    "worker:deploy": "wrangler deploy --config worker/wrangler.jsonc"
+    "worker:deploy": "wrangler deploy --config worker/wrangler.jsonc",
+    "db:migrate": "wrangler d1 migrations apply wx-job-monitor-db --remote --config worker/wrangler.jsonc"
   },
   "dependencies": {
     "cheerio": "^1.1.2",

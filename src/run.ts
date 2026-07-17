@@ -1,6 +1,6 @@
 import { fetchAndParseArticle, looksLikeJobPost } from "./article-parser.js";
 import { loadAccounts, loadConfig } from "./config.js";
-import { classifyArticle, heuristicClassify } from "./deepseek.js";
+import { analyzeArticle, heuristicAnalyzeArticle } from "./deepseek.js";
 import { AuthExpiredError, ExporterClient } from "./exporter-client.js";
 import { ocrImages } from "./ocr.js";
 import {
@@ -22,6 +22,7 @@ const emptyStats = (accounts: number): RunStats => ({
   newArticles: 0,
   candidateArticles: 0,
   relevantArticles: 0,
+  positionsExtracted: 0,
   failedArticles: 0,
 });
 
@@ -60,7 +61,8 @@ async function main(): Promise<void> {
       stats.articlesScanned += articles.length;
       for (const article of articles) {
         if (!article.link || article.is_deleted) continue;
-        if (hasSeen(seen, article.link)) continue;
+        const forceReprocess = config.forceReprocessHours > 0 && isWithinHours(article.update_time, config.forceReprocessHours);
+        if (!forceReprocess && hasSeen(seen, article.link)) continue;
         if (!isWithinHours(article.update_time, config.lookbackHours)) {
           markSeen(seen, article.link);
           continue;
@@ -103,14 +105,14 @@ async function main(): Promise<void> {
       const ocr = shouldOcr
         ? await ocrImages(parsed.imageUrls, config.ocrMaxImages, config.ocrTimeoutMs)
         : { text: "", processed: 0, errors: [] as string[] };
-      let classification;
+      let analysis;
       try {
-        classification = await classifyArticle(config, parsed.title || article.title, parsed.text, ocr.text);
+        analysis = await analyzeArticle(config, parsed.title || article.title, article.link, parsed.text, ocr.text);
       } catch (error) {
         errors.push(`${account} / ${article.title}：DeepSeek 失败，已使用规则降级；${error instanceof Error ? error.message : String(error)}`);
-        classification = heuristicClassify(parsed.title || article.title, `${parsed.text}\n${ocr.text}`);
+        analysis = heuristicAnalyzeArticle(parsed.title || article.title, `${parsed.text}\n${ocr.text}`, article.link);
       }
-      if (classification.isRelevant) {
+      if (analysis.isRecruitment && analysis.positions.length > 0) {
         items.push({
           id: stableId(article.link),
           account,
@@ -119,7 +121,11 @@ async function main(): Promise<void> {
           publishedAt: isoFromUnix(article.update_time),
           ocrUsed: ocr.processed > 0,
           ocrImageCount: ocr.processed,
-          ...classification,
+          summary: analysis.summary,
+          positions: analysis.positions,
+          analysisSource: analysis.source,
+          extractionComplete: analysis.extractionComplete,
+          notes: analysis.notes,
         });
       }
       markSeen(seen, article.link);
@@ -133,6 +139,7 @@ async function main(): Promise<void> {
   for (const { article } of queue.slice(config.maxArticlesPerRun)) markSeen(seen, article.link);
   for (const url of failedUrls) delete seen.urls[url];
   stats.relevantArticles = items.length;
+  stats.positionsExtracted = items.reduce((sum, item) => sum + item.positions.length, 0);
   await saveSeen(config.rootDir, seen);
 
   const report: DailyReport = {
@@ -142,14 +149,20 @@ async function main(): Promise<void> {
     items,
     errors,
   };
-  await writeDailyReport(config.rootDir, report);
+  let mergedReport = await writeDailyReport(config.rootDir, report);
+  try {
+    await client.saveReport(mergedReport);
+  } catch (error) {
+    errors.push(`数据库写入失败：${error instanceof Error ? error.message : String(error)}`);
+    mergedReport = await writeDailyReport(config.rootDir, { ...report, errors });
+  }
   const state = errors.length ? "partial" : "ok";
   await writeStatus(config.rootDir, {
     state,
     message: state === "ok" ? "今日采集完成。" : "今日采集完成，但部分文章处理失败。",
-    lastRunAt: report.generatedAt,
+    lastRunAt: mergedReport.generatedAt,
     auth: { status: "valid", expiresAt: auth.expiresAt, qrAvailable: false },
-    stats,
+    stats: mergedReport.stats,
   });
   console.log(JSON.stringify({ state, date: report.date, stats }, null, 2));
 }

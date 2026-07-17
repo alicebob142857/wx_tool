@@ -1,9 +1,18 @@
 interface Env {
   AUTH_KV: KVNamespace;
+  JOB_DB: D1Database;
   COLLECTOR_TOKEN: string;
   ALLOWED_ORIGIN?: string;
   GITHUB_REPOSITORY?: string;
   GITHUB_DISPATCH_TOKEN?: string;
+}
+
+interface ReportPayload {
+  date: string;
+  generatedAt: string;
+  stats: Record<string, number>;
+  items: any[];
+  errors: string[];
 }
 
 interface LoginSession {
@@ -338,6 +347,155 @@ async function downloadArticle(request: Request, env: Env): Promise<Response> {
   return new Response(html, { status: 200, headers });
 }
 
+function jsonText(value: unknown): string {
+  return JSON.stringify(Array.isArray(value) ? value : []);
+}
+
+function parseJsonArray(value: unknown): unknown[] {
+  try {
+    const parsed = JSON.parse(String(value || "[]"));
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+async function runBatches(db: D1Database, statements: D1PreparedStatement[], size = 50): Promise<void> {
+  for (let index = 0; index < statements.length; index += size) {
+    await db.batch(statements.slice(index, index + size));
+  }
+}
+
+async function saveReport(request: Request, env: Env): Promise<Response> {
+  if (!authorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
+  const length = Number(request.headers.get("content-length") || 0);
+  if (length > 8 * 1024 * 1024) return json(request, env, { message: "报告超过 8MB" }, 413);
+  const report = await request.json<ReportPayload>();
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(report?.date || "") || !Array.isArray(report?.items)) {
+    return json(request, env, { message: "报告格式不合法" }, 400);
+  }
+  const stats = report.stats || {};
+  const now = new Date().toISOString();
+  await env.JOB_DB.batch([
+    env.JOB_DB.prepare("DELETE FROM positions WHERE report_date = ?").bind(report.date),
+    env.JOB_DB.prepare("DELETE FROM articles WHERE report_date = ?").bind(report.date),
+    env.JOB_DB.prepare(`INSERT INTO report_days (
+      report_date, generated_at, accounts_configured, accounts_succeeded, articles_scanned,
+      new_articles, candidate_articles, relevant_articles, positions_extracted, failed_articles, errors_json
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(report_date) DO UPDATE SET
+      generated_at=excluded.generated_at, accounts_configured=excluded.accounts_configured,
+      accounts_succeeded=excluded.accounts_succeeded, articles_scanned=excluded.articles_scanned,
+      new_articles=excluded.new_articles, candidate_articles=excluded.candidate_articles,
+      relevant_articles=excluded.relevant_articles, positions_extracted=excluded.positions_extracted,
+      failed_articles=excluded.failed_articles, errors_json=excluded.errors_json`).bind(
+      report.date, report.generatedAt, stats.accountsConfigured || 0, stats.accountsSucceeded || 0,
+      stats.articlesScanned || 0, stats.newArticles || 0, stats.candidateArticles || 0,
+      stats.relevantArticles || 0, stats.positionsExtracted || 0, stats.failedArticles || 0,
+      jsonText(report.errors),
+    ),
+  ]);
+
+  const articleStatements: D1PreparedStatement[] = [];
+  const positionStatements: D1PreparedStatement[] = [];
+  for (const item of report.items) {
+    if (!item?.id || !item?.url || !item?.title) continue;
+    articleStatements.push(env.JOB_DB.prepare(`INSERT INTO articles (
+      id, report_date, account, title, url, published_at, summary, ocr_used, ocr_image_count,
+      analysis_source, extraction_complete, notes_json, updated_at
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)` ).bind(
+      item.id, report.date, item.account || "", item.title, item.url, item.publishedAt || report.generatedAt,
+      item.summary || "", item.ocrUsed ? 1 : 0, item.ocrImageCount || 0,
+      item.analysisSource || "heuristic", item.extractionComplete ? 1 : 0, jsonText(item.notes), now,
+    ));
+    for (const position of Array.isArray(item.positions) ? item.positions : []) {
+      if (!position?.id || !position?.jobTitle) continue;
+      positionStatements.push(env.JOB_DB.prepare(`INSERT INTO positions (
+        id, article_id, report_date, account, organization, job_title, locations_json, headcount,
+        employment_types_json, education_summary, education_minimum, education_preferred, education_tier,
+        hard_phd_required, major_summary, accepted_majors_json, major_fit, application_requirements_json,
+        compensation_summary, salary, benefits_json, compensation_quality, deadline, application_method,
+        recommendation_score, ranking_key, recommendation_level, recommendation_reasons_json, concerns_json,
+        evidence_json, confidence, updated_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)` ).bind(
+        position.id, item.id, report.date, item.account || "", position.organization || "未明确单位",
+        position.jobTitle, jsonText(position.locations), position.headcount || null, jsonText(position.employmentTypes),
+        position.education?.summary || "未明确", position.education?.minimum || null,
+        position.education?.preferred || null, position.education?.tier || "unspecified",
+        position.education?.hardPhdRequired ? 1 : 0, position.majors?.summary || "未明确",
+        jsonText(position.majors?.accepted), position.majors?.fit || "uncertain",
+        jsonText(position.applicationRequirements), position.compensation?.summary || "未披露",
+        position.compensation?.salary || null, jsonText(position.compensation?.benefits),
+        position.compensation?.quality || 0, position.deadline || null, position.applicationMethod || null,
+        position.recommendation?.score || 0, position.recommendation?.rankingKey || 0,
+        position.recommendation?.level || "low", jsonText(position.recommendation?.reasons),
+        jsonText(position.recommendation?.concerns), jsonText(position.evidence), position.confidence || 0, now,
+      ));
+    }
+  }
+  await runBatches(env.JOB_DB, articleStatements);
+  await runBatches(env.JOB_DB, positionStatements);
+  return json(request, env, { ok: true, date: report.date, articles: articleStatements.length, positions: positionStatements.length });
+}
+
+async function listJobDays(request: Request, env: Env): Promise<Response> {
+  const result = await env.JOB_DB.prepare(`SELECT report_date AS date, generated_at AS generatedAt,
+    positions_extracted AS positionCount, articles_scanned AS articlesScanned,
+    accounts_succeeded AS accountsSucceeded FROM report_days ORDER BY report_date DESC LIMIT 365`).all();
+  return json(request, env, { days: result.results || [] });
+}
+
+async function listJobs(request: Request, env: Env): Promise<Response> {
+  const input = new URL(request.url);
+  let date = input.searchParams.get("date") || "";
+  if (!date) {
+    const latest = await env.JOB_DB.prepare("SELECT report_date AS date FROM report_days ORDER BY report_date DESC LIMIT 1").first<{ date: string }>();
+    date = latest?.date || "";
+  }
+  if (!date) return json(request, env, { date: null, generatedAt: null, stats: null, jobs: [] });
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return json(request, env, { message: "日期格式不合法" }, 400);
+  const limit = Math.min(1000, Math.max(1, Number(input.searchParams.get("limit") || 500)));
+  const [day, rows] = await Promise.all([
+    env.JOB_DB.prepare("SELECT * FROM report_days WHERE report_date = ?").bind(date).first<any>(),
+    env.JOB_DB.prepare(`SELECT p.*, a.title AS article_title, a.url AS article_url,
+      a.published_at, a.summary AS article_summary, a.ocr_used, a.ocr_image_count,
+      a.analysis_source, a.extraction_complete
+      FROM positions p JOIN articles a ON a.id = p.article_id
+      WHERE p.report_date = ? ORDER BY p.ranking_key DESC, p.recommendation_score DESC LIMIT ?`).bind(date, limit).all<any>(),
+  ]);
+  const jobs = (rows.results || []).map((row: any) => ({
+    id: row.id,
+    articleId: row.article_id,
+    account: row.account,
+    organization: row.organization,
+    jobTitle: row.job_title,
+    locations: parseJsonArray(row.locations_json),
+    headcount: row.headcount,
+    employmentTypes: parseJsonArray(row.employment_types_json),
+    education: { summary: row.education_summary, minimum: row.education_minimum, preferred: row.education_preferred, tier: row.education_tier, hardPhdRequired: Boolean(row.hard_phd_required) },
+    majors: { summary: row.major_summary, accepted: parseJsonArray(row.accepted_majors_json), fit: row.major_fit },
+    applicationRequirements: parseJsonArray(row.application_requirements_json),
+    compensation: { summary: row.compensation_summary, salary: row.salary, benefits: parseJsonArray(row.benefits_json), quality: row.compensation_quality },
+    deadline: row.deadline,
+    applicationMethod: row.application_method,
+    recommendation: { score: row.recommendation_score, rankingKey: row.ranking_key, level: row.recommendation_level, reasons: parseJsonArray(row.recommendation_reasons_json), concerns: parseJsonArray(row.concerns_json) },
+    evidence: parseJsonArray(row.evidence_json),
+    confidence: row.confidence,
+    article: { title: row.article_title, url: row.article_url, publishedAt: row.published_at, summary: row.article_summary, ocrUsed: Boolean(row.ocr_used), ocrImageCount: row.ocr_image_count, analysisSource: row.analysis_source, extractionComplete: Boolean(row.extraction_complete) },
+  }));
+  return json(request, env, {
+    date,
+    generatedAt: day?.generated_at || null,
+    stats: day ? {
+      accountsConfigured: day.accounts_configured, accountsSucceeded: day.accounts_succeeded,
+      articlesScanned: day.articles_scanned, newArticles: day.new_articles,
+      candidateArticles: day.candidate_articles, relevantArticles: day.relevant_articles,
+      positionsExtracted: day.positions_extracted, failedArticles: day.failed_articles,
+    } : null,
+    jobs,
+  });
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsHeaders(request, env) });
@@ -354,6 +512,9 @@ export default {
       if (url.pathname === "/api/auth/poll" && request.method === "GET") return pollLogin(request, env);
       if (url.pathname === "/api/exporter/articles" && request.method === "GET") return listArticles(request, env);
       if (url.pathname === "/api/exporter/content" && request.method === "GET") return downloadArticle(request, env);
+      if (url.pathname === "/api/reports" && request.method === "POST") return saveReport(request, env);
+      if (url.pathname === "/api/job-days" && request.method === "GET") return listJobDays(request, env);
+      if (url.pathname === "/api/jobs" && request.method === "GET") return listJobs(request, env);
       return json(request, env, { message: "Not found" }, 404);
     } catch (error) {
       return json(request, env, { message: error instanceof Error ? error.message : String(error) }, 500);

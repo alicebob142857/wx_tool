@@ -26,6 +26,7 @@ export interface AppConfig {
   maxArticlesPerRun: number;
   ocrMaxImages: number;
   ocrTimeoutMs: number;
+  forceReprocessHours: number;
   classifierMode: "deepseek" | "heuristic";
 }
 
@@ -45,6 +46,7 @@ export function loadConfig(): AppConfig {
     maxArticlesPerRun: numberEnv("MAX_ARTICLES_PER_RUN", 60),
     ocrMaxImages: numberEnv("OCR_MAX_IMAGES", 8),
     ocrTimeoutMs: numberEnv("OCR_TIMEOUT_MS", 60_000),
+    forceReprocessHours: numberEnv("FORCE_REPROCESS_HOURS", 0),
     classifierMode,
   };
 }
@@ -62,4 +64,3 @@ export async function loadAccounts(rootDir: string): Promise<Account[]> {
   }
   return accounts;
 }
-

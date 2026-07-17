@@ -1,6 +1,17 @@
 # 文管求职雷达
 
-每天读取 10 个微信公众号的最新推送，从网页正文和图片 OCR 中提取招聘信息，再使用 DeepSeek 判断是否适合文科或管理类毕业生。结果发布为 GitHub Pages；微信扫码登录会话由 Cloudflare Worker + KV 保存，不依赖个人电脑常驻。
+每天读取 10 个微信公众号的最新推送，从网页正文和图片 OCR 中逐岗位提取招聘信息，再使用 DeepSeek 分析学历、专业、报考条件、薪资福利和推荐依据。岗位写入 Cloudflare D1，并发布到 GitHub Pages；微信扫码登录会话由 Cloudflare Worker + KV 保存，不依赖个人电脑常驻。
+
+## 推荐规则
+
+推荐不是单纯采用模型自由打分，而是使用固定排序键：
+
+1. 硬性只招博士的岗位统一后置。
+2. 其余岗位先比较专业：行政管理 → 其他管理类 → 其他文科 → 不限专业 → 不匹配。
+3. 同一专业层级再比较学历：硕士 → 本科/大专 → 未明确。
+4. 最后比较薪资福利、报考门槛和模型置信度。
+
+DeepSeek 负责拆分岗位、提取字段并生成每个岗位的推荐理由与不推荐理由；程序排序保证优先级稳定。
 
 ## 已验证范围
 
@@ -16,11 +27,13 @@ GitHub Actions (每天 02:00 UTC / 北京时间 10:00)
   ├─ Cloudflare Worker：检查登录、获取公众号文章列表
   ├─ 微信文章页：抓正文与图片
   ├─ Tesseract：中文 OCR
-  ├─ DeepSeek：文科/管理类岗位判断
+  ├─ DeepSeek：逐岗位结构化提取与推荐分析
+  ├─ Cloudflare D1：持久化文章、岗位和每日统计
   └─ GitHub Pages：发布日报与授权二维码
 
 Cloudflare Worker
   ├─ KV：保存最多 4 天的微信会话
+  ├─ D1：岗位数据库与公开只读查询
   ├─ QR：创建、展示、轮询扫码状态
   └─ repository_dispatch：授权成功后重新触发 GitHub Actions（可选）
 ```
@@ -48,13 +61,18 @@ npm run site:serve
    npx wrangler login
    ```
 
-2. 创建 KV：
+2. 创建 KV 和 D1：
 
    ```bash
    npx wrangler kv namespace create AUTH_KV
+   npx wrangler d1 create wx-job-monitor-db
    ```
 
-3. 把命令返回的 namespace ID 写入 `worker/wrangler.jsonc`。
+3. 把命令返回的 KV 与 D1 ID 写入 `worker/wrangler.jsonc`，然后执行：
+
+   ```bash
+   npm run db:migrate
+   ```
 
 4. 设置一个随机的服务端令牌：
 
@@ -90,6 +108,8 @@ npm run site:serve
 
 然后在 `Settings → Pages` 中将 Source 选择为 **GitHub Actions**，手动运行一次 `Daily WeChat job scan`。
 
+如需用 DeepSeek 重新分析最近 36 小时，在 Actions 手动运行工作流时把 `reprocess_hours` 填为 `36`。定时任务保持 `0`，只处理增量文章。
+
 ## 授权过期
 
 当 Worker 判断微信登录失效：
@@ -106,7 +126,7 @@ npm run site:serve
 - `.env` 已加入 `.gitignore`，不得提交。
 - DeepSeek Key 只放 GitHub Secrets。
 - 微信 Cookie 只放 Cloudflare KV。
-- Pages 仅公开二维码、授权状态和筛选后的日报。
+- D1 写接口需要服务端 Bearer Token；Pages 只调用岗位只读接口。
+- Pages 仅公开二维码、授权状态和筛选后的岗位信息。
 - OCR 图片只存在于 Actions 临时目录，处理完立即删除。
 - 文章和岗位判断可能存在误差，最终以招聘单位官网为准。
-

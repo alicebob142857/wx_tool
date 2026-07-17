@@ -39,25 +39,29 @@ export interface OcrResult {
   errors: string[];
 }
 
-export async function ocrImages(urls: string[], maxImages: number, timeoutMs: number): Promise<OcrResult> {
+export async function ocrImages(urls: string[], maxImages: number, timeoutMs: number, concurrency = 3): Promise<OcrResult> {
   if (maxImages <= 0 || urls.length === 0) return { text: "", processed: 0, errors: [] };
   const directory = await mkdtemp(path.join(os.tmpdir(), "wx-ocr-"));
-  const chunks: string[] = [];
+  const selected = urls.slice(0, maxImages);
+  const chunks: string[] = new Array(selected.length).fill("");
   const errors: string[] = [];
   let processed = 0;
+  let cursor = 0;
   try {
-    for (const [index, url] of urls.slice(0, maxImages).entries()) {
-      try {
-        const text = await ocrOne(url, directory, index, timeoutMs);
-        if (text) chunks.push(text);
-        processed += 1;
-      } catch (error) {
-        errors.push(`第 ${index + 1} 张图片 OCR 失败：${error instanceof Error ? error.message : String(error)}`);
+    const worker = async () => {
+      while (cursor < selected.length) {
+        const index = cursor++;
+        try {
+          chunks[index] = await ocrOne(selected[index], directory, index, timeoutMs);
+          processed += 1;
+        } catch (error) {
+          errors.push(`第 ${index + 1} 张图片 OCR 失败：${error instanceof Error ? error.message : String(error)}`);
+        }
       }
-    }
+    };
+    await Promise.all(Array.from({ length: Math.min(Math.max(1, concurrency), selected.length) }, worker));
   } finally {
     await rm(directory, { recursive: true, force: true });
   }
-  return { text: chunks.join("\n\n"), processed, errors };
+  return { text: chunks.filter(Boolean).join("\n\n"), processed, errors };
 }
-

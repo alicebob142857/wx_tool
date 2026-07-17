@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import type { DailyReport, SiteStatus } from "./types.js";
+import type { DailyReport, ReportItem, SiteStatus } from "./types.js";
+import { sortPositions } from "./recommendation.js";
 
 interface SeenFile {
   version: 1;
@@ -49,9 +50,30 @@ export async function saveSeen(rootDir: string, seen: SeenFile): Promise<void> {
   await writeJson(path.join(rootDir, "state", "seen.json"), seen);
 }
 
-export async function writeDailyReport(rootDir: string, report: DailyReport): Promise<void> {
+function mergeItems(existing: ReportItem[], current: ReportItem[]): ReportItem[] {
+  const byId = new Map(existing.map(item => [item.id, item]));
+  for (const item of current) byId.set(item.id, { ...item, positions: sortPositions(item.positions || []) });
+  return [...byId.values()].sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
+}
+
+export async function writeDailyReport(rootDir: string, report: DailyReport): Promise<DailyReport> {
   const dataDir = path.join(rootDir, "site", "data");
-  await writeJson(path.join(dataDir, "daily", `${report.date}.json`), report);
+  const dailyFile = path.join(dataDir, "daily", `${report.date}.json`);
+  const existing = await readJson<DailyReport | null>(dailyFile, null);
+  const mergedItems = mergeItems(existing?.items || [], report.items);
+  const merged: DailyReport = {
+    ...report,
+    stats: {
+      ...report.stats,
+      newArticles: Math.max(existing?.stats?.newArticles || 0, report.stats.newArticles),
+      candidateArticles: Math.max(existing?.stats?.candidateArticles || 0, report.stats.candidateArticles),
+      relevantArticles: mergedItems.length,
+      positionsExtracted: mergedItems.reduce((sum, item) => sum + (item.positions?.length || 0), 0),
+    },
+    items: mergedItems,
+    errors: [...new Set([...(existing?.errors || []), ...report.errors])].slice(-100),
+  };
+  await writeJson(dailyFile, merged);
   const indexFile = path.join(dataDir, "index.json");
   const index = await readJson<{ generatedAt: string | null; days: IndexEntry[] }>(indexFile, {
     generatedAt: null,
@@ -60,13 +82,14 @@ export async function writeDailyReport(rootDir: string, report: DailyReport): Pr
   const entry: IndexEntry = {
     date: report.date,
     generatedAt: report.generatedAt,
-    relevantCount: report.stats.relevantArticles,
-    articlesScanned: report.stats.articlesScanned,
-    accountsSucceeded: report.stats.accountsSucceeded,
+    relevantCount: merged.stats.positionsExtracted,
+    articlesScanned: merged.stats.articlesScanned,
+    accountsSucceeded: merged.stats.accountsSucceeded,
   };
   index.days = [entry, ...index.days.filter(day => day.date !== report.date)].slice(0, 365);
-  index.generatedAt = report.generatedAt;
+  index.generatedAt = merged.generatedAt;
   await writeJson(indexFile, index);
+  return merged;
 }
 
 export async function writeStatus(rootDir: string, status: SiteStatus): Promise<void> {
@@ -79,4 +102,3 @@ export async function writeRuntimeConfig(rootDir: string, authServiceUrl: string
     updatedAt: new Date().toISOString(),
   });
 }
-

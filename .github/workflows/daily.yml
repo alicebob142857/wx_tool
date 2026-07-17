@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "0 2 * * *"
   workflow_dispatch:
+    inputs:
+      reprocess_hours:
+        description: "重新分析最近多少小时（0 表示仅增量）"
+        required: false
+        default: "0"
   repository_dispatch:
     types: [wechat_auth_refreshed]
 
@@ -58,8 +63,9 @@ jobs:
           CLASSIFIER_MODE: deepseek
           LOOKBACK_HOURS: "36"
           MAX_ARTICLES_PER_RUN: "60"
-          OCR_MAX_IMAGES: "8"
+          OCR_MAX_IMAGES: "16"
           OCR_TIMEOUT_MS: "60000"
+          FORCE_REPROCESS_HOURS: ${{ inputs.reprocess_hours || '0' }}
         run: npm run collect
 
       - name: Persist daily data
@@ -89,4 +95,3 @@ jobs:
         run: |
           echo "The collector failed; the status page was still deployed."
           exit 1
-

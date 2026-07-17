@@ -1,5 +1,11 @@
 import type { AppConfig } from "./config.js";
-import type { Classification } from "./types.js";
+import type {
+  ArticleAnalysis,
+  Classification,
+  EducationTier,
+  MajorFit,
+} from "./types.js";
+import { rankPosition, sortPositions, type RawPosition } from "./recommendation.js";
 
 const HUMANITIES_MANAGEMENT = [
   "管理",
@@ -53,6 +59,178 @@ function clampConfidence(value: unknown): number {
   const number = Number(value);
   if (!Number.isFinite(number)) return 0.5;
   return Math.max(0, Math.min(1, number));
+}
+
+function clampFive(value: unknown): number {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return 0;
+  return Math.max(0, Math.min(5, Math.round(number)));
+}
+
+function nullableString(value: unknown): string | null {
+  const text = String(value || "").trim();
+  return text || null;
+}
+
+function majorFit(value: unknown): MajorFit {
+  const allowed: MajorFit[] = ["administrative_management", "management", "humanities", "broad", "uncertain", "mismatch"];
+  return allowed.includes(value as MajorFit) ? value as MajorFit : "uncertain";
+}
+
+function educationTier(value: unknown, hardPhdRequired: boolean): EducationTier {
+  if (hardPhdRequired) return "phd_required";
+  const allowed: EducationTier[] = ["master", "bachelor_associate", "unspecified", "phd_required"];
+  return allowed.includes(value as EducationTier) ? value as EducationTier : "unspecified";
+}
+
+function parsePosition(raw: any, articleUrl: string, index: number): ReturnType<typeof rankPosition> | null {
+  const jobTitle = String(raw?.job_title || "").trim();
+  if (!jobTitle) return null;
+  const hardPhdRequired = Boolean(raw?.education?.hard_phd_required);
+  const position: RawPosition = {
+    organization: String(raw?.organization || "未明确单位").trim(),
+    jobTitle,
+    locations: stringArray(raw?.locations),
+    headcount: nullableString(raw?.headcount),
+    employmentTypes: stringArray(raw?.employment_types),
+    education: {
+      summary: String(raw?.education?.summary || "未明确").trim(),
+      minimum: nullableString(raw?.education?.minimum),
+      preferred: nullableString(raw?.education?.preferred),
+      tier: educationTier(raw?.education?.tier, hardPhdRequired),
+      hardPhdRequired,
+    },
+    majors: {
+      summary: String(raw?.majors?.summary || "未明确").trim(),
+      accepted: stringArray(raw?.majors?.accepted),
+      fit: majorFit(raw?.majors?.fit),
+    },
+    applicationRequirements: stringArray(raw?.application_requirements),
+    compensation: {
+      summary: String(raw?.compensation?.summary || "未披露").trim(),
+      salary: nullableString(raw?.compensation?.salary),
+      benefits: stringArray(raw?.compensation?.benefits),
+      quality: clampFive(raw?.compensation?.quality),
+    },
+    deadline: nullableString(raw?.deadline),
+    applicationMethod: nullableString(raw?.application_method),
+    recommendation: {
+      reasons: stringArray(raw?.recommendation_reasons),
+      concerns: stringArray(raw?.non_recommendation_reasons),
+    },
+    accessibility: clampFive(raw?.accessibility),
+    evidence: stringArray(raw?.evidence),
+    confidence: clampConfidence(raw?.confidence),
+  };
+  return rankPosition(articleUrl, position, index);
+}
+
+export function parseArticleAnalysis(raw: string, articleUrl: string): ArticleAnalysis {
+  const result = extractJsonObject(raw);
+  const positions = Array.isArray(result?.positions)
+    ? result.positions.map((position: any, index: number) => parsePosition(position, articleUrl, index)).filter(Boolean)
+    : [];
+  return {
+    isRecruitment: Boolean(result?.is_recruitment) && positions.length > 0,
+    summary: String(result?.summary || "").trim(),
+    positions: sortPositions(positions as ArticleAnalysis["positions"]),
+    source: "deepseek",
+    extractionComplete: result?.extraction_complete !== false,
+    notes: stringArray(result?.notes),
+  };
+}
+
+export function heuristicAnalyzeArticle(title: string, text: string, articleUrl: string): ArticleAnalysis {
+  const classification = heuristicClassify(title, text);
+  if (!classification.isRelevant) {
+    return { isRecruitment: false, summary: classification.summary, positions: [], source: "heuristic", extractionComplete: false, notes: ["DeepSeek 不可用，规则仅能完成文章级判断"] };
+  }
+  const combined = `${title}\n${text}`;
+  const fit: MajorFit = /行政管理/.test(combined)
+    ? "administrative_management"
+    : /管理|工商|人力资源|市场营销/.test(combined)
+      ? "management"
+      : /法学|中文|新闻|传播|外语|经济|金融|会计|文科/.test(combined)
+        ? "humanities"
+        : /不限专业|专业不限/.test(combined) ? "broad" : "uncertain";
+  const hardPhdRequired = /博士(研究生)?[^。；\n]{0,8}(及以上|学历|学位)|仅限博士/.test(combined);
+  const tier: EducationTier = hardPhdRequired
+    ? "phd_required"
+    : /硕士|研究生/.test(combined) ? "master" : /本科|大专|专科/.test(combined) ? "bachelor_associate" : "unspecified";
+  const raw: RawPosition = {
+    organization: "详见原文",
+    jobTitle: title,
+    locations: [],
+    headcount: null,
+    employmentTypes: classification.jobTypes,
+    education: { summary: tier === "unspecified" ? "未明确" : tier, minimum: null, preferred: null, tier, hardPhdRequired },
+    majors: { summary: classification.suitableMajors.join("、") || "需核对原文", accepted: classification.suitableMajors, fit },
+    applicationRequirements: [],
+    compensation: { summary: "未完成模型提取", salary: null, benefits: [], quality: 0 },
+    deadline: classification.deadline,
+    applicationMethod: null,
+    recommendation: { reasons: classification.reasons, concerns: ["当前为规则降级结果，岗位细节需 DeepSeek 重新分析"] },
+    accessibility: 2,
+    evidence: [],
+    confidence: classification.confidence,
+  };
+  return {
+    isRecruitment: true,
+    summary: classification.summary,
+    positions: [rankPosition(articleUrl, raw, 0)],
+    source: "heuristic",
+    extractionComplete: false,
+    notes: ["DeepSeek 不可用，暂以文章标题作为岗位组展示"],
+  };
+}
+
+export async function analyzeArticle(
+  config: AppConfig,
+  title: string,
+  articleUrl: string,
+  articleText: string,
+  ocrText: string,
+): Promise<ArticleAnalysis> {
+  const combined = `${articleText}\n${ocrText}`;
+  if (config.classifierMode === "heuristic" || !config.deepseekApiKey) {
+    return heuristicAnalyzeArticle(title, combined, articleUrl);
+  }
+
+  const input = `文章标题：${title}\n文章链接：${articleUrl}\n\n网页正文：\n${articleText.slice(0, 24_000)}\n\n图片 OCR：\n${ocrText.slice(0, 30_000)}`;
+  const system = `你是严谨的中国高校毕业生招聘岗位分析员。请从一篇公众号文章中提取每一个可以区分的招聘岗位；同一名称但要求不同的岗位要拆分，完全相同要求的岗位可合并为岗位组。不要把活动报道、求职课程或宣传内容当成岗位。
+
+用户推荐优先级必须严格遵循：
+1. 专业匹配最重要：行政管理最高，其次其他管理类，再其次其他文科社科，再其次不限专业；纯理工且无文管入口最低。
+2. 学历第二重要：明确面向硕士的岗位优先，其次本科/大专；硬性仅博士或博士起报的岗位最后。
+3. 再比较明确薪资、福利和报考门槛。薪资未披露时不要臆测。
+
+对每个岗位详细但简洁地提取：岗位、单位、地点、人数、用工类型、学历要求、专业要求、全部硬性报考条件、薪资、福利、截止时间和报名方式。每个岗位分别给出 2-4 条推荐理由和 1-4 条不推荐/风险理由。理由只能基于原文；信息缺失要写“未披露”或放入风险。
+
+枚举要求：majors.fit 只能是 administrative_management、management、humanities、broad、uncertain、mismatch；education.tier 只能是 master、bachelor_associate、unspecified、phd_required。compensation.quality 和 accessibility 为 0-5 整数。hard_phd_required 只有硬性博士起报时才为 true。
+
+只返回 JSON，不要 Markdown：
+{"is_recruitment":true,"summary":"文章一句话摘要","extraction_complete":true,"notes":[],"positions":[{"organization":"单位","job_title":"岗位","locations":["地点"],"headcount":null,"employment_types":["校招"],"education":{"summary":"详细学历要求","minimum":"本科","preferred":"硕士","tier":"master","hard_phd_required":false},"majors":{"summary":"详细专业要求","accepted":["行政管理"],"fit":"administrative_management"},"application_requirements":["届别、年龄、证书、经历、政治面貌等硬性条件"],"compensation":{"summary":"薪酬福利概述","salary":"具体薪资或null","benefits":["六险二金"],"quality":4},"deadline":null,"application_method":null,"recommendation_reasons":["理由"],"non_recommendation_reasons":["风险"],"accessibility":4,"evidence":["支持判断的短句"],"confidence":0.9}]}`;
+
+  const response = await fetch(`${config.deepseekBaseUrl}/chat/completions`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${config.deepseekApiKey}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      model: config.deepseekModel,
+      temperature: 0.05,
+      max_tokens: 8192,
+      response_format: { type: "json_object" },
+      messages: [{ role: "system", content: system }, { role: "user", content: input }],
+    }),
+    signal: AbortSignal.timeout(150_000),
+  });
+  if (!response.ok) {
+    const body = await response.text();
+    throw new Error(`DeepSeek 请求失败（HTTP ${response.status}）：${body.slice(0, 180)}`);
+  }
+  const payload: any = await response.json();
+  const raw = payload?.choices?.[0]?.message?.content;
+  if (!raw) throw new Error("DeepSeek 返回内容为空");
+  return parseArticleAnalysis(raw, articleUrl);
 }
 
 export function heuristicClassify(title: string, text: string): Classification {
@@ -130,4 +308,3 @@ export async function classifyArticle(
     source: "deepseek",
   };
 }
-
