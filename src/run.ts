@@ -97,11 +97,14 @@ async function main(): Promise<void> {
   const selected = queue.slice(0, config.maxArticlesPerRun);
   stats.candidateArticles = selected.length;
   const items: ReportItem[] = [];
+  console.log(`CANDIDATES ${selected.length} / NEW ${stats.newArticles}`);
 
-  for (const { account, article } of selected) {
+  for (const [articleIndex, { account, article }] of selected.entries()) {
     try {
       const parsed = await fetchAndParseArticle(article, url => client.downloadArticleHtml(url));
-      const shouldOcr = parsed.imageUrls.length > 0 && (parsed.text.length < 1_500 || looksLikeJobPost(parsed.title));
+      const imageRequirementHint = /(?:岗位|职位)(?:表|信息|需求)|招聘计划.{0,12}(?:如下|详见)/.test(parsed.text.slice(0, 8_000));
+      const shouldOcr = parsed.imageUrls.length > 0 && (parsed.text.length < 2_500 || (parsed.text.length < 8_000 && imageRequirementHint));
+      console.log(`ARTICLE ${articleIndex + 1}/${selected.length} ${account} | text=${parsed.text.length} images=${parsed.imageUrls.length} ocr=${shouldOcr}`);
       const ocr = shouldOcr
         ? await ocrImages(parsed.imageUrls, config.ocrMaxImages, config.ocrTimeoutMs)
         : { text: "", processed: 0, errors: [] as string[] };
