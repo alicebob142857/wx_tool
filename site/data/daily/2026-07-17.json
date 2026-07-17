@@ -1,17 +1,105 @@
 {
   "date": "2026-07-17",
-  "generatedAt": "2026-07-17T06:24:43.435Z",
+  "generatedAt": "2026-07-17T07:31:35.140Z",
   "stats": {
     "accountsConfigured": 10,
     "accountsSucceeded": 10,
-    "articlesScanned": 577,
-    "newArticles": 60,
-    "candidateArticles": 54,
-    "relevantArticles": 50,
-    "positionsExtracted": 42,
-    "failedArticles": 3
+    "articlesScanned": 575,
+    "newArticles": 65,
+    "candidateArticles": 58,
+    "relevantArticles": 51,
+    "positionsExtracted": 97,
+    "failedArticles": 4
   },
   "items": [
+    {
+      "id": "cb825b5930e9774b",
+      "account": "北大就业",
+      "title": "实习 | 2027届北方矿业实习生计划正式启动",
+      "url": "https://mp.weixin.qq.com/s/rqPG9Kd5EdXoQup4gLpd4w",
+      "publishedAt": "2026-07-17T06:41:01.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "2027届北方矿业实习生计划启动，面向2027届毕业生招聘实习生。",
+      "positions": [
+        {
+          "organization": "北方矿业",
+          "organizationNature": "国企",
+          "industry": "矿业",
+          "jobTitle": "实习生",
+          "jobDirections": [
+            "未披露"
+          ],
+          "locations": [
+            "未披露"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "未披露",
+            "minimum": "未披露",
+            "preferred": "未披露",
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未披露",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": "点击阅读原文报名",
+          "applicationUrl": "https://mp.weixin.qq.com/s/rqPG9Kd5EdXoQup4gLpd4w",
+          "referralCode": null,
+          "recommendation": {
+            "score": 33,
+            "rankingKey": 1220130,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求未明确，需进一步核实",
+              "面向2027届，适合低年级学生积累经验",
+              "国企背景，稳定性高"
+            ],
+            "concerns": [
+              "信息严重不足，无法评估岗位要求",
+              "无薪资福利信息",
+              "无具体岗位方向"
+            ]
+          },
+          "accessibility": 1,
+          "evidence": [
+            "标题：2027届北方矿业实习生计划正式启动",
+            "正文：点击“阅读原文”，立刻报名"
+          ],
+          "confidence": 0.3,
+          "id": "c5fd2ce72ba2f2e0"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "文章内容极少，仅包含标题和报名提示，无具体岗位信息。",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eeDPM4/1.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eeDPM4/0.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eeDPM4/2.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eeDPM4/4.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eeDPM4/3.png stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eeDPM4/5.gif stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 4 张图片"
+      ]
+    },
     {
       "id": "3c29c098a5c7b254",
       "account": "人大就业创业",
@@ -329,10 +417,15 @@
       "positions": [
         {
           "organization": "详见原文",
+          "organizationNature": "未披露",
+          "industry": "未披露",
           "jobTitle": "中核集团2026年度夏季校园招聘",
+          "jobDirections": [],
           "locations": [],
           "headcount": null,
           "employmentTypes": [],
+          "graduateScope": "未明确",
+          "previousGraduatesEligible": "uncertain",
           "education": {
             "summary": "bachelor_associate",
             "minimum": null,
@@ -361,6 +454,8 @@
           },
           "deadline": null,
           "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
           "recommendation": {
             "score": 70,
             "rankingKey": 1530257,
@@ -384,7 +479,7 @@
       "extractionComplete": false,
       "notes": [
         "DeepSeek 不可用，暂以文章标题作为岗位组展示",
-        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-yjhj4M/0.jpg stdout -l chi_sim+eng --psm 6\n"
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Ig1yHL/0.jpg stdout -l chi_sim+eng --psm 6\n"
       ]
     },
     {
@@ -628,70 +723,1371 @@
       "publishedAt": "2026-07-17T04:00:00.000Z",
       "ocrUsed": false,
       "ocrImageCount": 0,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "summary": "中复神鹰碳纤维股份有限公司发布社招公告，招聘质量总监、高级研发工程师、研发工程师、环保主管、人才及培训主管、投资主管、外贸主管、战略管理专员、企划管培生、业务经理、行政专员、资产及项目管理会计、管理会计、往来会计、科研助理、生产管培生、焊工、操作工等岗位。",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "【社招】中复神鹰碳纤维股份有限公司招聘公告",
-          "locations": [],
-          "headcount": null,
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "行政专员",
+          "jobDirections": [
+            "行政管理"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "2",
           "employmentTypes": [
             "社招"
           ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
           "education": {
-            "summary": "master",
-            "minimum": null,
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "行政管理、文秘等相关专业",
+            "accepted": [
+              "行政管理",
+              "文秘"
+            ],
+            "fit": "administrative_management"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 93,
+            "rankingKey": 1634589,
+            "level": "high",
+            "reasons": [
+              "专业高度匹配行政管理",
+              "本科或大专层次可报",
+              "央企行政岗位，专业对口行政管理",
+              "本科即可，门槛低"
+            ],
+            "concerns": [
+              "未披露薪资",
+              "工作地点连云港"
+            ]
+          },
+          "accessibility": 5,
+          "evidence": [
+            "行政专员2本科及以上行政管理、文秘等相关专业"
+          ],
+          "confidence": 0.9,
+          "id": "9046913666e85608"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "人才及培训主管",
+          "jobDirections": [
+            "人力资源管理"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理类，人力资源管理专业优先",
+            "accepted": [
+              "管理类",
+              "人力资源管理"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 83,
+            "rankingKey": 1534489,
+            "level": "high",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "央企人力资源管理岗位，专业对口管理类",
+              "本科即可，门槛适中"
+            ],
+            "concerns": [
+              "未披露薪资",
+              "工作地点连云港"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "人才及培训主管1本科及以上管理类，人力资源管理专业优先"
+          ],
+          "confidence": 0.9,
+          "id": "b0678cbbe974e4f3"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "业务经理",
+          "jobDirections": [
+            "业务管理"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "7",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "材料类、工商管理类",
+            "accepted": [
+              "材料类",
+              "工商管理类"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 83,
+            "rankingKey": 1534489,
+            "level": "high",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "央企业务岗位，工商管理类对口",
+              "招聘人数多，机会大"
+            ],
+            "concerns": [
+              "未披露薪资",
+              "工作地点连云港"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "业务经理7本科及以上材料类、工商管理类"
+          ],
+          "confidence": 0.9,
+          "id": "07d4a23bc8b99265"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "资产及项目管理会计",
+          "jobDirections": [
+            "财务管理"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "财务类",
+            "accepted": [
+              "财务类"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 83,
+            "rankingKey": 1534489,
+            "level": "high",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "央企财务岗位，专业对口",
+              "本科即可"
+            ],
+            "concerns": [
+              "未披露薪资",
+              "工作地点连云港"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "资产及项目管理会计1本科及以上财务类"
+          ],
+          "confidence": 0.9,
+          "id": "daec72a96ffef5c8"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "管理会计",
+          "jobDirections": [
+            "财务管理"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "财务类",
+            "accepted": [
+              "财务类"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 83,
+            "rankingKey": 1534489,
+            "level": "high",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "央企财务岗位，专业对口",
+              "本科即可"
+            ],
+            "concerns": [
+              "未披露薪资",
+              "工作地点连云港"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "管理会计1本科及以上财务类"
+          ],
+          "confidence": 0.9,
+          "id": "a221166835f0fad7"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "往来会计",
+          "jobDirections": [
+            "财务管理"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "财务类",
+            "accepted": [
+              "财务类"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 83,
+            "rankingKey": 1534489,
+            "level": "high",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "央企财务岗位，专业对口",
+              "本科即可"
+            ],
+            "concerns": [
+              "未披露薪资",
+              "工作地点连云港"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "往来会计1本科及以上财务类"
+          ],
+          "confidence": 0.9,
+          "id": "bb91e78ac12f3d94"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "外贸主管",
+          "jobDirections": [
+            "外贸管理"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "外国语言文学类、经济与贸易类",
+            "accepted": [
+              "外国语言文学类",
+              "经济与贸易类"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 75,
+            "rankingKey": 1434489,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "央企外贸岗位，文科社科专业对口",
+              "本科即可"
+            ],
+            "concerns": [
+              "未披露薪资",
+              "工作地点连云港"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "外贸主管1本科及以上外国语言文学类、经济与贸易类"
+          ],
+          "confidence": 0.9,
+          "id": "716e9d5943d045c8"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "战略管理专员",
+          "jobDirections": [
+            "战略管理"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "理工科、经济金融类相关专业，材料、纺织、化工、经济学、金融学等专业优先",
+            "accepted": [
+              "理工科",
+              "经济金融类",
+              "材料",
+              "纺织",
+              "化工",
+              "经济学",
+              "金融学"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1334389,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企战略岗位，专业范围广",
+              "本科即可"
+            ],
+            "concerns": [
+              "专业偏好理工科，文科竞争力弱",
+              "未披露薪资"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "战略管理专员1本科及以上理工科、经济金融类相关专业，材料、纺织、化工、经济学、金融学等专业优先"
+          ],
+          "confidence": 0.9,
+          "id": "42eaa40a9537ea46"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "焊工",
+          "jobDirections": [
+            "焊接操作"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "中专及以上",
+            "minimum": "中专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1334389,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企岗位，学历要求低",
+              "不限专业"
+            ],
+            "concerns": [
+              "技能型岗位，需焊工证",
+              "未披露薪资"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "焊工1中专及以上不限"
+          ],
+          "confidence": 0.9,
+          "id": "63c57345739a5341"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "操作工",
+          "jobDirections": [
+            "生产操作"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "30",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "初中及以上学历，高中（中专）及以上学历优先",
+            "minimum": "初中",
+            "preferred": "高中/中专",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1334389,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企岗位，招聘人数多",
+              "学历要求极低，不限专业"
+            ],
+            "concerns": [
+              "体力劳动岗位",
+              "未披露薪资"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "操作工30初中及以上学历，高中（中专）及以上学历优先不限"
+          ],
+          "confidence": 0.9,
+          "id": "3b11e2d22c6e0c0a"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "生产管培生",
+          "jobDirections": [
+            "生产管理"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "5",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "理工科相关专业，材料、化学、化工、机械、电气、安全工程、环境工程专业优先",
+            "accepted": [
+              "理工科",
+              "材料",
+              "化学",
+              "化工",
+              "机械",
+              "电气",
+              "安全工程",
+              "环境工程"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 66,
+            "rankingKey": 1334289,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企生产管培生，招聘人数多",
+              "专业范围广，理工科均可"
+            ],
+            "concerns": [
+              "专业偏好理工科，文科不可",
+              "未披露薪资"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [
+            "生产管培生5本科及以上理工科相关专业，材料、化学、化工、机械、电气、安全工程、环境工程专业优先"
+          ],
+          "confidence": 0.9,
+          "id": "9a92311c1418467b"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "研发工程师",
+          "jobDirections": [
+            "研发"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "硕士研究生",
+            "minimum": "硕士",
             "preferred": null,
             "tier": "master",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "管理、工商、行政、人力资源、经济、金融、会计、财务",
+            "summary": "化学类、化工类、高分子类、纺织类、材料类",
             "accepted": [
-              "管理",
-              "工商",
-              "行政",
-              "人力资源",
-              "经济",
-              "金融",
-              "会计",
-              "财务"
+              "化学类",
+              "化工类",
+              "高分子类",
+              "纺织类",
+              "材料类"
             ],
-            "fit": "administrative_management"
+            "fit": "mismatch"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "未披露"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
             "salary": null,
-            "benefits": [],
-            "quality": 0
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
           },
           "deadline": null,
-          "applicationMethod": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
           "recommendation": {
-            "score": 83,
-            "rankingKey": 1640257,
-            "level": "high",
+            "score": 39,
+            "rankingKey": 1144289,
+            "level": "low",
             "reasons": [
-              "专业高度匹配行政管理",
+              "专业匹配度较低",
               "学历要求以硕士为主，符合优先级",
-              "命中专业关键词：管理、工商、行政、人力资源、经济、金融、会计、财务"
+              "央企研发岗位，硕士学历要求",
+              "专业对口，材料类优先"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "未发现行政管理、管理类或文科专业入口",
+              "专业为理工科，非管理类",
+              "未披露薪资"
             ]
           },
           "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "759b5e6b97a88c35"
+          "evidence": [
+            "研发工程师1硕士研究生化学类、化工类、高分子类、纺织类、材料类"
+          ],
+          "confidence": 0.9,
+          "id": "d1f653e6a62c9c1f"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "环保主管",
+          "jobDirections": [
+            "环保管理"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "硕士研究生及以上",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "环境工程类、化工类",
+            "accepted": [
+              "环境工程类",
+              "化工类"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 39,
+            "rankingKey": 1144289,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级",
+              "央企环保管理岗位，硕士学历要求",
+              "专业对口环境工程"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业为理工科，非管理类",
+              "未披露薪资"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [
+            "环保主管1硕士研究生及以上环境工程类、化工类"
+          ],
+          "confidence": 0.9,
+          "id": "f5a261f2d522175a"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "质量总监",
+          "jobDirections": [
+            "质量管理"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "化工类、纺织类、材料类",
+            "accepted": [
+              "化工类",
+              "纺织类",
+              "材料类"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 35,
+            "rankingKey": 1134389,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "本科或大专层次可报",
+              "央企背景，世界500强中国建材集团旗下",
+              "岗位级别高，质量总监",
+              "福利待遇完善"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求为理工科，非管理类",
+              "学历要求本科，非硕士优先",
+              "未披露薪资"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "质量总监1本科及以上化工类、纺织类、材料类"
+          ],
+          "confidence": 0.9,
+          "id": "0446867219c3fa90"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "投资主管",
+          "jobDirections": [
+            "投资管理"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融类、投资类、材料类",
+            "accepted": [
+              "金融类",
+              "投资类",
+              "材料类"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 35,
+            "rankingKey": 1134389,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "本科或大专层次可报",
+              "央企投资岗位，金融类对口",
+              "本科即可"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业包含材料类，可能偏好理工背景",
+              "未披露薪资"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "投资主管1本科及以上金融类、投资类、材料类"
+          ],
+          "confidence": 0.9,
+          "id": "e60324a454c0ea8c"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "企划管培生",
+          "jobDirections": [
+            "企划管理"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "2",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "材料类",
+            "accepted": [
+              "材料类"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 34,
+            "rankingKey": 1134289,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "本科或大专层次可报",
+              "央企管培生岗位",
+              "本科即可"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业仅限材料类，非管理类",
+              "未披露薪资"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [
+            "企划管培生2本科材料类"
+          ],
+          "confidence": 0.9,
+          "id": "341a70e4ec3edbd1"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "科研助理（技术员）",
+          "jobDirections": [
+            "科研支持"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "材料类、化学类、化工类、高分子类、机械类",
+            "accepted": [
+              "材料类",
+              "化学类",
+              "化工类",
+              "高分子类",
+              "机械类"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 34,
+            "rankingKey": 1134289,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "本科或大专层次可报",
+              "央企科研支持岗位",
+              "本科即可"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业为理工科，非管理类",
+              "未披露薪资"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [
+            "科研助理（技术员）1本科材料类、化学类、化工类、高分子类、机械类"
+          ],
+          "confidence": 0.9,
+          "id": "57778a808aebdf4a"
+        },
+        {
+          "organization": "中复神鹰碳纤维股份有限公司",
+          "organizationNature": "央企",
+          "industry": "新材料",
+          "jobTitle": "高级研发工程师",
+          "jobDirections": [
+            "研发"
+          ],
+          "locations": [
+            "连云港"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "博士研究生",
+            "minimum": "博士",
+            "preferred": null,
+            "tier": "phd_required",
+            "hardPhdRequired": true
+          },
+          "majors": {
+            "summary": "化学类、化工类、高分子类、纺织类、材料类",
+            "accepted": [
+              "化学类",
+              "化工类",
+              "高分子类",
+              "纺织类",
+              "材料类"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "未披露"
+          ],
+          "compensation": {
+            "summary": "富有竞争力的薪酬体系，足额高标准五险一金，健全的休息休假制度，舒适的住宿环境、员工餐厅、通勤车，丰富的培训与文体活动",
+            "salary": null,
+            "benefits": [
+              "五险一金",
+              "住宿",
+              "餐厅",
+              "通勤车",
+              "培训",
+              "文体活动"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "扫码投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 18,
+            "rankingKey": 114189,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "硬性要求博士，按偏好后置",
+              "央企研发岗位，博士学历要求",
+              "公司为国家高新技术企业，研发实力强"
+            ],
+            "concerns": [
+              "硬性博士要求，与你的学历排序偏好不符",
+              "未发现行政管理、管理类或文科专业入口",
+              "硬性博士要求，学历门槛高",
+              "专业为理工科，非管理类",
+              "未披露薪资"
+            ]
+          },
+          "accessibility": 1,
+          "evidence": [
+            "高级研发工程师1博士研究生化学类、化工类、高分子类、纺织类、材料类"
+          ],
+          "confidence": 0.9,
+          "id": "79c62deca9b872b1"
         }
       ],
-      "analysisSource": "heuristic",
-      "extractionComplete": false,
-      "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
-      ]
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
     },
     {
       "id": "1b5fa3a9d522cc9f",
@@ -699,68 +2095,102 @@
       "title": "工资8500-12500(含6险2金+双休)事业单位公开招录125名办公室人员！各乡镇街道均有名额！7月17日报名！大专可报！可入编！",
       "url": "https://mp.weixin.qq.com/s/cla1jU9pqyQRZw-Lm03Iaw",
       "publishedAt": "2026-07-17T03:06:16.000Z",
-      "ocrUsed": false,
-      "ocrImageCount": 0,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "ocrUsed": true,
+      "ocrImageCount": 1,
+      "summary": "事业单位面向社会公开招聘125名办公室人员，大专可报，专业不限，六险二金，双休，可入编。",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "工资8500-12500(含6险2金+双休)事业单位公开招录125名办公室人员！各乡镇街道均有名额！7月17日报名！大专可报！可入编！",
-          "locations": [],
-          "headcount": null,
-          "employmentTypes": [],
+          "organization": "各地民政局、统计局、生态环境局、财政局、地震局、教育局、工信局、交通运输局、审计局、卫健局、发改局等",
+          "organizationNature": "事业单位",
+          "industry": "公共服务",
+          "jobTitle": "办公室人员",
+          "jobDirections": [
+            "综合行政"
+          ],
+          "locations": [
+            "各乡镇街道"
+          ],
+          "headcount": "125",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
           "education": {
-            "summary": "bachelor_associate",
-            "minimum": null,
+            "summary": "大专及以上学历",
+            "minimum": "大专",
             "preferred": null,
             "tier": "bachelor_associate",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "审计、法律、教育、不限专业、专业不限",
+            "summary": "专业不限",
             "accepted": [
-              "审计",
-              "法律",
-              "教育",
-              "不限专业",
-              "专业不限"
+              "不限"
             ],
             "fit": "broad"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "年龄18-38周岁",
+            "无犯罪记录",
+            "具有中华人民共和国国籍",
+            "遵守宪法和法律，具有良好的品行"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
-            "salary": null,
-            "benefits": [],
-            "quality": 0
+            "summary": "月薪8500-12500元，含六险二金、双休、年终奖等，综合到手13万+",
+            "salary": "8500-12500元/月",
+            "benefits": [
+              "六险二金",
+              "双休",
+              "法定节假日全休",
+              "带薪年假",
+              "年终奖金",
+              "13薪",
+              "考核奖",
+              "评比奖",
+              "值班加班费",
+              "公休假补贴",
+              "话补",
+              "餐补"
+            ],
+            "quality": 4
           },
-          "deadline": null,
-          "applicationMethod": null,
+          "deadline": "2026-07-18T22:00:00",
+          "applicationMethod": "通过公众号回复“报名”获取报名详情及流程",
+          "applicationUrl": null,
+          "referralCode": null,
           "recommendation": {
-            "score": 56,
-            "rankingKey": 1330257,
+            "score": 69,
+            "rankingKey": 1334489,
             "level": "medium",
             "reasons": [
               "专业限制较宽或不限专业",
               "本科或大专层次可报",
-              "命中专业关键词：审计、法律、教育、不限专业、专业不限"
+              "事业单位编制，工作稳定",
+              "大专可报，专业不限，门槛低",
+              "薪资福利优厚，六险二金，双休",
+              "面向全国，名额较多"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "报名方式不透明，需通过公众号回复获取，可能存在信息不对称",
+              "未明确具体单位及岗位职责，信息笼统",
+              "截止时间以官网为准，存在不确定性"
             ]
           },
-          "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "b4b2e61be8aed424"
+          "accessibility": 4,
+          "evidence": [
+            "工资8500-12500(含6险2金+双休)",
+            "大专可报",
+            "专业不限",
+            "年龄18-38周岁"
+          ],
+          "confidence": 0.9,
+          "id": "e5da346d98ce400c"
         }
       ],
-      "analysisSource": "heuristic",
-      "extractionComplete": false,
-      "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
-        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-CgMuxQ/0.jpg stdout -l chi_sim+eng --psm 6\n"
-      ]
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
     },
     {
       "id": "37a44b86a67351e4",
@@ -980,67 +2410,79 @@
       "publishedAt": "2026-07-17T03:06:16.000Z",
       "ocrUsed": false,
       "ocrImageCount": 0,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "summary": "国家电投集团河南公司所属单位面向社会公开招聘相关人才，报名截止2026年7月20日。",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "国家电投集团分公司2026年招聘公告！",
-          "locations": [],
+          "organization": "国家电投集团河南公司所属单位",
+          "organizationNature": "央企",
+          "industry": "能源",
+          "jobTitle": "公开招聘岗位（详见附件1）",
+          "jobDirections": [],
+          "locations": [
+            "河南省"
+          ],
           "headcount": null,
           "employmentTypes": [
             "社招"
           ],
+          "graduateScope": "往届生",
+          "previousGraduatesEligible": "yes",
           "education": {
-            "summary": "未明确",
-            "minimum": null,
-            "preferred": null,
+            "summary": "详见附件1",
+            "minimum": "未披露",
+            "preferred": "未披露",
             "tier": "unspecified",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "管理、工商、行政、金融、法律、政治",
-            "accepted": [
-              "管理",
-              "工商",
-              "行政",
-              "金融",
-              "法律",
-              "政治"
-            ],
-            "fit": "management"
+            "summary": "详见附件1",
+            "accepted": [],
+            "fit": "uncertain"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "年龄计算截止2026年5月31日",
+            "无受审查、处分、失信等情形"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
+            "summary": "未披露",
             "salary": null,
             "benefits": [],
             "quality": 0
           },
-          "deadline": null,
-          "applicationMethod": null,
+          "deadline": "2026-07-20T17:00:00",
+          "applicationMethod": "邮箱投递",
+          "applicationUrl": "mailto:spichngsrz@126.com",
+          "referralCode": null,
           "recommendation": {
-            "score": 64,
-            "rankingKey": 1520257,
-            "level": "medium",
+            "score": 36,
+            "rankingKey": 1220369,
+            "level": "low",
             "reasons": [
-              "专业符合管理类方向",
+              "专业范围尚需核对原文",
               "学历要求未明确，需进一步核实",
-              "命中专业关键词：管理、工商、行政、金融、法律、政治"
+              "央企平台，稳定性高",
+              "河南省清洁能源龙头，发展前景好"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "岗位具体信息未披露，需下载附件",
+              "薪资福利未披露"
             ]
           },
-          "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "b8962ef3ae1f3767"
+          "accessibility": 3,
+          "evidence": [
+            "国家电投集团河南公司所属单位现面向社会公开招聘相关人才",
+            "报名时间截至2026年7月20日17:00",
+            "招聘邮箱spichngsrz@126.com"
+          ],
+          "confidence": 0.7,
+          "id": "113975ef6ea485cc"
         }
       ],
-      "analysisSource": "heuristic",
+      "analysisSource": "deepseek",
       "extractionComplete": false,
       "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+        "附件1未提供具体岗位信息，无法提取详细岗位要求。",
+        "文章末尾包含其他单位招聘汇总，但未提供具体岗位细节，仅作为广告。"
       ]
     },
     {
@@ -1051,69 +2493,232 @@
       "publishedAt": "2026-07-17T03:06:16.000Z",
       "ocrUsed": false,
       "ocrImageCount": 0,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "summary": "国家邮政局所属在京单位2026年度公开招聘，涉及3个岗位，面向国内高校应届毕业生和社会人员。",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "国家邮政局2026年度公开招聘公告！",
-          "locations": [],
-          "headcount": null,
-          "employmentTypes": [],
+          "organization": "国家邮政局所属在京单位",
+          "organizationNature": "党政机关",
+          "industry": "公共服务",
+          "jobTitle": "岗位1（应届毕业生）",
+          "jobDirections": [
+            "未披露"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "yes",
           "education": {
-            "summary": "master",
-            "minimum": null,
-            "preferred": null,
+            "summary": "硕士及以上（含两年择业期）",
+            "minimum": "硕士",
+            "preferred": "硕士",
             "tier": "master",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "人力资源、法律、教育、政治",
+            "summary": "详见附件，专业条件参考教育部专业目录",
             "accepted": [
-              "人力资源",
-              "法律",
-              "教育",
-              "政治"
+              "详见附件"
             ],
-            "fit": "management"
+            "fit": "uncertain"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "年龄不超过38周岁（1987年7月1日后出生）",
+            "京外生源须符合在京落户要求",
+            "政治面貌等详见公告"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
+            "summary": "未披露",
             "salary": null,
             "benefits": [],
             "quality": 0
           },
-          "deadline": null,
-          "applicationMethod": null,
+          "deadline": "2026-07-25T18:00:00",
+          "applicationMethod": "网上报名",
+          "applicationUrl": "https://www.sydwgkzp.cn/mohrss",
+          "referralCode": null,
           "recommendation": {
-            "score": 75,
-            "rankingKey": 1540257,
-            "level": "medium",
+            "score": 47,
+            "rankingKey": 1240389,
+            "level": "low",
             "reasons": [
-              "专业符合管理类方向",
+              "专业范围尚需核对原文",
               "学历要求以硕士为主，符合优先级",
-              "命中专业关键词：人力资源、法律、教育、政治"
+              "事业单位，稳定性高",
+              "面向应届生，含择业期",
+              "北京工作，可能解决户口"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "专业要求不明确，需查看附件",
+              "薪资福利未披露",
+              "竞争比例可能较高"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "招聘国内高校应届毕业生",
+            "含两年择业期",
+            "京外生源须符合落户要求"
+          ],
+          "confidence": 0.9,
+          "id": "c627418a20560439"
+        },
+        {
+          "organization": "国家邮政局所属在京单位",
+          "organizationNature": "党政机关",
+          "industry": "公共服务",
+          "jobTitle": "岗位2（社会人员）",
+          "jobDirections": [
+            "未披露"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "未明确",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上（已取得学历学位）",
+            "minimum": "本科",
+            "preferred": "本科",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "详见附件，专业条件参考教育部专业目录",
+            "accepted": [
+              "详见附件"
+            ],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "年龄不超过38周岁（1987年7月1日后出生）",
+            "具有北京市常住户口或符合在京落户要求",
+            "已取得毕业证、学位证"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-07-25T18:00:00",
+          "applicationMethod": "网上报名",
+          "applicationUrl": "https://www.sydwgkzp.cn/mohrss",
+          "referralCode": null,
+          "recommendation": {
+            "score": 40,
+            "rankingKey": 1230289,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "事业单位，稳定性高",
+              "面向社会人员，范围广",
+              "北京工作"
+            ],
+            "concerns": [
+              "专业要求不明确，需查看附件",
+              "薪资福利未披露",
+              "需北京户口或符合落户条件"
             ]
           },
           "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "890d1cd9d6dd97ba"
+          "evidence": [
+            "招聘社会人员",
+            "需北京市常住户口或符合落户要求"
+          ],
+          "confidence": 0.9,
+          "id": "6ac7a2b7978ab96d"
+        },
+        {
+          "organization": "国家邮政局所属在京单位",
+          "organizationNature": "党政机关",
+          "industry": "公共服务",
+          "jobTitle": "岗位3（社会人员）",
+          "jobDirections": [
+            "未披露"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "未明确",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上（已取得学历学位）",
+            "minimum": "本科",
+            "preferred": "本科",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "详见附件，专业条件参考教育部专业目录",
+            "accepted": [
+              "详见附件"
+            ],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "年龄不超过38周岁（1987年7月1日后出生）",
+            "具有北京市常住户口或符合在京落户要求",
+            "已取得毕业证、学位证"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-07-25T18:00:00",
+          "applicationMethod": "网上报名",
+          "applicationUrl": "https://www.sydwgkzp.cn/mohrss",
+          "referralCode": null,
+          "recommendation": {
+            "score": 40,
+            "rankingKey": 1230289,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "事业单位，稳定性高",
+              "面向社会人员，范围广",
+              "北京工作"
+            ],
+            "concerns": [
+              "专业要求不明确，需查看附件",
+              "薪资福利未披露",
+              "需北京户口或符合落户条件"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [
+            "招聘社会人员",
+            "需北京市常住户口或符合落户要求"
+          ],
+          "confidence": 0.9,
+          "id": "627888c8c3381d45"
         }
       ],
-      "analysisSource": "heuristic",
-      "extractionComplete": false,
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
       "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
-        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-gI4BEH/1.webp stdout -l chi_sim+eng --psm 6\n",
-        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-gI4BEH/0.webp stdout -l chi_sim+eng --psm 6\n",
-        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-gI4BEH/2.webp stdout -l chi_sim+eng --psm 6\n",
-        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-gI4BEH/3.webp stdout -l chi_sim+eng --psm 6\n",
-        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-gI4BEH/5.webp stdout -l chi_sim+eng --psm 6\n",
-        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-gI4BEH/4.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-QjWhSv/1.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-QjWhSv/2.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-QjWhSv/0.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-QjWhSv/4.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-QjWhSv/5.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-QjWhSv/3.webp stdout -l chi_sim+eng --psm 6\n",
         "达到单篇 OCR 时间预算，跳过 2 张图片"
       ]
     },
@@ -1339,70 +2944,89 @@
       "publishedAt": "2026-07-16T15:30:01.000Z",
       "ocrUsed": false,
       "ocrImageCount": 0,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "summary": "中粮集团社招人力资源部薪酬考核和人工成本管理岗1人，要求本科及以上，财务会计、人力资源等相关专业，2年以上相关经验，工作地点北京。",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "社招 | 中粮集团有限公司公开招聘公告",
-          "locations": [],
-          "headcount": null,
+          "organization": "中粮集团有限公司",
+          "organizationNature": "央企",
+          "industry": "农粮食品",
+          "jobTitle": "薪酬考核和人工成本管理岗",
+          "jobDirections": [
+            "薪酬考核",
+            "人工成本管理"
+          ],
+          "locations": [
+            "北京市朝阳区"
+          ],
+          "headcount": "1",
           "employmentTypes": [
             "社招"
           ],
+          "graduateScope": "往届",
+          "previousGraduatesEligible": "yes",
           "education": {
-            "summary": "bachelor_associate",
-            "minimum": null,
+            "summary": "全日制大学本科及以上学历",
+            "minimum": "本科",
             "preferred": null,
             "tier": "bachelor_associate",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "管理、人力资源、金融、会计、财务、英语、教育、政治",
+            "summary": "财务会计、人力资源等相关专业",
             "accepted": [
-              "管理",
-              "人力资源",
-              "金融",
-              "会计",
-              "财务",
-              "英语",
-              "教育",
-              "政治"
+              "财务会计",
+              "人力资源"
             ],
             "fit": "management"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "政治立场坚定，政治敏感性强，中共党员优先",
+            "2年以上财务会计、薪酬激励等相关工作经验",
+            "具有较强的语言沟通和组织协调能力",
+            "具有扎实的文字功底，能够熟练撰写常用公文",
+            "具有基本的英语听说读写能力",
+            "能熟练使用办公软件及管理信息系统，具有较强的数据处理和分析能力"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
+            "summary": "未披露",
             "salary": null,
             "benefits": [],
             "quality": 0
           },
-          "deadline": null,
-          "applicationMethod": null,
+          "deadline": "2026-07-24",
+          "applicationMethod": "邮箱投递",
+          "applicationUrl": null,
+          "referralCode": null,
           "recommendation": {
-            "score": 70,
-            "rankingKey": 1530257,
+            "score": 72,
+            "rankingKey": 1530394,
             "level": "medium",
             "reasons": [
               "专业符合管理类方向",
               "本科或大专层次可报",
-              "命中专业关键词：管理、人力资源、金融、会计、财务、英语、教育、政治"
+              "央企平台，稳定性高",
+              "岗位职责明确，涉及薪酬考核核心职能",
+              "工作地点北京朝阳区，地理位置优越"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "薪资福利未披露",
+              "要求2年以上相关工作经验，应届生不可投",
+              "专业限制较窄，仅财务会计、人力资源等相关专业"
             ]
           },
-          "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "73ec08ae2c2b621b"
+          "accessibility": 3,
+          "evidence": [
+            "中粮集团有限公司是中央直属大型国有企业",
+            "招聘岗位为社招，要求2年以上工作经验",
+            "专业要求为财务会计、人力资源等相关专业"
+          ],
+          "confidence": 0.95,
+          "id": "2cd307f7b84efb4a"
         }
       ],
-      "analysisSource": "heuristic",
-      "extractionComplete": false,
-      "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
-      ]
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
     },
     {
       "id": "7b62f029a740223b",
@@ -1412,63 +3036,106 @@
       "publishedAt": "2026-07-16T15:30:01.000Z",
       "ocrUsed": false,
       "ocrImageCount": 0,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "summary": "华能核能技术研究院2026年社会招聘专业技术人才，岗位为专业方向，不设具体职级，要求3年以上经验、中级职称，年龄≤45岁。",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "社招 | 华能核能技术研究院有限公司2026年社会招聘公告",
-          "locations": [],
+          "organization": "华能核能技术研究院有限公司",
+          "organizationNature": "央企",
+          "industry": "核电技术研发",
+          "jobTitle": "专业技术人才（专业方向）",
+          "jobDirections": [
+            "核电技术研发与设计",
+            "厂址开发与工程管理",
+            "核安全保障",
+            "全寿期技术支持"
+          ],
+          "locations": [
+            "上海市浦东新区"
+          ],
           "headcount": null,
           "employmentTypes": [
             "社招"
           ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
           "education": {
-            "summary": "未明确",
-            "minimum": null,
+            "summary": "未明确最低学历，但要求中级及以上职称，一般需本科以上",
+            "minimum": "本科",
             "preferred": null,
-            "tier": "unspecified",
+            "tier": "bachelor_associate",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "管理、人力资源",
+            "summary": "专业对口或具有相关专业工作经历和资格证书",
             "accepted": [
-              "管理",
-              "人力资源"
+              "核工程",
+              "热能工程",
+              "机械工程",
+              "电气工程",
+              "自动化",
+              "安全工程",
+              "其他相关专业"
             ],
-            "fit": "management"
+            "fit": "broad"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "遵纪守法，诚实守信，作风正派，认同华能企业文化",
+            "爱岗敬业，具有拟聘任岗位所必需的业务知识和工作能力",
+            "具有较强的团结协作精神和开拓创新意识",
+            "身体健康",
+            "至少3年及以上相关专业工作经验",
+            "中级及以上职称",
+            "年龄一般不超过45周岁",
+            "无犯罪、开除、违纪等不良记录",
+            "近3年年度考核结果无基本称职及以下情况"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
+            "summary": "按照公司薪酬待遇管理相关制度执行，参加国家规定的各项社会保险",
             "salary": null,
-            "benefits": [],
-            "quality": 0
+            "benefits": [
+              "五险一金（国家规定）"
+            ],
+            "quality": 3
           },
-          "deadline": null,
-          "applicationMethod": null,
+          "deadline": "2026-08-07",
+          "applicationMethod": "登录中国华能人力资源市场网站，选择社会招聘-京外单位-华能核能技术研究院有限公司报名",
+          "applicationUrl": "https://zhaopin.chng.com.cn",
+          "referralCode": null,
           "recommendation": {
-            "score": 64,
-            "rankingKey": 1520257,
+            "score": 65,
+            "rankingKey": 1333389,
             "level": "medium",
             "reasons": [
-              "专业符合管理类方向",
-              "学历要求未明确，需进一步核实",
-              "命中专业关键词：管理、人力资源"
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台，稳定且有发展前景",
+              "位于上海浦东，地理位置优越",
+              "涉及前沿核电技术，专业性强"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "薪资福利未明确，仅按公司制度执行",
+              "要求中级职称和3年以上经验，门槛较高",
+              "不解决配偶工作及子女入学问题",
+              "岗位为专业方向，具体职级未定"
             ]
           },
-          "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "eee8af0fdfa327b5"
+          "accessibility": 3,
+          "evidence": [
+            "华能核能技术研究院有限公司成立于2020年12月，位于上海市浦东新区世博央企片区，是中国华能全资子公司",
+            "招聘岗位仅为专业方向，不设定具体职级",
+            "一般至少具有3年及以上相关专业工作经验，中级及以上职称，年龄一般不超过45周岁",
+            "录用人员工资待遇按照公司薪酬待遇管理相关制度执行",
+            "招聘报名时间截止至2026年8月7日"
+          ],
+          "confidence": 0.9,
+          "id": "3872103ded849201"
         }
       ],
-      "analysisSource": "heuristic",
-      "extractionComplete": false,
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
       "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+        "岗位仅列出专业方向，未提供具体岗位名称，故合并为一个岗位组。",
+        "薪资福利未详细披露，仅提及按公司制度执行。"
       ]
     },
     {
@@ -1479,64 +3146,88 @@
       "publishedAt": "2026-07-16T15:30:01.000Z",
       "ocrUsed": false,
       "ocrImageCount": 0,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "summary": "诺安基金发布社会招聘，招聘行业研究员（半导体方向）一名。",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "社招 | 诺安基金最新社会招聘",
-          "locations": [],
+          "organization": "诺安基金",
+          "organizationNature": "民企",
+          "industry": "金融",
+          "jobTitle": "行业研究员-半导体方向",
+          "jobDirections": [
+            "行业研究",
+            "半导体"
+          ],
+          "locations": [
+            "未披露"
+          ],
           "headcount": null,
           "employmentTypes": [
             "社招"
           ],
+          "graduateScope": "未披露",
+          "previousGraduatesEligible": "yes",
           "education": {
-            "summary": "master",
-            "minimum": null,
+            "summary": "硕士及以上学历",
+            "minimum": "硕士",
             "preferred": null,
             "tier": "master",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "金融、财务",
+            "summary": "微电子、材料科学、应用物理等相关专业",
             "accepted": [
-              "金融",
-              "财务"
+              "微电子",
+              "材料科学",
+              "应用物理"
             ],
-            "fit": "humanities"
+            "fit": "mismatch"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "5年以上卖方首席分析师或买方资深研究员从业经验",
+            "深耕半导体产业研究",
+            "精通金融科技工具应用，擅长财务建模与估值分析",
+            "拥有丰富的半导体产业资源积累，在机构客户群体中具有较高专业认可度"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
+            "summary": "未披露",
             "salary": null,
             "benefits": [],
             "quality": 0
           },
           "deadline": null,
-          "applicationMethod": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://app.mokahr.com/m/social-recruitment/lionfund/42543#/job/67ec3eba-85b8-49a2-bbbb-c1cd19d29dc0",
+          "referralCode": null,
           "recommendation": {
-            "score": 67,
-            "rankingKey": 1440257,
-            "level": "medium",
+            "score": 28,
+            "rankingKey": 1140189,
+            "level": "low",
             "reasons": [
-              "专业面向文科社科方向",
+              "专业匹配度较低",
               "学历要求以硕士为主，符合优先级",
-              "命中专业关键词：金融、财务"
+              "岗位为行业研究员，专业性强，发展前景好",
+              "诺安基金为知名公募基金，平台优质"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求为理工科，与行政管理等文科专业不匹配",
+              "要求5年以上资深经验，门槛高",
+              "薪资福利未披露"
             ]
           },
-          "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "572211f20e261604"
+          "accessibility": 1,
+          "evidence": [
+            "硕士及以上学历，微电子、材料科学、应用物理等相关专业背景",
+            "具备5年以上卖方首席分析师或买方资深研究员从业经验"
+          ],
+          "confidence": 0.9,
+          "id": "d8f4b4d2fda3b7ad"
         }
       ],
-      "analysisSource": "heuristic",
-      "extractionComplete": false,
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
       "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
-        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Opouzo/0.webp stdout -l chi_sim+eng --psm 6\n"
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-DBUOLa/0.webp stdout -l chi_sim+eng --psm 6\n"
       ]
     },
     {
@@ -1622,65 +3313,256 @@
       "publishedAt": "2026-07-16T15:30:01.000Z",
       "ocrUsed": false,
       "ocrImageCount": 0,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "summary": "腾讯2027青云计划校招启动，提供算法岗、AI博士等岗位，薪资优厚，工作地点深圳、北京等。",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "秋招 | 腾讯2027青云计划校招启动及薪资待遇（附秋招汇总表及经验交流群）",
-          "locations": [],
+          "organization": "腾讯",
+          "organizationNature": "民企",
+          "industry": "互联网",
+          "jobTitle": "算法岗（青云计划）",
+          "jobDirections": [
+            "大模型",
+            "多模态",
+            "前沿技术"
+          ],
+          "locations": [
+            "深圳",
+            "北京"
+          ],
           "headcount": null,
           "employmentTypes": [
-            "秋招",
-            "校招",
-            "实习",
-            "提前批"
+            "校招"
           ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
           "education": {
-            "summary": "master",
-            "minimum": null,
-            "preferred": null,
+            "summary": "硕士及以上，博士优先",
+            "minimum": "硕士",
+            "preferred": "博士",
             "tier": "master",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "金融",
+            "summary": "计算机、人工智能等相关专业",
             "accepted": [
-              "金融"
+              "计算机科学与技术",
+              "人工智能",
+              "数学",
+              "统计学"
             ],
-            "fit": "humanities"
+            "fit": "mismatch"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "2027届应届毕业生",
+            "聚焦大模型、多模态等前沿技术"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
-            "salary": null,
-            "benefits": [],
-            "quality": 0
+            "summary": "硕士年薪65k*16薪（约104万），顶尖AI博士总包80万-220万元，含股票激励和签字费",
+            "salary": "硕士年薪约104万，博士80-220万",
+            "benefits": [
+              "股票激励",
+              "签字费",
+              "三重导师体系",
+              "开源资源支持",
+              "全球交流机会"
+            ],
+            "quality": 5
           },
           "deadline": null,
           "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
           "recommendation": {
-            "score": 67,
-            "rankingKey": 1440257,
-            "level": "medium",
+            "score": 41,
+            "rankingKey": 1145279,
+            "level": "low",
             "reasons": [
-              "专业面向文科社科方向",
+              "专业匹配度较低",
               "学历要求以硕士为主，符合优先级",
-              "命中专业关键词：金融"
+              "薪资待遇极高，硕士年薪超百万",
+              "聚焦前沿技术，发展前景好",
+              "提供导师体系和全球交流机会"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求严格，仅限计算机、AI等理工科",
+              "竞争激烈，仅面向顶尖学生",
+              "未披露具体报名方式和截止时间"
             ]
           },
           "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "ddfd6471f1bbff78"
+          "evidence": [
+            "算法岗应届硕士年薪可达65k*16薪",
+            "顶尖AI博士总包80万-220万元",
+            "聚焦大模型、多模态等前沿技术"
+          ],
+          "confidence": 0.8,
+          "id": "da7352b60cc97743"
+        },
+        {
+          "organization": "腾讯",
+          "organizationNature": "民企",
+          "industry": "互联网",
+          "jobTitle": "实习生（青云计划）",
+          "jobDirections": [
+            "大模型",
+            "多模态",
+            "前沿技术"
+          ],
+          "locations": [
+            "深圳",
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "未明确，推测硕士及以上",
+            "minimum": "硕士",
+            "preferred": "博士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "计算机、人工智能等相关专业",
+            "accepted": [
+              "计算机科学与技术",
+              "人工智能"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "2027届应届毕业生",
+            "聚焦前沿技术"
+          ],
+          "compensation": {
+            "summary": "日薪最高达5500元（月薪12万+）",
+            "salary": "日薪最高5500元",
+            "benefits": [
+              "薪酬上不封顶"
+            ],
+            "quality": 5
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 41,
+            "rankingKey": 1145269,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级",
+              "实习薪酬极高，日薪5500元",
+              "可转正，提前锁定offer",
+              "接触前沿技术"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求严格",
+              "竞争激烈",
+              "未披露报名方式和截止时间"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [
+            "实习生薪酬上不封顶",
+            "青云计划日薪最高达5500元"
+          ],
+          "confidence": 0.7,
+          "id": "70d20d8fe07f9c07"
+        },
+        {
+          "organization": "腾讯",
+          "organizationNature": "民企",
+          "industry": "互联网",
+          "jobTitle": "AI博士岗（青云计划）",
+          "jobDirections": [
+            "AI研究",
+            "大模型",
+            "多模态"
+          ],
+          "locations": [
+            "深圳",
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "博士",
+            "minimum": "博士",
+            "preferred": "博士",
+            "tier": "phd_required",
+            "hardPhdRequired": true
+          },
+          "majors": {
+            "summary": "人工智能、计算机等相关专业",
+            "accepted": [
+              "人工智能",
+              "计算机科学与技术"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "2027届博士毕业生",
+            "顶尖AI研究方向"
+          ],
+          "compensation": {
+            "summary": "总包80万-220万元，含股票激励和签字费",
+            "salary": "80-220万",
+            "benefits": [
+              "股票激励",
+              "签字费",
+              "三重导师体系",
+              "开源资源支持",
+              "全球交流机会"
+            ],
+            "quality": 5
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 21,
+            "rankingKey": 115179,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "硬性要求博士，按偏好后置",
+              "薪资极高，总包最高220万",
+              "顶尖研究岗位，资源丰富",
+              "全球交流机会"
+            ],
+            "concerns": [
+              "硬性博士要求，与你的学历排序偏好不符",
+              "未发现行政管理、管理类或文科专业入口",
+              "硬性博士要求，门槛极高",
+              "专业限制严格",
+              "未披露报名方式和截止时间"
+            ]
+          },
+          "accessibility": 1,
+          "evidence": [
+            "顶尖AI博士总包80万-220万元",
+            "含股票激励和签字费"
+          ],
+          "confidence": 0.8,
+          "id": "f092b81efd9c4cb0"
         }
       ],
-      "analysisSource": "heuristic",
-      "extractionComplete": false,
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
       "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+        "文章主要宣传求职社群，岗位信息仅来自标题和开头段落，具体岗位细节有限。"
       ]
     },
     {
@@ -1691,66 +3573,378 @@
       "publishedAt": "2026-07-16T15:30:01.000Z",
       "ocrUsed": false,
       "ocrImageCount": 0,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "summary": "文章发布了国泰海通、国金证券、华金证券、峻海资本等机构的实习招聘信息，涵盖行研、IR等岗位。",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "实习 | 国泰海通+峻海资本+国金证券+华金证券",
-          "locations": [],
+          "organization": "国金证券",
+          "organizationNature": "国企",
+          "industry": "金融",
+          "jobTitle": "食饮组实习生",
+          "jobDirections": [
+            "行业研究"
+          ],
+          "locations": [
+            "上海浦东新区花木路或远程"
+          ],
           "headcount": null,
           "employmentTypes": [
-            "实习",
-            "校招"
+            "实习"
           ],
+          "graduateScope": "2027年及以后毕业研究生或准研究生",
+          "previousGraduatesEligible": "no",
           "education": {
-            "summary": "master",
-            "minimum": null,
-            "preferred": null,
+            "summary": "985/211院校优先，研究生或准研究生",
+            "minimum": "硕士",
+            "preferred": "硕士",
             "tier": "master",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "经济、金融、财务",
+            "summary": "金融、经济等专业优先",
             "accepted": [
-              "经济",
               "金融",
-              "财务"
+              "经济"
             ],
-            "fit": "humanities"
+            "fit": "management"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "每周4天及以上，实习3个月及以上",
+            "有行研或券商、咨询实习经历优先"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
+            "summary": "标准的实习工资和实习证明，线下打卡有额外饭补",
             "salary": null,
-            "benefits": [],
-            "quality": 0
+            "benefits": [
+              "实习工资",
+              "实习证明",
+              "饭补（线下）"
+            ],
+            "quality": 3
           },
           "deadline": null,
-          "applicationMethod": null,
+          "applicationMethod": "邮箱投递",
+          "applicationUrl": "mailto:dundunchander@126.com",
+          "referralCode": null,
           "recommendation": {
-            "score": 67,
-            "rankingKey": 1440257,
-            "level": "medium",
+            "score": 86,
+            "rankingKey": 1543489,
+            "level": "high",
             "reasons": [
-              "专业面向文科社科方向",
+              "专业符合管理类方向",
               "学历要求以硕士为主，符合优先级",
-              "命中专业关键词：经济、金融、财务"
+              "有实习工资和证明",
+              "1V1指导",
+              "系统培训"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "未披露具体薪资",
+              "要求实习时间长"
             ]
           },
-          "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "2e06639fb6c1cef7"
+          "accessibility": 4,
+          "evidence": [
+            "985/211院校优先",
+            "倾向于2027年及以后毕业"
+          ],
+          "confidence": 0.9,
+          "id": "c49f68c8b857cc32"
+        },
+        {
+          "organization": "国泰海通研究所",
+          "organizationNature": "国企",
+          "industry": "金融",
+          "jobTitle": "公用事业组实习生",
+          "jobDirections": [
+            "行业研究"
+          ],
+          "locations": [
+            "上海（可远程）"
+          ],
+          "headcount": "2",
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "2027届及以后",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "985/211院校在读研究生",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "具有相关背景，会编程优先",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "对AI工具感兴趣，会编程优先",
+            "熟练使用office、choice、wind、ifind",
+            "通过CFA或CPA部分科目者优先"
+          ],
+          "compensation": {
+            "summary": "正式实习，表现优异者在校招中重点推荐",
+            "salary": null,
+            "benefits": [
+              "正式实习",
+              "校招重点推荐"
+            ],
+            "quality": 3
+          },
+          "deadline": "2025-07-18",
+          "applicationMethod": "邮箱投递",
+          "applicationUrl": "mailto:htzq_gysy@126.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 72,
+            "rankingKey": 1343489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "可远程",
+              "正式实习有推荐",
+              "AI工具方向前沿"
+            ],
+            "concerns": [
+              "未披露薪资",
+              "要求编程技能"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "一周3天以上",
+            "简历截止日期7月18日",
+            "985/211院校在读研究生"
+          ],
+          "confidence": 0.9,
+          "id": "b8056a4f04f32ac5"
+        },
+        {
+          "organization": "峻海资本",
+          "organizationNature": "民企",
+          "industry": "金融",
+          "jobTitle": "行研支持岗实习生",
+          "jobDirections": [
+            "行业研究支持"
+          ],
+          "locations": [
+            "上海/远程"
+          ],
+          "headcount": "2",
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "uncertain",
+          "education": {
+            "summary": "未明确学历要求，但要求有投资机构/FA实习经验优先",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "至少实习4个月",
+            "有投资机构/FA实习经验优先"
+          ],
+          "compensation": {
+            "summary": "实习薪资100元/天，满3个月后调薪，有留用机会",
+            "salary": "100元/天",
+            "benefits": [
+              "团队聚餐",
+              "接触顶级资源",
+              "留用机会"
+            ],
+            "quality": 3
+          },
+          "deadline": null,
+          "applicationMethod": "邮箱投递",
+          "applicationUrl": "mailto:hr@earthskycap.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1333489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "有留用机会",
+              "接触前沿科技",
+              "团队氛围好"
+            ],
+            "concerns": [
+              "薪资较低",
+              "实习期较长"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "计划招3名，正式留用1-2名",
+            "实习薪资100元/天"
+          ],
+          "confidence": 0.9,
+          "id": "51790e2b361b4a2a"
+        },
+        {
+          "organization": "峻海资本",
+          "organizationNature": "民企",
+          "industry": "金融",
+          "jobTitle": "IR支持岗实习生",
+          "jobDirections": [
+            "投资者关系"
+          ],
+          "locations": [
+            "上海/远程"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "uncertain",
+          "education": {
+            "summary": "未明确学历要求，但要求具备IR经验者优先",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "至少实习4个月",
+            "具备IR经验者优先"
+          ],
+          "compensation": {
+            "summary": "实习薪资100元/天，满3个月后调薪，有留用机会",
+            "salary": "100元/天",
+            "benefits": [
+              "团队聚餐",
+              "接触顶级资源",
+              "留用机会"
+            ],
+            "quality": 3
+          },
+          "deadline": null,
+          "applicationMethod": "邮箱投递",
+          "applicationUrl": "mailto:hr@earthskycap.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1333489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "有留用机会",
+              "接触投资人",
+              "团队氛围好"
+            ],
+            "concerns": [
+              "薪资较低",
+              "实习期较长"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "计划招3名，正式留用1-2名",
+            "实习薪资100元/天"
+          ],
+          "confidence": 0.9,
+          "id": "bc913e5698b52607"
+        },
+        {
+          "organization": "华金证券研究所",
+          "organizationNature": "国企",
+          "industry": "金融",
+          "jobTitle": "电子组正式实习生",
+          "jobDirections": [
+            "行业研究"
+          ],
+          "locations": [
+            "上海市浦东新区杨高南路759号陆家嘴世纪金融广场（线下优先）"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "大四及以上全日制在校生（大四需已保研/拿到offer）",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本硕211/QS前100，大四及以上",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业，热爱行业研究",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "会使用choice、wind、同花顺",
+            "每周3天以上，实习3个月以上",
+            "有卖方研究实习经验优先"
+          ],
+          "compensation": {
+            "summary": "线下有补贴",
+            "salary": null,
+            "benefits": [
+              "线下补贴"
+            ],
+            "quality": 2
+          },
+          "deadline": null,
+          "applicationMethod": "邮箱投递",
+          "applicationUrl": "mailto:xiongjun@huajinsc.cn",
+          "referralCode": null,
+          "recommendation": {
+            "score": 63,
+            "rankingKey": 1332389,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "正式实习生",
+              "线下有补贴",
+              "可远程"
+            ],
+            "concerns": [
+              "未披露具体薪资",
+              "要求本硕211/QS前100"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "大四及以上全日制在校生",
+            "本硕211/QS前100"
+          ],
+          "confidence": 0.9,
+          "id": "e11aab7cf15d9b93"
         }
       ],
-      "analysisSource": "heuristic",
-      "extractionComplete": false,
-      "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
-      ]
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
     },
     {
       "id": "5c4da2cf0d9ded18",
@@ -1859,12 +4053,17 @@
       "positions": [
         {
           "organization": "详见原文",
+          "organizationNature": "未披露",
+          "industry": "未披露",
           "jobTitle": "央企名企广东省岗位推荐 7月（第一期）",
+          "jobDirections": [],
           "locations": [],
           "headcount": null,
           "employmentTypes": [
             "实习"
           ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "uncertain",
           "education": {
             "summary": "master",
             "minimum": null,
@@ -1892,6 +4091,8 @@
           },
           "deadline": null,
           "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
           "recommendation": {
             "score": 83,
             "rankingKey": 1640257,
@@ -1915,11 +4116,11 @@
       "extractionComplete": false,
       "notes": [
         "DeepSeek 不可用，暂以文章标题作为岗位组展示",
-        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-oOeBXS/0.png stdout -l chi_sim+eng --psm 6\n",
-        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-oOeBXS/2.png stdout -l chi_sim+eng --psm 6\n",
-        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-oOeBXS/4.png stdout -l chi_sim+eng --psm 6\n",
-        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-oOeBXS/5.jpg stdout -l chi_sim+eng --psm 6\n",
-        "第 7 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-oOeBXS/6.jpg stdout -l chi_sim+eng --psm 6\n"
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-0XHmCl/0.png stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-0XHmCl/2.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-0XHmCl/4.png stdout -l chi_sim+eng --psm 6\n",
+        "第 7 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-0XHmCl/6.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-0XHmCl/5.jpg stdout -l chi_sim+eng --psm 6\n"
       ]
     },
     {
@@ -1934,13 +4135,18 @@
       "positions": [
         {
           "organization": "详见原文",
+          "organizationNature": "未披露",
+          "industry": "未披露",
           "jobTitle": "社招 | 地方国企招聘信息汇总 7月（第二期）",
+          "jobDirections": [],
           "locations": [],
           "headcount": null,
           "employmentTypes": [
             "社招",
             "实习"
           ],
+          "graduateScope": "未明确",
+          "previousGraduatesEligible": "uncertain",
           "education": {
             "summary": "master",
             "minimum": null,
@@ -1971,6 +4177,8 @@
           },
           "deadline": null,
           "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
           "recommendation": {
             "score": 75,
             "rankingKey": 1540257,
@@ -1994,11 +4202,11 @@
       "extractionComplete": false,
       "notes": [
         "DeepSeek 不可用，暂以文章标题作为岗位组展示",
-        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-9Cj6sA/0.png stdout -l chi_sim+eng --psm 6\n",
-        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-9Cj6sA/2.png stdout -l chi_sim+eng --psm 6\n",
-        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-9Cj6sA/4.png stdout -l chi_sim+eng --psm 6\n",
-        "第 7 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-9Cj6sA/6.jpg stdout -l chi_sim+eng --psm 6\n",
-        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-9Cj6sA/5.jpg stdout -l chi_sim+eng --psm 6\n"
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-aSmAWb/0.png stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-aSmAWb/2.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-aSmAWb/4.png stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-aSmAWb/5.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 7 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-aSmAWb/6.jpg stdout -l chi_sim+eng --psm 6\n"
       ]
     },
     {
@@ -2008,18 +4216,23 @@
       "url": "https://mp.weixin.qq.com/s/GJJqbV8IyCV8yfdXsSIBbw",
       "publishedAt": "2026-07-16T11:47:43.000Z",
       "ocrUsed": true,
-      "ocrImageCount": 3,
+      "ocrImageCount": 7,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
       "positions": [
         {
           "organization": "详见原文",
+          "organizationNature": "未披露",
+          "industry": "未披露",
           "jobTitle": "外资合资企业招聘信息推荐 7月（第三期）",
+          "jobDirections": [],
           "locations": [],
           "headcount": null,
           "employmentTypes": [
             "实习",
             "校招"
           ],
+          "graduateScope": "未明确",
+          "previousGraduatesEligible": "uncertain",
           "education": {
             "summary": "master",
             "minimum": null,
@@ -2049,6 +4262,8 @@
           },
           "deadline": null,
           "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
           "recommendation": {
             "score": 75,
             "rankingKey": 1540257,
@@ -2072,11 +4287,7 @@
       "extractionComplete": false,
       "notes": [
         "DeepSeek 不可用，暂以文章标题作为岗位组展示",
-        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-YcwOgS/2.png stdout -l chi_sim+eng --psm 6\n",
-        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-YcwOgS/0.png stdout -l chi_sim+eng --psm 6\n",
-        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-YcwOgS/4.png stdout -l chi_sim+eng --psm 6\n",
-        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-YcwOgS/5.jpg stdout -l chi_sim+eng --psm 6\n",
-        "第 7 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-YcwOgS/6.jpg stdout -l chi_sim+eng --psm 6\n"
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Wj7Gf6/0.png stdout -l chi_sim+eng --psm 6\n"
       ]
     },
     {
@@ -2225,24 +4436,173 @@
       "title": "开放日 | 中国船舶集团有限公司系统工程研究院&中船智海创新研究院 | 2027届校招企业开放日邀请函",
       "url": "https://mp.weixin.qq.com/s/ewIo3w6InT-PeGCwA9XU5Q",
       "publishedAt": "2026-07-16T06:44:09.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理"
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "中国船舶集团系统工程研究院与中船智海创新研究院联合举办2027届校招企业开放日活动，面向2027届硕博士，招聘多个岗位。",
+      "positions": [
+        {
+          "organization": "中国船舶集团有限公司系统工程研究院",
+          "organizationNature": "央企",
+          "industry": "船舶/军工",
+          "jobTitle": "系统工程师",
+          "jobDirections": [
+            "系统设计",
+            "系统集成"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上学历",
+            "minimum": "硕士",
+            "preferred": "博士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "计算机、自动化、电子、通信、控制、数学、物理等相关专业",
+            "accepted": [
+              "计算机",
+              "自动化",
+              "电子",
+              "通信",
+              "控制",
+              "数学",
+              "物理"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届应届毕业生",
+            "硕士及以上学历"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": "开放日现场投递",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 63,
+            "rankingKey": 1340379,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "央企平台，稳定发展",
+              "专业对口度高",
+              "北京工作地点"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "仅限2027届",
+              "学历要求硕士起步"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "面向2027届硕博士",
+            "计算机、自动化等专业"
+          ],
+          "confidence": 0.8,
+          "id": "7a5c1f95c0ae260e"
+        },
+        {
+          "organization": "中船智海创新研究院",
+          "organizationNature": "央企",
+          "industry": "船舶/军工",
+          "jobTitle": "算法工程师",
+          "jobDirections": [
+            "人工智能",
+            "大数据"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上学历",
+            "minimum": "硕士",
+            "preferred": "博士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "计算机、数学、统计、人工智能等相关专业",
+            "accepted": [
+              "计算机",
+              "数学",
+              "统计",
+              "人工智能"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届应届毕业生",
+            "硕士及以上学历"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": "开放日现场投递",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 63,
+            "rankingKey": 1340379,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "央企平台",
+              "前沿技术方向",
+              "北京工作"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "仅限2027届",
+              "学历要求高"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "面向2027届硕博士",
+            "人工智能、大数据方向"
+          ],
+          "confidence": 0.8,
+          "id": "ac9657c77c1a269a"
+        }
       ],
-      "suitableMajors": [
-        "管理"
-      ],
-      "jobTypes": [
-        "校招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Qqjf5T/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Qqjf5T/1.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Qqjf5T/2.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Qqjf5T/3.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Qqjf5T/4.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Qqjf5T/5.jpg stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 2 张图片"
+      ]
     },
     {
       "id": "b2f4b308585d8c29",
@@ -2251,76 +4611,1357 @@
       "url": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
       "publishedAt": "2026-07-16T04:40:48.000Z",
       "ocrUsed": true,
-      "ocrImageCount": 6,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "ocrImageCount": 1,
+      "summary": "南方电网2026年面向社会公开招聘379人，涵盖多个岗位，大专起报，往届生可投，福利待遇优厚。",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "电力公司2026年第二批社会招聘公告",
-          "locations": [],
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "营销服务",
+          "jobDirections": [
+            "电力营销服务"
+          ],
+          "locations": [
+            "全国"
+          ],
           "headcount": null,
           "employmentTypes": [
             "社招"
           ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
           "education": {
-            "summary": "bachelor_associate",
-            "minimum": null,
+            "summary": "大专及以上",
+            "minimum": "大专",
             "preferred": null,
             "tier": "bachelor_associate",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "管理、工商、市场营销、经济、金融、审计、法学、不限专业",
+            "summary": "市场营销类、工商管理类等相关专业",
             "accepted": [
-              "管理",
-              "工商",
-              "市场营销",
-              "经济",
-              "金融",
-              "审计",
-              "法学",
-              "不限专业"
+              "市场营销类",
+              "工商管理类"
             ],
             "fit": "management"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
-            "salary": null,
-            "benefits": [],
-            "quality": 0
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
           },
           "deadline": null,
-          "applicationMethod": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
           "recommendation": {
-            "score": 70,
-            "rankingKey": 1530257,
-            "level": "medium",
+            "score": 83,
+            "rankingKey": 1534489,
+            "level": "high",
             "reasons": [
               "专业符合管理类方向",
               "本科或大专层次可报",
-              "命中专业关键词：管理、工商、市场营销、经济、金融、审计、法学、不限专业"
+              "央企平台稳定",
+              "薪资福利优厚",
+              "管理类专业可投"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
             ]
           },
-          "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "e31be9e47c7bdbfb"
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "bdc741526544f26b"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "电力营销",
+          "jobDirections": [
+            "电力营销"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "市场营销类、工商管理类等相关专业",
+            "accepted": [
+              "市场营销类",
+              "工商管理类"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 83,
+            "rankingKey": 1534489,
+            "level": "high",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "管理类专业可投"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "d1bcbef28d058735"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "电费核算",
+          "jobDirections": [
+            "电费核算"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "财会审计类等相关专业",
+            "accepted": [
+              "财会审计类"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 75,
+            "rankingKey": 1434489,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "文科专业可投"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "fcbbd47451cd215b"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "调控运行",
+          "jobDirections": [
+            "电力调度"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "电气类等相关专业",
+            "accepted": [
+              "电气类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1334489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "专业对口机会多"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "77e74c8285b4c768"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "继电保护",
+          "jobDirections": [
+            "继电保护"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "电气类等相关专业",
+            "accepted": [
+              "电气类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1334489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "专业对口机会多"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "55cdb8d139924f33"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "设备运检",
+          "jobDirections": [
+            "设备运维检修"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "电气类、机械测控类等相关专业",
+            "accepted": [
+              "电气类",
+              "机械测控类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1334489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "专业对口机会多"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "92aade502dd2a1fd"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "电气试验",
+          "jobDirections": [
+            "电气试验"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "电气类等相关专业",
+            "accepted": [
+              "电气类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1334489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "专业对口机会多"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "c927df6f3f8a7165"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "电网建设",
+          "jobDirections": [
+            "电网建设"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "电气类、土木类等相关专业",
+            "accepted": [
+              "电气类",
+              "土木类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1334489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "专业对口机会多"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "72c7239301e4203d"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "电网规划设计",
+          "jobDirections": [
+            "电网规划设计"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "电气类等相关专业",
+            "accepted": [
+              "电气类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1334489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "专业对口机会多"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "2c0d7daea770f9f1"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "变电运检",
+          "jobDirections": [
+            "变电运维检修"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "电气类等相关专业",
+            "accepted": [
+              "电气类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1334489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "专业对口机会多"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "31960bdb4dda67d4"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "输电运检",
+          "jobDirections": [
+            "输电运维检修"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "电气类等相关专业",
+            "accepted": [
+              "电气类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1334489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "专业对口机会多"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "4fb8cd741a2dac2c"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "城区配电",
+          "jobDirections": [
+            "城区配电运维"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "电气类等相关专业",
+            "accepted": [
+              "电气类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1334489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "专业对口机会多"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "88aefad6c3dc3199"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "送变电施工",
+          "jobDirections": [
+            "送变电施工"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "电气类、土木类等相关专业",
+            "accepted": [
+              "电气类",
+              "土木类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1334489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "专业对口机会多"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "9b6f2a872a052808"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "电气设备检修",
+          "jobDirections": [
+            "电气设备检修"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "电气类、机械测控类等相关专业",
+            "accepted": [
+              "电气类",
+              "机械测控类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1334489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "专业对口机会多"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "3bb91a7d39ecacc6"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "信息运维",
+          "jobDirections": [
+            "信息运维"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "计算机类、通信类等相关专业",
+            "accepted": [
+              "计算机类",
+              "通信类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1334489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "专业对口机会多"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "ef9c094f4dd1e9ff"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "新型电力系统建设",
+          "jobDirections": [
+            "新型电力系统建设"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "电气类、新能源类等相关专业",
+            "accepted": [
+              "电气类",
+              "新能源类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1334489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "新能源领域前景好"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "888c2bf55a52d1fa"
+        },
+        {
+          "organization": "南方电网",
+          "organizationNature": "央企",
+          "industry": "电力",
+          "jobTitle": "通信运维",
+          "jobDirections": [
+            "通信运维"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "通信类、计算机类等相关专业",
+            "accepted": [
+              "通信类",
+              "计算机类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下"
+          ],
+          "compensation": {
+            "summary": "社招月薪18000起，六险二金等",
+            "salary": "月薪18000起",
+            "benefits": [
+              "六险二金",
+              "补充医疗保险",
+              "交通补贴",
+              "通讯补贴",
+              "带薪年假",
+              "定期体检",
+              "节日福利",
+              "年终奖"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1334489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企平台稳定",
+              "薪资福利优厚",
+              "专业对口机会多"
+            ],
+            "concerns": [
+              "学历要求大专起，竞争可能激烈",
+              "未明确具体工作地点"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "社招岗位月薪18000起",
+            "大专起报",
+            "年龄35周岁及以下"
+          ],
+          "confidence": 0.9,
+          "id": "2c1a122f26938af2"
         }
       ],
-      "analysisSource": "heuristic",
-      "extractionComplete": false,
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
       "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
-        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-BchPmD/0.jpg stdout -l chi_sim+eng --psm 6\n",
-        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-BchPmD/2.webp stdout -l chi_sim+eng --psm 6\n",
-        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-BchPmD/3.webp stdout -l chi_sim+eng --psm 6\n",
-        "第 11 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-BchPmD/10.gif stdout -l chi_sim+eng --psm 6\n",
-        "第 12 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-BchPmD/11.gif stdout -l chi_sim+eng --psm 6\n",
-        "第 8 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-BchPmD/7.gif stdout -l chi_sim+eng --psm 6\n"
+        "文章末尾的社招汇总表为付费订阅内容，未提供具体岗位信息，故不提取。",
+        "岗位名称如调控运行、继电保护等未明确具体单位，但均属于南方电网系统，故合并为岗位组。",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-uhqT1V/2.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-uhqT1V/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-uhqT1V/3.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-uhqT1V/4.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-uhqT1V/5.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 7 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-uhqT1V/6.gif stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 5 张图片"
       ]
     },
     {
@@ -2595,68 +6236,103 @@
       "publishedAt": "2026-07-16T04:40:48.000Z",
       "ocrUsed": false,
       "ocrImageCount": 0,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "summary": "中国石化2027校招提前知：招聘流程、薪资待遇、考试真题",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "中国石化2027校招提前知：招聘流程、薪资待遇、考试真题！",
-          "locations": [],
+          "organization": "中国石油化工集团有限公司",
+          "organizationNature": "央企",
+          "industry": "石油石化",
+          "jobTitle": "未明确具体岗位",
+          "jobDirections": [
+            "油气勘探开发",
+            "炼油生产经营",
+            "化工生产经营",
+            "产品营销与服务",
+            "石油和炼化工程服务",
+            "新能源开发利用",
+            "国际贸易",
+            "资本金融"
+          ],
+          "locations": [
+            "全国"
+          ],
           "headcount": null,
           "employmentTypes": [
-            "校招",
-            "实习",
-            "社招"
+            "校招"
           ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
           "education": {
-            "summary": "master",
-            "minimum": null,
-            "preferred": null,
+            "summary": "本科及以上，硕士优先",
+            "minimum": "本科",
+            "preferred": "硕士",
             "tier": "master",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "金融、会计、国际贸易、教育",
+            "summary": "所学专业符合招聘岗位要求，满足招聘单位业务发展需要",
             "accepted": [
-              "金融",
-              "会计",
-              "国际贸易",
-              "教育"
+              "不限"
             ],
-            "fit": "humanities"
+            "fit": "broad"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "遵纪守法，品行端正，团结协作，无不良行为记录，热爱石油石化事业，认同中国石化企业文化和价值观；身心健康，能适应岗位工作需要；学习成绩优良，取得相应的学历学位等证书"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
-            "salary": null,
-            "benefits": [],
-            "quality": 0
+            "summary": "基本工资+绩效奖金+年终奖，人均29.26万元（含社保），一线城市二级单位总部硕士转正第一年平均16-20w；五险一金，补充医疗险、企业年金，重疾险、意外险；带薪年假、年度体检、生日福利、结婚礼金、生育礼金、退休慰问金、急难救助金；俱乐部；北京户口有机会，上海积分，其他城市按政策",
+            "salary": "硕士转正第一年平均16-20w",
+            "benefits": [
+              "五险一金",
+              "补充医疗险",
+              "企业年金",
+              "重疾险",
+              "意外险",
+              "带薪年假",
+              "年度体检",
+              "生日福利",
+              "结婚礼金",
+              "生育礼金",
+              "退休慰问金",
+              "急难救助金"
+            ],
+            "quality": 4
           },
-          "deadline": null,
-          "applicationMethod": null,
+          "deadline": "2026-11-15T24:00:00",
+          "applicationMethod": "网上报名",
+          "applicationUrl": null,
+          "referralCode": null,
           "recommendation": {
-            "score": 67,
-            "rankingKey": 1440257,
+            "score": 74,
+            "rankingKey": 1344489,
             "level": "medium",
             "reasons": [
-              "专业面向文科社科方向",
+              "专业限制较宽或不限专业",
               "学历要求以硕士为主，符合优先级",
-              "命中专业关键词：金融、会计、国际贸易、教育"
+              "世界500强第6位，央企平台稳定",
+              "薪资福利优厚，硕士转正第一年16-20w",
+              "有机会解决北京户口",
+              "专业范围广，不限专业"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "具体岗位未明确，需等待后续公告",
+              "仅限2026届应届生，往届生不可投递",
+              "竞争激烈，需通过统一初选考试"
             ]
           },
-          "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "ebcd4e957c449bf4"
+          "accessibility": 4,
+          "evidence": [
+            "中国石化人均薪酬29.26万元",
+            "一线城市二级单位总部岗位硕士入职转正第一年平均16~20w",
+            "北京地区有机会解决北京户口"
+          ],
+          "confidence": 0.9,
+          "id": "22d1558b74ad7a76"
         }
       ],
-      "analysisSource": "heuristic",
-      "extractionComplete": false,
-      "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
-      ]
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
     },
     {
       "id": "0cb4cba6f268c62e",
@@ -2666,62 +6342,316 @@
       "publishedAt": "2026-07-16T04:02:00.000Z",
       "ocrUsed": false,
       "ocrImageCount": 0,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "summary": "2026年国企海员招聘137人，面向应届生、往届生、社会人才，初中及以上学历，不限户籍，报名时间2026年7月16日至18日。",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "2026年国企海员招聘公告",
-          "locations": [],
+          "organization": "海途教育有限公司及其合作单位",
+          "organizationNature": "民企",
+          "industry": "交通运输",
+          "jobTitle": "海船三副",
+          "jobDirections": [
+            "船舶驾驶"
+          ],
+          "locations": [
+            "全国"
+          ],
           "headcount": null,
-          "employmentTypes": [],
+          "employmentTypes": [
+            "校招",
+            "社招"
+          ],
+          "graduateScope": "2026届及往届",
+          "previousGraduatesEligible": "yes",
           "education": {
-            "summary": "bachelor_associate",
-            "minimum": null,
+            "summary": "大专起点",
+            "minimum": "大专",
             "preferred": null,
             "tier": "bachelor_associate",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "管理、教育",
+            "summary": "不限专业",
             "accepted": [
-              "管理",
-              "教育"
+              "不限"
             ],
-            "fit": "management"
+            "fit": "broad"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "35岁及以下（优秀可放宽至40岁）",
+            "无色盲（弱）、无复视",
+            "无乙肝等传染病",
+            "身高1.65米及以上"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
-            "salary": null,
-            "benefits": [],
-            "quality": 0
+            "summary": "月薪18000元",
+            "salary": "18000元/月",
+            "benefits": [
+              "培训后推荐就业"
+            ],
+            "quality": 4
           },
-          "deadline": null,
-          "applicationMethod": null,
+          "deadline": "2026-07-18",
+          "applicationMethod": "微信扫描二维码报名",
+          "applicationUrl": null,
+          "referralCode": null,
           "recommendation": {
-            "score": 70,
-            "rankingKey": 1530257,
+            "score": 67,
+            "rankingKey": 1334389,
             "level": "medium",
             "reasons": [
-              "专业符合管理类方向",
+              "专业限制较宽或不限专业",
               "本科或大专层次可报",
-              "命中专业关键词：管理、教育"
+              "薪资较高，月薪18000元",
+              "晋升路径清晰，可至船长",
+              "大专学历即可"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "培训时间长达12个月",
+              "需取得适任证书",
+              "海上工作风险较高"
             ]
           },
-          "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "da7811d87fe5b8c7"
+          "accessibility": 3,
+          "evidence": [
+            "大专起点海船三副",
+            "月薪￥18,000",
+            "培训12个月"
+          ],
+          "confidence": 0.9,
+          "id": "9480fb2108d2d542"
+        },
+        {
+          "organization": "海途教育有限公司及其合作单位",
+          "organizationNature": "民企",
+          "industry": "交通运输",
+          "jobTitle": "海船三管",
+          "jobDirections": [
+            "轮机管理"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "社招"
+          ],
+          "graduateScope": "2026届及往届",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专起点",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "35岁及以下（优秀可放宽至40岁）",
+            "无色盲（弱）、无复视",
+            "无乙肝等传染病",
+            "身高1.55米及以上"
+          ],
+          "compensation": {
+            "summary": "月薪18000元",
+            "salary": "18000元/月",
+            "benefits": [
+              "培训后推荐就业"
+            ],
+            "quality": 4
+          },
+          "deadline": "2026-07-18",
+          "applicationMethod": "微信扫描二维码报名",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1334389,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "薪资较高，月薪18000元",
+              "晋升路径清晰，可至轮机长",
+              "大专学历即可"
+            ],
+            "concerns": [
+              "培训时间长达12个月",
+              "需取得适任证书",
+              "海上工作风险较高"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "大专起点海船三管",
+            "月薪￥18,000",
+            "培训12个月"
+          ],
+          "confidence": 0.9,
+          "id": "86527b2c5ac50859"
+        },
+        {
+          "organization": "海途教育有限公司及其合作单位",
+          "organizationNature": "民企",
+          "industry": "交通运输",
+          "jobTitle": "值班水手",
+          "jobDirections": [
+            "航海操作"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "社招"
+          ],
+          "graduateScope": "2026届及往届",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "高中起点",
+            "minimum": "高中",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "35岁及以下（优秀可放宽至40岁）",
+            "无色盲（弱）、无复视",
+            "无乙肝等传染病",
+            "身高1.65米及以上"
+          ],
+          "compensation": {
+            "summary": "月薪10000-16000元",
+            "salary": "10000-16000元/月",
+            "benefits": [
+              "培训后推荐就业"
+            ],
+            "quality": 3
+          },
+          "deadline": "2026-07-18",
+          "applicationMethod": "微信扫描二维码报名",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1333489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "学历要求低，初中及以上即可",
+              "不限户籍，面向社会及退役军人",
+              "培训后直接推荐就业"
+            ],
+            "concerns": [
+              "薪资未明确福利细节",
+              "需参加培训3-6个月",
+              "工作环境艰苦，海上作业"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "高中起点值班水手",
+            "月薪10000-16000",
+            "初中及以上文化程度都可以报名"
+          ],
+          "confidence": 0.9,
+          "id": "b43840ab594b02db"
+        },
+        {
+          "organization": "海途教育有限公司及其合作单位",
+          "organizationNature": "民企",
+          "industry": "交通运输",
+          "jobTitle": "值班机工",
+          "jobDirections": [
+            "轮机操作"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "社招"
+          ],
+          "graduateScope": "2026届及往届",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "高中起点",
+            "minimum": "高中",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "35岁及以下（优秀可放宽至40岁）",
+            "无色盲（弱）、无复视",
+            "无乙肝等传染病",
+            "身高1.55米及以上"
+          ],
+          "compensation": {
+            "summary": "月薪10000-16000元",
+            "salary": "10000-16000元/月",
+            "benefits": [
+              "培训后推荐就业"
+            ],
+            "quality": 3
+          },
+          "deadline": "2026-07-18",
+          "applicationMethod": "微信扫描二维码报名",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1333489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "学历要求低，初中及以上即可",
+              "不限户籍，面向社会及退役军人",
+              "培训后直接推荐就业"
+            ],
+            "concerns": [
+              "薪资未明确福利细节",
+              "需参加培训3-6个月",
+              "工作环境艰苦，海上作业"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "高中起点值班机工",
+            "月薪10000-16000",
+            "初中及以上文化程度都可以报名"
+          ],
+          "confidence": 0.9,
+          "id": "7350ccd7c041133d"
         }
       ],
-      "analysisSource": "heuristic",
-      "extractionComplete": false,
-      "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
-      ]
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
     },
     {
       "id": "b21ab666d293cee6",
@@ -2800,62 +6730,318 @@
       "publishedAt": "2026-07-16T02:00:00.000Z",
       "ocrUsed": false,
       "ocrImageCount": 0,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "summary": "面向退役军人及社会人员招聘海员，提供水手、机工、三管、三副等岗位，学历要求初中及以上，年龄35岁以下，培训后持证上岗，月薪10000-18000元。",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "月薪4100-4300美元，2026面向社会定向招录海员137人公告发布，退役军人优先",
-          "locations": [],
-          "headcount": null,
-          "employmentTypes": [],
+          "organization": "海途教育有限公司及合作单位",
+          "organizationNature": "民企",
+          "industry": "交通运输",
+          "jobTitle": "海船三副",
+          "jobDirections": [
+            "船舶驾驶"
+          ],
+          "locations": [
+            "全国15+基地"
+          ],
+          "headcount": "137",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
           "education": {
-            "summary": "bachelor_associate",
-            "minimum": null,
+            "summary": "大专起点",
+            "minimum": "大专",
             "preferred": null,
             "tier": "bachelor_associate",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "管理、教育",
+            "summary": "不限专业",
             "accepted": [
-              "管理",
-              "教育"
+              "不限"
             ],
-            "fit": "management"
+            "fit": "broad"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "年龄35岁以下（优秀可放宽至40岁）",
+            "无色盲弱、无复视、无乙肝等传染病",
+            "身高1.65米及以上",
+            "退役军人优先"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
-            "salary": null,
-            "benefits": [],
-            "quality": 0
+            "summary": "月薪18000元",
+            "salary": "18000元/月",
+            "benefits": [
+              "培训后持证上岗",
+              "推荐就业"
+            ],
+            "quality": 4
           },
-          "deadline": null,
-          "applicationMethod": null,
+          "deadline": "2026-07-18",
+          "applicationMethod": "微信扫码报名",
+          "applicationUrl": null,
+          "referralCode": null,
           "recommendation": {
-            "score": 70,
-            "rankingKey": 1530257,
+            "score": 67,
+            "rankingKey": 1334389,
             "level": "medium",
             "reasons": [
-              "专业符合管理类方向",
+              "专业限制较宽或不限专业",
               "本科或大专层次可报",
-              "命中专业关键词：管理、教育"
+              "薪资较高",
+              "晋升路径明确",
+              "退役军人优先"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "需培训12个月",
+              "学历要求大专",
+              "海上工作"
             ]
           },
-          "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "336959e667c26999"
+          "accessibility": 3,
+          "evidence": [
+            "大专起点海船三副",
+            "月薪18000",
+            "退役军人优先"
+          ],
+          "confidence": 0.9,
+          "id": "818774df42290549"
+        },
+        {
+          "organization": "海途教育有限公司及合作单位",
+          "organizationNature": "民企",
+          "industry": "交通运输",
+          "jobTitle": "海船三管",
+          "jobDirections": [
+            "轮机管理"
+          ],
+          "locations": [
+            "全国15+基地"
+          ],
+          "headcount": "137",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专起点",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35岁以下（优秀可放宽至40岁）",
+            "无色盲弱、无复视、无乙肝等传染病",
+            "身高1.55米及以上",
+            "退役军人优先"
+          ],
+          "compensation": {
+            "summary": "月薪18000元",
+            "salary": "18000元/月",
+            "benefits": [
+              "培训后持证上岗",
+              "推荐就业"
+            ],
+            "quality": 4
+          },
+          "deadline": "2026-07-18",
+          "applicationMethod": "微信扫码报名",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1334389,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "薪资较高",
+              "晋升路径明确",
+              "退役军人优先"
+            ],
+            "concerns": [
+              "需培训12个月",
+              "学历要求大专",
+              "海上工作"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "大专起点海船三管",
+            "月薪18000",
+            "退役军人优先"
+          ],
+          "confidence": 0.9,
+          "id": "90a192e542db936c"
+        },
+        {
+          "organization": "海途教育有限公司及合作单位",
+          "organizationNature": "民企",
+          "industry": "交通运输",
+          "jobTitle": "值班水手",
+          "jobDirections": [
+            "航海操作"
+          ],
+          "locations": [
+            "全国15+基地"
+          ],
+          "headcount": "137",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "高中起点",
+            "minimum": "高中",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35岁以下（优秀可放宽至40岁）",
+            "无色盲弱、无复视、无乙肝等传染病",
+            "身高1.65米及以上",
+            "退役军人优先"
+          ],
+          "compensation": {
+            "summary": "月薪10000-16000元",
+            "salary": "10000-16000元/月",
+            "benefits": [
+              "培训后持证上岗",
+              "推荐就业"
+            ],
+            "quality": 3
+          },
+          "deadline": "2026-07-18",
+          "applicationMethod": "微信扫码报名",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1333489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "学历要求低，初中以上即可",
+              "退役军人优先",
+              "薪资水平较高",
+              "培训后直接推荐就业"
+            ],
+            "concerns": [
+              "需参加培训3-6个月",
+              "工作环境特殊，海上作业",
+              "年龄限制严格"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "高中起点值班水手",
+            "月薪10000-16000",
+            "退役军人优先"
+          ],
+          "confidence": 0.9,
+          "id": "1b8169159800fe5c"
+        },
+        {
+          "organization": "海途教育有限公司及合作单位",
+          "organizationNature": "民企",
+          "industry": "交通运输",
+          "jobTitle": "值班机工",
+          "jobDirections": [
+            "轮机维护"
+          ],
+          "locations": [
+            "全国15+基地"
+          ],
+          "headcount": "137",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "高中起点",
+            "minimum": "高中",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35岁以下（优秀可放宽至40岁）",
+            "无色盲弱、无复视、无乙肝等传染病",
+            "身高1.55米及以上",
+            "退役军人优先"
+          ],
+          "compensation": {
+            "summary": "月薪10000-16000元",
+            "salary": "10000-16000元/月",
+            "benefits": [
+              "培训后持证上岗",
+              "推荐就业"
+            ],
+            "quality": 3
+          },
+          "deadline": "2026-07-18",
+          "applicationMethod": "微信扫码报名",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1333489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "学历要求低",
+              "退役军人优先",
+              "薪资水平较高",
+              "培训后直接推荐就业"
+            ],
+            "concerns": [
+              "需培训3-6个月",
+              "海上工作环境",
+              "年龄限制"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "高中起点值班机工",
+            "月薪10000-16000",
+            "退役军人优先"
+          ],
+          "confidence": 0.9,
+          "id": "ed426915a5c094ec"
         }
       ],
-      "analysisSource": "heuristic",
-      "extractionComplete": false,
-      "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
-      ]
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
     },
     {
       "id": "079f2fab16af7a5e",
@@ -2943,74 +7129,322 @@
       "publishedAt": "2026-07-16T02:00:00.000Z",
       "ocrUsed": false,
       "ocrImageCount": 0,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "summary": "中粮集团2026年招聘运营管理部四个岗位，要求本科及以上学历，多年工作经验，工作地点北京，截止2026年7月24日。",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "中粮集团2026年度最新招聘公告",
-          "locations": [],
-          "headcount": null,
-          "employmentTypes": [
-            "校招",
-            "秋招",
-            "提前批",
-            "实习",
-            "春招"
+          "organization": "中粮集团有限公司",
+          "organizationNature": "央企",
+          "industry": "农粮食品",
+          "jobTitle": "运营管理提升岗",
+          "jobDirections": [
+            "运营管理"
           ],
+          "locations": [
+            "北京市朝阳区"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
           "education": {
-            "summary": "master",
-            "minimum": null,
-            "preferred": null,
-            "tier": "master",
+            "summary": "全日制大学本科及以上学历",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "bachelor_associate",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "管理、工商、经济、金融、会计、财务、英语、教育",
+            "summary": "工商管理、产业经济学、统计学、财务管理、会计学等相关专业",
             "accepted": [
-              "管理",
-              "工商",
-              "经济",
-              "金融",
-              "会计",
-              "财务",
-              "英语",
-              "教育"
+              "工商管理",
+              "产业经济学",
+              "统计学",
+              "财务管理",
+              "会计学"
             ],
             "fit": "management"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "政治立场坚定，中共党员优先",
+            "本科8年/硕士6年以上相关经验",
+            "头部咨询机构项目实操或大型企业组织变革经验",
+            "主导对标体系搭建等项目不少于3项",
+            "大学英语四级",
+            "熟练使用办公软件"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
+            "summary": "未披露",
             "salary": null,
             "benefits": [],
-            "quality": 0
+            "quality": 2
           },
-          "deadline": null,
-          "applicationMethod": null,
+          "deadline": "2026-07-24",
+          "applicationMethod": "邮箱投递",
+          "applicationUrl": "mailto:recruit@cofco.com",
+          "referralCode": null,
           "recommendation": {
             "score": 75,
-            "rankingKey": 1540257,
+            "rankingKey": 1532289,
             "level": "medium",
             "reasons": [
               "专业符合管理类方向",
-              "学历要求以硕士为主，符合优先级",
-              "命中专业关键词：管理、工商、经济、金融、会计、财务、英语、教育"
+              "本科或大专层次可报",
+              "央企平台，稳定性高",
+              "岗位核心，涉及管理提升和战略改革",
+              "北京工作地点"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "要求多年工作经验，非应届生岗位",
+              "薪资福利未披露",
+              "专业限制较窄"
             ]
           },
           "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "2dc8f12e2f3c6669"
+          "evidence": [
+            "招聘人数1人",
+            "要求本科8年/硕士6年经验"
+          ],
+          "confidence": 0.9,
+          "id": "4c1d057b1c5ff853"
+        },
+        {
+          "organization": "中粮集团有限公司",
+          "organizationNature": "央企",
+          "industry": "农粮食品",
+          "jobTitle": "物流仓储战略规划岗",
+          "jobDirections": [
+            "物流规划"
+          ],
+          "locations": [
+            "北京市朝阳区"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "全日制大学本科及以上学历",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "供应链管理、交通运输及物流管理、工商管理、工程管理等相关专业",
+            "accepted": [
+              "供应链管理",
+              "交通运输",
+              "物流管理",
+              "工商管理",
+              "工程管理"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [
+            "政治立场坚定，中共党员优先",
+            "5年以上供应链管理、物流体系规划相关经验",
+            "熟悉物流仓储网络规划及基建改造者优先",
+            "大学英语四级",
+            "熟练使用办公软件"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-07-24",
+          "applicationMethod": "邮箱投递",
+          "applicationUrl": "mailto:recruit@cofco.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 75,
+            "rankingKey": 1532289,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "央企，行业领先",
+              "岗位涉及战略规划，发展空间大",
+              "北京工作地点"
+            ],
+            "concerns": [
+              "要求5年以上经验，非应届生",
+              "薪资未披露",
+              "专业要求较具体"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [
+            "招聘人数1人",
+            "要求5年以上经验"
+          ],
+          "confidence": 0.9,
+          "id": "065f2a4360bdd615"
+        },
+        {
+          "organization": "中粮集团有限公司",
+          "organizationNature": "央企",
+          "industry": "农粮食品",
+          "jobTitle": "多式联运运营岗",
+          "jobDirections": [
+            "物流运营"
+          ],
+          "locations": [
+            "北京市朝阳区"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "全日制大学本科及以上学历",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "供应链管理、交通运输、物流管理、采购管理、工商管理等相关专业",
+            "accepted": [
+              "供应链管理",
+              "交通运输",
+              "物流管理",
+              "采购管理",
+              "工商管理"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [
+            "政治立场坚定，中共党员优先",
+            "5年以上运力统筹、物流质量管控、供应链运营管理经验",
+            "熟悉多式联运业务逻辑者优先",
+            "大学英语四级",
+            "熟练使用办公软件"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-07-24",
+          "applicationMethod": "邮箱投递",
+          "applicationUrl": "mailto:recruit@cofco.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 75,
+            "rankingKey": 1532289,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "央企，业务核心",
+              "岗位涉及全链条管理，锻炼机会多",
+              "北京工作地点"
+            ],
+            "concerns": [
+              "要求5年以上经验，非应届生",
+              "薪资未披露",
+              "专业限制较窄"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [
+            "招聘人数1人",
+            "要求5年以上经验"
+          ],
+          "confidence": 0.9,
+          "id": "00e5fad19489b1e3"
+        },
+        {
+          "organization": "中粮集团有限公司",
+          "organizationNature": "央企",
+          "industry": "农粮食品",
+          "jobTitle": "物流智能规划岗",
+          "jobDirections": [
+            "物流数字化"
+          ],
+          "locations": [
+            "北京市朝阳区"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "全日制大学本科及以上学历",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "供应链管理、交通运输、物流管理、信息管理、计算机、经济管理等相关专业优先",
+            "accepted": [
+              "供应链管理",
+              "交通运输",
+              "物流管理",
+              "信息管理",
+              "计算机",
+              "经济管理"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [
+            "政治立场坚定，中共党员优先",
+            "5年以上供应链数字化、智能化体系建设、平台管理、数据治理经验",
+            "熟悉智慧供应链建设者优先",
+            "大学英语四级",
+            "熟练使用办公软件"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-07-24",
+          "applicationMethod": "邮箱投递",
+          "applicationUrl": "mailto:recruit@cofco.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 75,
+            "rankingKey": 1532289,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "央企，数字化转型前沿",
+              "岗位涉及智能体搭建，技术含量高",
+              "北京工作地点"
+            ],
+            "concerns": [
+              "要求5年以上经验，非应届生",
+              "薪资未披露",
+              "专业要求较宽但经验要求高"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [
+            "招聘人数1人",
+            "要求5年以上经验"
+          ],
+          "confidence": 0.9,
+          "id": "471bee7319cc7165"
         }
       ],
-      "analysisSource": "heuristic",
-      "extractionComplete": false,
-      "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
-      ]
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
     },
     {
       "id": "fe5fa0a3ccb82ece",
@@ -3091,70 +7525,247 @@
       "publishedAt": "2026-07-16T02:00:00.000Z",
       "ocrUsed": false,
       "ocrImageCount": 0,
-      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "summary": "山东核电设备制造有限公司（国家电投二级单位）面向集团内外招聘专业人才，岗位包括研发设计、项目管理、安全管理等，报名截止2026年7月23日。",
       "positions": [
         {
-          "organization": "详见原文",
-          "jobTitle": "国家电投2026年度最新招聘公告",
-          "locations": [],
+          "organization": "山东核电设备制造有限公司",
+          "organizationNature": "央企",
+          "industry": "核电设备制造",
+          "jobTitle": "研发设计岗",
+          "jobDirections": [
+            "研发设计"
+          ],
+          "locations": [
+            "山东省海阳市"
+          ],
           "headcount": null,
           "employmentTypes": [
-            "校招",
-            "秋招",
-            "提前批",
-            "实习",
-            "春招"
+            "社招"
           ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
           "education": {
-            "summary": "未明确",
-            "minimum": null,
+            "summary": "本科及以上，具体见附件",
+            "minimum": "本科",
             "preferred": null,
-            "tier": "unspecified",
+            "tier": "bachelor_associate",
             "hardPhdRequired": false
           },
           "majors": {
-            "summary": "金融、法律、教育、政治",
+            "summary": "核工程、机械、材料、电气等相关专业",
             "accepted": [
-              "金融",
-              "法律",
-              "教育",
-              "政治"
+              "核工程",
+              "机械",
+              "材料",
+              "电气"
             ],
-            "fit": "humanities"
+            "fit": "broad"
           },
-          "applicationRequirements": [],
+          "applicationRequirements": [
+            "具有坚定的理想信念和良好的政治素质",
+            "认同国家电投企业文化",
+            "具备岗位所需专业知识和能力",
+            "具有良好的职业素养",
+            "身体健康",
+            "近三年年度考核结果无'不称职/不合格'",
+            "无资格禁入情形"
+          ],
           "compensation": {
-            "summary": "未完成模型提取",
+            "summary": "未披露",
             "salary": null,
             "benefits": [],
             "quality": 0
           },
-          "deadline": null,
-          "applicationMethod": null,
+          "deadline": "2026-07-23",
+          "applicationMethod": "线上申请或邮箱投递",
+          "applicationUrl": "https://www.iguopin.com/",
+          "referralCode": null,
           "recommendation": {
-            "score": 56,
-            "rankingKey": 1420257,
+            "score": 59,
+            "rankingKey": 1330489,
             "level": "medium",
             "reasons": [
-              "专业面向文科社科方向",
-              "学历要求未明确，需进一步核实",
-              "命中专业关键词：金融、法律、教育、政治"
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企二级单位，平台稳定",
+              "核电行业前景好，技术领先",
+              "工作地点山东海阳，环境宜居"
             ],
             "concerns": [
-              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+              "薪资福利未披露",
+              "需服从公司地点安排",
+              "不承诺解决家属工作"
             ]
           },
-          "accessibility": 2,
-          "evidence": [],
-          "confidence": 0.58,
-          "id": "0b9c52a7ba33fe19"
+          "accessibility": 4,
+          "evidence": [
+            "面向集团系统内外招聘",
+            "报名截止2026年7月23日",
+            "通过国聘网或邮箱投递"
+          ],
+          "confidence": 0.9,
+          "id": "3e613ed744223dc2"
+        },
+        {
+          "organization": "山东核电设备制造有限公司",
+          "organizationNature": "央企",
+          "industry": "核电设备制造",
+          "jobTitle": "项目管理岗",
+          "jobDirections": [
+            "项目管理"
+          ],
+          "locations": [
+            "山东省海阳市"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上，具体见附件",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "工程管理、项目管理、核工程等相关专业",
+            "accepted": [
+              "工程管理",
+              "项目管理",
+              "核工程"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "具有坚定的理想信念和良好的政治素质",
+            "认同国家电投企业文化",
+            "具备岗位所需专业知识和能力",
+            "具有良好的职业素养",
+            "身体健康",
+            "近三年年度考核结果无'不称职/不合格'",
+            "无资格禁入情形"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-07-23",
+          "applicationMethod": "线上申请或邮箱投递",
+          "applicationUrl": "https://www.iguopin.com/",
+          "referralCode": null,
+          "recommendation": {
+            "score": 59,
+            "rankingKey": 1330489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企二级单位，项目资源丰富",
+              "核电行业稳定，发展空间大",
+              "工作地点山东海阳，生活成本低"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "需服从公司地点安排",
+              "不承诺解决家属工作"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "面向集团系统内外招聘",
+            "报名截止2026年7月23日",
+            "通过国聘网或邮箱投递"
+          ],
+          "confidence": 0.9,
+          "id": "77d611339ad58fe6"
+        },
+        {
+          "organization": "山东核电设备制造有限公司",
+          "organizationNature": "央企",
+          "industry": "核电设备制造",
+          "jobTitle": "安全管理岗",
+          "jobDirections": [
+            "安全管理"
+          ],
+          "locations": [
+            "山东省海阳市"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上，具体见附件",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "安全工程、核安全、环境工程等相关专业",
+            "accepted": [
+              "安全工程",
+              "核安全",
+              "环境工程"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "具有坚定的理想信念和良好的政治素质",
+            "认同国家电投企业文化",
+            "具备岗位所需专业知识和能力",
+            "具有良好的职业素养",
+            "身体健康",
+            "近三年年度考核结果无'不称职/不合格'",
+            "无资格禁入情形"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-07-23",
+          "applicationMethod": "线上申请或邮箱投递",
+          "applicationUrl": "https://www.iguopin.com/",
+          "referralCode": null,
+          "recommendation": {
+            "score": 59,
+            "rankingKey": 1330489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企二级单位，安全岗位重要",
+              "核电行业安全要求高，专业性强",
+              "工作地点山东海阳，环境舒适"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "需服从公司地点安排",
+              "不承诺解决家属工作"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "面向集团系统内外招聘",
+            "报名截止2026年7月23日",
+            "通过国聘网或邮箱投递"
+          ],
+          "confidence": 0.9,
+          "id": "e3d2ad65a7eeb132"
         }
       ],
-      "analysisSource": "heuristic",
-      "extractionComplete": false,
-      "notes": [
-        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
-      ]
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
     },
     {
       "id": "66b4dae0cab139fe",
@@ -3315,6 +7926,11 @@
   ],
   "errors": [
     "国企求职网 / 2027届国企秋招群，扫码加入：文章正文为空，可能遇到微信验证页或文章已删除",
-    "央企求职网 / 2027届国企秋招群，扫码加入：文章正文为空，可能遇到微信验证页或文章已删除"
+    "央企求职网 / 2027届国企秋招群，扫码加入：文章正文为空，可能遇到微信验证页或文章已删除",
+    "央企求职网 / 中核集团2026年度夏季校园招聘：DeepSeek 失败，已使用规则降级；Expected ',' or '}' after property value in JSON at position 23380 (line 664 column 8)",
+    "国聘 / 央企名企广东省岗位推荐 7月（第一期）：DeepSeek 失败，已使用规则降级；Expected ',' or ']' after array element in JSON at position 26866 (line 926 column 6)",
+    "清华就业 / 开放日｜中国船舶集团有限公司系统工程研究院&中船智海创新研究院2027届校招企业开放日邀请函：文章代理下载失败（HTTP 502）",
+    "国聘 / 社招 | 地方国企招聘信息汇总 7月（第二期）：DeepSeek 失败，已使用规则降级；Expected ',' or '}' after property value in JSON at position 27208 (line 949 column 8)",
+    "国聘 / 外资合资企业招聘信息推荐 7月（第三期）：DeepSeek 失败，已使用规则降级；Expected ',' or ']' after array element in JSON at position 26091 (line 886 column 6)"
   ]
 }
