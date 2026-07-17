@@ -360,6 +360,78 @@ function parseJsonArray(value: unknown): unknown[] {
   }
 }
 
+function jobFromRow(row: any): any {
+  return {
+    id: row.id,
+    articleId: row.article_id,
+    account: row.account,
+    organization: row.organization,
+    organizationNature: row.organization_nature || "未披露",
+    industry: row.industry || "未披露",
+    jobTitle: row.job_title,
+    jobDirections: parseJsonArray(row.job_directions_json),
+    locations: parseJsonArray(row.locations_json),
+    headcount: row.headcount,
+    employmentTypes: parseJsonArray(row.employment_types_json),
+    graduateScope: row.graduate_scope || "未明确",
+    previousGraduatesEligible: row.previous_graduates_eligible || "uncertain",
+    education: { summary: row.education_summary, minimum: row.education_minimum, preferred: row.education_preferred, tier: row.education_tier, hardPhdRequired: Boolean(row.hard_phd_required) },
+    majors: { summary: row.major_summary, accepted: parseJsonArray(row.accepted_majors_json), fit: row.major_fit },
+    applicationRequirements: parseJsonArray(row.application_requirements_json),
+    compensation: { summary: row.compensation_summary, salary: row.salary, benefits: parseJsonArray(row.benefits_json), quality: row.compensation_quality },
+    deadline: row.deadline,
+    applicationMethod: row.application_method,
+    applicationUrl: row.application_url,
+    referralCode: row.referral_code,
+    recommendation: { score: row.recommendation_score, rankingKey: row.ranking_key, level: row.recommendation_level, reasons: parseJsonArray(row.recommendation_reasons_json), concerns: parseJsonArray(row.concerns_json) },
+    evidence: parseJsonArray(row.evidence_json),
+    confidence: row.confidence,
+    article: { title: row.article_title, url: row.article_url, publishedAt: row.published_at, summary: row.article_summary, ocrUsed: Boolean(row.ocr_used), ocrImageCount: row.ocr_image_count, analysisSource: row.analysis_source, extractionComplete: Boolean(row.extraction_complete) },
+  };
+}
+
+const JOB_SELECT = `SELECT p.*, a.title AS article_title, a.url AS article_url,
+  a.published_at, a.summary AS article_summary, a.ocr_used, a.ocr_image_count,
+  a.analysis_source, a.extraction_complete
+  FROM positions p JOIN articles a ON a.id = p.article_id`;
+
+function csvCell(value: unknown): string {
+  const text = Array.isArray(value) ? value.join("；") : String(value ?? "");
+  return `"${text.replace(/"/g, '""')}"`;
+}
+
+function previousGraduateLabel(value: unknown): string {
+  return value === "yes" ? "是" : value === "no" ? "否" : "未明确";
+}
+
+function historyCsvResponse(request: Request, env: Env, rows: any[]): Response {
+  const headers = [
+    "公众号", "更新日期", "企业性质", "公司/单位名称", "招聘类型", "行业", "推文标题",
+    "招聘岗位", "岗位方向", "专业要求", "地点", "原文链接", "网申地址", "截止日期",
+    "往届是否可投递", "学历要求", "适用届别", "内推码", "报考要求", "薪资", "福利待遇",
+    "推荐分数", "推荐等级", "推荐理由", "不推荐理由", "招聘人数", "报名方式", "AI置信度",
+  ];
+  const lines = [headers.map(csvCell).join(",")];
+  for (const row of rows) {
+    const job = jobFromRow(row);
+    lines.push([
+      job.account, String(job.article.publishedAt || "").slice(0, 10), job.organizationNature,
+      job.organization, job.employmentTypes, job.industry, job.article.title, job.jobTitle,
+      job.jobDirections, job.majors.summary, job.locations, job.article.url, job.applicationUrl,
+      job.deadline, previousGraduateLabel(job.previousGraduatesEligible), job.education.summary,
+      job.graduateScope, job.referralCode, job.applicationRequirements, job.compensation.salary,
+      job.compensation.benefits, job.recommendation.score, job.recommendation.level,
+      job.recommendation.reasons, job.recommendation.concerns, job.headcount, job.applicationMethod,
+      Math.round(Number(job.confidence || 0) * 100) / 100,
+    ].map(csvCell).join(","));
+  }
+  const headersOut = corsHeaders(request, env);
+  headersOut.set("Content-Type", "text/csv; charset=utf-8");
+  headersOut.set("Content-Disposition", "attachment; filename*=UTF-8''wechat-job-history.csv");
+  headersOut.set("Cache-Control", "public, max-age=300");
+  return new Response(`\uFEFF${lines.join("\r\n")}\r\n`, { status: 200, headers: headersOut });
+}
+
 async function runBatches(db: D1Database, statements: D1PreparedStatement[], size = 50): Promise<void> {
   for (let index = 0; index < statements.length; index += size) {
     await db.batch(statements.slice(index, index + size));
@@ -411,15 +483,20 @@ async function saveReport(request: Request, env: Env): Promise<Response> {
     for (const position of Array.isArray(item.positions) ? item.positions : []) {
       if (!position?.id || !position?.jobTitle) continue;
       positionStatements.push(env.JOB_DB.prepare(`INSERT INTO positions (
-        id, article_id, report_date, account, organization, job_title, locations_json, headcount,
-        employment_types_json, education_summary, education_minimum, education_preferred, education_tier,
-        hard_phd_required, major_summary, accepted_majors_json, major_fit, application_requirements_json,
-        compensation_summary, salary, benefits_json, compensation_quality, deadline, application_method,
+        id, article_id, report_date, account, organization, organization_nature, industry, job_title,
+        job_directions_json, locations_json, headcount, employment_types_json, graduate_scope,
+        previous_graduates_eligible, education_summary, education_minimum, education_preferred,
+        education_tier, hard_phd_required, major_summary, accepted_majors_json, major_fit,
+        application_requirements_json, compensation_summary, salary, benefits_json,
+        compensation_quality, deadline, application_method, application_url, referral_code,
         recommendation_score, ranking_key, recommendation_level, recommendation_reasons_json, concerns_json,
         evidence_json, confidence, updated_at
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)` ).bind(
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)` ).bind(
         position.id, item.id, report.date, item.account || "", position.organization || "未明确单位",
-        position.jobTitle, jsonText(position.locations), position.headcount || null, jsonText(position.employmentTypes),
+        position.organizationNature || "未披露", position.industry || "未披露", position.jobTitle,
+        jsonText(position.jobDirections), jsonText(position.locations), position.headcount || null,
+        jsonText(position.employmentTypes), position.graduateScope || "未明确",
+        position.previousGraduatesEligible || "uncertain",
         position.education?.summary || "未明确", position.education?.minimum || null,
         position.education?.preferred || null, position.education?.tier || "unspecified",
         position.education?.hardPhdRequired ? 1 : 0, position.majors?.summary || "未明确",
@@ -427,6 +504,7 @@ async function saveReport(request: Request, env: Env): Promise<Response> {
         jsonText(position.applicationRequirements), position.compensation?.summary || "未披露",
         position.compensation?.salary || null, jsonText(position.compensation?.benefits),
         position.compensation?.quality || 0, position.deadline || null, position.applicationMethod || null,
+        position.applicationUrl || null, position.referralCode || null,
         position.recommendation?.score || 0, position.recommendation?.rankingKey || 0,
         position.recommendation?.level || "low", jsonText(position.recommendation?.reasons),
         jsonText(position.recommendation?.concerns), jsonText(position.evidence), position.confidence || 0, now,
@@ -457,32 +535,10 @@ async function listJobs(request: Request, env: Env): Promise<Response> {
   const limit = Math.min(1000, Math.max(1, Number(input.searchParams.get("limit") || 500)));
   const [day, rows] = await Promise.all([
     env.JOB_DB.prepare("SELECT * FROM report_days WHERE report_date = ?").bind(date).first<any>(),
-    env.JOB_DB.prepare(`SELECT p.*, a.title AS article_title, a.url AS article_url,
-      a.published_at, a.summary AS article_summary, a.ocr_used, a.ocr_image_count,
-      a.analysis_source, a.extraction_complete
-      FROM positions p JOIN articles a ON a.id = p.article_id
+    env.JOB_DB.prepare(`${JOB_SELECT}
       WHERE p.report_date = ? ORDER BY p.ranking_key DESC, p.recommendation_score DESC LIMIT ?`).bind(date, limit).all<any>(),
   ]);
-  const jobs = (rows.results || []).map((row: any) => ({
-    id: row.id,
-    articleId: row.article_id,
-    account: row.account,
-    organization: row.organization,
-    jobTitle: row.job_title,
-    locations: parseJsonArray(row.locations_json),
-    headcount: row.headcount,
-    employmentTypes: parseJsonArray(row.employment_types_json),
-    education: { summary: row.education_summary, minimum: row.education_minimum, preferred: row.education_preferred, tier: row.education_tier, hardPhdRequired: Boolean(row.hard_phd_required) },
-    majors: { summary: row.major_summary, accepted: parseJsonArray(row.accepted_majors_json), fit: row.major_fit },
-    applicationRequirements: parseJsonArray(row.application_requirements_json),
-    compensation: { summary: row.compensation_summary, salary: row.salary, benefits: parseJsonArray(row.benefits_json), quality: row.compensation_quality },
-    deadline: row.deadline,
-    applicationMethod: row.application_method,
-    recommendation: { score: row.recommendation_score, rankingKey: row.ranking_key, level: row.recommendation_level, reasons: parseJsonArray(row.recommendation_reasons_json), concerns: parseJsonArray(row.concerns_json) },
-    evidence: parseJsonArray(row.evidence_json),
-    confidence: row.confidence,
-    article: { title: row.article_title, url: row.article_url, publishedAt: row.published_at, summary: row.article_summary, ocrUsed: Boolean(row.ocr_used), ocrImageCount: row.ocr_image_count, analysisSource: row.analysis_source, extractionComplete: Boolean(row.extraction_complete) },
-  }));
+  const jobs = (rows.results || []).map(jobFromRow);
   return json(request, env, {
     date,
     generatedAt: day?.generated_at || null,
@@ -494,6 +550,43 @@ async function listJobs(request: Request, env: Env): Promise<Response> {
     } : null,
     jobs,
   });
+}
+
+async function listJobHistory(request: Request, env: Env): Promise<Response> {
+  const input = new URL(request.url);
+  const limit = Math.min(5000, Math.max(1, Number(input.searchParams.get("limit") || 2000)));
+  const offset = Math.max(0, Number(input.searchParams.get("offset") || 0));
+  const account = (input.searchParams.get("account") || "").trim();
+  const where = account ? " WHERE p.account = ?" : "";
+  const rowsStatement = env.JOB_DB.prepare(`${JOB_SELECT}${where}
+    ORDER BY p.report_date DESC, p.ranking_key DESC, p.recommendation_score DESC LIMIT ? OFFSET ?`);
+  const countStatement = env.JOB_DB.prepare(`SELECT COUNT(*) AS total, COUNT(DISTINCT article_id) AS articles,
+    COUNT(DISTINCT account) AS accounts FROM positions${account ? " WHERE account = ?" : ""}`);
+  const [rows, counts] = await Promise.all([
+    account ? rowsStatement.bind(account, limit, offset).all<any>() : rowsStatement.bind(limit, offset).all<any>(),
+    account ? countStatement.bind(account).first<any>() : countStatement.first<any>(),
+  ]);
+  return json(request, env, {
+    date: "all",
+    generatedAt: new Date().toISOString(),
+    total: Number(counts?.total || 0),
+    stats: {
+      accountsConfigured: Number(counts?.accounts || 0),
+      accountsSucceeded: Number(counts?.accounts || 0),
+      articlesScanned: Number(counts?.articles || 0),
+      newArticles: Number(counts?.articles || 0),
+      relevantArticles: Number(counts?.articles || 0),
+      positionsExtracted: Number(counts?.total || 0),
+      failedArticles: 0,
+    },
+    jobs: (rows.results || []).map(jobFromRow),
+  });
+}
+
+async function downloadJobHistoryCsv(request: Request, env: Env): Promise<Response> {
+  const rows = await env.JOB_DB.prepare(`${JOB_SELECT}
+    ORDER BY p.report_date DESC, p.ranking_key DESC, p.recommendation_score DESC LIMIT 20000`).all<any>();
+  return historyCsvResponse(request, env, rows.results || []);
 }
 
 export default {
@@ -515,6 +608,8 @@ export default {
       if (url.pathname === "/api/reports" && request.method === "POST") return saveReport(request, env);
       if (url.pathname === "/api/job-days" && request.method === "GET") return listJobDays(request, env);
       if (url.pathname === "/api/jobs" && request.method === "GET") return listJobs(request, env);
+      if (url.pathname === "/api/job-history" && request.method === "GET") return listJobHistory(request, env);
+      if (url.pathname === "/api/jobs.csv" && request.method === "GET") return downloadJobHistoryCsv(request, env);
       return json(request, env, { message: "Not found" }, 404);
     } catch (error) {
       return json(request, env, { message: error instanceof Error ? error.message : String(error) }, 500);

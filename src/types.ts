@@ -45,6 +45,7 @@ export type MajorFit =
   | "mismatch";
 
 export type EducationTier = "master" | "bachelor_associate" | "unspecified" | "phd_required";
+export type PreviousGraduateEligibility = "yes" | "no" | "uncertain";
 
 export interface PositionEducation {
   summary: string;
@@ -78,16 +79,23 @@ export interface PositionRecommendation {
 export interface JobPosition {
   id: string;
   organization: string;
+  organizationNature: string;
+  industry: string;
   jobTitle: string;
+  jobDirections: string[];
   locations: string[];
   headcount: string | null;
   employmentTypes: string[];
+  graduateScope: string;
+  previousGraduatesEligible: PreviousGraduateEligibility;
   education: PositionEducation;
   majors: PositionMajors;
   applicationRequirements: string[];
   compensation: PositionCompensation;
   deadline: string | null;
   applicationMethod: string | null;
+  applicationUrl: string | null;
+  referralCode: string | null;
   recommendation: PositionRecommendation;
   evidence: string[];
   confidence: number;

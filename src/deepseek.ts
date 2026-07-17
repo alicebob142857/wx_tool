@@ -4,6 +4,7 @@ import type {
   Classification,
   EducationTier,
   MajorFit,
+  PreviousGraduateEligibility,
 } from "./types.js";
 import { rankPosition, sortPositions, type RawPosition } from "./recommendation.js";
 
@@ -83,16 +84,26 @@ function educationTier(value: unknown, hardPhdRequired: boolean): EducationTier 
   return allowed.includes(value as EducationTier) ? value as EducationTier : "unspecified";
 }
 
+function previousGraduateEligibility(value: unknown): PreviousGraduateEligibility {
+  const allowed: PreviousGraduateEligibility[] = ["yes", "no", "uncertain"];
+  return allowed.includes(value as PreviousGraduateEligibility) ? value as PreviousGraduateEligibility : "uncertain";
+}
+
 function parsePosition(raw: any, articleUrl: string, index: number): ReturnType<typeof rankPosition> | null {
   const jobTitle = String(raw?.job_title || "").trim();
   if (!jobTitle) return null;
   const hardPhdRequired = Boolean(raw?.education?.hard_phd_required);
   const position: RawPosition = {
     organization: String(raw?.organization || "未明确单位").trim(),
+    organizationNature: String(raw?.organization_nature || "未披露").trim(),
+    industry: String(raw?.industry || "未披露").trim(),
     jobTitle,
+    jobDirections: stringArray(raw?.job_directions),
     locations: stringArray(raw?.locations),
     headcount: nullableString(raw?.headcount),
     employmentTypes: stringArray(raw?.employment_types),
+    graduateScope: String(raw?.graduate_scope || "未明确").trim(),
+    previousGraduatesEligible: previousGraduateEligibility(raw?.previous_graduates_eligible),
     education: {
       summary: String(raw?.education?.summary || "未明确").trim(),
       minimum: nullableString(raw?.education?.minimum),
@@ -114,6 +125,8 @@ function parsePosition(raw: any, articleUrl: string, index: number): ReturnType<
     },
     deadline: nullableString(raw?.deadline),
     applicationMethod: nullableString(raw?.application_method),
+    applicationUrl: nullableString(raw?.application_url),
+    referralCode: nullableString(raw?.referral_code),
     recommendation: {
       reasons: stringArray(raw?.recommendation_reasons),
       concerns: stringArray(raw?.non_recommendation_reasons),
@@ -159,16 +172,23 @@ export function heuristicAnalyzeArticle(title: string, text: string, articleUrl:
     : /硕士|研究生/.test(combined) ? "master" : /本科|大专|专科/.test(combined) ? "bachelor_associate" : "unspecified";
   const raw: RawPosition = {
     organization: "详见原文",
+    organizationNature: "未披露",
+    industry: "未披露",
     jobTitle: title,
+    jobDirections: [],
     locations: [],
     headcount: null,
     employmentTypes: classification.jobTypes,
+    graduateScope: classification.graduateScope,
+    previousGraduatesEligible: "uncertain",
     education: { summary: tier === "unspecified" ? "未明确" : tier, minimum: null, preferred: null, tier, hardPhdRequired },
     majors: { summary: classification.suitableMajors.join("、") || "需核对原文", accepted: classification.suitableMajors, fit },
     applicationRequirements: [],
     compensation: { summary: "未完成模型提取", salary: null, benefits: [], quality: 0 },
     deadline: classification.deadline,
     applicationMethod: null,
+    applicationUrl: null,
+    referralCode: null,
     recommendation: { reasons: classification.reasons, concerns: ["当前为规则降级结果，岗位细节需 DeepSeek 重新分析"] },
     accessibility: 2,
     evidence: [],
@@ -204,12 +224,12 @@ export async function analyzeArticle(
 2. 学历第二重要：明确面向硕士的岗位优先，其次本科/大专；硬性仅博士或博士起报的岗位最后。
 3. 再比较明确薪资、福利和报考门槛。薪资未披露时不要臆测。
 
-对每个岗位详细但简洁地提取：岗位、单位、地点、人数、用工类型、学历要求、专业要求、全部硬性报考条件、薪资、福利、截止时间和报名方式。每个岗位分别给出 2-4 条推荐理由和 1-4 条不推荐/风险理由。理由只能基于原文；信息缺失要写“未披露”或放入风险。
+对每个岗位详细但简洁地提取：岗位、岗位方向、单位、企业性质、行业、地点、人数、招聘类型、适用届别、往届生能否投递、学历要求、专业要求、全部硬性报考条件、薪资、福利、截止时间、报名方式、网申地址和内推码。企业性质可使用央企、国企、事业单位、党政机关、高校、民企、外企、社会组织等原文可支持的类别。网申地址必须来自原文中的真实 URL，不要编造。每个岗位分别给出 2-4 条推荐理由和 1-4 条不推荐/风险理由。理由只能基于原文；信息缺失要写“未披露”或放入风险。
 
-枚举要求：majors.fit 只能是 administrative_management、management、humanities、broad、uncertain、mismatch；education.tier 只能是 master、bachelor_associate、unspecified、phd_required。compensation.quality 和 accessibility 为 0-5 整数。hard_phd_required 只有硬性博士起报时才为 true。
+枚举要求：majors.fit 只能是 administrative_management、management、humanities、broad、uncertain、mismatch；education.tier 只能是 master、bachelor_associate、unspecified、phd_required；previous_graduates_eligible 只能是 yes、no、uncertain。compensation.quality 和 accessibility 为 0-5 整数。hard_phd_required 只有硬性博士起报时才为 true。
 
 只返回 JSON，不要 Markdown：
-{"is_recruitment":true,"summary":"文章一句话摘要","extraction_complete":true,"notes":[],"positions":[{"organization":"单位","job_title":"岗位","locations":["地点"],"headcount":null,"employment_types":["校招"],"education":{"summary":"详细学历要求","minimum":"本科","preferred":"硕士","tier":"master","hard_phd_required":false},"majors":{"summary":"详细专业要求","accepted":["行政管理"],"fit":"administrative_management"},"application_requirements":["届别、年龄、证书、经历、政治面貌等硬性条件"],"compensation":{"summary":"薪酬福利概述","salary":"具体薪资或null","benefits":["六险二金"],"quality":4},"deadline":null,"application_method":null,"recommendation_reasons":["理由"],"non_recommendation_reasons":["风险"],"accessibility":4,"evidence":["支持判断的短句"],"confidence":0.9}]}`;
+{"is_recruitment":true,"summary":"文章一句话摘要","extraction_complete":true,"notes":[],"positions":[{"organization":"单位","organization_nature":"央企","industry":"公共服务","job_title":"岗位","job_directions":["综合行政"],"locations":["地点"],"headcount":null,"employment_types":["校招"],"graduate_scope":"2027届","previous_graduates_eligible":"no","education":{"summary":"详细学历要求","minimum":"本科","preferred":"硕士","tier":"master","hard_phd_required":false},"majors":{"summary":"详细专业要求","accepted":["行政管理"],"fit":"administrative_management"},"application_requirements":["年龄、证书、经历、政治面貌等硬性条件"],"compensation":{"summary":"薪酬福利概述","salary":"具体薪资或null","benefits":["六险二金"],"quality":4},"deadline":null,"application_method":null,"application_url":null,"referral_code":null,"recommendation_reasons":["理由"],"non_recommendation_reasons":["风险"],"accessibility":4,"evidence":["支持判断的短句"],"confidence":0.9}]}`;
 
   const response = await fetch(`${config.deepseekBaseUrl}/chat/completions`, {
     method: "POST",

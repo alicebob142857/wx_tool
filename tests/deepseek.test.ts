@@ -41,12 +41,19 @@ test("position analysis extracts detailed requirements and ranks eligible master
       },
       {
         organization: "乙单位",
+        organization_nature: "国企",
+        industry: "公共服务",
         job_title: "人力资源岗",
+        job_directions: ["人力资源"],
         locations: ["上海"],
+        graduate_scope: "2027届",
+        previous_graduates_eligible: "no",
         education: { summary: "硕士研究生", minimum: "硕士", tier: "master", hard_phd_required: false },
         majors: { summary: "人力资源管理", accepted: ["人力资源管理"], fit: "management" },
         application_requirements: ["2027届"],
         compensation: { summary: "薪资面议", benefits: [], quality: 2 },
+        application_url: "https://example.com/apply",
+        referral_code: "HR2027",
         recommendation_reasons: ["硕士岗位"],
         non_recommendation_reasons: ["薪资未披露"],
         accessibility: 4,
@@ -58,6 +65,9 @@ test("position analysis extracts detailed requirements and ranks eligible master
   const result = parseArticleAnalysis(payload, "https://mp.weixin.qq.com/s/example");
   assert.equal(result.positions.length, 2);
   assert.equal(result.positions[0].jobTitle, "人力资源岗");
+  assert.equal(result.positions[0].organizationNature, "国企");
+  assert.equal(result.positions[0].previousGraduatesEligible, "no");
+  assert.equal(result.positions[0].applicationUrl, "https://example.com/apply");
   assert.equal(result.positions[1].recommendation.level, "low");
   assert.equal(result.positions[1].education.hardPhdRequired, true);
   assert.ok(result.positions[0].recommendation.reasons.length > 0);

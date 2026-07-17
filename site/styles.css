@@ -108,6 +108,14 @@ button, input, select { font: inherit; }
 .results-heading h2 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: 36px; font-weight: 500; }
 .results-heading .eyebrow { margin-bottom: 7px; }
 .results-heading > span { color: var(--muted); font-size: 13px; }
+.results-actions { display: flex; align-items: center; gap: 14px; }
+.results-actions > span { color: var(--muted); font-size: 13px; }
+.download-link {
+  display: inline-flex; align-items: center; min-height: 38px; padding: 0 12px; border-radius: 11px;
+  color: var(--green); background: rgba(29,107,79,.08); border: 1px solid rgba(29,107,79,.16);
+  text-decoration: none; font-size: 12px; font-weight: 800;
+}
+.download-link:hover { background: rgba(29,107,79,.14); }
 .results { display: grid; gap: 16px; padding: 22px 0 76px; }
 .job-card {
   display: grid; grid-template-columns: 120px minmax(0, 1fr) 105px; gap: 24px; align-items: start; padding: 25px;
@@ -134,6 +142,7 @@ button, input, select { font: inherit; }
 .chip { padding: 5px 9px; border-radius: 999px; background: #edf2ec; color: #486256; font-size: 11px; }
 .chip.ocr { background: #fff0e4; color: #9a5d31; }
 .chip.salary { background: #e5f1e7; color: #17603f; font-weight: 800; }
+.chip.eligible { background: #e5f1e7; color: #17603f; }
 .chip.phd, .chip.fit-mismatch { background: #f4e9e7; color: #9a443e; }
 .chip.fit-administrative_management { background: var(--lime); color: #355319; font-weight: 800; }
 .verdicts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
@@ -153,6 +162,8 @@ button, input, select { font: inherit; }
 .detail-summary { margin-bottom: 8px !important; font-size: 12px !important; color: #45534c !important; }
 .job-link { display: inline-flex; align-items: center; gap: 7px; text-decoration: none; color: white; background: var(--green); border-radius: 12px; padding: 10px 13px; font-size: 13px; font-weight: 700; white-space: nowrap; }
 .job-link:hover { background: var(--green-dark); }
+.job-apply-link { margin-top: 8px; color: var(--green); background: rgba(29,107,79,.08); border: 1px solid rgba(29,107,79,.18); }
+.job-apply-link:hover { color: white; }
 .confidence { display: block; text-align: center; color: var(--muted); font-size: 10px; margin-top: 8px; }
 .empty-state { text-align: center; padding: 70px 20px 100px; }
 .empty-state[hidden] { display: none; }
@@ -173,6 +184,7 @@ footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1
   .search-field { grid-column: 1 / -1; }
   .job-card { grid-template-columns: 1fr; gap: 14px; }
   .job-action { display: flex; align-items: center; gap: 12px; }
+  .job-apply-link { margin-top: 0; }
   .confidence { margin: 0; }
   .verdicts, .detail-grid { grid-template-columns: 1fr; }
 }
@@ -189,6 +201,8 @@ footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1
   .toolbar { grid-template-columns: 1fr; margin-bottom: 42px; }
   .search-field { grid-column: auto; }
   .results-heading h2 { font-size: 30px; }
+  .results-heading { align-items: flex-start; gap: 16px; }
+  .results-actions { align-items: flex-end; flex-direction: column-reverse; }
   .auth-panel { padding: 23px; }
   .auth-panel ol { display: grid; gap: 10px; }
   footer { display: block; line-height: 1.6; }

@@ -70,6 +70,10 @@ function levelLabel(value) {
   return ({ high: "优先推荐", medium: "可以考虑", low: "谨慎考虑" })[value] || "待评估";
 }
 
+function previousGraduateLabel(value) {
+  return ({ yes: "往届可投", no: "仅限指定届别", uncertain: "往届待核对" })[value] || "往届待核对";
+}
+
 function appendList(container, values, emptyText = "原文未披露") {
   const list = Array.isArray(values) ? values.filter(Boolean) : [];
   if (!list.length) {
@@ -109,13 +113,20 @@ function flattenStaticReport(report) {
         id: item.id,
         account: item.account,
         organization: item.account,
+        organizationNature: "未披露",
+        industry: "未披露",
         jobTitle: item.title,
+        jobDirections: [],
         locations: item.locations || [],
         employmentTypes: item.jobTypes || [],
+        graduateScope: item.graduateScope || "未明确",
+        previousGraduatesEligible: "uncertain",
         education: { summary: "旧版报告未提取", tier: "unspecified", hardPhdRequired: false },
         majors: { summary: (item.suitableMajors || []).join("、") || "旧版报告未提取", accepted: item.suitableMajors || [], fit: "uncertain" },
         applicationRequirements: [],
         compensation: { summary: "旧版报告未提取", salary: null, benefits: [], quality: 0 },
+        applicationUrl: null,
+        referralCode: null,
         recommendation: { score: Math.round((item.confidence || 0) * 100), rankingKey: 0, level: "low", reasons: item.reasons || [], concerns: ["等待 DeepSeek 岗位级重分析"] },
         article: { title: item.title, url: item.url, publishedAt: item.publishedAt, summary: item.summary, ocrUsed: item.ocrUsed, ocrImageCount: item.ocrImageCount, analysisSource: item.source || "heuristic", extractionComplete: false },
       });
@@ -135,7 +146,9 @@ function renderResults() {
     if (!query) return true;
     return [
       job.jobTitle, job.organization, job.account, job.education?.summary, job.majors?.summary,
-      job.compensation?.summary, ...(job.locations || []), ...(job.applicationRequirements || []),
+      job.organizationNature, job.industry, job.graduateScope, job.article?.title,
+      job.compensation?.summary, ...(job.jobDirections || []), ...(job.locations || []),
+      ...(job.applicationRequirements || []), ...(job.employmentTypes || []),
     ].join(" ").toLowerCase().includes(query);
   });
 
@@ -155,6 +168,10 @@ function renderResults() {
     const chips = node("div", "chips");
     chips.append(chip(fitLabel(job.majors?.fit), `fit-${job.majors?.fit || "uncertain"}`));
     chips.append(chip(educationLabel(job.education?.tier), job.education?.hardPhdRequired ? "phd" : ""));
+    chips.append(chip(job.organizationNature || "企业性质未披露"));
+    chips.append(chip(job.industry || "行业未披露"));
+    (job.employmentTypes || []).slice(0, 2).forEach(value => chips.append(chip(value)));
+    chips.append(chip(previousGraduateLabel(job.previousGraduatesEligible), job.previousGraduatesEligible === "yes" ? "eligible" : ""));
     (job.locations || []).slice(0, 3).forEach(value => chips.append(chip(value)));
     if (job.compensation?.salary) chips.append(chip(job.compensation.salary, "salary"));
     if (job.article?.ocrUsed) chips.append(chip(`OCR ${job.article.ocrImageCount} 图`, "ocr"));
@@ -172,9 +189,17 @@ function renderResults() {
     details.append(node("summary", "", "查看完整岗位要求"));
     const grid = node("div", "detail-grid");
     grid.append(
+      detailBlock("单位与岗位", job.organization || "未明确单位", [
+        `企业性质：${job.organizationNature || "未披露"}`,
+        `行业：${job.industry || "未披露"}`,
+        `推文标题：${job.article?.title || "未披露"}`,
+        `岗位方向：${(job.jobDirections || []).join("、") || "未披露"}`,
+      ]),
       detailBlock("学历要求", job.education?.summary, [
         job.education?.minimum ? `最低：${job.education.minimum}` : "",
         job.education?.preferred ? `优先：${job.education.preferred}` : "",
+        `适用届别：${job.graduateScope || "未明确"}`,
+        `往届生：${previousGraduateLabel(job.previousGraduatesEligible)}`,
       ]),
       detailBlock("专业要求", job.majors?.summary, job.majors?.accepted || []),
       detailBlock("报考要求", null, job.applicationRequirements || []),
@@ -184,9 +209,12 @@ function renderResults() {
       ]),
       detailBlock("报名信息", null, [
         job.headcount ? `人数：${job.headcount}` : "",
-        ...(job.employmentTypes || []),
+        `招聘类型：${(job.employmentTypes || []).join("、") || "未披露"}`,
+        `地点：${(job.locations || []).join("、") || "未披露"}`,
         job.deadline ? `截止：${job.deadline}` : "",
         job.applicationMethod ? `方式：${job.applicationMethod}` : "",
+        job.applicationUrl ? `网申：${job.applicationUrl}` : "网申：未披露",
+        job.referralCode ? `内推码：${job.referralCode}` : "内推码：未披露",
       ]),
     );
     details.append(grid);
@@ -197,7 +225,15 @@ function renderResults() {
     link.href = job.article?.url || "#";
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    action.append(link, node("span", "confidence", `AI 置信度 ${Math.round((job.confidence || 0) * 100)}%`));
+    action.append(link);
+    if (job.applicationUrl) {
+      const applyLink = node("a", "job-link job-apply-link", "网申 ↗");
+      applyLink.href = job.applicationUrl;
+      applyLink.target = "_blank";
+      applyLink.rel = "noopener noreferrer";
+      action.append(applyLink);
+    }
+    action.append(node("span", "confidence", `AI 置信度 ${Math.round((job.confidence || 0) * 100)}%`));
     card.append(source, body, action);
     container.append(card);
   }
@@ -219,8 +255,9 @@ function populateAccounts() {
 async function loadReport(date) {
   const base = state.runtime?.authServiceUrl?.replace(/\/$/, "");
   let report = null;
-  if (date && base) report = await getJson(`${base}/api/jobs?date=${encodeURIComponent(date)}&limit=1000`);
-  if ((!report || !report.jobs?.length) && date) {
+  if (date === "__all__" && base) report = await getJson(`${base}/api/job-history?limit=5000`);
+  else if (date && base) report = await getJson(`${base}/api/jobs?date=${encodeURIComponent(date)}&limit=1000`);
+  if ((!report || !report.jobs?.length) && date && date !== "__all__") {
     const fallback = await getJson(`data/daily/${date}.json`, { date, items: [], stats: state.status?.stats || null });
     const fallbackJobs = flattenStaticReport(fallback);
     if (!report || fallbackJobs.length) {
@@ -228,7 +265,7 @@ async function loadReport(date) {
     }
   }
   state.report = report || { date, jobs: [], stats: state.status?.stats || null };
-  text("#current-date", fmtDate(date));
+  text("#current-date", date === "__all__" ? "全部历史" : fmtDate(date));
   text("#last-run", state.report?.generatedAt ? `完成于 ${fmtDateTime(state.report.generatedAt)}` : "等待首次采集");
   updateStats(state.report?.stats || state.status?.stats);
   populateAccounts();
@@ -248,6 +285,9 @@ async function setupDates() {
     await loadReport("");
     return;
   }
+  const allOption = node("option", "", "全部历史 · 汇总表");
+  allOption.value = "__all__";
+  select.append(allOption);
   for (const day of days) {
     const option = node("option", "", `${day.date} · ${day.positionCount ?? day.relevantCount ?? 0} 岗位`);
     option.value = day.date;
@@ -306,6 +346,9 @@ async function init() {
     getJson("data/index.json", { days: [] }),
   ]);
   text("#footer-meta", state.status?.lastRunAt ? `最后运行：${fmtDateTime(state.status.lastRunAt)}` : "数据由 GitHub Actions 自动生成");
+  const base = state.runtime?.authServiceUrl?.replace(/\/$/, "");
+  const download = $("#download-excel");
+  if (download && base) download.href = `${base}/api/jobs.csv`;
   if (state.status?.state === "ok") setServiceStatus("ok", "今日任务完成");
   else if (state.status?.state === "partial") setServiceStatus("warning", "部分任务失败");
   else if (state.status?.state === "auth_required") setServiceStatus("warning", "授权已过期");
