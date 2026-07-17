@@ -99,45 +99,64 @@ async function main(): Promise<void> {
   const items: ReportItem[] = [];
   console.log(`CANDIDATES ${selected.length} / NEW ${stats.newArticles}`);
 
-  for (const [articleIndex, { account, article }] of selected.entries()) {
-    try {
-      const parsed = await fetchAndParseArticle(article, url => client.downloadArticleHtml(url));
-      const imageRequirementHint = /(?:岗位|职位)(?:表|信息|需求)|招聘计划.{0,12}(?:如下|详见)/.test(parsed.text.slice(0, 8_000));
-      const shouldOcr = parsed.imageUrls.length > 0 && (parsed.text.length < 2_500 || (parsed.text.length < 8_000 && imageRequirementHint));
-      console.log(`ARTICLE ${articleIndex + 1}/${selected.length} ${account} | text=${parsed.text.length} images=${parsed.imageUrls.length} ocr=${shouldOcr}`);
-      const ocr = shouldOcr
-        ? await ocrImages(parsed.imageUrls, config.ocrMaxImages, config.ocrTimeoutMs)
-        : { text: "", processed: 0, errors: [] as string[] };
-      let analysis;
+  let articleCursor = 0;
+  const processArticle = async () => {
+    while (articleCursor < selected.length) {
+      const articleIndex = articleCursor++;
+      const { account, article } = selected[articleIndex];
       try {
-        analysis = await analyzeArticle(config, parsed.title || article.title, article.link, parsed.text, ocr.text);
+        const parsed = await fetchAndParseArticle(article, url => client.downloadArticleHtml(url));
+        const imageRequirementHint = /(?:岗位|职位)(?:表|信息|需求)|招聘计划.{0,12}(?:如下|详见)/.test(parsed.text.slice(0, 8_000));
+        const shouldOcr =
+          parsed.imageUrls.length > 0 &&
+          (parsed.text.length < 600 || (parsed.text.length < 8_000 && imageRequirementHint));
+        console.log(`ARTICLE ${articleIndex + 1}/${selected.length} ${account} | text=${parsed.text.length} images=${parsed.imageUrls.length} ocr=${shouldOcr}`);
+        const ocr = shouldOcr
+          ? await ocrImages(
+              parsed.imageUrls,
+              config.ocrMaxImages,
+              config.ocrTimeoutMs,
+              config.ocrArticleBudgetMs,
+            )
+          : { text: "", processed: 0, errors: [] as string[] };
+        let analysis;
+        try {
+          analysis = await analyzeArticle(config, parsed.title || article.title, article.link, parsed.text, ocr.text);
+        } catch (error) {
+          errors.push(`${account} / ${article.title}：DeepSeek 失败，已使用规则降级；${error instanceof Error ? error.message : String(error)}`);
+          analysis = heuristicAnalyzeArticle(parsed.title || article.title, `${parsed.text}\n${ocr.text}`, article.link);
+        }
+        if (analysis.isRecruitment && analysis.positions.length > 0) {
+          items.push({
+            id: stableId(article.link),
+            account,
+            title: parsed.title || article.title,
+            url: article.link,
+            publishedAt: isoFromUnix(article.update_time),
+            ocrUsed: ocr.processed > 0,
+            ocrImageCount: ocr.processed,
+            summary: analysis.summary,
+            positions: analysis.positions,
+            analysisSource: analysis.source,
+            extractionComplete: analysis.extractionComplete,
+            notes: [...analysis.notes, ...ocr.errors],
+          });
+        }
+        markSeen(seen, article.link);
       } catch (error) {
-        errors.push(`${account} / ${article.title}：DeepSeek 失败，已使用规则降级；${error instanceof Error ? error.message : String(error)}`);
-        analysis = heuristicAnalyzeArticle(parsed.title || article.title, `${parsed.text}\n${ocr.text}`, article.link);
+        stats.failedArticles += 1;
+        failedUrls.add(article.link);
+        errors.push(`${account} / ${article.title}：${error instanceof Error ? error.message : String(error)}`);
       }
-      if (analysis.isRecruitment && analysis.positions.length > 0) {
-        items.push({
-          id: stableId(article.link),
-          account,
-          title: parsed.title || article.title,
-          url: article.link,
-          publishedAt: isoFromUnix(article.update_time),
-          ocrUsed: ocr.processed > 0,
-          ocrImageCount: ocr.processed,
-          summary: analysis.summary,
-          positions: analysis.positions,
-          analysisSource: analysis.source,
-          extractionComplete: analysis.extractionComplete,
-          notes: analysis.notes,
-        });
-      }
-      markSeen(seen, article.link);
-    } catch (error) {
-      stats.failedArticles += 1;
-      failedUrls.add(article.link);
-      errors.push(`${account} / ${article.title}：${error instanceof Error ? error.message : String(error)}`);
     }
-  }
+  };
+  await Promise.all(
+    Array.from(
+      { length: Math.min(Math.max(1, config.articleConcurrency), selected.length) },
+      processArticle,
+    ),
+  );
+  items.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
   for (const { article } of queue.slice(config.maxArticlesPerRun)) markSeen(seen, article.link);
   for (const url of failedUrls) delete seen.urls[url];

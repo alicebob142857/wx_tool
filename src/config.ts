@@ -26,6 +26,8 @@ export interface AppConfig {
   maxArticlesPerRun: number;
   ocrMaxImages: number;
   ocrTimeoutMs: number;
+  ocrArticleBudgetMs: number;
+  articleConcurrency: number;
   forceReprocessHours: number;
   classifierMode: "deepseek" | "heuristic";
 }
@@ -46,6 +48,8 @@ export function loadConfig(): AppConfig {
     maxArticlesPerRun: numberEnv("MAX_ARTICLES_PER_RUN", 60),
     ocrMaxImages: numberEnv("OCR_MAX_IMAGES", 8),
     ocrTimeoutMs: numberEnv("OCR_TIMEOUT_MS", 60_000),
+    ocrArticleBudgetMs: numberEnv("OCR_ARTICLE_BUDGET_MS", 90_000),
+    articleConcurrency: numberEnv("ARTICLE_CONCURRENCY", 3),
     forceReprocessHours: numberEnv("FORCE_REPROCESS_HOURS", 0),
     classifierMode,
   };

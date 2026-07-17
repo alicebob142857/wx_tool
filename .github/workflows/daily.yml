@@ -63,8 +63,10 @@ jobs:
           CLASSIFIER_MODE: deepseek
           LOOKBACK_HOURS: "36"
           MAX_ARTICLES_PER_RUN: "60"
-          OCR_MAX_IMAGES: "16"
+          OCR_MAX_IMAGES: "12"
           OCR_TIMEOUT_MS: "60000"
+          OCR_ARTICLE_BUDGET_MS: "90000"
+          ARTICLE_CONCURRENCY: "3"
           FORCE_REPROCESS_HOURS: ${{ inputs.reprocess_hours || '0' }}
         run: npm run collect
 
