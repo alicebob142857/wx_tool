@@ -1,6 +1,6 @@
 {
   "date": "2026-07-17",
-  "generatedAt": "2026-07-17T06:19:57.982Z",
+  "generatedAt": "2026-07-17T06:24:43.435Z",
   "stats": {
     "accountsConfigured": 10,
     "accountsSucceeded": 10,
@@ -9,7 +9,7 @@
     "candidateArticles": 54,
     "relevantArticles": 50,
     "positionsExtracted": 42,
-    "failedArticles": 2
+    "failedArticles": 3
   },
   "items": [
     {
@@ -3314,6 +3314,7 @@
     }
   ],
   "errors": [
-    "国企求职网 / 2027届国企秋招群，扫码加入：文章正文为空，可能遇到微信验证页或文章已删除"
+    "国企求职网 / 2027届国企秋招群，扫码加入：文章正文为空，可能遇到微信验证页或文章已删除",
+    "央企求职网 / 2027届国企秋招群，扫码加入：文章正文为空，可能遇到微信验证页或文章已删除"
   ]
 }
