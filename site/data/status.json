@@ -1,19 +1,19 @@
 {
-  "state": "auth_required",
-  "message": "微信公众号授权已过期，请在网页扫码恢复。",
-  "lastRunAt": "2026-07-17T03:48:40.180Z",
+  "state": "partial",
+  "message": "今日采集完成，但部分文章处理失败。",
+  "lastRunAt": "2026-07-17T04:01:19.410Z",
   "auth": {
-    "status": "expired",
-    "expiresAt": null,
-    "qrAvailable": true
+    "status": "valid",
+    "expiresAt": "2026-07-21T03:50:00.865Z",
+    "qrAvailable": false
   },
   "stats": {
     "accountsConfigured": 10,
-    "accountsSucceeded": 0,
-    "articlesScanned": 0,
-    "newArticles": 0,
-    "candidateArticles": 0,
-    "relevantArticles": 0,
-    "failedArticles": 0
+    "accountsSucceeded": 10,
+    "articlesScanned": 576,
+    "newArticles": 50,
+    "candidateArticles": 44,
+    "relevantArticles": 41,
+    "failedArticles": 1
   }
 }

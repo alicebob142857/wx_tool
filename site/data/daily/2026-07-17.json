@@ -1,0 +1,1236 @@
+{
+  "date": "2026-07-17",
+  "generatedAt": "2026-07-17T04:01:19.410Z",
+  "stats": {
+    "accountsConfigured": 10,
+    "accountsSucceeded": 10,
+    "articlesScanned": 576,
+    "newArticles": 50,
+    "candidateArticles": 44,
+    "relevantArticles": 41,
+    "failedArticles": 1
+  },
+  "items": [
+    {
+      "id": "1b5fa3a9d522cc9f",
+      "account": "国企求职网",
+      "title": "工资8500-12500(含6险2金+双休)事业单位公开招录125名办公室人员！各乡镇街道均有名额！7月17日报名！大专可报！可入编！",
+      "url": "https://mp.weixin.qq.com/s/cla1jU9pqyQRZw-Lm03Iaw",
+      "publishedAt": "2026-07-17T03:06:16.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 1,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：审计、法律、教育、不限专业、专业不限"
+      ],
+      "suitableMajors": [
+        "审计",
+        "法律",
+        "教育",
+        "不限专业",
+        "专业不限"
+      ],
+      "jobTypes": [],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "37a44b86a67351e4",
+      "account": "国企求职网",
+      "title": "2027届校招爆了！",
+      "url": "https://mp.weixin.qq.com/s/2U5wavnGueBoFIuUN8dGdw",
+      "publishedAt": "2026-07-17T03:06:16.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：金融、教育"
+      ],
+      "suitableMajors": [
+        "金融",
+        "教育"
+      ],
+      "jobTypes": [
+        "校招",
+        "秋招",
+        "提前批",
+        "实习",
+        "春招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "a674d6e3786620b3",
+      "account": "国企求职网",
+      "title": "中国兵器工业集团2027届校园招聘！",
+      "url": "https://mp.weixin.qq.com/s/-IKzCf8uiDE2IqSPOPw3cQ",
+      "publishedAt": "2026-07-17T03:06:16.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、金融、财务、中文"
+      ],
+      "suitableMajors": [
+        "管理",
+        "金融",
+        "财务",
+        "中文"
+      ],
+      "jobTypes": [
+        "校招",
+        "秋招",
+        "实习"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "95989fed702eff05",
+      "account": "国企求职网",
+      "title": "华润公司2027届校园招聘公告！",
+      "url": "https://mp.weixin.qq.com/s/TjH0l39fcMxZKXNX16jB7w",
+      "publishedAt": "2026-07-17T03:06:16.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、人力资源、市场营销、经济、金融、财务、中文、英语"
+      ],
+      "suitableMajors": [
+        "管理",
+        "人力资源",
+        "市场营销",
+        "经济",
+        "金融",
+        "财务",
+        "中文",
+        "英语"
+      ],
+      "jobTypes": [
+        "校招",
+        "秋招",
+        "实习",
+        "提前批"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "35d34a665ef5177c",
+      "account": "国企求职网",
+      "title": "中国交建集团2026年社会招聘公告！",
+      "url": "https://mp.weixin.qq.com/s/DOTQEwTl0iwtlDzn7WReTQ",
+      "publishedAt": "2026-07-17T03:06:16.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、工商、市场营销、金融、法律、政治"
+      ],
+      "suitableMajors": [
+        "管理",
+        "工商",
+        "市场营销",
+        "金融",
+        "法律",
+        "政治"
+      ],
+      "jobTypes": [
+        "社招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2026届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "b269310729119a40",
+      "account": "国企求职网",
+      "title": "国家电投集团分公司2026年招聘公告！",
+      "url": "https://mp.weixin.qq.com/s/xUl-dTYl5Gt0pu1c51LXjg",
+      "publishedAt": "2026-07-17T03:06:16.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、工商、行政、人力资源、金融、法律、政治"
+      ],
+      "suitableMajors": [
+        "管理",
+        "工商",
+        "行政",
+        "人力资源",
+        "金融",
+        "法律",
+        "政治"
+      ],
+      "jobTypes": [
+        "社招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2026届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "0649ad4dbedf0d8f",
+      "account": "国企求职网",
+      "title": "国家邮政局2026年度公开招聘公告！",
+      "url": "https://mp.weixin.qq.com/s/jvjDVn_Z2fTMj3zrLvE7GQ",
+      "publishedAt": "2026-07-17T03:06:16.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、行政、公共管理、人力资源、经济、金融、会计、财务"
+      ],
+      "suitableMajors": [
+        "管理",
+        "行政",
+        "公共管理",
+        "人力资源",
+        "经济",
+        "金融",
+        "会计",
+        "财务"
+      ],
+      "jobTypes": [],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "7cddcd6dafea7298",
+      "account": "国企求职网",
+      "title": "中国华电2027校招提前知：招聘详情、薪资待遇、考试真题！",
+      "url": "https://mp.weixin.qq.com/s/aolQx61fYNbhsLjXIPkO1A",
+      "publishedAt": "2026-07-17T03:06:16.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、工商、经济、金融、会计、教育"
+      ],
+      "suitableMajors": [
+        "管理",
+        "工商",
+        "经济",
+        "金融",
+        "会计",
+        "教育"
+      ],
+      "jobTypes": [
+        "校招",
+        "秋招",
+        "提前批",
+        "春招",
+        "实习",
+        "社招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "01a3e4610d2df92f",
+      "account": "国聘",
+      "title": "“国聘就业友好评价体系”亮相数智时代人才高质量发展学术交流会",
+      "url": "https://mp.weixin.qq.com/s/4lPF5q5RwHM63oegPtDHqA",
+      "publishedAt": "2026-07-17T02:18:14.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 7,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、人力资源、经济"
+      ],
+      "suitableMajors": [
+        "管理",
+        "人力资源",
+        "经济"
+      ],
+      "jobTypes": [],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "3e2d67973bc3318e",
+      "account": "国企求职网",
+      "title": "中国船舶集团2027届校园招聘公告！",
+      "url": "https://mp.weixin.qq.com/s/fSjNjwM22euAcdXArfaKiQ",
+      "publishedAt": "2026-07-17T01:27:33.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、行政"
+      ],
+      "suitableMajors": [
+        "管理",
+        "行政"
+      ],
+      "jobTypes": [
+        "春招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "71bc55dede53421f",
+      "account": "五财一贸",
+      "title": "社招 | 中粮集团有限公司公开招聘公告",
+      "url": "https://mp.weixin.qq.com/s/bjkK10IyxyQGPSQjLc3jOQ",
+      "publishedAt": "2026-07-16T15:30:01.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 4,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、人力资源、金融、会计、财务、英语、教育、政治"
+      ],
+      "suitableMajors": [
+        "管理",
+        "人力资源",
+        "金融",
+        "会计",
+        "财务",
+        "英语",
+        "教育",
+        "政治"
+      ],
+      "jobTypes": [
+        "社招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "7b62f029a740223b",
+      "account": "五财一贸",
+      "title": "社招 | 华能核能技术研究院有限公司2026年社会招聘公告",
+      "url": "https://mp.weixin.qq.com/s/VnliQmK9-UixBjtGd1v3yQ",
+      "publishedAt": "2026-07-16T15:30:01.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 5,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、人力资源"
+      ],
+      "suitableMajors": [
+        "管理",
+        "人力资源"
+      ],
+      "jobTypes": [
+        "社招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "91210e2668685c6a",
+      "account": "五财一贸",
+      "title": "社招 | 诺安基金最新社会招聘",
+      "url": "https://mp.weixin.qq.com/s/RBDO0eEExE5w80vzhJBoyg",
+      "publishedAt": "2026-07-16T15:30:01.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 1,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：金融、财务"
+      ],
+      "suitableMajors": [
+        "金融",
+        "财务"
+      ],
+      "jobTypes": [
+        "社招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "f84f5df79c3988b2",
+      "account": "五财一贸",
+      "title": "秋招 | 中国兵器工业集团2027届暑期招聘启动及薪资待遇（附秋招汇总表及经验交流群）",
+      "url": "https://mp.weixin.qq.com/s/TPp3iKoSpWTeUMOp9ba-6Q",
+      "publishedAt": "2026-07-16T15:30:01.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 7,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、金融"
+      ],
+      "suitableMajors": [
+        "管理",
+        "金融"
+      ],
+      "jobTypes": [
+        "秋招",
+        "校招",
+        "实习",
+        "提前批"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "7856bb08b0f4e932",
+      "account": "五财一贸",
+      "title": "秋招 | 腾讯2027青云计划校招启动及薪资待遇（附秋招汇总表及经验交流群）",
+      "url": "https://mp.weixin.qq.com/s/QgWXcE_u6DvdUTDuhlxDZw",
+      "publishedAt": "2026-07-16T15:30:01.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 6,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、金融"
+      ],
+      "suitableMajors": [
+        "管理",
+        "金融"
+      ],
+      "jobTypes": [
+        "秋招",
+        "校招",
+        "实习",
+        "提前批"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "52363ae8f4c8e280",
+      "account": "五财一贸",
+      "title": "实习 | 国泰海通+峻海资本+国金证券+华金证券",
+      "url": "https://mp.weixin.qq.com/s/y7dkeZxfBGf69mUoii6saQ",
+      "publishedAt": "2026-07-16T15:30:01.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：经济、金融、财务"
+      ],
+      "suitableMajors": [
+        "经济",
+        "金融",
+        "财务"
+      ],
+      "jobTypes": [
+        "实习",
+        "校招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "5c4da2cf0d9ded18",
+      "account": "北大就业",
+      "title": "信息传输、软件和信息技术服务行业招聘信息汇总",
+      "url": "https://mp.weixin.qq.com/s/BIgFbpWM42SjtlefoRQi-g",
+      "publishedAt": "2026-07-16T13:19:48.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 2,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：金融"
+      ],
+      "suitableMajors": [
+        "金融"
+      ],
+      "jobTypes": [
+        "春招",
+        "秋招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "085b158c8a9390e8",
+      "account": "国聘",
+      "title": "天府绛溪实验室2026年第二批招聘公告",
+      "url": "https://mp.weixin.qq.com/s/nxqnl6EpHkMBa8S9f9y8ig",
+      "publishedAt": "2026-07-16T11:47:43.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、行政、人力资源、财务"
+      ],
+      "suitableMajors": [
+        "管理",
+        "行政",
+        "人力资源",
+        "财务"
+      ],
+      "jobTypes": [
+        "实习"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "9bf0678e6a0de9ff",
+      "account": "国聘",
+      "title": "央企名企广东省岗位推荐 7月（第一期）",
+      "url": "https://mp.weixin.qq.com/s/ritNEo7PrVg5xGucqLs9ig",
+      "publishedAt": "2026-07-16T11:47:43.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、行政、人力资源、财务、审计"
+      ],
+      "suitableMajors": [
+        "管理",
+        "行政",
+        "人力资源",
+        "财务",
+        "审计"
+      ],
+      "jobTypes": [
+        "实习"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "ccd17cac47ce3e77",
+      "account": "国聘",
+      "title": "社招 | 地方国企招聘信息汇总 7月（第二期）",
+      "url": "https://mp.weixin.qq.com/s/uG4NycPSYOHBCiJMphUzkA",
+      "publishedAt": "2026-07-16T11:47:43.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、行政、人力资源、市场营销、经济、会计、财务、审计"
+      ],
+      "suitableMajors": [
+        "管理",
+        "行政",
+        "人力资源",
+        "市场营销",
+        "经济",
+        "会计",
+        "财务",
+        "审计"
+      ],
+      "jobTypes": [
+        "社招",
+        "实习"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "56d9e2eb40d89c23",
+      "account": "国聘",
+      "title": "外资合资企业招聘信息推荐 7月（第三期）",
+      "url": "https://mp.weixin.qq.com/s/GJJqbV8IyCV8yfdXsSIBbw",
+      "publishedAt": "2026-07-16T11:47:43.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、行政、人力资源、会计、财务、英语、教育"
+      ],
+      "suitableMajors": [
+        "管理",
+        "行政",
+        "人力资源",
+        "会计",
+        "财务",
+        "英语",
+        "教育"
+      ],
+      "jobTypes": [
+        "实习",
+        "校招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "b0f6552dd46c2453",
+      "account": "国聘",
+      "title": "这些领域急需人才！教育部新增27个职教专业，2027年正式招生",
+      "url": "https://mp.weixin.qq.com/s/Acr9qxANsnykQ5eCfEv5kg",
+      "publishedAt": "2026-07-16T11:47:43.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 4,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、经济、新闻、教育"
+      ],
+      "suitableMajors": [
+        "管理",
+        "经济",
+        "新闻",
+        "教育"
+      ],
+      "jobTypes": [],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "3bb36ac5b7d2d48e",
+      "account": "清华就业",
+      "title": "开放日｜中国船舶集团有限公司系统工程研究院&中船智海创新研究院2027届校招企业开放日邀请函",
+      "url": "https://mp.weixin.qq.com/s/O4yusTf35G4z3ZR6lU2n5A",
+      "publishedAt": "2026-07-16T09:02:02.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、历史"
+      ],
+      "suitableMajors": [
+        "管理",
+        "历史"
+      ],
+      "jobTypes": [
+        "校招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "f4a3a6addc6ef20f",
+      "account": "北航就业",
+      "title": "开放日 | 中国船舶集团有限公司系统工程研究院&中船智海创新研究院 | 2027届校招企业开放日邀请函",
+      "url": "https://mp.weixin.qq.com/s/ewIo3w6InT-PeGCwA9XU5Q",
+      "publishedAt": "2026-07-16T06:44:09.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理"
+      ],
+      "suitableMajors": [
+        "管理"
+      ],
+      "jobTypes": [
+        "校招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "b2f4b308585d8c29",
+      "account": "国企求职网",
+      "title": "电力公司2026年第二批社会招聘公告",
+      "url": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
+      "publishedAt": "2026-07-16T04:40:48.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、工商、人力资源、市场营销、经济、金融、审计、法学"
+      ],
+      "suitableMajors": [
+        "管理",
+        "工商",
+        "人力资源",
+        "市场营销",
+        "经济",
+        "金融",
+        "审计",
+        "法学"
+      ],
+      "jobTypes": [
+        "社招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2026届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "beae0441c3425304",
+      "account": "国企求职网",
+      "title": "2027届校招爆了！",
+      "url": "https://mp.weixin.qq.com/s/szoEq26iLGo2syYavIKGLg",
+      "publishedAt": "2026-07-16T04:40:48.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：金融、教育"
+      ],
+      "suitableMajors": [
+        "金融",
+        "教育"
+      ],
+      "jobTypes": [
+        "校招",
+        "秋招",
+        "提前批",
+        "实习",
+        "春招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "e567beabc0f89b76",
+      "account": "国企求职网",
+      "title": "招商局集团总部社会招聘公告！",
+      "url": "https://mp.weixin.qq.com/s/M34Nc0MBOLKvKUeaz6n4ig",
+      "publishedAt": "2026-07-16T04:40:48.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、工商、经济、金融、会计、财务、审计、历史"
+      ],
+      "suitableMajors": [
+        "管理",
+        "工商",
+        "经济",
+        "金融",
+        "会计",
+        "财务",
+        "审计",
+        "历史"
+      ],
+      "jobTypes": [
+        "社招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2026届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "ec3599493589a2ed",
+      "account": "国企求职网",
+      "title": "中国航天科技集团五院502所2027届校园招聘！",
+      "url": "https://mp.weixin.qq.com/s/ylQml7_72r1nguVnHcPc0g",
+      "publishedAt": "2026-07-16T04:40:48.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：历史"
+      ],
+      "suitableMajors": [
+        "历史"
+      ],
+      "jobTypes": [
+        "校招",
+        "秋招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "2bbe21c39570e774",
+      "account": "国企求职网",
+      "title": "中国五矿2027届实习生招聘公告!",
+      "url": "https://mp.weixin.qq.com/s/piNup_wsQ4dfLsvFc2UZjw",
+      "publishedAt": "2026-07-16T04:40:48.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、行政、人力资源、金融、会计、财务、审计、法律"
+      ],
+      "suitableMajors": [
+        "管理",
+        "行政",
+        "人力资源",
+        "金融",
+        "会计",
+        "财务",
+        "审计",
+        "法律"
+      ],
+      "jobTypes": [
+        "实习",
+        "校招",
+        "秋招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "71efbacbdac90347",
+      "account": "国企求职网",
+      "title": "中国电科网通院2027年度校园招聘公告！",
+      "url": "https://mp.weixin.qq.com/s/sGWLX9ffKieTkHjw9QnAHA",
+      "publishedAt": "2026-07-16T04:40:48.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、金融、财务、中文"
+      ],
+      "suitableMajors": [
+        "管理",
+        "金融",
+        "财务",
+        "中文"
+      ],
+      "jobTypes": [
+        "校招",
+        "秋招",
+        "提前批",
+        "实习"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "2c8bde968717bbaf",
+      "account": "国企求职网",
+      "title": "北方矿业2027届实习生计划正式启动！",
+      "url": "https://mp.weixin.qq.com/s/Imv-vis60Qhr8akksvDYDA",
+      "publishedAt": "2026-07-16T04:40:48.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、人力资源"
+      ],
+      "suitableMajors": [
+        "管理",
+        "人力资源"
+      ],
+      "jobTypes": [
+        "实习",
+        "校招",
+        "秋招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "54ad0eefb2fa2216",
+      "account": "国企求职网",
+      "title": "中国石化2027校招提前知：招聘流程、薪资待遇、考试真题！",
+      "url": "https://mp.weixin.qq.com/s/vH9SroeFr2_RmVkKOz5R3A",
+      "publishedAt": "2026-07-16T04:40:48.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：金融、会计、国际贸易、教育"
+      ],
+      "suitableMajors": [
+        "金融",
+        "会计",
+        "国际贸易",
+        "教育"
+      ],
+      "jobTypes": [
+        "校招",
+        "实习",
+        "社招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "0cb4cba6f268c62e",
+      "account": "央企求职网",
+      "title": "2026年国企海员招聘公告",
+      "url": "https://mp.weixin.qq.com/s/JVU_WMf0XbiCEjNzTB7rzg",
+      "publishedAt": "2026-07-16T04:02:00.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 4,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、英语、教育"
+      ],
+      "suitableMajors": [
+        "管理",
+        "英语",
+        "教育"
+      ],
+      "jobTypes": [
+        "实习"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "b21ab666d293cee6",
+      "account": "国企求职网",
+      "title": "2027届国企央企秋招爆了！",
+      "url": "https://mp.weixin.qq.com/s/kA_GOJ-qDFL8zzfr50cx_g",
+      "publishedAt": "2026-07-16T03:21:09.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、工商、行政、人力资源、经济、中文"
+      ],
+      "suitableMajors": [
+        "管理",
+        "工商",
+        "行政",
+        "人力资源",
+        "经济",
+        "中文"
+      ],
+      "jobTypes": [
+        "秋招",
+        "校招",
+        "社招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "19b5704682aabff8",
+      "account": "央企求职网",
+      "title": "月薪4100-4300美元，2026面向社会定向招录海员137人公告发布，退役军人优先",
+      "url": "https://mp.weixin.qq.com/s/At0seRD1MEJv0IgDZPGADw",
+      "publishedAt": "2026-07-16T02:00:00.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 4,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、英语、教育"
+      ],
+      "suitableMajors": [
+        "管理",
+        "英语",
+        "教育"
+      ],
+      "jobTypes": [
+        "实习"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "未明确",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "079f2fab16af7a5e",
+      "account": "央企求职网",
+      "title": "中国邮政2026年夏季最新招聘公告",
+      "url": "https://mp.weixin.qq.com/s/Zn1hAb5TgGcCX26o0w8UaA",
+      "publishedAt": "2026-07-16T02:00:00.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、人力资源、经济、金融、教育、历史"
+      ],
+      "suitableMajors": [
+        "管理",
+        "人力资源",
+        "经济",
+        "金融",
+        "教育",
+        "历史"
+      ],
+      "jobTypes": [
+        "校招",
+        "秋招",
+        "提前批",
+        "实习",
+        "春招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "12849ee2b23f6424",
+      "account": "央企求职网",
+      "title": "中粮集团2026年度最新招聘公告",
+      "url": "https://mp.weixin.qq.com/s/_CR_Mcyl3PytIyJRHNoSQg",
+      "publishedAt": "2026-07-16T02:00:00.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、工商、经济、金融、会计、财务、英语、教育"
+      ],
+      "suitableMajors": [
+        "管理",
+        "工商",
+        "经济",
+        "金融",
+        "会计",
+        "财务",
+        "英语",
+        "教育"
+      ],
+      "jobTypes": [
+        "校招",
+        "秋招",
+        "提前批",
+        "实习",
+        "春招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "fe5fa0a3ccb82ece",
+      "account": "央企求职网",
+      "title": "中国海油2027届校招计划及薪酬待遇",
+      "url": "https://mp.weixin.qq.com/s/ZlZ-rnWQeyKqsl32e0goTw",
+      "publishedAt": "2026-07-16T02:00:00.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 5,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：金融、财务、外语、英语、教育"
+      ],
+      "suitableMajors": [
+        "金融",
+        "财务",
+        "外语",
+        "英语",
+        "教育"
+      ],
+      "jobTypes": [
+        "校招",
+        "秋招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "557bf152eea15bbb",
+      "account": "央企求职网",
+      "title": "国家电投2026年度最新招聘公告",
+      "url": "https://mp.weixin.qq.com/s/RuWpNkp-Axv7_aUkgp9asA",
+      "publishedAt": "2026-07-16T02:00:00.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：金融、法律、教育、政治"
+      ],
+      "suitableMajors": [
+        "金融",
+        "法律",
+        "教育",
+        "政治"
+      ],
+      "jobTypes": [
+        "校招",
+        "秋招",
+        "提前批",
+        "实习",
+        "春招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "66b4dae0cab139fe",
+      "account": "央企求职网",
+      "title": "中汽中心2027届提前批校园招聘",
+      "url": "https://mp.weixin.qq.com/s/u3zXyuiGbTIfvnSs5CHjxA",
+      "publishedAt": "2026-07-16T02:00:00.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 8,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：人力资源、金融、教育"
+      ],
+      "suitableMajors": [
+        "人力资源",
+        "金融",
+        "教育"
+      ],
+      "jobTypes": [
+        "提前批",
+        "校招",
+        "秋招",
+        "实习",
+        "春招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    },
+    {
+      "id": "09bb5b073f806277",
+      "account": "央企求职网",
+      "title": "2027届秋季校园招聘提前批开启！",
+      "url": "https://mp.weixin.qq.com/s/MWEIYQS4MDgEJmns5xmUPA",
+      "publishedAt": "2026-07-16T02:00:00.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 7,
+      "isRelevant": true,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "reasons": [
+        "命中专业关键词：管理、人力资源、金融、教育"
+      ],
+      "suitableMajors": [
+        "管理",
+        "人力资源",
+        "金融",
+        "教育"
+      ],
+      "jobTypes": [
+        "提前批",
+        "校招",
+        "秋招",
+        "实习",
+        "春招"
+      ],
+      "locations": [],
+      "deadline": null,
+      "graduateScope": "2027届",
+      "confidence": 0.58,
+      "source": "heuristic"
+    }
+  ],
+  "errors": [
+    "国企求职网 / 2027届国企秋招群，扫码加入：文章正文为空，可能遇到微信验证页或文章已删除"
+  ]
+}

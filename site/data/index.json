@@ -1,5 +1,12 @@
 {
-  "generatedAt": null,
-  "days": []
+  "generatedAt": "2026-07-17T04:01:19.410Z",
+  "days": [
+    {
+      "date": "2026-07-17",
+      "generatedAt": "2026-07-17T04:01:19.410Z",
+      "relevantCount": 41,
+      "articlesScanned": 576,
+      "accountsSucceeded": 10
+    }
+  ]
 }
-
