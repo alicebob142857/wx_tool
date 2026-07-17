@@ -1,42 +1,766 @@
 {
   "date": "2026-07-17",
-  "generatedAt": "2026-07-17T04:01:19.410Z",
+  "generatedAt": "2026-07-17T05:58:29.685Z",
   "stats": {
     "accountsConfigured": 10,
     "accountsSucceeded": 10,
-    "articlesScanned": 576,
-    "newArticles": 50,
-    "candidateArticles": 44,
-    "relevantArticles": 41,
+    "articlesScanned": 577,
+    "newArticles": 60,
+    "candidateArticles": 54,
+    "relevantArticles": 50,
+    "positionsExtracted": 42,
     "failedArticles": 1
   },
   "items": [
+    {
+      "id": "3c29c098a5c7b254",
+      "account": "人大就业创业",
+      "title": "廉洁从业，人大毕业生立下庄严承诺",
+      "url": "https://mp.weixin.qq.com/s/1KDjAYz-slKucO77wChUDw",
+      "publishedAt": "2026-07-17T05:03:17.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "廉洁从业，人大毕业生立下庄严承诺",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [],
+          "education": {
+            "summary": "master",
+            "minimum": null,
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、经济、金融、法学、法律、新闻、教育、历史",
+            "accepted": [
+              "管理",
+              "经济",
+              "金融",
+              "法学",
+              "法律",
+              "新闻",
+              "教育",
+              "历史"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 75,
+            "rankingKey": 1540257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求以硕士为主，符合优先级",
+              "命中专业关键词：管理、经济、金融、法学、法律、新闻、教育、历史"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "ff16a0f2068dbcec"
+        }
+      ],
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
+    },
+    {
+      "id": "7ee4b4c21f185df1",
+      "account": "央企求职网",
+      "title": "中国航天2027届校招提前批启动",
+      "url": "https://mp.weixin.qq.com/s/hf034TLdHdBz1z0v2Pr9LQ",
+      "publishedAt": "2026-07-17T04:29:55.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "中国航天2027届校招提前批启动",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "提前批",
+            "秋招",
+            "实习",
+            "春招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、教育",
+            "accepted": [
+              "金融",
+              "教育"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：金融、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "9984062445f860f9"
+        }
+      ],
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-V64Hru/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-V64Hru/1.png stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-V64Hru/2.png stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-V64Hru/5.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-V64Hru/4.png stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-V64Hru/3.png stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 6 张图片"
+      ]
+    },
+    {
+      "id": "79e8493e251b166c",
+      "account": "央企求职网",
+      "title": "招商局集团2026年最新招聘公告！",
+      "url": "https://mp.weixin.qq.com/s/7RwcipsL3u_VVeBXyPDgWQ",
+      "publishedAt": "2026-07-17T04:29:55.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "招商局集团2026年最新招聘公告！",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "秋招",
+            "提前批",
+            "实习",
+            "春招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、教育",
+            "accepted": [
+              "金融",
+              "教育"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：金融、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "7bb1baa3e945d11d"
+        }
+      ],
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-P1i7Pb/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-P1i7Pb/2.png stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-P1i7Pb/1.png stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-P1i7Pb/5.png stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-P1i7Pb/3.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-P1i7Pb/4.png stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 6 张图片"
+      ]
+    },
+    {
+      "id": "0007401308d92a0b",
+      "account": "央企求职网",
+      "title": "中国兵器工业集团2027届校园招聘",
+      "url": "https://mp.weixin.qq.com/s/gSETc1ns2f1pGPKDMaMYdg",
+      "publishedAt": "2026-07-17T04:29:55.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "中国兵器工业集团2027届校园招聘",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "秋招",
+            "提前批",
+            "实习",
+            "春招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、教育",
+            "accepted": [
+              "金融",
+              "教育"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：金融、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "e96f7ac3227990b2"
+        }
+      ],
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-R8UPU1/1.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-R8UPU1/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-R8UPU1/2.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-R8UPU1/4.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-R8UPU1/3.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-R8UPU1/5.png stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 6 张图片"
+      ]
+    },
+    {
+      "id": "e5d9858c965b86aa",
+      "account": "央企求职网",
+      "title": "中核集团2026年度夏季校园招聘",
+      "url": "https://mp.weixin.qq.com/s/h8keZoxLPYjwb5pgLzbgbw",
+      "publishedAt": "2026-07-17T04:29:55.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "中核集团2026年度夏季校园招聘",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [],
+          "education": {
+            "summary": "bachelor_associate",
+            "minimum": null,
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、行政、人力资源、会计、财务、不限专业",
+            "accepted": [
+              "管理",
+              "行政",
+              "人力资源",
+              "会计",
+              "财务",
+              "不限专业"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1530257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "命中专业关键词：管理、行政、人力资源、会计、财务、不限专业"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "428ccfe6e87c894e"
+        }
+      ],
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-yjhj4M/0.jpg stdout -l chi_sim+eng --psm 6\n"
+      ]
+    },
+    {
+      "id": "d687f113e2cfd66b",
+      "account": "央企求职网",
+      "title": "能源集团2026年夏季招聘公告",
+      "url": "https://mp.weixin.qq.com/s/ZJmLLllURgZTTedvp6qsPw",
+      "publishedAt": "2026-07-17T04:29:55.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 1,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "能源集团2026年夏季招聘公告",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "秋招",
+            "提前批",
+            "实习",
+            "春招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、教育",
+            "accepted": [
+              "金融",
+              "教育"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：金融、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "23780a8c72ee4575"
+        }
+      ],
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-39HtNy/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-39HtNy/1.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-39HtNy/5.png stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-39HtNy/3.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-39HtNy/4.jpg stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 4 张图片"
+      ]
+    },
+    {
+      "id": "12e0c2f5a58d32ce",
+      "account": "央企求职网",
+      "title": "中兴微电子2027届校园招聘提前批",
+      "url": "https://mp.weixin.qq.com/s/KzeQv3c5lEhUoSJEkk8xCA",
+      "publishedAt": "2026-07-17T04:29:55.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "中兴微电子2027届校园招聘提前批",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "提前批",
+            "校招",
+            "秋招",
+            "实习",
+            "春招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、教育",
+            "accepted": [
+              "金融",
+              "教育"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：金融、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "85f92d4786fa2a41"
+        }
+      ],
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-HPl4S1/2.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-HPl4S1/1.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-HPl4S1/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-HPl4S1/3.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-HPl4S1/5.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-HPl4S1/4.jpg stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 6 张图片"
+      ]
+    },
+    {
+      "id": "57caaf1baf0552c2",
+      "account": "央企求职网",
+      "title": "2027届秋季校园招聘提前批开启！",
+      "url": "https://mp.weixin.qq.com/s/cAMKFR7nsKSvwml-mwdLuA",
+      "publishedAt": "2026-07-17T04:29:55.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "2027届秋季校园招聘提前批开启！",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "提前批",
+            "校招",
+            "秋招",
+            "实习",
+            "春招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、教育",
+            "accepted": [
+              "金融",
+              "教育"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：金融、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "1def773d77777bfa"
+        }
+      ],
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Xekrid/0.png stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Xekrid/2.png stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Xekrid/1.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Xekrid/3.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Xekrid/4.png stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Xekrid/5.png stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 1 张图片"
+      ]
+    },
+    {
+      "id": "1a991a05efa2424e",
+      "account": "国资小新",
+      "title": "【社招】中复神鹰碳纤维股份有限公司招聘公告",
+      "url": "https://mp.weixin.qq.com/s/snD7Q23tcv7HNfHvNpQA4A",
+      "publishedAt": "2026-07-17T04:00:00.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "【社招】中复神鹰碳纤维股份有限公司招聘公告",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "education": {
+            "summary": "master",
+            "minimum": null,
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、工商、行政、人力资源、经济、金融、会计、财务",
+            "accepted": [
+              "管理",
+              "工商",
+              "行政",
+              "人力资源",
+              "经济",
+              "金融",
+              "会计",
+              "财务"
+            ],
+            "fit": "administrative_management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 83,
+            "rankingKey": 1640257,
+            "level": "high",
+            "reasons": [
+              "专业高度匹配行政管理",
+              "学历要求以硕士为主，符合优先级",
+              "命中专业关键词：管理、工商、行政、人力资源、经济、金融、会计、财务"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "759b5e6b97a88c35"
+        }
+      ],
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
+    },
     {
       "id": "1b5fa3a9d522cc9f",
       "account": "国企求职网",
       "title": "工资8500-12500(含6险2金+双休)事业单位公开招录125名办公室人员！各乡镇街道均有名额！7月17日报名！大专可报！可入编！",
       "url": "https://mp.weixin.qq.com/s/cla1jU9pqyQRZw-Lm03Iaw",
       "publishedAt": "2026-07-17T03:06:16.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 1,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：审计、法律、教育、不限专业、专业不限"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "工资8500-12500(含6险2金+双休)事业单位公开招录125名办公室人员！各乡镇街道均有名额！7月17日报名！大专可报！可入编！",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [],
+          "education": {
+            "summary": "bachelor_associate",
+            "minimum": null,
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "审计、法律、教育、不限专业、专业不限",
+            "accepted": [
+              "审计",
+              "法律",
+              "教育",
+              "不限专业",
+              "专业不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1330257,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "命中专业关键词：审计、法律、教育、不限专业、专业不限"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "b4b2e61be8aed424"
+        }
       ],
-      "suitableMajors": [
-        "审计",
-        "法律",
-        "教育",
-        "不限专业",
-        "专业不限"
-      ],
-      "jobTypes": [],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "未明确",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-CgMuxQ/0.jpg stdout -l chi_sim+eng --psm 6\n"
+      ]
     },
     {
       "id": "37a44b86a67351e4",
@@ -45,28 +769,75 @@
       "url": "https://mp.weixin.qq.com/s/2U5wavnGueBoFIuUN8dGdw",
       "publishedAt": "2026-07-17T03:06:16.000Z",
       "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrImageCount": 5,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：金融、教育"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "2027届校招爆了！",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "秋招",
+            "提前批",
+            "实习",
+            "春招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、教育",
+            "accepted": [
+              "金融",
+              "教育"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：金融、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "77e31d19f80eb454"
+        }
       ],
-      "suitableMajors": [
-        "金融",
-        "教育"
-      ],
-      "jobTypes": [
-        "校招",
-        "秋招",
-        "提前批",
-        "实习",
-        "春招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-FwC820/1.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-FwC820/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-FwC820/5.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 9 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-FwC820/8.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 10 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-FwC820/9.gif stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 2 张图片"
+      ]
     },
     {
       "id": "a674d6e3786620b3",
@@ -139,29 +910,67 @@
       "title": "中国交建集团2026年社会招聘公告！",
       "url": "https://mp.weixin.qq.com/s/DOTQEwTl0iwtlDzn7WReTQ",
       "publishedAt": "2026-07-17T03:06:16.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、工商、市场营销、金融、法律、政治"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "中国交建集团2026年社会招聘公告！",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、工商、金融",
+            "accepted": [
+              "管理",
+              "工商",
+              "金融"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1520257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：管理、工商、金融"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "7bdf32820ebb4359"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "工商",
-        "市场营销",
-        "金融",
-        "法律",
-        "政治"
-      ],
-      "jobTypes": [
-        "社招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2026届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "b269310729119a40",
@@ -169,30 +978,70 @@
       "title": "国家电投集团分公司2026年招聘公告！",
       "url": "https://mp.weixin.qq.com/s/xUl-dTYl5Gt0pu1c51LXjg",
       "publishedAt": "2026-07-17T03:06:16.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、工商、行政、人力资源、金融、法律、政治"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "国家电投集团分公司2026年招聘公告！",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、工商、行政、金融、法律、政治",
+            "accepted": [
+              "管理",
+              "工商",
+              "行政",
+              "金融",
+              "法律",
+              "政治"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1520257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：管理、工商、行政、金融、法律、政治"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "b8962ef3ae1f3767"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "工商",
-        "行政",
-        "人力资源",
-        "金融",
-        "法律",
-        "政治"
-      ],
-      "jobTypes": [
-        "社招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2026届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "0649ad4dbedf0d8f",
@@ -200,29 +1049,73 @@
       "title": "国家邮政局2026年度公开招聘公告！",
       "url": "https://mp.weixin.qq.com/s/jvjDVn_Z2fTMj3zrLvE7GQ",
       "publishedAt": "2026-07-17T03:06:16.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、行政、公共管理、人力资源、经济、金融、会计、财务"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "国家邮政局2026年度公开招聘公告！",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [],
+          "education": {
+            "summary": "master",
+            "minimum": null,
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "人力资源、法律、教育、政治",
+            "accepted": [
+              "人力资源",
+              "法律",
+              "教育",
+              "政治"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 75,
+            "rankingKey": 1540257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求以硕士为主，符合优先级",
+              "命中专业关键词：人力资源、法律、教育、政治"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "890d1cd9d6dd97ba"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "行政",
-        "公共管理",
-        "人力资源",
-        "经济",
-        "金融",
-        "会计",
-        "财务"
-      ],
-      "jobTypes": [],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "未明确",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-gI4BEH/1.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-gI4BEH/0.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-gI4BEH/2.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-gI4BEH/3.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-gI4BEH/5.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-gI4BEH/4.webp stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 2 张图片"
+      ]
     },
     {
       "id": "7cddcd6dafea7298",
@@ -230,34 +1123,74 @@
       "title": "中国华电2027校招提前知：招聘详情、薪资待遇、考试真题！",
       "url": "https://mp.weixin.qq.com/s/aolQx61fYNbhsLjXIPkO1A",
       "publishedAt": "2026-07-17T03:06:16.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、工商、经济、金融、会计、教育"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "中国华电2027校招提前知：招聘详情、薪资待遇、考试真题！",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "秋招",
+            "提前批",
+            "春招",
+            "实习",
+            "社招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、经济、金融、会计、教育",
+            "accepted": [
+              "管理",
+              "经济",
+              "金融",
+              "会计",
+              "教育"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1520257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：管理、经济、金融、会计、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "e0560963c30a3d9b"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "工商",
-        "经济",
-        "金融",
-        "会计",
-        "教育"
-      ],
-      "jobTypes": [
-        "校招",
-        "秋招",
-        "提前批",
-        "春招",
-        "实习",
-        "社招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "01a3e4610d2df92f",
@@ -265,24 +1198,65 @@
       "title": "“国聘就业友好评价体系”亮相数智时代人才高质量发展学术交流会",
       "url": "https://mp.weixin.qq.com/s/4lPF5q5RwHM63oegPtDHqA",
       "publishedAt": "2026-07-17T02:18:14.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 7,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、人力资源、经济"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "“国聘就业友好评价体系”亮相数智时代人才高质量发展学术交流会",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、人力资源、经济",
+            "accepted": [
+              "管理",
+              "人力资源",
+              "经济"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1520257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：管理、人力资源、经济"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "1dbb8ce5847fd4a7"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "人力资源",
-        "经济"
-      ],
-      "jobTypes": [],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "未明确",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "3e2d67973bc3318e",
@@ -290,25 +1264,72 @@
       "title": "中国船舶集团2027届校园招聘公告！",
       "url": "https://mp.weixin.qq.com/s/fSjNjwM22euAcdXArfaKiQ",
       "publishedAt": "2026-07-17T01:27:33.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、行政"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "中国船舶集团2027届校园招聘公告！",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "春招"
+          ],
+          "education": {
+            "summary": "bachelor_associate",
+            "minimum": null,
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "行政",
+            "accepted": [
+              "行政"
+            ],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 40,
+            "rankingKey": 1230257,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "命中专业关键词：行政"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "a438ca1f0fe81101"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "行政"
-      ],
-      "jobTypes": [
-        "春招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-4SqlW0/0.png stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-4SqlW0/1.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-4SqlW0/2.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-4SqlW0/4.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-4SqlW0/3.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-4SqlW0/5.jpg stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 4 张图片"
+      ]
     },
     {
       "id": "71bc55dede53421f",
@@ -316,31 +1337,72 @@
       "title": "社招 | 中粮集团有限公司公开招聘公告",
       "url": "https://mp.weixin.qq.com/s/bjkK10IyxyQGPSQjLc3jOQ",
       "publishedAt": "2026-07-16T15:30:01.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 4,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、人力资源、金融、会计、财务、英语、教育、政治"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "社招 | 中粮集团有限公司公开招聘公告",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "education": {
+            "summary": "bachelor_associate",
+            "minimum": null,
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、人力资源、金融、会计、财务、英语、教育、政治",
+            "accepted": [
+              "管理",
+              "人力资源",
+              "金融",
+              "会计",
+              "财务",
+              "英语",
+              "教育",
+              "政治"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1530257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "命中专业关键词：管理、人力资源、金融、会计、财务、英语、教育、政治"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "73ec08ae2c2b621b"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "人力资源",
-        "金融",
-        "会计",
-        "财务",
-        "英语",
-        "教育",
-        "政治"
-      ],
-      "jobTypes": [
-        "社招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "未明确",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "7b62f029a740223b",
@@ -348,25 +1410,66 @@
       "title": "社招 | 华能核能技术研究院有限公司2026年社会招聘公告",
       "url": "https://mp.weixin.qq.com/s/VnliQmK9-UixBjtGd1v3yQ",
       "publishedAt": "2026-07-16T15:30:01.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 5,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、人力资源"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "社招 | 华能核能技术研究院有限公司2026年社会招聘公告",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、人力资源",
+            "accepted": [
+              "管理",
+              "人力资源"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1520257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：管理、人力资源"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "eee8af0fdfa327b5"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "人力资源"
-      ],
-      "jobTypes": [
-        "社招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "未明确",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "91210e2668685c6a",
@@ -374,25 +1477,67 @@
       "title": "社招 | 诺安基金最新社会招聘",
       "url": "https://mp.weixin.qq.com/s/RBDO0eEExE5w80vzhJBoyg",
       "publishedAt": "2026-07-16T15:30:01.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 1,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：金融、财务"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "社招 | 诺安基金最新社会招聘",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "education": {
+            "summary": "master",
+            "minimum": null,
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、财务",
+            "accepted": [
+              "金融",
+              "财务"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1440257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求以硕士为主，符合优先级",
+              "命中专业关键词：金融、财务"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "572211f20e261604"
+        }
       ],
-      "suitableMajors": [
-        "金融",
-        "财务"
-      ],
-      "jobTypes": [
-        "社招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "未明确",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Opouzo/0.webp stdout -l chi_sim+eng --psm 6\n"
+      ]
     },
     {
       "id": "f84f5df79c3988b2",
@@ -401,27 +1546,73 @@
       "url": "https://mp.weixin.qq.com/s/TPp3iKoSpWTeUMOp9ba-6Q",
       "publishedAt": "2026-07-16T15:30:01.000Z",
       "ocrUsed": true,
-      "ocrImageCount": 7,
-      "isRelevant": true,
+      "ocrImageCount": 1,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、金融"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "秋招 | 中国兵器工业集团2027届暑期招聘启动及薪资待遇（附秋招汇总表及经验交流群）",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "秋招",
+            "校招",
+            "实习",
+            "提前批"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融",
+            "accepted": [
+              "金融"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：金融"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "c528a7899c7089cb"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "金融"
-      ],
-      "jobTypes": [
-        "秋招",
-        "校招",
-        "实习",
-        "提前批"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-LTkqR2/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-LTkqR2/2.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-LTkqR2/5.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-LTkqR2/4.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-LTkqR2/3.webp stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 1 张图片"
+      ]
     },
     {
       "id": "7856bb08b0f4e932",
@@ -429,28 +1620,68 @@
       "title": "秋招 | 腾讯2027青云计划校招启动及薪资待遇（附秋招汇总表及经验交流群）",
       "url": "https://mp.weixin.qq.com/s/QgWXcE_u6DvdUTDuhlxDZw",
       "publishedAt": "2026-07-16T15:30:01.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 6,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、金融"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "秋招 | 腾讯2027青云计划校招启动及薪资待遇（附秋招汇总表及经验交流群）",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "秋招",
+            "校招",
+            "实习",
+            "提前批"
+          ],
+          "education": {
+            "summary": "master",
+            "minimum": null,
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融",
+            "accepted": [
+              "金融"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1440257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求以硕士为主，符合优先级",
+              "命中专业关键词：金融"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "ddfd6471f1bbff78"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "金融"
-      ],
-      "jobTypes": [
-        "秋招",
-        "校招",
-        "实习",
-        "提前批"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "52363ae8f4c8e280",
@@ -460,25 +1691,66 @@
       "publishedAt": "2026-07-16T15:30:01.000Z",
       "ocrUsed": false,
       "ocrImageCount": 0,
-      "isRelevant": true,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：经济、金融、财务"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "实习 | 国泰海通+峻海资本+国金证券+华金证券",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "实习",
+            "校招"
+          ],
+          "education": {
+            "summary": "master",
+            "minimum": null,
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "经济、金融、财务",
+            "accepted": [
+              "经济",
+              "金融",
+              "财务"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1440257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求以硕士为主，符合优先级",
+              "命中专业关键词：经济、金融、财务"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "2e06639fb6c1cef7"
+        }
       ],
-      "suitableMajors": [
-        "经济",
-        "金融",
-        "财务"
-      ],
-      "jobTypes": [
-        "实习",
-        "校招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "未明确",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "5c4da2cf0d9ded18",
@@ -486,25 +1758,66 @@
       "title": "信息传输、软件和信息技术服务行业招聘信息汇总",
       "url": "https://mp.weixin.qq.com/s/BIgFbpWM42SjtlefoRQi-g",
       "publishedAt": "2026-07-16T13:19:48.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 2,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：金融"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "信息传输、软件和信息技术服务行业招聘信息汇总",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "春招",
+            "秋招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融",
+            "accepted": [
+              "金融"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：金融"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "d106ad29baa79f5c"
+        }
       ],
-      "suitableMajors": [
-        "金融"
-      ],
-      "jobTypes": [
-        "春招",
-        "秋招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "未明确",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "085b158c8a9390e8",
@@ -541,27 +1854,73 @@
       "url": "https://mp.weixin.qq.com/s/ritNEo7PrVg5xGucqLs9ig",
       "publishedAt": "2026-07-16T11:47:43.000Z",
       "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrImageCount": 3,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、行政、人力资源、财务、审计"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "央企名企广东省岗位推荐 7月（第一期）",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "education": {
+            "summary": "master",
+            "minimum": null,
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、行政、人力资源、财务、审计",
+            "accepted": [
+              "管理",
+              "行政",
+              "人力资源",
+              "财务",
+              "审计"
+            ],
+            "fit": "administrative_management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 83,
+            "rankingKey": 1640257,
+            "level": "high",
+            "reasons": [
+              "专业高度匹配行政管理",
+              "学历要求以硕士为主，符合优先级",
+              "命中专业关键词：管理、行政、人力资源、财务、审计"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "b55d4b8ced27938a"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "行政",
-        "人力资源",
-        "财务",
-        "审计"
-      ],
-      "jobTypes": [
-        "实习"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-oOeBXS/0.png stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-oOeBXS/2.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-oOeBXS/4.png stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-oOeBXS/5.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 7 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-oOeBXS/6.jpg stdout -l chi_sim+eng --psm 6\n"
+      ]
     },
     {
       "id": "ccd17cac47ce3e77",
@@ -570,31 +1929,77 @@
       "url": "https://mp.weixin.qq.com/s/uG4NycPSYOHBCiJMphUzkA",
       "publishedAt": "2026-07-16T11:47:43.000Z",
       "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrImageCount": 3,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、行政、人力资源、市场营销、经济、会计、财务、审计"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "社招 | 地方国企招聘信息汇总 7月（第二期）",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "社招",
+            "实习"
+          ],
+          "education": {
+            "summary": "master",
+            "minimum": null,
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、行政、人力资源、市场营销、经济、会计、财务、审计",
+            "accepted": [
+              "管理",
+              "行政",
+              "人力资源",
+              "市场营销",
+              "经济",
+              "会计",
+              "财务",
+              "审计"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 75,
+            "rankingKey": 1540257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求以硕士为主，符合优先级",
+              "命中专业关键词：管理、行政、人力资源、市场营销、经济、会计、财务、审计"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "22d91e7751c01f8d"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "行政",
-        "人力资源",
-        "市场营销",
-        "经济",
-        "会计",
-        "财务",
-        "审计"
-      ],
-      "jobTypes": [
-        "社招",
-        "实习"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "未明确",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-9Cj6sA/0.png stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-9Cj6sA/2.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-9Cj6sA/4.png stdout -l chi_sim+eng --psm 6\n",
+        "第 7 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-9Cj6sA/6.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-9Cj6sA/5.jpg stdout -l chi_sim+eng --psm 6\n"
+      ]
     },
     {
       "id": "56d9e2eb40d89c23",
@@ -603,30 +2008,76 @@
       "url": "https://mp.weixin.qq.com/s/GJJqbV8IyCV8yfdXsSIBbw",
       "publishedAt": "2026-07-16T11:47:43.000Z",
       "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrImageCount": 3,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、行政、人力资源、会计、财务、英语、教育"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "外资合资企业招聘信息推荐 7月（第三期）",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "实习",
+            "校招"
+          ],
+          "education": {
+            "summary": "master",
+            "minimum": null,
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、行政、人力资源、会计、财务、英语、教育",
+            "accepted": [
+              "管理",
+              "行政",
+              "人力资源",
+              "会计",
+              "财务",
+              "英语",
+              "教育"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 75,
+            "rankingKey": 1540257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求以硕士为主，符合优先级",
+              "命中专业关键词：管理、行政、人力资源、会计、财务、英语、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "f2e5784db5a206f9"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "行政",
-        "人力资源",
-        "会计",
-        "财务",
-        "英语",
-        "教育"
-      ],
-      "jobTypes": [
-        "实习",
-        "校招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "未明确",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-YcwOgS/2.png stdout -l chi_sim+eng --psm 6\n",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-YcwOgS/0.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-YcwOgS/4.png stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-YcwOgS/5.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 7 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-YcwOgS/6.jpg stdout -l chi_sim+eng --psm 6\n"
+      ]
     },
     {
       "id": "b0f6552dd46c2453",
@@ -634,25 +2085,66 @@
       "title": "这些领域急需人才！教育部新增27个职教专业，2027年正式招生",
       "url": "https://mp.weixin.qq.com/s/Acr9qxANsnykQ5eCfEv5kg",
       "publishedAt": "2026-07-16T11:47:43.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 4,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、经济、新闻、教育"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "这些领域急需人才！教育部新增27个职教专业，2027年正式招生",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [],
+          "education": {
+            "summary": "bachelor_associate",
+            "minimum": null,
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、经济、新闻、教育",
+            "accepted": [
+              "管理",
+              "经济",
+              "新闻",
+              "教育"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1530257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "命中专业关键词：管理、经济、新闻、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "e67b4f684d8272f7"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "经济",
-        "新闻",
-        "教育"
-      ],
-      "jobTypes": [],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "未明确",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "3bb36ac5b7d2d48e",
@@ -660,25 +2152,72 @@
       "title": "开放日｜中国船舶集团有限公司系统工程研究院&中船智海创新研究院2027届校招企业开放日邀请函",
       "url": "https://mp.weixin.qq.com/s/O4yusTf35G4z3ZR6lU2n5A",
       "publishedAt": "2026-07-16T09:02:02.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、历史"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "开放日｜中国船舶集团有限公司系统工程研究院&中船智海创新研究院2027届校招企业开放日邀请函",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "历史",
+            "accepted": [
+              "历史"
+            ],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 34,
+            "rankingKey": 1220257,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：历史"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "a5e671bd297a5af3"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "历史"
-      ],
-      "jobTypes": [
-        "校招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eXbC76/2.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eXbC76/1.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eXbC76/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eXbC76/5.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eXbC76/4.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eXbC76/3.jpg stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 3 张图片"
+      ]
     },
     {
       "id": "f4a3a6addc6ef20f",
@@ -712,30 +2251,77 @@
       "url": "https://mp.weixin.qq.com/s/Ka2vl-vH6Q5SqU8m3a_WGg",
       "publishedAt": "2026-07-16T04:40:48.000Z",
       "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrImageCount": 6,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、工商、人力资源、市场营销、经济、金融、审计、法学"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "电力公司2026年第二批社会招聘公告",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "education": {
+            "summary": "bachelor_associate",
+            "minimum": null,
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、工商、市场营销、经济、金融、审计、法学、不限专业",
+            "accepted": [
+              "管理",
+              "工商",
+              "市场营销",
+              "经济",
+              "金融",
+              "审计",
+              "法学",
+              "不限专业"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1530257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "命中专业关键词：管理、工商、市场营销、经济、金融、审计、法学、不限专业"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "e31be9e47c7bdbfb"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "工商",
-        "人力资源",
-        "市场营销",
-        "经济",
-        "金融",
-        "审计",
-        "法学"
-      ],
-      "jobTypes": [
-        "社招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2026届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-BchPmD/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-BchPmD/2.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-BchPmD/3.webp stdout -l chi_sim+eng --psm 6\n",
+        "第 11 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-BchPmD/10.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 12 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-BchPmD/11.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 8 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-BchPmD/7.gif stdout -l chi_sim+eng --psm 6\n"
+      ]
     },
     {
       "id": "beae0441c3425304",
@@ -744,28 +2330,75 @@
       "url": "https://mp.weixin.qq.com/s/szoEq26iLGo2syYavIKGLg",
       "publishedAt": "2026-07-16T04:40:48.000Z",
       "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrImageCount": 5,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：金融、教育"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "2027届校招爆了！",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "秋招",
+            "提前批",
+            "实习",
+            "春招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、教育",
+            "accepted": [
+              "金融",
+              "教育"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：金融、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "f07ef6e737cc1d37"
+        }
       ],
-      "suitableMajors": [
-        "金融",
-        "教育"
-      ],
-      "jobTypes": [
-        "校招",
-        "秋招",
-        "提前批",
-        "实习",
-        "春招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-SX37uh/1.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-SX37uh/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 10 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-SX37uh/9.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-SX37uh/5.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 9 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-SX37uh/8.gif stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 2 张图片"
+      ]
     },
     {
       "id": "e567beabc0f89b76",
@@ -773,31 +2406,67 @@
       "title": "招商局集团总部社会招聘公告！",
       "url": "https://mp.weixin.qq.com/s/M34Nc0MBOLKvKUeaz6n4ig",
       "publishedAt": "2026-07-16T04:40:48.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、工商、经济、金融、会计、财务、审计、历史"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "招商局集团总部社会招聘公告！",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、工商、金融",
+            "accepted": [
+              "管理",
+              "工商",
+              "金融"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1520257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：管理、工商、金融"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "d8bd516933d00ff6"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "工商",
-        "经济",
-        "金融",
-        "会计",
-        "财务",
-        "审计",
-        "历史"
-      ],
-      "jobTypes": [
-        "社招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2026届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "ec3599493589a2ed",
@@ -924,29 +2593,70 @@
       "title": "中国石化2027校招提前知：招聘流程、薪资待遇、考试真题！",
       "url": "https://mp.weixin.qq.com/s/vH9SroeFr2_RmVkKOz5R3A",
       "publishedAt": "2026-07-16T04:40:48.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：金融、会计、国际贸易、教育"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "中国石化2027校招提前知：招聘流程、薪资待遇、考试真题！",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "实习",
+            "社招"
+          ],
+          "education": {
+            "summary": "master",
+            "minimum": null,
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、会计、国际贸易、教育",
+            "accepted": [
+              "金融",
+              "会计",
+              "国际贸易",
+              "教育"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1440257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求以硕士为主，符合优先级",
+              "命中专业关键词：金融、会计、国际贸易、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "ebcd4e957c449bf4"
+        }
       ],
-      "suitableMajors": [
-        "金融",
-        "会计",
-        "国际贸易",
-        "教育"
-      ],
-      "jobTypes": [
-        "校招",
-        "实习",
-        "社招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "未明确",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "0cb4cba6f268c62e",
@@ -954,26 +2664,64 @@
       "title": "2026年国企海员招聘公告",
       "url": "https://mp.weixin.qq.com/s/JVU_WMf0XbiCEjNzTB7rzg",
       "publishedAt": "2026-07-16T04:02:00.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 4,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、英语、教育"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "2026年国企海员招聘公告",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [],
+          "education": {
+            "summary": "bachelor_associate",
+            "minimum": null,
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、教育",
+            "accepted": [
+              "管理",
+              "教育"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1530257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "命中专业关键词：管理、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "da7811d87fe5b8c7"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "英语",
-        "教育"
-      ],
-      "jobTypes": [
-        "实习"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "未明确",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "b21ab666d293cee6",
@@ -981,31 +2729,68 @@
       "title": "2027届国企央企秋招爆了！",
       "url": "https://mp.weixin.qq.com/s/kA_GOJ-qDFL8zzfr50cx_g",
       "publishedAt": "2026-07-16T03:21:09.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、工商、行政、人力资源、经济、中文"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "2027届国企央企秋招爆了！",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "秋招",
+            "校招",
+            "社招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "行政、经济",
+            "accepted": [
+              "行政",
+              "经济"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：行政、经济"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "5546bbc9abe8b826"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "工商",
-        "行政",
-        "人力资源",
-        "经济",
-        "中文"
-      ],
-      "jobTypes": [
-        "秋招",
-        "校招",
-        "社招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "19b5704682aabff8",
@@ -1013,26 +2798,64 @@
       "title": "月薪4100-4300美元，2026面向社会定向招录海员137人公告发布，退役军人优先",
       "url": "https://mp.weixin.qq.com/s/At0seRD1MEJv0IgDZPGADw",
       "publishedAt": "2026-07-16T02:00:00.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 4,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、英语、教育"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "月薪4100-4300美元，2026面向社会定向招录海员137人公告发布，退役军人优先",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [],
+          "education": {
+            "summary": "bachelor_associate",
+            "minimum": null,
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、教育",
+            "accepted": [
+              "管理",
+              "教育"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1530257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "命中专业关键词：管理、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "336959e667c26999"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "英语",
-        "教育"
-      ],
-      "jobTypes": [
-        "实习"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "未明确",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "079f2fab16af7a5e",
@@ -1040,33 +2863,77 @@
       "title": "中国邮政2026年夏季最新招聘公告",
       "url": "https://mp.weixin.qq.com/s/Zn1hAb5TgGcCX26o0w8UaA",
       "publishedAt": "2026-07-16T02:00:00.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、人力资源、经济、金融、教育、历史"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "中国邮政2026年夏季最新招聘公告",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "秋招",
+            "提前批",
+            "实习",
+            "春招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、教育",
+            "accepted": [
+              "金融",
+              "教育"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：金融、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "4991744fa02587c4"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "人力资源",
-        "经济",
-        "金融",
-        "教育",
-        "历史"
-      ],
-      "jobTypes": [
-        "校招",
-        "秋招",
-        "提前批",
-        "实习",
-        "春招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-cWXlJz/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-cWXlJz/2.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-cWXlJz/1.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-cWXlJz/3.png stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-cWXlJz/5.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-cWXlJz/4.jpg stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 4 张图片"
+      ]
     },
     {
       "id": "12849ee2b23f6424",
@@ -1074,35 +2941,76 @@
       "title": "中粮集团2026年度最新招聘公告",
       "url": "https://mp.weixin.qq.com/s/_CR_Mcyl3PytIyJRHNoSQg",
       "publishedAt": "2026-07-16T02:00:00.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、工商、经济、金融、会计、财务、英语、教育"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "中粮集团2026年度最新招聘公告",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "秋招",
+            "提前批",
+            "实习",
+            "春招"
+          ],
+          "education": {
+            "summary": "master",
+            "minimum": null,
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、工商、经济、金融、会计、财务、英语、教育",
+            "accepted": [
+              "管理",
+              "工商",
+              "经济",
+              "金融",
+              "会计",
+              "财务",
+              "英语",
+              "教育"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 75,
+            "rankingKey": 1540257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求以硕士为主，符合优先级",
+              "命中专业关键词：管理、工商、经济、金融、会计、财务、英语、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "2dc8f12e2f3c6669"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "工商",
-        "经济",
-        "金融",
-        "会计",
-        "财务",
-        "英语",
-        "教育"
-      ],
-      "jobTypes": [
-        "校招",
-        "秋招",
-        "提前批",
-        "实习",
-        "春招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "fe5fa0a3ccb82ece",
@@ -1110,29 +3018,70 @@
       "title": "中国海油2027届校招计划及薪酬待遇",
       "url": "https://mp.weixin.qq.com/s/ZlZ-rnWQeyKqsl32e0goTw",
       "publishedAt": "2026-07-16T02:00:00.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 5,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：金融、财务、外语、英语、教育"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "中国海油2027届校招计划及薪酬待遇",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "秋招"
+          ],
+          "education": {
+            "summary": "master",
+            "minimum": null,
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、财务、外语、英语、教育",
+            "accepted": [
+              "金融",
+              "财务",
+              "外语",
+              "英语",
+              "教育"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1440257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求以硕士为主，符合优先级",
+              "命中专业关键词：金融、财务、外语、英语、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "15e55209f7a2a638"
+        }
       ],
-      "suitableMajors": [
-        "金融",
-        "财务",
-        "外语",
-        "英语",
-        "教育"
-      ],
-      "jobTypes": [
-        "校招",
-        "秋招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "557bf152eea15bbb",
@@ -1140,31 +3089,72 @@
       "title": "国家电投2026年度最新招聘公告",
       "url": "https://mp.weixin.qq.com/s/RuWpNkp-Axv7_aUkgp9asA",
       "publishedAt": "2026-07-16T02:00:00.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：金融、法律、教育、政治"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "国家电投2026年度最新招聘公告",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "秋招",
+            "提前批",
+            "实习",
+            "春招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、法律、教育、政治",
+            "accepted": [
+              "金融",
+              "法律",
+              "教育",
+              "政治"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：金融、法律、教育、政治"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "0b9c52a7ba33fe19"
+        }
       ],
-      "suitableMajors": [
-        "金融",
-        "法律",
-        "教育",
-        "政治"
-      ],
-      "jobTypes": [
-        "校招",
-        "秋招",
-        "提前批",
-        "实习",
-        "春招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
     },
     {
       "id": "66b4dae0cab139fe",
@@ -1172,30 +3162,77 @@
       "title": "中汽中心2027届提前批校园招聘",
       "url": "https://mp.weixin.qq.com/s/u3zXyuiGbTIfvnSs5CHjxA",
       "publishedAt": "2026-07-16T02:00:00.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 8,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：人力资源、金融、教育"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "中汽中心2027届提前批校园招聘",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "提前批",
+            "校招",
+            "秋招",
+            "实习",
+            "春招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、教育",
+            "accepted": [
+              "金融",
+              "教育"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：金融、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "231187d185585dd9"
+        }
       ],
-      "suitableMajors": [
-        "人力资源",
-        "金融",
-        "教育"
-      ],
-      "jobTypes": [
-        "提前批",
-        "校招",
-        "秋招",
-        "实习",
-        "春招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-awNxZC/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-awNxZC/1.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-awNxZC/2.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-awNxZC/3.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-awNxZC/4.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-awNxZC/5.gif stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 6 张图片"
+      ]
     },
     {
       "id": "09bb5b073f806277",
@@ -1203,31 +3240,77 @@
       "title": "2027届秋季校园招聘提前批开启！",
       "url": "https://mp.weixin.qq.com/s/MWEIYQS4MDgEJmns5xmUPA",
       "publishedAt": "2026-07-16T02:00:00.000Z",
-      "ocrUsed": true,
-      "ocrImageCount": 7,
-      "isRelevant": true,
+      "ocrUsed": false,
+      "ocrImageCount": 0,
       "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
-      "reasons": [
-        "命中专业关键词：管理、人力资源、金融、教育"
+      "positions": [
+        {
+          "organization": "详见原文",
+          "jobTitle": "2027届秋季校园招聘提前批开启！",
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "提前批",
+            "校招",
+            "秋招",
+            "实习",
+            "春招"
+          ],
+          "education": {
+            "summary": "未明确",
+            "minimum": null,
+            "preferred": null,
+            "tier": "unspecified",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、教育",
+            "accepted": [
+              "金融",
+              "教育"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1420257,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求未明确，需进一步核实",
+              "命中专业关键词：金融、教育"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "788b02c4169c2b49"
+        }
       ],
-      "suitableMajors": [
-        "管理",
-        "人力资源",
-        "金融",
-        "教育"
-      ],
-      "jobTypes": [
-        "提前批",
-        "校招",
-        "秋招",
-        "实习",
-        "春招"
-      ],
-      "locations": [],
-      "deadline": null,
-      "graduateScope": "2027届",
-      "confidence": 0.58,
-      "source": "heuristic"
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-GJI1jZ/0.png stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-GJI1jZ/2.png stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-GJI1jZ/1.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-GJI1jZ/3.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-GJI1jZ/4.png stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-GJI1jZ/5.png stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 1 张图片"
+      ]
     }
   ],
   "errors": [
