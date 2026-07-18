@@ -47,6 +47,13 @@ button, input, select { font: inherit; }
 .brand strong, .brand small { display: block; }
 .brand strong { font-size: 17px; letter-spacing: .04em; }
 .brand small { color: var(--muted); font-size: 10px; margin-top: 2px; letter-spacing: .08em; text-transform: uppercase; }
+.topbar-actions { display: flex; align-items: center; gap: 10px; }
+.manage-link {
+  display: inline-flex; align-items: center; min-height: 38px; padding: 0 12px; border-radius: 999px;
+  color: var(--green); border: 1px solid rgba(29,107,79,.18); background: rgba(255,255,255,.56);
+  text-decoration: none; font-size: 12px; font-weight: 800;
+}
+.manage-link:hover { background: rgba(29,107,79,.09); }
 
 .service-status {
   display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: rgba(255,255,255,.62);
@@ -116,6 +123,8 @@ button, input, select { font: inherit; }
   text-decoration: none; font-size: 12px; font-weight: 800;
 }
 .download-link:hover { background: rgba(29,107,79,.14); }
+.download-link.secondary { color: #59665f; background: rgba(255,255,255,.55); border-color: var(--line); }
+.download-link.secondary:hover { background: white; }
 .results { display: grid; gap: 16px; padding: 22px 0 76px; }
 .job-card {
   display: grid; grid-template-columns: 120px minmax(0, 1fr) 105px; gap: 24px; align-items: start; padding: 25px;
@@ -171,6 +180,57 @@ button, input, select { font: inherit; }
 .empty-state h3 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: 24px; font-weight: 500; }
 .empty-state p { color: var(--muted); max-width: 520px; margin: 12px auto; line-height: 1.7; }
 
+.account-management { scroll-margin-top: 24px; padding: 68px 0 76px; border-top: 1px solid var(--line); }
+.management-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 24px; }
+.management-heading h2 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: 36px; font-weight: 500; }
+.management-heading p:last-child { max-width: 680px; margin: 12px 0 0; color: var(--muted); line-height: 1.7; }
+.account-count-badge { flex: 0 0 auto; padding: 8px 12px; border-radius: 999px; background: var(--lime); color: #355319; font-size: 12px; font-weight: 800; }
+.managed-account-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-bottom: 24px; }
+.managed-account {
+  display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; padding: 15px 16px;
+  border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.68);
+}
+.managed-account-index { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; background: var(--green-dark); color: white; font-family: Georgia, serif; }
+.managed-account strong { display: block; font-size: 14px; }
+.managed-account code { display: block; margin-top: 5px; color: #53615a; font-size: 11px; overflow-wrap: anywhere; }
+.managed-account small { display: block; margin-top: 5px; color: var(--muted); line-height: 1.5; }
+.managed-account.is-draft { border-style: dashed; border-color: rgba(237,139,74,.55); background: #fff8ef; }
+.managed-account.is-draft .managed-account-index { background: var(--orange); }
+.draft-label { display: inline-flex; margin-left: 7px; color: #9a5d31; font-size: 10px; }
+.account-management-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 18px; align-items: start; }
+.account-add-card, .account-tutorial-card { padding: 24px; border: 1px solid var(--line); border-radius: 22px; background: var(--card); box-shadow: var(--shadow); }
+.account-add-card h3, .account-tutorial-card h3 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: 26px; font-weight: 500; }
+.management-note { color: var(--muted); font-size: 13px; line-height: 1.7; }
+.account-form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 19px; }
+.account-form label { display: block; }
+.account-form label > span { display: block; margin: 0 0 6px 3px; color: var(--muted); font-size: 11px; }
+.account-form input { width: 100%; height: 44px; padding: 0 12px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.82); outline: none; }
+.account-form input:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(29,107,79,.1); }
+.primary-button, .secondary-button {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 0 14px;
+  border-radius: 12px; border: 0; text-decoration: none; cursor: pointer; font-weight: 800; font-size: 12px;
+}
+.primary-button { color: white; background: var(--green); }
+.primary-button:hover { background: var(--green-dark); }
+.secondary-button { color: var(--green); background: rgba(29,107,79,.08); border: 1px solid rgba(29,107,79,.17); }
+.secondary-button:hover { background: rgba(29,107,79,.14); }
+.account-form .primary-button { grid-column: 1 / -1; margin-top: 3px; }
+.account-form-status { min-height: 20px; margin: 11px 0 0; color: var(--green); font-size: 12px; font-weight: 700; }
+.account-form-status.is-error { color: var(--red); }
+.account-draft-actions { margin-top: 17px; padding-top: 17px; border-top: 1px solid var(--line); }
+.account-draft-actions[hidden] { display: none; }
+.account-draft-actions > label { display: block; color: var(--muted); font-size: 11px; margin-bottom: 7px; }
+#account-config-preview { width: 100%; min-height: 210px; resize: vertical; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: #f7f7f2; color: #33423b; font: 11px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+.draft-buttons { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.account-tutorial { margin: 20px 0 0; padding: 0; list-style: none; counter-reset: tutorial; }
+.account-tutorial li { position: relative; padding: 0 0 17px 39px; color: #52605a; font-size: 13px; line-height: 1.72; counter-increment: tutorial; }
+.account-tutorial li::before { content: counter(tutorial); position: absolute; left: 0; top: 1px; display: grid; place-items: center; width: 26px; height: 26px; border-radius: 9px; background: var(--green-dark); color: white; font-size: 11px; font-weight: 800; }
+.account-tutorial code { padding: 2px 5px; border-radius: 5px; background: #edf1eb; color: var(--green-dark); font-size: 11px; }
+.account-tutorial a { color: var(--green); font-weight: 800; }
+.tutorial-warning { padding: 15px 16px; border-radius: 14px; background: #fff3e9; border: 1px solid rgba(237,139,74,.2); }
+.tutorial-warning strong { color: #8d562f; font-size: 12px; }
+.tutorial-warning p { margin: 7px 0 0; color: #705d50; font-size: 12px; line-height: 1.65; }
+
 footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding: 25px 0 38px; color: var(--muted); font-size: 11px; }
 
 @media (max-width: 840px) {
@@ -187,12 +247,14 @@ footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1
   .job-apply-link { margin-top: 0; }
   .confidence { margin: 0; }
   .verdicts, .detail-grid { grid-template-columns: 1fr; }
+  .account-management-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
   .page-shell { width: min(100% - 24px, 1160px); }
   .topbar { min-height: 74px; }
   .brand small { display: none; }
+  .manage-link { display: none; }
   .service-status { padding: 8px 10px; }
   .hero { padding-top: 42px; }
   .hero h1 { font-size: 43px; }
@@ -203,6 +265,10 @@ footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1
   .results-heading h2 { font-size: 30px; }
   .results-heading { align-items: flex-start; gap: 16px; }
   .results-actions { align-items: flex-end; flex-direction: column-reverse; }
+  .management-heading { align-items: flex-start; flex-direction: column; gap: 13px; }
+  .managed-account-list, .account-form { grid-template-columns: 1fr; }
+  .account-form .primary-button { grid-column: auto; }
+  .account-add-card, .account-tutorial-card { padding: 19px; }
   .auth-panel { padding: 23px; }
   .auth-panel ol { display: grid; gap: 10px; }
   footer { display: block; line-height: 1.6; }

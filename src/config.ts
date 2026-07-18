@@ -61,10 +61,16 @@ export async function loadAccounts(rootDir: string): Promise<Account[]> {
   if (!Array.isArray(accounts) || accounts.length === 0) {
     throw new Error("config/accounts.json 中没有公众号配置");
   }
+  const names = new Set<string>();
+  const fakeids = new Set<string>();
   for (const account of accounts) {
     if (!account.name || !account.fakeid) {
       throw new Error("公众号配置必须包含 name 和 fakeid");
     }
+    if (names.has(account.name)) throw new Error(`公众号名称重复：${account.name}`);
+    if (fakeids.has(account.fakeid)) throw new Error(`公众号 fakeid 重复：${account.fakeid}`);
+    names.add(account.name);
+    fakeids.add(account.fakeid);
   }
   return accounts;
 }

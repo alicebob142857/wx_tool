@@ -1,6 +1,6 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import type { DailyReport, JobPosition } from "./types.js";
+import type { Account, DailyReport, JobPosition } from "./types.js";
 
 interface StaticHistoryJob extends JobPosition {
   account: string;
@@ -31,6 +31,11 @@ interface StaticHistory {
     failedArticles: number;
   };
   jobs: StaticHistoryJob[];
+}
+
+interface PublicAccountConfig {
+  count: number;
+  accounts: Account[];
 }
 
 function csvCell(value: unknown): string {
@@ -84,9 +89,20 @@ async function readReports(dailyDir: string): Promise<DailyReport[]> {
   return reports;
 }
 
+async function readPublicAccounts(rootDir: string): Promise<PublicAccountConfig> {
+  try {
+    const accounts = JSON.parse(await readFile(path.join(rootDir, "config", "accounts.json"), "utf8")) as Account[];
+    return { count: Array.isArray(accounts) ? accounts.length : 0, accounts: Array.isArray(accounts) ? accounts : [] };
+  } catch (error: any) {
+    if (error?.code === "ENOENT") return { count: 0, accounts: [] };
+    throw error;
+  }
+}
+
 export async function buildStaticHistory(rootDir: string): Promise<StaticHistory> {
   const dataDir = path.join(rootDir, "site", "data");
   const reports = await readReports(path.join(dataDir, "daily"));
+  const publicAccounts = await readPublicAccounts(rootDir);
   const jobs: StaticHistoryJob[] = [];
   const accounts = new Set<string>();
   const articles = new Set<string>();
@@ -141,6 +157,7 @@ export async function buildStaticHistory(rootDir: string): Promise<StaticHistory
   await Promise.all([
     writeFile(path.join(dataDir, "job-history.json"), `${JSON.stringify(history, null, 2)}\n`, "utf8"),
     writeFile(path.join(dataDir, "jobs.csv"), historyCsv(jobs), "utf8"),
+    writeFile(path.join(dataDir, "accounts.json"), `${JSON.stringify(publicAccounts, null, 2)}\n`, "utf8"),
   ]);
   return history;
 }

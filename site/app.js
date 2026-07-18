@@ -1,4 +1,14 @@
-const state = { index: null, report: null, status: null, runtime: null, account: "", level: "", query: "" };
+const state = {
+  index: null,
+  report: null,
+  status: null,
+  runtime: null,
+  accountsConfig: { count: 0, accounts: [] },
+  accountDrafts: [],
+  account: "",
+  level: "",
+  query: "",
+};
 
 const $ = selector => document.querySelector(selector);
 const text = (selector, value) => { const node = $(selector); if (node) node.textContent = value; };
@@ -94,6 +104,100 @@ function detailBlock(title, summary, values = []) {
   if (summary) block.append(node("p", "detail-summary", summary));
   appendList(block, values);
   return block;
+}
+
+function fullAccountConfig() {
+  return [...(state.accountsConfig?.accounts || []), ...state.accountDrafts];
+}
+
+function accountConfigJson() {
+  return `${JSON.stringify(fullAccountConfig(), null, 2)}\n`;
+}
+
+function setAccountFormStatus(message, isError = false) {
+  const status = $("#account-form-status");
+  if (!status) return;
+  status.textContent = message;
+  status.classList.toggle("is-error", isError);
+}
+
+function renderManagedAccounts() {
+  const container = $("#managed-account-list");
+  if (!container) return;
+  container.replaceChildren();
+  const committed = state.accountsConfig?.accounts || [];
+  const accounts = fullAccountConfig();
+  accounts.forEach((account, index) => {
+    const draft = index >= committed.length;
+    const card = node("article", `managed-account${draft ? " is-draft" : ""}`);
+    card.append(node("span", "managed-account-index", index + 1));
+    const body = node("div", "managed-account-body");
+    const title = node("strong", "", account.name);
+    if (draft) title.append(node("span", "draft-label", "待提交"));
+    body.append(title, node("code", "", account.fakeid));
+    const metadata = [account.alias ? `微信号：${account.alias}` : "微信号未填写", account.note || ""].filter(Boolean).join(" · ");
+    body.append(node("small", "", metadata));
+    card.append(body);
+    container.append(card);
+  });
+  const committedCount = committed.length;
+  const draftCount = state.accountDrafts.length;
+  text("#managed-account-count", draftCount ? `${committedCount} 个已生效 · ${draftCount} 个草稿` : `${committedCount} 个已生效`);
+  text("#tracked-account-count", committedCount || 0);
+  const actions = $("#account-draft-actions");
+  const preview = $("#account-config-preview");
+  if (actions) actions.hidden = draftCount === 0;
+  if (preview) preview.value = accountConfigJson();
+}
+
+function addAccountDraft(event) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const formData = new FormData(form);
+  const name = String(formData.get("name") || "").trim();
+  const fakeid = String(formData.get("fakeid") || "").trim();
+  const alias = String(formData.get("alias") || "").trim();
+  const note = String(formData.get("note") || "").trim();
+  if (!name || !fakeid) return setAccountFormStatus("公众号名称和 fakeid 都必须填写。", true);
+  if (!/^[A-Za-z0-9+/]{8,}={0,2}$/.test(fakeid)) {
+    return setAccountFormStatus("fakeid 格式不正确：应为类似 MzA...== 的 Base64 风格字符串，不要填写 gh_ 开头的 user_name。", true);
+  }
+  const accounts = fullAccountConfig();
+  if (accounts.some(account => account.name === name)) return setAccountFormStatus(`公众号名称“${name}”已经存在。`, true);
+  if (accounts.some(account => account.fakeid === fakeid)) return setAccountFormStatus("这个 fakeid 已经存在于列表中。", true);
+  const account = { name, fakeid };
+  if (alias) account.alias = alias;
+  if (note) account.note = note;
+  state.accountDrafts.push(account);
+  form.reset();
+  renderManagedAccounts();
+  setAccountFormStatus(`已把“${name}”加入草稿。复制完整 JSON 并到 GitHub 提交后才会正式生效。`);
+}
+
+async function copyAccountConfig() {
+  const value = accountConfigJson();
+  try {
+    await navigator.clipboard.writeText(value);
+    setAccountFormStatus("完整 accounts.json 已复制。现在打开 GitHub 编辑页并全选替换。 ");
+  } catch {
+    const preview = $("#account-config-preview");
+    preview.focus();
+    preview.select();
+    document.execCommand("copy");
+    setAccountFormStatus("完整 accounts.json 已复制。现在打开 GitHub 编辑页并全选替换。 ");
+  }
+}
+
+function downloadAccountConfig() {
+  const url = URL.createObjectURL(new Blob([accountConfigJson()], { type: "application/json;charset=utf-8" }));
+  const link = node("a");
+  link.href = url;
+  link.download = "accounts.json";
+  document.body.append(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+  setAccountFormStatus("已下载 accounts.json。可在 GitHub 编辑页上传或粘贴其中内容。 ");
 }
 
 function flattenStaticReport(report) {
@@ -374,14 +478,15 @@ async function monitorRemoteAuth() {
 }
 
 async function init() {
-  [state.status, state.runtime, state.index] = await Promise.all([
+  [state.status, state.runtime, state.index, state.accountsConfig] = await Promise.all([
     getJson("data/status.json", { state: "never_run", auth: { status: "unknown" }, stats: null }),
     getJson("data/runtime.json", { authServiceUrl: "" }),
     getJson("data/index.json", { days: [] }),
+    getJson("data/accounts.json", { count: 0, accounts: [] }),
   ]);
+  renderManagedAccounts();
   text("#footer-meta", state.status?.lastRunAt ? `最后运行：${fmtDateTime(state.status.lastRunAt)}` : "数据由 GitHub Actions 自动生成");
-  const base = state.runtime?.authServiceUrl?.replace(/\/$/, "");
-  const download = $("#download-excel");
+  const download = $("#download-csv");
   if (download) download.href = "data/jobs.csv";
   if (state.status?.state === "ok") setServiceStatus("ok", "今日任务完成");
   else if (state.status?.state === "partial") setServiceStatus("warning", "部分任务失败");
@@ -396,5 +501,8 @@ $("#date-select").addEventListener("change", event => loadReport(event.target.va
 $("#account-select").addEventListener("change", event => { state.account = event.target.value; renderResults(); });
 $("#level-select").addEventListener("change", event => { state.level = event.target.value; renderResults(); });
 $("#search-input").addEventListener("input", event => { state.query = event.target.value.trim(); renderResults(); });
+$("#account-add-form").addEventListener("submit", addAccountDraft);
+$("#copy-account-config").addEventListener("click", copyAccountConfig);
+$("#download-account-config").addEventListener("click", downloadAccountConfig);
 
 init();

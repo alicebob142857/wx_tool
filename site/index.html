@@ -18,9 +18,12 @@
             <small>Humanities &amp; Management Jobs</small>
           </span>
         </a>
-        <div id="service-status" class="service-status is-loading">
-          <span class="status-dot"></span>
-          <span>正在读取状态</span>
+        <div class="topbar-actions">
+          <a class="manage-link" href="#account-management">公众号管理</a>
+          <div id="service-status" class="service-status is-loading">
+            <span class="status-dot"></span>
+            <span>正在读取状态</span>
+          </div>
         </div>
       </header>
 
@@ -30,7 +33,7 @@
             <p class="eyebrow">每日 10:00 自动更新</p>
             <h1>从公众号推送里，<br /><span>筛出真正适合你的岗位。</span></h1>
             <p class="hero-description">
-              监测 10 个高校就业与央国企招聘公众号，逐岗位提取学历、专业、报考条件和待遇，并优先推荐行政管理与文管方向。
+              监测 <span id="tracked-account-count">10</span> 个高校就业与央国企招聘公众号，逐岗位提取学历、专业、报考条件和待遇，并优先推荐行政管理与文管方向。
             </p>
           </div>
           <div class="run-card">
@@ -116,7 +119,7 @@
             <h2>岗位推荐清单</h2>
           </div>
           <div class="results-actions">
-            <a id="download-excel" class="download-link" href="#" download="wechat-job-history.csv">下载历史总表（Excel）</a>
+            <a id="download-csv" class="download-link secondary" href="data/jobs.csv" download="wechat-job-history.csv">下载 CSV</a>
             <span id="result-count">0 条结果</span>
           </div>
         </section>
@@ -126,6 +129,73 @@
           <div class="empty-icon">✓</div>
           <h3>当前筛选条件下没有结果</h3>
           <p>这不代表采集失败；可能只是今天没有发现明确适合文科或管理类毕业生的推送。</p>
+        </section>
+
+        <section id="account-management" class="account-management" aria-labelledby="account-management-title">
+          <div class="management-heading">
+            <div>
+              <p class="eyebrow">Account sources</p>
+              <h2 id="account-management-title">公众号管理</h2>
+              <p>这里展示定时任务当前读取的公众号。新增配置提交到 GitHub 后，下一次任务会自动开始监测。</p>
+            </div>
+            <span id="managed-account-count" class="account-count-badge">读取中</span>
+          </div>
+
+          <div id="managed-account-list" class="managed-account-list" aria-live="polite"></div>
+
+          <div class="account-management-grid">
+            <section class="account-add-card">
+              <p class="eyebrow">Add account</p>
+              <h3>生成新增配置</h3>
+              <p class="management-note">网页不会持有 GitHub 写权限。填写后可复制或下载完整配置，再到 GitHub 提交。</p>
+              <form id="account-add-form" class="account-form">
+                <label>
+                  <span>公众号名称 *</span>
+                  <input id="new-account-name" name="name" required maxlength="80" placeholder="例如：某大学就业" />
+                </label>
+                <label>
+                  <span>fakeid *</span>
+                  <input id="new-account-fakeid" name="fakeid" required maxlength="120" spellcheck="false" placeholder="例如：MzA...==" />
+                </label>
+                <label>
+                  <span>微信号 / alias（可选）</span>
+                  <input id="new-account-alias" name="alias" maxlength="80" spellcheck="false" placeholder="例如：university_career" />
+                </label>
+                <label>
+                  <span>备注（可选）</span>
+                  <input id="new-account-note" name="note" maxlength="160" placeholder="账号别名或来源说明" />
+                </label>
+                <button class="primary-button" type="submit">加入配置草稿</button>
+              </form>
+              <p id="account-form-status" class="account-form-status" role="status"></p>
+              <div id="account-draft-actions" class="account-draft-actions" hidden>
+                <label for="account-config-preview">更新后的完整 accounts.json</label>
+                <textarea id="account-config-preview" readonly spellcheck="false"></textarea>
+                <div class="draft-buttons">
+                  <button id="copy-account-config" class="secondary-button" type="button">复制 JSON</button>
+                  <button id="download-account-config" class="secondary-button" type="button">下载 accounts.json</button>
+                  <a class="primary-button" href="https://github.com/alicebob142857/wx_tool/edit/main/config/accounts.json" target="_blank" rel="noopener noreferrer">到 GitHub 提交 ↗</a>
+                </div>
+              </div>
+            </section>
+
+            <section class="account-tutorial-card">
+              <p class="eyebrow">Tutorial</p>
+              <h3>添加教程</h3>
+              <ol class="account-tutorial">
+                <li><strong>先取得 fakeid。</strong>登录微信公众平台，在图文编辑器的“超链接 / 选择其他公众号文章”中搜索目标公众号；打开浏览器开发者工具的 Network，找到名称含 <code>searchbiz</code> 的请求，在响应中搜索 <code>fakeid</code> 并复制。</li>
+                <li><strong>不要填 gh_ 开头的 user_name。</strong>本服务需要公众平台搜索接口返回的 Base64 风格 fakeid，通常类似 <code>MzA...==</code>。</li>
+                <li><strong>在左侧生成配置。</strong>公众号名称和 fakeid 必填，微信号与备注可以不填；重复名称或 fakeid 会被阻止。</li>
+                <li><strong>提交到 GitHub。</strong>点击“复制 JSON”后打开 GitHub 编辑页，全选替换 <code>config/accounts.json</code>，点击 <em>Commit changes</em> 提交。</li>
+                <li><strong>让配置生效。</strong>等待次日 10:00，或前往 Actions 手动运行 <a href="https://github.com/alicebob142857/wx_tool/actions/workflows/daily.yml" target="_blank" rel="noopener noreferrer">Daily WeChat job scan ↗</a>，将 <code>reprocess_hours</code> 保持为 0。</li>
+                <li><strong>检查结果。</strong>任务成功后，网页公众号数量会增加；若显示账号失败，优先检查 fakeid 是否复制完整、公众号是否可在公众平台搜索。</li>
+              </ol>
+              <div class="tutorial-warning">
+                <strong>为什么不能在网页直接保存？</strong>
+                <p>GitHub Pages 是公开静态网页。把仓库写入令牌放进网页会导致任何访客都能修改配置，因此必须在已登录 GitHub 的编辑页完成最后提交。</p>
+              </div>
+            </section>
+          </div>
         </section>
       </main>
 

@@ -51,8 +51,10 @@ test("writeDailyReport removes stale items only for successfully reprocessed art
     assert.deepEqual(merged.items.map(value => value.id), ["fetch-failed"]);
     assert.equal(merged.stats.relevantArticles, 1);
     const history = JSON.parse(await readFile(path.join(rootDir, "site/data/job-history.json"), "utf8"));
+    const accounts = JSON.parse(await readFile(path.join(rootDir, "site/data/accounts.json"), "utf8"));
     const csv = await readFile(path.join(rootDir, "site/data/jobs.csv"), "utf8");
     assert.equal(history.total, 0);
+    assert.equal(accounts.count, 0);
     assert.match(csv, /^\uFEFF"公众号","更新日期"/);
   } finally {
     await rm(rootDir, { recursive: true, force: true });
