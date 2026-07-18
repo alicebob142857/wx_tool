@@ -5,6 +5,7 @@ import type {
   EducationTier,
   MajorFit,
   PreviousGraduateEligibility,
+  UserProfile,
 } from "./types.js";
 import { rankPosition, sortPositions, type RawPosition } from "./recommendation.js";
 
@@ -66,6 +67,12 @@ function clampFive(value: unknown): number {
   const number = Number(value);
   if (!Number.isFinite(number)) return 0;
   return Math.max(0, Math.min(5, Math.round(number)));
+}
+
+function clampTen(value: unknown): number {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return 0;
+  return Math.max(0, Math.min(10, Math.round(number)));
 }
 
 function nullableString(value: unknown): string | null {
@@ -131,6 +138,13 @@ function parsePosition(raw: any, articleUrl: string, index: number): ReturnType<
       reasons: stringArray(raw?.recommendation_reasons),
       concerns: stringArray(raw?.non_recommendation_reasons),
     },
+    customRequirement: {
+      active: Boolean(raw?.custom_requirement?.active),
+      matched: typeof raw?.custom_requirement?.matched === "boolean" ? raw.custom_requirement.matched : null,
+      score: clampTen(raw?.custom_requirement?.score),
+      reasons: stringArray(raw?.custom_requirement?.reasons),
+      concerns: stringArray(raw?.custom_requirement?.concerns),
+    },
     accessibility: clampFive(raw?.accessibility),
     evidence: stringArray(raw?.evidence),
     confidence: clampConfidence(raw?.confidence),
@@ -190,6 +204,7 @@ export function heuristicAnalyzeArticle(title: string, text: string, articleUrl:
     applicationUrl: null,
     referralCode: null,
     recommendation: { reasons: classification.reasons, concerns: ["当前为规则降级结果，岗位细节需 DeepSeek 重新分析"] },
+    customRequirement: { active: false, matched: null, score: 0, reasons: [], concerns: [] },
     accessibility: 2,
     evidence: [],
     confidence: classification.confidence,
@@ -210,28 +225,41 @@ export async function analyzeArticle(
   articleUrl: string,
   articleText: string,
   ocrText: string,
+  profile?: UserProfile,
 ): Promise<ArticleAnalysis> {
   const combined = `${articleText}\n${ocrText}`;
   if (config.classifierMode === "heuristic" || !config.deepseekApiKey) {
     return heuristicAnalyzeArticle(title, combined, articleUrl);
   }
 
-  const input = `文章标题：${title}\n文章链接：${articleUrl}\n\n网页正文：\n${articleText.slice(0, 24_000)}\n\n图片 OCR：\n${ocrText.slice(0, 30_000)}`;
+  const userProfile = profile || {
+    school: "北京师范大学",
+    education: "硕士研究生",
+    major: "行政管理",
+    freshGraduate: true,
+    customRequirement: "",
+  };
+  const customRequirement = userProfile.customRequirement.trim();
+  const input = `求职者画像：${userProfile.school}，${userProfile.education}，${userProfile.major}专业，${userProfile.freshGraduate ? "具有应届毕业生身份" : "不限定应届身份"}。\n自定义重要要求：${customRequirement || "无"}\n\n文章标题：${title}\n文章链接：${articleUrl}\n\n网页正文：\n${articleText.slice(0, 24_000)}\n\n图片 OCR：\n${ocrText.slice(0, 30_000)}`;
   const system = `你是严谨的中国高校毕业生招聘岗位分析员。请从一篇公众号文章中提取每一个可以区分的招聘岗位；同一名称但要求不同的岗位要拆分，完全相同要求的岗位可合并为岗位组。不要把活动报道、求职课程或宣传内容当成岗位。
 
-用户推荐优先级必须严格遵循：
-1. 专业匹配最重要：行政管理最高，其次其他管理类，再其次其他文科社科，再其次不限专业；纯理工且无文管入口最低。
-2. 学历第二重要：明确面向硕士的岗位优先，其次本科/大专；硬性仅博士或博士起报的岗位最后。
-3. 再比较明确薪资、福利和报考门槛。薪资未披露时不要臆测。
+求职者是北京师范大学行政管理专业硕士，并具有应届毕业生身份。优质岗位的硬条件是：明确面向应届毕业生/校园招聘；学历接受本科或硕士且门槛不含大专/专科；不能只招博士；专业明确接受行政管理、公共管理类/管理学门类，或明确不限专业；社会招聘、实习见习不算优质岗位。
+
+推荐优先级必须严格遵循：
+1. 专业匹配最重要：明确行政管理最高，其次公共管理类或管理学门类，再其次不限专业。仅招人力资源管理、工商管理、会计等其他管理专业但未覆盖行政管理时，不得判断为适合。
+2. 学历第二重要：明确面向硕士优先，本科及以上其次；含大专/专科门槛、学历不明、硬性博士要求均明显降级。
+3. 应届/校招优先；社招、要求成熟工作经验、实习见习后置。
+4. 再比较薪资、福利、单位性质、地点、截止日期和报考门槛。薪资未披露时不要臆测。
+5. 如果用户提供了自定义重要要求，必须逐岗位判断是否满足；只有原文明确支持时 matched 才为 true，明确冲突为 false，证据不足为 null。该要求对排序有较高权重，但不能放宽上述专业、学历和应届硬条件。
 
 对每个岗位详细但简洁地提取：岗位、岗位方向、单位、企业性质、行业、地点、人数、招聘类型、适用届别、往届生能否投递、学历要求、专业要求、全部硬性报考条件、薪资、福利、截止时间、报名方式、网申地址和内推码。企业性质可使用央企、国企、事业单位、党政机关、高校、民企、外企、社会组织等原文可支持的类别。网申地址必须来自原文中的真实 URL，不要编造。每个岗位分别给出 2-4 条推荐理由和 1-4 条不推荐/风险理由。理由只能基于原文；信息缺失要写“未披露”或放入风险。
 
 如果文章包含大量岗位，同一单位、学历和专业要求相同的岗位必须合并成岗位组，并把具体方向放入 job_directions；positions 最多 30 项。所有数组字段只保留最重要的 8 项，避免输出被截断，但不得省略学历、专业、报名和待遇的关键限制。
 
-枚举要求：majors.fit 只能是 administrative_management、management、humanities、broad、uncertain、mismatch；education.tier 只能是 master、bachelor_associate、unspecified、phd_required；previous_graduates_eligible 只能是 yes、no、uncertain。compensation.quality 和 accessibility 为 0-5 整数。hard_phd_required 只有硬性博士起报时才为 true。
+枚举要求：majors.fit 只能是 administrative_management、management、humanities、broad、uncertain、mismatch；education.tier 只能是 master、bachelor_associate、unspecified、phd_required；previous_graduates_eligible 只能是 yes、no、uncertain。compensation.quality 和 accessibility 为 0-5 整数。hard_phd_required 只有硬性博士起报时才为 true。custom_requirement.active 在用户自定义要求非空时为 true；score 为 0-10 整数；matched 只能是 true、false 或 null。
 
 只返回 JSON，不要 Markdown：
-{"is_recruitment":true,"summary":"文章一句话摘要","extraction_complete":true,"notes":[],"positions":[{"organization":"单位","organization_nature":"央企","industry":"公共服务","job_title":"岗位","job_directions":["综合行政"],"locations":["地点"],"headcount":null,"employment_types":["校招"],"graduate_scope":"2027届","previous_graduates_eligible":"no","education":{"summary":"详细学历要求","minimum":"本科","preferred":"硕士","tier":"master","hard_phd_required":false},"majors":{"summary":"详细专业要求","accepted":["行政管理"],"fit":"administrative_management"},"application_requirements":["年龄、证书、经历、政治面貌等硬性条件"],"compensation":{"summary":"薪酬福利概述","salary":"具体薪资或null","benefits":["六险二金"],"quality":4},"deadline":null,"application_method":null,"application_url":null,"referral_code":null,"recommendation_reasons":["理由"],"non_recommendation_reasons":["风险"],"accessibility":4,"evidence":["支持判断的短句"],"confidence":0.9}]}`;
+{"is_recruitment":true,"summary":"文章一句话摘要","extraction_complete":true,"notes":[],"positions":[{"organization":"单位","organization_nature":"央企","industry":"公共服务","job_title":"岗位","job_directions":["综合行政"],"locations":["地点"],"headcount":null,"employment_types":["校招"],"graduate_scope":"2027届","previous_graduates_eligible":"no","education":{"summary":"详细学历要求","minimum":"本科","preferred":"硕士","tier":"master","hard_phd_required":false},"majors":{"summary":"详细专业要求","accepted":["行政管理"],"fit":"administrative_management"},"application_requirements":["年龄、证书、经历、政治面貌等硬性条件"],"compensation":{"summary":"薪酬福利概述","salary":"具体薪资或null","benefits":["六险二金"],"quality":4},"deadline":null,"application_method":null,"application_url":null,"referral_code":null,"recommendation_reasons":["理由"],"non_recommendation_reasons":["风险"],"custom_requirement":{"active":${customRequirement ? "true" : "false"},"matched":null,"score":0,"reasons":[],"concerns":[]},"accessibility":4,"evidence":["支持判断的短句"],"confidence":0.9}]}`;
 
   const requestAnalysis = async (retryInstruction = ""): Promise<string> => {
     const response = await fetch(`${config.deepseekBaseUrl}/chat/completions`, {

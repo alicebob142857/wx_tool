@@ -1,5 +1,5 @@
 import { fetchAndParseArticle, looksLikeJobPost } from "./article-parser.js";
-import { loadAccounts, loadConfig } from "./config.js";
+import { loadAccounts, loadConfig, loadProfile } from "./config.js";
 import { analyzeArticle, heuristicAnalyzeArticle } from "./deepseek.js";
 import { AuthExpiredError, ExporterClient } from "./exporter-client.js";
 import { ocrImages } from "./ocr.js";
@@ -29,10 +29,17 @@ const emptyStats = (accounts: number): RunStats => ({
 async function main(): Promise<void> {
   const config = loadConfig();
   const accounts = await loadAccounts(config.rootDir);
+  const profile = await loadProfile(config.rootDir);
   const client = new ExporterClient(config);
   const stats = emptyStats(accounts.length);
   const nowIso = new Date().toISOString();
   await writeRuntimeConfig(config.rootDir, config.authServiceUrl);
+  try {
+    const preferences = await client.getPreferences();
+    if (preferences) profile.customRequirement = preferences.customRequirement;
+  } catch (error) {
+    console.warn(`自定义要求读取失败，使用本地配置：${error instanceof Error ? error.message : String(error)}`);
+  }
 
   const auth = await client.checkAuth();
   if (!auth.valid) {
@@ -121,7 +128,7 @@ async function main(): Promise<void> {
           : { text: "", processed: 0, errors: [] as string[] };
         let analysis;
         try {
-          analysis = await analyzeArticle(config, parsed.title || article.title, article.link, parsed.text, ocr.text);
+          analysis = await analyzeArticle(config, parsed.title || article.title, article.link, parsed.text, ocr.text, profile);
         } catch (error) {
           errors.push(`${account} / ${article.title}：DeepSeek 失败，已使用规则降级；${error instanceof Error ? error.message : String(error)}`);
           analysis = heuristicAnalyzeArticle(parsed.title || article.title, `${parsed.text}\n${ocr.text}`, article.link);

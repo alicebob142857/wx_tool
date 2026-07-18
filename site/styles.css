@@ -27,7 +27,31 @@ body {
 }
 
 a { color: inherit; }
-button, input, select { font: inherit; }
+button, input, select, textarea { font: inherit; }
+
+[hidden] { display: none !important; }
+
+.access-gate {
+  min-height: 100vh; display: grid; place-items: center; padding: 24px;
+  background:
+    radial-gradient(circle at 15% 12%, rgba(204,232,111,.46), transparent 26rem),
+    radial-gradient(circle at 86% 80%, rgba(237,139,74,.18), transparent 28rem),
+    var(--paper);
+}
+.login-card {
+  width: min(520px, 100%); padding: 38px; border: 1px solid var(--line); border-radius: 28px;
+  background: rgba(255,255,255,.9); box-shadow: var(--shadow);
+}
+.login-card > .brand-mark { margin-bottom: 28px; }
+.login-card h1 { margin: 0; font: 500 38px/1.18 Georgia, "Songti SC", serif; }
+.login-card > p:not(.eyebrow, .login-status) { margin: 14px 0 26px; color: var(--muted); line-height: 1.7; }
+.login-card > label { display: block; margin: 0 0 8px 3px; color: var(--muted); font-size: 12px; font-weight: 700; }
+.login-row { display: grid; grid-template-columns: 1fr auto; gap: 9px; }
+.login-row input { min-width: 0; height: 48px; padding: 0 14px; border: 1px solid var(--line); border-radius: 13px; outline: none; background: white; }
+.login-row input:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(29,107,79,.1); }
+.login-row .primary-button { min-width: 88px; }
+.login-status { min-height: 20px; margin: 13px 0 0; color: var(--muted); font-size: 12px; }
+.login-status.is-error { color: var(--red); font-weight: 700; }
 
 .page-shell { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
 
@@ -54,6 +78,7 @@ button, input, select { font: inherit; }
   text-decoration: none; font-size: 12px; font-weight: 800;
 }
 .manage-link:hover { background: rgba(29,107,79,.09); }
+.button-link { cursor: pointer; font: inherit; }
 
 .service-status {
   display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: rgba(255,255,255,.62);
@@ -70,6 +95,10 @@ button, input, select { font: inherit; }
 .hero h1 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: clamp(42px, 6.2vw, 78px); line-height: 1.02; letter-spacing: -.045em; font-weight: 500; }
 .hero h1 span { color: var(--green); }
 .hero-description { max-width: 690px; color: var(--muted); line-height: 1.8; margin: 25px 0 0; font-size: 16px; }
+.compact-hero { padding-bottom: 38px; }
+.profile-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.profile-chip { border: 1px solid rgba(29,107,79,.14); background: rgba(255,255,255,.7); }
+.profile-chip.strong { color: #294819; background: var(--lime); font-weight: 800; }
 .run-card {
   min-height: 175px; padding: 24px; border-radius: 24px; background: var(--green-dark); color: white;
   box-shadow: var(--shadow); display: flex; flex-direction: column; justify-content: flex-end;
@@ -105,6 +134,16 @@ button, input, select { font: inherit; }
 .stats .highlight-stat { background: var(--lime); }
 .stats .highlight-stat span, .stats .highlight-stat small { color: #46612a; }
 
+.section-heading {
+  display: flex; justify-content: space-between; align-items: end; gap: 24px;
+  padding-bottom: 18px; border-bottom: 1px solid var(--line);
+}
+.quality-heading { margin-top: 66px; }
+.section-heading h2 { margin: 0; font: 500 36px/1.2 Georgia, "Songti SC", serif; }
+.section-heading .eyebrow { margin-bottom: 7px; }
+.section-heading p:last-child { max-width: 700px; margin: 10px 0 0; color: var(--muted); line-height: 1.7; font-size: 13px; }
+.count-badge { flex: 0 0 auto; padding: 9px 13px; border-radius: 999px; background: var(--lime); color: #355319; font-size: 12px; font-weight: 800; }
+
 .toolbar { display: grid; grid-template-columns: 170px 190px 170px 1fr; gap: 14px; margin: 28px 0 54px; }
 .toolbar label { display: block; }
 .toolbar label > span { display: block; color: var(--muted); font-size: 11px; margin: 0 0 7px 4px; }
@@ -126,6 +165,7 @@ button, input, select { font: inherit; }
 .download-link.secondary { color: #59665f; background: rgba(255,255,255,.55); border-color: var(--line); }
 .download-link.secondary:hover { background: white; }
 .results { display: grid; gap: 16px; padding: 22px 0 76px; }
+.quality-results { padding-bottom: 46px; }
 .job-card {
   display: grid; grid-template-columns: 120px minmax(0, 1fr) 105px; gap: 24px; align-items: start; padding: 25px;
   border: 1px solid var(--line); border-radius: 20px; background: var(--card); transition: transform .2s ease, box-shadow .2s ease;
@@ -179,6 +219,68 @@ button, input, select { font: inherit; }
 .empty-icon { display: grid; place-items: center; margin: 0 auto 16px; width: 52px; height: 52px; border-radius: 17px; background: #e6eedf; color: var(--green); font-size: 24px; }
 .empty-state h3 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: 24px; font-weight: 500; }
 .empty-state p { color: var(--muted); max-width: 520px; margin: 12px auto; line-height: 1.7; }
+.compact-empty { padding: 40px 20px 52px; }
+
+.all-jobs-panel {
+  margin: 0 0 76px; border: 1px solid var(--line); border-radius: 22px; overflow: hidden;
+  background: var(--card); box-shadow: var(--shadow);
+}
+.all-jobs-panel > summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 24px;
+  cursor: pointer; list-style: none; user-select: none;
+}
+.all-jobs-panel > summary::-webkit-details-marker { display: none; }
+.all-jobs-panel > summary::after { content: "+"; display: grid; place-items: center; width: 31px; height: 31px; margin-left: 5px; border-radius: 10px; background: rgba(29,107,79,.09); color: var(--green); font-size: 20px; }
+.all-jobs-panel[open] > summary::after { content: "−"; }
+.all-jobs-panel summary > span:first-child { flex: 1; }
+.all-jobs-panel summary small, .all-jobs-panel summary strong { display: block; }
+.all-jobs-panel summary small { margin-bottom: 4px; color: var(--green); font-size: 10px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.all-jobs-panel summary strong { font: 500 25px/1.2 Georgia, "Songti SC", serif; }
+.all-jobs-panel summary > span:nth-child(2) { color: var(--muted); font-size: 12px; }
+.compact-job-table { border-top: 1px solid var(--line); }
+.compact-job-row { display: grid; grid-template-columns: minmax(260px,1.6fr) .7fr 1.05fr .75fr; gap: 15px; align-items: center; min-height: 68px; padding: 12px 24px; border-bottom: 1px solid var(--line); color: #52605a; font-size: 12px; }
+.compact-job-row:last-child { border: 0; }
+.compact-job-row.is-quality { background: rgba(204,232,111,.08); }
+.compact-job-header { min-height: 42px; color: var(--muted); background: rgba(246,245,239,.75); font-size: 10px; font-weight: 800; letter-spacing: .04em; }
+.compact-title-cell { position: relative; display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 2px 10px; align-items: center; }
+.rank-number { grid-row: 1 / span 2; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 9px; background: #edf2ec; color: var(--green); font-family: Georgia, serif; }
+.compact-job-title { overflow: hidden; color: var(--ink); font-size: 13px; font-weight: 800; text-decoration: none; text-overflow: ellipsis; white-space: nowrap; }
+.compact-job-title:hover { color: var(--green); }
+.compact-title-cell small { overflow: hidden; color: var(--muted); text-overflow: ellipsis; white-space: nowrap; }
+.quality-label { position: absolute; right: 0; top: 50%; transform: translateY(-50%); padding: 3px 6px; border-radius: 999px; color: #355319; background: var(--lime); font-size: 9px; font-style: normal; font-weight: 800; }
+
+.pool-section { margin-bottom: 72px; }
+.pool-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding-top: 18px; }
+.pool-row { display: grid; grid-template-columns: 38px minmax(0,1fr) 40px; gap: 12px; align-items: center; padding: 15px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.68); }
+.pool-rank { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; color: white; background: var(--green-dark); font: 500 14px Georgia, serif; }
+.pool-body { min-width: 0; }
+.pool-body a { display: block; overflow: hidden; color: var(--ink); font-size: 13px; font-weight: 800; text-decoration: none; text-overflow: ellipsis; white-space: nowrap; }
+.pool-body a:hover { color: var(--green); }
+.pool-body small { display: block; overflow: hidden; margin-top: 5px; color: var(--muted); font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
+.pool-score { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; color: #355319; background: var(--lime); font: 500 16px Georgia, serif; }
+.pool-empty { grid-column: 1 / -1; margin: 0; padding: 28px; text-align: center; color: var(--muted); }
+
+.personal-requirement {
+  scroll-margin-top: 24px; display: grid; grid-template-columns: .9fr 1.1fr; gap: 34px; align-items: center;
+  margin-bottom: 24px; padding: 30px; border-radius: 24px; color: white; background: var(--green-dark); box-shadow: var(--shadow);
+}
+.personal-requirement h2 { margin: 0; font: 500 33px/1.2 Georgia, "Songti SC", serif; }
+.personal-requirement .eyebrow { color: var(--lime); }
+.requirement-copy > p:last-of-type { color: rgba(255,255,255,.68); font-size: 13px; line-height: 1.7; }
+.hard-rule-list { display: grid; gap: 7px; margin: 18px 0 0; padding: 0; list-style: none; color: rgba(255,255,255,.78); font-size: 12px; }
+.hard-rule-list li::before { content: "✓"; margin-right: 8px; color: var(--lime); font-weight: 800; }
+.requirement-form { padding: 20px; border-radius: 18px; color: var(--ink); background: white; }
+.requirement-form > label { display: block; margin: 0 0 7px 3px; color: var(--muted); font-size: 11px; font-weight: 800; }
+.requirement-form textarea { width: 100%; min-height: 145px; resize: vertical; padding: 13px; border: 1px solid var(--line); border-radius: 13px; outline: none; color: var(--ink); line-height: 1.6; }
+.requirement-form textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(29,107,79,.1); }
+.requirement-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 10px; }
+.requirement-actions span { color: var(--muted); font-size: 10px; line-height: 1.5; }
+button:disabled { cursor: wait; opacity: .62; }
+
+.history-download { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 78px; padding: 17px 20px; border: 1px solid var(--line); border-radius: 17px; background: rgba(255,255,255,.62); }
+.history-download strong, .history-download span { display: block; }
+.history-download strong { font-size: 13px; }
+.history-download span { margin-top: 4px; color: var(--muted); font-size: 11px; }
 
 .account-management { scroll-margin-top: 24px; padding: 68px 0 76px; border-top: 1px solid var(--line); }
 .management-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 24px; }
@@ -248,6 +350,10 @@ footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1
   .confidence { margin: 0; }
   .verdicts, .detail-grid { grid-template-columns: 1fr; }
   .account-management-grid { grid-template-columns: 1fr; }
+  .pool-list { grid-template-columns: 1fr; }
+  .personal-requirement { grid-template-columns: 1fr; }
+  .compact-job-row { grid-template-columns: minmax(220px,1.5fr) .75fr 1fr; }
+  .compact-job-row > span:nth-child(2) { display: none; }
 }
 
 @media (max-width: 520px) {
@@ -271,5 +377,21 @@ footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1
   .account-add-card, .account-tutorial-card { padding: 19px; }
   .auth-panel { padding: 23px; }
   .auth-panel ol { display: grid; gap: 10px; }
+  .login-card { padding: 26px 22px; }
+  .login-card h1 { font-size: 31px; }
+  .section-heading { align-items: flex-start; }
+  .section-heading h2 { font-size: 30px; }
+  .all-jobs-panel > summary { padding: 18px; }
+  .all-jobs-panel summary > span:nth-child(2) { display: none; }
+  .compact-job-header { display: none; }
+  .compact-job-row { grid-template-columns: 1fr; gap: 7px; padding: 15px 18px; }
+  .compact-job-row > span:nth-child(2) { display: block; }
+  .compact-job-row > span:not(.compact-title-cell)::before { color: var(--muted); font-size: 10px; font-weight: 800; }
+  .compact-job-row > span:nth-child(2)::before { content: "地点："; }
+  .compact-job-row > span:nth-child(3)::before { content: "学历："; }
+  .compact-job-row > span:nth-child(4)::before { content: "截止："; }
+  .personal-requirement { padding: 22px; }
+  .history-download { align-items: flex-start; flex-direction: column; }
+  .login-row { grid-template-columns: 1fr; }
   footer { display: block; line-height: 1.6; }
 }

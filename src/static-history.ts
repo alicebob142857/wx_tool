@@ -1,9 +1,11 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import type { Account, DailyReport, JobPosition } from "./types.js";
+import type { Account, DailyReport, JobPosition, UserProfile } from "./types.js";
+import { personalizePosition } from "./recommendation.js";
 
 interface StaticHistoryJob extends JobPosition {
   account: string;
+  reportDate: string;
   article: {
     title: string;
     url: string;
@@ -38,6 +40,13 @@ interface PublicAccountConfig {
   accounts: Account[];
 }
 
+interface QualityPool {
+  generatedAt: string | null;
+  maxSize: 30;
+  total: number;
+  jobs: StaticHistoryJob[];
+}
+
 function csvCell(value: unknown): string {
   const text = Array.isArray(value) ? value.join("；") : String(value ?? "");
   return `"${text.replace(/"/g, '""')}"`;
@@ -53,6 +62,7 @@ function historyCsv(jobs: StaticHistoryJob[]): string {
     "招聘岗位", "岗位方向", "专业要求", "地点", "原文链接", "网申地址", "截止日期",
     "往届是否可投递", "学历要求", "适用届别", "内推码", "报考要求", "薪资", "福利待遇",
     "推荐分数", "推荐等级", "推荐理由", "不推荐理由", "招聘人数", "报名方式", "AI置信度",
+    "个性化优质岗位", "个性化分数", "个性化推荐理由", "个性化排除原因", "自定义要求匹配",
   ];
   const lines = [headers.map(csvCell).join(",")];
   for (const job of jobs) {
@@ -65,9 +75,12 @@ function historyCsv(jobs: StaticHistoryJob[]): string {
       job.compensation.benefits, job.recommendation.score, job.recommendation.level,
       job.recommendation.reasons, job.recommendation.concerns, job.headcount, job.applicationMethod,
       Math.round(Number(job.confidence || 0) * 100) / 100,
+      job.personalized?.eligible ? "是" : "否", job.personalized?.score ?? "",
+      job.personalized?.reasons || [], job.personalized?.concerns || [],
+      !job.customRequirement?.active ? "未启用" : job.customRequirement.matched === true ? "符合" : job.customRequirement.matched === false ? "不符合" : "证据不足",
     ].map(csvCell).join(","));
   }
-  return `\uFEFF${lines.join("\r\n")}\r\n`;
+  return `\uFEFF${lines.join("\n")}\n`;
 }
 
 async function readReports(dailyDir: string): Promise<DailyReport[]> {
@@ -99,10 +112,64 @@ async function readPublicAccounts(rootDir: string): Promise<PublicAccountConfig>
   }
 }
 
+async function readPublicProfile(rootDir: string): Promise<UserProfile> {
+  const fallback: UserProfile = {
+    school: "北京师范大学",
+    education: "硕士研究生",
+    major: "行政管理",
+    freshGraduate: true,
+    customRequirement: "",
+  };
+  try {
+    const profile = JSON.parse(await readFile(path.join(rootDir, "config", "profile.json"), "utf8")) as Partial<UserProfile>;
+    return {
+      school: String(profile.school || fallback.school),
+      education: String(profile.education || fallback.education),
+      major: String(profile.major || fallback.major),
+      freshGraduate: profile.freshGraduate !== false,
+      customRequirement: "",
+    };
+  } catch (error: any) {
+    if (error?.code === "ENOENT") return fallback;
+    throw error;
+  }
+}
+
+function deadlineTimestamp(deadline: string | null, now: Date): number | null {
+  if (!deadline) return null;
+  const normalized = deadline.replace(/[./]/g, "-");
+  const full = normalized.match(/(20\d{2})\s*(?:年|-)?\s*(\d{1,2})\s*(?:月|-)?\s*(\d{1,2})\s*日?/);
+  if (full) return Date.parse(`${full[1]}-${full[2].padStart(2, "0")}-${full[3].padStart(2, "0")}T23:59:59+08:00`);
+  const short = deadline.match(/(\d{1,2})\s*月\s*(\d{1,2})\s*日/);
+  if (!short) return null;
+  const year = Number(new Intl.DateTimeFormat("en", { timeZone: "Asia/Shanghai", year: "numeric" }).format(now));
+  return Date.parse(`${year}-${short[1].padStart(2, "0")}-${short[2].padStart(2, "0")}T23:59:59+08:00`);
+}
+
+function buildQualityPool(jobs: StaticHistoryJob[], generatedAt: string | null): QualityPool {
+  const now = generatedAt ? new Date(generatedAt) : new Date();
+  const uniqueJobs = new Map<string, StaticHistoryJob>();
+  for (const job of jobs) {
+    if (!job.personalized?.eligible) continue;
+    const expiry = deadlineTimestamp(job.deadline, now);
+    if (expiry !== null && expiry < now.getTime()) continue;
+    const existing = uniqueJobs.get(job.id);
+    if (!existing || Date.parse(job.article.publishedAt) > Date.parse(existing.article.publishedAt)) {
+      uniqueJobs.set(job.id, job);
+    }
+  }
+  const ranked = [...uniqueJobs.values()].sort((a, b) =>
+    (b.personalized?.rankingKey || 0) - (a.personalized?.rankingKey || 0)
+      || Date.parse(b.article.publishedAt) - Date.parse(a.article.publishedAt),
+  ).slice(0, 30);
+  return { generatedAt, maxSize: 30, total: ranked.length, jobs: ranked };
+}
+
 export async function buildStaticHistory(rootDir: string): Promise<StaticHistory> {
   const dataDir = path.join(rootDir, "site", "data");
   const reports = await readReports(path.join(dataDir, "daily"));
   const publicAccounts = await readPublicAccounts(rootDir);
+  const publicProfile = await readPublicProfile(rootDir);
   const jobs: StaticHistoryJob[] = [];
   const accounts = new Set<string>();
   const articles = new Set<string>();
@@ -116,9 +183,10 @@ export async function buildStaticHistory(rootDir: string): Promise<StaticHistory
       accounts.add(item.account);
       articles.add(item.id);
       for (const position of item.positions || []) {
-        jobs.push({
+        jobs.push(personalizePosition({
           ...position,
           account: item.account,
+          reportDate: report.date,
           article: {
             title: item.title,
             url: item.url,
@@ -129,7 +197,7 @@ export async function buildStaticHistory(rootDir: string): Promise<StaticHistory
             analysisSource: item.analysisSource,
             extractionComplete: item.extractionComplete,
           },
-        });
+        }));
       }
     }
   }
@@ -153,11 +221,14 @@ export async function buildStaticHistory(rootDir: string): Promise<StaticHistory
     },
     jobs,
   };
+  const qualityPool = buildQualityPool(jobs, generatedAt);
   await mkdir(dataDir, { recursive: true });
   await Promise.all([
     writeFile(path.join(dataDir, "job-history.json"), `${JSON.stringify(history, null, 2)}\n`, "utf8"),
     writeFile(path.join(dataDir, "jobs.csv"), historyCsv(jobs), "utf8"),
     writeFile(path.join(dataDir, "accounts.json"), `${JSON.stringify(publicAccounts, null, 2)}\n`, "utf8"),
+    writeFile(path.join(dataDir, "profile.json"), `${JSON.stringify(publicProfile, null, 2)}\n`, "utf8"),
+    writeFile(path.join(dataDir, "quality-pool.json"), `${JSON.stringify(qualityPool, null, 2)}\n`, "utf8"),
   ]);
   return history;
 }

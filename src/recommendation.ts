@@ -2,6 +2,7 @@ import type {
   EducationTier,
   JobPosition,
   MajorFit,
+  PersonalizedAssessment,
   PositionRecommendation,
 } from "./types.js";
 import { stableId } from "./utils.js";
@@ -62,9 +63,125 @@ function educationReason(tier: EducationTier): string {
   }
 }
 
-export interface RawPosition extends Omit<JobPosition, "id" | "recommendation"> {
+export interface RawPosition extends Omit<JobPosition, "id" | "recommendation" | "personalized"> {
   recommendation: Pick<PositionRecommendation, "reasons" | "concerns">;
   accessibility: number;
+}
+
+function includesAny(text: string, pattern: RegExp): boolean {
+  pattern.lastIndex = 0;
+  return pattern.test(text);
+}
+
+function assessPersonalized(position: JobPosition): PersonalizedAssessment {
+  const educationText = [
+    position.education.summary,
+    position.education.minimum,
+    position.education.preferred,
+  ].filter(Boolean).join("；");
+  const majorText = [position.majors.summary, ...(position.majors.accepted || [])].filter(Boolean).join("；");
+  const eligibilityText = [
+    position.jobTitle,
+    ...(position.employmentTypes || []),
+    position.graduateScope,
+    ...(position.applicationRequirements || []),
+    ...(position.evidence || []),
+  ].filter(Boolean).join("；");
+  const employmentText = (position.employmentTypes || []).join("；");
+
+  const freshGraduate = includesAny(
+    eligibilityText,
+    /应届|届毕业生|校园招聘|校招|秋招|春招|提前批|高校毕业生|毕业年度|管培生|无工作经历|毕业生岗位/,
+  );
+  const socialRecruitment = includesAny(employmentText || eligibilityText, /社招|社会招聘|社会人员|成熟人才/);
+  const campusRecruitment = includesAny(employmentText || eligibilityText, /校招|校园招聘|应届|届毕业生|秋招|春招|提前批/);
+  const internship = includesAny(employmentText || position.jobTitle, /实习|见习/);
+  const notSocialRecruitment = !socialRecruitment || campusRecruitment;
+  const notInternship = !internship;
+
+  const notPhdOnly = !position.education.hardPhdRequired && position.education.tier !== "phd_required";
+  const associateMentioned = includesAny(educationText, /大专|专科/);
+  const notAssociateThreshold = !associateMentioned;
+  const bachelorOrMaster = position.education.tier === "master"
+    || includesAny(educationText, /硕士|研究生|本科|学士/);
+  const education = notPhdOnly && notAssociateThreshold && bachelorOrMaster;
+
+  const exactAdministrative = position.majors.fit === "administrative_management"
+    || includesAny(majorText, /行政管理|公共管理类|公共管理专业|管理学门类|管理类专业/);
+  const unrestricted = position.majors.fit === "broad"
+    && includesAny(majorText, /不限专业|专业不限|不限学科|专业不设限制/);
+  const major = exactAdministrative || unrestricted;
+  const customRequirement = !position.customRequirement?.active
+    || position.customRequirement.matched === true;
+
+  const gates = {
+    freshGraduate,
+    education,
+    major,
+    notSocialRecruitment,
+    notInternship,
+    notPhdOnly,
+    notAssociateThreshold,
+    customRequirement,
+  };
+  const eligible = Object.values(gates).every(Boolean);
+
+  const reasons = unique([
+    ...(exactAdministrative ? [includesAny(majorText, /行政管理/) ? "专业要求明确覆盖行政管理" : "专业要求覆盖公共管理或管理学门类"] : []),
+    ...(unrestricted ? ["专业不限，行政管理可以报考"] : []),
+    ...(freshGraduate ? ["明确面向应届毕业生或校园招聘"] : []),
+    ...(position.education.tier === "master" || includesAny(educationText, /硕士|研究生/)
+      ? ["学历要求覆盖硕士研究生"]
+      : bachelorOrMaster ? ["学历门槛为本科，可用硕士学历报考"] : []),
+    ...(position.compensation.quality >= 4 ? ["薪资福利信息较有吸引力"] : []),
+    ...(position.applicationUrl ? ["报名入口明确，投递可操作性较高"] : []),
+    ...(position.customRequirement?.active ? position.customRequirement.reasons : []),
+    ...(position.recommendation.reasons || []).slice(0, 2),
+  ], 6);
+  const concerns = unique([
+    ...(!freshGraduate ? ["未明确面向应届毕业生或校招"] : []),
+    ...(!notSocialRecruitment ? ["属于社会招聘，不符合应届求职目标"] : []),
+    ...(!notInternship ? ["属于实习或见习岗位，不进入正式优质岗位推荐"] : []),
+    ...(!notPhdOnly ? ["硬性要求博士，硕士不能报考"] : []),
+    ...(!notAssociateThreshold ? ["学历门槛包含大专或专科，不符合优质岗位标准"] : []),
+    ...(notPhdOnly && notAssociateThreshold && !bachelorOrMaster ? ["未能确认岗位接受本科或硕士学历"] : []),
+    ...(!major ? ["专业要求未明确覆盖行政管理、公共管理类或不限专业"] : []),
+    ...(!customRequirement ? [
+      position.customRequirement?.matched === false
+        ? "不符合已保存的自定义重要要求"
+        : "自定义重要要求缺少足够证据，暂不进入优质推荐",
+    ] : []),
+    ...(position.customRequirement?.active ? position.customRequirement.concerns : []),
+    ...(!position.deadline ? ["截止日期未披露，需尽快核对原文"] : []),
+    ...(position.recommendation.concerns || []).slice(0, 2),
+  ], 7);
+
+  let score = 0;
+  if (exactAdministrative) score += includesAny(majorText, /行政管理/) ? 42 : 36;
+  else if (unrestricted) score += 28;
+  if (position.education.tier === "master" || includesAny(educationText, /硕士|研究生/)) score += 25;
+  else if (bachelorOrMaster) score += 18;
+  if (freshGraduate) score += 14;
+  if (/党政机关|事业单位|央企|国企|高校/.test(position.organizationNature || "")) score += 5;
+  score += Math.min(6, Math.max(0, Number(position.compensation.quality || 0) * 1.2));
+  score += Math.min(5, Math.max(0, Number(position.recommendation.score || 0) / 20));
+  if (position.applicationUrl) score += 2;
+  if (position.customRequirement?.active) score += Math.max(0, Math.min(15, position.customRequirement.score * 1.5));
+  score = Math.max(0, Math.min(100, Math.round(score)));
+  if (!eligible) score = Math.min(score, 59);
+  const hardGateBand = (notPhdOnly ? 500_000_000 : 0)
+    + (notSocialRecruitment ? 200_000_000 : 0)
+    + (notAssociateThreshold ? 100_000_000 : 0)
+    + (notInternship ? 50_000_000 : 0);
+  const rankingKey = (eligible ? 2_000_000_000 : hardGateBand)
+    + score * 100_000
+    + Math.min(999_999, Math.max(0, Number(position.recommendation.rankingKey || 0)));
+
+  return { eligible, score, rankingKey, reasons, concerns, gates };
+}
+
+export function personalizePosition<T extends JobPosition>(position: T): T {
+  return { ...position, personalized: assessPersonalized(position) };
 }
 
 export function rankPosition(articleUrl: string, raw: RawPosition, index: number): JobPosition {
@@ -90,17 +207,19 @@ export function rankPosition(articleUrl: string, raw: RawPosition, index: number
     ...raw.recommendation.concerns,
   ], 6);
   const level: PositionRecommendation["level"] = score >= 76 ? "high" : score >= 52 ? "medium" : "low";
-  return {
+  const position: JobPosition = {
     ...raw,
     id: stableId(`${articleUrl}|${raw.organization}|${raw.jobTitle}|${index}`),
     education: { ...raw.education, tier: educationTier },
     recommendation: { score, rankingKey, level, reasons, concerns },
   };
+  return personalizePosition(position);
 }
 
 export function sortPositions<T extends JobPosition>(positions: T[]): T[] {
-  return [...positions].sort((a, b) =>
-    b.recommendation.rankingKey - a.recommendation.rankingKey
+  return positions.map(position => personalizePosition(position)).sort((a, b) =>
+    (b.personalized?.rankingKey || 0) - (a.personalized?.rankingKey || 0)
+      || b.recommendation.rankingKey - a.recommendation.rankingKey
       || b.recommendation.score - a.recommendation.score
       || b.confidence - a.confidence,
   );

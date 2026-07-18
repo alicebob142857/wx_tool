@@ -2,6 +2,7 @@ interface Env {
   AUTH_KV: KVNamespace;
   JOB_DB: D1Database;
   COLLECTOR_TOKEN: string;
+  SITE_PASSWORD_HASH?: string;
   ALLOWED_ORIGIN?: string;
   GITHUB_REPOSITORY?: string;
   GITHUB_DISPATCH_TOKEN?: string;
@@ -32,6 +33,8 @@ interface StoredAuth {
 
 const LOGIN_KEY = "login:current";
 const AUTH_KEY = "auth:current";
+const SITE_SESSION_PREFIX = "site-session:";
+const SITE_SESSION_TTL = 180 * 24 * 60 * 60;
 const FOUR_DAYS_MS = 4 * 24 * 60 * 60 * 1000;
 const USER_AGENT =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
@@ -45,7 +48,7 @@ function corsHeaders(request: Request, env: Env): Headers {
     : "null";
   return new Headers({
     "Access-Control-Allow-Origin": allowOrigin,
-    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, OPTIONS",
     "Access-Control-Allow-Headers": "Authorization, Content-Type",
     "Access-Control-Max-Age": "86400",
     Vary: "Origin",
@@ -63,6 +66,79 @@ function authorized(request: Request, env: Env): boolean {
   const expected = env.COLLECTOR_TOKEN;
   if (!expected) return false;
   return request.headers.get("Authorization") === `Bearer ${expected}`;
+}
+
+function randomToken(): string {
+  const bytes = new Uint8Array(32);
+  crypto.getRandomValues(bytes);
+  return [...bytes].map(value => value.toString(16).padStart(2, "0")).join("");
+}
+
+async function siteAuthorized(request: Request, env: Env): Promise<boolean> {
+  const header = request.headers.get("Authorization") || "";
+  const token = header.startsWith("Bearer ") ? header.slice(7) : "";
+  if (!/^[a-f0-9]{64}$/.test(token)) return false;
+  return Boolean(await env.AUTH_KV.get(`${SITE_SESSION_PREFIX}${token}`));
+}
+
+async function sha256(value: string): Promise<string> {
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value));
+  return [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, "0")).join("");
+}
+
+function constantTimeEqual(left: string, right: string): boolean {
+  if (left.length !== right.length) return false;
+  let difference = 0;
+  for (let index = 0; index < left.length; index += 1) {
+    difference |= left.charCodeAt(index) ^ right.charCodeAt(index);
+  }
+  return difference === 0;
+}
+
+async function loginSite(request: Request, env: Env): Promise<Response> {
+  if (!env.SITE_PASSWORD_HASH) return json(request, env, { message: "网站密码尚未配置" }, 503);
+  const body = await request.json<{ password?: string }>().catch(() => ({ password: "" }));
+  const providedHash = await sha256(String(body.password || ""));
+  if (!constantTimeEqual(providedHash, env.SITE_PASSWORD_HASH)) {
+    return json(request, env, { message: "密码不正确" }, 401);
+  }
+  const token = randomToken();
+  const expiresAt = new Date(Date.now() + SITE_SESSION_TTL * 1_000).toISOString();
+  await env.AUTH_KV.put(`${SITE_SESSION_PREFIX}${token}`, JSON.stringify({ createdAt: new Date().toISOString() }), {
+    expirationTtl: SITE_SESSION_TTL,
+  });
+  return json(request, env, { ok: true, token, expiresAt });
+}
+
+async function checkSiteSession(request: Request, env: Env): Promise<Response> {
+  if (!await siteAuthorized(request, env)) return json(request, env, { ok: false }, 401);
+  return json(request, env, { ok: true });
+}
+
+async function getPreferences(request: Request, env: Env): Promise<Response> {
+  if (!authorized(request, env) && !await siteAuthorized(request, env)) {
+    return json(request, env, { message: "Unauthorized" }, 401);
+  }
+  const row = await env.JOB_DB.prepare(
+    "SELECT custom_requirement AS customRequirement, updated_at AS updatedAt FROM user_preferences WHERE id = 1",
+  ).first<{ customRequirement: string; updatedAt: string }>();
+  return json(request, env, {
+    customRequirement: row?.customRequirement || "",
+    updatedAt: row?.updatedAt || null,
+  });
+}
+
+async function savePreferences(request: Request, env: Env): Promise<Response> {
+  if (!await siteAuthorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
+  const body = await request.json<{ customRequirement?: string }>().catch(() => ({ customRequirement: "" }));
+  const customRequirement = String(body.customRequirement || "").trim();
+  if (customRequirement.length > 2_000) return json(request, env, { message: "自定义要求不能超过 2000 字" }, 400);
+  const updatedAt = new Date().toISOString();
+  await env.JOB_DB.prepare(`INSERT INTO user_preferences (id, custom_requirement, updated_at)
+    VALUES (1, ?, ?)
+    ON CONFLICT(id) DO UPDATE SET custom_requirement=excluded.custom_requirement, updated_at=excluded.updated_at`)
+    .bind(customRequirement, updatedAt).run();
+  return json(request, env, { ok: true, customRequirement, updatedAt });
 }
 
 function mpHeaders(cookie?: string): Headers {
@@ -360,6 +436,15 @@ function parseJsonArray(value: unknown): unknown[] {
   }
 }
 
+function parseJsonObject(value: unknown): Record<string, unknown> | undefined {
+  try {
+    const parsed = JSON.parse(String(value || "{}"));
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) && Object.keys(parsed).length ? parsed : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 function jobFromRow(row: any): any {
   return {
     id: row.id,
@@ -384,6 +469,8 @@ function jobFromRow(row: any): any {
     applicationUrl: row.application_url,
     referralCode: row.referral_code,
     recommendation: { score: row.recommendation_score, rankingKey: row.ranking_key, level: row.recommendation_level, reasons: parseJsonArray(row.recommendation_reasons_json), concerns: parseJsonArray(row.concerns_json) },
+    customRequirement: parseJsonObject(row.custom_requirement_json),
+    personalized: parseJsonObject(row.personalized_json),
     evidence: parseJsonArray(row.evidence_json),
     confidence: row.confidence,
     article: { title: row.article_title, url: row.article_url, publishedAt: row.published_at, summary: row.article_summary, ocrUsed: Boolean(row.ocr_used), ocrImageCount: row.ocr_image_count, analysisSource: row.analysis_source, extractionComplete: Boolean(row.extraction_complete) },
@@ -470,6 +557,7 @@ async function saveReport(request: Request, env: Env): Promise<Response> {
 
   const articleStatements: D1PreparedStatement[] = [];
   const positionStatements: D1PreparedStatement[] = [];
+  const personalizationStatements: D1PreparedStatement[] = [];
   for (const item of report.items) {
     if (!item?.id || !item?.url || !item?.title) continue;
     articleStatements.push(env.JOB_DB.prepare(`INSERT INTO articles (
@@ -509,10 +597,17 @@ async function saveReport(request: Request, env: Env): Promise<Response> {
         position.recommendation?.level || "low", jsonText(position.recommendation?.reasons),
         jsonText(position.recommendation?.concerns), jsonText(position.evidence), position.confidence || 0, now,
       ));
+      personalizationStatements.push(env.JOB_DB.prepare(`UPDATE positions SET
+        custom_requirement_json = ?, personalized_json = ?, personalized_eligible = ?, personalized_ranking_key = ?
+        WHERE id = ?`).bind(
+        JSON.stringify(position.customRequirement || {}), JSON.stringify(position.personalized || {}),
+        position.personalized?.eligible ? 1 : 0, position.personalized?.rankingKey || 0, position.id,
+      ));
     }
   }
   await runBatches(env.JOB_DB, articleStatements);
   await runBatches(env.JOB_DB, positionStatements);
+  await runBatches(env.JOB_DB, personalizationStatements);
   return json(request, env, { ok: true, date: report.date, articles: articleStatements.length, positions: positionStatements.length });
 }
 
@@ -599,12 +694,24 @@ async function downloadJobHistoryCsv(request: Request, env: Env): Promise<Respon
   return historyCsvResponse(request, env, allRows);
 }
 
+async function listQualityPool(request: Request, env: Env): Promise<Response> {
+  const rows = await env.JOB_DB.prepare(`${JOB_SELECT}
+    WHERE p.personalized_eligible = 1
+    ORDER BY p.personalized_ranking_key DESC, p.report_date DESC LIMIT 30`).all<any>();
+  const jobs = (rows.results || []).map(jobFromRow);
+  return json(request, env, { generatedAt: new Date().toISOString(), maxSize: 30, total: jobs.length, jobs });
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsHeaders(request, env) });
     const url = new URL(request.url);
     try {
       if (url.pathname === "/health") return json(request, env, { ok: true });
+      if (url.pathname === "/api/site/login" && request.method === "POST") return loginSite(request, env);
+      if (url.pathname === "/api/site/session" && request.method === "GET") return checkSiteSession(request, env);
+      if (url.pathname === "/api/preferences" && request.method === "GET") return getPreferences(request, env);
+      if (url.pathname === "/api/preferences" && request.method === "PUT") return savePreferences(request, env);
       if (url.pathname === "/api/status" && request.method === "GET") return publicStatus(request, env);
       if (url.pathname === "/api/auth/start" && request.method === "POST") {
         if (!authorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
@@ -620,6 +727,7 @@ export default {
       if (url.pathname === "/api/jobs" && request.method === "GET") return listJobs(request, env);
       if (url.pathname === "/api/job-history" && request.method === "GET") return listJobHistory(request, env);
       if (url.pathname === "/api/jobs.csv" && request.method === "GET") return downloadJobHistoryCsv(request, env);
+      if (url.pathname === "/api/quality-pool" && request.method === "GET") return listQualityPool(request, env);
       return json(request, env, { message: "Not found" }, 404);
     } catch (error) {
       return json(request, env, { message: error instanceof Error ? error.message : String(error) }, 500);

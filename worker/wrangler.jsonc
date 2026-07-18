@@ -24,6 +24,7 @@
   ],
   "vars": {
     "ALLOWED_ORIGIN": "https://alicebob142857.github.io",
-    "GITHUB_REPOSITORY": "alicebob142857/wx_tool"
+    "GITHUB_REPOSITORY": "alicebob142857/wx_tool",
+    "SITE_PASSWORD_HASH": "ed973eef7e60c5160501b1738faebfab44126426271c646386609ffbd74802bf"
   }
 }

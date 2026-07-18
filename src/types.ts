@@ -76,6 +76,42 @@ export interface PositionRecommendation {
   concerns: string[];
 }
 
+export interface PersonalizedGates {
+  freshGraduate: boolean;
+  education: boolean;
+  major: boolean;
+  notSocialRecruitment: boolean;
+  notInternship: boolean;
+  notPhdOnly: boolean;
+  notAssociateThreshold: boolean;
+  customRequirement: boolean;
+}
+
+export interface PersonalizedAssessment {
+  eligible: boolean;
+  score: number;
+  rankingKey: number;
+  reasons: string[];
+  concerns: string[];
+  gates: PersonalizedGates;
+}
+
+export interface UserProfile {
+  school: string;
+  education: string;
+  major: string;
+  freshGraduate: boolean;
+  customRequirement: string;
+}
+
+export interface CustomRequirementAssessment {
+  active: boolean;
+  matched: boolean | null;
+  score: number;
+  reasons: string[];
+  concerns: string[];
+}
+
 export interface JobPosition {
   id: string;
   organization: string;
@@ -97,6 +133,8 @@ export interface JobPosition {
   applicationUrl: string | null;
   referralCode: string | null;
   recommendation: PositionRecommendation;
+  customRequirement?: CustomRequirementAssessment;
+  personalized?: PersonalizedAssessment;
   evidence: string[];
   confidence: number;
 }

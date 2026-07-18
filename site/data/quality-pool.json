@@ -1,0 +1,1986 @@
+{
+  "generatedAt": "2026-07-18T13:46:50.869Z",
+  "maxSize": 30,
+  "total": 17,
+  "jobs": [
+    {
+      "organization": "中船智海创新研究院",
+      "organizationNature": "央企",
+      "industry": "船舶/军工",
+      "jobTitle": "行政管理",
+      "jobDirections": [
+        "行政事务管理",
+        "人力资源管理",
+        "财务管理"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士及以上学历",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "行政管理、人力资源管理、财务管理、会计学、经济学、法学等相关专业",
+        "accepted": [
+          "行政管理",
+          "人力资源管理",
+          "财务管理",
+          "会计学",
+          "经济学",
+          "法学"
+        ],
+        "fit": "administrative_management"
+      },
+      "applicationRequirements": [
+        "2027届硕士及以上学历毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露具体薪资，提供央企福利",
+        "salary": null,
+        "benefits": [
+          "央企福利",
+          "五险一金",
+          "补充医疗保险",
+          "企业年金",
+          "员工宿舍",
+          "食堂",
+          "班车"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "企业开放日现场投递或后续网申",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 94,
+        "rankingKey": 1644379,
+        "level": "high",
+        "reasons": [
+          "专业高度匹配行政管理",
+          "学历要求以硕士为主，符合优先级",
+          "央企平台，稳定性高",
+          "行政管理专业最对口",
+          "福利待遇完善"
+        ],
+        "concerns": [
+          "薪资未披露",
+          "仅限2027届硕士",
+          "需参加开放日才能进一步了解"
+        ]
+      },
+      "accessibility": 3,
+      "evidence": [
+        "面向2027届硕士及以上学历毕业生",
+        "招聘行政管理等多个岗位"
+      ],
+      "confidence": 0.8,
+      "id": "27b4b4c63d599982",
+      "account": "北航就业",
+      "reportDate": "2026-07-17",
+      "article": {
+        "title": "开放日 | 中国船舶集团有限公司系统工程研究院&中船智海创新研究院 | 2027届校招企业开放日邀请函",
+        "url": "https://mp.weixin.qq.com/s/ewIo3w6InT-PeGCwA9XU5Q",
+        "publishedAt": "2026-07-16T06:44:09.000Z",
+        "summary": "中国船舶集团系统工程研究院与中船智海创新研究院联合举办2027届校招企业开放日活动，面向2027届硕士及以上学历毕业生，招聘多个岗位。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 96,
+        "rankingKey": 2010599999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "薪资福利信息较有吸引力",
+          "专业高度匹配行政管理",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资未披露",
+          "仅限2027届硕士"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "浙江交工集团股份有限公司",
+      "organizationNature": "国企",
+      "industry": "交通基建",
+      "jobTitle": "综合行政岗",
+      "jobDirections": [
+        "综合行政"
+      ],
+      "locations": [
+        "杭州"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "行政管理、工商管理等相关专业优先",
+        "accepted": [
+          "行政管理",
+          "工商管理"
+        ],
+        "fit": "administrative_management"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 2
+      },
+      "deadline": "2026-10-13",
+      "applicationMethod": "国聘官网",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 86,
+        "rankingKey": 1632489,
+        "level": "high",
+        "reasons": [
+          "专业高度匹配行政管理",
+          "本科或大专层次可报",
+          "专业匹配度高",
+          "国企稳定",
+          "地点杭州"
+        ],
+        "concerns": [
+          "薪资未披露",
+          "竞争可能激烈"
+        ]
+      },
+      "accessibility": 4,
+      "evidence": [
+        "综合行政岗",
+        "杭州",
+        "本科应届生"
+      ],
+      "confidence": 0.9,
+      "id": "cb5d166dd3e06b4c",
+      "account": "国聘",
+      "reportDate": "2026-07-18",
+      "article": {
+        "title": "校招 | 地方国企招聘信息汇总 7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/Dt5gUUJbuXefKa22g4lGuQ",
+        "publishedAt": "2026-07-17T12:49:24.000Z",
+        "summary": "地方国企校招岗位汇总，涵盖多个行业和地区，报名截止区间2026.7.24-2026.10.13。",
+        "ocrUsed": true,
+        "ocrImageCount": 3,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 88,
+        "rankingKey": 2009799999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "报名入口明确，投递可操作性较高",
+          "专业高度匹配行政管理",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "薪资未披露",
+          "竞争可能激烈"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "华润集团",
+      "organizationNature": "央企",
+      "industry": "综合",
+      "jobTitle": "行政专员",
+      "jobDirections": [
+        "行政"
+      ],
+      "locations": [
+        "北京",
+        "陕西",
+        "山东",
+        "河北",
+        "广东",
+        "江苏",
+        "甘肃",
+        "山西",
+        "青海",
+        "福建",
+        "浙江",
+        "湖北"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届-2029届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确，推测行政管理相关",
+        "accepted": [
+          "行政管理"
+        ],
+        "fit": "administrative_management"
+      },
+      "applicationRequirements": [
+        "仅限26-29届本科以上学历"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 2
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码登记报名",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 85,
+        "rankingKey": 1632369,
+        "level": "high",
+        "reasons": [
+          "专业高度匹配行政管理",
+          "本科或大专层次可报",
+          "央企平台，稳定性高",
+          "专业对口可能性大",
+          "全国多地可选"
+        ],
+        "concerns": [
+          "薪资福利未披露",
+          "报名方式需扫码，无直接链接",
+          "岗位要求不明确"
+        ]
+      },
+      "accessibility": 3,
+      "evidence": [
+        "招聘岗位包括行政专员",
+        "工作地点覆盖全国多地"
+      ],
+      "confidence": 0.7,
+      "id": "9570f943bec8084b",
+      "account": "央企求职网",
+      "reportDate": "2026-07-18",
+      "article": {
+        "title": "华润集团招聘办公室人员",
+        "url": "https://mp.weixin.qq.com/s/Lj02y8NxHyYW77rhAAnonA",
+        "publishedAt": "2026-07-18T06:20:00.000Z",
+        "summary": "华润集团2026年校园招聘，涵盖多个业务单元和岗位，面向26-29届本科及以上学历毕业生。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 86,
+        "rankingKey": 2009599999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "专业高度匹配行政管理",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资福利未披露",
+          "报名方式需扫码，无直接链接"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "深圳信步科技",
+      "organizationNature": "民企",
+      "industry": "科技",
+      "jobTitle": "职能支持类",
+      "jobDirections": [
+        "人力资源",
+        "财务",
+        "行政"
+      ],
+      "locations": [
+        "深圳"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "人力资源管理、财务管理、行政管理等相关专业",
+        "accepted": [
+          "人力资源管理",
+          "财务管理",
+          "行政管理"
+        ],
+        "fit": "administrative_management"
+      },
+      "applicationRequirements": [
+        "2027届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露具体薪资，提供有竞争力薪酬福利",
+        "salary": null,
+        "benefits": [
+          "五险一金",
+          "年终奖",
+          "带薪年假"
+        ],
+        "quality": 3
+      },
+      "deadline": null,
+      "applicationMethod": "网申",
+      "applicationUrl": "https://www.seavo.com/careers",
+      "referralCode": null,
+      "recommendation": {
+        "score": 89,
+        "rankingKey": 1633479,
+        "level": "high",
+        "reasons": [
+          "专业高度匹配行政管理",
+          "本科或大专层次可报",
+          "专业匹配度高，行政管理优先",
+          "职能岗位稳定",
+          "提前批机会"
+        ],
+        "concerns": [
+          "薪资未明确",
+          "仅限2027届",
+          "岗位数量可能有限"
+        ]
+      },
+      "accessibility": 4,
+      "evidence": [
+        "面向2027届本科及以上",
+        "职能支持类岗位"
+      ],
+      "confidence": 0.8,
+      "id": "7099e01e8e69087a",
+      "account": "北航就业",
+      "reportDate": "2026-07-18",
+      "article": {
+        "title": "招聘 | 深圳信步科技 | 2027届提前批启动",
+        "url": "https://mp.weixin.qq.com/s/72XIzuMkEyVLdBuWu2gZNA",
+        "publishedAt": "2026-07-18T10:37:10.000Z",
+        "summary": "深圳信步科技2027届提前批招聘，面向2027届硕士/本科，提供技术、产品、市场、职能等岗位，工作地点深圳。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 84,
+        "rankingKey": 2009399999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "报名入口明确，投递可操作性较高",
+          "专业高度匹配行政管理",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资未明确",
+          "仅限2027届"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "正大饲料（石门）有限公司",
+      "organizationNature": "外企",
+      "industry": "农业",
+      "jobTitle": "行政职能岗",
+      "jobDirections": [
+        "行政"
+      ],
+      "locations": [
+        "常德"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "应届生",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确，适合行政管理、管理类",
+        "accepted": [
+          "行政管理",
+          "管理类",
+          "broad"
+        ],
+        "fit": "administrative_management"
+      },
+      "applicationRequirements": [
+        "应届生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 2
+      },
+      "deadline": "2026-10-22",
+      "applicationMethod": "国聘官网",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 85,
+        "rankingKey": 1632389,
+        "level": "high",
+        "reasons": [
+          "专业高度匹配行政管理",
+          "本科或大专层次可报",
+          "专业匹配度高",
+          "应届生岗位",
+          "外资企业"
+        ],
+        "concerns": [
+          "薪资未披露",
+          "仅限应届生"
+        ]
+      },
+      "accessibility": 3,
+      "evidence": [
+        "行政职能岗",
+        "本科",
+        "应届生"
+      ],
+      "confidence": 0.9,
+      "id": "cfe42a812ff36442",
+      "account": "国聘",
+      "reportDate": "2026-07-17",
+      "article": {
+        "title": "外资合资企业招聘信息推荐 7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/GJJqbV8IyCV8yfdXsSIBbw",
+        "publishedAt": "2026-07-16T11:47:43.000Z",
+        "summary": "外资合资企业招聘信息推荐，涵盖行政、技术、销售等多类岗位，报名截止2026年10月22日。",
+        "ocrUsed": true,
+        "ocrImageCount": 5,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 83,
+        "rankingKey": 2009299999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "报名入口明确，投递可操作性较高",
+          "专业高度匹配行政管理",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "薪资未披露",
+          "仅限应届生"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "中国工商银行",
+      "organizationNature": "国企",
+      "industry": "银行",
+      "jobTitle": "星辰管培生",
+      "jobDirections": [
+        "管理培训生"
+      ],
+      "locations": [
+        "全国各省区及部分海外地区"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "全日制本科及以上学历",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业不限，但管理类、经济金融类优先",
+        "accepted": [
+          "不限"
+        ],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "应届生身份",
+        "全日制本科及以上"
+      ],
+      "compensation": {
+        "summary": "总行应届生年薪约25-30W，分行管培轮岗后总包可达近40W（含公积金），六险二金起步，部分七险二金，带薪休假、员工宿舍、食堂、节日补贴、交通通讯补贴、年度体检、解决户口等",
+        "salary": "250000-400000",
+        "benefits": [
+          "六险二金",
+          "带薪休假",
+          "员工宿舍",
+          "食堂",
+          "节日补贴",
+          "交通通讯补贴",
+          "年度体检",
+          "解决户口"
+        ],
+        "quality": 5
+      },
+      "deadline": null,
+      "applicationMethod": null,
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 75,
+        "rankingKey": 1345379,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级",
+          "国有大行平台，职业发展稳定，履历背书强",
+          "薪酬福利极具竞争力，总行年薪25-30W，分行可达近40W",
+          "六险二金等福利完善，外地员工可解决户口"
+        ],
+        "concerns": [
+          "竞争激烈，录取率不足3%",
+          "专业要求未明确，可能偏好管理类、经济金融类",
+          "报名方式、截止时间等关键信息未披露"
+        ]
+      },
+      "accessibility": 3,
+      "evidence": [
+        "星辰管培生为A类岗位",
+        "总行应届生年薪约25-30W",
+        "分行管培轮岗后总包可达近40W"
+      ],
+      "confidence": 0.8,
+      "id": "3735bfe7aa6fd4c7",
+      "account": "国企求职网",
+      "reportDate": "2026-07-18",
+      "article": {
+        "title": "工商银行2027秋招计划：秋招时间线，招聘岗位、考试时间！",
+        "url": "https://mp.weixin.qq.com/s/hLbRG88jTCmRdQazmuApgw",
+        "publishedAt": "2026-07-18T02:43:19.000Z",
+        "summary": "中国工商银行2027届秋季校园招聘即将启动，全国预计招录20000+人，涵盖星辰管培生、专业英才、科技菁英、客户经理、客服经理等岗位，面向26届、27届全日制本科及以上学历应届生。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 82,
+        "rankingKey": 2009199999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "薪资福利信息较有吸引力",
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "竞争激烈，录取率不足3%",
+          "专业要求未明确，可能偏好管理类、经济金融类"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "航空工业成都飞机工业（集团）有限责任公司",
+      "organizationNature": "央企",
+      "industry": "航空航天",
+      "jobTitle": "暑期开放日（提前批招聘）",
+      "jobDirections": [
+        "航空工业相关岗位"
+      ],
+      "locations": [
+        "成都"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士及以上学历",
+        "minimum": "硕士",
+        "preferred": null,
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业不限，但优先航空航天、机械、电子、计算机等相关专业",
+        "accepted": [
+          "不限"
+        ],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "2027届硕博士",
+        "需通过简历筛选"
+      ],
+      "compensation": {
+        "summary": "未披露具体薪资，提供提前批招聘机会",
+        "salary": null,
+        "benefits": [
+          "提前批招聘机会"
+        ],
+        "quality": 3
+      },
+      "deadline": null,
+      "applicationMethod": "通过公众号链接报名",
+      "applicationUrl": "https://mp.weixin.qq.com/s/dRgqMrCM0dmnbjH2Z0_clg",
+      "referralCode": null,
+      "recommendation": {
+        "score": 70,
+        "rankingKey": 1343379,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级",
+          "央企平台，行业领先",
+          "提前批招聘，机会优先",
+          "面向硕博士，学历匹配度高"
+        ],
+        "concerns": [
+          "薪资未披露",
+          "专业要求宽泛，竞争可能激烈",
+          "仅限2027届，往届生不可投"
+        ]
+      },
+      "accessibility": 3,
+      "evidence": [
+        "面向2027届硕博士",
+        "提供提前批招聘机会"
+      ],
+      "confidence": 0.8,
+      "id": "db59fc7692abdf43",
+      "account": "清华就业",
+      "reportDate": "2026-07-18",
+      "article": {
+        "title": "开放日｜航空工业成飞2026年暑期开放日",
+        "url": "https://mp.weixin.qq.com/s/dRgqMrCM0dmnbjH2Z0_clg",
+        "publishedAt": "2026-07-17T10:04:26.000Z",
+        "summary": "航空工业成飞2026年暑期开放日活动通知，面向2027届硕博士，提供提前批招聘机会。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 81,
+        "rankingKey": 2009099999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资未披露",
+          "专业要求宽泛，竞争可能激烈"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "中国工商银行",
+      "organizationNature": "国企",
+      "industry": "银行",
+      "jobTitle": "专业英才",
+      "jobDirections": [
+        "专业类岗位"
+      ],
+      "locations": [
+        "全国各省区及部分海外地区"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "全日制本科及以上学历",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业不限，但经济金融、财务会计、管理、法律、理工等专业优先",
+        "accepted": [
+          "不限"
+        ],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "应届生身份",
+        "全日制本科及以上"
+      ],
+      "compensation": {
+        "summary": "月薪8K-10K起，六险二金起步，部分七险二金，带薪休假、员工宿舍、食堂、节日补贴、交通通讯补贴、年度体检、解决户口等",
+        "salary": "8000-10000",
+        "benefits": [
+          "六险二金",
+          "带薪休假",
+          "员工宿舍",
+          "食堂",
+          "节日补贴",
+          "交通通讯补贴",
+          "年度体检",
+          "解决户口"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": null,
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 72,
+        "rankingKey": 1344379,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级",
+          "国有大行平台，专业对口岗位多",
+          "薪酬福利较好，月薪8K-10K起",
+          "福利完善，外地员工可解决户口"
+        ],
+        "concerns": [
+          "竞争激烈，笔试淘汰率高",
+          "专业要求未明确，可能偏好经济金融等专业",
+          "报名方式、截止时间等关键信息未披露"
+        ]
+      },
+      "accessibility": 3,
+      "evidence": [
+        "专业英才岗月薪8K-10K起",
+        "A类岗位"
+      ],
+      "confidence": 0.8,
+      "id": "bbfca679d01de424",
+      "account": "国企求职网",
+      "reportDate": "2026-07-18",
+      "article": {
+        "title": "工商银行2027秋招计划：秋招时间线，招聘岗位、考试时间！",
+        "url": "https://mp.weixin.qq.com/s/hLbRG88jTCmRdQazmuApgw",
+        "publishedAt": "2026-07-18T02:43:19.000Z",
+        "summary": "中国工商银行2027届秋季校园招聘即将启动，全国预计招录20000+人，涵盖星辰管培生、专业英才、科技菁英、客户经理、客服经理等岗位，面向26届、27届全日制本科及以上学历应届生。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 80,
+        "rankingKey": 2008999999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "薪资福利信息较有吸引力",
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "竞争激烈，笔试淘汰率高",
+          "专业要求未明确，可能偏好经济金融等专业"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "百度",
+      "organizationNature": "民企",
+      "industry": "互联网",
+      "jobTitle": "职能类岗位",
+      "jobDirections": [
+        "人力资源",
+        "财务",
+        "法务",
+        "行政",
+        "市场",
+        "公关"
+      ],
+      "locations": [
+        "北京",
+        "上海",
+        "深圳",
+        "广州",
+        "成都",
+        "杭州",
+        "武汉",
+        "西安",
+        "南京",
+        "厦门",
+        "重庆",
+        "长沙"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "人力资源、财务、法律、行政管理、市场营销等相关专业",
+        "accepted": [
+          "人力资源管理",
+          "财务管理",
+          "法学",
+          "行政管理",
+          "市场营销"
+        ],
+        "fit": "administrative_management"
+      },
+      "applicationRequirements": [
+        "2027届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "网申",
+      "applicationUrl": "https://talent.baidu.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 81,
+        "rankingKey": 1630469,
+        "level": "high",
+        "reasons": [
+          "专业高度匹配行政管理",
+          "本科或大专层次可报",
+          "职能岗位专业匹配度高，适合行政管理等文科社科学生",
+          "百度平台稳定，福利完善",
+          "工作地点选择多"
+        ],
+        "concerns": [
+          "薪资福利未披露",
+          "仅面向2027届应届生",
+          "职能岗位竞争可能激烈"
+        ]
+      },
+      "accessibility": 4,
+      "evidence": [
+        "文章标题为百度2027届校园招聘",
+        "正文提及职能类岗位方向"
+      ],
+      "confidence": 0.7,
+      "id": "c217d2745e884775",
+      "account": "北大就业",
+      "reportDate": "2026-07-17",
+      "article": {
+        "title": "招聘｜百度2027届校园招聘",
+        "url": "https://mp.weixin.qq.com/s/-Bl-Z3nxibaV-nW2C2Irpw",
+        "publishedAt": "2026-07-16T13:19:48.000Z",
+        "summary": "百度2027届校园招聘信息，包含技术、产品、设计、职能等多个岗位方向。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 80,
+        "rankingKey": 2008999999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "报名入口明确，投递可操作性较高",
+          "专业高度匹配行政管理",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资福利未披露",
+          "仅面向2027届应届生"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "中国工商银行",
+      "organizationNature": "国企",
+      "industry": "银行",
+      "jobTitle": "客服经理",
+      "jobDirections": [
+        "服务类岗位"
+      ],
+      "locations": [
+        "全国各省区及部分海外地区"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "全日制本科及以上学历",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业不限",
+        "accepted": [
+          "不限"
+        ],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "应届生身份",
+        "全日制本科及以上"
+      ],
+      "compensation": {
+        "summary": "薪酬未具体披露，六险二金起步，部分七险二金，带薪休假、员工宿舍、食堂、节日补贴、交通通讯补贴、年度体检、解决户口等",
+        "salary": null,
+        "benefits": [
+          "六险二金",
+          "带薪休假",
+          "员工宿舍",
+          "食堂",
+          "节日补贴",
+          "交通通讯补贴",
+          "年度体检",
+          "解决户口"
+        ],
+        "quality": 3
+      },
+      "deadline": null,
+      "applicationMethod": null,
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 72,
+        "rankingKey": 1343469,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级",
+          "专业不限，门槛相对较低",
+          "国有大行平台，福利完善",
+          "外地员工可解决户口"
+        ],
+        "concerns": [
+          "薪资未明确，可能较低",
+          "岗位发展空间有限",
+          "报名方式、截止时间等关键信息未披露"
+        ]
+      },
+      "accessibility": 4,
+      "evidence": [
+        "客服经理为A类岗位",
+        "专业不限"
+      ],
+      "confidence": 0.7,
+      "id": "58f4cc76ac973c4f",
+      "account": "国企求职网",
+      "reportDate": "2026-07-18",
+      "article": {
+        "title": "工商银行2027秋招计划：秋招时间线，招聘岗位、考试时间！",
+        "url": "https://mp.weixin.qq.com/s/hLbRG88jTCmRdQazmuApgw",
+        "publishedAt": "2026-07-18T02:43:19.000Z",
+        "summary": "中国工商银行2027届秋季校园招聘即将启动，全国预计招录20000+人，涵盖星辰管培生、专业英才、科技菁英、客户经理、客服经理等岗位，面向26届、27届全日制本科及以上学历应届生。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 79,
+        "rankingKey": 2008899999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资未明确，可能较低",
+          "岗位发展空间有限"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "中国工商银行",
+      "organizationNature": "国企",
+      "industry": "银行",
+      "jobTitle": "客户经理",
+      "jobDirections": [
+        "营销类岗位"
+      ],
+      "locations": [
+        "全国各省区及部分海外地区"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "全日制本科及以上学历",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业不限，但经济金融、市场营销、管理类优先",
+        "accepted": [
+          "不限"
+        ],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "应届生身份",
+        "全日制本科及以上"
+      ],
+      "compensation": {
+        "summary": "薪酬与绩效挂钩，具体未披露，六险二金起步，部分七险二金，带薪休假、员工宿舍、食堂、节日补贴、交通通讯补贴、年度体检、解决户口等",
+        "salary": null,
+        "benefits": [
+          "六险二金",
+          "带薪休假",
+          "员工宿舍",
+          "食堂",
+          "节日补贴",
+          "交通通讯补贴",
+          "年度体检",
+          "解决户口"
+        ],
+        "quality": 3
+      },
+      "deadline": null,
+      "applicationMethod": null,
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 70,
+        "rankingKey": 1343369,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级",
+          "专业不限，适合多专业背景",
+          "国有大行平台，职业发展稳定",
+          "福利完善，外地员工可解决户口"
+        ],
+        "concerns": [
+          "薪资未明确，可能依赖绩效",
+          "竞争激烈，笔试淘汰率高",
+          "报名方式、截止时间等关键信息未披露"
+        ]
+      },
+      "accessibility": 3,
+      "evidence": [
+        "客户经理为A类岗位",
+        "专业不限"
+      ],
+      "confidence": 0.7,
+      "id": "5d84524139528f08",
+      "account": "国企求职网",
+      "reportDate": "2026-07-18",
+      "article": {
+        "title": "工商银行2027秋招计划：秋招时间线，招聘岗位、考试时间！",
+        "url": "https://mp.weixin.qq.com/s/hLbRG88jTCmRdQazmuApgw",
+        "publishedAt": "2026-07-18T02:43:19.000Z",
+        "summary": "中国工商银行2027届秋季校园招聘即将启动，全国预计招录20000+人，涵盖星辰管培生、专业英才、科技菁英、客户经理、客服经理等岗位，面向26届、27届全日制本科及以上学历应届生。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 79,
+        "rankingKey": 2008899999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资未明确，可能依赖绩效",
+          "竞争激烈，笔试淘汰率高"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "中汇人寿保险股份有限公司",
+      "organizationNature": "央企",
+      "industry": "金融保险",
+      "jobTitle": "综合柜员岗",
+      "jobDirections": [
+        "综合柜员"
+      ],
+      "locations": [
+        "广州"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "应届生",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "不限专业",
+        "accepted": [],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "应届生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 2
+      },
+      "deadline": null,
+      "applicationMethod": "国聘平台",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 66,
+        "rankingKey": 1332589,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "本科或大专层次可报",
+          "央企背景",
+          "地点广州",
+          "应届生可投",
+          "专业不限"
+        ],
+        "concerns": [
+          "薪资未披露"
+        ]
+      },
+      "accessibility": 5,
+      "evidence": [
+        "中汇人寿保险股份有限公司综合柜员岗广州本科应届生"
+      ],
+      "confidence": 0.9,
+      "id": "e80b4161e13044a1",
+      "account": "国聘",
+      "reportDate": "2026-07-17",
+      "article": {
+        "title": "央企名企广东省岗位推荐 7月（第一期）",
+        "url": "https://mp.weixin.qq.com/s/ritNEo7PrVg5xGucqLs9ig",
+        "publishedAt": "2026-07-16T11:47:43.000Z",
+        "summary": "央企名企广东省岗位推荐，涵盖多个行业，报名截止2026年10月12日。",
+        "ocrUsed": true,
+        "ocrImageCount": 3,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 73,
+        "rankingKey": 2008299999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "报名入口明确，投递可操作性较高",
+          "专业限制较宽或不限专业",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资未披露"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "华润集团",
+      "organizationNature": "央企",
+      "industry": "综合",
+      "jobTitle": "管培生",
+      "jobDirections": [
+        "管理培训生"
+      ],
+      "locations": [
+        "北京",
+        "陕西",
+        "山东",
+        "河北",
+        "广东",
+        "江苏",
+        "甘肃",
+        "山西",
+        "青海",
+        "福建",
+        "浙江",
+        "湖北"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届-2029届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确，专业不限",
+        "accepted": [],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "仅限26-29届本科以上学历"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 2
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码登记报名",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 63,
+        "rankingKey": 1332369,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "本科或大专层次可报",
+          "管培生培养体系完善",
+          "央企平台发展空间大"
+        ],
+        "concerns": [
+          "薪资福利未披露",
+          "报名方式需扫码",
+          "竞争激烈"
+        ]
+      },
+      "accessibility": 3,
+      "evidence": [
+        "招聘岗位包括管培生"
+      ],
+      "confidence": 0.7,
+      "id": "d7c8b74a4e7d2dd1",
+      "account": "央企求职网",
+      "reportDate": "2026-07-18",
+      "article": {
+        "title": "华润集团招聘办公室人员",
+        "url": "https://mp.weixin.qq.com/s/Lj02y8NxHyYW77rhAAnonA",
+        "publishedAt": "2026-07-18T06:20:00.000Z",
+        "summary": "华润集团2026年校园招聘，涵盖多个业务单元和岗位，面向26-29届本科及以上学历毕业生。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 71,
+        "rankingKey": 2008099999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "专业限制较宽或不限专业",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资福利未披露",
+          "报名方式需扫码"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "华润集团",
+      "organizationNature": "央企",
+      "industry": "综合",
+      "jobTitle": "监控员",
+      "jobDirections": [
+        "监控"
+      ],
+      "locations": [
+        "北京",
+        "陕西",
+        "山东",
+        "河北",
+        "广东",
+        "江苏",
+        "甘肃",
+        "山西",
+        "青海",
+        "福建",
+        "浙江",
+        "湖北"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届-2029届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确，专业不限",
+        "accepted": [],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "仅限26-29届本科以上学历"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 2
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码登记报名",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 63,
+        "rankingKey": 1332369,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "本科或大专层次可报",
+          "央企岗位稳定",
+          "门槛相对较低"
+        ],
+        "concerns": [
+          "薪资福利未披露",
+          "报名方式需扫码",
+          "岗位发展空间有限"
+        ]
+      },
+      "accessibility": 3,
+      "evidence": [
+        "招聘岗位包括监控员"
+      ],
+      "confidence": 0.7,
+      "id": "146ea7237bc2e590",
+      "account": "央企求职网",
+      "reportDate": "2026-07-18",
+      "article": {
+        "title": "华润集团招聘办公室人员",
+        "url": "https://mp.weixin.qq.com/s/Lj02y8NxHyYW77rhAAnonA",
+        "publishedAt": "2026-07-18T06:20:00.000Z",
+        "summary": "华润集团2026年校园招聘，涵盖多个业务单元和岗位，面向26-29届本科及以上学历毕业生。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 71,
+        "rankingKey": 2008099999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "专业限制较宽或不限专业",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资福利未披露",
+          "报名方式需扫码"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "华润集团",
+      "organizationNature": "央企",
+      "industry": "综合",
+      "jobTitle": "运营岗",
+      "jobDirections": [
+        "运营"
+      ],
+      "locations": [
+        "北京",
+        "陕西",
+        "山东",
+        "河北",
+        "广东",
+        "江苏",
+        "甘肃",
+        "山西",
+        "青海",
+        "福建",
+        "浙江",
+        "湖北"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届-2029届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确，专业不限",
+        "accepted": [],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "仅限26-29届本科以上学历"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 2
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码登记报名",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 63,
+        "rankingKey": 1332369,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "本科或大专层次可报",
+          "央企运营岗位入门门槛低",
+          "适合跨专业"
+        ],
+        "concerns": [
+          "薪资福利未披露",
+          "报名方式需扫码",
+          "岗位内容不明确"
+        ]
+      },
+      "accessibility": 3,
+      "evidence": [
+        "招聘岗位包括运营岗"
+      ],
+      "confidence": 0.7,
+      "id": "e8010c79563e5b9b",
+      "account": "央企求职网",
+      "reportDate": "2026-07-18",
+      "article": {
+        "title": "华润集团招聘办公室人员",
+        "url": "https://mp.weixin.qq.com/s/Lj02y8NxHyYW77rhAAnonA",
+        "publishedAt": "2026-07-18T06:20:00.000Z",
+        "summary": "华润集团2026年校园招聘，涵盖多个业务单元和岗位，面向26-29届本科及以上学历毕业生。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 71,
+        "rankingKey": 2008099999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "专业限制较宽或不限专业",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资福利未披露",
+          "报名方式需扫码"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "华润集团",
+      "organizationNature": "央企",
+      "industry": "综合",
+      "jobTitle": "保管员",
+      "jobDirections": [
+        "保管"
+      ],
+      "locations": [
+        "北京",
+        "陕西",
+        "山东",
+        "河北",
+        "广东",
+        "江苏",
+        "甘肃",
+        "山西",
+        "青海",
+        "福建",
+        "浙江",
+        "湖北"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届-2029届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确，专业不限",
+        "accepted": [],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "仅限26-29届本科以上学历"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 2
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码登记报名",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 63,
+        "rankingKey": 1332369,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "本科或大专层次可报",
+          "央企岗位稳定",
+          "门槛低"
+        ],
+        "concerns": [
+          "薪资福利未披露",
+          "报名方式需扫码",
+          "岗位发展空间有限"
+        ]
+      },
+      "accessibility": 3,
+      "evidence": [
+        "招聘岗位包括保管员"
+      ],
+      "confidence": 0.7,
+      "id": "25e5d144e5e46c4b",
+      "account": "央企求职网",
+      "reportDate": "2026-07-18",
+      "article": {
+        "title": "华润集团招聘办公室人员",
+        "url": "https://mp.weixin.qq.com/s/Lj02y8NxHyYW77rhAAnonA",
+        "publishedAt": "2026-07-18T06:20:00.000Z",
+        "summary": "华润集团2026年校园招聘，涵盖多个业务单元和岗位，面向26-29届本科及以上学历毕业生。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 71,
+        "rankingKey": 2008099999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "专业限制较宽或不限专业",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资福利未披露",
+          "报名方式需扫码"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    },
+    {
+      "organization": "百度",
+      "organizationNature": "民企",
+      "industry": "互联网",
+      "jobTitle": "产品类岗位",
+      "jobDirections": [
+        "产品经理",
+        "产品运营",
+        "商业产品",
+        "用户产品",
+        "数据产品"
+      ],
+      "locations": [
+        "北京",
+        "上海",
+        "深圳",
+        "广州",
+        "成都",
+        "杭州",
+        "武汉",
+        "西安",
+        "南京",
+        "厦门",
+        "重庆",
+        "长沙"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业不限",
+        "accepted": [],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "2027届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "网申",
+      "applicationUrl": "https://talent.baidu.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 59,
+        "rankingKey": 1330469,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "本科或大专层次可报",
+          "产品岗位专业不限，适合文科社科背景学生",
+          "百度产品线丰富，成长空间大",
+          "工作地点选择多"
+        ],
+        "concerns": [
+          "薪资福利未披露",
+          "仅面向2027届应届生",
+          "竞争激烈"
+        ]
+      },
+      "accessibility": 4,
+      "evidence": [
+        "文章标题为百度2027届校园招聘",
+        "正文提及产品类岗位方向"
+      ],
+      "confidence": 0.7,
+      "id": "ba076f5ff13bf9ab",
+      "account": "北大就业",
+      "reportDate": "2026-07-17",
+      "article": {
+        "title": "招聘｜百度2027届校园招聘",
+        "url": "https://mp.weixin.qq.com/s/-Bl-Z3nxibaV-nW2C2Irpw",
+        "publishedAt": "2026-07-16T13:19:48.000Z",
+        "summary": "百度2027届校园招聘信息，包含技术、产品、设计、职能等多个岗位方向。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      },
+      "personalized": {
+        "eligible": true,
+        "score": 65,
+        "rankingKey": 2007499999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "报名入口明确，投递可操作性较高",
+          "专业限制较宽或不限专业",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资福利未披露",
+          "仅面向2027届应届生"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      }
+    }
+  ]
+}

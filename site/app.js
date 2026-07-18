@@ -1,23 +1,34 @@
+const SESSION_KEY = "wx_job_monitor_site_session";
+
 const state = {
-  index: null,
-  report: null,
+  token: localStorage.getItem(SESSION_KEY) || "",
+  runtime: { authServiceUrl: "" },
   status: null,
-  runtime: null,
+  index: { days: [] },
+  history: { jobs: [] },
+  pool: { jobs: [], total: 0, maxSize: 30 },
+  profile: null,
   accountsConfig: { count: 0, accounts: [] },
   accountDrafts: [],
-  account: "",
-  level: "",
-  query: "",
+  latestDate: "",
+  todayJobs: [],
 };
 
 const $ = selector => document.querySelector(selector);
-const text = (selector, value) => { const node = $(selector); if (node) node.textContent = value; };
+const text = (selector, value) => { const element = $(selector); if (element) element.textContent = String(value); };
+
+function node(tag, className = "", content = null) {
+  const element = document.createElement(tag);
+  if (className) element.className = className;
+  if (content !== null && content !== undefined) element.textContent = String(content);
+  return element;
+}
 
 async function getJson(url, fallback = null) {
   try {
     const response = await fetch(`${url}${url.includes("?") ? "&" : "?"}v=${Date.now()}`, {
       cache: "no-store",
-      signal: AbortSignal.timeout(8000),
+      signal: AbortSignal.timeout(10_000),
     });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
@@ -25,6 +36,26 @@ async function getJson(url, fallback = null) {
     console.warn(`无法读取 ${url}`, error);
     return fallback;
   }
+}
+
+async function apiRequest(path, options = {}) {
+  const base = state.runtime?.authServiceUrl?.replace(/\/$/, "");
+  if (!base) throw new Error("登录服务尚未配置");
+  const headers = new Headers(options.headers || {});
+  if (state.token) headers.set("Authorization", `Bearer ${state.token}`);
+  const response = await fetch(`${base}${path}`, {
+    ...options,
+    headers,
+    cache: "no-store",
+    signal: options.signal || AbortSignal.timeout(12_000),
+  });
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    const error = new Error(payload.message || `请求失败（HTTP ${response.status}）`);
+    error.status = response.status;
+    throw error;
+  }
+  return payload;
 }
 
 function fmtDateTime(value) {
@@ -37,27 +68,35 @@ function fmtDateTime(value) {
 function fmtDate(value) {
   if (!value) return "—";
   const date = new Date(`${value}T00:00:00+08:00`);
-  return new Intl.DateTimeFormat("zh-CN", { timeZone: "Asia/Shanghai", year: "numeric", month: "long", day: "numeric", weekday: "short" }).format(date);
+  return new Intl.DateTimeFormat("zh-CN", {
+    timeZone: "Asia/Shanghai", year: "numeric", month: "long", day: "numeric", weekday: "short",
+  }).format(date);
+}
+
+function compactText(values, fallback = "未披露") {
+  const list = Array.isArray(values) ? values.filter(Boolean) : [];
+  return list.length ? list.join("、") : fallback;
 }
 
 function setServiceStatus(kind, label) {
-  const node = $("#service-status");
-  node.className = `service-status is-${kind}`;
-  node.lastElementChild.textContent = label;
+  const element = $("#service-status");
+  if (!element) return;
+  element.className = `service-status is-${kind}`;
+  element.lastElementChild.textContent = label;
 }
 
-function updateStats(stats) {
-  text("#stat-accounts", stats ? `${stats.accountsSucceeded}/${stats.accountsConfigured}` : "—");
-  text("#stat-articles", stats?.articlesScanned ?? "—");
-  text("#stat-new", stats?.newArticles ?? "—");
-  text("#stat-relevant", stats?.positionsExtracted ?? stats?.relevantArticles ?? "—");
+function unlockPage() {
+  $("#access-gate").hidden = true;
+  $("#app-shell").hidden = false;
 }
 
-function node(tag, className, content) {
-  const element = document.createElement(tag);
-  if (className) element.className = className;
-  if (content !== undefined && content !== null) element.textContent = String(content);
-  return element;
+function showLogin(message, isError = false) {
+  $("#access-gate").hidden = false;
+  $("#app-shell").hidden = true;
+  const status = $("#login-status");
+  status.textContent = message;
+  status.classList.toggle("is-error", isError);
+  if (isError) $("#site-password").focus();
 }
 
 function chip(label, extra = "") {
@@ -66,21 +105,22 @@ function chip(label, extra = "") {
 
 function fitLabel(value) {
   return ({
-    administrative_management: "行政管理优先",
-    management: "管理类匹配",
-    humanities: "文科匹配",
+    administrative_management: "行政管理匹配",
+    management: "其他管理类",
+    humanities: "其他文科",
     broad: "专业不限",
     uncertain: "专业待核对",
-    mismatch: "专业低匹配",
+    mismatch: "专业不匹配",
   })[value] || "专业待核对";
 }
 
 function educationLabel(value) {
-  return ({ master: "硕士优先", bachelor_associate: "本科 / 大专", unspecified: "学历待核对", phd_required: "硬性博士" })[value] || "学历待核对";
-}
-
-function levelLabel(value) {
-  return ({ high: "优先推荐", medium: "可以考虑", low: "谨慎考虑" })[value] || "待评估";
+  return ({
+    master: "硕士岗位",
+    bachelor_associate: "本科 / 大专层次",
+    unspecified: "学历待核对",
+    phd_required: "仅博士",
+  })[value] || "学历待核对";
 }
 
 function previousGraduateLabel(value) {
@@ -89,10 +129,7 @@ function previousGraduateLabel(value) {
 
 function appendList(container, values, emptyText = "原文未披露") {
   const list = Array.isArray(values) ? values.filter(Boolean) : [];
-  if (!list.length) {
-    container.append(node("p", "detail-empty", emptyText));
-    return;
-  }
+  if (!list.length) return container.append(node("p", "detail-empty", emptyText));
   const ul = node("ul", "detail-list");
   list.forEach(value => ul.append(node("li", "", value)));
   container.append(ul);
@@ -106,6 +143,175 @@ function detailBlock(title, summary, values = []) {
   return block;
 }
 
+function jobRanking(job) {
+  return Number(job.personalized?.rankingKey || job.recommendation?.rankingKey || 0);
+}
+
+function sortJobs(jobs) {
+  return [...(jobs || [])].sort((a, b) =>
+    jobRanking(b) - jobRanking(a)
+      || Number(b.personalized?.score || b.recommendation?.score || 0) - Number(a.personalized?.score || a.recommendation?.score || 0)
+      || Date.parse(b.article?.publishedAt || 0) - Date.parse(a.article?.publishedAt || 0),
+  );
+}
+
+function renderProfile() {
+  const profile = state.profile || {};
+  const container = $("#profile-chips");
+  container.replaceChildren(
+    chip(profile.school || "北京师范大学", "profile-chip"),
+    chip(profile.education || "硕士研究生", "profile-chip"),
+    chip(`${profile.major || "行政管理"}专业`, "profile-chip strong"),
+    chip(profile.freshGraduate === false ? "非应届" : "应届毕业生", "profile-chip strong"),
+  );
+}
+
+function renderQualityCard(job) {
+  const card = node("article", "job-card quality-card level-high");
+  const source = node("div", "job-source-column");
+  source.append(node("span", "job-source", job.account || "来源未明确"), node("span", "job-date", job.reportDate || fmtDateTime(job.article?.publishedAt)));
+
+  const body = node("div", "job-body");
+  const headingRow = node("div", "job-heading-row");
+  const heading = node("div", "job-heading");
+  heading.append(node("h3", "", job.jobTitle || "岗位未命名"), node("p", "job-organization", job.organization || "单位未明确"));
+  const score = node("div", "score-badge is-high");
+  score.append(node("strong", "", job.personalized?.score ?? "—"), node("span", "", "个性化分"));
+  headingRow.append(heading, score);
+
+  const chips = node("div", "chips");
+  chips.append(chip(fitLabel(job.majors?.fit), `fit-${job.majors?.fit || "uncertain"}`));
+  chips.append(chip(educationLabel(job.education?.tier)));
+  chips.append(chip(job.graduateScope || "届别未明确"));
+  chips.append(chip(job.organizationNature || "单位性质未披露"));
+  (job.locations || []).slice(0, 3).forEach(value => chips.append(chip(value)));
+  if (job.compensation?.salary) chips.append(chip(job.compensation.salary, "salary"));
+  if (job.article?.ocrUsed) chips.append(chip(`OCR ${job.article.ocrImageCount} 图`, "ocr"));
+
+  const verdicts = node("div", "verdicts");
+  const pros = node("section", "verdict verdict-pro");
+  pros.append(node("h4", "", "为什么推荐"));
+  appendList(pros, job.personalized?.reasons, "已通过全部硬条件");
+  const concerns = node("section", "verdict verdict-con");
+  concerns.append(node("h4", "", "仍需注意"));
+  appendList(concerns, job.personalized?.concerns, "暂无明显风险");
+  verdicts.append(pros, concerns);
+
+  const details = node("details", "job-details");
+  details.append(node("summary", "", "查看岗位、学历、专业、报考条件与待遇"));
+  const grid = node("div", "detail-grid");
+  grid.append(
+    detailBlock("单位与岗位", job.organization || "未明确单位", [
+      `企业性质：${job.organizationNature || "未披露"}`,
+      `行业：${job.industry || "未披露"}`,
+      `岗位方向：${compactText(job.jobDirections)}`,
+      `招聘类型：${compactText(job.employmentTypes)}`,
+    ]),
+    detailBlock("学历与届别", job.education?.summary || "未明确", [
+      job.education?.minimum ? `最低：${job.education.minimum}` : "",
+      job.education?.preferred ? `优先：${job.education.preferred}` : "",
+      `适用届别：${job.graduateScope || "未明确"}`,
+      `往届生：${previousGraduateLabel(job.previousGraduatesEligible)}`,
+    ]),
+    detailBlock("专业要求", job.majors?.summary || "未明确", job.majors?.accepted || []),
+    detailBlock("报考要求", null, job.applicationRequirements || []),
+    detailBlock("薪资与福利", job.compensation?.summary || "未披露", [
+      job.compensation?.salary ? `薪资：${job.compensation.salary}` : "",
+      ...(job.compensation?.benefits || []),
+    ]),
+    detailBlock("报名信息", null, [
+      job.headcount ? `人数：${job.headcount}` : "",
+      `地点：${compactText(job.locations)}`,
+      job.deadline ? `截止：${job.deadline}` : "截止：未披露",
+      job.applicationMethod ? `方式：${job.applicationMethod}` : "",
+      job.applicationUrl ? `网申：${job.applicationUrl}` : "网申：未披露",
+      job.referralCode ? `内推码：${job.referralCode}` : "",
+    ]),
+  );
+  details.append(grid);
+  body.append(headingRow, chips, verdicts, details);
+
+  const action = node("div", "job-action");
+  const sourceLink = node("a", "job-link", "查看原文 ↗");
+  sourceLink.href = job.article?.url || "#";
+  sourceLink.target = "_blank";
+  sourceLink.rel = "noopener noreferrer";
+  action.append(sourceLink);
+  if (job.applicationUrl) {
+    const applyLink = node("a", "job-link job-apply-link", "立即网申 ↗");
+    applyLink.href = job.applicationUrl;
+    applyLink.target = "_blank";
+    applyLink.rel = "noopener noreferrer";
+    action.append(applyLink);
+  }
+  card.append(source, body, action);
+  return card;
+}
+
+function renderQualityResults() {
+  const quality = sortJobs(state.todayJobs.filter(job => job.personalized?.eligible));
+  const container = $("#quality-results");
+  container.replaceChildren(...quality.map(renderQualityCard));
+  text("#quality-count", `${quality.length} 个`);
+  text("#stat-quality-jobs", quality.length);
+  $("#quality-empty").hidden = quality.length !== 0;
+}
+
+function renderAllJobs() {
+  const jobs = sortJobs(state.todayJobs);
+  const container = $("#all-jobs-list");
+  container.replaceChildren();
+  jobs.forEach((job, index) => {
+    const row = node("div", `compact-job-row${job.personalized?.eligible ? " is-quality" : ""}`);
+    row.setAttribute("role", "row");
+    const titleCell = node("span", "compact-title-cell");
+    titleCell.append(node("b", "rank-number", index + 1));
+    const title = node("a", "compact-job-title", job.jobTitle || "岗位未命名");
+    title.href = job.article?.url || "#";
+    title.target = "_blank";
+    title.rel = "noopener noreferrer";
+    titleCell.append(title, node("small", "", job.organization || "单位未明确"));
+    if (job.personalized?.eligible) titleCell.append(node("em", "quality-label", "优质"));
+    row.append(
+      titleCell,
+      node("span", "", compactText(job.locations, "未披露")),
+      node("span", "", job.education?.summary || "未明确"),
+      node("span", "", job.deadline || "未披露"),
+    );
+    container.append(row);
+  });
+  text("#all-jobs-count", `${jobs.length} 个 · 点击展开`);
+  text("#stat-all-jobs", jobs.length);
+}
+
+function renderPool() {
+  const jobs = sortJobs(state.pool?.jobs || []).slice(0, 30);
+  const container = $("#quality-pool-list");
+  container.replaceChildren();
+  jobs.forEach((job, index) => {
+    const row = node("article", "pool-row");
+    row.append(node("span", "pool-rank", String(index + 1).padStart(2, "0")));
+    const body = node("div", "pool-body");
+    const title = node("a", "", job.jobTitle || "岗位未命名");
+    title.href = job.article?.url || "#";
+    title.target = "_blank";
+    title.rel = "noopener noreferrer";
+    body.append(title, node("small", "", `${job.organization || "单位未明确"} · ${compactText(job.locations)} · ${job.education?.summary || "学历未明确"} · 截止 ${job.deadline || "未披露"}`));
+    const score = node("strong", "pool-score", job.personalized?.score ?? "—");
+    score.title = "个性化分数";
+    row.append(body, score);
+    container.append(row);
+  });
+  if (!jobs.length) container.append(node("p", "pool-empty", "岗位池尚为空，下一次采集后会自动补充。"));
+  text("#pool-count", `${jobs.length} / 30`);
+}
+
+function updateStats() {
+  const stats = state.status?.stats || {};
+  text("#stat-accounts", stats.accountsConfigured !== undefined ? `${stats.accountsSucceeded || 0}/${stats.accountsConfigured}` : "—");
+  text("#stat-articles", stats.articlesScanned ?? "—");
+}
+
 function fullAccountConfig() {
   return [...(state.accountsConfig?.accounts || []), ...state.accountDrafts];
 }
@@ -116,18 +322,15 @@ function accountConfigJson() {
 
 function setAccountFormStatus(message, isError = false) {
   const status = $("#account-form-status");
-  if (!status) return;
   status.textContent = message;
   status.classList.toggle("is-error", isError);
 }
 
 function renderManagedAccounts() {
   const container = $("#managed-account-list");
-  if (!container) return;
   container.replaceChildren();
   const committed = state.accountsConfig?.accounts || [];
-  const accounts = fullAccountConfig();
-  accounts.forEach((account, index) => {
+  fullAccountConfig().forEach((account, index) => {
     const draft = index >= committed.length;
     const card = node("article", `managed-account${draft ? " is-draft" : ""}`);
     card.append(node("span", "managed-account-index", index + 1));
@@ -135,297 +338,85 @@ function renderManagedAccounts() {
     const title = node("strong", "", account.name);
     if (draft) title.append(node("span", "draft-label", "待提交"));
     body.append(title, node("code", "", account.fakeid));
-    const metadata = [account.alias ? `微信号：${account.alias}` : "微信号未填写", account.note || ""].filter(Boolean).join(" · ");
-    body.append(node("small", "", metadata));
+    body.append(node("small", "", [account.alias ? `微信号：${account.alias}` : "微信号未填写", account.note || ""].filter(Boolean).join(" · ")));
     card.append(body);
     container.append(card);
   });
-  const committedCount = committed.length;
-  const draftCount = state.accountDrafts.length;
-  text("#managed-account-count", draftCount ? `${committedCount} 个已生效 · ${draftCount} 个草稿` : `${committedCount} 个已生效`);
-  text("#tracked-account-count", committedCount || 0);
+  text("#managed-account-count", state.accountDrafts.length ? `${committed.length} 个已生效 · ${state.accountDrafts.length} 个草稿` : `${committed.length} 个已生效`);
   const actions = $("#account-draft-actions");
-  const preview = $("#account-config-preview");
-  if (actions) actions.hidden = draftCount === 0;
-  if (preview) preview.value = accountConfigJson();
+  actions.hidden = state.accountDrafts.length === 0;
+  $("#account-config-preview").value = accountConfigJson();
 }
 
 function addAccountDraft(event) {
   event.preventDefault();
   const form = event.currentTarget;
-  const formData = new FormData(form);
-  const name = String(formData.get("name") || "").trim();
-  const fakeid = String(formData.get("fakeid") || "").trim();
-  const alias = String(formData.get("alias") || "").trim();
-  const note = String(formData.get("note") || "").trim();
-  if (!name || !fakeid) return setAccountFormStatus("公众号名称和 fakeid 都必须填写。", true);
-  if (!/^[A-Za-z0-9+/]{8,}={0,2}$/.test(fakeid)) {
-    return setAccountFormStatus("fakeid 格式不正确：应为类似 MzA...== 的 Base64 风格字符串，不要填写 gh_ 开头的 user_name。", true);
-  }
-  const accounts = fullAccountConfig();
-  if (accounts.some(account => account.name === name)) return setAccountFormStatus(`公众号名称“${name}”已经存在。`, true);
-  if (accounts.some(account => account.fakeid === fakeid)) return setAccountFormStatus("这个 fakeid 已经存在于列表中。", true);
-  const account = { name, fakeid };
-  if (alias) account.alias = alias;
-  if (note) account.note = note;
+  const data = new FormData(form);
+  const account = {
+    name: String(data.get("name") || "").trim(),
+    fakeid: String(data.get("fakeid") || "").trim(),
+    alias: String(data.get("alias") || "").trim(),
+    note: String(data.get("note") || "").trim(),
+  };
+  if (!account.name || !account.fakeid) return setAccountFormStatus("公众号名称和 fakeid 都必须填写。", true);
+  if (!/^[A-Za-z0-9+/]{8,}={0,2}$/.test(account.fakeid)) return setAccountFormStatus("fakeid 格式不正确，请不要填写 gh_ 开头的 user_name。", true);
+  if (fullAccountConfig().some(value => value.name === account.name || value.fakeid === account.fakeid)) return setAccountFormStatus("名称或 fakeid 已存在。", true);
+  if (!account.alias) delete account.alias;
+  if (!account.note) delete account.note;
   state.accountDrafts.push(account);
   form.reset();
   renderManagedAccounts();
-  setAccountFormStatus(`已把“${name}”加入草稿。复制完整 JSON 并到 GitHub 提交后才会正式生效。`);
+  setAccountFormStatus(`已把“${account.name}”加入草稿，提交到 GitHub 后生效。`);
 }
 
 async function copyAccountConfig() {
-  const value = accountConfigJson();
   try {
-    await navigator.clipboard.writeText(value);
-    setAccountFormStatus("完整 accounts.json 已复制。现在打开 GitHub 编辑页并全选替换。 ");
+    await navigator.clipboard.writeText(accountConfigJson());
+    setAccountFormStatus("完整 accounts.json 已复制。现在到 GitHub 编辑页全选替换并提交。 ");
   } catch {
     const preview = $("#account-config-preview");
-    preview.focus();
-    preview.select();
-    document.execCommand("copy");
-    setAccountFormStatus("完整 accounts.json 已复制。现在打开 GitHub 编辑页并全选替换。 ");
+    preview.focus(); preview.select(); document.execCommand("copy");
+    setAccountFormStatus("完整 accounts.json 已复制。现在到 GitHub 编辑页全选替换并提交。 ");
   }
 }
 
 function downloadAccountConfig() {
   const url = URL.createObjectURL(new Blob([accountConfigJson()], { type: "application/json;charset=utf-8" }));
   const link = node("a");
-  link.href = url;
-  link.download = "accounts.json";
-  document.body.append(link);
-  link.click();
-  link.remove();
-  URL.revokeObjectURL(url);
-  setAccountFormStatus("已下载 accounts.json。可在 GitHub 编辑页上传或粘贴其中内容。 ");
+  link.href = url; link.download = "accounts.json";
+  document.body.append(link); link.click(); link.remove(); URL.revokeObjectURL(url);
+  setAccountFormStatus("已下载 accounts.json。 ");
 }
 
-function flattenStaticReport(report) {
-  const jobs = [];
-  for (const item of report?.items || []) {
-    if (Array.isArray(item.positions)) {
-      for (const position of item.positions) {
-        jobs.push({
-          ...position,
-          account: item.account,
-          article: {
-            title: item.title, url: item.url, publishedAt: item.publishedAt, summary: item.summary,
-            ocrUsed: item.ocrUsed, ocrImageCount: item.ocrImageCount,
-            analysisSource: item.analysisSource, extractionComplete: item.extractionComplete,
-          },
-        });
-      }
-    } else {
-      jobs.push({
-        id: item.id,
-        account: item.account,
-        organization: item.account,
-        organizationNature: "未披露",
-        industry: "未披露",
-        jobTitle: item.title,
-        jobDirections: [],
-        locations: item.locations || [],
-        employmentTypes: item.jobTypes || [],
-        graduateScope: item.graduateScope || "未明确",
-        previousGraduatesEligible: "uncertain",
-        education: { summary: "旧版报告未提取", tier: "unspecified", hardPhdRequired: false },
-        majors: { summary: (item.suitableMajors || []).join("、") || "旧版报告未提取", accepted: item.suitableMajors || [], fit: "uncertain" },
-        applicationRequirements: [],
-        compensation: { summary: "旧版报告未提取", salary: null, benefits: [], quality: 0 },
-        applicationUrl: null,
-        referralCode: null,
-        recommendation: { score: Math.round((item.confidence || 0) * 100), rankingKey: 0, level: "low", reasons: item.reasons || [], concerns: ["等待 DeepSeek 岗位级重分析"] },
-        article: { title: item.title, url: item.url, publishedAt: item.publishedAt, summary: item.summary, ocrUsed: item.ocrUsed, ocrImageCount: item.ocrImageCount, analysisSource: item.source || "heuristic", extractionComplete: false },
-      });
-    }
-  }
-  return jobs.sort((a, b) => (b.recommendation?.rankingKey || 0) - (a.recommendation?.rankingKey || 0));
-}
-
-function renderResults() {
-  const container = $("#results");
-  container.replaceChildren();
-  const jobs = state.report?.jobs || [];
-  const query = state.query.toLowerCase();
-  const filtered = jobs.filter(job => {
-    if (state.account && job.account !== state.account) return false;
-    if (state.level && job.recommendation?.level !== state.level) return false;
-    if (!query) return true;
-    return [
-      job.jobTitle, job.organization, job.account, job.education?.summary, job.majors?.summary,
-      job.organizationNature, job.industry, job.graduateScope, job.article?.title,
-      job.compensation?.summary, ...(job.jobDirections || []), ...(job.locations || []),
-      ...(job.applicationRequirements || []), ...(job.employmentTypes || []),
-    ].join(" ").toLowerCase().includes(query);
-  });
-
-  for (const job of filtered) {
-    const card = node("article", `job-card level-${job.recommendation?.level || "low"}`);
-    const source = node("div", "job-source-column");
-    source.append(node("span", "job-source", job.account), node("span", "job-date", fmtDateTime(job.article?.publishedAt)));
-
-    const body = node("div", "job-body");
-    const headingRow = node("div", "job-heading-row");
-    const heading = node("div", "job-heading");
-    heading.append(node("h3", "", job.jobTitle), node("p", "job-organization", job.organization || "单位未明确"));
-    const score = node("div", `score-badge is-${job.recommendation?.level || "low"}`);
-    score.append(node("strong", "", job.recommendation?.score ?? "—"), node("span", "", levelLabel(job.recommendation?.level)));
-    headingRow.append(heading, score);
-
-    const chips = node("div", "chips");
-    chips.append(chip(fitLabel(job.majors?.fit), `fit-${job.majors?.fit || "uncertain"}`));
-    chips.append(chip(educationLabel(job.education?.tier), job.education?.hardPhdRequired ? "phd" : ""));
-    chips.append(chip(job.organizationNature || "企业性质未披露"));
-    chips.append(chip(job.industry || "行业未披露"));
-    (job.employmentTypes || []).slice(0, 2).forEach(value => chips.append(chip(value)));
-    chips.append(chip(previousGraduateLabel(job.previousGraduatesEligible), job.previousGraduatesEligible === "yes" ? "eligible" : ""));
-    (job.locations || []).slice(0, 3).forEach(value => chips.append(chip(value)));
-    if (job.compensation?.salary) chips.append(chip(job.compensation.salary, "salary"));
-    if (job.article?.ocrUsed) chips.append(chip(`OCR ${job.article.ocrImageCount} 图`, "ocr"));
-
-    const verdicts = node("div", "verdicts");
-    const pros = node("section", "verdict verdict-pro");
-    pros.append(node("h4", "", "推荐理由"));
-    appendList(pros, job.recommendation?.reasons, "暂无明确推荐依据");
-    const concerns = node("section", "verdict verdict-con");
-    concerns.append(node("h4", "", "不推荐 / 风险"));
-    appendList(concerns, job.recommendation?.concerns, "暂无明显风险");
-    verdicts.append(pros, concerns);
-
-    const details = node("details", "job-details");
-    details.append(node("summary", "", "查看完整岗位要求"));
-    const grid = node("div", "detail-grid");
-    grid.append(
-      detailBlock("单位与岗位", job.organization || "未明确单位", [
-        `企业性质：${job.organizationNature || "未披露"}`,
-        `行业：${job.industry || "未披露"}`,
-        `推文标题：${job.article?.title || "未披露"}`,
-        `岗位方向：${(job.jobDirections || []).join("、") || "未披露"}`,
-      ]),
-      detailBlock("学历要求", job.education?.summary, [
-        job.education?.minimum ? `最低：${job.education.minimum}` : "",
-        job.education?.preferred ? `优先：${job.education.preferred}` : "",
-        `适用届别：${job.graduateScope || "未明确"}`,
-        `往届生：${previousGraduateLabel(job.previousGraduatesEligible)}`,
-      ]),
-      detailBlock("专业要求", job.majors?.summary, job.majors?.accepted || []),
-      detailBlock("报考要求", null, job.applicationRequirements || []),
-      detailBlock("薪资与福利", job.compensation?.summary, [
-        job.compensation?.salary ? `薪资：${job.compensation.salary}` : "",
-        ...(job.compensation?.benefits || []),
-      ]),
-      detailBlock("报名信息", null, [
-        job.headcount ? `人数：${job.headcount}` : "",
-        `招聘类型：${(job.employmentTypes || []).join("、") || "未披露"}`,
-        `地点：${(job.locations || []).join("、") || "未披露"}`,
-        job.deadline ? `截止：${job.deadline}` : "",
-        job.applicationMethod ? `方式：${job.applicationMethod}` : "",
-        job.applicationUrl ? `网申：${job.applicationUrl}` : "网申：未披露",
-        job.referralCode ? `内推码：${job.referralCode}` : "内推码：未披露",
-      ]),
-    );
-    details.append(grid);
-
-    body.append(headingRow, chips, verdicts, details);
-    const action = node("div", "job-action");
-    const link = node("a", "job-link", "查看原文 ↗");
-    link.href = job.article?.url || "#";
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    action.append(link);
-    if (job.applicationUrl) {
-      const applyLink = node("a", "job-link job-apply-link", "网申 ↗");
-      applyLink.href = job.applicationUrl;
-      applyLink.target = "_blank";
-      applyLink.rel = "noopener noreferrer";
-      action.append(applyLink);
-    }
-    action.append(node("span", "confidence", `AI 置信度 ${Math.round((job.confidence || 0) * 100)}%`));
-    card.append(source, body, action);
-    container.append(card);
-  }
-  text("#result-count", `${filtered.length} 个岗位`);
-  $("#empty-state").hidden = filtered.length !== 0;
-}
-
-function populateAccounts() {
-  const select = $("#account-select");
-  while (select.options.length > 1) select.remove(1);
-  const accounts = [...new Set((state.report?.jobs || []).map(job => job.account).filter(Boolean))].sort();
-  for (const account of accounts) {
-    const option = node("option", "", account);
-    option.value = account;
-    select.append(option);
+async function loadPreferences() {
+  const textarea = $("#custom-requirement");
+  try {
+    const preferences = await apiRequest("/api/preferences");
+    textarea.value = preferences.customRequirement || "";
+    text("#requirement-status", preferences.updatedAt ? `已保存 · ${fmtDateTime(preferences.updatedAt)}` : "尚未添加自定义要求");
+  } catch (error) {
+    text("#requirement-status", error.status === 401 ? "登录已失效，请重新验证" : "暂时无法读取已保存要求");
   }
 }
 
-async function loadAllHistory(base) {
-  const staticHistory = await getJson("data/job-history.json");
-  if (staticHistory?.jobs) return staticHistory;
-  if (!base) return null;
-  const jobs = [];
-  let offset = 0;
-  let total = 0;
-  let firstPage = null;
-  do {
-    const page = await getJson(`${base}/api/job-history?limit=5000&offset=${offset}`);
-    if (!page) break;
-    if (!firstPage) firstPage = page;
-    total = Number(page.total || 0);
-    const batch = Array.isArray(page.jobs) ? page.jobs : [];
-    jobs.push(...batch);
-    offset += batch.length;
-    if (!batch.length) break;
-  } while (jobs.length < total);
-  return firstPage ? { ...firstPage, jobs, total } : null;
-}
-
-async function loadReport(date) {
-  const base = state.runtime?.authServiceUrl?.replace(/\/$/, "");
-  let report = null;
-  if (date === "__all__") report = await loadAllHistory(base);
-  else if (date) {
-    const fallback = await getJson(`data/daily/${date}.json`, { date, items: [], stats: state.status?.stats || null });
-    const fallbackJobs = flattenStaticReport(fallback);
-    if (fallbackJobs.length) {
-      report = { date, generatedAt: fallback.generatedAt, stats: fallback.stats, jobs: fallbackJobs };
-    } else if (base) {
-      report = await getJson(`${base}/api/jobs?date=${encodeURIComponent(date)}&limit=1000`);
-    }
+async function savePreferences(event) {
+  event.preventDefault();
+  const button = event.currentTarget.querySelector("button");
+  const customRequirement = $("#custom-requirement").value.trim();
+  button.disabled = true;
+  text("#requirement-status", "正在保存…");
+  try {
+    const result = await apiRequest("/api/preferences", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ customRequirement }),
+    });
+    text("#requirement-status", `${result.updatedAt ? `已保存 · ${fmtDateTime(result.updatedAt)}` : "已保存"}；下一次采集开始生效`);
+  } catch (error) {
+    text("#requirement-status", error.message || "保存失败，请稍后重试");
+  } finally {
+    button.disabled = false;
   }
-  state.report = report || { date, jobs: [], stats: state.status?.stats || null };
-  text("#current-date", date === "__all__" ? "全部历史" : fmtDate(date));
-  text("#last-run", state.report?.generatedAt ? `完成于 ${fmtDateTime(state.report.generatedAt)}` : "等待首次采集");
-  updateStats(state.report?.stats || state.status?.stats);
-  populateAccounts();
-  renderResults();
-}
-
-async function setupDates() {
-  const select = $("#date-select");
-  select.replaceChildren();
-  const base = state.runtime?.authServiceUrl?.replace(/\/$/, "");
-  let days = state.index?.days || [];
-  if (!days.length && base) {
-    const remoteDays = await getJson(`${base}/api/job-days`);
-    days = remoteDays?.days || [];
-  }
-  if (!days.length) {
-    const option = node("option", "", "暂无报告");
-    option.value = "";
-    select.append(option);
-    await loadReport("");
-    return;
-  }
-  const allOption = node("option", "", "全部历史 · 汇总表");
-  allOption.value = "__all__";
-  select.append(allOption);
-  for (const day of days) {
-    const option = node("option", "", `${day.date} · ${day.positionCount ?? day.relevantCount ?? 0} 岗位`);
-    option.value = day.date;
-    select.append(option);
-  }
-  await loadReport(days[0].date);
 }
 
 function showAuthPanel(message) {
@@ -433,26 +424,19 @@ function showAuthPanel(message) {
   if (message) text("#auth-message", message);
 }
 
-function hideAuthPanel() { $("#auth-panel").hidden = true; }
-
 async function monitorRemoteAuth() {
   const base = state.runtime?.authServiceUrl?.replace(/\/$/, "");
-  if (!base) {
-    if (state.status?.state === "auth_required") {
-      showAuthPanel("授权已过期，但登录服务尚未部署。请完成 Cloudflare Worker 配置。");
-      text("#scan-status", "登录服务未配置");
-    }
-    return;
-  }
+  if (!base) return;
   const remote = await getJson(`${base}/api/status`);
   if (!remote) {
-    if (state.status?.state === "auth_required") {
-      showAuthPanel("授权服务当前无法访问，请切换网络后刷新页面并扫码。");
-      setServiceStatus("warning", "授权服务无法访问");
-    }
+    if (state.status?.state === "auth_required") showAuthPanel("授权服务当前无法访问，请稍后刷新页面。");
     return;
   }
-  if (remote.auth?.valid) { hideAuthPanel(); setServiceStatus("ok", "授权正常"); return; }
+  if (remote.auth?.valid) {
+    $("#auth-panel").hidden = true;
+    setServiceStatus("ok", "授权正常");
+    return;
+  }
   showAuthPanel();
   setServiceStatus("warning", "等待扫码授权");
   const qr = $("#auth-qr");
@@ -461,48 +445,103 @@ async function monitorRemoteAuth() {
   $("#qr-placeholder").hidden = true;
   const poll = async () => {
     const result = await getJson(`${base}/api/auth/poll`);
-    if (!result) { text("#scan-status", "暂时无法查询扫码状态"); return setTimeout(poll, 4000); }
+    if (!result) return setTimeout(poll, 4_000);
     text("#scan-status", result.message || "等待扫码");
     if (result.authorized) {
       setServiceStatus("ok", "授权已恢复");
-      text("#auth-message", "授权成功。下一次定时任务将恢复采集。");
+      text("#auth-message", "授权成功，系统正在更新结果。");
       qr.hidden = true;
       $("#qr-placeholder").hidden = false;
       $("#qr-placeholder").textContent = "✓ 授权成功";
       return;
     }
     if (result.refreshQr) qr.src = `${base}/api/auth/qr?v=${Date.now()}`;
-    setTimeout(poll, 2500);
+    setTimeout(poll, 2_500);
   };
-  setTimeout(poll, 2000);
+  setTimeout(poll, 2_000);
 }
 
-async function init() {
-  [state.status, state.runtime, state.index, state.accountsConfig] = await Promise.all([
-    getJson("data/status.json", { state: "never_run", auth: { status: "unknown" }, stats: null }),
-    getJson("data/runtime.json", { authServiceUrl: "" }),
+async function initApp() {
+  [state.status, state.index, state.history, state.pool, state.profile, state.accountsConfig] = await Promise.all([
+    getJson("data/status.json", { state: "never_run", stats: null }),
     getJson("data/index.json", { days: [] }),
+    getJson("data/job-history.json", { jobs: [] }),
+    getJson("data/quality-pool.json", { jobs: [], total: 0, maxSize: 30 }),
+    getJson("data/profile.json", { school: "北京师范大学", education: "硕士研究生", major: "行政管理", freshGraduate: true }),
     getJson("data/accounts.json", { count: 0, accounts: [] }),
   ]);
-  renderManagedAccounts();
+  state.latestDate = state.index?.days?.[0]?.date || [...new Set((state.history?.jobs || []).map(job => job.reportDate).filter(Boolean))].sort().at(-1) || "";
+  state.todayJobs = sortJobs((state.history?.jobs || []).filter(job => !state.latestDate || job.reportDate === state.latestDate));
+  text("#current-date", fmtDate(state.latestDate));
+  text("#last-run", state.status?.lastRunAt ? `完成于 ${fmtDateTime(state.status.lastRunAt)}` : "等待首次采集");
   text("#footer-meta", state.status?.lastRunAt ? `最后运行：${fmtDateTime(state.status.lastRunAt)}` : "数据由 GitHub Actions 自动生成");
-  const download = $("#download-csv");
-  if (download) download.href = "data/jobs.csv";
+  renderProfile();
+  updateStats();
+  renderQualityResults();
+  renderAllJobs();
+  renderPool();
+  renderManagedAccounts();
   if (state.status?.state === "ok") setServiceStatus("ok", "今日任务完成");
   else if (state.status?.state === "partial") setServiceStatus("warning", "部分任务失败");
   else if (state.status?.state === "auth_required") setServiceStatus("warning", "授权已过期");
   else if (state.status?.state === "error") setServiceStatus("error", "运行失败");
   else setServiceStatus("loading", "等待首次运行");
-  await setupDates();
-  await monitorRemoteAuth();
+  await Promise.all([loadPreferences(), monitorRemoteAuth()]);
 }
 
-$("#date-select").addEventListener("change", event => loadReport(event.target.value));
-$("#account-select").addEventListener("change", event => { state.account = event.target.value; renderResults(); });
-$("#level-select").addEventListener("change", event => { state.level = event.target.value; renderResults(); });
-$("#search-input").addEventListener("input", event => { state.query = event.target.value.trim(); renderResults(); });
+async function restoreOrLogin() {
+  state.runtime = await getJson("data/runtime.json", { authServiceUrl: "" });
+  if (!state.token) return showLogin("请输入访问密码。 ");
+  try {
+    await apiRequest("/api/site/session");
+    unlockPage();
+    await initApp();
+  } catch (error) {
+    if (error.status === 401) {
+      localStorage.removeItem(SESSION_KEY);
+      state.token = "";
+      showLogin("浏览器登录已过期，请重新输入密码。", true);
+      return;
+    }
+    unlockPage();
+    setServiceStatus("warning", "离线使用已记住浏览器");
+    await initApp();
+  }
+}
+
+async function login(event) {
+  event.preventDefault();
+  const button = event.currentTarget.querySelector("button");
+  const password = $("#site-password").value;
+  button.disabled = true;
+  showLogin("正在验证…");
+  try {
+    const result = await apiRequest("/api/site/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ password }),
+    });
+    state.token = result.token;
+    localStorage.setItem(SESSION_KEY, result.token);
+    $("#site-password").value = "";
+    unlockPage();
+    await initApp();
+  } catch (error) {
+    showLogin(error.message || "验证失败，请重试。", true);
+  } finally {
+    button.disabled = false;
+  }
+}
+
+$("#login-form").addEventListener("submit", login);
+$("#lock-site").addEventListener("click", () => {
+  localStorage.removeItem(SESSION_KEY);
+  state.token = "";
+  location.reload();
+});
+$("#requirement-form").addEventListener("submit", savePreferences);
 $("#account-add-form").addEventListener("submit", addAccountDraft);
 $("#copy-account-config").addEventListener("click", copyAccountConfig);
 $("#download-account-config").addEventListener("click", downloadAccountConfig);
 
-init();
+restoreOrLogin();

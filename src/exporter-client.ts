@@ -140,4 +140,17 @@ export class ExporterClient {
     });
     await parseJsonResponse(response);
   }
+
+  async getPreferences(): Promise<{ customRequirement: string; updatedAt: string | null } | null> {
+    if (!this.usesAuthService || !this.config.authServiceToken) return null;
+    const response = await fetch(`${this.config.authServiceUrl}/api/preferences`, {
+      headers: { Authorization: `Bearer ${this.config.authServiceToken}` },
+      signal: AbortSignal.timeout(15_000),
+    });
+    const data = await parseJsonResponse(response);
+    return {
+      customRequirement: String(data?.customRequirement || "").trim().slice(0, 2_000),
+      updatedAt: data?.updatedAt || null,
+    };
+  }
 }

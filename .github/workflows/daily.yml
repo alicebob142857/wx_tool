@@ -3,6 +3,14 @@ name: Daily WeChat job scan
 on:
   schedule:
     - cron: "0 2 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "!site/data/**"
+      - "src/**"
+      - "config/**"
+      - ".github/workflows/daily.yml"
   workflow_dispatch:
     inputs:
       reprocess_hours:

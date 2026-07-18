@@ -1,7 +1,7 @@
 import "dotenv/config";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import type { Account } from "./types.js";
+import type { Account, UserProfile } from "./types.js";
 
 function numberEnv(name: string, fallback: number): number {
   const raw = process.env[name];
@@ -73,4 +73,28 @@ export async function loadAccounts(rootDir: string): Promise<Account[]> {
     fakeids.add(account.fakeid);
   }
   return accounts;
+}
+
+export async function loadProfile(rootDir: string): Promise<UserProfile> {
+  const fallback: UserProfile = {
+    school: "北京师范大学",
+    education: "硕士研究生",
+    major: "行政管理",
+    freshGraduate: true,
+    customRequirement: "",
+  };
+  try {
+    const content = await readFile(path.join(rootDir, "config", "profile.json"), "utf8");
+    const profile = JSON.parse(content) as Partial<UserProfile>;
+    return {
+      school: String(profile.school || fallback.school).trim(),
+      education: String(profile.education || fallback.education).trim(),
+      major: String(profile.major || fallback.major).trim(),
+      freshGraduate: profile.freshGraduate !== false,
+      customRequirement: String(profile.customRequirement || "").trim().slice(0, 2_000),
+    };
+  } catch (error: any) {
+    if (error?.code === "ENOENT") return fallback;
+    throw error;
+  }
 }

@@ -3,23 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="每日监测指定微信公众号中的文科与管理类招聘信息" />
+    <meta name="description" content="面向北京师范大学行政管理应届硕士的微信公众号招聘雷达" />
     <meta name="referrer" content="no-referrer" />
-    <title>文管求职雷达</title>
+    <title>文管求职雷达 · 个性化推荐</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
+    <section id="access-gate" class="access-gate" aria-labelledby="access-title">
+      <form id="login-form" class="login-card">
+        <span class="brand-mark" aria-hidden="true">文</span>
+        <p class="eyebrow">Private briefing</p>
+        <h1 id="access-title">进入你的求职雷达</h1>
+        <p>第一次在这个浏览器访问需要验证密码。验证成功后，该浏览器会被记住。</p>
+        <label for="site-password">访问密码</label>
+        <div class="login-row">
+          <input id="site-password" name="password" type="password" required autocomplete="current-password" placeholder="请输入密码" />
+          <button class="primary-button" type="submit">进入</button>
+        </div>
+        <p id="login-status" class="login-status" role="status">正在检查浏览器登录状态…</p>
+      </form>
+    </section>
+
+    <div id="app-shell" class="page-shell" hidden>
       <header class="topbar">
         <a class="brand" href="./" aria-label="返回今日结果">
           <span class="brand-mark" aria-hidden="true">文</span>
           <span>
             <strong>文管求职雷达</strong>
-            <small>Humanities &amp; Management Jobs</small>
+            <small>Personal job briefing</small>
           </span>
         </a>
         <div class="topbar-actions">
+          <a class="manage-link" href="#personal-requirement">重要要求</a>
           <a class="manage-link" href="#account-management">公众号管理</a>
+          <button id="lock-site" class="manage-link button-link" type="button">锁定</button>
           <div id="service-status" class="service-status is-loading">
             <span class="status-dot"></span>
             <span>正在读取状态</span>
@@ -28,13 +45,14 @@
       </header>
 
       <main>
-        <section class="hero">
+        <section class="hero compact-hero">
           <div class="hero-copy">
             <p class="eyebrow">每日 10:00 自动更新</p>
-            <h1>从公众号推送里，<br /><span>筛出真正适合你的岗位。</span></h1>
+            <h1>只看你真正<br /><span>有资格、有兴趣的岗位。</span></h1>
             <p class="hero-description">
-              监测 <span id="tracked-account-count">10</span> 个高校就业与央国企招聘公众号，逐岗位提取学历、专业、报考条件和待遇，并优先推荐行政管理与文管方向。
+              先用硬条件排除社招、大专门槛、纯博士和专业不符岗位，再让 DeepSeek 比较待遇、单位与报考难度。
             </p>
+            <div id="profile-chips" class="profile-chips" aria-label="当前求职画像"></div>
           </div>
           <div class="run-card">
             <span class="run-label">当前报告</span>
@@ -65,70 +83,83 @@
         </section>
 
         <section class="stats" aria-label="今日采集统计">
-          <article>
-            <span>公众号</span>
-            <strong id="stat-accounts">—</strong>
-            <small>成功检查</small>
-          </article>
-          <article>
-            <span>推文</span>
-            <strong id="stat-articles">—</strong>
-            <small>本轮扫描</small>
-          </article>
-          <article>
-            <span>新文章</span>
-            <strong id="stat-new">—</strong>
-            <small>进入增量流程</small>
-          </article>
-          <article class="highlight-stat">
-            <span>岗位</span>
-            <strong id="stat-relevant">—</strong>
-            <small>完成结构化分析</small>
-          </article>
+          <article><span>公众号</span><strong id="stat-accounts">—</strong><small>成功检查</small></article>
+          <article><span>推文</span><strong id="stat-articles">—</strong><small>本轮扫描</small></article>
+          <article><span>全部岗位</span><strong id="stat-all-jobs">—</strong><small>今日完成分析</small></article>
+          <article class="highlight-stat"><span>优质岗位</span><strong id="stat-quality-jobs">—</strong><small>通过全部硬条件</small></article>
         </section>
 
-        <section class="toolbar" aria-label="筛选报告">
-          <label>
-            <span>报告日期</span>
-            <select id="date-select" aria-label="选择报告日期"></select>
-          </label>
-          <label>
-            <span>公众号</span>
-            <select id="account-select" aria-label="筛选公众号">
-              <option value="">全部公众号</option>
-            </select>
-          </label>
-          <label>
-            <span>推荐等级</span>
-            <select id="level-select" aria-label="筛选推荐等级">
-              <option value="">全部等级</option>
-              <option value="high">优先推荐</option>
-              <option value="medium">可以考虑</option>
-              <option value="low">谨慎考虑</option>
-            </select>
-          </label>
-          <label class="search-field">
-            <span>搜索</span>
-            <input id="search-input" type="search" placeholder="岗位、专业或机构" />
-          </label>
-        </section>
-
-        <section class="results-heading">
+        <section class="section-heading quality-heading">
           <div>
-            <p class="eyebrow">Daily briefing</p>
-            <h2>岗位推荐清单</h2>
+            <p class="eyebrow">Priority picks</p>
+            <h2>今日优质岗位推荐</h2>
+            <p>这里只出现明确适合行政管理应届硕士报考的本科/硕士岗位。</p>
           </div>
-          <div class="results-actions">
-            <a id="download-csv" class="download-link secondary" href="data/jobs.csv" download="wechat-job-history.csv">下载 CSV</a>
-            <span id="result-count">0 条结果</span>
-          </div>
+          <span id="quality-count" class="count-badge">0 个</span>
+        </section>
+        <section id="quality-results" class="results quality-results" aria-live="polite"></section>
+        <section id="quality-empty" class="empty-state compact-empty" hidden>
+          <div class="empty-icon">✓</div>
+          <h3>今天暂无通过全部硬条件的岗位</h3>
+          <p>全部岗位仍保留在下方折叠表中，并会说明未推荐原因。</p>
         </section>
 
-        <section id="results" class="results" aria-live="polite"></section>
-        <section id="empty-state" class="empty-state" hidden>
-          <div class="empty-icon">✓</div>
-          <h3>当前筛选条件下没有结果</h3>
-          <p>这不代表采集失败；可能只是今天没有发现明确适合文科或管理类毕业生的推送。</p>
+        <details class="all-jobs-panel">
+          <summary>
+            <span>
+              <small>Today’s complete list</small>
+              <strong>今天全部岗位</strong>
+            </span>
+            <span id="all-jobs-count">0 个 · 点击展开</span>
+          </summary>
+          <div class="compact-job-table" role="table" aria-label="今天全部岗位">
+            <div class="compact-job-row compact-job-header" role="row">
+              <span>排序 / 岗位</span><span>地点</span><span>学历要求</span><span>截止日期</span>
+            </div>
+            <div id="all-jobs-list"></div>
+          </div>
+        </details>
+
+        <section class="pool-section" aria-labelledby="pool-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Rolling shortlist</p>
+              <h2 id="pool-title">最优质岗位池</h2>
+              <p>每天加入新优质岗位，自动去除已过期或排名靠后的岗位，始终保留 30 个以内。</p>
+            </div>
+            <span id="pool-count" class="count-badge">0 / 30</span>
+          </div>
+          <div id="quality-pool-list" class="pool-list" aria-live="polite"></div>
+        </section>
+
+        <section id="personal-requirement" class="personal-requirement" aria-labelledby="requirement-title">
+          <div class="requirement-copy">
+            <p class="eyebrow">Personal rule</p>
+            <h2 id="requirement-title">自定义重要要求</h2>
+            <p>这里的内容会附加到 DeepSeek 提示词中，影响后续新岗位的判断和排序，但不会放宽应届、学历和行政管理专业三项硬条件。</p>
+            <ul class="hard-rule-list">
+              <li>应届毕业生 / 校园招聘</li>
+              <li>本科或硕士门槛，不含大专/专科</li>
+              <li>行政管理、公共管理类、管理学门类或不限专业</li>
+              <li>排除社招、纯实习、仅博士岗位</li>
+            </ul>
+          </div>
+          <form id="requirement-form" class="requirement-form">
+            <label for="custom-requirement">附加要求</label>
+            <textarea id="custom-requirement" maxlength="2000" placeholder="例如：优先北京；优先央企、事业单位；不考虑销售岗；薪资低于某标准时降级。"></textarea>
+            <div class="requirement-actions">
+              <span id="requirement-status" role="status">正在读取…</span>
+              <button class="primary-button" type="submit">保存要求</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="history-download">
+          <div>
+            <strong>完整历史数据</strong>
+            <span>包含岗位详情、推荐与排除理由、个性化分数。</span>
+          </div>
+          <a id="download-csv" class="download-link" href="data/jobs.csv" download="wechat-job-history.csv">下载 Excel 可打开的 CSV</a>
         </section>
 
         <section id="account-management" class="account-management" aria-labelledby="account-management-title">
@@ -149,22 +180,10 @@
               <h3>生成新增配置</h3>
               <p class="management-note">网页不会持有 GitHub 写权限。填写后可复制或下载完整配置，再到 GitHub 提交。</p>
               <form id="account-add-form" class="account-form">
-                <label>
-                  <span>公众号名称 *</span>
-                  <input id="new-account-name" name="name" required maxlength="80" placeholder="例如：某大学就业" />
-                </label>
-                <label>
-                  <span>fakeid *</span>
-                  <input id="new-account-fakeid" name="fakeid" required maxlength="120" spellcheck="false" placeholder="例如：MzA...==" />
-                </label>
-                <label>
-                  <span>微信号 / alias（可选）</span>
-                  <input id="new-account-alias" name="alias" maxlength="80" spellcheck="false" placeholder="例如：university_career" />
-                </label>
-                <label>
-                  <span>备注（可选）</span>
-                  <input id="new-account-note" name="note" maxlength="160" placeholder="账号别名或来源说明" />
-                </label>
+                <label><span>公众号名称 *</span><input name="name" required maxlength="80" placeholder="例如：某大学就业" /></label>
+                <label><span>fakeid *</span><input name="fakeid" required maxlength="120" spellcheck="false" placeholder="例如：MzA...==" /></label>
+                <label><span>微信号 / alias（可选）</span><input name="alias" maxlength="80" spellcheck="false" placeholder="例如：university_career" /></label>
+                <label><span>备注（可选）</span><input name="note" maxlength="160" placeholder="账号别名或来源说明" /></label>
                 <button class="primary-button" type="submit">加入配置草稿</button>
               </form>
               <p id="account-form-status" class="account-form-status" role="status"></p>
@@ -183,17 +202,13 @@
               <p class="eyebrow">Tutorial</p>
               <h3>添加教程</h3>
               <ol class="account-tutorial">
-                <li><strong>先取得 fakeid。</strong>登录微信公众平台，在图文编辑器的“超链接 / 选择其他公众号文章”中搜索目标公众号；打开浏览器开发者工具的 Network，找到名称含 <code>searchbiz</code> 的请求，在响应中搜索 <code>fakeid</code> 并复制。</li>
-                <li><strong>不要填 gh_ 开头的 user_name。</strong>本服务需要公众平台搜索接口返回的 Base64 风格 fakeid，通常类似 <code>MzA...==</code>。</li>
-                <li><strong>在左侧生成配置。</strong>公众号名称和 fakeid 必填，微信号与备注可以不填；重复名称或 fakeid 会被阻止。</li>
-                <li><strong>提交到 GitHub。</strong>点击“复制 JSON”后打开 GitHub 编辑页，全选替换 <code>config/accounts.json</code>，点击 <em>Commit changes</em> 提交。</li>
-                <li><strong>让配置生效。</strong>等待次日 10:00，或前往 Actions 手动运行 <a href="https://github.com/alicebob142857/wx_tool/actions/workflows/daily.yml" target="_blank" rel="noopener noreferrer">Daily WeChat job scan ↗</a>，将 <code>reprocess_hours</code> 保持为 0。</li>
-                <li><strong>检查结果。</strong>任务成功后，网页公众号数量会增加；若显示账号失败，优先检查 fakeid 是否复制完整、公众号是否可在公众平台搜索。</li>
+                <li><strong>取得 fakeid。</strong>登录微信公众平台，在图文编辑器的“超链接 / 选择其他公众号文章”中搜索目标公众号；打开浏览器开发者工具 Network，找到名称含 <code>searchbiz</code> 的请求，在响应中复制 <code>fakeid</code>。</li>
+                <li><strong>不要填 gh_ 开头的 user_name。</strong>本服务需要 Base64 风格 fakeid，通常类似 <code>MzA...==</code>。</li>
+                <li><strong>生成配置。</strong>在左侧填名称和 fakeid，加入草稿后复制完整 JSON。</li>
+                <li><strong>提交到 GitHub。</strong>打开编辑页，全选替换 <code>config/accounts.json</code> 并提交。</li>
+                <li><strong>让配置生效。</strong>等待次日 10:00，或手动运行 <a href="https://github.com/alicebob142857/wx_tool/actions/workflows/daily.yml" target="_blank" rel="noopener noreferrer">Daily WeChat job scan ↗</a>。</li>
               </ol>
-              <div class="tutorial-warning">
-                <strong>为什么不能在网页直接保存？</strong>
-                <p>GitHub Pages 是公开静态网页。把仓库写入令牌放进网页会导致任何访客都能修改配置，因此必须在已登录 GitHub 的编辑页完成最后提交。</p>
-              </div>
+              <div class="tutorial-warning"><strong>为什么不能直接保存公众号？</strong><p>GitHub Pages 是静态网页。把仓库写入令牌放进页面会让其他访客也能修改配置，因此最后一步仍需在已登录的 GitHub 编辑页提交。</p></div>
             </section>
           </div>
         </section>
