@@ -1,8 +1,143 @@
 {
-  "generatedAt": "2026-07-18T13:46:50.869Z",
+  "generatedAt": "2026-07-18T16:03:43.610Z",
   "maxSize": 30,
-  "total": 17,
+  "total": 20,
   "jobs": [
+    {
+      "organization": "中核集团",
+      "organizationNature": "央企",
+      "industry": "核工业",
+      "jobTitle": "行政岗",
+      "jobDirections": [
+        "行政"
+      ],
+      "locations": [
+        "北京",
+        "上海",
+        "广州",
+        "深圳",
+        "郑州",
+        "无锡",
+        "佛山"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上，硕士优先",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "原文未明确专业要求，但职能类岗位通常不限专业或接受管理类",
+        "accepted": [
+          "行政管理",
+          "公共管理",
+          "管理学"
+        ],
+        "fit": "management"
+      },
+      "applicationRequirements": [
+        "应届毕业生",
+        "通过笔试面试"
+      ],
+      "compensation": {
+        "summary": "一线城市年收入20-30万，七险二金，安家费/购房补贴等",
+        "salary": null,
+        "benefits": [
+          "七险二金",
+          "年度体检",
+          "安家费/购房补贴",
+          "人才公寓或租房补贴",
+          "免费工作餐",
+          "带薪年假",
+          "探亲假"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "网申",
+      "applicationUrl": "https://cnnc.zhiye.com/",
+      "referralCode": null,
+      "recommendation": {
+        "score": 88,
+        "rankingKey": 1544479,
+        "level": "high",
+        "reasons": [
+          "专业符合管理类方向",
+          "学历要求以硕士为主，符合优先级",
+          "央企平台，稳定性高",
+          "专业匹配，行政管理专业可投职能类行政岗",
+          "硕士学历符合优先要求",
+          "薪资福利优厚，七险二金"
+        ],
+        "concerns": [
+          "岗位具体职责未披露",
+          "专业要求未明确，存在不确定性",
+          "竞争激烈，招聘流程较长"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 4,
+      "evidence": [
+        "职能类：行政",
+        "一线城市员工年收入普遍达20-30万元",
+        "七险二金"
+      ],
+      "confidence": 0.8,
+      "id": "6af9d4a91d7057e1",
+      "personalized": {
+        "eligible": true,
+        "score": 97,
+        "rankingKey": 2010699999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "薪资福利信息较有吸引力",
+          "报名入口明确，投递可操作性较高",
+          "专业符合管理类方向"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "岗位具体职责未披露",
+          "专业要求未明确，存在不确定性"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-19",
+      "article": {
+        "title": "中核集团2027届校招计划及薪资待遇",
+        "url": "https://mp.weixin.qq.com/s/3o_A5CXwPAPfWKBUEjWChQ",
+        "publishedAt": "2026-07-18T15:37:12.000Z",
+        "summary": "中核集团2027届校招计划，涵盖工程、技术、职能等多类岗位，全国多地有岗，提供优厚薪资福利。",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
     {
       "organization": "中船智海创新研究院",
       "organizationNature": "央企",
@@ -1401,6 +1536,124 @@
       }
     },
     {
+      "organization": "字节跳动",
+      "organizationNature": "民企",
+      "industry": "互联网",
+      "jobTitle": "AI产品经理",
+      "jobDirections": [
+        "AI产品经理"
+      ],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业不限",
+        "accepted": [
+          "不限"
+        ],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "2027届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "点击阅读原文投递",
+      "applicationUrl": "https://mp.weixin.qq.com/s/IKUoGj0R2poigfFdTh_BVg",
+      "referralCode": null,
+      "recommendation": {
+        "score": 64,
+        "rankingKey": 1340489,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级",
+          "专业不限，行政管理专业可投递",
+          "面向2027届应届毕业生，符合应届身份",
+          "硕士学历符合学历偏好",
+          "字节跳动为知名互联网公司，发展前景好"
+        ],
+        "concerns": [
+          "薪资福利未披露",
+          "工作地点未披露",
+          "岗位为AI产品经理，与行政管理专业关联度低"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 4,
+      "evidence": [
+        "字节跳动2027校园招聘 AI 产品经理早鸟通道正式启动",
+        "面向2027届毕业生",
+        "专业不限"
+      ],
+      "confidence": 0.9,
+      "id": "5b5e32ed15e8bac6",
+      "personalized": {
+        "eligible": true,
+        "score": 72,
+        "rankingKey": 2008199999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资福利未披露",
+          "工作地点未披露"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-19",
+      "article": {
+        "title": "招聘 | 两天直通offer！字节跳动2027校园招聘 AI 产品经理早鸟通道正式启动",
+        "url": "https://mp.weixin.qq.com/s/IKUoGj0R2poigfFdTh_BVg",
+        "publishedAt": "2026-07-18T14:30:06.000Z",
+        "summary": "字节跳动2027校园招聘AI产品经理早鸟通道启动，面向2027届毕业生，专业不限，学历本科及以上。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
       "organization": "华润集团",
       "organizationNature": "央企",
       "industry": "综合",
@@ -1980,6 +2233,124 @@
           "notAssociateThreshold": true,
           "customRequirement": true
         }
+      }
+    },
+    {
+      "organization": "点点互动",
+      "organizationNature": "民企",
+      "industry": "游戏",
+      "jobTitle": "Elite Program管培生",
+      "jobDirections": [
+        "产品",
+        "运营",
+        "技术",
+        "美术",
+        "市场",
+        "设计"
+      ],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2025届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "未明确学历要求，推测本科及以上",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业不限",
+        "accepted": [
+          "不限"
+        ],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "2025届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "阅读原文投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 50,
+        "rankingKey": 1320259,
+        "level": "low",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "学历要求未明确，需进一步核实",
+          "专业不限，行政管理可投",
+          "校招项目，适合应届生"
+        ],
+        "concerns": [
+          "学历要求不明确",
+          "薪资福利未披露",
+          "岗位方向未细分"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "图片显示Elite Program校招，面向2025届，专业不限"
+      ],
+      "confidence": 0.6,
+      "id": "cdba66622d0785af",
+      "personalized": {
+        "eligible": true,
+        "score": 63,
+        "rankingKey": 2007299999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "专业限制较宽或不限专业",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "学历要求不明确",
+          "薪资福利未披露"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-19",
+      "article": {
+        "title": "招聘 | 点点互动Elite Program+校招启动！项目再升级！",
+        "url": "https://mp.weixin.qq.com/s/3EDmw9odm2uJSK4ThzfmIw",
+        "publishedAt": "2026-07-18T14:30:06.000Z",
+        "summary": "点点互动Elite Program校招启动，面向2025届毕业生，招聘产品、运营、技术、美术、市场、设计等岗位，专业不限。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
       }
     }
   ]

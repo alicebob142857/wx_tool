@@ -1,18 +1,1367 @@
 {
   "date": "all",
-  "generatedAt": "2026-07-18T13:46:50.869Z",
-  "total": 224,
+  "generatedAt": "2026-07-18T16:03:43.610Z",
+  "total": 235,
   "stats": {
     "accountsConfigured": 8,
     "accountsSucceeded": 8,
-    "articlesScanned": 44,
-    "newArticles": 44,
-    "candidateArticles": 44,
-    "relevantArticles": 44,
-    "positionsExtracted": 224,
-    "failedArticles": 5
+    "articlesScanned": 48,
+    "newArticles": 48,
+    "candidateArticles": 48,
+    "relevantArticles": 48,
+    "positionsExtracted": 235,
+    "failedArticles": 9
   },
   "jobs": [
+    {
+      "organization": "中核集团",
+      "organizationNature": "央企",
+      "industry": "核工业",
+      "jobTitle": "行政岗",
+      "jobDirections": [
+        "行政"
+      ],
+      "locations": [
+        "北京",
+        "上海",
+        "广州",
+        "深圳",
+        "郑州",
+        "无锡",
+        "佛山"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上，硕士优先",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "原文未明确专业要求，但职能类岗位通常不限专业或接受管理类",
+        "accepted": [
+          "行政管理",
+          "公共管理",
+          "管理学"
+        ],
+        "fit": "management"
+      },
+      "applicationRequirements": [
+        "应届毕业生",
+        "通过笔试面试"
+      ],
+      "compensation": {
+        "summary": "一线城市年收入20-30万，七险二金，安家费/购房补贴等",
+        "salary": null,
+        "benefits": [
+          "七险二金",
+          "年度体检",
+          "安家费/购房补贴",
+          "人才公寓或租房补贴",
+          "免费工作餐",
+          "带薪年假",
+          "探亲假"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "网申",
+      "applicationUrl": "https://cnnc.zhiye.com/",
+      "referralCode": null,
+      "recommendation": {
+        "score": 88,
+        "rankingKey": 1544479,
+        "level": "high",
+        "reasons": [
+          "专业符合管理类方向",
+          "学历要求以硕士为主，符合优先级",
+          "央企平台，稳定性高",
+          "专业匹配，行政管理专业可投职能类行政岗",
+          "硕士学历符合优先要求",
+          "薪资福利优厚，七险二金"
+        ],
+        "concerns": [
+          "岗位具体职责未披露",
+          "专业要求未明确，存在不确定性",
+          "竞争激烈，招聘流程较长"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 4,
+      "evidence": [
+        "职能类：行政",
+        "一线城市员工年收入普遍达20-30万元",
+        "七险二金"
+      ],
+      "confidence": 0.8,
+      "id": "6af9d4a91d7057e1",
+      "personalized": {
+        "eligible": true,
+        "score": 97,
+        "rankingKey": 2010699999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "薪资福利信息较有吸引力",
+          "报名入口明确，投递可操作性较高",
+          "专业符合管理类方向"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "岗位具体职责未披露",
+          "专业要求未明确，存在不确定性"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-19",
+      "article": {
+        "title": "中核集团2027届校招计划及薪资待遇",
+        "url": "https://mp.weixin.qq.com/s/3o_A5CXwPAPfWKBUEjWChQ",
+        "publishedAt": "2026-07-18T15:37:12.000Z",
+        "summary": "中核集团2027届校招计划，涵盖工程、技术、职能等多类岗位，全国多地有岗，提供优厚薪资福利。",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "字节跳动",
+      "organizationNature": "民企",
+      "industry": "互联网",
+      "jobTitle": "AI产品经理",
+      "jobDirections": [
+        "AI产品经理"
+      ],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业不限",
+        "accepted": [
+          "不限"
+        ],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "2027届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "点击阅读原文投递",
+      "applicationUrl": "https://mp.weixin.qq.com/s/IKUoGj0R2poigfFdTh_BVg",
+      "referralCode": null,
+      "recommendation": {
+        "score": 64,
+        "rankingKey": 1340489,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级",
+          "专业不限，行政管理专业可投递",
+          "面向2027届应届毕业生，符合应届身份",
+          "硕士学历符合学历偏好",
+          "字节跳动为知名互联网公司，发展前景好"
+        ],
+        "concerns": [
+          "薪资福利未披露",
+          "工作地点未披露",
+          "岗位为AI产品经理，与行政管理专业关联度低"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 4,
+      "evidence": [
+        "字节跳动2027校园招聘 AI 产品经理早鸟通道正式启动",
+        "面向2027届毕业生",
+        "专业不限"
+      ],
+      "confidence": 0.9,
+      "id": "5b5e32ed15e8bac6",
+      "personalized": {
+        "eligible": true,
+        "score": 72,
+        "rankingKey": 2008199999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资福利未披露",
+          "工作地点未披露"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-19",
+      "article": {
+        "title": "招聘 | 两天直通offer！字节跳动2027校园招聘 AI 产品经理早鸟通道正式启动",
+        "url": "https://mp.weixin.qq.com/s/IKUoGj0R2poigfFdTh_BVg",
+        "publishedAt": "2026-07-18T14:30:06.000Z",
+        "summary": "字节跳动2027校园招聘AI产品经理早鸟通道启动，面向2027届毕业生，专业不限，学历本科及以上。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "点点互动",
+      "organizationNature": "民企",
+      "industry": "游戏",
+      "jobTitle": "Elite Program管培生",
+      "jobDirections": [
+        "产品",
+        "运营",
+        "技术",
+        "美术",
+        "市场",
+        "设计"
+      ],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2025届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "未明确学历要求，推测本科及以上",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业不限",
+        "accepted": [
+          "不限"
+        ],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "2025届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "阅读原文投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 50,
+        "rankingKey": 1320259,
+        "level": "low",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "学历要求未明确，需进一步核实",
+          "专业不限，行政管理可投",
+          "校招项目，适合应届生"
+        ],
+        "concerns": [
+          "学历要求不明确",
+          "薪资福利未披露",
+          "岗位方向未细分"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "图片显示Elite Program校招，面向2025届，专业不限"
+      ],
+      "confidence": 0.6,
+      "id": "cdba66622d0785af",
+      "personalized": {
+        "eligible": true,
+        "score": 63,
+        "rankingKey": 2007299999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "专业限制较宽或不限专业",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "学历要求不明确",
+          "薪资福利未披露"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-19",
+      "article": {
+        "title": "招聘 | 点点互动Elite Program+校招启动！项目再升级！",
+        "url": "https://mp.weixin.qq.com/s/3EDmw9odm2uJSK4ThzfmIw",
+        "publishedAt": "2026-07-18T14:30:06.000Z",
+        "summary": "点点互动Elite Program校招启动，面向2025届毕业生，招聘产品、运营、技术、美术、市场、设计等岗位，专业不限。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "兆易创新",
+      "organizationNature": "民企",
+      "industry": "半导体",
+      "jobTitle": "数字IC设计/验证工程师",
+      "jobDirections": [
+        "数字IC设计",
+        "数字IC验证"
+      ],
+      "locations": [
+        "北京",
+        "上海",
+        "西安",
+        "合肥",
+        "苏州",
+        "成都",
+        "深圳"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士及以上",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "电子、通信、计算机、微电子等相关专业",
+        "accepted": [
+          "电子",
+          "通信",
+          "计算机",
+          "微电子"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "2027届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "阅读原文链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级",
+          "校招提前批，机会较早",
+          "知名半导体企业，平台好"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配，要求电子/通信/计算机/微电子",
+          "学历要求硕士，但行政管理专业不符"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "图片OCR显示数字IC设计/验证岗位，专业要求电子/通信/计算机/微电子"
+      ],
+      "confidence": 0.9,
+      "id": "aa5758182347c3c7",
+      "personalized": {
+        "eligible": false,
+        "score": 40,
+        "rankingKey": 854999999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配，要求电子/通信/计算机/微电子"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-19",
+      "article": {
+        "title": "招聘 | 兆易创新2027校园招聘提前批正式启动",
+        "url": "https://mp.weixin.qq.com/s/EfvUwf2MDXWupdeDXoSQMQ",
+        "publishedAt": "2026-07-18T14:30:06.000Z",
+        "summary": "兆易创新2027校园招聘提前批启动，面向2027届毕业生，招聘岗位包括数字IC设计/验证、模拟IC设计、嵌入式、算法、版图设计、测试、FAE、销售等，工作地点北京、上海、西安、合肥、苏州、成都、深圳。",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "兆易创新",
+      "organizationNature": "民企",
+      "industry": "半导体",
+      "jobTitle": "模拟IC设计工程师",
+      "jobDirections": [
+        "模拟IC设计"
+      ],
+      "locations": [
+        "北京",
+        "上海",
+        "西安",
+        "合肥",
+        "苏州",
+        "成都",
+        "深圳"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士及以上",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "电子、通信、计算机、微电子等相关专业",
+        "accepted": [
+          "电子",
+          "通信",
+          "计算机",
+          "微电子"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "2027届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "阅读原文链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级",
+          "校招提前批",
+          "模拟IC设计岗位技术性强"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配",
+          "学历要求硕士，但专业不符"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "图片OCR显示模拟IC设计岗位，专业要求电子/通信/计算机/微电子"
+      ],
+      "confidence": 0.9,
+      "id": "aa8ab046797790c8",
+      "personalized": {
+        "eligible": false,
+        "score": 40,
+        "rankingKey": 854999999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-19",
+      "article": {
+        "title": "招聘 | 兆易创新2027校园招聘提前批正式启动",
+        "url": "https://mp.weixin.qq.com/s/EfvUwf2MDXWupdeDXoSQMQ",
+        "publishedAt": "2026-07-18T14:30:06.000Z",
+        "summary": "兆易创新2027校园招聘提前批启动，面向2027届毕业生，招聘岗位包括数字IC设计/验证、模拟IC设计、嵌入式、算法、版图设计、测试、FAE、销售等，工作地点北京、上海、西安、合肥、苏州、成都、深圳。",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "兆易创新",
+      "organizationNature": "民企",
+      "industry": "半导体",
+      "jobTitle": "嵌入式开发工程师",
+      "jobDirections": [
+        "嵌入式软件",
+        "嵌入式硬件"
+      ],
+      "locations": [
+        "北京",
+        "上海",
+        "西安",
+        "合肥",
+        "苏州",
+        "成都",
+        "深圳"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士及以上",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "电子、通信、计算机、微电子等相关专业",
+        "accepted": [
+          "电子",
+          "通信",
+          "计算机",
+          "微电子"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "2027届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "阅读原文链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级",
+          "校招提前批",
+          "嵌入式岗位需求大"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配",
+          "学历要求硕士，但专业不符"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "图片OCR显示嵌入式开发岗位，专业要求电子/通信/计算机/微电子"
+      ],
+      "confidence": 0.9,
+      "id": "25c0987c662700ea",
+      "personalized": {
+        "eligible": false,
+        "score": 40,
+        "rankingKey": 854999999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-19",
+      "article": {
+        "title": "招聘 | 兆易创新2027校园招聘提前批正式启动",
+        "url": "https://mp.weixin.qq.com/s/EfvUwf2MDXWupdeDXoSQMQ",
+        "publishedAt": "2026-07-18T14:30:06.000Z",
+        "summary": "兆易创新2027校园招聘提前批启动，面向2027届毕业生，招聘岗位包括数字IC设计/验证、模拟IC设计、嵌入式、算法、版图设计、测试、FAE、销售等，工作地点北京、上海、西安、合肥、苏州、成都、深圳。",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "兆易创新",
+      "organizationNature": "民企",
+      "industry": "半导体",
+      "jobTitle": "算法工程师",
+      "jobDirections": [
+        "算法"
+      ],
+      "locations": [
+        "北京",
+        "上海",
+        "西安",
+        "合肥",
+        "苏州",
+        "成都",
+        "深圳"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士及以上",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "电子、通信、计算机、微电子等相关专业",
+        "accepted": [
+          "电子",
+          "通信",
+          "计算机",
+          "微电子"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "2027届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "阅读原文链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级",
+          "校招提前批",
+          "算法岗位薪资通常较高"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配",
+          "学历要求硕士，但专业不符"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "图片OCR显示算法岗位，专业要求电子/通信/计算机/微电子"
+      ],
+      "confidence": 0.9,
+      "id": "eb049af15ded9eef",
+      "personalized": {
+        "eligible": false,
+        "score": 40,
+        "rankingKey": 854999999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-19",
+      "article": {
+        "title": "招聘 | 兆易创新2027校园招聘提前批正式启动",
+        "url": "https://mp.weixin.qq.com/s/EfvUwf2MDXWupdeDXoSQMQ",
+        "publishedAt": "2026-07-18T14:30:06.000Z",
+        "summary": "兆易创新2027校园招聘提前批启动，面向2027届毕业生，招聘岗位包括数字IC设计/验证、模拟IC设计、嵌入式、算法、版图设计、测试、FAE、销售等，工作地点北京、上海、西安、合肥、苏州、成都、深圳。",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "兆易创新",
+      "organizationNature": "民企",
+      "industry": "半导体",
+      "jobTitle": "版图设计工程师",
+      "jobDirections": [
+        "版图设计"
+      ],
+      "locations": [
+        "北京",
+        "上海",
+        "西安",
+        "合肥",
+        "苏州",
+        "成都",
+        "深圳"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士及以上",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "电子、通信、计算机、微电子等相关专业",
+        "accepted": [
+          "电子",
+          "通信",
+          "计算机",
+          "微电子"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "2027届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "阅读原文链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级",
+          "校招提前批",
+          "版图设计岗位专业性强"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配",
+          "学历要求硕士，但专业不符"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "图片OCR显示版图设计岗位，专业要求电子/通信/计算机/微电子"
+      ],
+      "confidence": 0.9,
+      "id": "4d2ccfcf528f3b47",
+      "personalized": {
+        "eligible": false,
+        "score": 40,
+        "rankingKey": 854999999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-19",
+      "article": {
+        "title": "招聘 | 兆易创新2027校园招聘提前批正式启动",
+        "url": "https://mp.weixin.qq.com/s/EfvUwf2MDXWupdeDXoSQMQ",
+        "publishedAt": "2026-07-18T14:30:06.000Z",
+        "summary": "兆易创新2027校园招聘提前批启动，面向2027届毕业生，招聘岗位包括数字IC设计/验证、模拟IC设计、嵌入式、算法、版图设计、测试、FAE、销售等，工作地点北京、上海、西安、合肥、苏州、成都、深圳。",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "兆易创新",
+      "organizationNature": "民企",
+      "industry": "半导体",
+      "jobTitle": "测试工程师",
+      "jobDirections": [
+        "测试"
+      ],
+      "locations": [
+        "北京",
+        "上海",
+        "西安",
+        "合肥",
+        "苏州",
+        "成都",
+        "深圳"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士及以上",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "电子、通信、计算机、微电子等相关专业",
+        "accepted": [
+          "电子",
+          "通信",
+          "计算机",
+          "微电子"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "2027届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "阅读原文链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级",
+          "校招提前批",
+          "测试岗位入门相对容易"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配",
+          "学历要求硕士，但专业不符"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "图片OCR显示测试岗位，专业要求电子/通信/计算机/微电子"
+      ],
+      "confidence": 0.9,
+      "id": "f30f4c3087421205",
+      "personalized": {
+        "eligible": false,
+        "score": 40,
+        "rankingKey": 854999999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-19",
+      "article": {
+        "title": "招聘 | 兆易创新2027校园招聘提前批正式启动",
+        "url": "https://mp.weixin.qq.com/s/EfvUwf2MDXWupdeDXoSQMQ",
+        "publishedAt": "2026-07-18T14:30:06.000Z",
+        "summary": "兆易创新2027校园招聘提前批启动，面向2027届毕业生，招聘岗位包括数字IC设计/验证、模拟IC设计、嵌入式、算法、版图设计、测试、FAE、销售等，工作地点北京、上海、西安、合肥、苏州、成都、深圳。",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "兆易创新",
+      "organizationNature": "民企",
+      "industry": "半导体",
+      "jobTitle": "FAE工程师",
+      "jobDirections": [
+        "现场应用"
+      ],
+      "locations": [
+        "北京",
+        "上海",
+        "西安",
+        "合肥",
+        "苏州",
+        "成都",
+        "深圳"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士及以上",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "电子、通信、计算机、微电子等相关专业",
+        "accepted": [
+          "电子",
+          "通信",
+          "计算机",
+          "微电子"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "2027届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "阅读原文链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级",
+          "校招提前批",
+          "FAE岗位可接触客户，锻炼沟通能力"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配",
+          "学历要求硕士，但专业不符"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "图片OCR显示FAE岗位，专业要求电子/通信/计算机/微电子"
+      ],
+      "confidence": 0.9,
+      "id": "e37b27cdbe94e5d4",
+      "personalized": {
+        "eligible": false,
+        "score": 40,
+        "rankingKey": 854999999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-19",
+      "article": {
+        "title": "招聘 | 兆易创新2027校园招聘提前批正式启动",
+        "url": "https://mp.weixin.qq.com/s/EfvUwf2MDXWupdeDXoSQMQ",
+        "publishedAt": "2026-07-18T14:30:06.000Z",
+        "summary": "兆易创新2027校园招聘提前批启动，面向2027届毕业生，招聘岗位包括数字IC设计/验证、模拟IC设计、嵌入式、算法、版图设计、测试、FAE、销售等，工作地点北京、上海、西安、合肥、苏州、成都、深圳。",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "兆易创新",
+      "organizationNature": "民企",
+      "industry": "半导体",
+      "jobTitle": "销售工程师",
+      "jobDirections": [
+        "销售"
+      ],
+      "locations": [
+        "北京",
+        "上海",
+        "西安",
+        "合肥",
+        "苏州",
+        "成都",
+        "深圳"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士及以上",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "电子、通信、计算机、微电子等相关专业",
+        "accepted": [
+          "电子",
+          "通信",
+          "计算机",
+          "微电子"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "2027届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "阅读原文链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级",
+          "校招提前批",
+          "销售岗位专业限制可能较宽"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求电子/通信/计算机/微电子，行政管理不匹配",
+          "学历要求硕士"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "图片OCR显示销售岗位，专业要求电子/通信/计算机/微电子"
+      ],
+      "confidence": 0.9,
+      "id": "295e922d9822d3ac",
+      "personalized": {
+        "eligible": false,
+        "score": 40,
+        "rankingKey": 854999999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求电子/通信/计算机/微电子，行政管理不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-19",
+      "article": {
+        "title": "招聘 | 兆易创新2027校园招聘提前批正式启动",
+        "url": "https://mp.weixin.qq.com/s/EfvUwf2MDXWupdeDXoSQMQ",
+        "publishedAt": "2026-07-18T14:30:06.000Z",
+        "summary": "兆易创新2027校园招聘提前批启动，面向2027届毕业生，招聘岗位包括数字IC设计/验证、模拟IC设计、嵌入式、算法、版图设计、测试、FAE、销售等，工作地点北京、上海、西安、合肥、苏州、成都、深圳。",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
     {
       "organization": "深圳信步科技",
       "organizationNature": "民企",
