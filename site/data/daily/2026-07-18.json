@@ -1,0 +1,5208 @@
+{
+  "date": "2026-07-18",
+  "generatedAt": "2026-07-18T05:00:26.104Z",
+  "stats": {
+    "accountsConfigured": 10,
+    "accountsSucceeded": 10,
+    "articlesScanned": 562,
+    "newArticles": 28,
+    "candidateArticles": 25,
+    "relevantArticles": 15,
+    "positionsExtracted": 69,
+    "failedArticles": 2
+  },
+  "items": [
+    {
+      "id": "d856901f76585547",
+      "account": "央企求职网",
+      "title": "中国铁路2026年校园招聘新增岗位公告！",
+      "url": "https://mp.weixin.qq.com/s/mpHPtdHyzyoieszUn-Mo9A",
+      "publishedAt": "2026-07-18T04:02:00.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "《人民铁道》报业有限公司2026年招聘1名高校毕业生，岗位为新闻采编或相关，面向2026届及部分2025届毕业生，要求本科及以上，专业为新闻传播学类、中国语言文学类等，报名截止2026年7月19日。",
+      "positions": [
+        {
+          "organization": "《人民铁道》报业有限公司",
+          "organizationNature": "央企",
+          "industry": "新闻出版",
+          "jobTitle": "新闻采编岗位",
+          "jobDirections": [
+            "新闻采编"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上学历",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "新闻传播学类、中国语言文学类等相关专业",
+            "accepted": [
+              "新闻传播学类",
+              "中国语言文学类"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [
+            "2026年应届高校毕业生或2025年未就业毕业生（档案保留在学校或就业服务机构，未与其他单位建立劳动关系）",
+            "报到时取得毕业证和学位证",
+            "遵纪守法，热爱党的新闻事业",
+            "身心健康"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-07-19",
+          "applicationMethod": "网上报名",
+          "applicationUrl": "http://rczp.china-railway.com.cn",
+          "referralCode": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1430389,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "央企平台，稳定性高",
+              "专业对口，文科社科类优先",
+              "工作地点在北京"
+            ],
+            "concerns": [
+              "仅招聘1人，竞争激烈",
+              "薪资福利未披露",
+              "学历要求本科，硕士无明确优势"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "招聘1名高校毕业生",
+            "专业要求新闻传播学类、中国语言文学类",
+            "报名截止2026年7月19日"
+          ],
+          "confidence": 0.9,
+          "id": "61dd6e7ec2163fa1"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
+    },
+    {
+      "id": "cab8618565bf049c",
+      "account": "央企求职网",
+      "title": "中国石化2027校招计划及薪资待遇",
+      "url": "https://mp.weixin.qq.com/s/M3aAMwZQfz-0Dp6QEZpo1Q",
+      "publishedAt": "2026-07-18T04:02:00.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "中国石化2027届校招计划，预计招聘超10000人，涵盖油田、炼化、销售、设计、科研等岗位，薪资待遇优厚。",
+      "positions": [
+        {
+          "organization": "中国石油化工集团有限公司",
+          "organizationNature": "央企",
+          "industry": "石油石化",
+          "jobTitle": "油田企业岗位",
+          "jobDirections": [
+            "油气勘探开发",
+            "炼油化工",
+            "产品销售",
+            "工程设计",
+            "科研",
+            "专业管理"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": "10000",
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上学历，硕士优先",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业要求广泛，包括石油化工、机械、电气、计算机、管理、经济等，具体见官网",
+            "accepted": [
+              "石油工程",
+              "化学工程",
+              "机械工程",
+              "电气工程",
+              "计算机科学",
+              "管理学",
+              "经济学"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027年全国普通高等院校统招统分应届毕业生（定向、委培除外）",
+            "回国（境）后初次就业的留学生（毕业时间2026.1.1-2027.12.31）",
+            "西藏、青海、新疆三省区及四川、云南、甘肃三省涉藏州县毕业生优先"
+          ],
+          "compensation": {
+            "summary": "基本工资+绩效奖金+年终奖，人均薪酬29.26万元（含社保），一线城市硕士转正第一年16-20万",
+            "salary": "16-20万/年（硕士转正第一年）",
+            "benefits": [
+              "五险一金",
+              "补充医疗险",
+              "企业年金",
+              "重疾险",
+              "意外险",
+              "带薪年假",
+              "年度体检",
+              "生日福利",
+              "结婚礼金",
+              "生育礼金",
+              "退休慰问金",
+              "急难救助金"
+            ],
+            "quality": 4
+          },
+          "deadline": "2026-11-15T24:00:00",
+          "applicationMethod": "网上报名",
+          "applicationUrl": "https://job.sinopec.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 72,
+            "rankingKey": 1344379,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "央企平台，稳定性高",
+              "薪资待遇优厚，福利全面",
+              "招聘规模大，岗位类型多",
+              "北京、上海等地有机会解决户口"
+            ],
+            "concerns": [
+              "具体岗位信息未公布，需自行查询官网",
+              "报名时间、流程为往年参考，可能有变动",
+              "竞争激烈，录取率低"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "计划招聘超10000人",
+            "人均薪酬29.26万元",
+            "北京地区有机会解决北京户口"
+          ],
+          "confidence": 0.8,
+          "id": "a8aa41a0e4a36afb"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "文章未提供具体岗位名称，仅列出单位类型，无法拆分具体岗位。",
+        "薪资为往年参考，非2027届官方数据。",
+        "报名时间、流程为往年参考，实际以官网为准。"
+      ]
+    },
+    {
+      "id": "490c9f03dc483e62",
+      "account": "国资小新",
+      "title": "【社招】中粮集团有限公司公开招聘公告",
+      "url": "https://mp.weixin.qq.com/s/PdmS606k6fsjVCSTS2OiSQ",
+      "publishedAt": "2026-07-18T04:00:00.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "中粮集团社招薪酬考核和人工成本管理岗1人，要求本科及以上，财务会计或人力资源专业，2年以上相关经验，工作地点北京朝阳，截止2026年7月24日。",
+      "positions": [
+        {
+          "organization": "中粮集团有限公司",
+          "organizationNature": "央企",
+          "industry": "农粮食品",
+          "jobTitle": "薪酬考核和人工成本管理岗",
+          "jobDirections": [
+            "薪酬考核",
+            "人工成本管理"
+          ],
+          "locations": [
+            "北京市朝阳区"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "往届生",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "全日制大学本科及以上学历",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "财务会计、人力资源等相关专业",
+            "accepted": [
+              "财务会计",
+              "人力资源"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [
+            "政治立场坚定，政治敏感性强，中共党员优先",
+            "2年以上财务会计、薪酬激励等相关工作经验",
+            "具有较强的语言沟通和组织协调能力",
+            "具有扎实的文字功底，能够熟练撰写常用公文",
+            "具有基本的英语听说读写能力",
+            "能熟练使用办公软件及管理信息系统，具有较强的数据处理和分析能力"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-07-24",
+          "applicationMethod": "邮箱投递",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 72,
+            "rankingKey": 1530394,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "央企平台，稳定性高",
+              "专业对口（财务会计、人力资源）",
+              "工作地点北京朝阳，地理位置优越"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "要求2年以上工作经验，应届生不可投",
+              "仅招聘1人，竞争可能激烈"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "全日制大学本科及以上学历",
+            "财务会计、人力资源等相关专业",
+            "2年以上财务会计、薪酬激励等相关工作经验",
+            "简历投递截止时间为2026年7月24日"
+          ],
+          "confidence": 0.95,
+          "id": "8ef051cd62afd9e2"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
+    },
+    {
+      "id": "b9967cb6bba6d2f6",
+      "account": "国资小新",
+      "title": "【校招】2027届北方矿业实习生计划正式启动",
+      "url": "https://mp.weixin.qq.com/s/3B4KYiLeE3bmmkNsLUZ7Yw",
+      "publishedAt": "2026-07-18T04:00:00.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "2027届北方矿业实习生计划启动，面向2027届毕业生，专业不限，提供实习机会。",
+      "positions": [
+        {
+          "organization": "北方矿业",
+          "organizationNature": "央企",
+          "industry": "矿业",
+          "jobTitle": "实习生",
+          "jobDirections": [
+            "未明确"
+          ],
+          "locations": [
+            "未明确"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "未明确，推测本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": "阅读原文进入报名页面",
+          "applicationUrl": "https://mp.weixin.qq.com/s/3B4KYiLeE3bmmkNsLUZ7Yw",
+          "referralCode": null,
+          "recommendation": {
+            "score": 58,
+            "rankingKey": 1330369,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "央企实习机会",
+              "面向2027届，专业不限"
+            ],
+            "concerns": [
+              "信息不完整，薪资福利未披露",
+              "岗位方向未明确"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "标题：2027届北方矿业实习生计划正式启动",
+            "正文：点击阅读原文进入报名页面"
+          ],
+          "confidence": 0.7,
+          "id": "2186c7bc7aa9bbf7"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "文章内容简短，仅提及实习生计划，无具体岗位细节，需从标题和上下文推断。",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-HD5mcY/2.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-HD5mcY/1.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-HD5mcY/0.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-HD5mcY/5.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-HD5mcY/4.gif stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-HD5mcY/3.png stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 3 张图片"
+      ]
+    },
+    {
+      "id": "902ccaf276a8364a",
+      "account": "国企求职网",
+      "title": "工商银行2027秋招计划：秋招时间线，招聘岗位、考试时间！",
+      "url": "https://mp.weixin.qq.com/s/hLbRG88jTCmRdQazmuApgw",
+      "publishedAt": "2026-07-18T02:43:19.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "中国工商银行2027届秋季校园招聘即将启动，全国预计招录20000+人，涵盖星辰管培生、专业英才、科技菁英、客户经理、客服经理等岗位，面向26届、27届全日制本科及以上学历应届生。",
+      "positions": [
+        {
+          "organization": "中国工商银行",
+          "organizationNature": "国企",
+          "industry": "银行",
+          "jobTitle": "星辰管培生",
+          "jobDirections": [
+            "管理培训生"
+          ],
+          "locations": [
+            "全国各省区及部分海外地区"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "全日制本科及以上学历",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限，但管理类、经济金融类优先",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "应届生身份",
+            "全日制本科及以上"
+          ],
+          "compensation": {
+            "summary": "总行应届生年薪约25-30W，分行管培轮岗后总包可达近40W（含公积金），六险二金起步，部分七险二金，带薪休假、员工宿舍、食堂、节日补贴、交通通讯补贴、年度体检、解决户口等",
+            "salary": "250000-400000",
+            "benefits": [
+              "六险二金",
+              "带薪休假",
+              "员工宿舍",
+              "食堂",
+              "节日补贴",
+              "交通通讯补贴",
+              "年度体检",
+              "解决户口"
+            ],
+            "quality": 5
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 75,
+            "rankingKey": 1345379,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "国有大行平台，职业发展稳定，履历背书强",
+              "薪酬福利极具竞争力，总行年薪25-30W，分行可达近40W",
+              "六险二金等福利完善，外地员工可解决户口"
+            ],
+            "concerns": [
+              "竞争激烈，录取率不足3%",
+              "专业要求未明确，可能偏好管理类、经济金融类",
+              "报名方式、截止时间等关键信息未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "星辰管培生为A类岗位",
+            "总行应届生年薪约25-30W",
+            "分行管培轮岗后总包可达近40W"
+          ],
+          "confidence": 0.8,
+          "id": "3735bfe7aa6fd4c7"
+        },
+        {
+          "organization": "中国工商银行",
+          "organizationNature": "国企",
+          "industry": "银行",
+          "jobTitle": "专业英才",
+          "jobDirections": [
+            "专业类岗位"
+          ],
+          "locations": [
+            "全国各省区及部分海外地区"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "全日制本科及以上学历",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限，但经济金融、财务会计、管理、法律、理工等专业优先",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "应届生身份",
+            "全日制本科及以上"
+          ],
+          "compensation": {
+            "summary": "月薪8K-10K起，六险二金起步，部分七险二金，带薪休假、员工宿舍、食堂、节日补贴、交通通讯补贴、年度体检、解决户口等",
+            "salary": "8000-10000",
+            "benefits": [
+              "六险二金",
+              "带薪休假",
+              "员工宿舍",
+              "食堂",
+              "节日补贴",
+              "交通通讯补贴",
+              "年度体检",
+              "解决户口"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 72,
+            "rankingKey": 1344379,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "国有大行平台，专业对口岗位多",
+              "薪酬福利较好，月薪8K-10K起",
+              "福利完善，外地员工可解决户口"
+            ],
+            "concerns": [
+              "竞争激烈，笔试淘汰率高",
+              "专业要求未明确，可能偏好经济金融等专业",
+              "报名方式、截止时间等关键信息未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "专业英才岗月薪8K-10K起",
+            "A类岗位"
+          ],
+          "confidence": 0.8,
+          "id": "bbfca679d01de424"
+        },
+        {
+          "organization": "中国工商银行",
+          "organizationNature": "国企",
+          "industry": "银行",
+          "jobTitle": "客服经理",
+          "jobDirections": [
+            "服务类岗位"
+          ],
+          "locations": [
+            "全国各省区及部分海外地区"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "全日制本科及以上学历",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "应届生身份",
+            "全日制本科及以上"
+          ],
+          "compensation": {
+            "summary": "薪酬未具体披露，六险二金起步，部分七险二金，带薪休假、员工宿舍、食堂、节日补贴、交通通讯补贴、年度体检、解决户口等",
+            "salary": null,
+            "benefits": [
+              "六险二金",
+              "带薪休假",
+              "员工宿舍",
+              "食堂",
+              "节日补贴",
+              "交通通讯补贴",
+              "年度体检",
+              "解决户口"
+            ],
+            "quality": 3
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 72,
+            "rankingKey": 1343469,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "专业不限，门槛相对较低",
+              "国有大行平台，福利完善",
+              "外地员工可解决户口"
+            ],
+            "concerns": [
+              "薪资未明确，可能较低",
+              "岗位发展空间有限",
+              "报名方式、截止时间等关键信息未披露"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "客服经理为A类岗位",
+            "专业不限"
+          ],
+          "confidence": 0.7,
+          "id": "58f4cc76ac973c4f"
+        },
+        {
+          "organization": "中国工商银行",
+          "organizationNature": "国企",
+          "industry": "银行",
+          "jobTitle": "客户经理",
+          "jobDirections": [
+            "营销类岗位"
+          ],
+          "locations": [
+            "全国各省区及部分海外地区"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "全日制本科及以上学历",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限，但经济金融、市场营销、管理类优先",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "应届生身份",
+            "全日制本科及以上"
+          ],
+          "compensation": {
+            "summary": "薪酬与绩效挂钩，具体未披露，六险二金起步，部分七险二金，带薪休假、员工宿舍、食堂、节日补贴、交通通讯补贴、年度体检、解决户口等",
+            "salary": null,
+            "benefits": [
+              "六险二金",
+              "带薪休假",
+              "员工宿舍",
+              "食堂",
+              "节日补贴",
+              "交通通讯补贴",
+              "年度体检",
+              "解决户口"
+            ],
+            "quality": 3
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1343369,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "专业不限，适合多专业背景",
+              "国有大行平台，职业发展稳定",
+              "福利完善，外地员工可解决户口"
+            ],
+            "concerns": [
+              "薪资未明确，可能依赖绩效",
+              "竞争激烈，笔试淘汰率高",
+              "报名方式、截止时间等关键信息未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "客户经理为A类岗位",
+            "专业不限"
+          ],
+          "confidence": 0.7,
+          "id": "5d84524139528f08"
+        },
+        {
+          "organization": "中国工商银行",
+          "organizationNature": "国企",
+          "industry": "银行",
+          "jobTitle": "科技菁英",
+          "jobDirections": [
+            "科技类岗位"
+          ],
+          "locations": [
+            "全国各省区及部分海外地区"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "全日制本科及以上学历",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "计算机、软件工程、电子信息、通信、自动化、数学、统计等理工类专业",
+            "accepted": [
+              "计算机科学与技术",
+              "软件工程",
+              "电子信息",
+              "通信工程",
+              "自动化",
+              "数学",
+              "统计学"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "应届生身份",
+            "全日制本科及以上"
+          ],
+          "compensation": {
+            "summary": "月薪12K-15K起步（如西安、成都等地），六险二金起步，部分七险二金，带薪休假、员工宿舍、食堂、节日补贴、交通通讯补贴、年度体检、解决户口等",
+            "salary": "12000-15000",
+            "benefits": [
+              "六险二金",
+              "带薪休假",
+              "员工宿舍",
+              "食堂",
+              "节日补贴",
+              "交通通讯补贴",
+              "年度体检",
+              "解决户口"
+            ],
+            "quality": 5
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 41,
+            "rankingKey": 1145279,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级",
+              "科技岗薪资较高，月薪12K-15K起步",
+              "国有大行科技平台，发展前景好",
+              "福利完善，外地员工可解决户口"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求严格，仅限理工类相关专业",
+              "竞争激烈，录取率约5%-8%",
+              "报名方式、截止时间等关键信息未披露"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [
+            "科技菁英岗月薪12K-15K起步",
+            "B类岗位，笔试加试科技内容"
+          ],
+          "confidence": 0.8,
+          "id": "ded6f9d42e83225e"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "文章未明确区分各岗位的具体专业要求、学历偏好、薪资福利细节，部分信息基于往年数据推断。",
+        "岗位方向如星辰管培生、专业英才、科技菁英、客户经理、客服经理等为通用分类，具体岗位要求未详细说明。",
+        "报名方式、截止时间、网申地址等关键信息缺失，需关注工行招聘官网。"
+      ]
+    },
+    {
+      "id": "77fe5fd5f2d4184c",
+      "account": "国聘",
+      "title": "初中至大专学历可报！技能人才岗位推荐→",
+      "url": "https://mp.weixin.qq.com/s/AjjnZCmYFaIgbVn2NtPAVw",
+      "publishedAt": "2026-07-17T14:08:32.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 9,
+      "summary": "技能人才岗位推荐，面向初中至大专学历，涵盖QC技术员、仓管员、生产操作员等一线岗位。",
+      "positions": [
+        {
+          "organization": "昂纳科技(深圳)集团股份有限公司",
+          "organizationNature": "民企",
+          "industry": "制造业",
+          "jobTitle": "生产操作工",
+          "jobDirections": [
+            "生产操作"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "初中至大专学历",
+            "minimum": "初中",
+            "preferred": "大专",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "具备实操能力与职业发展潜力"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 59,
+            "rankingKey": 1330479,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "学历要求低，初中即可",
+              "一线技能岗位，实操能力匹配度高",
+              "深圳地区就业机会"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "无明确截止时间",
+              "岗位信息不完整"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "初中至大专学历可报",
+            "生产操作工"
+          ],
+          "confidence": 0.8,
+          "id": "662db0d6599c8b9e"
+        },
+        {
+          "organization": "比亚迪股份有限公司",
+          "organizationNature": "民企",
+          "industry": "制造业",
+          "jobTitle": "技术工操作工",
+          "jobDirections": [
+            "技术操作"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "初中至大专学历",
+            "minimum": "初中",
+            "preferred": "大专",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "具备实操能力与职业发展潜力"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 59,
+            "rankingKey": 1330479,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "知名企业，平台大",
+              "学历要求低",
+              "技术岗位有发展空间"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "岗位职责不明确",
+              "无截止时间"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "比亚迪股份有限公司技术工操作工"
+          ],
+          "confidence": 0.8,
+          "id": "c212c87ff66b1ca3"
+        },
+        {
+          "organization": "深圳市华美兴泰科技股份有限公司",
+          "organizationNature": "民企",
+          "industry": "制造业",
+          "jobTitle": "贴片印刷员/贴片机操作员/插件操作员",
+          "jobDirections": [
+            "SMT操作",
+            "插件操作"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "初中至大专学历",
+            "minimum": "初中",
+            "preferred": "大专",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "具备实操能力与职业发展潜力"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 59,
+            "rankingKey": 1330479,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "多个岗位方向可选",
+              "学历要求低",
+              "电子制造行业经验积累"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "岗位合并，具体职责未区分",
+              "无截止时间"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "贴片印刷员/贴片机操作员/插件操作员"
+          ],
+          "confidence": 0.8,
+          "id": "1450e2afbe2ce3e2"
+        },
+        {
+          "organization": "深圳市华美兴泰科技股份有限公司",
+          "organizationNature": "民企",
+          "industry": "制造业",
+          "jobTitle": "ATE测试试产技术员",
+          "jobDirections": [
+            "测试技术"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "初中至大专学历",
+            "minimum": "初中",
+            "preferred": "大专",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "具备实操能力与职业发展潜力"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 59,
+            "rankingKey": 1330479,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "技术岗位，有专业发展",
+              "学历要求低",
+              "测试领域入门机会"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "无截止时间",
+              "岗位信息不完整"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "ATE测试试产技术员"
+          ],
+          "confidence": 0.8,
+          "id": "2cfc950e5103aafd"
+        },
+        {
+          "organization": "深圳市华美兴泰科技股份有限公司",
+          "organizationNature": "民企",
+          "industry": "制造业",
+          "jobTitle": "生产拉长",
+          "jobDirections": [
+            "生产管理"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "初中至大专学历",
+            "minimum": "初中",
+            "preferred": "大专",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "具备实操能力与职业发展潜力"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 59,
+            "rankingKey": 1330479,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "管理岗位，晋升机会",
+              "学历要求低",
+              "一线管理经验积累"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "无截止时间",
+              "管理职责未明确"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "生产拉长"
+          ],
+          "confidence": 0.8,
+          "id": "6ff05299429e1265"
+        },
+        {
+          "organization": "深圳市华美兴泰科技股份有限公司",
+          "organizationNature": "民企",
+          "industry": "制造业",
+          "jobTitle": "焊锡员",
+          "jobDirections": [
+            "焊接操作"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "初中至大专学历",
+            "minimum": "初中",
+            "preferred": "大专",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "具备实操能力与职业发展潜力"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 59,
+            "rankingKey": 1330479,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "技能岗位，实操性强",
+              "学历要求低",
+              "电子制造行业需求"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "无截止时间",
+              "岗位信息不完整"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "焊锡员"
+          ],
+          "confidence": 0.8,
+          "id": "2255d59f325351bf"
+        },
+        {
+          "organization": "深圳市华美兴泰科技股份有限公司",
+          "organizationNature": "民企",
+          "industry": "制造业",
+          "jobTitle": "SMT技术员",
+          "jobDirections": [
+            "SMT技术"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "初中至大专学历",
+            "minimum": "初中",
+            "preferred": "大专",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "具备实操能力与职业发展潜力"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 59,
+            "rankingKey": 1330479,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "技术岗位，专业性强",
+              "学历要求低",
+              "SMT行业经验积累"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "无截止时间",
+              "岗位信息不完整"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "SMT技术员"
+          ],
+          "confidence": 0.8,
+          "id": "ac5127f9db753817"
+        },
+        {
+          "organization": "深圳市盛能杰科技有限公司",
+          "organizationNature": "民企",
+          "industry": "制造业",
+          "jobTitle": "QC技术员",
+          "jobDirections": [
+            "质量控制"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "初中至大专学历",
+            "minimum": "初中",
+            "preferred": "大专",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "具备实操能力与职业发展潜力"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 59,
+            "rankingKey": 1330479,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "质量岗位，专业发展",
+              "学历要求低",
+              "制造业基础岗位"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "无截止时间",
+              "岗位信息不完整"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "QC技术员"
+          ],
+          "confidence": 0.8,
+          "id": "a7a6c125f9978c75"
+        },
+        {
+          "organization": "深圳市盛能杰科技有限公司",
+          "organizationNature": "民企",
+          "industry": "制造业",
+          "jobTitle": "仓管员",
+          "jobDirections": [
+            "仓库管理"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "初中至大专学历",
+            "minimum": "初中",
+            "preferred": "大专",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "具备实操能力与职业发展潜力"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 59,
+            "rankingKey": 1330479,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "仓储岗位，稳定",
+              "学历要求低",
+              "物流行业入门"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "无截止时间",
+              "岗位信息不完整"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "仓管员"
+          ],
+          "confidence": 0.8,
+          "id": "dc2aae1666313e30"
+        },
+        {
+          "organization": "深圳市盛能杰科技有限公司",
+          "organizationNature": "民企",
+          "industry": "制造业",
+          "jobTitle": "一线作业员",
+          "jobDirections": [
+            "生产作业"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "初中至大专学历",
+            "minimum": "初中",
+            "preferred": "大专",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "不限专业",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "具备实操能力与职业发展潜力"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 59,
+            "rankingKey": 1330479,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "一线岗位，门槛低",
+              "学历要求低",
+              "快速入职"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "无截止时间",
+              "岗位信息不完整"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "一线作业员"
+          ],
+          "confidence": 0.8,
+          "id": "b0c3f5c546056118"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "原文未提供具体薪资、福利、截止时间、报名方式等详细信息，仅列出岗位和单位。",
+        "部分岗位（如比亚迪技术工操作工）未明确区分，但根据单位不同拆分。",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-YZlheR/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 9 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-YZlheR/8.png stdout -l chi_sim+eng --psm 6\n",
+        "第 12 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-YZlheR/11.png stdout -l chi_sim+eng --psm 6\n"
+      ]
+    },
+    {
+      "id": "d30d6d5bf858b2c1",
+      "account": "国聘",
+      "title": "广岩国际投资有限责任公司2027届（暑期）实习生招募公告",
+      "url": "https://mp.weixin.qq.com/s/Ed6lykAUkLvFC1CxPfaG-g",
+      "publishedAt": "2026-07-17T12:49:24.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "广岩国际投资有限责任公司面向2027届硕博士招募暑期实习生，岗位包括业务类/研究类、职能管理类、法律类、财务管理类，提供实习津贴、餐食和保险，优秀者可获优先录用或直通复试。",
+      "positions": [
+        {
+          "organization": "广岩国际投资有限责任公司",
+          "organizationNature": "央企",
+          "industry": "投资",
+          "jobTitle": "财务管理类实习生",
+          "jobDirections": [
+            "财务管理"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上（博士优先）",
+            "minimum": "硕士",
+            "preferred": "博士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "财务管理、会计学、审计学、税务、金融等相关专业",
+            "accepted": [
+              "财务管理",
+              "会计学",
+              "审计学",
+              "税务",
+              "金融"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [
+            "中共党员（含预备党员、发展对象）",
+            "每周可实习3天及以上，整体2个月及以上",
+            "英文或小语种可作为工作语言",
+            "通过CFA、CPA、ACCA、FRM等优先"
+          ],
+          "compensation": {
+            "summary": "实习津贴、食堂餐食、商业意外险",
+            "salary": null,
+            "benefits": [
+              "实习津贴",
+              "食堂餐食",
+              "商业意外险"
+            ],
+            "quality": 3
+          },
+          "deadline": "2026-07-20",
+          "applicationMethod": "国聘网站搜索'广岩国际投资有限责任公司'投递注有'实习'的岗位",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 84,
+            "rankingKey": 1543394,
+            "level": "high",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求以硕士为主，符合优先级",
+              "专业对口，财会金融方向",
+              "央企财务实习经历有优势",
+              "优秀者可获优先录用"
+            ],
+            "concerns": [
+              "仅面向2027届硕博士",
+              "要求中共党员",
+              "实习时长至少2个月"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "专业要求：财务管理、会计学等",
+            "基本条件：中共党员",
+            "实习岗位和任职资格：财务管理类"
+          ],
+          "confidence": 0.95,
+          "id": "7453bf63f92cc0e4"
+        },
+        {
+          "organization": "广岩国际投资有限责任公司",
+          "organizationNature": "央企",
+          "industry": "投资",
+          "jobTitle": "法律类实习生",
+          "jobDirections": [
+            "法律"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上（博士优先）",
+            "minimum": "硕士",
+            "preferred": "博士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "法学相关专业，法学、国际经济法、经济法、商法方向优先",
+            "accepted": [
+              "法学",
+              "国际经济法",
+              "经济法",
+              "商法"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [
+            "中共党员（含预备党员、发展对象）",
+            "每周可实习3天及以上，整体2个月及以上",
+            "英文或小语种可作为工作语言",
+            "已通过法律职业资格考试优先"
+          ],
+          "compensation": {
+            "summary": "实习津贴、食堂餐食、商业意外险",
+            "salary": null,
+            "benefits": [
+              "实习津贴",
+              "食堂餐食",
+              "商业意外险"
+            ],
+            "quality": 3
+          },
+          "deadline": "2026-07-20",
+          "applicationMethod": "国聘网站搜索'广岩国际投资有限责任公司'投递注有'实习'的岗位",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 76,
+            "rankingKey": 1443394,
+            "level": "high",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求以硕士为主，符合优先级",
+              "专业对口，法律方向明确",
+              "央企法务实习经历含金量高",
+              "优秀者可获优先录用"
+            ],
+            "concerns": [
+              "仅面向2027届硕博士",
+              "要求中共党员",
+              "实习时长至少2个月"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "专业要求：法学相关专业",
+            "基本条件：中共党员",
+            "实习岗位和任职资格：法律类"
+          ],
+          "confidence": 0.95,
+          "id": "e3cd0deb51d35dbb"
+        },
+        {
+          "organization": "广岩国际投资有限责任公司",
+          "organizationNature": "央企",
+          "industry": "投资",
+          "jobTitle": "职能管理类实习生",
+          "jobDirections": [
+            "办公室综合",
+            "人力资源",
+            "党群工作"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上（博士优先）",
+            "minimum": "硕士",
+            "preferred": "博士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限，经济、管理、金融、人力、心理学、新闻、法学、中共党史等相关专业优先",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "中共党员（含预备党员、发展对象）",
+            "每周可实习3天及以上，整体2个月及以上",
+            "英文或小语种可作为工作语言"
+          ],
+          "compensation": {
+            "summary": "实习津贴、食堂餐食、商业意外险",
+            "salary": null,
+            "benefits": [
+              "实习津贴",
+              "食堂餐食",
+              "商业意外险"
+            ],
+            "quality": 3
+          },
+          "deadline": "2026-07-20",
+          "applicationMethod": "国聘网站搜索'广岩国际投资有限责任公司'投递注有'实习'的岗位",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 72,
+            "rankingKey": 1343494,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "专业不限，文科社科友好",
+              "央企平台，稳定",
+              "优秀者可获优先录用"
+            ],
+            "concerns": [
+              "仅面向2027届硕博士",
+              "要求中共党员",
+              "实习时长至少2个月"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "专业要求：专业不限",
+            "基本条件：中共党员",
+            "实习岗位和任职资格：职能管理类"
+          ],
+          "confidence": 0.95,
+          "id": "0361ce1c2ae1c43a"
+        },
+        {
+          "organization": "广岩国际投资有限责任公司",
+          "organizationNature": "央企",
+          "industry": "投资",
+          "jobTitle": "业务类和研究类实习生",
+          "jobDirections": [
+            "战略",
+            "投资",
+            "投后运营",
+            "研究"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上（博士优先）",
+            "minimum": "硕士",
+            "preferred": "博士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "地质、矿产、冶金、材料、能源、环境、金融、经济、管理、财会、贸易、法律、小语种等相关专业",
+            "accepted": [
+              "地质",
+              "矿产",
+              "冶金",
+              "材料",
+              "能源",
+              "环境",
+              "金融",
+              "经济",
+              "管理",
+              "财会",
+              "贸易",
+              "法律"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "中共党员（含预备党员、发展对象）",
+            "每周可实习3天及以上，整体2个月及以上",
+            "英文或小语种可作为工作语言"
+          ],
+          "compensation": {
+            "summary": "实习津贴、食堂餐食、商业意外险",
+            "salary": null,
+            "benefits": [
+              "实习津贴",
+              "食堂餐食",
+              "商业意外险"
+            ],
+            "quality": 3
+          },
+          "deadline": "2026-07-20",
+          "applicationMethod": "国聘网站搜索'广岩国际投资有限责任公司'投递注有'实习'的岗位",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1343394,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "央企平台，国际化视野",
+              "优秀者可获优先录用或直通复试",
+              "专业范围广，复合背景优先"
+            ],
+            "concerns": [
+              "仅面向2027届硕博士",
+              "要求中共党员",
+              "实习时长至少2个月"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "招募对象：2027届优秀硕博士",
+            "基本条件：中共党员",
+            "实习岗位和任职资格：业务类和研究类"
+          ],
+          "confidence": 0.95,
+          "id": "fc1125b0043f80a9"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
+    },
+    {
+      "id": "e3779a9f9177fd06",
+      "account": "国聘",
+      "title": "国家机关、事业单位招聘信息推荐 7月（第二期）",
+      "url": "https://mp.weixin.qq.com/s/ppriNsZu4yE82R09SLXaIQ",
+      "publishedAt": "2026-07-17T12:49:24.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 3,
+      "summary": "国家机关、事业单位招聘信息推荐，涵盖多个单位岗位，报名截止区间2026.7.31-2026.10.12。",
+      "positions": [
+        {
+          "organization": "中国航天空气动力技术研究院",
+          "organizationNature": "事业单位",
+          "industry": "航空航天",
+          "jobTitle": "内部审计",
+          "jobDirections": [
+            "内部审计"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "3-5年经验",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "审计、财务相关",
+            "accepted": [
+              "审计学",
+              "会计学"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [
+            "3-5年经验"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 75,
+            "rankingKey": 1540289,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求以硕士为主，符合优先级",
+              "事业单位稳定",
+              "硕士学历要求",
+              "审计专业对口"
+            ],
+            "concerns": [
+              "要求3-5年经验",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [
+            "中国航天空气动力技术研究院",
+            "内部审计",
+            "北京",
+            "硕士3-5年"
+          ],
+          "confidence": 0.9,
+          "id": "0db67def2e2bd930"
+        },
+        {
+          "organization": "中国林业科学研究院木材工业研究",
+          "organizationNature": "事业单位",
+          "industry": "科研",
+          "jobTitle": "财务岗位",
+          "jobDirections": [
+            "财务岗位"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "经验不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "财务相关",
+            "accepted": [
+              "财务管理",
+              "会计学"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 73,
+            "rankingKey": 1530489,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "事业单位稳定",
+              "大专可报",
+              "财务专业对口"
+            ],
+            "concerns": [
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "中国林业科学研究院木材工业研究",
+            "财务岗位",
+            "北京",
+            "大专经验不限"
+          ],
+          "confidence": 0.9,
+          "id": "6608d92921b954f3"
+        },
+        {
+          "organization": "长沙市天心区卫生健康局",
+          "organizationNature": "党政机关",
+          "industry": "公共服务",
+          "jobTitle": "人事财务岗",
+          "jobDirections": [
+            "人事财务岗"
+          ],
+          "locations": [
+            "长沙"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "在校生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "人力资源管理、财务管理等相关",
+            "accepted": [
+              "人力资源管理",
+              "财务管理"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 72,
+            "rankingKey": 1530389,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "党政机关实习",
+              "本科可报",
+              "管理专业对口"
+            ],
+            "concerns": [
+              "实习岗位",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "长沙市天心区卫生健康局",
+            "人事财务岗",
+            "长沙",
+            "本科在校生"
+          ],
+          "confidence": 0.9,
+          "id": "dd174fb2b2631587"
+        },
+        {
+          "organization": "长沙市天心区审计局",
+          "organizationNature": "党政机关",
+          "industry": "公共服务",
+          "jobTitle": "审计员",
+          "jobDirections": [
+            "审计员"
+          ],
+          "locations": [
+            "长沙"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "在校生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "审计、会计等相关",
+            "accepted": [
+              "审计学",
+              "会计学"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 72,
+            "rankingKey": 1530389,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "本科或大专层次可报",
+              "党政机关实习",
+              "本科可报",
+              "审计专业对口"
+            ],
+            "concerns": [
+              "实习岗位",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "长沙市天心区审计局",
+            "审计员",
+            "长沙",
+            "本科在校生"
+          ],
+          "confidence": 0.9,
+          "id": "aeb7f9334ad36236"
+        },
+        {
+          "organization": "中国工艺品进出口有限公司",
+          "organizationNature": "国企",
+          "industry": "贸易",
+          "jobTitle": "法律合规岗",
+          "jobDirections": [
+            "法律合规岗"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "应届生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "法律相关",
+            "accepted": [
+              "法学"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1440389,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求以硕士为主，符合优先级",
+              "国企稳定",
+              "硕士学历要求",
+              "法律专业对口"
+            ],
+            "concerns": [
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "中国工艺品进出口有限公司",
+            "法律合规岗",
+            "北京",
+            "硕士应届生"
+          ],
+          "confidence": 0.9,
+          "id": "ab9a7e4b1977cae8"
+        },
+        {
+          "organization": "长沙市天心区新闻中心",
+          "organizationNature": "事业单位",
+          "industry": "媒体",
+          "jobTitle": "新媒体编辑",
+          "jobDirections": [
+            "新媒体编辑"
+          ],
+          "locations": [
+            "长沙"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "在校生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "新闻传播、中文等相关",
+            "accepted": [
+              "新闻学",
+              "传播学",
+              "汉语言文学"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1430389,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "事业单位实习",
+              "本科可报",
+              "专业对口"
+            ],
+            "concerns": [
+              "实习岗位",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "长沙市天心区新闻中心",
+            "新媒体编辑",
+            "长沙",
+            "本科在校生"
+          ],
+          "confidence": 0.9,
+          "id": "e03f38982b157e95"
+        },
+        {
+          "organization": "中国电子科技集团公司第十五研究所",
+          "organizationNature": "央企",
+          "industry": "信息技术",
+          "jobTitle": "规划论证工程师",
+          "jobDirections": [
+            "规划论证工程师(J11160)"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "计算机、电子、通信等相关",
+            "accepted": [
+              "计算机科学与技术",
+              "电子科学与技术",
+              "通信工程"
+            ],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 47,
+            "rankingKey": 1240389,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级",
+              "央企稳定",
+              "硕士学历要求",
+              "2026届校招"
+            ],
+            "concerns": [
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "中国电子科技集团公司第十五研究所",
+            "规划论证工程师",
+            "北京",
+            "硕士应届生"
+          ],
+          "confidence": 0.9,
+          "id": "2feb409563f220a7"
+        },
+        {
+          "organization": "中国电子科技集团公司第十五研究所",
+          "organizationNature": "央企",
+          "industry": "信息技术",
+          "jobTitle": "软件开发工程师",
+          "jobDirections": [
+            "软件开发工程师(J11059)"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "计算机、软件工程等相关",
+            "accepted": [
+              "计算机科学与技术",
+              "软件工程"
+            ],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 47,
+            "rankingKey": 1240389,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级",
+              "央企稳定",
+              "硕士学历要求",
+              "2026届校招"
+            ],
+            "concerns": [
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "中国电子科技集团公司第十五研究所",
+            "软件开发工程师",
+            "北京",
+            "硕士应届生"
+          ],
+          "confidence": 0.9,
+          "id": "b24b18ab5ae8aa06"
+        },
+        {
+          "organization": "中国通用技术研究院",
+          "organizationNature": "事业单位",
+          "industry": "信息技术",
+          "jobTitle": "通信核心网工程师",
+          "jobDirections": [
+            "通信核心网工程师"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "经验不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "通信、计算机相关",
+            "accepted": [
+              "通信工程",
+              "计算机科学与技术"
+            ],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 47,
+            "rankingKey": 1240379,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级",
+              "事业单位稳定",
+              "硕士学历要求",
+              "技术岗位"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "经验不限但可能要求高"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "中国通用技术研究院",
+            "通信核心网工程师",
+            "北京",
+            "硕士经验不限"
+          ],
+          "confidence": 0.8,
+          "id": "17a6e46421044e6b"
+        },
+        {
+          "organization": "中共长沙市天心区委宣传部",
+          "organizationNature": "党政机关",
+          "industry": "公共服务",
+          "jobTitle": "办公室助理",
+          "jobDirections": [
+            "办公室助理"
+          ],
+          "locations": [
+            "长沙"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "在校生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 42,
+            "rankingKey": 1230389,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "党政机关实习",
+              "本科可报",
+              "长沙工作"
+            ],
+            "concerns": [
+              "实习岗位",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "中共长沙市天心区委宣传部",
+            "办公室助理",
+            "长沙",
+            "本科在校生"
+          ],
+          "confidence": 0.9,
+          "id": "6058f009e5542f59"
+        },
+        {
+          "organization": "中共长沙市天心区委统一战线工作部",
+          "organizationNature": "党政机关",
+          "industry": "公共服务",
+          "jobTitle": "文秘",
+          "jobDirections": [
+            "文秘"
+          ],
+          "locations": [
+            "长沙"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "在校生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 42,
+            "rankingKey": 1230389,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "党政机关实习",
+              "本科可报",
+              "长沙工作"
+            ],
+            "concerns": [
+              "实习岗位",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "中共长沙市天心区委统一战线工作部",
+            "文秘",
+            "长沙",
+            "本科在校生"
+          ],
+          "confidence": 0.9,
+          "id": "99330c38d82ddcfc"
+        },
+        {
+          "organization": "长沙知识产权保护中心",
+          "organizationNature": "事业单位",
+          "industry": "知识产权",
+          "jobTitle": "预审确权",
+          "jobDirections": [
+            "预审确权"
+          ],
+          "locations": [
+            "长沙"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "在校生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 42,
+            "rankingKey": 1230389,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "事业单位实习",
+              "本科可报",
+              "长沙工作"
+            ],
+            "concerns": [
+              "实习岗位",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "长沙知识产权保护中心",
+            "预审确权",
+            "长沙",
+            "本科在校生"
+          ],
+          "confidence": 0.9,
+          "id": "4eb1abc46435cab8"
+        },
+        {
+          "organization": "长沙市天心区市场监督管理局",
+          "organizationNature": "党政机关",
+          "industry": "公共服务",
+          "jobTitle": "餐饮服务安全协管",
+          "jobDirections": [
+            "餐饮服务安全协管"
+          ],
+          "locations": [
+            "长沙"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "在校生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 42,
+            "rankingKey": 1230389,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "党政机关实习",
+              "本科可报",
+              "长沙工作"
+            ],
+            "concerns": [
+              "实习岗位",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "长沙市天心区市场监督管理局",
+            "餐饮服务安全协管",
+            "长沙",
+            "本科在校生"
+          ],
+          "confidence": 0.9,
+          "id": "e5ffc891e62ca742"
+        },
+        {
+          "organization": "长沙市天心区市场监督管理局",
+          "organizationNature": "党政机关",
+          "industry": "公共服务",
+          "jobTitle": "知识产权协管",
+          "jobDirections": [
+            "知识产权协管"
+          ],
+          "locations": [
+            "长沙"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "在校生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 42,
+            "rankingKey": 1230389,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "党政机关实习",
+              "本科可报",
+              "长沙工作"
+            ],
+            "concerns": [
+              "实习岗位",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "长沙市天心区市场监督管理局",
+            "知识产权协管",
+            "长沙",
+            "本科在校生"
+          ],
+          "confidence": 0.9,
+          "id": "b5831f87ad995dc5"
+        },
+        {
+          "organization": "长沙市天心区商务局",
+          "organizationNature": "党政机关",
+          "industry": "公共服务",
+          "jobTitle": "实习生",
+          "jobDirections": [
+            "实习生"
+          ],
+          "locations": [
+            "长沙"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "在校生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 42,
+            "rankingKey": 1230389,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "党政机关实习",
+              "本科可报",
+              "长沙工作"
+            ],
+            "concerns": [
+              "实习岗位",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "长沙市天心区商务局",
+            "实习生",
+            "长沙",
+            "本科在校生"
+          ],
+          "confidence": 0.9,
+          "id": "887348d1c687c7a2"
+        },
+        {
+          "organization": "长沙市天心区人民政府",
+          "organizationNature": "党政机关",
+          "industry": "公共服务",
+          "jobTitle": "禁毒宣传策划",
+          "jobDirections": [
+            "禁毒宣传策划"
+          ],
+          "locations": [
+            "长沙"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "在校生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 42,
+            "rankingKey": 1230389,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "党政机关实习",
+              "本科可报",
+              "长沙工作"
+            ],
+            "concerns": [
+              "实习岗位",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "长沙市天心区人民政府",
+            "禁毒宣传策划",
+            "长沙",
+            "本科在校生"
+          ],
+          "confidence": 0.9,
+          "id": "b3caaa9478d229cc"
+        },
+        {
+          "organization": "中化地质矿山总局新疆地质调查院",
+          "organizationNature": "事业单位",
+          "industry": "地质勘查",
+          "jobTitle": "专业技术岗",
+          "jobDirections": [
+            "援疆找矿大会战管委会-专业技术岗"
+          ],
+          "locations": [
+            "喀什"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "应届生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确，推测地质相关",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 42,
+            "rankingKey": 1230379,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "事业单位稳定",
+              "应届生可投",
+              "专业对口可能性高"
+            ],
+            "concerns": [
+              "专业要求未明确",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "中化地质矿山总局新疆地质调查院",
+            "专业技术岗",
+            "喀什",
+            "本科应届生"
+          ],
+          "confidence": 0.8,
+          "id": "8dfaecd1ae3df548"
+        },
+        {
+          "organization": "中化地质矿山总局江苏地质勘查院",
+          "organizationNature": "事业单位",
+          "industry": "地质勘查",
+          "jobTitle": "地质工程师",
+          "jobDirections": [
+            "地质工程师"
+          ],
+          "locations": [
+            "徐州"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "应届生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确，推测地质相关",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 42,
+            "rankingKey": 1230379,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "事业单位稳定",
+              "应届生可投"
+            ],
+            "concerns": [
+              "专业要求未明确",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "中化地质矿山总局江苏地质勘查院",
+            "地质工程师",
+            "徐州",
+            "本科应届生"
+          ],
+          "confidence": 0.8,
+          "id": "80827549c9536960"
+        },
+        {
+          "organization": "中国科学院人才交流开发中心",
+          "organizationNature": "事业单位",
+          "industry": "科研服务",
+          "jobTitle": "仪器管理员",
+          "jobDirections": [
+            "仪器管理员岗位（国家动物标本资源库）"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "经验不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 42,
+            "rankingKey": 1230379,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "事业单位稳定",
+              "经验不限",
+              "北京工作"
+            ],
+            "concerns": [
+              "专业要求未明确",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "中国科学院人才交流开发中心",
+            "仪器管理员",
+            "北京",
+            "本科经验不限"
+          ],
+          "confidence": 0.8,
+          "id": "5e177db116ce1997"
+        },
+        {
+          "organization": "中国工程院战略咨询中心",
+          "organizationNature": "事业单位",
+          "industry": "政策研究",
+          "jobTitle": "项目助理",
+          "jobDirections": [
+            "信息领域项目助理",
+            "农业领域项目助理"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "经验不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确，推测相关领域",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": "2026-10-12",
+          "applicationMethod": "国聘招聘平台",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 42,
+            "rankingKey": 1230379,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "事业单位稳定",
+              "经验不限",
+              "北京工作"
+            ],
+            "concerns": [
+              "专业要求未明确",
+              "薪资未披露"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "中国工程院战略咨询中心",
+            "项目助理",
+            "北京",
+            "本科经验不限"
+          ],
+          "confidence": 0.8,
+          "id": "a8cc754f03ea2909"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Zk9YML/0.png stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Zk9YML/2.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Zk9YML/4.png stdout -l chi_sim+eng --psm 6\n",
+        "第 7 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Zk9YML/6.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-Zk9YML/5.jpg stdout -l chi_sim+eng --psm 6\n"
+      ]
+    },
+    {
+      "id": "fd20942bff9ed2a4",
+      "account": "国聘",
+      "title": "校招 | 地方国企招聘信息汇总 7月（第三期）",
+      "url": "https://mp.weixin.qq.com/s/Dt5gUUJbuXefKa22g4lGuQ",
+      "publishedAt": "2026-07-17T12:49:24.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 3,
+      "summary": "地方国企校招岗位汇总，涵盖多个行业和地区，报名截止区间2026.7.24-2026.10.13。",
+      "positions": [
+        {
+          "organization": "浙江交工集团股份有限公司",
+          "organizationNature": "国企",
+          "industry": "交通基建",
+          "jobTitle": "综合行政岗",
+          "jobDirections": [
+            "综合行政"
+          ],
+          "locations": [
+            "杭州"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "行政管理、工商管理等相关专业优先",
+            "accepted": [
+              "行政管理",
+              "工商管理"
+            ],
+            "fit": "administrative_management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 86,
+            "rankingKey": 1632489,
+            "level": "high",
+            "reasons": [
+              "专业高度匹配行政管理",
+              "本科或大专层次可报",
+              "专业匹配度高",
+              "国企稳定",
+              "地点杭州"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "竞争可能激烈"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "综合行政岗",
+            "杭州",
+            "本科应届生"
+          ],
+          "confidence": 0.9,
+          "id": "cb5d166dd3e06b4c"
+        },
+        {
+          "organization": "中地装（无锡）钻探工具有限公司",
+          "organizationNature": "国企",
+          "industry": "制造业",
+          "jobTitle": "粉末冶金研发工程师",
+          "jobDirections": [
+            "钻头产品方向"
+          ],
+          "locations": [
+            "无锡"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "粉末冶金、材料科学等相关专业",
+            "accepted": [
+              "材料科学与工程",
+              "冶金工程"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 74,
+            "rankingKey": 1442389,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求以硕士为主，符合优先级",
+              "研发岗位",
+              "硕士学历",
+              "专业对口"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "专业限制严格"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "粉末冶金研发工程师（钻头产品方向）",
+            "无锡",
+            "硕士应届生"
+          ],
+          "confidence": 0.9,
+          "id": "6a63e8ad04371e29"
+        },
+        {
+          "organization": "浙江交工集团股份有限公司",
+          "organizationNature": "国企",
+          "industry": "交通基建",
+          "jobTitle": "工程管培生",
+          "jobDirections": [
+            "工程管理"
+          ],
+          "locations": [
+            "杭州"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "土木工程、工程管理等相关专业",
+            "accepted": [
+              "土木工程",
+              "工程管理"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 74,
+            "rankingKey": 1442389,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求以硕士为主，符合优先级",
+              "管培生发展前景好",
+              "硕士学历",
+              "国企平台"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "专业要求严格"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "工程管培生",
+            "杭州",
+            "硕士应届生"
+          ],
+          "confidence": 0.9,
+          "id": "b3b28ef9e176e25b"
+        },
+        {
+          "organization": "清华大学出版社有限公司",
+          "organizationNature": "国企",
+          "industry": "出版",
+          "jobTitle": "期刊编辑（英文科技）",
+          "jobDirections": [
+            "英文科技期刊编辑"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "理工科专业背景，英语能力强",
+            "accepted": [
+              "理工科"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [
+            "英语能力强"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 74,
+            "rankingKey": 1442389,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求以硕士为主，符合优先级",
+              "清华大学出版社平台好",
+              "硕士学历",
+              "北京工作"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "专业要求理工科，文科生不匹配"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "期刊编辑（英文科技）2026",
+            "北京",
+            "硕士应届生"
+          ],
+          "confidence": 0.9,
+          "id": "e7e1984ccb7b2d72"
+        },
+        {
+          "organization": "清华大学出版社有限公司",
+          "organizationNature": "国企",
+          "industry": "出版",
+          "jobTitle": "软件工程师",
+          "jobDirections": [
+            "软件开发"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "计算机科学与技术、软件工程等相关专业",
+            "accepted": [
+              "计算机科学与技术",
+              "软件工程"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 74,
+            "rankingKey": 1442389,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求以硕士为主，符合优先级",
+              "清华大学出版社平台好",
+              "硕士学历",
+              "北京工作"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "专业限制严格"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "软件工程师2026",
+            "北京",
+            "硕士应届生"
+          ],
+          "confidence": 0.9,
+          "id": "730a6f6479d1e5f7"
+        },
+        {
+          "organization": "南宁产投铝基新材料集团有限责任公司",
+          "organizationNature": "国企",
+          "industry": "新材料",
+          "jobTitle": "储备研发工程师",
+          "jobDirections": [
+            "研发"
+          ],
+          "locations": [
+            "南宁"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "材料科学与工程、化学等相关专业",
+            "accepted": [
+              "材料科学与工程",
+              "化学"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 74,
+            "rankingKey": 1442389,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求以硕士为主，符合优先级",
+              "研发岗位",
+              "硕士学历",
+              "国企稳定"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "工作地点南宁"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "储备研发工程师",
+            "南宁",
+            "硕士应届生"
+          ],
+          "confidence": 0.9,
+          "id": "583cc91c09abc85b"
+        },
+        {
+          "organization": "南京高科股份有限公司",
+          "organizationNature": "国企",
+          "industry": "投资",
+          "jobTitle": "投资经理（生物医药方向）",
+          "jobDirections": [
+            "生物医药投资"
+          ],
+          "locations": [
+            "南京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "生物医药、金融等相关专业",
+            "accepted": [
+              "生物医药",
+              "金融学"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 74,
+            "rankingKey": 1442389,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求以硕士为主，符合优先级",
+              "投资岗位前景好",
+              "硕士学历",
+              "南京工作"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "专业要求高"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "投资经理（生物医药方向）",
+            "南京",
+            "硕士应届生"
+          ],
+          "confidence": 0.9,
+          "id": "a55f493fc87c299d"
+        },
+        {
+          "organization": "南京高科股份有限公司",
+          "organizationNature": "国企",
+          "industry": "投资",
+          "jobTitle": "投资经理",
+          "jobDirections": [
+            "投资"
+          ],
+          "locations": [
+            "南京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "金融、经济、财务等相关专业",
+            "accepted": [
+              "金融学",
+              "经济学",
+              "财务管理"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 74,
+            "rankingKey": 1442389,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "学历要求以硕士为主，符合优先级",
+              "投资岗位前景好",
+              "硕士学历",
+              "南京工作"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "专业要求高"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "投资经理",
+            "南京",
+            "硕士应届生"
+          ],
+          "confidence": 0.9,
+          "id": "be31330143812bcd"
+        },
+        {
+          "organization": "云锡新材料（东营）有限公司",
+          "organizationNature": "国企",
+          "industry": "新材料",
+          "jobTitle": "主控运维",
+          "jobDirections": [
+            "生产运维"
+          ],
+          "locations": [
+            "东营"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "化工、机械、自动化等相关专业",
+            "accepted": [
+              "化学工程与工艺",
+              "机械设计制造及其自动化",
+              "自动化"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 72,
+            "rankingKey": 1432589,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "大专可报",
+              "国企稳定",
+              "专业相关"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "工作地点东营"
+            ]
+          },
+          "accessibility": 5,
+          "evidence": [
+            "主控运维",
+            "东营",
+            "大专应届生"
+          ],
+          "confidence": 0.9,
+          "id": "38b14870fdeb8915"
+        },
+        {
+          "organization": "什邡市恒安粮油有限公司",
+          "organizationNature": "国企",
+          "industry": "粮油",
+          "jobTitle": "市场营销",
+          "jobDirections": [
+            "市场营销"
+          ],
+          "locations": [
+            "德阳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "市场营销、工商管理等相关专业",
+            "accepted": [
+              "市场营销",
+              "工商管理"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [
+            "未就业应往届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 72,
+            "rankingKey": 1432589,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "往届生可报",
+              "大专可报",
+              "专业相关"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "工作地点德阳"
+            ]
+          },
+          "accessibility": 5,
+          "evidence": [
+            "市场营销（未就业应往届毕业生）",
+            "德阳",
+            "大专应届生"
+          ],
+          "confidence": 0.9,
+          "id": "c6ced8546a281a19"
+        },
+        {
+          "organization": "浙江交工集团股份有限公司",
+          "organizationNature": "国企",
+          "industry": "交通基建",
+          "jobTitle": "项目合同计量",
+          "jobDirections": [
+            "合同计量"
+          ],
+          "locations": [
+            "杭州"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "工程管理、工程造价等相关专业",
+            "accepted": [
+              "工程管理",
+              "工程造价"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1432489,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "专业对口",
+              "本科可报",
+              "国企稳定"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "工作地点可能项目现场"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "项目合同计量",
+            "杭州",
+            "本科应届生"
+          ],
+          "confidence": 0.9,
+          "id": "e0c680b6a2359dd8"
+        },
+        {
+          "organization": "浙江交工集团股份有限公司",
+          "organizationNature": "国企",
+          "industry": "交通基建",
+          "jobTitle": "项目物资设备",
+          "jobDirections": [
+            "物资设备管理"
+          ],
+          "locations": [
+            "杭州"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "物流管理、机械工程等相关专业",
+            "accepted": [
+              "物流管理",
+              "机械工程"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1432489,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "专业相关",
+              "本科可报",
+              "国企稳定"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "工作地点可能项目现场"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "项目物资设备",
+            "杭州",
+            "本科应届生"
+          ],
+          "confidence": 0.9,
+          "id": "26bb5e6590e6a61a"
+        },
+        {
+          "organization": "浙江交工集团股份有限公司",
+          "organizationNature": "国企",
+          "industry": "交通基建",
+          "jobTitle": "项目工程技术员",
+          "jobDirections": [
+            "工程技术"
+          ],
+          "locations": [
+            "杭州"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "土木工程、道路桥梁等相关专业",
+            "accepted": [
+              "土木工程",
+              "道路桥梁与渡河工程"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1432489,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "专业对口",
+              "本科可报",
+              "国企稳定"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "工作地点可能项目现场"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "项目工程技术员",
+            "杭州",
+            "本科应届生"
+          ],
+          "confidence": 0.9,
+          "id": "466e75ead3a04968"
+        },
+        {
+          "organization": "浙江交工集团股份有限公司",
+          "organizationNature": "国企",
+          "industry": "交通基建",
+          "jobTitle": "项目安全管理",
+          "jobDirections": [
+            "安全管理"
+          ],
+          "locations": [
+            "杭州"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "安全工程、土木工程等相关专业",
+            "accepted": [
+              "安全工程",
+              "土木工程"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1432489,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "专业相关",
+              "本科可报",
+              "国企稳定"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "工作地点可能项目现场"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "项目安全管理",
+            "杭州",
+            "本科应届生"
+          ],
+          "confidence": 0.9,
+          "id": "cbcede9dc6147ae8"
+        },
+        {
+          "organization": "天津金石智联科技有限公司",
+          "organizationNature": "国企",
+          "industry": "科技",
+          "jobTitle": "客户运营",
+          "jobDirections": [
+            "客户运营"
+          ],
+          "locations": [
+            "天津"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "市场营销、电子商务等相关专业",
+            "accepted": [
+              "市场营销",
+              "电子商务"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1432489,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "专业相关",
+              "本科可报",
+              "国企稳定"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "公司知名度较低"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "客户运营",
+            "天津",
+            "本科应届生"
+          ],
+          "confidence": 0.9,
+          "id": "6a20335773d6c36d"
+        },
+        {
+          "organization": "山西电机制造有限公司",
+          "organizationNature": "国企",
+          "industry": "制造业",
+          "jobTitle": "产品研发工程师",
+          "jobDirections": [
+            "产品研发"
+          ],
+          "locations": [
+            "太原"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "机械工程、电气工程等相关专业",
+            "accepted": [
+              "机械工程",
+              "电气工程及其自动化"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1432489,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "研发岗位",
+              "本科可报",
+              "国企稳定"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "专业限制严格"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "产品研发工程师",
+            "太原",
+            "本科应届生"
+          ],
+          "confidence": 0.9,
+          "id": "45ac737db81607cc"
+        },
+        {
+          "organization": "南宁产投铝基新材料集团有限责任公司",
+          "organizationNature": "国企",
+          "industry": "新材料",
+          "jobTitle": "储备机械工程师",
+          "jobDirections": [
+            "机械工程"
+          ],
+          "locations": [
+            "南宁"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "机械工程、机械设计制造及其自动化等相关专业",
+            "accepted": [
+              "机械工程",
+              "机械设计制造及其自动化"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1432489,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "储备岗位有发展",
+              "本科可报",
+              "国企稳定"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "工作地点南宁"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "储备机械工程师",
+            "南宁",
+            "本科应届生"
+          ],
+          "confidence": 0.9,
+          "id": "e8fbb52cd5e40ed0"
+        },
+        {
+          "organization": "南宁产投铝基新材料集团有限责任公司",
+          "organizationNature": "国企",
+          "industry": "新材料",
+          "jobTitle": "储备工艺工程师",
+          "jobDirections": [
+            "工艺工程"
+          ],
+          "locations": [
+            "南宁"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "材料科学与工程、冶金工程等相关专业",
+            "accepted": [
+              "材料科学与工程",
+              "冶金工程"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1432489,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "储备岗位有发展",
+              "本科可报",
+              "国企稳定"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "工作地点南宁"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "储备工艺工程师",
+            "南宁",
+            "本科应届生"
+          ],
+          "confidence": 0.9,
+          "id": "fbaf4b22e610532f"
+        },
+        {
+          "organization": "南京高科股份有限公司",
+          "organizationNature": "国企",
+          "industry": "医药",
+          "jobTitle": "医药研发管培生",
+          "jobDirections": [
+            "医药研发"
+          ],
+          "locations": [
+            "南通"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "药学、化学、生物等相关专业",
+            "accepted": [
+              "药学",
+              "化学",
+              "生物科学"
+            ],
+            "fit": "humanities"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1432489,
+            "level": "medium",
+            "reasons": [
+              "专业面向文科社科方向",
+              "本科或大专层次可报",
+              "管培生发展前景好",
+              "本科可报",
+              "国企稳定"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "工作地点南通"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "医药研发管培生",
+            "南通",
+            "本科应届生"
+          ],
+          "confidence": 0.9,
+          "id": "a8eaa3b4f8d2f260"
+        },
+        {
+          "organization": "中新建电力集团有限责任公司",
+          "organizationNature": "国企",
+          "industry": "电力",
+          "jobTitle": "纪检专责",
+          "jobDirections": [
+            "纪检"
+          ],
+          "locations": [
+            "石河子"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确，党员优先",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "党员优先"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": "2026-10-13",
+          "applicationMethod": "国聘官网",
+          "applicationUrl": "https://www.iguopin.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1332489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "国企稳定",
+              "专业不限",
+              "党员优先"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "工作地点偏远"
+            ]
+          },
+          "accessibility": 4,
+          "evidence": [
+            "纪检专责（党员优先）",
+            "石河子",
+            "本科应届生"
+          ],
+          "confidence": 0.9,
+          "id": "41037da4e33d5519"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-3SGTNQ/0.png stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-3SGTNQ/2.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-3SGTNQ/4.png stdout -l chi_sim+eng --psm 6\n",
+        "第 7 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-3SGTNQ/6.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-3SGTNQ/5.jpg stdout -l chi_sim+eng --psm 6\n"
+      ]
+    },
+    {
+      "id": "5248333fb312369b",
+      "account": "北航就业",
+      "title": "实习 | 航天科技集团五院遥感卫星总体部 | 2027届暑期实习招募全面启动",
+      "url": "https://mp.weixin.qq.com/s/Y8tsVV6MNENi2k5xLdqtiQ",
+      "publishedAt": "2026-07-17T10:31:36.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 1,
+      "summary": "航天科技集团五院遥感卫星总体部2027届暑期实习招募，面向2027届硕士及以上学历，专业要求理工类，实习地点北京海淀航天城。",
+      "positions": [
+        {
+          "organization": "航天科技集团五院遥感卫星总体部",
+          "organizationNature": "央企",
+          "industry": "航天",
+          "jobTitle": "暑期实习生",
+          "jobDirections": [
+            "遥感卫星总体"
+          ],
+          "locations": [
+            "北京海淀航天城"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "实习"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上学历",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "理工类相关专业",
+            "accepted": [
+              "理工类"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届应届毕业生",
+            "硕士及以上学历",
+            "理工类相关专业"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 63,
+            "rankingKey": 1340389,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "央企平台，航天领域头部单位",
+              "暑期实习，提前接触行业",
+              "北京海淀航天城，地理位置优越"
+            ],
+            "concerns": [
+              "专业要求理工类，文科生不匹配",
+              "薪资福利未披露",
+              "仅面向2027届，往届生不可投递"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "面向2027届硕士及以上学历",
+            "理工类相关专业",
+            "实习地点北京海淀航天城"
+          ],
+          "confidence": 0.9,
+          "id": "555215d9e0ce7087"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-brqKly/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-brqKly/1.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-brqKly/3.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-brqKly/5.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-brqKly/4.jpg stdout -l chi_sim+eng --psm 6\n",
+        "达到单篇 OCR 时间预算，跳过 2 张图片"
+      ]
+    },
+    {
+      "id": "a5d98d7b894881d3",
+      "account": "北航就业",
+      "title": "招聘 | 中智集团总部产业研究院 | 2026年博士后招聘公告",
+      "url": "https://mp.weixin.qq.com/s/wCzbGwnm0BGWrWAbDuJz5A",
+      "publishedAt": "2026-07-17T10:31:36.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "中智集团产业研究院2026年博士后招聘，招收1-2名博士后，研究方向为产业与政策，福利包括在京户口、有竞争力薪酬等。",
+      "positions": [
+        {
+          "organization": "中智集团产业研究院",
+          "organizationNature": "央企",
+          "industry": "人力资源服务",
+          "jobTitle": "博士后研究人员",
+          "jobDirections": [
+            "产业与政策研究"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": "1-2",
+          "employmentTypes": [
+            "博士后"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "博士研究生学历，2026年取得博士学位或获得博士学位不超过3年",
+            "minimum": "博士",
+            "preferred": "博士",
+            "tier": "phd_required",
+            "hardPhdRequired": true
+          },
+          "majors": {
+            "summary": "未明确限定专业，但研究方向为产业与政策，适合经济学、管理学、社会学等相关专业",
+            "accepted": [
+              "经济学",
+              "管理学",
+              "社会学"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "具有良好的政治素质和道德修养，遵纪守法，无不良记录，身体健康",
+            "于2026年取得博士学位的博士研究生，或获得博士学位不超过3年",
+            "诚实守信，品学兼优，具有良好的敬业精神、科研素养、沟通合作能力",
+            "具备全职在中智集团从事博士后研究工作的条件"
+          ],
+          "compensation": {
+            "summary": "有竞争力的薪酬，社会保险、住房公积金，可办理在京户口，出站优先留用",
+            "salary": null,
+            "benefits": [
+              "有竞争力的薪酬",
+              "社会保险",
+              "住房公积金",
+              "可办理在京户口",
+              "出站优先留用"
+            ],
+            "quality": 4
+          },
+          "deadline": "2026-07-31",
+          "applicationMethod": "邮件提交材料至grouphr@ciic.com.cn",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 35,
+            "rankingKey": 314294,
+            "level": "low",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "硬性要求博士，按偏好后置",
+              "央企平台，提供有竞争力的薪酬和福利",
+              "可办理在京户口",
+              "出站后优先留用，职业发展前景好"
+            ],
+            "concerns": [
+              "硬性博士要求，与你的学历排序偏好不符",
+              "硬性要求博士学历，门槛高",
+              "专业未明确限定，但研究方向偏产业政策，对专业匹配度要求较高",
+              "仅招收1-2名，竞争激烈"
+            ]
+          },
+          "accessibility": 2,
+          "evidence": [
+            "中智集团是国务院国资委直接管理的中央企业",
+            "招收条件：于2026年取得博士学位的博士研究生，或获得博士学位不超过3年",
+            "福利待遇：可按照有关政策办理在京户口，提供有竞争力的薪酬",
+            "申请截止日期：2026年7月31日"
+          ],
+          "confidence": 0.95,
+          "id": "fe7b34a31204508c"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
+    },
+    {
+      "id": "abda0f54ed6566aa",
+      "account": "北航就业",
+      "title": "招聘 | 中国兵器工业导航与控制技术研究所 | 2027届提前批",
+      "url": "https://mp.weixin.qq.com/s/YJE78fgRxF664Q_GmhKguA",
+      "publishedAt": "2026-07-17T10:31:36.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "中国兵器工业导航与控制技术研究所2027届提前批招聘，面向硕士及以上学历，专业包括导航制导与控制、电子、计算机等，工作地点北京。",
+      "positions": [
+        {
+          "organization": "中国兵器工业导航与控制技术研究所",
+          "organizationNature": "央企",
+          "industry": "军工",
+          "jobTitle": "研发岗",
+          "jobDirections": [
+            "导航制导与控制",
+            "电子",
+            "计算机"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上学历",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "导航制导与控制、电子、计算机等相关专业",
+            "accepted": [
+              "导航制导与控制",
+              "电子",
+              "计算机"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届应届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 63,
+            "rankingKey": 1340389,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "央企平台稳定",
+              "提前批机会",
+              "专业对口"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "仅限2027届",
+              "专业限制较窄"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "中国兵器工业导航与控制技术研究所",
+            "2027届提前批",
+            "硕士及以上学历"
+          ],
+          "confidence": 0.9,
+          "id": "138c7696b5586750"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-OiV5oY/0.jpg stdout -l chi_sim+eng --psm 6\n"
+      ]
+    },
+    {
+      "id": "d87b8e6dc2b92702",
+      "account": "清华就业",
+      "title": "招聘｜航天智能院2027届校园招聘正式启动",
+      "url": "https://mp.weixin.qq.com/s/xo7gNkytyWHoKimdDhumLA",
+      "publishedAt": "2026-07-17T10:04:26.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "航天智能院2027届校园招聘启动，面向2027届硕士及以上学历，专业涵盖航空航天、计算机、人工智能等，提供北京户口、六险二金等福利。",
+      "positions": [
+        {
+          "organization": "航天智能院",
+          "organizationNature": "央企",
+          "industry": "航空航天",
+          "jobTitle": "科研技术岗",
+          "jobDirections": [
+            "飞行器设计",
+            "人工智能",
+            "计算机科学与技术",
+            "控制工程",
+            "电子信息",
+            "力学",
+            "材料科学",
+            "机械工程"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上学历",
+            "minimum": "硕士",
+            "preferred": "博士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "航空航天、计算机、人工智能、控制、电子、力学、材料、机械等相关专业",
+            "accepted": [
+              "航空航天",
+              "计算机",
+              "人工智能",
+              "控制工程",
+              "电子信息",
+              "力学",
+              "材料科学",
+              "机械工程"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届应届毕业生",
+            "硕士及以上学历"
+          ],
+          "compensation": {
+            "summary": "提供北京户口、六险二金、补充医疗保险、员工食堂、人才公寓、带薪休假、节日福利、年度体检、子女入学等",
+            "salary": null,
+            "benefits": [
+              "北京户口",
+              "六险二金",
+              "补充医疗保险",
+              "员工食堂",
+              "人才公寓",
+              "带薪休假",
+              "节日福利",
+              "年度体检",
+              "子女入学"
+            ],
+            "quality": 5
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://wecruit.hotjob.cn/SU62f6a1e20dcad43c7e0b0e1d/mc/position/campus?projectId=103001",
+          "referralCode": null,
+          "recommendation": {
+            "score": 75,
+            "rankingKey": 1345389,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "央企平台，稳定性高",
+              "提供北京户口",
+              "福利待遇优厚，六险二金",
+              "专业对口度高"
+            ],
+            "concerns": [
+              "仅面向2027届应届生，往届生不可投递",
+              "学历要求硕士起步，本科不可投递",
+              "未披露具体薪资",
+              "岗位方向未明确细分"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "面向2027届硕士及以上学历",
+            "专业涵盖航空航天、计算机、人工智能等",
+            "提供北京户口、六险二金等福利"
+          ],
+          "confidence": 0.9,
+          "id": "80111d5304235ae9"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "文章未提供具体岗位名称，仅提及专业方向，故合并为一个岗位组",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-jRPAMJ/1.png stdout -l chi_sim+eng --psm 6\n",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-jRPAMJ/0.png stdout -l chi_sim+eng --psm 6\n"
+      ]
+    },
+    {
+      "id": "152200ef866ecb66",
+      "account": "清华就业",
+      "title": "开放日｜航空工业成飞2026年暑期开放日",
+      "url": "https://mp.weixin.qq.com/s/dRgqMrCM0dmnbjH2Z0_clg",
+      "publishedAt": "2026-07-17T10:04:26.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "航空工业成飞2026年暑期开放日活动通知，面向2027届硕博士，提供提前批招聘机会。",
+      "positions": [
+        {
+          "organization": "航空工业成都飞机工业（集团）有限责任公司",
+          "organizationNature": "央企",
+          "industry": "航空航天",
+          "jobTitle": "暑期开放日（提前批招聘）",
+          "jobDirections": [
+            "航空工业相关岗位"
+          ],
+          "locations": [
+            "成都"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上学历",
+            "minimum": "硕士",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限，但优先航空航天、机械、电子、计算机等相关专业",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届硕博士",
+            "需通过简历筛选"
+          ],
+          "compensation": {
+            "summary": "未披露具体薪资，提供提前批招聘机会",
+            "salary": null,
+            "benefits": [
+              "提前批招聘机会"
+            ],
+            "quality": 3
+          },
+          "deadline": null,
+          "applicationMethod": "通过公众号链接报名",
+          "applicationUrl": "https://mp.weixin.qq.com/s/dRgqMrCM0dmnbjH2Z0_clg",
+          "referralCode": null,
+          "recommendation": {
+            "score": 70,
+            "rankingKey": 1343379,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "央企平台，行业领先",
+              "提前批招聘，机会优先",
+              "面向硕博士，学历匹配度高"
+            ],
+            "concerns": [
+              "薪资未披露",
+              "专业要求宽泛，竞争可能激烈",
+              "仅限2027届，往届生不可投"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "面向2027届硕博士",
+            "提供提前批招聘机会"
+          ],
+          "confidence": 0.8,
+          "id": "db59fc7692abdf43"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "文章为开放日活动，非正式招聘岗位，但包含招聘意向，故提取为岗位组。",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-u16Etj/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-u16Etj/1.png stdout -l chi_sim+eng --psm 6\n"
+      ]
+    },
+    {
+      "id": "fee6b22ffd1ada95",
+      "account": "国企求职网",
+      "title": "2026年度面向社会公开招录事业编制人员公告（170人），7月18日前报名！",
+      "url": "https://mp.weixin.qq.com/s/W8ul82VeClGthHRN-8CEeg",
+      "publishedAt": "2026-07-17T08:25:46.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 1,
+      "summary": "2026年事业单位面向社会公开招聘170名事业编制人员，报名截止7月18日，大专及以上学历，专业不限，年龄18-38周岁。",
+      "positions": [
+        {
+          "organization": "各地民政局、统计局、生态环境局、财政局、地震局、教育局、工信局、交通运输局、审计局、卫健局、发改局等",
+          "organizationNature": "事业单位",
+          "industry": "公共服务",
+          "jobTitle": "事业编制人员",
+          "jobDirections": [
+            "综合管理",
+            "专业技术"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": "170",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专及以上学历",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄18-38周岁",
+            "无犯罪记录",
+            "具有招聘岗位所需的学历、专业或技能条件（职（执）业资格及岗位要求的其他条件）"
+          ],
+          "compensation": {
+            "summary": "综合薪资到手13w+，六险二金，年终奖金，工会福利，13薪，考核奖、评比奖、值班加班费、公休假补贴、话补、餐补、车补、房补、差旅费等",
+            "salary": "13w+",
+            "benefits": [
+              "六险二金",
+              "年终奖金",
+              "工会福利",
+              "13薪",
+              "考核奖",
+              "评比奖",
+              "值班加班费",
+              "公休假补贴",
+              "话补",
+              "餐补",
+              "车补",
+              "房补"
+            ],
+            "quality": 4
+          },
+          "deadline": "2026-07-18T22:00:00",
+          "applicationMethod": "通过公众号回复报名",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 67,
+            "rankingKey": 1334379,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "事业编制，工作稳定",
+              "专业不限，门槛低",
+              "薪资福利较好，综合到手13w+",
+              "全国多地有岗位"
+            ],
+            "concerns": [
+              "岗位具体信息不明确，需通过公众号获取",
+              "报名方式非直接网申，流程不透明",
+              "名额有限，按提交顺序审核，可能额满即止"
+            ]
+          },
+          "accessibility": 3,
+          "evidence": [
+            "面向社会公开招聘",
+            "大专及以上学历",
+            "年龄18-38周岁",
+            "专业不限",
+            "综合薪资到手13w+",
+            "六险二金"
+          ],
+          "confidence": 0.8,
+          "id": "59a4802930b60d31"
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "文章未明确具体岗位名称和单位，仅列出部门类别，且未提供具体岗位要求，因此合并为一个岗位组。",
+        "薪资福利为通用描述，未区分岗位。",
+        "报名方式为公众号回复，无直接网申地址。"
+      ]
+    }
+  ],
+  "errors": [
+    "央企求职网 / 2027届国企秋招群，扫码加入：文章正文为空，可能遇到微信验证页或文章已删除",
+    "国企求职网 / 2027届国企秋招群，扫码加入：文章正文为空，可能遇到微信验证页或文章已删除"
+  ]
+}
