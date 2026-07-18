@@ -40,6 +40,37 @@ const USER_AGENT =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
 
+let personalizedSchemaReady: Promise<void> | null = null;
+
+async function ensurePersonalizedSchema(env: Env): Promise<void> {
+  if (!personalizedSchemaReady) {
+    personalizedSchemaReady = (async () => {
+      await env.JOB_DB.batch([
+        env.JOB_DB.prepare(`CREATE TABLE IF NOT EXISTS position_personalization (
+          position_id TEXT PRIMARY KEY,
+          custom_requirement_json TEXT NOT NULL DEFAULT '{}',
+          personalized_json TEXT NOT NULL DEFAULT '{}',
+          personalized_eligible INTEGER NOT NULL DEFAULT 0,
+          personalized_ranking_key INTEGER NOT NULL DEFAULT 0,
+          updated_at TEXT NOT NULL,
+          FOREIGN KEY (position_id) REFERENCES positions(id) ON DELETE CASCADE
+        )`),
+        env.JOB_DB.prepare(`CREATE TABLE IF NOT EXISTS user_preferences (
+          id INTEGER PRIMARY KEY CHECK (id = 1),
+          custom_requirement TEXT NOT NULL DEFAULT '',
+          updated_at TEXT NOT NULL
+        )`),
+        env.JOB_DB.prepare(`CREATE INDEX IF NOT EXISTS idx_position_personalized_pool
+          ON position_personalization(personalized_eligible, personalized_ranking_key DESC)`),
+      ]);
+    })().catch(error => {
+      personalizedSchemaReady = null;
+      throw error;
+    });
+  }
+  await personalizedSchemaReady;
+}
+
 function corsHeaders(request: Request, env: Env): Headers {
   const requestOrigin = request.headers.get("Origin") || "";
   const configured = env.ALLOWED_ORIGIN || "*";
@@ -479,8 +510,10 @@ function jobFromRow(row: any): any {
 
 const JOB_SELECT = `SELECT p.*, a.title AS article_title, a.url AS article_url,
   a.published_at, a.summary AS article_summary, a.ocr_used, a.ocr_image_count,
-  a.analysis_source, a.extraction_complete
-  FROM positions p JOIN articles a ON a.id = p.article_id`;
+  a.analysis_source, a.extraction_complete, pp.custom_requirement_json,
+  pp.personalized_json, pp.personalized_eligible, pp.personalized_ranking_key
+  FROM positions p JOIN articles a ON a.id = p.article_id
+  LEFT JOIN position_personalization pp ON pp.position_id = p.id`;
 
 function csvCell(value: unknown): string {
   const text = Array.isArray(value) ? value.join("；") : String(value ?? "");
@@ -597,11 +630,18 @@ async function saveReport(request: Request, env: Env): Promise<Response> {
         position.recommendation?.level || "low", jsonText(position.recommendation?.reasons),
         jsonText(position.recommendation?.concerns), jsonText(position.evidence), position.confidence || 0, now,
       ));
-      personalizationStatements.push(env.JOB_DB.prepare(`UPDATE positions SET
-        custom_requirement_json = ?, personalized_json = ?, personalized_eligible = ?, personalized_ranking_key = ?
-        WHERE id = ?`).bind(
-        JSON.stringify(position.customRequirement || {}), JSON.stringify(position.personalized || {}),
-        position.personalized?.eligible ? 1 : 0, position.personalized?.rankingKey || 0, position.id,
+      personalizationStatements.push(env.JOB_DB.prepare(`INSERT INTO position_personalization (
+        position_id, custom_requirement_json, personalized_json, personalized_eligible,
+        personalized_ranking_key, updated_at
+      ) VALUES (?, ?, ?, ?, ?, ?)
+      ON CONFLICT(position_id) DO UPDATE SET
+        custom_requirement_json=excluded.custom_requirement_json,
+        personalized_json=excluded.personalized_json,
+        personalized_eligible=excluded.personalized_eligible,
+        personalized_ranking_key=excluded.personalized_ranking_key,
+        updated_at=excluded.updated_at`).bind(
+        position.id, JSON.stringify(position.customRequirement || {}), JSON.stringify(position.personalized || {}),
+        position.personalized?.eligible ? 1 : 0, position.personalized?.rankingKey || 0, now,
       ));
     }
   }
@@ -696,8 +736,8 @@ async function downloadJobHistoryCsv(request: Request, env: Env): Promise<Respon
 
 async function listQualityPool(request: Request, env: Env): Promise<Response> {
   const rows = await env.JOB_DB.prepare(`${JOB_SELECT}
-    WHERE p.personalized_eligible = 1
-    ORDER BY p.personalized_ranking_key DESC, p.report_date DESC LIMIT 30`).all<any>();
+    WHERE pp.personalized_eligible = 1
+    ORDER BY pp.personalized_ranking_key DESC, p.report_date DESC LIMIT 30`).all<any>();
   const jobs = (rows.results || []).map(jobFromRow);
   return json(request, env, { generatedAt: new Date().toISOString(), maxSize: 30, total: jobs.length, jobs });
 }
@@ -708,6 +748,7 @@ export default {
     const url = new URL(request.url);
     try {
       if (url.pathname === "/health") return json(request, env, { ok: true });
+      await ensurePersonalizedSchema(env);
       if (url.pathname === "/api/site/login" && request.method === "POST") return loginSite(request, env);
       if (url.pathname === "/api/site/session" && request.method === "GET") return checkSiteSession(request, env);
       if (url.pathname === "/api/preferences" && request.method === "GET") return getPreferences(request, env);

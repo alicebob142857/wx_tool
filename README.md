@@ -70,7 +70,7 @@ GitHub Actions (每天 02:00 UTC / 北京时间 10:00)
 
 Cloudflare Worker
   ├─ KV：保存最多 4 天的微信会话和 180 天的网站浏览器会话
-  ├─ D1：岗位数据库、个性化结果与自定义要求
+  ├─ D1：岗位数据库、个性化结果与自定义要求（Worker 首次运行时幂等初始化新表）
   ├─ QR：创建、展示、轮询扫码状态
   └─ repository_dispatch：授权成功后重新触发 GitHub Actions（可选）
 ```
