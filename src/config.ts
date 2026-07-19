@@ -57,9 +57,13 @@ export function loadConfig(): AppConfig {
 
 export async function loadAccounts(rootDir: string): Promise<Account[]> {
   const content = await readFile(path.join(rootDir, "config", "accounts.json"), "utf8");
-  const accounts = JSON.parse(content) as Account[];
-  if (!Array.isArray(accounts) || accounts.length === 0) {
-    throw new Error("config/accounts.json 中没有公众号配置");
+  return validateAccounts(JSON.parse(content), "config/accounts.json");
+}
+
+export function validateAccounts(value: unknown, source = "公众号接口", allowEmpty = false): Account[] {
+  const accounts = value as Account[];
+  if (!Array.isArray(accounts) || (!allowEmpty && accounts.length === 0)) {
+    throw new Error(`${source} 中没有公众号配置`);
   }
   const names = new Set<string>();
   const fakeids = new Set<string>();

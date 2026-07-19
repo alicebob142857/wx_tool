@@ -1,5 +1,6 @@
 import type { Account, DailyReport, WechatArticle } from "./types.js";
 import type { AppConfig } from "./config.js";
+import { validateAccounts } from "./config.js";
 
 export class AuthExpiredError extends Error {
   constructor(message = "微信公众号授权已过期") {
@@ -67,6 +68,16 @@ export class ExporterClient {
       headers: { Authorization: `Bearer ${this.config.authServiceToken}` },
     });
     await parseJsonResponse(response);
+  }
+
+  async getAccounts(): Promise<Account[] | null> {
+    if (!this.usesAuthService) return null;
+    const response = await fetch(`${this.config.authServiceUrl}/api/accounts`, {
+      headers: { Authorization: `Bearer ${this.config.authServiceToken}` },
+    });
+    if (response.status === 404) return null;
+    const data = await parseJsonResponse(response);
+    return validateAccounts(data?.accounts || [], "D1 公众号列表", true);
   }
 
   async listArticles(account: Account): Promise<WechatArticle[]> {

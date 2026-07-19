@@ -24,7 +24,9 @@
 
 ## 公众号管理
 
-定时任务以 [`config/accounts.json`](config/accounts.json) 为唯一配置源。网页底部“公众号管理”会展示这份配置，并可生成新增后的完整 JSON；网页不会保存 GitHub 写入令牌，最后一步必须在已登录的 GitHub 编辑页提交。
+公众号列表保存在 Cloudflare D1。网页底部“公众号管理”可以按名称或微信号搜索微信公众平台，确认候选后直接添加，也可以暂停、恢复或删除监测；无需手工查找 `fakeid`，也无需修改 GitHub 文件。定时任务每次运行时通过带服务令牌的接口读取 D1 中的启用账号。
+
+[`config/accounts.json`](config/accounts.json) 只保留最初 10 个账号作为迁移种子和故障兜底。Worker 首次运行会幂等写入 D1；正常情况下 D1 是权威配置源。
 
 当前 10 个公众号：
 
@@ -43,12 +45,11 @@
 
 添加新公众号：
 
-1. 登录微信公众平台，在图文编辑器的“超链接 / 选择其他公众号文章”中搜索目标公众号。
-2. 打开浏览器开发者工具的 Network，找到名称包含 `searchbiz` 的请求，在 Response 中搜索并复制 `fakeid`。本项目需要的是类似 `MzA...==` 的 Base64 风格值，不是 `gh_...` 开头的 `user_name`。
-3. 在网页“公众号管理”中填写名称、fakeid 和可选的微信号，生成完整 JSON。
-4. 打开 [GitHub 配置编辑页](https://github.com/alicebob142857/wx_tool/edit/main/config/accounts.json)，全选原内容，粘贴新 JSON 并提交。
-5. 等待次日 10:00，或手动运行 [Daily WeChat job scan](https://github.com/alicebob142857/wx_tool/actions/workflows/daily.yml)，`reprocess_hours` 保持为 `0`。
-6. 任务成功后，网页公众号数量和管理列表会自动更新。
+1. 在网站底部输入公众号完整名称或微信号。
+2. 根据名称、头像和微信号选择正确候选，点击“添加监测”。
+3. 账号立即写入 D1；等待次日 10:00，或手动运行 [Daily WeChat job scan](https://github.com/alicebob142857/wx_tool/actions/workflows/daily.yml)。
+
+搜索接口依赖有效的微信公众平台授权。如果授权过期，先在网站扫码恢复；若目标公众号关闭了名称搜索，可以尝试微信号或更完整的名称。
 
 ## 已验证范围
 
@@ -71,6 +72,8 @@ GitHub Actions (每天 02:00 UTC / 北京时间 10:00)
 Cloudflare Worker
   ├─ KV：保存最多 4 天的微信会话和 180 天的网站浏览器会话
   ├─ D1：岗位数据库、个性化结果与自定义要求（Worker 首次运行时幂等初始化新表）
+  ├─ D1：监测公众号列表、启用/暂停/删除状态
+  ├─ searchbiz：按名称或微信号搜索公众号并自动保存 fakeid
   ├─ QR：创建、展示、轮询扫码状态
   └─ repository_dispatch：授权成功后重新触发 GitHub Actions（可选）
 ```

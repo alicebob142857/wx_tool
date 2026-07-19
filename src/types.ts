@@ -3,6 +3,11 @@ export interface Account {
   fakeid: string;
   alias?: string;
   note?: string;
+  avatarUrl?: string;
+  source?: "bootstrap" | "name_search" | "article_url" | "manual";
+  status?: "active" | "paused";
+  addedAt?: string;
+  updatedAt?: string;
 }
 
 export interface WechatArticle {

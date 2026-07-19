@@ -31,20 +31,53 @@ interface StoredAuth {
   expiresAt: string;
 }
 
+interface ManagedAccount {
+  fakeid: string;
+  name: string;
+  alias: string;
+  avatarUrl: string;
+  status: "active" | "paused" | "removed";
+  source: "bootstrap" | "name_search" | "article_url" | "manual";
+  addedAt: string;
+  updatedAt: string;
+}
+
+interface SearchCandidate {
+  fakeid: string;
+  name: string;
+  alias: string;
+  avatarUrl: string;
+}
+
 const LOGIN_KEY = "login:current";
 const AUTH_KEY = "auth:current";
 const SITE_SESSION_PREFIX = "site-session:";
+const ACCOUNT_SEARCH_PREFIX = "account-search:";
 const SITE_SESSION_TTL = 180 * 24 * 60 * 60;
 const FOUR_DAYS_MS = 4 * 24 * 60 * 60 * 1000;
 const USER_AGENT =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
 
-let personalizedSchemaReady: Promise<void> | null = null;
+const DEFAULT_ACCOUNTS: SearchCandidate[] = [
+  { name: "央企求职网", fakeid: "MzIzMzcyNjU1MQ==", alias: "yangqiqiuzhi", avatarUrl: "" },
+  { name: "五财一贸", fakeid: "MzAwMDY2Mjc1Mw==", alias: "wucaiyimao", avatarUrl: "" },
+  { name: "国企求职网", fakeid: "MzIxMTU3OTA5Nw==", alias: "guoqizhaopinwang", avatarUrl: "" },
+  { name: "晓央就业", fakeid: "MzkyNTIwMDA1OQ==", alias: "cufe-coco", avatarUrl: "" },
+  { name: "北大就业", fakeid: "MzA4NjAzMTIxNw==", alias: "pku_scc", avatarUrl: "" },
+  { name: "国资小新", fakeid: "MjM5MDIxNjczNA==", alias: "guozixiaoxin", avatarUrl: "" },
+  { name: "国聘", fakeid: "MzU4MzQ2NzUxMw==", alias: "iguopincom", avatarUrl: "" },
+  { name: "人大就业创业", fakeid: "MjM5MTE5MTY4Mw==", alias: "RUCcareercenter", avatarUrl: "" },
+  { name: "清华就业", fakeid: "MzUyMjc4NjA4Nw==", alias: "THUCareer", avatarUrl: "" },
+  { name: "北航就业", fakeid: "MjM5MzI0Nzc2Ng==", alias: "", avatarUrl: "" },
+];
 
-async function ensurePersonalizedSchema(env: Env): Promise<void> {
-  if (!personalizedSchemaReady) {
-    personalizedSchemaReady = (async () => {
+let runtimeSchemaReady: Promise<void> | null = null;
+
+async function ensureRuntimeSchema(env: Env): Promise<void> {
+  if (!runtimeSchemaReady) {
+    runtimeSchemaReady = (async () => {
+      const now = new Date().toISOString();
       await env.JOB_DB.batch([
         env.JOB_DB.prepare(`CREATE TABLE IF NOT EXISTS position_personalization (
           position_id TEXT PRIMARY KEY,
@@ -62,13 +95,29 @@ async function ensurePersonalizedSchema(env: Env): Promise<void> {
         )`),
         env.JOB_DB.prepare(`CREATE INDEX IF NOT EXISTS idx_position_personalized_pool
           ON position_personalization(personalized_eligible, personalized_ranking_key DESC)`),
+        env.JOB_DB.prepare(`CREATE TABLE IF NOT EXISTS monitored_accounts (
+          fakeid TEXT PRIMARY KEY,
+          name TEXT NOT NULL,
+          alias TEXT NOT NULL DEFAULT '',
+          avatar_url TEXT NOT NULL DEFAULT '',
+          status TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'paused', 'removed')),
+          source TEXT NOT NULL DEFAULT 'name_search',
+          added_at TEXT NOT NULL,
+          updated_at TEXT NOT NULL
+        )`),
+        env.JOB_DB.prepare(`CREATE INDEX IF NOT EXISTS idx_monitored_accounts_status_name
+          ON monitored_accounts(status, name)`),
+        ...DEFAULT_ACCOUNTS.map(account => env.JOB_DB.prepare(`INSERT OR IGNORE INTO monitored_accounts
+          (fakeid, name, alias, avatar_url, status, source, added_at, updated_at)
+          VALUES (?, ?, ?, ?, 'active', 'bootstrap', ?, ?)`)
+          .bind(account.fakeid, account.name, account.alias, account.avatarUrl, now, now)),
       ]);
     })().catch(error => {
-      personalizedSchemaReady = null;
+      runtimeSchemaReady = null;
       throw error;
     });
   }
-  await personalizedSchemaReady;
+  await runtimeSchemaReady;
 }
 
 function corsHeaders(request: Request, env: Env): Headers {
@@ -79,7 +128,7 @@ function corsHeaders(request: Request, env: Env): Headers {
     : "null";
   return new Headers({
     "Access-Control-Allow-Origin": allowOrigin,
-    "Access-Control-Allow-Methods": "GET, POST, PUT, OPTIONS",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
     "Access-Control-Allow-Headers": "Authorization, Content-Type",
     "Access-Control-Max-Age": "86400",
     Vary: "Origin",
@@ -170,6 +219,145 @@ async function savePreferences(request: Request, env: Env): Promise<Response> {
     ON CONFLICT(id) DO UPDATE SET custom_requirement=excluded.custom_requirement, updated_at=excluded.updated_at`)
     .bind(customRequirement, updatedAt).run();
   return json(request, env, { ok: true, customRequirement, updatedAt });
+}
+
+function managedAccountFromRow(row: any): ManagedAccount {
+  return {
+    fakeid: String(row.fakeid || ""),
+    name: String(row.name || ""),
+    alias: String(row.alias || ""),
+    avatarUrl: String(row.avatar_url || ""),
+    status: row.status === "paused" || row.status === "removed" ? row.status : "active",
+    source: ["bootstrap", "name_search", "article_url", "manual"].includes(row.source) ? row.source : "name_search",
+    addedAt: String(row.added_at || ""),
+    updatedAt: String(row.updated_at || ""),
+  };
+}
+
+async function listManagedAccounts(request: Request, env: Env): Promise<Response> {
+  const collector = authorized(request, env);
+  if (!collector && !await siteAuthorized(request, env)) {
+    return json(request, env, { message: "Unauthorized" }, 401);
+  }
+  const where = collector ? "status = 'active'" : "status != 'removed'";
+  const result = await env.JOB_DB.prepare(`SELECT * FROM monitored_accounts
+    WHERE ${where} ORDER BY status = 'active' DESC, name COLLATE NOCASE`).all();
+  const accounts = (result.results || []).map(managedAccountFromRow);
+  return json(request, env, {
+    count: accounts.length,
+    activeCount: accounts.filter(account => account.status === "active").length,
+    accounts,
+  });
+}
+
+function cleanHttpsUrl(value: unknown): string {
+  try {
+    const url = new URL(String(value || ""));
+    return url.protocol === "https:" ? url.toString() : "";
+  } catch {
+    return "";
+  }
+}
+
+function isExpiredWechatCode(code: number): boolean {
+  return [-1, 200003, 200013].includes(code);
+}
+
+async function searchManagedAccounts(request: Request, env: Env): Promise<Response> {
+  if (!await siteAuthorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
+  const auth = await getAuth(env);
+  if (!auth) return json(request, env, { message: "微信公众号授权已过期，请先扫码恢复授权" }, 409);
+  const body = await request.json<{ keyword?: string }>().catch(() => ({ keyword: "" }));
+  const keyword = String(body.keyword || "").trim();
+  if (keyword.length < 2 || keyword.length > 80) {
+    return json(request, env, { message: "请输入 2 至 80 个字符的公众号名称" }, 400);
+  }
+
+  const url = new URL("https://mp.weixin.qq.com/cgi-bin/searchbiz");
+  const params: Record<string, string> = {
+    action: "search_biz",
+    begin: "0",
+    count: "10",
+    query: keyword,
+    token: auth.token,
+    lang: "zh_CN",
+    f: "json",
+    ajax: "1",
+  };
+  Object.entries(params).forEach(([key, value]) => url.searchParams.set(key, value));
+  const response = await fetch(url, { headers: mpHeaders(cookieHeader(auth.cookies)) });
+  const result: any = await response.json().catch(() => null);
+  if (!response.ok || !result) return json(request, env, { message: "微信公众号搜索接口返回异常" }, 502);
+  const ret = Number(result?.base_resp?.ret ?? -1);
+  if (ret !== 0) {
+    if (isExpiredWechatCode(ret)) await env.AUTH_KV.delete(AUTH_KEY);
+    return json(request, env, { message: result?.base_resp?.err_msg || `公众号搜索失败（${ret}）` }, isExpiredWechatCode(ret) ? 409 : 502);
+  }
+
+  const rawCandidates = Array.isArray(result.list) ? result.list : [];
+  const seen = new Set<string>();
+  const candidates: Array<SearchCandidate & { candidateId: string; status: ManagedAccount["status"] | null }> = [];
+  for (const raw of rawCandidates.slice(0, 10)) {
+    const fakeid = String(raw?.fakeid || "").trim();
+    const name = String(raw?.nickname || raw?.name || "").trim();
+    if (!fakeid || !name || seen.has(fakeid)) continue;
+    seen.add(fakeid);
+    const candidate: SearchCandidate = {
+      fakeid,
+      name,
+      alias: String(raw?.alias || "").trim(),
+      avatarUrl: cleanHttpsUrl(raw?.round_head_img || raw?.head_img),
+    };
+    const candidateId = randomToken();
+    const existing = await env.JOB_DB.prepare("SELECT status FROM monitored_accounts WHERE fakeid = ?")
+      .bind(fakeid).first<{ status: ManagedAccount["status"] }>();
+    await env.AUTH_KV.put(`${ACCOUNT_SEARCH_PREFIX}${candidateId}`, JSON.stringify(candidate), { expirationTtl: 10 * 60 });
+    candidates.push({ ...candidate, fakeid: "", candidateId, status: existing?.status || null });
+  }
+  return json(request, env, { keyword, candidates });
+}
+
+async function addManagedAccount(request: Request, env: Env): Promise<Response> {
+  if (!await siteAuthorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
+  const body = await request.json<{ candidateId?: string }>().catch(() => ({ candidateId: "" }));
+  const candidateId = String(body.candidateId || "");
+  if (!/^[a-f0-9]{64}$/.test(candidateId)) return json(request, env, { message: "搜索结果标识不合法" }, 400);
+  const candidate = await env.AUTH_KV.get<SearchCandidate>(`${ACCOUNT_SEARCH_PREFIX}${candidateId}`, "json");
+  if (!candidate) return json(request, env, { message: "搜索结果已过期，请重新搜索" }, 410);
+  const now = new Date().toISOString();
+  await env.JOB_DB.prepare(`INSERT INTO monitored_accounts
+    (fakeid, name, alias, avatar_url, status, source, added_at, updated_at)
+    VALUES (?, ?, ?, ?, 'active', 'name_search', ?, ?)
+    ON CONFLICT(fakeid) DO UPDATE SET
+      name=excluded.name, alias=excluded.alias, avatar_url=excluded.avatar_url,
+      status='active', source='name_search', updated_at=excluded.updated_at`)
+    .bind(candidate.fakeid, candidate.name, candidate.alias, candidate.avatarUrl, now, now).run();
+  await env.AUTH_KV.delete(`${ACCOUNT_SEARCH_PREFIX}${candidateId}`);
+  const row = await env.JOB_DB.prepare("SELECT * FROM monitored_accounts WHERE fakeid = ?")
+    .bind(candidate.fakeid).first();
+  await dispatchCollection(env).catch(() => undefined);
+  return json(request, env, { ok: true, account: managedAccountFromRow(row) });
+}
+
+async function updateManagedAccount(request: Request, env: Env, fakeid: string): Promise<Response> {
+  if (!await siteAuthorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
+  const body = await request.json<{ status?: string }>().catch(() => ({ status: "" }));
+  if (body.status !== "active" && body.status !== "paused") {
+    return json(request, env, { message: "状态只能是 active 或 paused" }, 400);
+  }
+  const result = await env.JOB_DB.prepare("UPDATE monitored_accounts SET status = ?, updated_at = ? WHERE fakeid = ? AND status != 'removed'")
+    .bind(body.status, new Date().toISOString(), fakeid).run();
+  if (!result.meta.changes) return json(request, env, { message: "没有找到该公众号" }, 404);
+  const row = await env.JOB_DB.prepare("SELECT * FROM monitored_accounts WHERE fakeid = ?").bind(fakeid).first();
+  return json(request, env, { ok: true, account: managedAccountFromRow(row) });
+}
+
+async function removeManagedAccount(request: Request, env: Env, fakeid: string): Promise<Response> {
+  if (!await siteAuthorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
+  const result = await env.JOB_DB.prepare("UPDATE monitored_accounts SET status = 'removed', updated_at = ? WHERE fakeid = ? AND status != 'removed'")
+    .bind(new Date().toISOString(), fakeid).run();
+  if (!result.meta.changes) return json(request, env, { message: "没有找到该公众号" }, 404);
+  return json(request, env, { ok: true });
 }
 
 function mpHeaders(cookie?: string): Headers {
@@ -415,7 +603,7 @@ async function listArticles(request: Request, env: Env): Promise<Response> {
   const result: any = await response.json().catch(() => null);
   if (!response.ok || !result) return json(request, env, { message: "微信文章接口返回异常" }, 502);
   if (result?.base_resp?.ret !== 0) {
-    if ([-1, 200003, 200013].includes(Number(result?.base_resp?.ret))) await env.AUTH_KV.delete(AUTH_KEY);
+    if (isExpiredWechatCode(Number(result?.base_resp?.ret))) await env.AUTH_KV.delete(AUTH_KEY);
     return json(request, env, result, 200);
   }
   try {
@@ -748,11 +936,17 @@ export default {
     const url = new URL(request.url);
     try {
       if (url.pathname === "/health") return json(request, env, { ok: true });
-      await ensurePersonalizedSchema(env);
+      await ensureRuntimeSchema(env);
       if (url.pathname === "/api/site/login" && request.method === "POST") return loginSite(request, env);
       if (url.pathname === "/api/site/session" && request.method === "GET") return checkSiteSession(request, env);
       if (url.pathname === "/api/preferences" && request.method === "GET") return getPreferences(request, env);
       if (url.pathname === "/api/preferences" && request.method === "PUT") return savePreferences(request, env);
+      if (url.pathname === "/api/accounts/search" && request.method === "POST") return searchManagedAccounts(request, env);
+      if (url.pathname === "/api/accounts" && request.method === "GET") return listManagedAccounts(request, env);
+      if (url.pathname === "/api/accounts" && request.method === "POST") return addManagedAccount(request, env);
+      const accountMatch = url.pathname.match(/^\/api\/accounts\/([^/]+)$/);
+      if (accountMatch && request.method === "PUT") return updateManagedAccount(request, env, decodeURIComponent(accountMatch[1]));
+      if (accountMatch && request.method === "DELETE") return removeManagedAccount(request, env, decodeURIComponent(accountMatch[1]));
       if (url.pathname === "/api/status" && request.method === "GET") return publicStatus(request, env);
       if (url.pathname === "/api/auth/start" && request.method === "POST") {
         if (!authorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);

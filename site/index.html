@@ -167,7 +167,7 @@
             <div>
               <p class="eyebrow">Account sources</p>
               <h2 id="account-management-title">公众号管理</h2>
-              <p>这里展示定时任务当前读取的公众号。新增配置提交到 GitHub 后，下一次任务会自动开始监测。</p>
+              <p>输入公众号名称，确认搜索结果后即可加入监测。无需查找 fakeid，也无需修改 GitHub 配置。</p>
             </div>
             <span id="managed-account-count" class="account-count-badge">读取中</span>
           </div>
@@ -176,39 +176,29 @@
 
           <div class="account-management-grid">
             <section class="account-add-card">
-              <p class="eyebrow">Add account</p>
-              <h3>生成新增配置</h3>
-              <p class="management-note">网页不会持有 GitHub 写权限。填写后可复制或下载完整配置，再到 GitHub 提交。</p>
-              <form id="account-add-form" class="account-form">
-                <label><span>公众号名称 *</span><input name="name" required maxlength="80" placeholder="例如：某大学就业" /></label>
-                <label><span>fakeid *</span><input name="fakeid" required maxlength="120" spellcheck="false" placeholder="例如：MzA...==" /></label>
-                <label><span>微信号 / alias（可选）</span><input name="alias" maxlength="80" spellcheck="false" placeholder="例如：university_career" /></label>
-                <label><span>备注（可选）</span><input name="note" maxlength="160" placeholder="账号别名或来源说明" /></label>
-                <button class="primary-button" type="submit">加入配置草稿</button>
+              <p class="eyebrow">Search & add</p>
+              <h3>搜索公众号</h3>
+              <p class="management-note">搜索来自已登录的微信公众平台。请选择名称、头像或微信号正确的账号。</p>
+              <form id="account-search-form" class="account-search-form">
+                <label for="account-keyword">公众号名称或微信号</label>
+                <div class="account-search-row">
+                  <input id="account-keyword" name="keyword" required minlength="2" maxlength="80" autocomplete="off" placeholder="例如：北京师范大学就业" />
+                  <button class="primary-button" type="submit">搜索</button>
+                </div>
               </form>
               <p id="account-form-status" class="account-form-status" role="status"></p>
-              <div id="account-draft-actions" class="account-draft-actions" hidden>
-                <label for="account-config-preview">更新后的完整 accounts.json</label>
-                <textarea id="account-config-preview" readonly spellcheck="false"></textarea>
-                <div class="draft-buttons">
-                  <button id="copy-account-config" class="secondary-button" type="button">复制 JSON</button>
-                  <button id="download-account-config" class="secondary-button" type="button">下载 accounts.json</button>
-                  <a class="primary-button" href="https://github.com/alicebob142857/wx_tool/edit/main/config/accounts.json" target="_blank" rel="noopener noreferrer">到 GitHub 提交 ↗</a>
-                </div>
-              </div>
+              <div id="account-search-results" class="account-search-results" aria-live="polite"></div>
             </section>
 
             <section class="account-tutorial-card">
-              <p class="eyebrow">Tutorial</p>
-              <h3>添加教程</h3>
+              <p class="eyebrow">How it works</p>
+              <h3>三步完成</h3>
               <ol class="account-tutorial">
-                <li><strong>取得 fakeid。</strong>登录微信公众平台，在图文编辑器的“超链接 / 选择其他公众号文章”中搜索目标公众号；打开浏览器开发者工具 Network，找到名称含 <code>searchbiz</code> 的请求，在响应中复制 <code>fakeid</code>。</li>
-                <li><strong>不要填 gh_ 开头的 user_name。</strong>本服务需要 Base64 风格 fakeid，通常类似 <code>MzA...==</code>。</li>
-                <li><strong>生成配置。</strong>在左侧填名称和 fakeid，加入草稿后复制完整 JSON。</li>
-                <li><strong>提交到 GitHub。</strong>打开编辑页，全选替换 <code>config/accounts.json</code> 并提交。</li>
-                <li><strong>让配置生效。</strong>等待次日 10:00，或手动运行 <a href="https://github.com/alicebob142857/wx_tool/actions/workflows/daily.yml" target="_blank" rel="noopener noreferrer">Daily WeChat job scan ↗</a>。</li>
+                <li><strong>搜索。</strong>输入公众号的完整名称或微信号，系统自动查询微信公众平台。</li>
+                <li><strong>确认。</strong>根据名称、头像和微信号选择正确账号，点击“添加监测”。</li>
+                <li><strong>自动生效。</strong>公众号立即保存到数据库，下次定时采集自动读取；无需提交 GitHub。</li>
               </ol>
-              <div class="tutorial-warning"><strong>为什么不能直接保存公众号？</strong><p>GitHub Pages 是静态网页。把仓库写入令牌放进页面会让其他访客也能修改配置，因此最后一步仍需在已登录的 GitHub 编辑页提交。</p></div>
+              <div class="tutorial-warning"><strong>搜索不到怎么办？</strong><p>先尝试完整名称或微信号。若公众号关闭了名称搜索，系统会提示；已有监测列表不受影响。</p></div>
             </section>
           </div>
         </section>

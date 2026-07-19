@@ -8,6 +8,7 @@ import {
   loadSeen,
   markSeen,
   saveSeen,
+  writeAccountsSnapshot,
   writeDailyReport,
   writeRuntimeConfig,
   writeStatus,
@@ -28,12 +29,20 @@ const emptyStats = (accounts: number): RunStats => ({
 
 async function main(): Promise<void> {
   const config = loadConfig();
-  const accounts = await loadAccounts(config.rootDir);
+  const fallbackAccounts = await loadAccounts(config.rootDir);
   const profile = await loadProfile(config.rootDir);
   const client = new ExporterClient(config);
+  let accounts = fallbackAccounts;
+  try {
+    const managedAccounts = await client.getAccounts();
+    if (managedAccounts !== null) accounts = managedAccounts;
+  } catch (error) {
+    console.warn(`动态公众号列表读取失败，使用本地兜底配置：${error instanceof Error ? error.message : String(error)}`);
+  }
   const stats = emptyStats(accounts.length);
   const nowIso = new Date().toISOString();
   await writeRuntimeConfig(config.rootDir, config.authServiceUrl);
+  await writeAccountsSnapshot(config.rootDir, accounts);
   try {
     const preferences = await client.getPreferences();
     if (preferences) profile.customRequirement = preferences.customRequirement;

@@ -3,7 +3,7 @@ import { mkdtemp, readFile, rm } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
-import { writeDailyReport } from "../src/storage.js";
+import { writeAccountsSnapshot, writeDailyReport } from "../src/storage.js";
 import type { DailyReport, ReportItem } from "../src/types.js";
 
 function report(items: ReportItem[]): DailyReport {
@@ -62,6 +62,26 @@ test("writeDailyReport removes stale items only for successfully reprocessed art
     assert.equal(profile.major, "行政管理");
     assert.equal(profile.customRequirement, "");
     assert.match(csv, /^\uFEFF"公众号","更新日期"/);
+  } finally {
+    await rm(rootDir, { recursive: true, force: true });
+  }
+});
+
+test("dynamic account snapshot remains the public account source", async () => {
+  const rootDir = await mkdtemp(path.join(os.tmpdir(), "wx-tool-accounts-snapshot-"));
+  try {
+    await writeAccountsSnapshot(rootDir, [{
+      name: "动态就业号",
+      fakeid: "MzA4NjAzMTIxNw==",
+      alias: "dynamic_career",
+      status: "active",
+      source: "name_search",
+    }]);
+    await writeDailyReport(rootDir, report([]));
+    const accounts = JSON.parse(await readFile(path.join(rootDir, "site/data/accounts.json"), "utf8"));
+    assert.equal(accounts.count, 1);
+    assert.equal(accounts.accounts[0].name, "动态就业号");
+    assert.equal(accounts.accounts[0].source, "name_search");
   } finally {
     await rm(rootDir, { recursive: true, force: true });
   }

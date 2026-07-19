@@ -3,7 +3,7 @@ import { mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
-import { loadAccounts } from "../src/config.js";
+import { loadAccounts, validateAccounts } from "../src/config.js";
 
 async function withAccounts(accounts: unknown[], run: (rootDir: string) => Promise<void>): Promise<void> {
   const rootDir = await mkdtemp(path.join(os.tmpdir(), "wx-tool-accounts-"));
@@ -37,4 +37,13 @@ test("loadAccounts rejects duplicate names and fakeids", async () => {
   ], async rootDir => {
     await assert.rejects(loadAccounts(rootDir), /fakeid 重复/);
   });
+});
+
+test("validateAccounts accepts an empty managed list but still validates duplicates", () => {
+  assert.deepEqual(validateAccounts([], "D1", true), []);
+  assert.throws(() => validateAccounts([], "D1"), /没有公众号配置/);
+  assert.throws(() => validateAccounts([
+    { name: "账号甲", fakeid: "MzA4NjAzMTIxNw==" },
+    { name: "账号甲", fakeid: "MzUyMjc4NjA4Nw==" },
+  ], "D1", true), /公众号名称重复/);
 });

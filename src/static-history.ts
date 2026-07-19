@@ -104,6 +104,12 @@ async function readReports(dailyDir: string): Promise<DailyReport[]> {
 
 async function readPublicAccounts(rootDir: string): Promise<PublicAccountConfig> {
   try {
+    const snapshot = JSON.parse(await readFile(path.join(rootDir, "site", "data", "accounts.json"), "utf8")) as PublicAccountConfig;
+    if (Array.isArray(snapshot?.accounts)) return { count: snapshot.accounts.length, accounts: snapshot.accounts };
+  } catch (error: any) {
+    if (error?.code !== "ENOENT") throw error;
+  }
+  try {
     const accounts = JSON.parse(await readFile(path.join(rootDir, "config", "accounts.json"), "utf8")) as Account[];
     return { count: Array.isArray(accounts) ? accounts.length : 0, accounts: Array.isArray(accounts) ? accounts : [] };
   } catch (error: any) {

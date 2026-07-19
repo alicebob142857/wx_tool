@@ -9,7 +9,7 @@ const state = {
   pool: { jobs: [], total: 0, maxSize: 30 },
   profile: null,
   accountsConfig: { count: 0, accounts: [] },
-  accountDrafts: [],
+  accountCandidates: [],
   latestDate: "",
   todayJobs: [],
 };
@@ -312,80 +312,156 @@ function updateStats() {
   text("#stat-articles", stats.articlesScanned ?? "—");
 }
 
-function fullAccountConfig() {
-  return [...(state.accountsConfig?.accounts || []), ...state.accountDrafts];
-}
-
-function accountConfigJson() {
-  return `${JSON.stringify(fullAccountConfig(), null, 2)}\n`;
-}
-
 function setAccountFormStatus(message, isError = false) {
   const status = $("#account-form-status");
   status.textContent = message;
   status.classList.toggle("is-error", isError);
 }
 
+function accountAvatar(account, className = "account-avatar") {
+  const avatar = node("div", className);
+  const fallback = node("span", "", (account.name || "公").slice(0, 1));
+  avatar.append(fallback);
+  if (account.avatarUrl) {
+    const image = node("img");
+    image.src = account.avatarUrl;
+    image.alt = "";
+    image.referrerPolicy = "no-referrer";
+    image.addEventListener("load", () => fallback.hidden = true);
+    image.addEventListener("error", () => image.remove());
+    avatar.prepend(image);
+  }
+  return avatar;
+}
+
 function renderManagedAccounts() {
   const container = $("#managed-account-list");
   container.replaceChildren();
-  const committed = state.accountsConfig?.accounts || [];
-  fullAccountConfig().forEach((account, index) => {
-    const draft = index >= committed.length;
-    const card = node("article", `managed-account${draft ? " is-draft" : ""}`);
-    card.append(node("span", "managed-account-index", index + 1));
+  const accounts = state.accountsConfig?.accounts || [];
+  accounts.forEach(account => {
+    const paused = account.status === "paused";
+    const card = node("article", `managed-account${paused ? " is-paused" : ""}`);
+    card.append(accountAvatar(account));
     const body = node("div", "managed-account-body");
     const title = node("strong", "", account.name);
-    if (draft) title.append(node("span", "draft-label", "待提交"));
-    body.append(title, node("code", "", account.fakeid));
-    body.append(node("small", "", [account.alias ? `微信号：${account.alias}` : "微信号未填写", account.note || ""].filter(Boolean).join(" · ")));
-    card.append(body);
+    title.append(node("span", `account-status-label ${paused ? "is-paused" : "is-active"}`, paused ? "已暂停" : "监测中"));
+    body.append(title, node("small", "", account.alias ? `微信号：${account.alias}` : "微信号未披露"));
+    const actions = node("div", "managed-account-actions");
+    const toggle = node("button", "secondary-button small-button", paused ? "恢复" : "暂停");
+    toggle.type = "button";
+    toggle.addEventListener("click", () => updateAccountStatus(account, paused ? "active" : "paused", toggle));
+    const remove = node("button", "secondary-button small-button danger-button", "删除");
+    remove.type = "button";
+    remove.addEventListener("click", () => removeAccount(account, remove));
+    actions.append(toggle, remove);
+    card.append(body, actions);
     container.append(card);
   });
-  text("#managed-account-count", state.accountDrafts.length ? `${committed.length} 个已生效 · ${state.accountDrafts.length} 个草稿` : `${committed.length} 个已生效`);
-  const actions = $("#account-draft-actions");
-  actions.hidden = state.accountDrafts.length === 0;
-  $("#account-config-preview").value = accountConfigJson();
+  if (!accounts.length) container.append(node("p", "account-empty", "尚未添加监测公众号。请在下方搜索并添加。"));
+  const active = accounts.filter(account => account.status !== "paused").length;
+  text("#managed-account-count", `${active} 个监测中${accounts.length > active ? ` · ${accounts.length - active} 个暂停` : ""}`);
 }
 
-function addAccountDraft(event) {
+function renderAccountCandidates() {
+  const container = $("#account-search-results");
+  container.replaceChildren();
+  state.accountCandidates.forEach(candidate => {
+    const card = node("article", "account-candidate");
+    card.append(accountAvatar(candidate, "candidate-avatar"));
+    const body = node("div", "candidate-body");
+    body.append(node("strong", "", candidate.name), node("small", "", candidate.alias ? `微信号：${candidate.alias}` : "微信号未披露"));
+    const button = node("button", "primary-button small-button", candidate.status === "active" ? "已在监测" : candidate.status === "paused" ? "恢复监测" : "添加监测");
+    button.type = "button";
+    button.disabled = candidate.status === "active";
+    button.addEventListener("click", () => addAccountCandidate(candidate, button));
+    card.append(body, button);
+    container.append(card);
+  });
+  if (!state.accountCandidates.length) container.append(node("p", "candidate-empty", "输入公众号名称后，匹配结果会显示在这里。"));
+}
+
+async function searchAccounts(event) {
   event.preventDefault();
   const form = event.currentTarget;
   const data = new FormData(form);
-  const account = {
-    name: String(data.get("name") || "").trim(),
-    fakeid: String(data.get("fakeid") || "").trim(),
-    alias: String(data.get("alias") || "").trim(),
-    note: String(data.get("note") || "").trim(),
-  };
-  if (!account.name || !account.fakeid) return setAccountFormStatus("公众号名称和 fakeid 都必须填写。", true);
-  if (!/^[A-Za-z0-9+/]{8,}={0,2}$/.test(account.fakeid)) return setAccountFormStatus("fakeid 格式不正确，请不要填写 gh_ 开头的 user_name。", true);
-  if (fullAccountConfig().some(value => value.name === account.name || value.fakeid === account.fakeid)) return setAccountFormStatus("名称或 fakeid 已存在。", true);
-  if (!account.alias) delete account.alias;
-  if (!account.note) delete account.note;
-  state.accountDrafts.push(account);
-  form.reset();
-  renderManagedAccounts();
-  setAccountFormStatus(`已把“${account.name}”加入草稿，提交到 GitHub 后生效。`);
-}
-
-async function copyAccountConfig() {
+  const keyword = String(data.get("keyword") || "").trim();
+  const button = form.querySelector("button");
+  if (keyword.length < 2) return setAccountFormStatus("请至少输入 2 个字符。", true);
+  button.disabled = true;
+  setAccountFormStatus("正在微信公众平台中搜索…");
   try {
-    await navigator.clipboard.writeText(accountConfigJson());
-    setAccountFormStatus("完整 accounts.json 已复制。现在到 GitHub 编辑页全选替换并提交。 ");
-  } catch {
-    const preview = $("#account-config-preview");
-    preview.focus(); preview.select(); document.execCommand("copy");
-    setAccountFormStatus("完整 accounts.json 已复制。现在到 GitHub 编辑页全选替换并提交。 ");
+    const result = await apiRequest("/api/accounts/search", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ keyword }),
+      signal: AbortSignal.timeout(20_000),
+    });
+    state.accountCandidates = result.candidates || [];
+    renderAccountCandidates();
+    setAccountFormStatus(state.accountCandidates.length ? `找到 ${state.accountCandidates.length} 个候选，请确认正确账号。` : "没有找到结果，请尝试完整名称或微信号。", !state.accountCandidates.length);
+  } catch (error) {
+    setAccountFormStatus(error.message || "搜索失败，请稍后重试。", true);
+  } finally {
+    button.disabled = false;
   }
 }
 
-function downloadAccountConfig() {
-  const url = URL.createObjectURL(new Blob([accountConfigJson()], { type: "application/json;charset=utf-8" }));
-  const link = node("a");
-  link.href = url; link.download = "accounts.json";
-  document.body.append(link); link.click(); link.remove(); URL.revokeObjectURL(url);
-  setAccountFormStatus("已下载 accounts.json。 ");
+async function loadManagedAccounts() {
+  try {
+    state.accountsConfig = await apiRequest("/api/accounts");
+    renderManagedAccounts();
+  } catch (error) {
+    setAccountFormStatus("动态列表暂时不可用，当前显示最近一次成功采集的账号。", true);
+  }
+}
+
+async function addAccountCandidate(candidate, button) {
+  button.disabled = true;
+  button.textContent = "正在添加…";
+  try {
+    await apiRequest("/api/accounts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ candidateId: candidate.candidateId }),
+    });
+    candidate.status = "active";
+    renderAccountCandidates();
+    await loadManagedAccounts();
+    setAccountFormStatus(`“${candidate.name}”已加入监测，下一次采集自动生效。`);
+  } catch (error) {
+    setAccountFormStatus(error.message || "添加失败，请重新搜索。", true);
+    button.disabled = false;
+    button.textContent = "重试";
+  }
+}
+
+async function updateAccountStatus(account, status, button) {
+  button.disabled = true;
+  try {
+    await apiRequest(`/api/accounts/${encodeURIComponent(account.fakeid)}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ status }),
+    });
+    await loadManagedAccounts();
+    setAccountFormStatus(`“${account.name}”已${status === "active" ? "恢复监测" : "暂停监测"}。`);
+  } catch (error) {
+    setAccountFormStatus(error.message || "状态更新失败。", true);
+    button.disabled = false;
+  }
+}
+
+async function removeAccount(account, button) {
+  if (!window.confirm(`确认删除“${account.name}”吗？历史岗位不会被删除。`)) return;
+  button.disabled = true;
+  try {
+    await apiRequest(`/api/accounts/${encodeURIComponent(account.fakeid)}`, { method: "DELETE" });
+    await loadManagedAccounts();
+    setAccountFormStatus(`“${account.name}”已停止监测并从列表移除。`);
+  } catch (error) {
+    setAccountFormStatus(error.message || "删除失败。", true);
+    button.disabled = false;
+  }
 }
 
 async function loadPreferences() {
@@ -486,7 +562,7 @@ async function initApp() {
   else if (state.status?.state === "auth_required") setServiceStatus("warning", "授权已过期");
   else if (state.status?.state === "error") setServiceStatus("error", "运行失败");
   else setServiceStatus("loading", "等待首次运行");
-  await Promise.all([loadPreferences(), monitorRemoteAuth()]);
+  await Promise.all([loadPreferences(), loadManagedAccounts(), monitorRemoteAuth()]);
 }
 
 async function restoreOrLogin() {
@@ -540,8 +616,7 @@ $("#lock-site").addEventListener("click", () => {
   location.reload();
 });
 $("#requirement-form").addEventListener("submit", savePreferences);
-$("#account-add-form").addEventListener("submit", addAccountDraft);
-$("#copy-account-config").addEventListener("click", copyAccountConfig);
-$("#download-account-config").addEventListener("click", downloadAccountConfig);
+$("#account-search-form").addEventListener("submit", searchAccounts);
+renderAccountCandidates();
 
 restoreOrLogin();

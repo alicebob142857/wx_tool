@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import type { DailyReport, ReportItem, SiteStatus } from "./types.js";
+import type { Account, DailyReport, ReportItem, SiteStatus } from "./types.js";
 import { sortPositions } from "./recommendation.js";
 import { buildStaticHistory } from "./static-history.js";
 
@@ -106,6 +106,14 @@ export async function writeStatus(rootDir: string, status: SiteStatus): Promise<
 export async function writeRuntimeConfig(rootDir: string, authServiceUrl: string): Promise<void> {
   await writeJson(path.join(rootDir, "site", "data", "runtime.json"), {
     authServiceUrl,
+    updatedAt: new Date().toISOString(),
+  });
+}
+
+export async function writeAccountsSnapshot(rootDir: string, accounts: Account[]): Promise<void> {
+  await writeJson(path.join(rootDir, "site", "data", "accounts.json"), {
+    count: accounts.length,
+    accounts,
     updatedAt: new Date().toISOString(),
   });
 }
