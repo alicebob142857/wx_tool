@@ -1,17 +1,657 @@
 {
   "date": "2026-07-19",
-  "generatedAt": "2026-07-19T05:27:17.598Z",
+  "generatedAt": "2026-07-19T10:09:13.575Z",
   "stats": {
     "accountsConfigured": 10,
     "accountsSucceeded": 10,
-    "articlesScanned": 557,
+    "articlesScanned": 543,
     "newArticles": 20,
     "candidateArticles": 19,
-    "relevantArticles": 4,
-    "positionsExtracted": 11,
-    "failedArticles": 5
+    "relevantArticles": 5,
+    "positionsExtracted": 17,
+    "failedArticles": 6
   },
   "items": [
+    {
+      "id": "642c1cea51682ddc",
+      "account": "清华就业",
+      "title": "招聘｜“无人区计划”深圳信步科技27届校招提前批启动",
+      "url": "https://mp.weixin.qq.com/s/nPBq5YL-EXc2_ZIKX8TVsQ",
+      "publishedAt": "2026-07-19T08:31:59.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "深圳信步科技2027届校招提前批启动，招聘硬件、软件、测试、产品、销售、职能等岗位，面向2027届毕业生，专业不限，本科及以上学历。",
+      "positions": [
+        {
+          "organization": "深圳信步科技",
+          "organizationNature": "民企",
+          "industry": "电子信息",
+          "jobTitle": "硬件工程师",
+          "jobDirections": [
+            "硬件"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届应届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 63,
+            "rankingKey": 1340359,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "面向2027届应届生，符合应届身份",
+              "专业不限，行政管理可投",
+              "本科及以上学历，硕士符合要求"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "单位性质为民企，稳定性一般",
+              "岗位方向与行政管理专业匹配度低"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "标题明确为27届校招提前批",
+            "图片OCR显示招聘岗位包括硬件、软件等"
+          ],
+          "confidence": 0.6,
+          "id": "9312c710be17d117",
+          "personalized": {
+            "eligible": true,
+            "score": 70,
+            "rankingKey": 2007999999,
+            "reasons": [
+              "专业不限，行政管理可以报考",
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "截止日期未披露，需尽快核对原文",
+              "薪资福利未披露",
+              "单位性质为民企，稳定性一般"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": true,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "深圳信步科技",
+          "organizationNature": "民企",
+          "industry": "电子信息",
+          "jobTitle": "软件工程师",
+          "jobDirections": [
+            "软件"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届应届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 63,
+            "rankingKey": 1340359,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "面向2027届应届生",
+              "专业不限",
+              "本科及以上学历"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "民企稳定性一般",
+              "岗位与行政管理专业不相关"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "标题明确为27届校招提前批",
+            "图片OCR显示招聘岗位包括软件"
+          ],
+          "confidence": 0.6,
+          "id": "eecea66da0568bd0",
+          "personalized": {
+            "eligible": true,
+            "score": 70,
+            "rankingKey": 2007999999,
+            "reasons": [
+              "专业不限，行政管理可以报考",
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "截止日期未披露，需尽快核对原文",
+              "薪资福利未披露",
+              "民企稳定性一般"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": true,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "深圳信步科技",
+          "organizationNature": "民企",
+          "industry": "电子信息",
+          "jobTitle": "测试工程师",
+          "jobDirections": [
+            "测试"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届应届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 63,
+            "rankingKey": 1340359,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "面向2027届应届生",
+              "专业不限",
+              "本科及以上学历"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "民企稳定性一般",
+              "岗位与行政管理专业不相关"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "标题明确为27届校招提前批",
+            "图片OCR显示招聘岗位包括测试"
+          ],
+          "confidence": 0.6,
+          "id": "722e9b4144c6c864",
+          "personalized": {
+            "eligible": true,
+            "score": 70,
+            "rankingKey": 2007999999,
+            "reasons": [
+              "专业不限，行政管理可以报考",
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "截止日期未披露，需尽快核对原文",
+              "薪资福利未披露",
+              "民企稳定性一般"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": true,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "深圳信步科技",
+          "organizationNature": "民企",
+          "industry": "电子信息",
+          "jobTitle": "产品经理",
+          "jobDirections": [
+            "产品"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届应届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 63,
+            "rankingKey": 1340359,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "面向2027届应届生",
+              "专业不限",
+              "本科及以上学历"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "民企稳定性一般",
+              "岗位与行政管理专业不相关"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "标题明确为27届校招提前批",
+            "图片OCR显示招聘岗位包括产品"
+          ],
+          "confidence": 0.6,
+          "id": "0519bf7aa29498d1",
+          "personalized": {
+            "eligible": true,
+            "score": 70,
+            "rankingKey": 2007999999,
+            "reasons": [
+              "专业不限，行政管理可以报考",
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "截止日期未披露，需尽快核对原文",
+              "薪资福利未披露",
+              "民企稳定性一般"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": true,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "深圳信步科技",
+          "organizationNature": "民企",
+          "industry": "电子信息",
+          "jobTitle": "销售工程师",
+          "jobDirections": [
+            "销售"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届应届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 63,
+            "rankingKey": 1340359,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "面向2027届应届生",
+              "专业不限",
+              "本科及以上学历"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "民企稳定性一般",
+              "岗位与行政管理专业不相关"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "标题明确为27届校招提前批",
+            "图片OCR显示招聘岗位包括销售"
+          ],
+          "confidence": 0.6,
+          "id": "39d1c8da366806f2",
+          "personalized": {
+            "eligible": true,
+            "score": 70,
+            "rankingKey": 2007999999,
+            "reasons": [
+              "专业不限，行政管理可以报考",
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "截止日期未披露，需尽快核对原文",
+              "薪资福利未披露",
+              "民企稳定性一般"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": true,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "深圳信步科技",
+          "organizationNature": "民企",
+          "industry": "电子信息",
+          "jobTitle": "职能类岗位",
+          "jobDirections": [
+            "行政",
+            "人力资源",
+            "财务"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届应届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 63,
+            "rankingKey": 1340359,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "面向2027届应届生",
+              "专业不限，行政管理可投",
+              "本科及以上学历，硕士符合要求",
+              "职能类岗位与行政管理专业有一定关联"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "民企稳定性一般",
+              "具体岗位方向未明确"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "标题明确为27届校招提前批",
+            "图片OCR显示招聘岗位包括职能类"
+          ],
+          "confidence": 0.6,
+          "id": "71de255ed5ea3e15",
+          "personalized": {
+            "eligible": true,
+            "score": 70,
+            "rankingKey": 2007999999,
+            "reasons": [
+              "专业不限，行政管理可以报考",
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "截止日期未披露，需尽快核对原文",
+              "薪资福利未披露",
+              "民企稳定性一般"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": true,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "文章未提供具体岗位要求细节，仅从标题和图片OCR推断。",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-h34VNn/0.png stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-h34VNn/1.png stdout -l chi_sim+eng --psm 6\n"
+      ]
+    },
     {
       "id": "5783803c9f1e10e0",
       "account": "国企求职网",

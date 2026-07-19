@@ -2,55 +2,104 @@
   "count": 10,
   "accounts": [
     {
-      "name": "央企求职网",
-      "fakeid": "MzIzMzcyNjU1MQ==",
-      "alias": "yangqiqiuzhi"
-    },
-    {
-      "name": "五财一贸",
       "fakeid": "MzAwMDY2Mjc1Mw==",
-      "alias": "wucaiyimao"
+      "name": "五财一贸",
+      "alias": "wucaiyimao",
+      "avatarUrl": "",
+      "status": "active",
+      "source": "bootstrap",
+      "addedAt": "2026-07-19T10:00:57.034Z",
+      "updatedAt": "2026-07-19T10:00:57.034Z"
     },
     {
-      "name": "国企求职网",
-      "fakeid": "MzIxMTU3OTA5Nw==",
-      "alias": "guoqizhaopinwang",
-      "note": "用户清单中曾称为国央求职网，以文章实际发布账号为准"
-    },
-    {
-      "name": "晓央就业",
-      "fakeid": "MzkyNTIwMDA1OQ==",
-      "alias": "cufe-coco"
-    },
-    {
-      "name": "北大就业",
-      "fakeid": "MzA4NjAzMTIxNw==",
-      "alias": "pku_scc"
-    },
-    {
-      "name": "国资小新",
-      "fakeid": "MjM5MDIxNjczNA==",
-      "alias": "guozixiaoxin"
-    },
-    {
-      "name": "国聘",
-      "fakeid": "MzU4MzQ2NzUxMw==",
-      "alias": "iguopincom"
-    },
-    {
-      "name": "人大就业创业",
       "fakeid": "MjM5MTE5MTY4Mw==",
-      "alias": "RUCcareercenter"
+      "name": "人大就业创业",
+      "alias": "RUCcareercenter",
+      "avatarUrl": "",
+      "status": "active",
+      "source": "bootstrap",
+      "addedAt": "2026-07-19T10:00:57.034Z",
+      "updatedAt": "2026-07-19T10:00:57.034Z"
     },
     {
-      "name": "清华就业",
-      "fakeid": "MzUyMjc4NjA4Nw==",
-      "alias": "THUCareer"
+      "fakeid": "MzA4NjAzMTIxNw==",
+      "name": "北大就业",
+      "alias": "pku_scc",
+      "avatarUrl": "",
+      "status": "active",
+      "source": "bootstrap",
+      "addedAt": "2026-07-19T10:00:57.034Z",
+      "updatedAt": "2026-07-19T10:00:57.034Z"
     },
     {
-      "name": "北航就业",
       "fakeid": "MjM5MzI0Nzc2Ng==",
-      "alias": ""
+      "name": "北航就业",
+      "alias": "",
+      "avatarUrl": "",
+      "status": "active",
+      "source": "bootstrap",
+      "addedAt": "2026-07-19T10:00:57.034Z",
+      "updatedAt": "2026-07-19T10:00:57.034Z"
+    },
+    {
+      "fakeid": "MzIxMTU3OTA5Nw==",
+      "name": "国企求职网",
+      "alias": "guoqizhaopinwang",
+      "avatarUrl": "",
+      "status": "active",
+      "source": "bootstrap",
+      "addedAt": "2026-07-19T10:00:57.034Z",
+      "updatedAt": "2026-07-19T10:00:57.034Z"
+    },
+    {
+      "fakeid": "MzU4MzQ2NzUxMw==",
+      "name": "国聘",
+      "alias": "iguopincom",
+      "avatarUrl": "",
+      "status": "active",
+      "source": "bootstrap",
+      "addedAt": "2026-07-19T10:00:57.034Z",
+      "updatedAt": "2026-07-19T10:00:57.034Z"
+    },
+    {
+      "fakeid": "MjM5MDIxNjczNA==",
+      "name": "国资小新",
+      "alias": "guozixiaoxin",
+      "avatarUrl": "",
+      "status": "active",
+      "source": "bootstrap",
+      "addedAt": "2026-07-19T10:00:57.034Z",
+      "updatedAt": "2026-07-19T10:00:57.034Z"
+    },
+    {
+      "fakeid": "MzIzMzcyNjU1MQ==",
+      "name": "央企求职网",
+      "alias": "yangqiqiuzhi",
+      "avatarUrl": "",
+      "status": "active",
+      "source": "bootstrap",
+      "addedAt": "2026-07-19T10:00:57.034Z",
+      "updatedAt": "2026-07-19T10:00:57.034Z"
+    },
+    {
+      "fakeid": "MzkyNTIwMDA1OQ==",
+      "name": "晓央就业",
+      "alias": "cufe-coco",
+      "avatarUrl": "",
+      "status": "active",
+      "source": "bootstrap",
+      "addedAt": "2026-07-19T10:00:57.034Z",
+      "updatedAt": "2026-07-19T10:00:57.034Z"
+    },
+    {
+      "fakeid": "MzUyMjc4NjA4Nw==",
+      "name": "清华就业",
+      "alias": "THUCareer",
+      "avatarUrl": "",
+      "status": "active",
+      "source": "bootstrap",
+      "addedAt": "2026-07-19T10:00:57.034Z",
+      "updatedAt": "2026-07-19T10:00:57.034Z"
     }
   ]
 }
