@@ -1,7 +1,4 @@
-const SESSION_KEY = "wx_job_monitor_site_session";
-
 const state = {
-  token: localStorage.getItem(SESSION_KEY) || "",
   runtime: { authServiceUrl: "" },
   status: null,
   index: { days: [] },
@@ -40,9 +37,8 @@ async function getJson(url, fallback = null) {
 
 async function apiRequest(path, options = {}) {
   const base = state.runtime?.authServiceUrl?.replace(/\/$/, "");
-  if (!base) throw new Error("登录服务尚未配置");
+  if (!base) throw new Error("后台服务尚未配置");
   const headers = new Headers(options.headers || {});
-  if (state.token) headers.set("Authorization", `Bearer ${state.token}`);
   const response = await fetch(`${base}${path}`, {
     ...options,
     headers,
@@ -96,20 +92,6 @@ function setServiceStatus(kind, label) {
   if (!element) return;
   element.className = `service-status is-${kind}`;
   element.lastElementChild.textContent = label;
-}
-
-function unlockPage() {
-  $("#access-gate").hidden = true;
-  $("#app-shell").hidden = false;
-}
-
-function showLogin(message, isError = false) {
-  $("#access-gate").hidden = false;
-  $("#app-shell").hidden = true;
-  const status = $("#login-status");
-  status.textContent = message;
-  status.classList.toggle("is-error", isError);
-  if (isError) $("#site-password").focus();
 }
 
 function chip(label, extra = "") {
@@ -581,58 +563,13 @@ async function initApp() {
   await Promise.all([loadPreferences(), loadManagedAccounts(), monitorRemoteAuth()]);
 }
 
-async function restoreOrLogin() {
+async function startApp() {
   state.runtime = await getJson("data/runtime.json", { authServiceUrl: "" });
-  if (!state.token) return showLogin("请输入访问密码。 ");
-  try {
-    await apiRequest("/api/site/session");
-    unlockPage();
-    await initApp();
-  } catch (error) {
-    if (error.status === 401) {
-      localStorage.removeItem(SESSION_KEY);
-      state.token = "";
-      showLogin("浏览器登录已过期，请重新输入密码。", true);
-      return;
-    }
-    unlockPage();
-    setServiceStatus("warning", "离线使用已记住浏览器");
-    await initApp();
-  }
+  await initApp();
 }
 
-async function login(event) {
-  event.preventDefault();
-  const button = event.currentTarget.querySelector("button");
-  const password = $("#site-password").value;
-  button.disabled = true;
-  showLogin("正在验证…");
-  try {
-    const result = await apiRequest("/api/site/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ password }),
-    });
-    state.token = result.token;
-    localStorage.setItem(SESSION_KEY, result.token);
-    $("#site-password").value = "";
-    unlockPage();
-    await initApp();
-  } catch (error) {
-    showLogin(error.message || "验证失败，请重试。", true);
-  } finally {
-    button.disabled = false;
-  }
-}
-
-$("#login-form").addEventListener("submit", login);
-$("#lock-site").addEventListener("click", () => {
-  localStorage.removeItem(SESSION_KEY);
-  state.token = "";
-  location.reload();
-});
 $("#requirement-form").addEventListener("submit", savePreferences);
 $("#account-search-form").addEventListener("submit", searchAccounts);
 renderAccountCandidates();
 
-restoreOrLogin();
+startApp();

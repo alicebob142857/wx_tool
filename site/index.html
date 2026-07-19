@@ -9,22 +9,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <section id="access-gate" class="access-gate" aria-labelledby="access-title">
-      <form id="login-form" class="login-card">
-        <span class="brand-mark" aria-hidden="true">文</span>
-        <p class="eyebrow">Private briefing</p>
-        <h1 id="access-title">进入你的求职雷达</h1>
-        <p>第一次在这个浏览器访问需要验证密码。验证成功后，该浏览器会被记住。</p>
-        <label for="site-password">访问密码</label>
-        <div class="login-row">
-          <input id="site-password" name="password" type="password" required autocomplete="current-password" placeholder="请输入密码" />
-          <button class="primary-button" type="submit">进入</button>
-        </div>
-        <p id="login-status" class="login-status" role="status">正在检查浏览器登录状态…</p>
-      </form>
-    </section>
-
-    <div id="app-shell" class="page-shell" hidden>
+    <div id="app-shell" class="page-shell">
       <header class="topbar">
         <a class="brand" href="./" aria-label="返回今日结果">
           <span class="brand-mark" aria-hidden="true">文</span>
@@ -36,7 +21,6 @@
         <div class="topbar-actions">
           <a class="manage-link" href="#personal-requirement">重要要求</a>
           <a class="manage-link" href="#account-management">公众号管理</a>
-          <button id="lock-site" class="manage-link button-link" type="button">锁定</button>
           <div id="service-status" class="service-status is-loading">
             <span class="status-dot"></span>
             <span>正在读取状态</span>

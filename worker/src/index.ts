@@ -2,7 +2,6 @@ interface Env {
   AUTH_KV: KVNamespace;
   JOB_DB: D1Database;
   COLLECTOR_TOKEN: string;
-  SITE_PASSWORD_HASH?: string;
   ALLOWED_ORIGIN?: string;
   GITHUB_REPOSITORY?: string;
   GITHUB_DISPATCH_TOKEN?: string;
@@ -51,9 +50,7 @@ interface SearchCandidate {
 
 const LOGIN_KEY = "login:current";
 const AUTH_KEY = "auth:current";
-const SITE_SESSION_PREFIX = "site-session:";
 const ACCOUNT_SEARCH_PREFIX = "account-search:";
-const SITE_SESSION_TTL = 180 * 24 * 60 * 60;
 const FOUR_DAYS_MS = 4 * 24 * 60 * 60 * 1000;
 const USER_AGENT =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
@@ -154,51 +151,7 @@ function randomToken(): string {
   return [...bytes].map(value => value.toString(16).padStart(2, "0")).join("");
 }
 
-async function siteAuthorized(request: Request, env: Env): Promise<boolean> {
-  const header = request.headers.get("Authorization") || "";
-  const token = header.startsWith("Bearer ") ? header.slice(7) : "";
-  if (!/^[a-f0-9]{64}$/.test(token)) return false;
-  return Boolean(await env.AUTH_KV.get(`${SITE_SESSION_PREFIX}${token}`));
-}
-
-async function sha256(value: string): Promise<string> {
-  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value));
-  return [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, "0")).join("");
-}
-
-function constantTimeEqual(left: string, right: string): boolean {
-  if (left.length !== right.length) return false;
-  let difference = 0;
-  for (let index = 0; index < left.length; index += 1) {
-    difference |= left.charCodeAt(index) ^ right.charCodeAt(index);
-  }
-  return difference === 0;
-}
-
-async function loginSite(request: Request, env: Env): Promise<Response> {
-  if (!env.SITE_PASSWORD_HASH) return json(request, env, { message: "网站密码尚未配置" }, 503);
-  const body = await request.json<{ password?: string }>().catch(() => ({ password: "" }));
-  const providedHash = await sha256(String(body.password || ""));
-  if (!constantTimeEqual(providedHash, env.SITE_PASSWORD_HASH)) {
-    return json(request, env, { message: "密码不正确" }, 401);
-  }
-  const token = randomToken();
-  const expiresAt = new Date(Date.now() + SITE_SESSION_TTL * 1_000).toISOString();
-  await env.AUTH_KV.put(`${SITE_SESSION_PREFIX}${token}`, JSON.stringify({ createdAt: new Date().toISOString() }), {
-    expirationTtl: SITE_SESSION_TTL,
-  });
-  return json(request, env, { ok: true, token, expiresAt });
-}
-
-async function checkSiteSession(request: Request, env: Env): Promise<Response> {
-  if (!await siteAuthorized(request, env)) return json(request, env, { ok: false }, 401);
-  return json(request, env, { ok: true });
-}
-
 async function getPreferences(request: Request, env: Env): Promise<Response> {
-  if (!authorized(request, env) && !await siteAuthorized(request, env)) {
-    return json(request, env, { message: "Unauthorized" }, 401);
-  }
   const row = await env.JOB_DB.prepare(
     "SELECT custom_requirement AS customRequirement, updated_at AS updatedAt FROM user_preferences WHERE id = 1",
   ).first<{ customRequirement: string; updatedAt: string }>();
@@ -209,7 +162,6 @@ async function getPreferences(request: Request, env: Env): Promise<Response> {
 }
 
 async function savePreferences(request: Request, env: Env): Promise<Response> {
-  if (!await siteAuthorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
   const body = await request.json<{ customRequirement?: string }>().catch(() => ({ customRequirement: "" }));
   const customRequirement = String(body.customRequirement || "").trim();
   if (customRequirement.length > 2_000) return json(request, env, { message: "自定义要求不能超过 2000 字" }, 400);
@@ -236,9 +188,6 @@ function managedAccountFromRow(row: any): ManagedAccount {
 
 async function listManagedAccounts(request: Request, env: Env): Promise<Response> {
   const collector = authorized(request, env);
-  if (!collector && !await siteAuthorized(request, env)) {
-    return json(request, env, { message: "Unauthorized" }, 401);
-  }
   const where = collector ? "status = 'active'" : "status != 'removed'";
   const result = await env.JOB_DB.prepare(`SELECT * FROM monitored_accounts
     WHERE ${where} ORDER BY status = 'active' DESC, name COLLATE NOCASE`).all();
@@ -264,7 +213,6 @@ function isExpiredWechatCode(code: number): boolean {
 }
 
 async function searchManagedAccounts(request: Request, env: Env): Promise<Response> {
-  if (!await siteAuthorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
   const auth = await getAuth(env);
   if (!auth) return json(request, env, { message: "微信公众号授权已过期，请先扫码恢复授权" }, 409);
   const body = await request.json<{ keyword?: string }>().catch(() => ({ keyword: "" }));
@@ -318,7 +266,6 @@ async function searchManagedAccounts(request: Request, env: Env): Promise<Respon
 }
 
 async function addManagedAccount(request: Request, env: Env): Promise<Response> {
-  if (!await siteAuthorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
   const body = await request.json<{ candidateId?: string }>().catch(() => ({ candidateId: "" }));
   const candidateId = String(body.candidateId || "");
   if (!/^[a-f0-9]{64}$/.test(candidateId)) return json(request, env, { message: "搜索结果标识不合法" }, 400);
@@ -340,7 +287,6 @@ async function addManagedAccount(request: Request, env: Env): Promise<Response> 
 }
 
 async function updateManagedAccount(request: Request, env: Env, fakeid: string): Promise<Response> {
-  if (!await siteAuthorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
   const body = await request.json<{ status?: string }>().catch(() => ({ status: "" }));
   if (body.status !== "active" && body.status !== "paused") {
     return json(request, env, { message: "状态只能是 active 或 paused" }, 400);
@@ -353,7 +299,6 @@ async function updateManagedAccount(request: Request, env: Env, fakeid: string):
 }
 
 async function removeManagedAccount(request: Request, env: Env, fakeid: string): Promise<Response> {
-  if (!await siteAuthorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
   const result = await env.JOB_DB.prepare("UPDATE monitored_accounts SET status = 'removed', updated_at = ? WHERE fakeid = ? AND status != 'removed'")
     .bind(new Date().toISOString(), fakeid).run();
   if (!result.meta.changes) return json(request, env, { message: "没有找到该公众号" }, 404);
@@ -937,8 +882,6 @@ export default {
     try {
       if (url.pathname === "/health") return json(request, env, { ok: true });
       await ensureRuntimeSchema(env);
-      if (url.pathname === "/api/site/login" && request.method === "POST") return loginSite(request, env);
-      if (url.pathname === "/api/site/session" && request.method === "GET") return checkSiteSession(request, env);
       if (url.pathname === "/api/preferences" && request.method === "GET") return getPreferences(request, env);
       if (url.pathname === "/api/preferences" && request.method === "PUT") return savePreferences(request, env);
       if (url.pathname === "/api/accounts/search" && request.method === "POST") return searchManagedAccounts(request, env);

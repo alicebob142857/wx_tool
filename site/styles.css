@@ -31,28 +31,6 @@ button, input, select, textarea { font: inherit; }
 
 [hidden] { display: none !important; }
 
-.access-gate {
-  min-height: 100vh; display: grid; place-items: center; padding: 24px;
-  background:
-    radial-gradient(circle at 15% 12%, rgba(204,232,111,.46), transparent 26rem),
-    radial-gradient(circle at 86% 80%, rgba(237,139,74,.18), transparent 28rem),
-    var(--paper);
-}
-.login-card {
-  width: min(520px, 100%); padding: 38px; border: 1px solid var(--line); border-radius: 28px;
-  background: rgba(255,255,255,.9); box-shadow: var(--shadow);
-}
-.login-card > .brand-mark { margin-bottom: 28px; }
-.login-card h1 { margin: 0; font: 500 38px/1.18 Georgia, "Songti SC", serif; }
-.login-card > p:not(.eyebrow, .login-status) { margin: 14px 0 26px; color: var(--muted); line-height: 1.7; }
-.login-card > label { display: block; margin: 0 0 8px 3px; color: var(--muted); font-size: 12px; font-weight: 700; }
-.login-row { display: grid; grid-template-columns: 1fr auto; gap: 9px; }
-.login-row input { min-width: 0; height: 48px; padding: 0 14px; border: 1px solid var(--line); border-radius: 13px; outline: none; background: white; }
-.login-row input:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(29,107,79,.1); }
-.login-row .primary-button { min-width: 88px; }
-.login-status { min-height: 20px; margin: 13px 0 0; color: var(--muted); font-size: 12px; }
-.login-status.is-error { color: var(--red); font-weight: 700; }
-
 .page-shell { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
 
 .topbar {
@@ -78,7 +56,6 @@ button, input, select, textarea { font: inherit; }
   text-decoration: none; font-size: 12px; font-weight: 800;
 }
 .manage-link:hover { background: rgba(29,107,79,.09); }
-.button-link { cursor: pointer; font: inherit; }
 
 .service-status {
   display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: rgba(255,255,255,.62);
@@ -390,8 +367,6 @@ footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1
   .account-search-row { grid-template-columns: 1fr; }
   .auth-panel { padding: 23px; }
   .auth-panel ol { display: grid; gap: 10px; }
-  .login-card { padding: 26px 22px; }
-  .login-card h1 { font-size: 31px; }
   .section-heading { align-items: flex-start; }
   .section-heading h2 { font-size: 30px; }
   .all-jobs-panel > summary { padding: 18px; }
@@ -405,6 +380,5 @@ footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1
   .compact-job-row > span:nth-child(4)::before { content: "截止："; }
   .personal-requirement { padding: 22px; }
   .history-download { align-items: flex-start; flex-direction: column; }
-  .login-row { grid-template-columns: 1fr; }
   footer { display: block; line-height: 1.6; }
 }

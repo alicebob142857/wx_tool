@@ -70,7 +70,7 @@ GitHub Actions (每天 02:00 UTC / 北京时间 10:00)
   └─ GitHub Pages：发布日报与授权二维码
 
 Cloudflare Worker
-  ├─ KV：保存最多 4 天的微信会话和 180 天的网站浏览器会话
+  ├─ KV：保存最多 4 天的微信会话和 10 分钟的公众号搜索候选
   ├─ D1：岗位数据库、个性化结果与自定义要求（Worker 首次运行时幂等初始化新表）
   ├─ D1：监测公众号列表、启用/暂停/删除状态
   ├─ searchbiz：按名称或微信号搜索公众号并自动保存 fakeid
@@ -120,8 +120,6 @@ npm run site:serve
    npx wrangler secret put COLLECTOR_TOKEN --config worker/wrangler.jsonc
    ```
 
-   网站密码以 SHA-256 哈希形式保存在 `worker/wrangler.jsonc` 的 `SITE_PASSWORD_HASH` 中，不保存明文。修改密码时重新计算哈希并替换该变量。
-
 5. 可选：为了扫码成功后立即重跑 GitHub Action，设置：
 
    ```bash
@@ -168,8 +166,8 @@ npm run site:serve
 - `.env` 已加入 `.gitignore`，不得提交。
 - DeepSeek Key 只放 GitHub Secrets。
 - 微信 Cookie 只放 Cloudflare KV。
-- D1 报告写接口需要服务端 Bearer Token；自定义要求写接口需要网站会话令牌。
-- 网站密码验证成功后，随机会话令牌保存在当前浏览器，最长 180 天；仓库中不保存明文密码。密码哈希是公开配置，弱密码仍可能被离线猜测，因此它只作为页面操作门槛，不等同于私有数据保护。
-- GitHub Pages 本质上仍是公开静态托管：密码能阻止普通访客进入页面操作，但不能把已发布的 `site/data/*.json` 变成真正私有数据。若岗位结果必须保密，应改用私有托管或服务端鉴权后再返回数据。
+- D1 报告写入、微信文章抓取和授权启动等采集器内部接口仍需要服务端 Bearer Token。
+- 网站和管理功能完全公开：任何访客都能查看数据、修改自定义要求，以及添加、暂停或删除公众号。部署前请确认这符合你的使用预期。
+- GitHub Pages 是公开静态托管，已发布的 `site/data/*.json` 也可被直接访问。若岗位结果或管理权限需要保密，应改用带服务端鉴权的托管方案。
 - OCR 图片只存在于 Actions 临时目录，处理完立即删除。
 - 文章和岗位判断可能存在误差，最终以招聘单位官网为准。
