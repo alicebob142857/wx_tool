@@ -73,6 +73,19 @@ function fmtDate(value) {
   }).format(date);
 }
 
+function fmtPushDate(job) {
+  const publishedAt = job?.article?.publishedAt;
+  if (publishedAt) {
+    const date = new Date(publishedAt);
+    if (!Number.isNaN(date.getTime())) {
+      return new Intl.DateTimeFormat("sv-SE", {
+        timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit",
+      }).format(date);
+    }
+  }
+  return job?.reportDate || "日期未明确";
+}
+
 function compactText(values, fallback = "未披露") {
   const list = Array.isArray(values) ? values.filter(Boolean) : [];
   return list.length ? list.join("、") : fallback;
@@ -292,11 +305,14 @@ function renderPool() {
     const row = node("article", "pool-row");
     row.append(node("span", "pool-rank", String(index + 1).padStart(2, "0")));
     const body = node("div", "pool-body");
-    const title = node("a", "", job.jobTitle || "岗位未命名");
+    const pushDate = fmtPushDate(job);
+    const titleText = `${job.jobTitle || "岗位未命名"}｜${job.organization || "单位未明确"}｜${pushDate}`;
+    const title = node("a", "", titleText);
     title.href = job.article?.url || "#";
     title.target = "_blank";
     title.rel = "noopener noreferrer";
-    body.append(title, node("small", "", `${job.organization || "单位未明确"} · ${compactText(job.locations)} · ${job.education?.summary || "学历未明确"} · 截止 ${job.deadline || "未披露"}`));
+    title.title = titleText;
+    body.append(title, node("small", "", `推送 ${pushDate} · ${compactText(job.locations)} · ${job.education?.summary || "学历未明确"} · 截止 ${job.deadline || "未披露"}`));
     const score = node("strong", "pool-score", job.personalized?.score ?? "—");
     score.title = "个性化分数";
     row.append(body, score);

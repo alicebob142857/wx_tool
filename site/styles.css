@@ -254,7 +254,7 @@ button, input, select, textarea { font: inherit; }
 .pool-row { display: grid; grid-template-columns: 38px minmax(0,1fr) 40px; gap: 12px; align-items: center; padding: 15px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.68); }
 .pool-rank { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; color: white; background: var(--green-dark); font: 500 14px Georgia, serif; }
 .pool-body { min-width: 0; }
-.pool-body a { display: block; overflow: hidden; color: var(--ink); font-size: 13px; font-weight: 800; text-decoration: none; text-overflow: ellipsis; white-space: nowrap; }
+.pool-body a { display: block; color: var(--ink); font-size: 13px; font-weight: 800; line-height: 1.45; overflow-wrap: anywhere; text-decoration: none; }
 .pool-body a:hover { color: var(--green); }
 .pool-body small { display: block; overflow: hidden; margin-top: 5px; color: var(--muted); font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
 .pool-score { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; color: #355319; background: var(--lime); font: 500 16px Georgia, serif; }
