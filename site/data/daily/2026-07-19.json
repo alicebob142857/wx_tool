@@ -1,15 +1,15 @@
 {
   "date": "2026-07-19",
-  "generatedAt": "2026-07-18T16:03:43.610Z",
+  "generatedAt": "2026-07-19T05:27:17.598Z",
   "stats": {
     "accountsConfigured": 10,
     "accountsSucceeded": 10,
-    "articlesScanned": 563,
+    "articlesScanned": 557,
     "newArticles": 20,
     "candidateArticles": 19,
     "relevantArticles": 4,
     "positionsExtracted": 11,
-    "failedArticles": 4
+    "failedArticles": 5
   },
   "items": [
     {

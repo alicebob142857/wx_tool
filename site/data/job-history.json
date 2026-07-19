@@ -1,6 +1,6 @@
 {
   "date": "all",
-  "generatedAt": "2026-07-18T16:03:43.610Z",
+  "generatedAt": "2026-07-19T05:27:17.598Z",
   "total": 235,
   "stats": {
     "accountsConfigured": 8,
@@ -10,7 +10,7 @@
     "candidateArticles": 48,
     "relevantArticles": 48,
     "positionsExtracted": 235,
-    "failedArticles": 9
+    "failedArticles": 10
   },
   "jobs": [
     {
