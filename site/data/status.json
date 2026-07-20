@@ -1,20 +1,20 @@
 {
-  "state": "partial",
-  "message": "今日采集完成，但部分文章处理失败。",
-  "lastRunAt": "2026-07-19T11:51:05.069Z",
+  "state": "auth_required",
+  "message": "微信公众号授权在采集过程中失效，请扫码恢复。",
+  "lastRunAt": "2026-07-20T05:42:45.407Z",
   "auth": {
-    "status": "valid",
+    "status": "expired",
     "expiresAt": "2026-07-21T03:50:00.865Z",
-    "qrAvailable": false
+    "qrAvailable": true
   },
   "stats": {
     "accountsConfigured": 10,
-    "accountsSucceeded": 10,
-    "articlesScanned": 543,
-    "newArticles": 20,
-    "candidateArticles": 19,
-    "relevantArticles": 5,
-    "positionsExtracted": 17,
-    "failedArticles": 6
+    "accountsSucceeded": 0,
+    "articlesScanned": 0,
+    "newArticles": 0,
+    "candidateArticles": 0,
+    "relevantArticles": 0,
+    "positionsExtracted": 0,
+    "failedArticles": 0
   }
 }
