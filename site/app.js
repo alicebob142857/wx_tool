@@ -267,6 +267,17 @@ function renderFeedbackControls(job, compact = false) {
   });
 
   const dislikeWrap = node("div", `dislike-wrap${current?.sentiment === "dislike" ? " has-feedback" : ""}`);
+  let hoverCloseTimer;
+  dislikeWrap.addEventListener("pointerenter", event => {
+    if (event.pointerType === "touch") return;
+    window.clearTimeout(hoverCloseTimer);
+    dislikeWrap.classList.add("is-hover-open");
+  });
+  dislikeWrap.addEventListener("pointerleave", event => {
+    if (event.pointerType === "touch") return;
+    window.clearTimeout(hoverCloseTimer);
+    hoverCloseTimer = window.setTimeout(() => dislikeWrap.classList.remove("is-hover-open"), 320);
+  });
   const dislike = node("button", `feedback-button dislike-button${current?.sentiment === "dislike" ? " is-active" : ""}`);
   dislike.type = "button";
   dislike.disabled = pending;
