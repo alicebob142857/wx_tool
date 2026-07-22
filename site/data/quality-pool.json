@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T05:42:33.167Z",
+  "generatedAt": "2026-07-22T05:32:34.001Z",
   "maxSize": 30,
   "total": 30,
   "jobs": [
@@ -513,6 +513,132 @@
           "notAssociateThreshold": true,
           "customRequirement": true
         }
+      }
+    },
+    {
+      "organization": "青海省烟草专卖局（公司）",
+      "organizationNature": "国企",
+      "industry": "烟草",
+      "jobTitle": "综合管理岗",
+      "jobDirections": [
+        "综合管理"
+      ],
+      "locations": [
+        "西宁",
+        "海东",
+        "格尔木",
+        "海南",
+        "黄南",
+        "玉树"
+      ],
+      "headcount": "11",
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "yes",
+      "education": {
+        "summary": "本科及以上，硕士优先",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业要求详见附件，未明确列出，可能包含行政管理",
+        "accepted": [
+          "行政管理",
+          "公共管理类",
+          "管理学门类"
+        ],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [
+        "2026年应届或择业期内未就业毕业生",
+        "本科2000年7月31日后出生，硕士1998年后",
+        "符合回避要求"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 3
+      },
+      "deadline": null,
+      "applicationMethod": "通过原文链接查看完整公告及报名方式",
+      "applicationUrl": "https://mp.weixin.qq.com/s/EUozTdvoOUhtVJ39NyIoow",
+      "referralCode": null,
+      "recommendation": {
+        "score": 54,
+        "rankingKey": 1243369,
+        "level": "medium",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求以硕士为主，符合优先级",
+          "面向应届生，含择业期，符合求职者应届身份",
+          "学历要求本科及以上，硕士优先，适合硕士学历",
+          "国企单位，稳定性高"
+        ],
+        "concerns": [
+          "专业要求未明确列出，不确定是否包含行政管理",
+          "薪资福利未披露",
+          "报名截止日期未披露"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 3,
+      "evidence": [
+        "面向2026年应届及择业期毕业生",
+        "本科及以上学历，硕士优先",
+        "专业要求详见附件，原文未列出"
+      ],
+      "confidence": 0.7,
+      "id": "fdddebf5222636ed",
+      "personalized": {
+        "eligible": true,
+        "score": 94,
+        "rankingKey": 2010399999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业范围尚需核对原文",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "专业要求未明确列出，不确定是否包含行政管理",
+          "薪资福利未披露"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "烟草专卖局2026年校园招聘！",
+        "url": "https://mp.weixin.qq.com/s/EUozTdvoOUhtVJ39NyIoow",
+        "publishedAt": "2026-07-21T06:30:00.000Z",
+        "summary": "青海省烟草专卖局2026年校园招聘11人，面向2026届及择业期毕业生，含行政管理等专业。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
       }
     },
     {
@@ -1414,6 +1540,111 @@
       }
     },
     {
+      "organization": "中化康源生物科技泰兴有限公司",
+      "organizationNature": "央企",
+      "industry": "生物科技",
+      "jobTitle": "人力资源专员",
+      "jobDirections": [
+        "人力资源"
+      ],
+      "locations": [
+        "南京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确专业，人力资源岗通常要求人力资源管理、工商管理，行政管理可能匹配",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-10-19",
+      "applicationMethod": "国聘官网",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 47,
+        "rankingKey": 1240369,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求以硕士为主，符合优先级",
+          "央企校招，硕士可报，人力资源岗与行政管理相关"
+        ],
+        "concerns": [
+          "专业要求不明确，可能偏好人力资源管理专业"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 3,
+      "evidence": [
+        "人力资源岗通常接受管理类专业"
+      ],
+      "confidence": 0.7,
+      "id": "f4f10386ace26d67",
+      "personalized": {
+        "eligible": true,
+        "score": 90,
+        "rankingKey": 2009999999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业范围尚需核对原文",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "专业要求不明确，可能偏好人力资源管理专业"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国聘",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "校招 | 央国企招聘信息汇总（央企及所属单位）7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/qanT6tO0VOn3QNW-RT6CmQ",
+        "publishedAt": "2026-07-21T12:10:25.000Z",
+        "summary": "国聘公众号发布的央国企校招岗位汇总，包含多家央企及所属单位的招聘信息，报名截止时间从2026年7月31日至10月19日。",
+        "ocrUsed": true,
+        "ocrImageCount": 4,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
       "organization": "山东崇实智慧能源科技有限公司",
       "organizationNature": "民企",
       "industry": "能源",
@@ -1525,6 +1756,1066 @@
         "summary": "央企名企山东省岗位推荐，涵盖多个行业，学历要求高中至博士，部分岗位面向应届生。",
         "ocrUsed": true,
         "ocrImageCount": 3,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "中远关西涂料化工（上海）有限公司",
+      "organizationNature": "央企",
+      "industry": "化工",
+      "jobTitle": "会计",
+      "jobDirections": [
+        "会计"
+      ],
+      "locations": [
+        "上海"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确专业，但会计岗位通常要求财会类，行政管理不匹配",
+        "accepted": [],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-10-19",
+      "applicationMethod": "国聘官网",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配，行政管理专业不符合会计岗位要求"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "会计岗位通常要求财会类专业"
+      ],
+      "confidence": 0.9,
+      "id": "c8dcc9a69f363336",
+      "personalized": {
+        "eligible": true,
+        "score": 89,
+        "rankingKey": 2009899999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配，行政管理专业不符合会计岗位要求"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国聘",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "校招 | 央国企招聘信息汇总（央企及所属单位）7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/qanT6tO0VOn3QNW-RT6CmQ",
+        "publishedAt": "2026-07-21T12:10:25.000Z",
+        "summary": "国聘公众号发布的央国企校招岗位汇总，包含多家央企及所属单位的招聘信息，报名截止时间从2026年7月31日至10月19日。",
+        "ocrUsed": true,
+        "ocrImageCount": 4,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "中化学科学技术研究有限公司",
+      "organizationNature": "央企",
+      "industry": "化工",
+      "jobTitle": "催化剂研发工程师",
+      "jobDirections": [
+        "催化剂研发"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确专业，研发岗通常要求化学化工，行政管理不匹配",
+        "accepted": [],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-10-19",
+      "applicationMethod": "国聘官网",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "研发岗通常要求相关理工科专业"
+      ],
+      "confidence": 0.9,
+      "id": "7a40f089fb360988",
+      "personalized": {
+        "eligible": true,
+        "score": 89,
+        "rankingKey": 2009899999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国聘",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "校招 | 央国企招聘信息汇总（央企及所属单位）7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/qanT6tO0VOn3QNW-RT6CmQ",
+        "publishedAt": "2026-07-21T12:10:25.000Z",
+        "summary": "国聘公众号发布的央国企校招岗位汇总，包含多家央企及所属单位的招聘信息，报名截止时间从2026年7月31日至10月19日。",
+        "ocrUsed": true,
+        "ocrImageCount": 4,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "中化学科学技术研究有限公司",
+      "organizationNature": "央企",
+      "industry": "化工",
+      "jobTitle": "人工智能研发岗",
+      "jobDirections": [
+        "人工智能研发"
+      ],
+      "locations": [
+        "宁波"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确专业，AI岗通常要求计算机、数学等，行政管理不匹配",
+        "accepted": [],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-10-19",
+      "applicationMethod": "国聘官网",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "AI研发岗通常要求计算机相关专业"
+      ],
+      "confidence": 0.9,
+      "id": "77b1ad980f75f010",
+      "personalized": {
+        "eligible": true,
+        "score": 89,
+        "rankingKey": 2009899999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国聘",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "校招 | 央国企招聘信息汇总（央企及所属单位）7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/qanT6tO0VOn3QNW-RT6CmQ",
+        "publishedAt": "2026-07-21T12:10:25.000Z",
+        "summary": "国聘公众号发布的央国企校招岗位汇总，包含多家央企及所属单位的招聘信息，报名截止时间从2026年7月31日至10月19日。",
+        "ocrUsed": true,
+        "ocrImageCount": 4,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "中化学科学技术研究有限公司",
+      "organizationNature": "央企",
+      "industry": "化工",
+      "jobTitle": "低碳环保研发岗",
+      "jobDirections": [
+        "低碳环保研发"
+      ],
+      "locations": [
+        "宁波"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确专业，环保研发岗通常要求环境、化工等，行政管理不匹配",
+        "accepted": [],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-10-19",
+      "applicationMethod": "国聘官网",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "环保研发岗通常要求环境工程等专业"
+      ],
+      "confidence": 0.9,
+      "id": "3e9ccbbeec0d09ac",
+      "personalized": {
+        "eligible": true,
+        "score": 89,
+        "rankingKey": 2009899999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国聘",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "校招 | 央国企招聘信息汇总（央企及所属单位）7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/qanT6tO0VOn3QNW-RT6CmQ",
+        "publishedAt": "2026-07-21T12:10:25.000Z",
+        "summary": "国聘公众号发布的央国企校招岗位汇总，包含多家央企及所属单位的招聘信息，报名截止时间从2026年7月31日至10月19日。",
+        "ocrUsed": true,
+        "ocrImageCount": 4,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "中化学科学技术研究有限公司",
+      "organizationNature": "央企",
+      "industry": "化工",
+      "jobTitle": "智能装备研发岗",
+      "jobDirections": [
+        "智能装备研发"
+      ],
+      "locations": [
+        "宁波"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确专业，装备研发岗通常要求机械、自动化等，行政管理不匹配",
+        "accepted": [],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-10-19",
+      "applicationMethod": "国聘官网",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "智能装备研发岗通常要求机械、自动化等专业"
+      ],
+      "confidence": 0.9,
+      "id": "20a07c973a6aba2b",
+      "personalized": {
+        "eligible": true,
+        "score": 89,
+        "rankingKey": 2009899999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国聘",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "校招 | 央国企招聘信息汇总（央企及所属单位）7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/qanT6tO0VOn3QNW-RT6CmQ",
+        "publishedAt": "2026-07-21T12:10:25.000Z",
+        "summary": "国聘公众号发布的央国企校招岗位汇总，包含多家央企及所属单位的招聘信息，报名截止时间从2026年7月31日至10月19日。",
+        "ocrUsed": true,
+        "ocrImageCount": 4,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "中国有色集团刚果矿业有限公司",
+      "organizationNature": "央企",
+      "industry": "矿业",
+      "jobTitle": "机械工程师",
+      "jobDirections": [
+        "机械工程"
+      ],
+      "locations": [
+        "刚果(金)"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确专业，机械工程师通常要求机械工程，行政管理不匹配",
+        "accepted": [],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-10-19",
+      "applicationMethod": "国聘官网",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "机械工程师通常要求机械工程专业"
+      ],
+      "confidence": 0.9,
+      "id": "0e07e6344ac48494",
+      "personalized": {
+        "eligible": true,
+        "score": 89,
+        "rankingKey": 2009899999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国聘",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "校招 | 央国企招聘信息汇总（央企及所属单位）7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/qanT6tO0VOn3QNW-RT6CmQ",
+        "publishedAt": "2026-07-21T12:10:25.000Z",
+        "summary": "国聘公众号发布的央国企校招岗位汇总，包含多家央企及所属单位的招聘信息，报名截止时间从2026年7月31日至10月19日。",
+        "ocrUsed": true,
+        "ocrImageCount": 4,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "中国医药工业研究总院有限公司",
+      "organizationNature": "央企",
+      "industry": "医药研究",
+      "jobTitle": "信息化专员",
+      "jobDirections": [
+        "信息化"
+      ],
+      "locations": [
+        "上海"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确专业，信息化岗通常要求计算机相关，行政管理不匹配",
+        "accepted": [],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-10-19",
+      "applicationMethod": "国聘官网",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "信息化专员通常要求计算机相关专业"
+      ],
+      "confidence": 0.9,
+      "id": "cd74bfc1a927928d",
+      "personalized": {
+        "eligible": true,
+        "score": 89,
+        "rankingKey": 2009899999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国聘",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "校招 | 央国企招聘信息汇总（央企及所属单位）7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/qanT6tO0VOn3QNW-RT6CmQ",
+        "publishedAt": "2026-07-21T12:10:25.000Z",
+        "summary": "国聘公众号发布的央国企校招岗位汇总，包含多家央企及所属单位的招聘信息，报名截止时间从2026年7月31日至10月19日。",
+        "ocrUsed": true,
+        "ocrImageCount": 4,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "中国五洲工程设计集团有限公司",
+      "organizationNature": "央企",
+      "industry": "工程设计",
+      "jobTitle": "信息化工艺科研岗",
+      "jobDirections": [
+        "信息化工艺科研"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确专业，科研岗通常要求相关工科，行政管理不匹配",
+        "accepted": [],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-10-19",
+      "applicationMethod": "国聘官网",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "科研岗通常要求相关工科专业"
+      ],
+      "confidence": 0.9,
+      "id": "7050efcbae60a314",
+      "personalized": {
+        "eligible": true,
+        "score": 89,
+        "rankingKey": 2009899999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国聘",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "校招 | 央国企招聘信息汇总（央企及所属单位）7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/qanT6tO0VOn3QNW-RT6CmQ",
+        "publishedAt": "2026-07-21T12:10:25.000Z",
+        "summary": "国聘公众号发布的央国企校招岗位汇总，包含多家央企及所属单位的招聘信息，报名截止时间从2026年7月31日至10月19日。",
+        "ocrUsed": true,
+        "ocrImageCount": 4,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "中国五洲工程设计集团有限公司",
+      "organizationNature": "央企",
+      "industry": "工程设计",
+      "jobTitle": "化工工艺科研设计岗",
+      "jobDirections": [
+        "化工工艺科研设计"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确专业，化工工艺岗通常要求化工，行政管理不匹配",
+        "accepted": [],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-10-19",
+      "applicationMethod": "国聘官网",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "化工工艺岗通常要求化工专业"
+      ],
+      "confidence": 0.9,
+      "id": "e62ea47336b6fb9b",
+      "personalized": {
+        "eligible": true,
+        "score": 89,
+        "rankingKey": 2009899999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国聘",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "校招 | 央国企招聘信息汇总（央企及所属单位）7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/qanT6tO0VOn3QNW-RT6CmQ",
+        "publishedAt": "2026-07-21T12:10:25.000Z",
+        "summary": "国聘公众号发布的央国企校招岗位汇总，包含多家央企及所属单位的招聘信息，报名截止时间从2026年7月31日至10月19日。",
+        "ocrUsed": true,
+        "ocrImageCount": 4,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "中国五洲工程设计集团有限公司",
+      "organizationNature": "央企",
+      "industry": "工程设计",
+      "jobTitle": "弹药工艺科研岗",
+      "jobDirections": [
+        "弹药工艺科研"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确专业，弹药工艺岗通常要求兵器科学与技术，行政管理不匹配",
+        "accepted": [],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-10-19",
+      "applicationMethod": "国聘官网",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "弹药工艺岗通常要求兵器相关专业"
+      ],
+      "confidence": 0.9,
+      "id": "1cb89aa6274740fc",
+      "personalized": {
+        "eligible": true,
+        "score": 89,
+        "rankingKey": 2009899999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国聘",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "校招 | 央国企招聘信息汇总（央企及所属单位）7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/qanT6tO0VOn3QNW-RT6CmQ",
+        "publishedAt": "2026-07-21T12:10:25.000Z",
+        "summary": "国聘公众号发布的央国企校招岗位汇总，包含多家央企及所属单位的招聘信息，报名截止时间从2026年7月31日至10月19日。",
+        "ocrUsed": true,
+        "ocrImageCount": 4,
         "analysisSource": "deepseek",
         "extractionComplete": true
       }
@@ -1984,87 +3275,71 @@
       }
     },
     {
-      "organization": "正大饲料（石门）有限公司",
-      "organizationNature": "外企",
-      "industry": "农业",
-      "jobTitle": "行政职能岗",
+      "organization": "中色奥博特铜铝业有限公司",
+      "organizationNature": "央企",
+      "industry": "有色金属",
+      "jobTitle": "生产性岗位",
       "jobDirections": [
-        "行政"
+        "生产管理"
       ],
       "locations": [
-        "常德"
+        "聊城"
       ],
       "headcount": null,
       "employmentTypes": [
         "校招"
       ],
-      "graduateScope": "应届生",
+      "graduateScope": "2026届",
       "previousGraduatesEligible": "no",
       "education": {
-        "summary": "本科及以上",
+        "summary": "本科",
         "minimum": "本科",
-        "preferred": null,
+        "preferred": "本科",
         "tier": "bachelor_associate",
         "hardPhdRequired": false
       },
       "majors": {
-        "summary": "未明确，适合行政管理、管理类",
-        "accepted": [
-          "行政管理",
-          "管理类",
-          "broad"
-        ],
-        "fit": "administrative_management"
+        "summary": "未明确专业，生产性岗位通常不限专业或工科，行政管理可能匹配",
+        "accepted": [],
+        "fit": "uncertain"
       },
-      "applicationRequirements": [
-        "应届生"
-      ],
+      "applicationRequirements": [],
       "compensation": {
         "summary": "未披露",
         "salary": null,
         "benefits": [],
-        "quality": 2
+        "quality": 0
       },
-      "deadline": "2026-10-22",
+      "deadline": "2026-10-19",
       "applicationMethod": "国聘官网",
       "applicationUrl": "https://www.iguopin.com",
       "referralCode": null,
       "recommendation": {
-        "score": 85,
-        "rankingKey": 1632389,
-        "level": "high",
+        "score": 40,
+        "rankingKey": 1230269,
+        "level": "low",
         "reasons": [
-          "专业高度匹配行政管理",
+          "专业范围尚需核对原文",
           "本科或大专层次可报",
-          "专业匹配度高",
-          "应届生岗位",
-          "外资企业"
+          "央企校招，本科可报"
         ],
         "concerns": [
-          "薪资未披露",
-          "仅限应届生"
+          "专业要求不明确，可能不匹配行政管理"
         ]
       },
-      "accessibility": 3,
-      "evidence": [
-        "行政职能岗",
-        "本科",
-        "应届生"
-      ],
-      "confidence": 0.9,
-      "id": "cfe42a812ff36442",
-      "account": "国聘",
-      "reportDate": "2026-07-17",
-      "article": {
-        "title": "外资合资企业招聘信息推荐 7月（第三期）",
-        "url": "https://mp.weixin.qq.com/s/GJJqbV8IyCV8yfdXsSIBbw",
-        "publishedAt": "2026-07-16T11:47:43.000Z",
-        "summary": "外资合资企业招聘信息推荐，涵盖行政、技术、销售等多类岗位，报名截止2026年10月22日。",
-        "ocrUsed": true,
-        "ocrImageCount": 5,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
       },
+      "accessibility": 2,
+      "evidence": [
+        "生产性岗位可能不限专业"
+      ],
+      "confidence": 0.7,
+      "id": "6a2ab10d07524ab9",
       "personalized": {
         "eligible": true,
         "score": 83,
@@ -2074,346 +3349,11 @@
           "明确面向应届毕业生或校园招聘",
           "学历门槛为本科，可用硕士学历报考",
           "报名入口明确，投递可操作性较高",
-          "专业高度匹配行政管理",
+          "专业范围尚需核对原文",
           "本科或大专层次可报"
         ],
         "concerns": [
-          "薪资未披露",
-          "仅限应届生"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      }
-    },
-    {
-      "organization": "中国工商银行",
-      "organizationNature": "国企",
-      "industry": "银行",
-      "jobTitle": "星辰管培生",
-      "jobDirections": [
-        "管理培训生"
-      ],
-      "locations": [
-        "全国各省区及部分海外地区"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2027届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "全日制本科及以上学历",
-        "minimum": "本科",
-        "preferred": "硕士",
-        "tier": "master",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "专业不限，但管理类、经济金融类优先",
-        "accepted": [
-          "不限"
-        ],
-        "fit": "broad"
-      },
-      "applicationRequirements": [
-        "应届生身份",
-        "全日制本科及以上"
-      ],
-      "compensation": {
-        "summary": "总行应届生年薪约25-30W，分行管培轮岗后总包可达近40W（含公积金），六险二金起步，部分七险二金，带薪休假、员工宿舍、食堂、节日补贴、交通通讯补贴、年度体检、解决户口等",
-        "salary": "250000-400000",
-        "benefits": [
-          "六险二金",
-          "带薪休假",
-          "员工宿舍",
-          "食堂",
-          "节日补贴",
-          "交通通讯补贴",
-          "年度体检",
-          "解决户口"
-        ],
-        "quality": 5
-      },
-      "deadline": null,
-      "applicationMethod": null,
-      "applicationUrl": null,
-      "referralCode": null,
-      "recommendation": {
-        "score": 75,
-        "rankingKey": 1345379,
-        "level": "medium",
-        "reasons": [
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级",
-          "国有大行平台，职业发展稳定，履历背书强",
-          "薪酬福利极具竞争力，总行年薪25-30W，分行可达近40W",
-          "六险二金等福利完善，外地员工可解决户口"
-        ],
-        "concerns": [
-          "竞争激烈，录取率不足3%",
-          "专业要求未明确，可能偏好管理类、经济金融类",
-          "报名方式、截止时间等关键信息未披露"
-        ]
-      },
-      "accessibility": 3,
-      "evidence": [
-        "星辰管培生为A类岗位",
-        "总行应届生年薪约25-30W",
-        "分行管培轮岗后总包可达近40W"
-      ],
-      "confidence": 0.8,
-      "id": "3735bfe7aa6fd4c7",
-      "account": "国企求职网",
-      "reportDate": "2026-07-18",
-      "article": {
-        "title": "工商银行2027秋招计划：秋招时间线，招聘岗位、考试时间！",
-        "url": "https://mp.weixin.qq.com/s/hLbRG88jTCmRdQazmuApgw",
-        "publishedAt": "2026-07-18T02:43:19.000Z",
-        "summary": "中国工商银行2027届秋季校园招聘即将启动，全国预计招录20000+人，涵盖星辰管培生、专业英才、科技菁英、客户经理、客服经理等岗位，面向26届、27届全日制本科及以上学历应届生。",
-        "ocrUsed": false,
-        "ocrImageCount": 0,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      },
-      "personalized": {
-        "eligible": true,
-        "score": 82,
-        "rankingKey": 2009199999,
-        "reasons": [
-          "专业不限，行政管理可以报考",
-          "明确面向应届毕业生或校园招聘",
-          "学历要求覆盖硕士研究生",
-          "薪资福利信息较有吸引力",
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级"
-        ],
-        "concerns": [
-          "截止日期未披露，需尽快核对原文",
-          "竞争激烈，录取率不足3%",
-          "专业要求未明确，可能偏好管理类、经济金融类"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      }
-    },
-    {
-      "organization": "航空工业成都飞机工业（集团）有限责任公司",
-      "organizationNature": "央企",
-      "industry": "航空航天",
-      "jobTitle": "暑期开放日（提前批招聘）",
-      "jobDirections": [
-        "航空工业相关岗位"
-      ],
-      "locations": [
-        "成都"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2027届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "硕士及以上学历",
-        "minimum": "硕士",
-        "preferred": null,
-        "tier": "master",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "专业不限，但优先航空航天、机械、电子、计算机等相关专业",
-        "accepted": [
-          "不限"
-        ],
-        "fit": "broad"
-      },
-      "applicationRequirements": [
-        "2027届硕博士",
-        "需通过简历筛选"
-      ],
-      "compensation": {
-        "summary": "未披露具体薪资，提供提前批招聘机会",
-        "salary": null,
-        "benefits": [
-          "提前批招聘机会"
-        ],
-        "quality": 3
-      },
-      "deadline": null,
-      "applicationMethod": "通过公众号链接报名",
-      "applicationUrl": "https://mp.weixin.qq.com/s/dRgqMrCM0dmnbjH2Z0_clg",
-      "referralCode": null,
-      "recommendation": {
-        "score": 70,
-        "rankingKey": 1343379,
-        "level": "medium",
-        "reasons": [
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级",
-          "央企平台，行业领先",
-          "提前批招聘，机会优先",
-          "面向硕博士，学历匹配度高"
-        ],
-        "concerns": [
-          "薪资未披露",
-          "专业要求宽泛，竞争可能激烈",
-          "仅限2027届，往届生不可投"
-        ]
-      },
-      "accessibility": 3,
-      "evidence": [
-        "面向2027届硕博士",
-        "提供提前批招聘机会"
-      ],
-      "confidence": 0.8,
-      "id": "db59fc7692abdf43",
-      "account": "清华就业",
-      "reportDate": "2026-07-18",
-      "article": {
-        "title": "开放日｜航空工业成飞2026年暑期开放日",
-        "url": "https://mp.weixin.qq.com/s/dRgqMrCM0dmnbjH2Z0_clg",
-        "publishedAt": "2026-07-17T10:04:26.000Z",
-        "summary": "航空工业成飞2026年暑期开放日活动通知，面向2027届硕博士，提供提前批招聘机会。",
-        "ocrUsed": false,
-        "ocrImageCount": 0,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      },
-      "personalized": {
-        "eligible": true,
-        "score": 81,
-        "rankingKey": 2009099999,
-        "reasons": [
-          "专业不限，行政管理可以报考",
-          "明确面向应届毕业生或校园招聘",
-          "学历要求覆盖硕士研究生",
-          "报名入口明确，投递可操作性较高",
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级"
-        ],
-        "concerns": [
-          "截止日期未披露，需尽快核对原文",
-          "薪资未披露",
-          "专业要求宽泛，竞争可能激烈"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      }
-    },
-    {
-      "organization": "青岛远洋大亚物流有限公司",
-      "organizationNature": "国企",
-      "industry": "物流",
-      "jobTitle": "系统运维",
-      "jobDirections": [
-        "信息技术"
-      ],
-      "locations": [
-        "青岛"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2026届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "本科",
-        "minimum": "本科",
-        "preferred": "本科",
-        "tier": "master",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "未明确，不限专业",
-        "accepted": [
-          "不限"
-        ],
-        "fit": "broad"
-      },
-      "applicationRequirements": [
-        "应届生"
-      ],
-      "compensation": {
-        "summary": "未披露",
-        "salary": null,
-        "benefits": [],
-        "quality": 2
-      },
-      "deadline": "2026.10.14",
-      "applicationMethod": "国聘官网",
-      "applicationUrl": "https://www.iguopin.com",
-      "referralCode": null,
-      "recommendation": {
-        "score": 68,
-        "rankingKey": 1342379,
-        "level": "medium",
-        "reasons": [
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级",
-          "面向应届本科",
-          "国企平台",
-          "地点青岛"
-        ],
-        "concerns": [
-          "专业不直接相关",
-          "薪资未披露",
-          "学历要求本科，硕士可能overqualified"
-        ]
-      },
-      "customRequirement": {
-        "active": false,
-        "matched": null,
-        "score": 0,
-        "reasons": [],
-        "concerns": []
-      },
-      "accessibility": 3,
-      "evidence": [
-        "系统运维青岛本科应届生"
-      ],
-      "confidence": 0.8,
-      "id": "c7324d5083adc5b7",
-      "personalized": {
-        "eligible": true,
-        "score": 80,
-        "rankingKey": 2008999999,
-        "reasons": [
-          "专业不限，行政管理可以报考",
-          "明确面向应届毕业生或校园招聘",
-          "学历要求覆盖硕士研究生",
-          "报名入口明确，投递可操作性较高",
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级"
-        ],
-        "concerns": [
-          "专业不直接相关",
-          "薪资未披露"
+          "专业要求不明确，可能不匹配行政管理"
         ],
         "gates": {
           "freshGraduate": true,
@@ -2427,1086 +3367,14 @@
         }
       },
       "account": "国聘",
-      "reportDate": "2026-07-21",
+      "reportDate": "2026-07-22",
       "article": {
-        "title": "央企名企山东省岗位推荐 7月（第一期）",
-        "url": "https://mp.weixin.qq.com/s/fkZW1FLHFtLZKHt3uZtwTg",
-        "publishedAt": "2026-07-20T11:51:38.000Z",
-        "summary": "央企名企山东省岗位推荐，涵盖多个行业，学历要求高中至博士，部分岗位面向应届生。",
+        "title": "校招 | 央国企招聘信息汇总（央企及所属单位）7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/qanT6tO0VOn3QNW-RT6CmQ",
+        "publishedAt": "2026-07-21T12:10:25.000Z",
+        "summary": "国聘公众号发布的央国企校招岗位汇总，包含多家央企及所属单位的招聘信息，报名截止时间从2026年7月31日至10月19日。",
         "ocrUsed": true,
-        "ocrImageCount": 3,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      }
-    },
-    {
-      "organization": "北汽福田汽车股份有限公司诸城奥铃汽车厂",
-      "organizationNature": "国企",
-      "industry": "汽车",
-      "jobTitle": "北汽福田2026届校园招聘-国内营销经理",
-      "jobDirections": [
-        "营销"
-      ],
-      "locations": [
-        "潍坊"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2026届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "本科",
-        "minimum": "本科",
-        "preferred": "本科",
-        "tier": "master",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "未明确，不限专业",
-        "accepted": [
-          "不限"
-        ],
-        "fit": "broad"
-      },
-      "applicationRequirements": [
-        "应届生"
-      ],
-      "compensation": {
-        "summary": "未披露",
-        "salary": null,
-        "benefits": [],
-        "quality": 2
-      },
-      "deadline": "2026.10.14",
-      "applicationMethod": "国聘官网",
-      "applicationUrl": "https://www.iguopin.com",
-      "referralCode": null,
-      "recommendation": {
-        "score": 68,
-        "rankingKey": 1342379,
-        "level": "medium",
-        "reasons": [
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级",
-          "面向应届本科",
-          "国企平台",
-          "不限专业"
-        ],
-        "concerns": [
-          "专业不直接相关",
-          "薪资未披露",
-          "学历要求本科，硕士可能overqualified"
-        ]
-      },
-      "customRequirement": {
-        "active": false,
-        "matched": null,
-        "score": 0,
-        "reasons": [],
-        "concerns": []
-      },
-      "accessibility": 3,
-      "evidence": [
-        "北汽福田2026届校园招聘-国内营销经理潍坊本科应届生"
-      ],
-      "confidence": 0.8,
-      "id": "964add82b55aeef1",
-      "personalized": {
-        "eligible": true,
-        "score": 80,
-        "rankingKey": 2008999999,
-        "reasons": [
-          "专业不限，行政管理可以报考",
-          "明确面向应届毕业生或校园招聘",
-          "学历要求覆盖硕士研究生",
-          "报名入口明确，投递可操作性较高",
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级"
-        ],
-        "concerns": [
-          "专业不直接相关",
-          "薪资未披露"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      },
-      "account": "国聘",
-      "reportDate": "2026-07-21",
-      "article": {
-        "title": "央企名企山东省岗位推荐 7月（第一期）",
-        "url": "https://mp.weixin.qq.com/s/fkZW1FLHFtLZKHt3uZtwTg",
-        "publishedAt": "2026-07-20T11:51:38.000Z",
-        "summary": "央企名企山东省岗位推荐，涵盖多个行业，学历要求高中至博士，部分岗位面向应届生。",
-        "ocrUsed": true,
-        "ocrImageCount": 3,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      }
-    },
-    {
-      "organization": "北汽福田汽车股份有限公司诸城奥铃汽车厂",
-      "organizationNature": "国企",
-      "industry": "汽车",
-      "jobTitle": "北汽福田2026届校园招聘-海外营销经理",
-      "jobDirections": [
-        "营销"
-      ],
-      "locations": [
-        "潍坊"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2026届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "本科",
-        "minimum": "本科",
-        "preferred": "本科",
-        "tier": "master",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "未明确，不限专业",
-        "accepted": [
-          "不限"
-        ],
-        "fit": "broad"
-      },
-      "applicationRequirements": [
-        "应届生"
-      ],
-      "compensation": {
-        "summary": "未披露",
-        "salary": null,
-        "benefits": [],
-        "quality": 2
-      },
-      "deadline": "2026.10.14",
-      "applicationMethod": "国聘官网",
-      "applicationUrl": "https://www.iguopin.com",
-      "referralCode": null,
-      "recommendation": {
-        "score": 68,
-        "rankingKey": 1342379,
-        "level": "medium",
-        "reasons": [
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级",
-          "面向应届本科",
-          "国企平台",
-          "不限专业"
-        ],
-        "concerns": [
-          "专业不直接相关",
-          "薪资未披露",
-          "学历要求本科，硕士可能overqualified"
-        ]
-      },
-      "customRequirement": {
-        "active": false,
-        "matched": null,
-        "score": 0,
-        "reasons": [],
-        "concerns": []
-      },
-      "accessibility": 3,
-      "evidence": [
-        "北汽福田2026届校园招聘-海外营销经理潍坊本科应届生"
-      ],
-      "confidence": 0.8,
-      "id": "d1c1274f822d8a3e",
-      "personalized": {
-        "eligible": true,
-        "score": 80,
-        "rankingKey": 2008999999,
-        "reasons": [
-          "专业不限，行政管理可以报考",
-          "明确面向应届毕业生或校园招聘",
-          "学历要求覆盖硕士研究生",
-          "报名入口明确，投递可操作性较高",
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级"
-        ],
-        "concerns": [
-          "专业不直接相关",
-          "薪资未披露"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      },
-      "account": "国聘",
-      "reportDate": "2026-07-21",
-      "article": {
-        "title": "央企名企山东省岗位推荐 7月（第一期）",
-        "url": "https://mp.weixin.qq.com/s/fkZW1FLHFtLZKHt3uZtwTg",
-        "publishedAt": "2026-07-20T11:51:38.000Z",
-        "summary": "央企名企山东省岗位推荐，涵盖多个行业，学历要求高中至博士，部分岗位面向应届生。",
-        "ocrUsed": true,
-        "ocrImageCount": 3,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      }
-    },
-    {
-      "organization": "中国工商银行",
-      "organizationNature": "国企",
-      "industry": "银行",
-      "jobTitle": "专业英才",
-      "jobDirections": [
-        "专业类岗位"
-      ],
-      "locations": [
-        "全国各省区及部分海外地区"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2027届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "全日制本科及以上学历",
-        "minimum": "本科",
-        "preferred": "硕士",
-        "tier": "master",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "专业不限，但经济金融、财务会计、管理、法律、理工等专业优先",
-        "accepted": [
-          "不限"
-        ],
-        "fit": "broad"
-      },
-      "applicationRequirements": [
-        "应届生身份",
-        "全日制本科及以上"
-      ],
-      "compensation": {
-        "summary": "月薪8K-10K起，六险二金起步，部分七险二金，带薪休假、员工宿舍、食堂、节日补贴、交通通讯补贴、年度体检、解决户口等",
-        "salary": "8000-10000",
-        "benefits": [
-          "六险二金",
-          "带薪休假",
-          "员工宿舍",
-          "食堂",
-          "节日补贴",
-          "交通通讯补贴",
-          "年度体检",
-          "解决户口"
-        ],
-        "quality": 4
-      },
-      "deadline": null,
-      "applicationMethod": null,
-      "applicationUrl": null,
-      "referralCode": null,
-      "recommendation": {
-        "score": 72,
-        "rankingKey": 1344379,
-        "level": "medium",
-        "reasons": [
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级",
-          "国有大行平台，专业对口岗位多",
-          "薪酬福利较好，月薪8K-10K起",
-          "福利完善，外地员工可解决户口"
-        ],
-        "concerns": [
-          "竞争激烈，笔试淘汰率高",
-          "专业要求未明确，可能偏好经济金融等专业",
-          "报名方式、截止时间等关键信息未披露"
-        ]
-      },
-      "accessibility": 3,
-      "evidence": [
-        "专业英才岗月薪8K-10K起",
-        "A类岗位"
-      ],
-      "confidence": 0.8,
-      "id": "bbfca679d01de424",
-      "account": "国企求职网",
-      "reportDate": "2026-07-18",
-      "article": {
-        "title": "工商银行2027秋招计划：秋招时间线，招聘岗位、考试时间！",
-        "url": "https://mp.weixin.qq.com/s/hLbRG88jTCmRdQazmuApgw",
-        "publishedAt": "2026-07-18T02:43:19.000Z",
-        "summary": "中国工商银行2027届秋季校园招聘即将启动，全国预计招录20000+人，涵盖星辰管培生、专业英才、科技菁英、客户经理、客服经理等岗位，面向26届、27届全日制本科及以上学历应届生。",
-        "ocrUsed": false,
-        "ocrImageCount": 0,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      },
-      "personalized": {
-        "eligible": true,
-        "score": 80,
-        "rankingKey": 2008999999,
-        "reasons": [
-          "专业不限，行政管理可以报考",
-          "明确面向应届毕业生或校园招聘",
-          "学历要求覆盖硕士研究生",
-          "薪资福利信息较有吸引力",
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级"
-        ],
-        "concerns": [
-          "截止日期未披露，需尽快核对原文",
-          "竞争激烈，笔试淘汰率高",
-          "专业要求未明确，可能偏好经济金融等专业"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      }
-    },
-    {
-      "organization": "百度",
-      "organizationNature": "民企",
-      "industry": "互联网",
-      "jobTitle": "职能类岗位",
-      "jobDirections": [
-        "人力资源",
-        "财务",
-        "法务",
-        "行政",
-        "市场",
-        "公关"
-      ],
-      "locations": [
-        "北京",
-        "上海",
-        "深圳",
-        "广州",
-        "成都",
-        "杭州",
-        "武汉",
-        "西安",
-        "南京",
-        "厦门",
-        "重庆",
-        "长沙"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2027届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "本科及以上学历",
-        "minimum": "本科",
-        "preferred": null,
-        "tier": "bachelor_associate",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "人力资源、财务、法律、行政管理、市场营销等相关专业",
-        "accepted": [
-          "人力资源管理",
-          "财务管理",
-          "法学",
-          "行政管理",
-          "市场营销"
-        ],
-        "fit": "administrative_management"
-      },
-      "applicationRequirements": [
-        "2027届应届毕业生"
-      ],
-      "compensation": {
-        "summary": "未披露",
-        "salary": null,
-        "benefits": [],
-        "quality": 0
-      },
-      "deadline": null,
-      "applicationMethod": "网申",
-      "applicationUrl": "https://talent.baidu.com",
-      "referralCode": null,
-      "recommendation": {
-        "score": 81,
-        "rankingKey": 1630469,
-        "level": "high",
-        "reasons": [
-          "专业高度匹配行政管理",
-          "本科或大专层次可报",
-          "职能岗位专业匹配度高，适合行政管理等文科社科学生",
-          "百度平台稳定，福利完善",
-          "工作地点选择多"
-        ],
-        "concerns": [
-          "薪资福利未披露",
-          "仅面向2027届应届生",
-          "职能岗位竞争可能激烈"
-        ]
-      },
-      "accessibility": 4,
-      "evidence": [
-        "文章标题为百度2027届校园招聘",
-        "正文提及职能类岗位方向"
-      ],
-      "confidence": 0.7,
-      "id": "c217d2745e884775",
-      "account": "北大就业",
-      "reportDate": "2026-07-17",
-      "article": {
-        "title": "招聘｜百度2027届校园招聘",
-        "url": "https://mp.weixin.qq.com/s/-Bl-Z3nxibaV-nW2C2Irpw",
-        "publishedAt": "2026-07-16T13:19:48.000Z",
-        "summary": "百度2027届校园招聘信息，包含技术、产品、设计、职能等多个岗位方向。",
-        "ocrUsed": false,
-        "ocrImageCount": 0,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      },
-      "personalized": {
-        "eligible": true,
-        "score": 80,
-        "rankingKey": 2008999999,
-        "reasons": [
-          "专业要求明确覆盖行政管理",
-          "明确面向应届毕业生或校园招聘",
-          "学历门槛为本科，可用硕士学历报考",
-          "报名入口明确，投递可操作性较高",
-          "专业高度匹配行政管理",
-          "本科或大专层次可报"
-        ],
-        "concerns": [
-          "截止日期未披露，需尽快核对原文",
-          "薪资福利未披露",
-          "仅面向2027届应届生"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      }
-    },
-    {
-      "organization": "中国工商银行",
-      "organizationNature": "国企",
-      "industry": "银行",
-      "jobTitle": "客服经理",
-      "jobDirections": [
-        "服务类岗位"
-      ],
-      "locations": [
-        "全国各省区及部分海外地区"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2027届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "全日制本科及以上学历",
-        "minimum": "本科",
-        "preferred": "硕士",
-        "tier": "master",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "专业不限",
-        "accepted": [
-          "不限"
-        ],
-        "fit": "broad"
-      },
-      "applicationRequirements": [
-        "应届生身份",
-        "全日制本科及以上"
-      ],
-      "compensation": {
-        "summary": "薪酬未具体披露，六险二金起步，部分七险二金，带薪休假、员工宿舍、食堂、节日补贴、交通通讯补贴、年度体检、解决户口等",
-        "salary": null,
-        "benefits": [
-          "六险二金",
-          "带薪休假",
-          "员工宿舍",
-          "食堂",
-          "节日补贴",
-          "交通通讯补贴",
-          "年度体检",
-          "解决户口"
-        ],
-        "quality": 3
-      },
-      "deadline": null,
-      "applicationMethod": null,
-      "applicationUrl": null,
-      "referralCode": null,
-      "recommendation": {
-        "score": 72,
-        "rankingKey": 1343469,
-        "level": "medium",
-        "reasons": [
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级",
-          "专业不限，门槛相对较低",
-          "国有大行平台，福利完善",
-          "外地员工可解决户口"
-        ],
-        "concerns": [
-          "薪资未明确，可能较低",
-          "岗位发展空间有限",
-          "报名方式、截止时间等关键信息未披露"
-        ]
-      },
-      "accessibility": 4,
-      "evidence": [
-        "客服经理为A类岗位",
-        "专业不限"
-      ],
-      "confidence": 0.7,
-      "id": "58f4cc76ac973c4f",
-      "account": "国企求职网",
-      "reportDate": "2026-07-18",
-      "article": {
-        "title": "工商银行2027秋招计划：秋招时间线，招聘岗位、考试时间！",
-        "url": "https://mp.weixin.qq.com/s/hLbRG88jTCmRdQazmuApgw",
-        "publishedAt": "2026-07-18T02:43:19.000Z",
-        "summary": "中国工商银行2027届秋季校园招聘即将启动，全国预计招录20000+人，涵盖星辰管培生、专业英才、科技菁英、客户经理、客服经理等岗位，面向26届、27届全日制本科及以上学历应届生。",
-        "ocrUsed": false,
-        "ocrImageCount": 0,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      },
-      "personalized": {
-        "eligible": true,
-        "score": 79,
-        "rankingKey": 2008899999,
-        "reasons": [
-          "专业不限，行政管理可以报考",
-          "明确面向应届毕业生或校园招聘",
-          "学历要求覆盖硕士研究生",
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级"
-        ],
-        "concerns": [
-          "截止日期未披露，需尽快核对原文",
-          "薪资未明确，可能较低",
-          "岗位发展空间有限"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      }
-    },
-    {
-      "organization": "中国工商银行",
-      "organizationNature": "国企",
-      "industry": "银行",
-      "jobTitle": "客户经理",
-      "jobDirections": [
-        "营销类岗位"
-      ],
-      "locations": [
-        "全国各省区及部分海外地区"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2027届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "全日制本科及以上学历",
-        "minimum": "本科",
-        "preferred": "硕士",
-        "tier": "master",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "专业不限，但经济金融、市场营销、管理类优先",
-        "accepted": [
-          "不限"
-        ],
-        "fit": "broad"
-      },
-      "applicationRequirements": [
-        "应届生身份",
-        "全日制本科及以上"
-      ],
-      "compensation": {
-        "summary": "薪酬与绩效挂钩，具体未披露，六险二金起步，部分七险二金，带薪休假、员工宿舍、食堂、节日补贴、交通通讯补贴、年度体检、解决户口等",
-        "salary": null,
-        "benefits": [
-          "六险二金",
-          "带薪休假",
-          "员工宿舍",
-          "食堂",
-          "节日补贴",
-          "交通通讯补贴",
-          "年度体检",
-          "解决户口"
-        ],
-        "quality": 3
-      },
-      "deadline": null,
-      "applicationMethod": null,
-      "applicationUrl": null,
-      "referralCode": null,
-      "recommendation": {
-        "score": 70,
-        "rankingKey": 1343369,
-        "level": "medium",
-        "reasons": [
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级",
-          "专业不限，适合多专业背景",
-          "国有大行平台，职业发展稳定",
-          "福利完善，外地员工可解决户口"
-        ],
-        "concerns": [
-          "薪资未明确，可能依赖绩效",
-          "竞争激烈，笔试淘汰率高",
-          "报名方式、截止时间等关键信息未披露"
-        ]
-      },
-      "accessibility": 3,
-      "evidence": [
-        "客户经理为A类岗位",
-        "专业不限"
-      ],
-      "confidence": 0.7,
-      "id": "5d84524139528f08",
-      "account": "国企求职网",
-      "reportDate": "2026-07-18",
-      "article": {
-        "title": "工商银行2027秋招计划：秋招时间线，招聘岗位、考试时间！",
-        "url": "https://mp.weixin.qq.com/s/hLbRG88jTCmRdQazmuApgw",
-        "publishedAt": "2026-07-18T02:43:19.000Z",
-        "summary": "中国工商银行2027届秋季校园招聘即将启动，全国预计招录20000+人，涵盖星辰管培生、专业英才、科技菁英、客户经理、客服经理等岗位，面向26届、27届全日制本科及以上学历应届生。",
-        "ocrUsed": false,
-        "ocrImageCount": 0,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      },
-      "personalized": {
-        "eligible": true,
-        "score": 79,
-        "rankingKey": 2008899999,
-        "reasons": [
-          "专业不限，行政管理可以报考",
-          "明确面向应届毕业生或校园招聘",
-          "学历要求覆盖硕士研究生",
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级"
-        ],
-        "concerns": [
-          "截止日期未披露，需尽快核对原文",
-          "薪资未明确，可能依赖绩效",
-          "竞争激烈，笔试淘汰率高"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      }
-    },
-    {
-      "organization": "腾讯",
-      "organizationNature": "民企",
-      "industry": "互联网",
-      "jobTitle": "技术类岗位",
-      "jobDirections": [
-        "技术研发",
-        "技术产品",
-        "技术运营"
-      ],
-      "locations": [
-        "深圳",
-        "北京",
-        "上海",
-        "广州",
-        "成都",
-        "杭州"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2027届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "本科及以上学历，硕士优先",
-        "minimum": "本科",
-        "preferred": "硕士",
-        "tier": "master",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "专业不限",
-        "accepted": [
-          "不限"
-        ],
-        "fit": "broad"
-      },
-      "applicationRequirements": [
-        "2027届毕业生"
-      ],
-      "compensation": {
-        "summary": "未披露具体薪资，福利包括六险一金、带薪年假等",
-        "salary": null,
-        "benefits": [
-          "六险一金",
-          "带薪年假",
-          "免费早餐",
-          "班车",
-          "健身房"
-        ],
-        "quality": 4
-      },
-      "deadline": null,
-      "applicationMethod": "网申",
-      "applicationUrl": "https://join.qq.com",
-      "referralCode": null,
-      "recommendation": {
-        "score": 74,
-        "rankingKey": 1344489,
-        "level": "medium",
-        "reasons": [
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级",
-          "专业不限，行政管理专业可投递",
-          "面向应届生，符合求职者身份",
-          "腾讯为知名互联网企业，平台大",
-          "福利待遇优厚"
-        ],
-        "concerns": [
-          "岗位方向为技术类，与行政管理专业匹配度低",
-          "未披露具体薪资",
-          "竞争激烈"
-        ]
-      },
-      "customRequirement": {
-        "active": false,
-        "matched": null,
-        "score": 0,
-        "reasons": [],
-        "concerns": []
-      },
-      "accessibility": 4,
-      "evidence": [
-        "腾讯青云计划2027校园招聘全球启动",
-        "面向2027届毕业生",
-        "专业不限"
-      ],
-      "confidence": 0.9,
-      "id": "8f506031813562ec",
-      "personalized": {
-        "eligible": true,
-        "score": 78,
-        "rankingKey": 2008799999,
-        "reasons": [
-          "专业不限，行政管理可以报考",
-          "明确面向应届毕业生或校园招聘",
-          "学历要求覆盖硕士研究生",
-          "薪资福利信息较有吸引力",
-          "报名入口明确，投递可操作性较高",
-          "专业限制较宽或不限专业"
-        ],
-        "concerns": [
-          "截止日期未披露，需尽快核对原文",
-          "岗位方向为技术类，与行政管理专业匹配度低",
-          "未披露具体薪资"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      },
-      "account": "清华就业",
-      "reportDate": "2026-07-21",
-      "article": {
-        "title": "招聘｜腾讯青云计划2027校园招聘全球启动",
-        "url": "https://mp.weixin.qq.com/s/7ZDITqJrixsJUIU9QMPkAw",
-        "publishedAt": "2026-07-20T10:16:25.000Z",
-        "summary": "腾讯青云计划2027校园招聘全球启动，面向2027届毕业生，提供技术类岗位，专业不限，学历要求本科及以上，硕士优先。",
-        "ocrUsed": false,
-        "ocrImageCount": 0,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      }
-    },
-    {
-      "organization": "山东崇实智慧能源科技有限公司",
-      "organizationNature": "民企",
-      "industry": "能源",
-      "jobTitle": "销售经理",
-      "jobDirections": [
-        "销售"
-      ],
-      "locations": [
-        "济南"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2026届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "本科",
-        "minimum": "本科",
-        "preferred": "本科",
-        "tier": "master",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "未明确，不限专业",
-        "accepted": [
-          "不限"
-        ],
-        "fit": "broad"
-      },
-      "applicationRequirements": [
-        "应届生"
-      ],
-      "compensation": {
-        "summary": "未披露",
-        "salary": null,
-        "benefits": [],
-        "quality": 2
-      },
-      "deadline": "2026.10.14",
-      "applicationMethod": "国聘官网",
-      "applicationUrl": "https://www.iguopin.com",
-      "referralCode": null,
-      "recommendation": {
-        "score": 68,
-        "rankingKey": 1342379,
-        "level": "medium",
-        "reasons": [
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级",
-          "面向应届本科",
-          "不限专业"
-        ],
-        "concerns": [
-          "民企",
-          "销售岗位压力较大",
-          "薪资未披露",
-          "学历要求本科，硕士可能overqualified"
-        ]
-      },
-      "customRequirement": {
-        "active": false,
-        "matched": null,
-        "score": 0,
-        "reasons": [],
-        "concerns": []
-      },
-      "accessibility": 3,
-      "evidence": [
-        "销售经理济南本科应届生"
-      ],
-      "confidence": 0.8,
-      "id": "44e04d2e8ebd6422",
-      "personalized": {
-        "eligible": true,
-        "score": 75,
-        "rankingKey": 2008499999,
-        "reasons": [
-          "专业不限，行政管理可以报考",
-          "明确面向应届毕业生或校园招聘",
-          "学历要求覆盖硕士研究生",
-          "报名入口明确，投递可操作性较高",
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级"
-        ],
-        "concerns": [
-          "民企",
-          "销售岗位压力较大"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      },
-      "account": "国聘",
-      "reportDate": "2026-07-21",
-      "article": {
-        "title": "央企名企山东省岗位推荐 7月（第一期）",
-        "url": "https://mp.weixin.qq.com/s/fkZW1FLHFtLZKHt3uZtwTg",
-        "publishedAt": "2026-07-20T11:51:38.000Z",
-        "summary": "央企名企山东省岗位推荐，涵盖多个行业，学历要求高中至博士，部分岗位面向应届生。",
-        "ocrUsed": true,
-        "ocrImageCount": 3,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      }
-    },
-    {
-      "organization": "山东中卓华图教育文化科技发展有限责任公司青岛分公司",
-      "organizationNature": "民企",
-      "industry": "教育",
-      "jobTitle": "课程顾问-青岛（市南）",
-      "jobDirections": [
-        "课程顾问"
-      ],
-      "locations": [
-        "青岛"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2026届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "本科",
-        "minimum": "本科",
-        "preferred": "本科",
-        "tier": "master",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "未明确，不限专业",
-        "accepted": [
-          "不限"
-        ],
-        "fit": "broad"
-      },
-      "applicationRequirements": [
-        "应届生"
-      ],
-      "compensation": {
-        "summary": "未披露",
-        "salary": null,
-        "benefits": [],
-        "quality": 2
-      },
-      "deadline": "2026.10.14",
-      "applicationMethod": "国聘官网",
-      "applicationUrl": "https://www.iguopin.com",
-      "referralCode": null,
-      "recommendation": {
-        "score": 68,
-        "rankingKey": 1342379,
-        "level": "medium",
-        "reasons": [
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级",
-          "面向应届本科",
-          "不限专业",
-          "地点青岛"
-        ],
-        "concerns": [
-          "民企",
-          "销售性质",
-          "薪资未披露",
-          "学历要求本科，硕士可能overqualified"
-        ]
-      },
-      "customRequirement": {
-        "active": false,
-        "matched": null,
-        "score": 0,
-        "reasons": [],
-        "concerns": []
-      },
-      "accessibility": 3,
-      "evidence": [
-        "课程顾问-青岛（市南）青岛本科应届生"
-      ],
-      "confidence": 0.8,
-      "id": "c8672fb1e04def4b",
-      "personalized": {
-        "eligible": true,
-        "score": 75,
-        "rankingKey": 2008499999,
-        "reasons": [
-          "专业不限，行政管理可以报考",
-          "明确面向应届毕业生或校园招聘",
-          "学历要求覆盖硕士研究生",
-          "报名入口明确，投递可操作性较高",
-          "专业限制较宽或不限专业",
-          "学历要求以硕士为主，符合优先级"
-        ],
-        "concerns": [
-          "民企",
-          "销售性质"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      },
-      "account": "国聘",
-      "reportDate": "2026-07-21",
-      "article": {
-        "title": "央企名企山东省岗位推荐 7月（第一期）",
-        "url": "https://mp.weixin.qq.com/s/fkZW1FLHFtLZKHt3uZtwTg",
-        "publishedAt": "2026-07-20T11:51:38.000Z",
-        "summary": "央企名企山东省岗位推荐，涵盖多个行业，学历要求高中至博士，部分岗位面向应届生。",
-        "ocrUsed": true,
-        "ocrImageCount": 3,
+        "ocrImageCount": 4,
         "analysisSource": "deepseek",
         "extractionComplete": true
       }
