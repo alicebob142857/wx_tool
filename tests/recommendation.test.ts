@@ -59,3 +59,16 @@ test("custom important requirement is a ranking gate when active", () => {
   assert.equal(match.personalized?.eligible, true);
   assert.ok((match.personalized?.score || 0) > (mismatch.personalized?.score || 0));
 });
+
+test("learned feedback preference only nudges ranking and never becomes a hard gate", () => {
+  const liked = position({
+    feedbackPreference: { active: true, score: 10, reasons: ["更符合近期赞过的岗位"], concerns: [] },
+  });
+  const disliked = position({
+    feedbackPreference: { active: true, score: 0, reasons: [], concerns: ["地区与近期反馈不太一致"] },
+  });
+  assert.equal(liked.personalized?.eligible, true);
+  assert.equal(disliked.personalized?.eligible, true);
+  assert.ok((liked.personalized?.score || 0) > (disliked.personalized?.score || 0));
+  assert.ok((liked.personalized?.score || 0) - (disliked.personalized?.score || 0) <= 16);
+});

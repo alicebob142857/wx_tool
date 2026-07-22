@@ -2,7 +2,7 @@ name: Daily WeChat job scan
 
 on:
   schedule:
-    - cron: "0 2 * * *"
+    - cron: "0 22 * * *"
   push:
     branches: [main]
     paths:

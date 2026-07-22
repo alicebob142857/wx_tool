@@ -7,8 +7,26 @@ const state = {
   profile: null,
   accountsConfig: { count: 0, accounts: [] },
   accountCandidates: [],
+  feedback: new Map(),
+  favorites: [],
+  preferences: {
+    customRequirement: "",
+    considerFeedback: false,
+    feedbackPreference: null,
+    feedbackRevision: 0,
+    feedbackProfileRevision: 0,
+  },
+  pendingFeedback: new Set(),
+  feedbackRevision: 0,
   latestDate: "",
   todayJobs: [],
+};
+
+const FEEDBACK_REASON_LABELS = {
+  compensation: "待遇",
+  role: "岗位",
+  requirements: "要求",
+  location: "地区",
 };
 
 const $ = selector => document.querySelector(selector);
@@ -150,6 +168,148 @@ function sortJobs(jobs) {
   );
 }
 
+function feedbackFor(jobId) {
+  return state.feedback.get(jobId) || null;
+}
+
+function showFeedbackToast(message, isError = false) {
+  let toast = $("#feedback-toast");
+  if (!toast) {
+    toast = node("div", "feedback-toast");
+    toast.id = "feedback-toast";
+    toast.setAttribute("role", "status");
+    document.body.append(toast);
+  }
+  toast.textContent = message;
+  toast.classList.toggle("is-error", isError);
+  toast.classList.add("is-visible");
+  clearTimeout(showFeedbackToast.timer);
+  showFeedbackToast.timer = setTimeout(() => toast.classList.remove("is-visible"), 2_400);
+}
+
+function renderLearnedPreferenceStatus() {
+  const preferences = state.preferences || {};
+  const profile = preferences.feedbackPreference;
+  text("#learned-preference-summary", profile?.summary || "尚无足够赞踩，暂不调整排序。");
+  const evidence = Number(profile?.evidenceCount || 0);
+  const confidence = Math.round(Number(profile?.confidence || 0) * 100);
+  const pending = state.feedbackRevision > Number(preferences.feedbackProfileRevision ?? 0);
+  text("#learned-preference-meta", `${evidence
+    ? `基于 ${evidence} 条反馈 · 置信度 ${confidence}%`
+    : "偏好只做小幅排序，不改变学历、专业和应届硬条件"}${pending ? " · 有新反馈，将在下一次更新时重新学习" : ""}`);
+}
+
+function refreshJobViews() {
+  renderQualityResults();
+  renderAllJobs();
+  renderPool();
+  renderFavorites();
+  renderLearnedPreferenceStatus();
+}
+
+async function saveJobFeedback(job, sentiment, reasons = []) {
+  if (!job?.id || state.pendingFeedback.has(job.id)) return;
+  state.pendingFeedback.add(job.id);
+  refreshJobViews();
+  try {
+    const result = await apiRequest(`/api/feedback/${encodeURIComponent(job.id)}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ sentiment, reasons }),
+    });
+    state.feedback.set(job.id, result.feedback);
+    state.feedbackRevision += 1;
+    state.favorites = state.favorites.filter(item => item.id !== job.id);
+    if (result.favorite) state.favorites.unshift(result.favorite);
+    showFeedbackToast(sentiment === "like" ? "已加入收藏夹" : "已记录这次不喜欢的原因");
+  } catch (error) {
+    showFeedbackToast(error.message || "反馈提交失败，请稍后重试", true);
+  } finally {
+    state.pendingFeedback.delete(job.id);
+    refreshJobViews();
+  }
+}
+
+async function clearJobFeedback(job) {
+  if (!job?.id || state.pendingFeedback.has(job.id)) return;
+  state.pendingFeedback.add(job.id);
+  refreshJobViews();
+  try {
+    await apiRequest(`/api/feedback/${encodeURIComponent(job.id)}`, { method: "DELETE" });
+    state.feedback.delete(job.id);
+    state.feedbackRevision += 1;
+    state.favorites = state.favorites.filter(item => item.id !== job.id);
+    showFeedbackToast("已撤销反馈");
+  } catch (error) {
+    showFeedbackToast(error.message || "撤销失败，请稍后重试", true);
+  } finally {
+    state.pendingFeedback.delete(job.id);
+    refreshJobViews();
+  }
+}
+
+function renderFeedbackControls(job, compact = false) {
+  const current = feedbackFor(job.id);
+  const pending = state.pendingFeedback.has(job.id);
+  const controls = node("div", `feedback-controls${compact ? " is-compact" : ""}`);
+  controls.setAttribute("aria-label", `${job.jobTitle || "该岗位"}的赞踩反馈`);
+
+  const like = node("button", `feedback-button like-button${current?.sentiment === "like" ? " is-active" : ""}`);
+  like.type = "button";
+  like.disabled = pending;
+  like.setAttribute("aria-label", current?.sentiment === "like" ? "撤销赞和收藏" : "赞并加入收藏夹");
+  like.setAttribute("aria-pressed", String(current?.sentiment === "like"));
+  like.append(node("span", "feedback-icon", "赞"));
+  like.addEventListener("click", event => {
+    event.stopPropagation();
+    if (current?.sentiment === "like") clearJobFeedback(job);
+    else saveJobFeedback(job, "like", []);
+  });
+
+  const dislikeWrap = node("div", `dislike-wrap${current?.sentiment === "dislike" ? " has-feedback" : ""}`);
+  const dislike = node("button", `feedback-button dislike-button${current?.sentiment === "dislike" ? " is-active" : ""}`);
+  dislike.type = "button";
+  dislike.disabled = pending;
+  dislike.setAttribute("aria-label", "踩；可选择不喜欢的原因");
+  dislike.setAttribute("aria-pressed", String(current?.sentiment === "dislike"));
+  dislike.append(node("span", "feedback-icon", "踩"));
+
+  const panel = node("div", "dislike-panel");
+  panel.append(node("strong", "", "哪里不喜欢？可多选"));
+  const options = node("div", "dislike-options");
+  Object.entries(FEEDBACK_REASON_LABELS).forEach(([value, label]) => {
+    const option = node("label", "dislike-option");
+    const input = node("input");
+    input.type = "checkbox";
+    input.value = value;
+    input.checked = Boolean(current?.reasons?.includes(value));
+    option.append(input, node("span", "", label));
+    options.append(option);
+  });
+  panel.append(options, node("small", "", "不选原因也可以，选好后点击“踩”提交。"));
+  if (current?.sentiment === "dislike") {
+    const clear = node("button", "feedback-clear", "撤销这次踩");
+    clear.type = "button";
+    clear.addEventListener("click", event => {
+      event.stopPropagation();
+      clearJobFeedback(job);
+    });
+    panel.append(clear);
+  }
+  dislike.addEventListener("click", event => {
+    event.stopPropagation();
+    if (window.matchMedia("(hover: none)").matches && !dislikeWrap.classList.contains("is-open")) {
+      dislikeWrap.classList.add("is-open");
+      return;
+    }
+    const reasons = [...panel.querySelectorAll("input:checked")].map(input => input.value);
+    saveJobFeedback(job, "dislike", reasons);
+  });
+  dislikeWrap.append(dislike, panel);
+  controls.append(like, dislikeWrap);
+  return controls;
+}
+
 function renderProfile() {
   const profile = state.profile || {};
   const container = $("#profile-chips");
@@ -227,6 +387,7 @@ function renderQualityCard(job) {
   body.append(headingRow, chips, verdicts, details);
 
   const action = node("div", "job-action");
+  action.append(renderFeedbackControls(job));
   const sourceLink = node("a", "job-link", "查看原文 ↗");
   sourceLink.href = job.article?.url || "#";
   sourceLink.target = "_blank";
@@ -272,6 +433,7 @@ function renderAllJobs() {
       node("span", "", compactText(job.locations, "未披露")),
       node("span", "", job.education?.summary || "未明确"),
       node("span", "", job.deadline || "未披露"),
+      renderFeedbackControls(job, true),
     );
     container.append(row);
   });
@@ -297,11 +459,38 @@ function renderPool() {
     body.append(title, node("small", "", `推送 ${pushDate} · ${compactText(job.locations)} · ${job.education?.summary || "学历未明确"} · 截止 ${job.deadline || "未披露"}`));
     const score = node("strong", "pool-score", job.personalized?.score ?? "—");
     score.title = "个性化分数";
-    row.append(body, score);
+    row.append(body, score, renderFeedbackControls(job, true));
     container.append(row);
   });
   if (!jobs.length) container.append(node("p", "pool-empty", "岗位池尚为空，下一次采集后会自动补充。"));
   text("#pool-count", `${jobs.length} / 30`);
+}
+
+function renderFavorites() {
+  const jobs = [...(state.favorites || [])].sort((a, b) =>
+    Date.parse(b.feedbackUpdatedAt || b.article?.publishedAt || 0)
+      - Date.parse(a.feedbackUpdatedAt || a.article?.publishedAt || 0),
+  );
+  const container = $("#favorites-list");
+  container.replaceChildren();
+  jobs.forEach(job => {
+    const row = node("article", "favorite-row");
+    const body = node("div", "favorite-body");
+    const title = node("a", "favorite-title", `${job.jobTitle || "岗位未命名"}｜${job.organization || "单位未明确"}`);
+    title.href = job.article?.url || "#";
+    title.target = "_blank";
+    title.rel = "noopener noreferrer";
+    body.append(
+      title,
+      node("small", "", `${compactText(job.locations)} · ${job.education?.summary || "学历未明确"} · 截止 ${job.deadline || "未披露"}`),
+    );
+    row.append(body, renderFeedbackControls(job, true));
+    container.append(row);
+  });
+  if (!jobs.length) {
+    container.append(node("p", "favorites-empty", "还没有收藏岗位。看到感兴趣的岗位时点“赞”，它就会出现在这里。"));
+  }
+  text("#favorites-count", `${jobs.length} 个`);
 }
 
 function updateStats() {
@@ -466,10 +655,49 @@ async function loadPreferences() {
   const textarea = $("#custom-requirement");
   try {
     const preferences = await apiRequest("/api/preferences");
+    state.preferences = preferences;
     textarea.value = preferences.customRequirement || "";
+    $("#consider-feedback").checked = Boolean(preferences.considerFeedback);
+    renderLearnedPreferenceStatus();
     text("#requirement-status", preferences.updatedAt ? `已保存 · ${fmtDateTime(preferences.updatedAt)}` : "尚未添加自定义要求");
   } catch (error) {
-    text("#requirement-status", error.status === 401 ? "登录已失效，请重新验证" : "暂时无法读取已保存要求");
+    text("#requirement-status", "暂时无法读取已保存要求");
+    text("#learned-preference-summary", "暂时无法读取赞踩生成的偏好。");
+  }
+}
+
+async function saveFeedbackPreferenceToggle(event) {
+  const checkbox = event.currentTarget;
+  checkbox.disabled = true;
+  try {
+    const result = await apiRequest("/api/preferences", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ considerFeedback: checkbox.checked }),
+    });
+    state.preferences.considerFeedback = Boolean(result.considerFeedback);
+    showFeedbackToast(result.considerFeedback
+      ? "已启用：下一次更新会考虑赞踩偏好"
+      : "已关闭：下一次更新不使用赞踩偏好");
+  } catch (error) {
+    checkbox.checked = !checkbox.checked;
+    showFeedbackToast(error.message || "偏好开关保存失败", true);
+  } finally {
+    checkbox.disabled = false;
+  }
+}
+
+async function loadFeedback() {
+  try {
+    const result = await apiRequest("/api/feedback");
+    state.feedbackRevision = Number(result.revision || 0);
+    state.feedback = new Map((result.feedback || []).map(item => [item.positionId, item]));
+    state.favorites = result.favorites || [];
+    renderLearnedPreferenceStatus();
+    refreshJobViews();
+  } catch (error) {
+    showFeedbackToast("赞踩和收藏夹暂时无法读取", true);
+    renderFavorites();
   }
 }
 
@@ -554,21 +782,24 @@ async function initApp() {
   renderQualityResults();
   renderAllJobs();
   renderPool();
+  renderFavorites();
   renderManagedAccounts();
   if (state.status?.state === "ok") setServiceStatus("ok", "今日任务完成");
   else if (state.status?.state === "partial") setServiceStatus("warning", "部分任务失败");
   else if (state.status?.state === "auth_required") setServiceStatus("warning", "授权已过期");
   else if (state.status?.state === "error") setServiceStatus("error", "运行失败");
   else setServiceStatus("loading", "等待首次运行");
-  await Promise.all([loadPreferences(), loadManagedAccounts(), monitorRemoteAuth()]);
+  await Promise.all([loadPreferences(), loadFeedback(), loadManagedAccounts(), monitorRemoteAuth()]);
 }
 
 async function startApp() {
+  if (["localhost", "127.0.0.1"].includes(location.hostname)) $("#local-mode").hidden = false;
   state.runtime = await getJson("data/runtime.json", { authServiceUrl: "" });
   await initApp();
 }
 
 $("#requirement-form").addEventListener("submit", savePreferences);
+$("#consider-feedback").addEventListener("change", saveFeedbackPreferenceToggle);
 $("#account-search-form").addEventListener("submit", searchAccounts);
 renderAccountCandidates();
 

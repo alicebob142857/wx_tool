@@ -12,7 +12,7 @@
     "check": "tsc -p tsconfig.json --noEmit && tsc -p worker/tsconfig.json --noEmit",
     "test": "node --import tsx --test tests/**/*.test.ts",
     "site:build-history": "node --import tsx scripts/build-static-history.ts",
-    "site:serve": "npx --yes http-server site -p 4173 -c-1",
+    "site:serve": "node scripts/serve-site.mjs",
     "worker:dev": "wrangler dev --config worker/wrangler.jsonc",
     "worker:deploy": "wrangler deploy --config worker/wrangler.jsonc",
     "db:migrate": "wrangler d1 migrations apply wx-job-monitor-db --remote --config worker/wrangler.jsonc"

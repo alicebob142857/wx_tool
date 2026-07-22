@@ -86,6 +86,7 @@ export async function loadProfile(rootDir: string): Promise<UserProfile> {
     major: "行政管理",
     freshGraduate: true,
     customRequirement: "",
+    considerFeedback: false,
   };
   try {
     const content = await readFile(path.join(rootDir, "config", "profile.json"), "utf8");
@@ -96,6 +97,7 @@ export async function loadProfile(rootDir: string): Promise<UserProfile> {
       major: String(profile.major || fallback.major).trim(),
       freshGraduate: profile.freshGraduate !== false,
       customRequirement: String(profile.customRequirement || "").trim().slice(0, 2_000),
+      considerFeedback: false,
     };
   } catch (error: any) {
     if (error?.code === "ENOENT") return fallback;

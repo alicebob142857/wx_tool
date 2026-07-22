@@ -71,6 +71,12 @@ const DEFAULT_ACCOUNTS: SearchCandidate[] = [
 
 let runtimeSchemaReady: Promise<void> | null = null;
 
+async function ensureColumn(env: Env, table: string, column: string, definition: string): Promise<void> {
+  const info = await env.JOB_DB.prepare(`PRAGMA table_info(${table})`).all<{ name: string }>();
+  if ((info.results || []).some(item => item.name === column)) return;
+  await env.JOB_DB.prepare(`ALTER TABLE ${table} ADD COLUMN ${definition}`).run();
+}
+
 async function ensureRuntimeSchema(env: Env): Promise<void> {
   if (!runtimeSchemaReady) {
     runtimeSchemaReady = (async () => {
@@ -79,6 +85,7 @@ async function ensureRuntimeSchema(env: Env): Promise<void> {
         env.JOB_DB.prepare(`CREATE TABLE IF NOT EXISTS position_personalization (
           position_id TEXT PRIMARY KEY,
           custom_requirement_json TEXT NOT NULL DEFAULT '{}',
+          feedback_preference_json TEXT NOT NULL DEFAULT '{}',
           personalized_json TEXT NOT NULL DEFAULT '{}',
           personalized_eligible INTEGER NOT NULL DEFAULT 0,
           personalized_ranking_key INTEGER NOT NULL DEFAULT 0,
@@ -88,6 +95,13 @@ async function ensureRuntimeSchema(env: Env): Promise<void> {
         env.JOB_DB.prepare(`CREATE TABLE IF NOT EXISTS user_preferences (
           id INTEGER PRIMARY KEY CHECK (id = 1),
           custom_requirement TEXT NOT NULL DEFAULT '',
+          consider_feedback INTEGER NOT NULL DEFAULT 0,
+          generated_preference TEXT NOT NULL DEFAULT '',
+          generated_preference_json TEXT NOT NULL DEFAULT '{}',
+          feedback_revision INTEGER NOT NULL DEFAULT 0,
+          feedback_profile_revision INTEGER NOT NULL DEFAULT 0,
+          feedback_updated_at TEXT,
+          feedback_profile_generated_at TEXT,
           updated_at TEXT NOT NULL
         )`),
         env.JOB_DB.prepare(`CREATE INDEX IF NOT EXISTS idx_position_personalized_pool
@@ -104,11 +118,31 @@ async function ensureRuntimeSchema(env: Env): Promise<void> {
         )`),
         env.JOB_DB.prepare(`CREATE INDEX IF NOT EXISTS idx_monitored_accounts_status_name
           ON monitored_accounts(status, name)`),
+        env.JOB_DB.prepare(`CREATE TABLE IF NOT EXISTS job_feedback (
+          position_id TEXT PRIMARY KEY,
+          sentiment TEXT NOT NULL CHECK (sentiment IN ('like', 'dislike')),
+          reasons_json TEXT NOT NULL DEFAULT '[]',
+          job_snapshot_json TEXT NOT NULL DEFAULT '{}',
+          created_at TEXT NOT NULL,
+          updated_at TEXT NOT NULL
+        )`),
+        env.JOB_DB.prepare(`CREATE INDEX IF NOT EXISTS idx_job_feedback_sentiment_updated
+          ON job_feedback(sentiment, updated_at DESC)`),
         ...DEFAULT_ACCOUNTS.map(account => env.JOB_DB.prepare(`INSERT OR IGNORE INTO monitored_accounts
           (fakeid, name, alias, avatar_url, status, source, added_at, updated_at)
           VALUES (?, ?, ?, ?, 'active', 'bootstrap', ?, ?)`)
           .bind(account.fakeid, account.name, account.alias, account.avatarUrl, now, now)),
       ]);
+      await ensureColumn(env, "user_preferences", "consider_feedback", "consider_feedback INTEGER NOT NULL DEFAULT 0");
+      await ensureColumn(env, "user_preferences", "generated_preference", "generated_preference TEXT NOT NULL DEFAULT ''");
+      await ensureColumn(env, "user_preferences", "generated_preference_json", "generated_preference_json TEXT NOT NULL DEFAULT '{}'");
+      await ensureColumn(env, "user_preferences", "feedback_revision", "feedback_revision INTEGER NOT NULL DEFAULT 0");
+      await ensureColumn(env, "user_preferences", "feedback_profile_revision", "feedback_profile_revision INTEGER NOT NULL DEFAULT 0");
+      await ensureColumn(env, "user_preferences", "feedback_updated_at", "feedback_updated_at TEXT");
+      await ensureColumn(env, "user_preferences", "feedback_profile_generated_at", "feedback_profile_generated_at TEXT");
+      await ensureColumn(env, "position_personalization", "feedback_preference_json", "feedback_preference_json TEXT NOT NULL DEFAULT '{}'");
+      await env.JOB_DB.prepare(`INSERT OR IGNORE INTO user_preferences
+        (id, custom_requirement, updated_at) VALUES (1, '', ?)`).bind(now).run();
     })().catch(error => {
       runtimeSchemaReady = null;
       throw error;
@@ -153,24 +187,68 @@ function randomToken(): string {
 
 async function getPreferences(request: Request, env: Env): Promise<Response> {
   const row = await env.JOB_DB.prepare(
-    "SELECT custom_requirement AS customRequirement, updated_at AS updatedAt FROM user_preferences WHERE id = 1",
-  ).first<{ customRequirement: string; updatedAt: string }>();
+    `SELECT custom_requirement AS customRequirement, consider_feedback AS considerFeedback,
+      generated_preference AS generatedPreference, generated_preference_json AS generatedPreferenceJson,
+      feedback_revision AS feedbackRevision, feedback_profile_revision AS feedbackProfileRevision,
+      feedback_updated_at AS feedbackUpdatedAt,
+      feedback_profile_generated_at AS feedbackProfileGeneratedAt, updated_at AS updatedAt
+      FROM user_preferences WHERE id = 1`,
+  ).first<any>();
   return json(request, env, {
     customRequirement: row?.customRequirement || "",
+    considerFeedback: Boolean(row?.considerFeedback),
+    generatedPreference: row?.generatedPreference || "",
+    feedbackPreference: parseJsonObject(row?.generatedPreferenceJson),
+    feedbackRevision: Number(row?.feedbackRevision || 0),
+    feedbackProfileRevision: Number(row?.feedbackProfileRevision ?? 0),
+    feedbackUpdatedAt: row?.feedbackUpdatedAt || null,
+    feedbackProfileGeneratedAt: row?.feedbackProfileGeneratedAt || null,
     updatedAt: row?.updatedAt || null,
   });
 }
 
 async function savePreferences(request: Request, env: Env): Promise<Response> {
-  const body = await request.json<{ customRequirement?: string }>().catch(() => ({ customRequirement: "" }));
-  const customRequirement = String(body.customRequirement || "").trim();
+  const body: { customRequirement?: string; considerFeedback?: boolean } =
+    await request.json<{ customRequirement?: string; considerFeedback?: boolean }>().catch(() => ({}));
+  const current = await env.JOB_DB.prepare(
+    "SELECT custom_requirement AS customRequirement, consider_feedback AS considerFeedback FROM user_preferences WHERE id = 1",
+  ).first<any>();
+  const customRequirement = body.customRequirement === undefined
+    ? String(current?.customRequirement || "")
+    : String(body.customRequirement || "").trim();
+  const considerFeedback = typeof body.considerFeedback === "boolean"
+    ? body.considerFeedback
+    : Boolean(current?.considerFeedback);
   if (customRequirement.length > 2_000) return json(request, env, { message: "自定义要求不能超过 2000 字" }, 400);
   const updatedAt = new Date().toISOString();
-  await env.JOB_DB.prepare(`INSERT INTO user_preferences (id, custom_requirement, updated_at)
-    VALUES (1, ?, ?)
-    ON CONFLICT(id) DO UPDATE SET custom_requirement=excluded.custom_requirement, updated_at=excluded.updated_at`)
-    .bind(customRequirement, updatedAt).run();
-  return json(request, env, { ok: true, customRequirement, updatedAt });
+  await env.JOB_DB.prepare(`UPDATE user_preferences
+    SET custom_requirement = ?, consider_feedback = ?, updated_at = ? WHERE id = 1`)
+    .bind(customRequirement, considerFeedback ? 1 : 0, updatedAt).run();
+  return json(request, env, { ok: true, customRequirement, considerFeedback, updatedAt });
+}
+
+async function saveGeneratedPreference(request: Request, env: Env): Promise<Response> {
+  if (!authorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
+  const body: { preference?: Record<string, unknown>; feedbackRevision?: number } =
+    await request.json<{ preference?: Record<string, unknown>; feedbackRevision?: number }>().catch(() => ({}));
+  const preference = body.preference && typeof body.preference === "object" && !Array.isArray(body.preference)
+    ? body.preference
+    : null;
+  const feedbackRevision = Number(body.feedbackRevision);
+  if (!preference || !Number.isInteger(feedbackRevision) || feedbackRevision < 0) {
+    return json(request, env, { message: "生成偏好格式不合法" }, 400);
+  }
+  const serialized = JSON.stringify(preference);
+  if (serialized.length > 20_000) return json(request, env, { message: "生成偏好内容过长" }, 400);
+  const summary = String(preference.summary || "").trim().slice(0, 1_000);
+  const generatedAt = String(preference.generatedAt || new Date().toISOString());
+  const result = await env.JOB_DB.prepare(`UPDATE user_preferences SET
+    generated_preference = ?, generated_preference_json = ?,
+    feedback_profile_revision = ?, feedback_profile_generated_at = ?
+    WHERE id = 1 AND feedback_revision = ?`)
+    .bind(summary, serialized, feedbackRevision, generatedAt, feedbackRevision).run();
+  if (!result.meta.changes) return json(request, env, { message: "期间出现了新反馈，请在下一次更新时重新生成" }, 409);
+  return json(request, env, { ok: true, feedbackRevision, generatedAt });
 }
 
 function managedAccountFromRow(row: any): ManagedAccount {
@@ -613,6 +691,7 @@ function jobFromRow(row: any): any {
   return {
     id: row.id,
     articleId: row.article_id,
+    reportDate: row.report_date,
     account: row.account,
     organization: row.organization,
     organizationNature: row.organization_nature || "未披露",
@@ -634,6 +713,7 @@ function jobFromRow(row: any): any {
     referralCode: row.referral_code,
     recommendation: { score: row.recommendation_score, rankingKey: row.ranking_key, level: row.recommendation_level, reasons: parseJsonArray(row.recommendation_reasons_json), concerns: parseJsonArray(row.concerns_json) },
     customRequirement: parseJsonObject(row.custom_requirement_json),
+    feedbackPreference: parseJsonObject(row.feedback_preference_json),
     personalized: parseJsonObject(row.personalized_json),
     evidence: parseJsonArray(row.evidence_json),
     confidence: row.confidence,
@@ -644,9 +724,112 @@ function jobFromRow(row: any): any {
 const JOB_SELECT = `SELECT p.*, a.title AS article_title, a.url AS article_url,
   a.published_at, a.summary AS article_summary, a.ocr_used, a.ocr_image_count,
   a.analysis_source, a.extraction_complete, pp.custom_requirement_json,
-  pp.personalized_json, pp.personalized_eligible, pp.personalized_ranking_key
+  pp.feedback_preference_json, pp.personalized_json,
+  pp.personalized_eligible, pp.personalized_ranking_key
   FROM positions p JOIN articles a ON a.id = p.article_id
   LEFT JOIN position_personalization pp ON pp.position_id = p.id`;
+
+const FEEDBACK_REASONS = new Set(["compensation", "role", "requirements", "location"]);
+
+function feedbackFromRow(row: any): any {
+  return {
+    positionId: String(row.position_id || ""),
+    sentiment: row.sentiment === "dislike" ? "dislike" : "like",
+    reasons: parseJsonArray(row.reasons_json).map(String).filter(reason => FEEDBACK_REASONS.has(reason)),
+    createdAt: String(row.created_at || ""),
+    updatedAt: String(row.updated_at || ""),
+  };
+}
+
+function feedbackSnapshot(row: any): Record<string, unknown> | null {
+  try {
+    const parsed = JSON.parse(String(row.job_snapshot_json || "{}"));
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
+async function listJobFeedback(request: Request, env: Env): Promise<Response> {
+  const [rows, preferences] = await Promise.all([
+    env.JOB_DB.prepare("SELECT * FROM job_feedback ORDER BY updated_at DESC LIMIT 1000").all<any>(),
+    env.JOB_DB.prepare("SELECT feedback_revision AS revision FROM user_preferences WHERE id = 1").first<any>(),
+  ]);
+  const values = rows.results || [];
+  const feedback = values.map(feedbackFromRow);
+  const favorites = values
+    .filter(row => row.sentiment === "like")
+    .map(row => {
+      const job = feedbackSnapshot(row);
+      return job ? { ...job, feedbackUpdatedAt: row.updated_at } : null;
+    })
+    .filter(Boolean);
+  return json(request, env, {
+    revision: Number(preferences?.revision || 0),
+    count: feedback.length,
+    likeCount: feedback.filter(item => item.sentiment === "like").length,
+    dislikeCount: feedback.filter(item => item.sentiment === "dislike").length,
+    feedback,
+    favorites,
+  });
+}
+
+async function feedbackTraining(request: Request, env: Env): Promise<Response> {
+  if (!authorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
+  const [rows, preferences] = await Promise.all([
+    env.JOB_DB.prepare("SELECT * FROM job_feedback ORDER BY updated_at DESC LIMIT 1000").all<any>(),
+    env.JOB_DB.prepare("SELECT feedback_revision AS revision FROM user_preferences WHERE id = 1").first<any>(),
+  ]);
+  return json(request, env, {
+    revision: Number(preferences?.revision || 0),
+    feedback: (rows.results || []).map(row => ({ ...feedbackFromRow(row), job: feedbackSnapshot(row) || {} })),
+  });
+}
+
+async function saveJobFeedback(request: Request, env: Env, positionId: string): Promise<Response> {
+  if (!/^[a-f0-9]{16}$/.test(positionId)) return json(request, env, { message: "岗位 ID 不合法" }, 400);
+  const body: { sentiment?: string; reasons?: string[] } =
+    await request.json<{ sentiment?: string; reasons?: string[] }>().catch(() => ({}));
+  if (body.sentiment !== "like" && body.sentiment !== "dislike") {
+    return json(request, env, { message: "反馈只能是赞或踩" }, 400);
+  }
+  const reasons = [...new Set((Array.isArray(body.reasons) ? body.reasons : [])
+    .map(String).filter(reason => FEEDBACK_REASONS.has(reason)))].slice(0, 4);
+  const row = await env.JOB_DB.prepare(`${JOB_SELECT} WHERE p.id = ? LIMIT 1`).bind(positionId).first<any>();
+  if (!row) return json(request, env, { message: "没有找到该岗位，可能需要等待下一次数据同步" }, 404);
+  const now = new Date().toISOString();
+  const snapshot = jobFromRow(row);
+  await env.JOB_DB.batch([
+    env.JOB_DB.prepare(`INSERT INTO job_feedback
+      (position_id, sentiment, reasons_json, job_snapshot_json, created_at, updated_at)
+      VALUES (?, ?, ?, ?, ?, ?)
+      ON CONFLICT(position_id) DO UPDATE SET
+        sentiment=excluded.sentiment, reasons_json=excluded.reasons_json,
+        job_snapshot_json=excluded.job_snapshot_json, updated_at=excluded.updated_at`)
+      .bind(positionId, body.sentiment, JSON.stringify(reasons), JSON.stringify(snapshot), now, now),
+    env.JOB_DB.prepare(`UPDATE user_preferences SET
+      feedback_revision = feedback_revision + 1, feedback_updated_at = ? WHERE id = 1`).bind(now),
+  ]);
+  return json(request, env, {
+    ok: true,
+    feedback: { positionId, sentiment: body.sentiment, reasons, createdAt: now, updatedAt: now },
+    favorite: body.sentiment === "like" ? { ...snapshot, feedbackUpdatedAt: now } : null,
+  });
+}
+
+async function deleteJobFeedback(request: Request, env: Env, positionId: string): Promise<Response> {
+  if (!/^[a-f0-9]{16}$/.test(positionId)) return json(request, env, { message: "岗位 ID 不合法" }, 400);
+  const existing = await env.JOB_DB.prepare("SELECT position_id FROM job_feedback WHERE position_id = ?")
+    .bind(positionId).first();
+  if (!existing) return json(request, env, { ok: true, removed: false });
+  const now = new Date().toISOString();
+  await env.JOB_DB.batch([
+    env.JOB_DB.prepare("DELETE FROM job_feedback WHERE position_id = ?").bind(positionId),
+    env.JOB_DB.prepare(`UPDATE user_preferences SET
+      feedback_revision = feedback_revision + 1, feedback_updated_at = ? WHERE id = 1`).bind(now),
+  ]);
+  return json(request, env, { ok: true, removed: true });
+}
 
 function csvCell(value: unknown): string {
   const text = Array.isArray(value) ? value.join("；") : String(value ?? "");
@@ -764,16 +947,18 @@ async function saveReport(request: Request, env: Env): Promise<Response> {
         jsonText(position.recommendation?.concerns), jsonText(position.evidence), position.confidence || 0, now,
       ));
       personalizationStatements.push(env.JOB_DB.prepare(`INSERT INTO position_personalization (
-        position_id, custom_requirement_json, personalized_json, personalized_eligible,
-        personalized_ranking_key, updated_at
-      ) VALUES (?, ?, ?, ?, ?, ?)
+        position_id, custom_requirement_json, feedback_preference_json,
+        personalized_json, personalized_eligible, personalized_ranking_key, updated_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?)
       ON CONFLICT(position_id) DO UPDATE SET
         custom_requirement_json=excluded.custom_requirement_json,
+        feedback_preference_json=excluded.feedback_preference_json,
         personalized_json=excluded.personalized_json,
         personalized_eligible=excluded.personalized_eligible,
         personalized_ranking_key=excluded.personalized_ranking_key,
         updated_at=excluded.updated_at`).bind(
-        position.id, JSON.stringify(position.customRequirement || {}), JSON.stringify(position.personalized || {}),
+        position.id, JSON.stringify(position.customRequirement || {}),
+        JSON.stringify(position.feedbackPreference || {}), JSON.stringify(position.personalized || {}),
         position.personalized?.eligible ? 1 : 0, position.personalized?.rankingKey || 0, now,
       ));
     }
@@ -884,6 +1069,12 @@ export default {
       await ensureRuntimeSchema(env);
       if (url.pathname === "/api/preferences" && request.method === "GET") return getPreferences(request, env);
       if (url.pathname === "/api/preferences" && request.method === "PUT") return savePreferences(request, env);
+      if (url.pathname === "/api/preferences/generated" && request.method === "PUT") return saveGeneratedPreference(request, env);
+      if (url.pathname === "/api/feedback" && request.method === "GET") return listJobFeedback(request, env);
+      if (url.pathname === "/api/feedback/training" && request.method === "GET") return feedbackTraining(request, env);
+      const feedbackMatch = url.pathname.match(/^\/api\/feedback\/([a-f0-9]{16})$/);
+      if (feedbackMatch && request.method === "PUT") return saveJobFeedback(request, env, feedbackMatch[1]);
+      if (feedbackMatch && request.method === "DELETE") return deleteJobFeedback(request, env, feedbackMatch[1]);
       if (url.pathname === "/api/accounts/search" && request.method === "POST") return searchManagedAccounts(request, env);
       if (url.pathname === "/api/accounts" && request.method === "GET") return listManagedAccounts(request, env);
       if (url.pathname === "/api/accounts" && request.method === "POST") return addManagedAccount(request, env);

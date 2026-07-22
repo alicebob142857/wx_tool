@@ -1,6 +1,7 @@
 import { fetchAndParseArticle, looksLikeJobPost } from "./article-parser.js";
 import { loadAccounts, loadConfig, loadProfile } from "./config.js";
 import { analyzeArticle, heuristicAnalyzeArticle } from "./deepseek.js";
+import { generateFeedbackPreference, rerankHistoricalQualityPool } from "./feedback-preference.js";
 import { AuthExpiredError, ExporterClient } from "./exporter-client.js";
 import { ocrImages } from "./ocr.js";
 import {
@@ -45,9 +46,21 @@ async function main(): Promise<void> {
   await writeAccountsSnapshot(config.rootDir, accounts);
   try {
     const preferences = await client.getPreferences();
-    if (preferences) profile.customRequirement = preferences.customRequirement;
+    if (preferences) {
+      profile.customRequirement = preferences.customRequirement;
+      profile.considerFeedback = preferences.considerFeedback;
+      profile.feedbackPreference = preferences.feedbackPreference;
+      if (preferences.feedbackRevision !== preferences.feedbackProfileRevision) {
+        const training = await client.getFeedbackTraining();
+        if (training) {
+          profile.feedbackPreference = await generateFeedbackPreference(config, training.feedback);
+          await client.saveGeneratedPreference(profile.feedbackPreference, training.revision);
+          console.log(`FEEDBACK_PROFILE revision=${training.revision} evidence=${profile.feedbackPreference.evidenceCount}`);
+        }
+      }
+    }
   } catch (error) {
-    console.warn(`自定义要求读取失败，使用本地配置：${error instanceof Error ? error.message : String(error)}`);
+    console.warn(`用户偏好读取或生成失败，使用最近一次可用配置：${error instanceof Error ? error.message : String(error)}`);
   }
 
   const auth = await client.checkAuth();
@@ -196,6 +209,14 @@ async function main(): Promise<void> {
   } catch (error) {
     errors.push(`数据库写入失败：${error instanceof Error ? error.message : String(error)}`);
     mergedReport = await writeDailyReport(config.rootDir, { ...report, errors }, replaceItemIds);
+  }
+  if (profile.considerFeedback && profile.feedbackPreference?.softPreferences.length) {
+    try {
+      await rerankHistoricalQualityPool(config, profile.feedbackPreference);
+    } catch (error) {
+      errors.push(`历史优质岗位偏好排序失败：${error instanceof Error ? error.message : String(error)}`);
+      mergedReport = await writeDailyReport(config.rootDir, { ...report, errors }, replaceItemIds);
+    }
   }
   const state = errors.length ? "partial" : "ok";
   await writeStatus(config.rootDir, {

@@ -23,7 +23,7 @@
     }
   ],
   "vars": {
-    "ALLOWED_ORIGIN": "https://alicebob142857.github.io",
+    "ALLOWED_ORIGIN": "https://alicebob142857.github.io,http://localhost:4173,http://127.0.0.1:4173",
     "GITHUB_REPOSITORY": "alicebob142857/wx_tool"
   }
 }

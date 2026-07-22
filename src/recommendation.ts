@@ -113,6 +113,10 @@ function assessPersonalized(position: JobPosition): PersonalizedAssessment {
   const major = exactAdministrative || unrestricted;
   const customRequirement = !position.customRequirement?.active
     || position.customRequirement.matched === true;
+  const feedbackPreferenceActive = Boolean(position.feedbackPreference?.active);
+  const feedbackPreferenceScore = feedbackPreferenceActive
+    ? Math.max(0, Math.min(10, Number(position.feedbackPreference?.score || 0)))
+    : 5;
 
   const gates = {
     freshGraduate,
@@ -136,6 +140,9 @@ function assessPersonalized(position: JobPosition): PersonalizedAssessment {
     ...(position.compensation.quality >= 4 ? ["薪资福利信息较有吸引力"] : []),
     ...(position.applicationUrl ? ["报名入口明确，投递可操作性较高"] : []),
     ...(position.customRequirement?.active ? position.customRequirement.reasons : []),
+    ...(feedbackPreferenceActive && feedbackPreferenceScore >= 7
+      ? (position.feedbackPreference?.reasons || []).slice(0, 2)
+      : []),
     ...(position.recommendation.reasons || []).slice(0, 2),
   ], 6);
   const concerns = unique([
@@ -152,6 +159,9 @@ function assessPersonalized(position: JobPosition): PersonalizedAssessment {
         : "自定义重要要求缺少足够证据，暂不进入优质推荐",
     ] : []),
     ...(position.customRequirement?.active ? position.customRequirement.concerns : []),
+    ...(feedbackPreferenceActive && feedbackPreferenceScore <= 3
+      ? (position.feedbackPreference?.concerns || []).slice(0, 2)
+      : []),
     ...(!position.deadline ? ["截止日期未披露，需尽快核对原文"] : []),
     ...(position.recommendation.concerns || []).slice(0, 2),
   ], 7);
@@ -167,6 +177,9 @@ function assessPersonalized(position: JobPosition): PersonalizedAssessment {
   score += Math.min(5, Math.max(0, Number(position.recommendation.score || 0) / 20));
   if (position.applicationUrl) score += 2;
   if (position.customRequirement?.active) score += Math.max(0, Math.min(15, position.customRequirement.score * 1.5));
+  // Learned feedback is deliberately soft: it can move a job by at most 8 points,
+  // and it never participates in the eligibility gates above.
+  if (feedbackPreferenceActive) score += Math.max(-8, Math.min(8, (feedbackPreferenceScore - 5) * 1.5));
   score = Math.max(0, Math.min(100, Math.round(score)));
   if (!eligible) score = Math.min(score, 59);
   const hardGateBand = (notPhdOnly ? 500_000_000 : 0)

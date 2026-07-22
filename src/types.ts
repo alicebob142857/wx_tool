@@ -101,12 +101,42 @@ export interface PersonalizedAssessment {
   gates: PersonalizedGates;
 }
 
+export type FeedbackReason = "compensation" | "role" | "requirements" | "location";
+
+export interface FeedbackPreferenceSignal {
+  dimension: "compensation" | "role" | "requirements" | "location" | "organization" | "other";
+  direction: "prefer" | "avoid";
+  preference: string;
+  strength: 1 | 2 | 3;
+  support: number;
+}
+
+export interface FeedbackPreferenceProfile {
+  summary: string;
+  confidence: number;
+  evidenceCount: number;
+  likeCount: number;
+  dislikeCount: number;
+  softPreferences: FeedbackPreferenceSignal[];
+  caution: string;
+  generatedAt: string;
+}
+
+export interface FeedbackPreferenceAssessment {
+  active: boolean;
+  score: number;
+  reasons: string[];
+  concerns: string[];
+}
+
 export interface UserProfile {
   school: string;
   education: string;
   major: string;
   freshGraduate: boolean;
   customRequirement: string;
+  considerFeedback: boolean;
+  feedbackPreference?: FeedbackPreferenceProfile;
 }
 
 export interface CustomRequirementAssessment {
@@ -139,6 +169,7 @@ export interface JobPosition {
   referralCode: string | null;
   recommendation: PositionRecommendation;
   customRequirement?: CustomRequirementAssessment;
+  feedbackPreference?: FeedbackPreferenceAssessment;
   personalized?: PersonalizedAssessment;
   evidence: string[];
   confidence: number;

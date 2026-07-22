@@ -125,6 +125,7 @@ async function readPublicProfile(rootDir: string): Promise<UserProfile> {
     major: "行政管理",
     freshGraduate: true,
     customRequirement: "",
+    considerFeedback: false,
   };
   try {
     const profile = JSON.parse(await readFile(path.join(rootDir, "config", "profile.json"), "utf8")) as Partial<UserProfile>;
@@ -134,6 +135,7 @@ async function readPublicProfile(rootDir: string): Promise<UserProfile> {
       major: String(profile.major || fallback.major),
       freshGraduate: profile.freshGraduate !== false,
       customRequirement: "",
+      considerFeedback: false,
     };
   } catch (error: any) {
     if (error?.code === "ENOENT") return fallback;

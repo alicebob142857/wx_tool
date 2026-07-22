@@ -1,4 +1,5 @@
-import type { Account, DailyReport, WechatArticle } from "./types.js";
+import type { Account, DailyReport, FeedbackPreferenceProfile, WechatArticle } from "./types.js";
+import type { FeedbackTrainingRecord } from "./feedback-preference.js";
 import type { AppConfig } from "./config.js";
 import { validateAccounts } from "./config.js";
 
@@ -152,7 +153,14 @@ export class ExporterClient {
     await parseJsonResponse(response);
   }
 
-  async getPreferences(): Promise<{ customRequirement: string; updatedAt: string | null } | null> {
+  async getPreferences(): Promise<{
+    customRequirement: string;
+    considerFeedback: boolean;
+    feedbackPreference?: FeedbackPreferenceProfile;
+    feedbackRevision: number;
+    feedbackProfileRevision: number;
+    updatedAt: string | null;
+  } | null> {
     if (!this.usesAuthService || !this.config.authServiceToken) return null;
     const response = await fetch(`${this.config.authServiceUrl}/api/preferences`, {
       headers: { Authorization: `Bearer ${this.config.authServiceToken}` },
@@ -161,7 +169,46 @@ export class ExporterClient {
     const data = await parseJsonResponse(response);
     return {
       customRequirement: String(data?.customRequirement || "").trim().slice(0, 2_000),
+      considerFeedback: Boolean(data?.considerFeedback),
+      feedbackPreference: data?.feedbackPreference && typeof data.feedbackPreference === "object"
+        ? data.feedbackPreference as FeedbackPreferenceProfile
+        : undefined,
+      feedbackRevision: Number(data?.feedbackRevision || 0),
+      feedbackProfileRevision: Number(data?.feedbackProfileRevision ?? 0),
       updatedAt: data?.updatedAt || null,
     };
+  }
+
+  async getFeedbackTraining(): Promise<{
+    feedback: FeedbackTrainingRecord[];
+    revision: number;
+  } | null> {
+    if (!this.usesAuthService || !this.config.authServiceToken) return null;
+    const response = await fetch(`${this.config.authServiceUrl}/api/feedback/training`, {
+      headers: { Authorization: `Bearer ${this.config.authServiceToken}` },
+      signal: AbortSignal.timeout(20_000),
+    });
+    const data = await parseJsonResponse(response);
+    return {
+      feedback: Array.isArray(data?.feedback) ? data.feedback : [],
+      revision: Number(data?.revision || 0),
+    };
+  }
+
+  async saveGeneratedPreference(
+    preference: FeedbackPreferenceProfile,
+    feedbackRevision: number,
+  ): Promise<void> {
+    if (!this.usesAuthService || !this.config.authServiceToken) return;
+    const response = await fetch(`${this.config.authServiceUrl}/api/preferences/generated`, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${this.config.authServiceToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ preference, feedbackRevision }),
+      signal: AbortSignal.timeout(20_000),
+    });
+    await parseJsonResponse(response);
   }
 }

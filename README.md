@@ -15,6 +15,8 @@
 
 网页“自定义重要要求”会写入 D1，并在下一次采集时自动附加到 DeepSeek 提示词。它可以影响优质资格和排序，但不能放宽应届、学历和专业三项硬条件。
 
+每个岗位都有赞和踩。赞会加入收藏夹；踩可以多选“待遇、岗位、要求、地区”原因，也可以不选。反馈按岗位 ID 保存，因此同一岗位在今日推荐、全部岗位、岗位池和收藏夹中的状态同步。下一次定时任务只在检测到新反馈时调用 DeepSeek 生成保守型弱偏好：不足 3 条反馈不调整排序，学习偏好不会成为硬筛选条件。网页顶部开关决定下一次更新是否把它用于新岗位分析和历史优质岗位重排。
+
 ## 历史总表
 
 - 网页优先读取 GitHub Pages 随任务生成的静态汇总，不依赖浏览器能否直连岗位数据库；D1 仍保存同一份结构化记录。
@@ -47,7 +49,7 @@
 
 1. 在网站底部输入公众号完整名称或微信号。
 2. 根据名称、头像和微信号选择正确候选，点击“添加监测”。
-3. 账号立即写入 D1；等待次日 10:00，或手动运行 [Daily WeChat job scan](https://github.com/alicebob142857/wx_tool/actions/workflows/daily.yml)。
+3. 账号立即写入 D1；等待次日 06:00，或手动运行 [Daily WeChat job scan](https://github.com/alicebob142857/wx_tool/actions/workflows/daily.yml)。
 
 搜索接口依赖有效的微信公众平台授权。如果授权过期，先在网站扫码恢复；若目标公众号关闭了名称搜索，可以尝试微信号或更完整的名称。
 
@@ -61,12 +63,12 @@
 ## 架构
 
 ```text
-GitHub Actions (每天 02:00 UTC / 北京时间 10:00)
+GitHub Actions (每天 22:00 UTC / 北京时间次日 06:00)
   ├─ Cloudflare Worker：检查登录、获取公众号文章列表
   ├─ 微信文章页：抓正文与图片
   ├─ Tesseract：中文 OCR
-  ├─ DeepSeek：逐岗位结构化提取与推荐分析
-  ├─ Cloudflare D1：持久化文章、岗位和每日统计
+  ├─ DeepSeek：逐岗位结构化提取、反馈偏好学习与历史岗位重排
+  ├─ Cloudflare D1：持久化文章、岗位、赞踩、收藏夹和偏好设置
   └─ GitHub Pages：发布日报与授权二维码
 
 Cloudflare Worker
@@ -90,6 +92,8 @@ npm run check
 npm run collect
 npm run site:serve
 ```
+
+`npm run site:serve` 会在 `http://localhost:4173` 启动无需额外依赖的本地页面。它读取项目当前的静态报告，但赞踩、收藏夹和设置会连接线上 Worker 并写入同一个 D1；页面顶部会显示测试提示。
 
 本地首次验证可以使用 `WX_EXPORTER_AUTH_KEY`。生产环境推荐配置 `AUTH_SERVICE_URL` 和 `AUTH_SERVICE_TOKEN`，不再手动复制四天有效的 Key。
 

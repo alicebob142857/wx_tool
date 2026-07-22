@@ -19,6 +19,7 @@
           </span>
         </a>
         <div class="topbar-actions">
+          <a class="manage-link" href="#favorites">收藏夹</a>
           <a class="manage-link" href="#personal-requirement">重要要求</a>
           <a class="manage-link" href="#account-management">公众号管理</a>
           <div id="service-status" class="service-status is-loading">
@@ -28,10 +29,14 @@
         </div>
       </header>
 
+      <div id="local-mode" class="local-mode" hidden>
+        localhost 测试模式：页面数据来自当前项目，赞踩和设置会写入线上数据库。
+      </div>
+
       <main>
         <section class="hero compact-hero">
           <div class="hero-copy">
-            <p class="eyebrow">每日 10:00 自动更新</p>
+            <p class="eyebrow">每日 06:00 自动更新</p>
             <h1>只看你真正<br /><span>有资格、有兴趣的岗位。</span></h1>
             <p class="hero-description">
               先用硬条件排除社招、大专门槛、纯博士和专业不符岗位，再让 DeepSeek 比较待遇、单位与报考难度。
@@ -43,6 +48,20 @@
             <strong id="current-date">—</strong>
             <span id="last-run">尚未运行</span>
           </div>
+        </section>
+
+        <section class="learned-preference" aria-labelledby="learned-preference-title">
+          <div class="learned-preference-copy">
+            <p class="eyebrow">Feedback learning</p>
+            <h2 id="learned-preference-title">让赞踩帮助下一次推荐</h2>
+            <p id="learned-preference-summary">尚未读取赞踩生成的偏好。</p>
+            <small id="learned-preference-meta">偏好只做小幅排序，不改变学历、专业和应届硬条件。</small>
+          </div>
+          <label class="preference-toggle" for="consider-feedback">
+            <input id="consider-feedback" type="checkbox" />
+            <span class="toggle-track" aria-hidden="true"><span></span></span>
+            <span><strong>搜索时考虑用户偏好</strong><small>切换后从下一次 06:00 更新开始生效</small></span>
+          </label>
         </section>
 
         <section id="auth-panel" class="auth-panel" hidden>
@@ -88,6 +107,18 @@
           <p>全部岗位仍保留在下方折叠表中，并会说明未推荐原因。</p>
         </section>
 
+        <section id="favorites" class="favorites-section" aria-labelledby="favorites-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Saved jobs</p>
+              <h2 id="favorites-title">收藏夹</h2>
+              <p>点过赞的岗位会保存在这里；在任意位置修改赞踩，所有位置都会同步。</p>
+            </div>
+            <span id="favorites-count" class="count-badge">0 个</span>
+          </div>
+          <div id="favorites-list" class="favorites-list" aria-live="polite"></div>
+        </section>
+
         <details class="all-jobs-panel">
           <summary>
             <span>
@@ -98,7 +129,7 @@
           </summary>
           <div class="compact-job-table" role="table" aria-label="今天全部岗位">
             <div class="compact-job-row compact-job-header" role="row">
-              <span>排序 / 岗位</span><span>地点</span><span>学历要求</span><span>截止日期</span>
+              <span>排序 / 岗位</span><span>地点</span><span>学历要求</span><span>截止日期</span><span>赞踩</span>
             </div>
             <div id="all-jobs-list"></div>
           </div>
@@ -120,7 +151,7 @@
           <div class="requirement-copy">
             <p class="eyebrow">Personal rule</p>
             <h2 id="requirement-title">自定义重要要求</h2>
-            <p>这里的内容会附加到 DeepSeek 提示词中，影响后续新岗位的判断和排序，但不会放宽应届、学历和行政管理专业三项硬条件。</p>
+            <p>这里的内容会直接附加到 DeepSeek 提示词。赞踩学习得到的偏好在页面上方单独控制，两者都不会放宽应届、学历和行政管理专业三项硬条件。</p>
             <ul class="hard-rule-list">
               <li>应届毕业生 / 校园招聘</li>
               <li>本科或硕士门槛，不含大专/专科</li>
