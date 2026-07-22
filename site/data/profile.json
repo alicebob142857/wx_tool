@@ -3,5 +3,6 @@
   "education": "硕士研究生",
   "major": "行政管理",
   "freshGraduate": true,
-  "customRequirement": ""
+  "customRequirement": "",
+  "considerFeedback": false
 }
