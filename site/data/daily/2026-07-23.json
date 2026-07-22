@@ -1,0 +1,5025 @@
+{
+  "date": "2026-07-23",
+  "generatedAt": "2026-07-22T23:04:52.601Z",
+  "stats": {
+    "accountsConfigured": 10,
+    "accountsSucceeded": 10,
+    "articlesScanned": 535,
+    "newArticles": 28,
+    "candidateArticles": 25,
+    "relevantArticles": 10,
+    "positionsExtracted": 43,
+    "failedArticles": 2
+  },
+  "items": [
+    {
+      "id": "538ef95b567ceacf",
+      "account": "五财一贸",
+      "title": "秋招 | 前海开源基金2027届校园招聘暨暑假实习招聘启动（附秋招汇总表及经验交流群）",
+      "url": "https://mp.weixin.qq.com/s/NAODyJ96w1srdUMBxpYxtQ",
+      "publishedAt": "2026-07-22T13:56:33.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "前海开源基金2027届校园招聘暨暑假实习招聘启动，附秋招汇总表及经验交流群信息。",
+      "positions": [
+        {
+          "organization": "前海开源基金",
+          "organizationNature": "民企",
+          "industry": "金融",
+          "jobTitle": "应届生岗位（未明确具体岗位名称）",
+          "jobDirections": [
+            "未明确"
+          ],
+          "locations": [
+            "深圳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "未明确学历要求，但面向应届生，推测本科及以上",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确专业要求",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届应届毕业生"
+          ],
+          "compensation": {
+            "summary": "应届生平均月薪约1.6万，年薪25-30万，六险二金等",
+            "salary": "25-30万/年",
+            "benefits": [
+              "六险二金",
+              "年度体检",
+              "节日津贴",
+              "深圳前海税收优惠"
+            ],
+            "quality": 4
+          },
+          "deadline": null,
+          "applicationMethod": "未披露",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 72,
+            "rankingKey": 1344369,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "薪资待遇优厚，年薪25-30万",
+              "福利完善，六险二金",
+              "面向应届生，专业不限"
+            ],
+            "concerns": [
+              "具体岗位名称和方向未明确",
+              "专业要求未明确，可能竞争激烈",
+              "报名方式和截止日期未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "文章提到前海开源基金2027届校园招聘",
+            "薪资待遇描述",
+            "面向应届生"
+          ],
+          "confidence": 0.7,
+          "id": "56c3aee46ba7c339",
+          "personalized": {
+            "eligible": false,
+            "score": 47,
+            "rankingKey": 855699999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "薪资福利信息较有吸引力",
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "具体岗位名称和方向未明确",
+              "专业要求未明确，可能竞争激烈"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "文章主要宣传付费社群和暑期实习，仅前海开源基金一个正式校招岗位。",
+        "其他内容为求职课程和社群推广，非招聘岗位。"
+      ]
+    },
+    {
+      "id": "31f36d03a015f57f",
+      "account": "国聘",
+      "title": "中国黄金集团数智科技有限公司中层管理岗位公开招聘简章",
+      "url": "https://mp.weixin.qq.com/s/_N7wYl5UMgjI68mwSC2vuw",
+      "publishedAt": "2026-07-22T12:16:45.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 2,
+      "summary": "中国黄金集团数智科技有限公司发布中层管理岗位公开招聘简章，涉及综合办公室、项目技术部、集团管控系统部、企业数智化部、基础设施部、审计部等6个部门副经理岗位，要求硕士及以上学历，5-8年以上相关工作经验，非应届生岗位。",
+      "positions": [
+        {
+          "organization": "中国黄金集团数智科技有限公司",
+          "organizationNature": "央企",
+          "industry": "信息技术/矿业数字化",
+          "jobTitle": "综合办公室副经理（部门副职）",
+          "jobDirections": [
+            "综合行政",
+            "人力资源",
+            "党建群团"
+          ],
+          "locations": [
+            "未披露"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "往届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士研究生及以上学历",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "工学、管理学、理学、经济学、法学和文学等相关学科门类，计算机、矿山类相关专业优先",
+            "accepted": [
+              "管理学门类"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [
+            "中共正式党员",
+            "5年以上国央企办公室、战略、人力、党建等相关工作经验，其中3年以上团队管理经验"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": "通过“中国黄金招聘”公众号投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 74,
+            "rankingKey": 1540194,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求以硕士为主，符合优先级",
+              "专业接受管理学门类，与行政管理相关",
+              "央企平台，稳定性高"
+            ],
+            "concerns": [
+              "要求5年以上国央企相关工作经验，非应届生岗位",
+              "要求中共正式党员",
+              "学历要求硕士，但经验要求高",
+              "薪资福利未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 1,
+          "evidence": [
+            "任职要求（1）中共正式党员...（2）工学、管理学...硕士研究生及以上学历；（3）5年以上国央企办公室...工作经验"
+          ],
+          "confidence": 0.95,
+          "id": "626048f7d00cdfb5",
+          "personalized": {
+            "eligible": false,
+            "score": 59,
+            "rankingKey": 656899999,
+            "reasons": [
+              "专业要求覆盖公共管理或管理学门类",
+              "学历要求覆盖硕士研究生",
+              "专业符合管理类方向",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "未明确面向应届毕业生或校招",
+              "属于社会招聘，不符合应届求职目标",
+              "截止日期未披露，需尽快核对原文",
+              "要求5年以上国央企相关工作经验，非应届生岗位",
+              "要求中共正式党员"
+            ],
+            "gates": {
+              "freshGraduate": false,
+              "education": true,
+              "major": true,
+              "notSocialRecruitment": false,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国黄金集团数智科技有限公司",
+          "organizationNature": "央企",
+          "industry": "信息技术/矿业数字化",
+          "jobTitle": "项目技术部副经理（部门副职）",
+          "jobDirections": [
+            "技术架构",
+            "研发效能",
+            "质量管理",
+            "信息安全",
+            "资质管理",
+            "标准管理",
+            "项目管理"
+          ],
+          "locations": [
+            "未披露"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "往届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士研究生及以上学历",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "计算机、软件工程、大数据、人工智能、网络安全、电子信息等相关专业",
+            "accepted": [
+              "计算机相关"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "8年以上数字化研发、系统集成、工程项目技术管理经验，5年以上技术团队管理经验"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": "通过“中国黄金招聘”公众号投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 26,
+            "rankingKey": 1140094,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求计算机相关，行政管理不匹配",
+              "要求8年以上技术管理经验，非应届生岗位",
+              "薪资福利未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 0,
+          "evidence": [
+            "任职要求（1）计算机、软件工程...等相关专业，硕士研究生及以上学历；（2）具备8年以上...经验"
+          ],
+          "confidence": 0.95,
+          "id": "c0f3e2878cf6a0e4",
+          "personalized": {
+            "eligible": false,
+            "score": 31,
+            "rankingKey": 654099999,
+            "reasons": [
+              "学历要求覆盖硕士研究生",
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "未明确面向应届毕业生或校招",
+              "属于社会招聘，不符合应届求职目标",
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求计算机相关，行政管理不匹配"
+            ],
+            "gates": {
+              "freshGraduate": false,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": false,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国黄金集团数智科技有限公司",
+          "organizationNature": "央企",
+          "industry": "信息技术/矿业数字化",
+          "jobTitle": "集团管控系统部副经理（部门副职）",
+          "jobDirections": [
+            "战略规划",
+            "技术研发",
+            "人才培养",
+            "项目管理"
+          ],
+          "locations": [
+            "未披露"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "往届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士研究生及以上学历",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "计算机、软件工程、人工智能等相关专业",
+            "accepted": [
+              "计算机相关"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "8年以上技术研发和项目实施与管理经验，5年以上超20人技术团队管理经验"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": "通过“中国黄金招聘”公众号投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 26,
+            "rankingKey": 1140094,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求计算机相关，行政管理不匹配",
+              "要求8年以上经验，非应届生岗位",
+              "薪资福利未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 0,
+          "evidence": [
+            "任职要求（1）计算机、软件工程、人工智能等相关专业，硕士研究生及以上学历。（2）8年以上技术研发和项目实施与管理经验"
+          ],
+          "confidence": 0.95,
+          "id": "9290f118fca6b59a",
+          "personalized": {
+            "eligible": false,
+            "score": 31,
+            "rankingKey": 654099999,
+            "reasons": [
+              "学历要求覆盖硕士研究生",
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "未明确面向应届毕业生或校招",
+              "属于社会招聘，不符合应届求职目标",
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求计算机相关，行政管理不匹配"
+            ],
+            "gates": {
+              "freshGraduate": false,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": false,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国黄金集团数智科技有限公司",
+          "organizationNature": "央企",
+          "industry": "信息技术/矿业数字化",
+          "jobTitle": "企业数智化部副经理（部门副职）",
+          "jobDirections": [
+            "业务规划",
+            "解决方案",
+            "项目管理",
+            "技术创新",
+            "团队管理"
+          ],
+          "locations": [
+            "未披露"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "往届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士研究生及以上学历",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "地质、采矿、选矿、电气、机械制造、计算机等相关专业",
+            "accepted": [
+              "地质、采矿等"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "8年以上矿山及冶炼行业数智化应用落地工作经验，3年以上20人及以上技术团队管理经验"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": "通过“中国黄金招聘”公众号投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 26,
+            "rankingKey": 1140094,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求地质、采矿等，行政管理不匹配",
+              "要求8年以上行业经验，非应届生岗位",
+              "薪资福利未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 0,
+          "evidence": [
+            "任职要求（1）地质、采矿、选矿...等相关专业，硕士研究生及以上学历；（2）具备8年以上矿山及冶炼行业数智化应用落地工作经验"
+          ],
+          "confidence": 0.95,
+          "id": "ad284805b06cd612",
+          "personalized": {
+            "eligible": false,
+            "score": 31,
+            "rankingKey": 654099999,
+            "reasons": [
+              "学历要求覆盖硕士研究生",
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "未明确面向应届毕业生或校招",
+              "属于社会招聘，不符合应届求职目标",
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求地质、采矿等，行政管理不匹配"
+            ],
+            "gates": {
+              "freshGraduate": false,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": false,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国黄金集团数智科技有限公司",
+          "organizationNature": "央企",
+          "industry": "信息技术/矿业数字化",
+          "jobTitle": "基础设施部副经理（部门副职）",
+          "jobDirections": [
+            "基础设施管理",
+            "运维管理",
+            "安全管理",
+            "团队管理"
+          ],
+          "locations": [
+            "未披露"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "往届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士研究生及以上学历",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "计算机、通信、电子等相关专业",
+            "accepted": [
+              "计算机相关"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "8年及以上国央企IT运维管理工作经验，一线运维工作不少于3年；具有10人以上基础设施团队管理经验"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": "通过“中国黄金招聘”公众号投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 26,
+            "rankingKey": 1140094,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求计算机、通信等，行政管理不匹配",
+              "要求8年以上IT运维经验，非应届生岗位",
+              "薪资福利未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 0,
+          "evidence": [
+            "任职要求（1）计算机、通信、电子等相关专业，硕士研究生及以上学历；（2）8年及以上国央企IT运维管理工作经验"
+          ],
+          "confidence": 0.95,
+          "id": "fc1ad9ecf72cfdfd",
+          "personalized": {
+            "eligible": false,
+            "score": 31,
+            "rankingKey": 654099999,
+            "reasons": [
+              "学历要求覆盖硕士研究生",
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "未明确面向应届毕业生或校招",
+              "属于社会招聘，不符合应届求职目标",
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求计算机、通信等，行政管理不匹配"
+            ],
+            "gates": {
+              "freshGraduate": false,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": false,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国黄金集团数智科技有限公司",
+          "organizationNature": "央企",
+          "industry": "信息技术/矿业数字化",
+          "jobTitle": "审计部(法律合规部)副经理(部门副职)",
+          "jobDirections": [
+            "法务",
+            "内控审计",
+            "风险管控",
+            "合规管理"
+          ],
+          "locations": [
+            "未披露"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "往届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士研究生及以上学历",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "法学、审计、财务、风险管理相关专业",
+            "accepted": [
+              "法学、审计等"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "中共正式党员",
+            "5年以上国央企法务、审计风控工作经验，3年以上中层团队管理经验"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": "通过“中国黄金招聘”公众号投递简历",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 26,
+            "rankingKey": 1140094,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求法学、审计等，行政管理不匹配",
+              "要求5年以上国央企法务经验，非应届生岗位",
+              "要求中共正式党员",
+              "薪资福利未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 0,
+          "evidence": [
+            "任职要求（1）中共正式党员...（2）法学、审计、财务、风险管理相关专业，硕士研究生及以上学历；（3）5年以上国央企法务、审计风控工作经验"
+          ],
+          "confidence": 0.95,
+          "id": "92e247b299824d90",
+          "personalized": {
+            "eligible": false,
+            "score": 31,
+            "rankingKey": 654099999,
+            "reasons": [
+              "学历要求覆盖硕士研究生",
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "未明确面向应届毕业生或校招",
+              "属于社会招聘，不符合应届求职目标",
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求法学、审计等，行政管理不匹配"
+            ],
+            "gates": {
+              "freshGraduate": false,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": false,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "所有岗位均要求硕士及以上学历，且工作经验要求5年以上，非应届生岗位，不符合求职者应届生身份。",
+        "专业要求中仅综合办公室副经理接受管理学门类，但需5年以上国央企经验，且为社招。",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-4LvdDT/2.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-4LvdDT/1.png stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-4LvdDT/3.png stdout -l chi_sim+eng --psm 6\n"
+      ]
+    },
+    {
+      "id": "e1c9e88d369796b4",
+      "account": "国聘",
+      "title": "央企名企上市公司招聘信息推荐 7月（第四期）",
+      "url": "https://mp.weixin.qq.com/s/cQSLC5m5-C-_OKAOQkcqQA",
+      "publishedAt": "2026-07-22T12:16:45.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 3,
+      "summary": "央企名企上市公司招聘信息推荐，包含多个岗位，部分面向应届生。",
+      "positions": [
+        {
+          "organization": "岳阳兴长石化股份有限公司",
+          "organizationNature": "国企",
+          "industry": "化工",
+          "jobTitle": "研究员",
+          "jobDirections": [
+            "研究员"
+          ],
+          "locations": [
+            "岳阳"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确专业要求",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1342489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "校招，应届生可投",
+              "硕士学历要求，符合求职者学历",
+              "石化行业，稳定"
+            ],
+            "concerns": [
+              "专业不限，但可能偏好化工相关",
+              "地点岳阳，非一线",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "研究员",
+            "岳阳",
+            "硕士",
+            "应届生"
+          ],
+          "confidence": 0.9,
+          "id": "b93c01a6454aa32a",
+          "personalized": {
+            "eligible": false,
+            "score": 50,
+            "rankingKey": 855999999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业不限，但可能偏好化工相关",
+              "地点岳阳，非一线"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "北京经纬恒润科技股份有限公司",
+          "organizationNature": "民企",
+          "industry": "汽车科技",
+          "jobTitle": "销售工程师（校招）",
+          "jobDirections": [
+            "销售工程师"
+          ],
+          "locations": [
+            "长春"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确专业要求",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 69,
+            "rankingKey": 1342489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "校招，应届生可投",
+              "硕士学历要求，符合求职者",
+              "销售岗位，不限专业"
+            ],
+            "concerns": [
+              "专业不限，但可能偏好工科",
+              "地点长春，非一线",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "销售工程师",
+            "长春",
+            "硕士",
+            "应届生"
+          ],
+          "confidence": 0.9,
+          "id": "b8e3c28ef014cd04",
+          "personalized": {
+            "eligible": false,
+            "score": 45,
+            "rankingKey": 855499999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业不限，但可能偏好工科",
+              "地点长春，非一线"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "长江证券股份有限公司海南分公司",
+          "organizationNature": "国企",
+          "industry": "金融",
+          "jobTitle": "管理培训生",
+          "jobDirections": [
+            "管理培训生"
+          ],
+          "locations": [
+            "海口"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": "本科",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确专业要求",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "经验不限"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1332489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "校招岗位，适合应届生",
+              "本科即可，学历门槛低",
+              "金融行业，发展前景好"
+            ],
+            "concerns": [
+              "专业不限，竞争可能激烈",
+              "地点海口，非一线城市",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "管理培训生",
+            "海口",
+            "本科",
+            "经验不限"
+          ],
+          "confidence": 0.9,
+          "id": "50767fc3a8303a8e",
+          "personalized": {
+            "eligible": false,
+            "score": 43,
+            "rankingKey": 855299999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历门槛为本科，可用硕士学历报考",
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业不限，竞争可能激烈",
+              "地点海口，非一线城市"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "深圳市中金岭南有色金属股份有限公司",
+          "organizationNature": "国企",
+          "industry": "有色金属",
+          "jobTitle": "中金岭南下属企业环保公司—化学检验",
+          "jobDirections": [
+            "化学检验"
+          ],
+          "locations": [
+            "韶关"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": "本科",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确专业要求",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1332489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "校招，应届生可投",
+              "本科即可",
+              "国企，稳定"
+            ],
+            "concerns": [
+              "专业不限，但可能偏好化学相关",
+              "地点韶关，非一线",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "化学检验",
+            "韶关",
+            "本科",
+            "应届生"
+          ],
+          "confidence": 0.9,
+          "id": "5c58831af4938936",
+          "personalized": {
+            "eligible": false,
+            "score": 43,
+            "rankingKey": 855299999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历门槛为本科，可用硕士学历报考",
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业不限，但可能偏好化学相关",
+              "地点韶关，非一线"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "厦门法拉电子股份有限公司",
+          "organizationNature": "国企",
+          "industry": "电子",
+          "jobTitle": "财务部科员",
+          "jobDirections": [
+            "财务部科员"
+          ],
+          "locations": [
+            "厦门"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": "本科",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确专业要求",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1332489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "校招，应届生可投",
+              "本科即可",
+              "国企，稳定"
+            ],
+            "concerns": [
+              "专业不限，但可能偏好财务相关",
+              "地点厦门，非一线",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "财务部科员",
+            "厦门",
+            "本科",
+            "应届生"
+          ],
+          "confidence": 0.9,
+          "id": "675f72c9b5bc8cf8",
+          "personalized": {
+            "eligible": false,
+            "score": 43,
+            "rankingKey": 855299999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历门槛为本科，可用硕士学历报考",
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业不限，但可能偏好财务相关",
+              "地点厦门，非一线"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "北矿科技股份有限公司",
+          "organizationNature": "国企",
+          "industry": "科技",
+          "jobTitle": "营销经理",
+          "jobDirections": [
+            "营销经理"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": "本科",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确专业要求",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1332489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "校招，应届生可投",
+              "地点北京，一线城市",
+              "本科即可"
+            ],
+            "concerns": [
+              "专业不限，但可能偏好市场营销",
+              "薪资未披露",
+              "岗位与行政管理关联度低"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "营销经理",
+            "北京",
+            "本科",
+            "应届生"
+          ],
+          "confidence": 0.9,
+          "id": "9acab0db3d9f5899",
+          "personalized": {
+            "eligible": false,
+            "score": 43,
+            "rankingKey": 855299999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历门槛为本科，可用硕士学历报考",
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业不限，但可能偏好市场营销",
+              "薪资未披露"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "西藏珠峰资源股份有限公司",
+          "organizationNature": "民企",
+          "industry": "矿业",
+          "jobTitle": "人事专员",
+          "jobDirections": [
+            "人事专员"
+          ],
+          "locations": [
+            "塔吉克斯坦"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": "本科",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确专业要求",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1332489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "校招，应届生可投",
+              "人事岗位，与行政管理专业相关",
+              "本科即可"
+            ],
+            "concerns": [
+              "工作地点在国外（塔吉克斯坦）",
+              "专业不限，但可能偏好人力资源",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "人事专员",
+            "塔吉克斯坦",
+            "本科",
+            "应届生"
+          ],
+          "confidence": 0.9,
+          "id": "fb81f0e9a5bfe995",
+          "personalized": {
+            "eligible": false,
+            "score": 38,
+            "rankingKey": 854799999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历门槛为本科，可用硕士学历报考",
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "工作地点在国外（塔吉克斯坦）",
+              "专业不限，但可能偏好人力资源"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "武威市优然牧业有限责任公司",
+          "organizationNature": "民企",
+          "industry": "农业",
+          "jobTitle": "培训生（保健员、质量员）",
+          "jobDirections": [
+            "培训生"
+          ],
+          "locations": [
+            "武威"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": "本科",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确专业要求",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1332489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "校招，应届生可投",
+              "本科即可",
+              "培训生岗位，有培养体系"
+            ],
+            "concerns": [
+              "专业不限，但可能偏好畜牧相关",
+              "地点武威，非一线",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "培训生",
+            "武威",
+            "本科",
+            "应届生"
+          ],
+          "confidence": 0.9,
+          "id": "95106929764701f8",
+          "personalized": {
+            "eligible": false,
+            "score": 38,
+            "rankingKey": 854799999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历门槛为本科，可用硕士学历报考",
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业不限，但可能偏好畜牧相关",
+              "地点武威，非一线"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "厦门松霖科技股份有限公司",
+          "organizationNature": "民企",
+          "industry": "制造业",
+          "jobTitle": "人力资源专员（2026届）",
+          "jobDirections": [
+            "人力资源专员"
+          ],
+          "locations": [
+            "厦门"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": "本科",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确专业要求",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1332489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "校招，应届生可投",
+              "人力资源岗位，与行政管理相关",
+              "本科即可"
+            ],
+            "concerns": [
+              "专业不限，但可能偏好人力资源",
+              "地点厦门，非一线",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "人力资源专员",
+            "厦门",
+            "本科",
+            "应届生"
+          ],
+          "confidence": 0.9,
+          "id": "847b005071acb045",
+          "personalized": {
+            "eligible": false,
+            "score": 38,
+            "rankingKey": 854799999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历门槛为本科，可用硕士学历报考",
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业不限，但可能偏好人力资源",
+              "地点厦门，非一线"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "北京学而思教育科技有限公司",
+          "organizationNature": "民企",
+          "industry": "教育",
+          "jobTitle": "课程顾问",
+          "jobDirections": [
+            "课程顾问"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": "本科",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确专业要求",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 64,
+            "rankingKey": 1332489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报",
+              "校招，应届生可投",
+              "地点北京，一线城市",
+              "本科即可"
+            ],
+            "concerns": [
+              "专业不限，但可能偏好销售",
+              "薪资未披露",
+              "岗位与行政管理关联度低"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "课程顾问",
+            "北京",
+            "本科",
+            "应届生"
+          ],
+          "confidence": 0.9,
+          "id": "71efb91788bd0780",
+          "personalized": {
+            "eligible": false,
+            "score": 38,
+            "rankingKey": 854799999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历门槛为本科，可用硕士学历报考",
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业不限，但可能偏好销售",
+              "薪资未披露"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "温氏食品集团股份有限公司",
+          "organizationNature": "民企",
+          "industry": "农业",
+          "jobTitle": "人力专员",
+          "jobDirections": [
+            "人力专员"
+          ],
+          "locations": [
+            "广州"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "往届",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "硕士及以上",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确专业要求",
+            "accepted": [],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "1-3年经验"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 68,
+            "rankingKey": 1342389,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "硕士学历要求，符合求职者",
+              "人力岗位，与行政管理相关",
+              "地点广州，一线城市"
+            ],
+            "concerns": [
+              "社招，要求1-3年经验，非应届生优先",
+              "专业不限，但可能偏好人力资源",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "人力专员",
+            "广州",
+            "硕士",
+            "1-3年"
+          ],
+          "confidence": 0.9,
+          "id": "721bac4177416dd1",
+          "personalized": {
+            "eligible": false,
+            "score": 31,
+            "rankingKey": 654099999,
+            "reasons": [
+              "学历要求覆盖硕士研究生",
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "未明确面向应届毕业生或校招",
+              "属于社会招聘，不符合应届求职目标",
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "社招，要求1-3年经验，非应届生优先",
+              "专业不限，但可能偏好人力资源"
+            ],
+            "gates": {
+              "freshGraduate": false,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": false,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-zzslbL/0.png stdout -l chi_sim+eng --psm 6\n",
+        "第 3 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-zzslbL/2.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-zzslbL/4.png stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-zzslbL/5.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 7 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-zzslbL/6.jpg stdout -l chi_sim+eng --psm 6\n"
+      ]
+    },
+    {
+      "id": "46b2280637fd7af8",
+      "account": "国聘",
+      "title": "社会组织/团体招聘信息汇总 7月（第四期）",
+      "url": "https://mp.weixin.qq.com/s/zI0wfnWifqTB_Ig7kyle9g",
+      "publishedAt": "2026-07-22T12:16:45.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 4,
+      "summary": "社会组织/团体招聘信息汇总，包含多个岗位，部分面向应届生。",
+      "positions": [
+        {
+          "organization": "中国钢铁工业协会",
+          "organizationNature": "社会组织",
+          "industry": "工业",
+          "jobTitle": "行业研究和分析管理岗",
+          "jobDirections": [
+            "行业研究",
+            "分析管理"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "应届生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确，但通常管理类可报",
+            "accepted": [
+              "管理类"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 3
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 86,
+            "rankingKey": 1543479,
+            "level": "high",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求以硕士为主，符合优先级",
+              "面向应届生",
+              "硕士学历",
+              "北京工作"
+            ],
+            "concerns": [
+              "专业要求未明确",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "中国钢铁工业协会行业研究和分析管理岗北京硕士应届生"
+          ],
+          "confidence": 0.8,
+          "id": "09ccb546a1845176",
+          "personalized": {
+            "eligible": false,
+            "score": 47,
+            "rankingKey": 855699999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业符合管理类方向",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业要求未明确",
+              "薪资未披露"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国保险学会",
+          "organizationNature": "社会组织",
+          "industry": "保险",
+          "jobTitle": "研究一部研究岗",
+          "jobDirections": [
+            "研究"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "应届生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 3
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 54,
+            "rankingKey": 1243369,
+            "level": "medium",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级",
+              "面向应届生",
+              "硕士学历",
+              "北京工作"
+            ],
+            "concerns": [
+              "专业要求不明",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "中国保险学会研究一部研究岗北京硕士应届生"
+          ],
+          "confidence": 0.7,
+          "id": "756250365ddc5ae5",
+          "personalized": {
+            "eligible": false,
+            "score": 45,
+            "rankingKey": 855499999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业要求不明",
+              "薪资未披露"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国保险学会",
+          "organizationNature": "社会组织",
+          "industry": "保险",
+          "jobTitle": "《保险研究》编辑部编辑岗",
+          "jobDirections": [
+            "编辑"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "应届生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 3
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 54,
+            "rankingKey": 1243369,
+            "level": "medium",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级",
+              "面向应届生",
+              "硕士学历",
+              "北京工作"
+            ],
+            "concerns": [
+              "专业要求不明",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "中国保险学会《保险研究》编辑部编辑岗北京硕士应届生"
+          ],
+          "confidence": 0.7,
+          "id": "0dc39b3a74bd2158",
+          "personalized": {
+            "eligible": false,
+            "score": 45,
+            "rankingKey": 855499999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业要求不明",
+              "薪资未披露"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "上海海蕴女性创业就业指导服务中心",
+          "organizationNature": "社会组织",
+          "industry": "创业服务",
+          "jobTitle": "项目策划执行",
+          "jobDirections": [
+            "项目策划",
+            "执行"
+          ],
+          "locations": [
+            "上海"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "应届生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "硕士",
+            "minimum": "硕士",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 3
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 54,
+            "rankingKey": 1243369,
+            "level": "medium",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级",
+              "面向应届生",
+              "硕士学历",
+              "上海工作"
+            ],
+            "concerns": [
+              "专业要求不明",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "上海海蕴女性创业就业指导服务中心项目策划执行上海硕士应届生"
+          ],
+          "confidence": 0.7,
+          "id": "e95deea5cc9392c6",
+          "personalized": {
+            "eligible": false,
+            "score": 45,
+            "rankingKey": 855499999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业要求不明",
+              "薪资未披露"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "雄安新区智能城市创新联合会",
+          "organizationNature": "社会组织",
+          "industry": "科技",
+          "jobTitle": "解决方案工程师（应届生）",
+          "jobDirections": [
+            "解决方案"
+          ],
+          "locations": [
+            "雄安新区"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "应届生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科",
+            "minimum": "本科",
+            "preferred": "本科",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 3
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 49,
+            "rankingKey": 1233369,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "面向应届生",
+              "本科可报",
+              "雄安新区"
+            ],
+            "concerns": [
+              "专业要求不明",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "雄安新区智能城市创新联合会解决方案工程师（应届生）雄安新区本科经验不限"
+          ],
+          "confidence": 0.7,
+          "id": "e5972e42ee1f7e55",
+          "personalized": {
+            "eligible": false,
+            "score": 38,
+            "rankingKey": 854799999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历门槛为本科，可用硕士学历报考",
+              "专业范围尚需核对原文",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业要求不明",
+              "薪资未披露"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "上海市奉贤青云围棋俱乐部",
+          "organizationNature": "社会组织",
+          "industry": "教育",
+          "jobTitle": "教师",
+          "jobDirections": [
+            "教学"
+          ],
+          "locations": [
+            "上海"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "应届生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科",
+            "minimum": "本科",
+            "preferred": "本科",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 3
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 49,
+            "rankingKey": 1233369,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "面向应届生",
+              "本科可报",
+              "上海工作"
+            ],
+            "concerns": [
+              "专业要求不明",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "上海市奉贤青云围棋俱乐部教师上海本科应届生"
+          ],
+          "confidence": 0.7,
+          "id": "107fb8a1cdd36d4a",
+          "personalized": {
+            "eligible": false,
+            "score": 38,
+            "rankingKey": 854799999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历门槛为本科，可用硕士学历报考",
+              "专业范围尚需核对原文",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业要求不明",
+              "薪资未披露"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "上海黄浦奋斗者社区公益服务中心",
+          "organizationNature": "社会组织",
+          "industry": "公益",
+          "jobTitle": "理事长助理（项目统筹方向）",
+          "jobDirections": [
+            "项目统筹",
+            "助理"
+          ],
+          "locations": [
+            "上海"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "应届生",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科",
+            "minimum": "本科",
+            "preferred": "本科",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "应届生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 3
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 49,
+            "rankingKey": 1233369,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "面向应届生",
+              "本科可报",
+              "上海工作"
+            ],
+            "concerns": [
+              "专业要求不明",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "上海黄浦奋斗者社区公益服务中心理事长助理（项目统筹方向）上海本科应届生"
+          ],
+          "confidence": 0.7,
+          "id": "553290f3cabea656",
+          "personalized": {
+            "eligible": false,
+            "score": 38,
+            "rankingKey": 854799999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历门槛为本科，可用硕士学历报考",
+              "专业范围尚需核对原文",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业要求不明",
+              "薪资未披露"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国保险学会",
+          "organizationNature": "社会组织",
+          "industry": "保险",
+          "jobTitle": "办公室（党委办公室）行政岗",
+          "jobDirections": [
+            "行政"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "经验不限",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科",
+            "minimum": "本科",
+            "preferred": "本科",
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "经验不限"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 2
+          },
+          "deadline": null,
+          "applicationMethod": "国聘平台",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 47,
+            "rankingKey": 1232369,
+            "level": "low",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "本科或大专层次可报",
+              "本科可报",
+              "北京工作"
+            ],
+            "concerns": [
+              "专业要求不明",
+              "非校招",
+              "薪资未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "中国保险学会办公室（党委办公室）行政岗北京本科经验不限"
+          ],
+          "confidence": 0.7,
+          "id": "3845a1687549a79b",
+          "personalized": {
+            "eligible": false,
+            "score": 23,
+            "rankingKey": 653299999,
+            "reasons": [
+              "学历门槛为本科，可用硕士学历报考",
+              "专业范围尚需核对原文",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "未明确面向应届毕业生或校招",
+              "属于社会招聘，不符合应届求职目标",
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "专业要求不明",
+              "非校招"
+            ],
+            "gates": {
+              "freshGraduate": false,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": false,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eM6YMk/0.png stdout -l chi_sim+eng --psm 6\n",
+        "第 5 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eM6YMk/4.png stdout -l chi_sim+eng --psm 6\n",
+        "第 6 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eM6YMk/5.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 7 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-eM6YMk/6.jpg stdout -l chi_sim+eng --psm 6\n"
+      ]
+    },
+    {
+      "id": "78dea8c898c3ba0b",
+      "account": "清华就业",
+      "title": "招聘丨RoboSense 2027届全球校园招聘提前批启动",
+      "url": "https://mp.weixin.qq.com/s/aFkQLjWuHzMW1_vi-UGFIg",
+      "publishedAt": "2026-07-22T12:07:52.000Z",
+      "ocrUsed": true,
+      "ocrImageCount": 1,
+      "summary": "RoboSense速腾聚创2027届全球校园招聘提前批启动，面向2027届毕业生，招聘岗位包括算法类、软件类、硬件类、系统类、测试类、产品类、项目管理类、设计类、供应链类、职能类等，工作地点涵盖深圳、上海、北京、苏州、广州、杭州、武汉、长沙、西安、德国、美国等。",
+      "positions": [
+        {
+          "organization": "RoboSense速腾聚创",
+          "organizationNature": "民企",
+          "industry": "人工智能",
+          "jobTitle": "职能类岗位",
+          "jobDirections": [
+            "职能类"
+          ],
+          "locations": [
+            "深圳",
+            "上海",
+            "北京",
+            "苏州",
+            "广州",
+            "杭州",
+            "武汉",
+            "长沙",
+            "西安",
+            "德国",
+            "美国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上学历",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限，职能类岗位可能涉及行政管理等相关专业",
+            "accepted": [
+              "不限专业"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2027届应届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 3
+          },
+          "deadline": null,
+          "applicationMethod": "网申",
+          "applicationUrl": "https://app.mokahr.com/campus-recruitment/robosense/20001?sourceToken=9f8e8c8f-8e8c-8f8e-8c8f-8e8c8f8e8c8f",
+          "referralCode": null,
+          "recommendation": {
+            "score": 72,
+            "rankingKey": 1343489,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "面向2027届应届生，符合应届身份",
+              "学历要求本科及以上，硕士优先",
+              "专业不限，行政管理专业可投递",
+              "工作地点多，选择灵活"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "职能类岗位具体方向未明确，可能竞争激烈",
+              "企业性质为民企，稳定性相对国企较低"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "招聘面向2027届应届毕业生",
+            "学历要求本科及以上",
+            "专业不限"
+          ],
+          "confidence": 0.9,
+          "id": "22ef7194a6b1d8cf",
+          "personalized": {
+            "eligible": true,
+            "score": 90,
+            "rankingKey": 2009999999,
+            "reasons": [
+              "专业要求明确覆盖行政管理",
+              "专业不限，行政管理可以报考",
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "报名入口明确，投递可操作性较高",
+              "专业限制较宽或不限专业"
+            ],
+            "concerns": [
+              "截止日期未披露，需尽快核对原文",
+              "薪资福利未披露",
+              "职能类岗位具体方向未明确，可能竞争激烈"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": true,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-WzwOZe/1.png stdout -l chi_sim+eng --psm 6\n",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-WzwOZe/0.jpg stdout -l chi_sim+eng --psm 6\n",
+        "第 4 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-WzwOZe/3.png stdout -l chi_sim+eng --psm 6\n"
+      ]
+    },
+    {
+      "id": "6b9be913ee81d6f1",
+      "account": "清华就业",
+      "title": "招聘丨Brainco强脑科技人才招募",
+      "url": "https://mp.weixin.qq.com/s/neetO1ZRa4mQiLj1NSQK5A",
+      "publishedAt": "2026-07-22T12:07:52.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "Brainco强脑科技发布多个校招岗位，面向2025届毕业生，专业涵盖计算机、电子、生物医学工程等，未明确提及行政管理专业。",
+      "positions": [
+        {
+          "organization": "Brainco强脑科技",
+          "organizationNature": "民企",
+          "industry": "电子信息",
+          "jobTitle": "产品经理",
+          "jobDirections": [
+            "产品"
+          ],
+          "locations": [
+            "未披露"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2025届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业不限",
+            "accepted": [
+              "不限"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "2025届应届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 61,
+            "rankingKey": 1340269,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级",
+              "校招岗位，面向应届生",
+              "专业不限，行政管理可投递"
+            ],
+            "concerns": [
+              "薪资福利未披露",
+              "岗位方向与行政管理关联度低"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 2,
+          "evidence": [
+            "图片OCR显示产品经理岗位，专业不限"
+          ],
+          "confidence": 0.7,
+          "id": "c02a2221ab8c8b06",
+          "personalized": {
+            "eligible": true,
+            "score": 70,
+            "rankingKey": 2007999999,
+            "reasons": [
+              "专业不限，行政管理可以报考",
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业限制较宽或不限专业",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "截止日期未披露，需尽快核对原文",
+              "薪资福利未披露",
+              "岗位方向与行政管理关联度低"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": true,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "Brainco强脑科技",
+          "organizationNature": "民企",
+          "industry": "电子信息",
+          "jobTitle": "算法工程师",
+          "jobDirections": [
+            "算法"
+          ],
+          "locations": [
+            "未披露"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2025届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "计算机、电子、数学等相关专业",
+            "accepted": [
+              "计算机",
+              "电子",
+              "数学"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "2025届应届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 28,
+            "rankingKey": 1140159,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级",
+              "校招岗位，面向应届生"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业不匹配，未接受行政管理",
+              "薪资福利未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 1,
+          "evidence": [
+            "图片OCR显示算法工程师岗位，专业要求计算机、电子、数学"
+          ],
+          "confidence": 0.6,
+          "id": "9f7fed9ab29f2e4e",
+          "personalized": {
+            "eligible": false,
+            "score": 40,
+            "rankingKey": 854999999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "未发现行政管理、管理类或文科专业入口",
+              "专业不匹配，未接受行政管理"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "Brainco强脑科技",
+          "organizationNature": "民企",
+          "industry": "电子信息",
+          "jobTitle": "嵌入式软件工程师",
+          "jobDirections": [
+            "嵌入式软件"
+          ],
+          "locations": [
+            "未披露"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2025届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "计算机、电子、自动化等相关专业",
+            "accepted": [
+              "计算机",
+              "电子",
+              "自动化"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "2025届应届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 28,
+            "rankingKey": 1140159,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级",
+              "校招岗位，面向应届生"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业不匹配，未接受行政管理",
+              "薪资福利未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 1,
+          "evidence": [
+            "图片OCR显示嵌入式软件工程师岗位，专业要求计算机、电子、自动化"
+          ],
+          "confidence": 0.6,
+          "id": "f5e2c85e3a96376a",
+          "personalized": {
+            "eligible": false,
+            "score": 40,
+            "rankingKey": 854999999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "未发现行政管理、管理类或文科专业入口",
+              "专业不匹配，未接受行政管理"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "Brainco强脑科技",
+          "organizationNature": "民企",
+          "industry": "电子信息",
+          "jobTitle": "硬件工程师",
+          "jobDirections": [
+            "硬件"
+          ],
+          "locations": [
+            "未披露"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2025届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "电子、通信、自动化等相关专业",
+            "accepted": [
+              "电子",
+              "通信",
+              "自动化"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "2025届应届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 28,
+            "rankingKey": 1140159,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级",
+              "校招岗位，面向应届生"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业不匹配，未接受行政管理",
+              "薪资福利未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 1,
+          "evidence": [
+            "图片OCR显示硬件工程师岗位，专业要求电子、通信、自动化"
+          ],
+          "confidence": 0.6,
+          "id": "05e93c320563f127",
+          "personalized": {
+            "eligible": false,
+            "score": 40,
+            "rankingKey": 854999999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "未发现行政管理、管理类或文科专业入口",
+              "专业不匹配，未接受行政管理"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "Brainco强脑科技",
+          "organizationNature": "民企",
+          "industry": "电子信息",
+          "jobTitle": "生物医学工程师",
+          "jobDirections": [
+            "生物医学"
+          ],
+          "locations": [
+            "未披露"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2025届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "生物医学工程、神经科学等相关专业",
+            "accepted": [
+              "生物医学工程",
+              "神经科学"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "2025届应届毕业生"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 28,
+            "rankingKey": 1140159,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级",
+              "校招岗位，面向应届生"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业不匹配，未接受行政管理",
+              "薪资福利未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 1,
+          "evidence": [
+            "图片OCR显示生物医学工程师岗位，专业要求生物医学工程、神经科学"
+          ],
+          "confidence": 0.6,
+          "id": "5de970cacb619c60",
+          "personalized": {
+            "eligible": false,
+            "score": 40,
+            "rankingKey": 854999999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业匹配度较低",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "未发现行政管理、管理类或文科专业入口",
+              "专业不匹配，未接受行政管理"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "文章未提供具体岗位详情，仅通过图片OCR获取有限信息，可能遗漏部分岗位。",
+        "未明确提及行政管理专业，专业匹配度低。",
+        "第 2 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-ZRuQxT/1.png stdout -l chi_sim+eng --psm 6\n",
+        "第 1 张图片 OCR 失败：Command failed: tesseract /tmp/wx-ocr-ZRuQxT/0.png stdout -l chi_sim+eng --psm 6\n"
+      ]
+    },
+    {
+      "id": "3f8c6ea707bf8518",
+      "account": "央企求职网",
+      "title": "中国港湾2026年夏季公开招聘公告",
+      "url": "https://mp.weixin.qq.com/s/rzCIXeHE3KqmUz2cWN63lA",
+      "publishedAt": "2026-07-22T07:33:40.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "中国港湾2026年夏季公开招聘燃气电站管理和工程师岗位，要求本科及以上学历，相关专业优先，有工作经验者优先，工作地点北京或境外项目部。",
+      "positions": [
+        {
+          "organization": "中国港湾工程有限责任公司",
+          "organizationNature": "央企",
+          "industry": "工程承包",
+          "jobTitle": "燃气电站管理岗位",
+          "jobDirections": [
+            "联合循环电站项目现场管理",
+            "项目执行",
+            "质量管理",
+            "计划管理",
+            "商务合约管理",
+            "团队协调",
+            "业主/分包商沟通"
+          ],
+          "locations": [
+            "北京总部或境外项目部"
+          ],
+          "headcount": "5",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "往届",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上学历",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "工程管理、电力工程、热能动力、电气、自动化、土木工程、项目管理、商务合约等相关专业优先",
+            "accepted": [
+              "工程管理",
+              "电力工程",
+              "热能动力",
+              "电气",
+              "自动化",
+              "土木工程",
+              "项目管理",
+              "商务合约"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "具有电力工程、燃气电站、联合循环电站或大型工业项目管理经验",
+            "熟悉海外工程项目管理流程",
+            "具备较强组织协调能力、沟通能力和团队管理能力",
+            "具有海外项目工作经历、燃气电站项目经历、F级及以上燃机电站项目经历者优先",
+            "具备一定英语沟通能力",
+            "能够接受项目现场长期派驻安排"
+          ],
+          "compensation": {
+            "summary": "待遇从优，执行中国港湾工程有限责任公司薪酬体系",
+            "salary": null,
+            "benefits": [],
+            "quality": 3
+          },
+          "deadline": "2026-09-31",
+          "applicationMethod": "扫描二维码报名，并将应聘材料合并为PDF以'应聘岗位+姓名+联系方式'命名上传",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 31,
+            "rankingKey": 1133289,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "本科或大专层次可报",
+              "央企平台，待遇从优",
+              "工作地点包括北京总部或境外项目部，有海外发展机会"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求与行政管理不匹配，优先专业中未包含行政管理",
+              "社招岗位，非应届生校招",
+              "要求有相关工作经验，应届生可能不符合条件"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 2,
+          "evidence": [
+            "本科及以上学历",
+            "工程管理、电力工程等相关专业优先",
+            "具有电力工程、燃气电站等项目管理经验",
+            "社招性质，要求工作经验"
+          ],
+          "confidence": 0.9,
+          "id": "ffced87b4d067cbd",
+          "personalized": {
+            "eligible": false,
+            "score": 28,
+            "rankingKey": 653799999,
+            "reasons": [
+              "学历门槛为本科，可用硕士学历报考",
+              "专业匹配度较低",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "未明确面向应届毕业生或校招",
+              "属于社会招聘，不符合应届求职目标",
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求与行政管理不匹配，优先专业中未包含行政管理"
+            ],
+            "gates": {
+              "freshGraduate": false,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": false,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国港湾工程有限责任公司",
+          "organizationNature": "央企",
+          "industry": "工程承包",
+          "jobTitle": "燃气电站工程师岗位",
+          "jobDirections": [
+            "燃气联合循环电站项目设计协调",
+            "设备安装",
+            "施工管理",
+            "专业技术支持",
+            "调试配合",
+            "质量安全管控",
+            "采购协调",
+            "工程计量",
+            "现场问题处理"
+          ],
+          "locations": [
+            "北京总部或境外项目部"
+          ],
+          "headcount": "10",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "往届",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "本科及以上学历",
+            "minimum": "本科",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "热能动力、电气工程、自动化、仪控、土木工程、建筑、暖通、给排水、安全工程、工程管理、采购管理等相关专业优先",
+            "accepted": [
+              "热能动力",
+              "电气工程",
+              "自动化",
+              "仪控",
+              "土木工程",
+              "建筑",
+              "暖通",
+              "给排水",
+              "安全工程",
+              "工程管理",
+              "采购管理"
+            ],
+            "fit": "mismatch"
+          },
+          "applicationRequirements": [
+            "具有电力工程、燃气电站、联合循环电站或大型工业项目设计、施工、安装、调试、采购、质量、安全或商务管理相关工作经验",
+            "熟悉燃气电站项目相关专业技术要求",
+            "能够根据项目需要承担相关专业工作",
+            "具有燃气电站、F级及以上燃机项目、H级燃机项目或海外工程项目经验者优先",
+            "具备一定英语沟通能力",
+            "具有良好的沟通协调能力、执行力和责任心",
+            "能够适应海外项目现场工作节奏"
+          ],
+          "compensation": {
+            "summary": "待遇从优，执行中国港湾工程有限责任公司薪酬体系",
+            "salary": null,
+            "benefits": [],
+            "quality": 3
+          },
+          "deadline": "2026-09-31",
+          "applicationMethod": "扫描二维码报名，并将应聘材料合并为PDF以'应聘岗位+姓名+联系方式'命名上传",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 31,
+            "rankingKey": 1133289,
+            "level": "low",
+            "reasons": [
+              "专业匹配度较低",
+              "本科或大专层次可报",
+              "央企平台，待遇从优",
+              "工作地点包括北京总部或境外项目部，有海外发展机会"
+            ],
+            "concerns": [
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求与行政管理不匹配，优先专业中未包含行政管理",
+              "社招岗位，非应届生校招",
+              "要求有相关工作经验，应届生可能不符合条件"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 2,
+          "evidence": [
+            "本科及以上学历",
+            "热能动力、电气工程等相关专业优先",
+            "具有电力工程、燃气电站等设计、施工、安装等经验",
+            "社招性质，要求工作经验"
+          ],
+          "confidence": 0.9,
+          "id": "f4758152580c764b",
+          "personalized": {
+            "eligible": false,
+            "score": 28,
+            "rankingKey": 653799999,
+            "reasons": [
+              "学历门槛为本科，可用硕士学历报考",
+              "专业匹配度较低",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "未明确面向应届毕业生或校招",
+              "属于社会招聘，不符合应届求职目标",
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "未发现行政管理、管理类或文科专业入口",
+              "专业要求与行政管理不匹配，优先专业中未包含行政管理"
+            ],
+            "gates": {
+              "freshGraduate": false,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": false,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
+    },
+    {
+      "id": "9da4c958af42e085",
+      "account": "央企求职网",
+      "title": "中国石化2027校招计划及薪资待遇",
+      "url": "https://mp.weixin.qq.com/s/tDNSnDMErxHi1_vRvJ9GPQ",
+      "publishedAt": "2026-07-22T07:33:40.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "中国石化2027届校园招聘预告，涵盖招聘对象、岗位、流程及薪酬福利，具体岗位需登录官网查询。",
+      "positions": [
+        {
+          "organization": "中国石油化工集团有限公司",
+          "organizationNature": "央企",
+          "industry": "石油石化",
+          "jobTitle": "油田企业岗位",
+          "jobDirections": [
+            "油田企业"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上，硕士优先",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业要求未明确，需登录官网查询",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "2027年全国普通高等院校统招统分应届毕业生",
+            "回国初次就业留学生（2026.1.1-2027.12.31毕业）",
+            "西藏、青海、新疆等地区毕业生同等条件优先"
+          ],
+          "compensation": {
+            "summary": "基本工资+绩效奖金+年终奖，人均29.26万元（含社保），硕士转正第一年平均16-20w",
+            "salary": "硕士转正第一年平均16-20w",
+            "benefits": [
+              "五险一金",
+              "补充医疗险",
+              "企业年金",
+              "重疾险",
+              "意外险",
+              "带薪年假",
+              "年度体检",
+              "生日福利",
+              "结婚礼金",
+              "生育礼金",
+              "退休慰问金",
+              "急难救助金"
+            ],
+            "quality": 4
+          },
+          "deadline": "2026年11月15日24:00",
+          "applicationMethod": "网上报名",
+          "applicationUrl": "http://job.sinopec.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 58,
+            "rankingKey": 1244479,
+            "level": "medium",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级",
+              "央企平台，规模大",
+              "薪资福利优厚",
+              "明确面向应届生",
+              "北京户口机会"
+            ],
+            "concerns": [
+              "专业要求未明确，需官网查询",
+              "具体岗位未列出，匹配度不确定",
+              "竞争激烈"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "招聘对象为2027届应届毕业生",
+            "薪酬待遇描述",
+            "北京户口机会"
+          ],
+          "confidence": 0.8,
+          "id": "af70f31e01e75912",
+          "personalized": {
+            "eligible": false,
+            "score": 54,
+            "rankingKey": 856399999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "薪资福利信息较有吸引力",
+              "报名入口明确，投递可操作性较高",
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "专业要求未明确，需官网查询",
+              "具体岗位未列出，匹配度不确定"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国石油化工集团有限公司",
+          "organizationNature": "央企",
+          "industry": "石油石化",
+          "jobTitle": "炼化企业岗位",
+          "jobDirections": [
+            "炼化企业"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上，硕士优先",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业要求未明确，需登录官网查询",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "2027年全国普通高等院校统招统分应届毕业生",
+            "回国初次就业留学生（2026.1.1-2027.12.31毕业）",
+            "西藏、青海、新疆等地区毕业生同等条件优先"
+          ],
+          "compensation": {
+            "summary": "基本工资+绩效奖金+年终奖，人均29.26万元（含社保），硕士转正第一年平均16-20w",
+            "salary": "硕士转正第一年平均16-20w",
+            "benefits": [
+              "五险一金",
+              "补充医疗险",
+              "企业年金",
+              "重疾险",
+              "意外险",
+              "带薪年假",
+              "年度体检",
+              "生日福利",
+              "结婚礼金",
+              "生育礼金",
+              "退休慰问金",
+              "急难救助金"
+            ],
+            "quality": 4
+          },
+          "deadline": "2026年11月15日24:00",
+          "applicationMethod": "网上报名",
+          "applicationUrl": "http://job.sinopec.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 58,
+            "rankingKey": 1244479,
+            "level": "medium",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级",
+              "央企平台，规模大",
+              "薪资福利优厚",
+              "明确面向应届生",
+              "北京户口机会"
+            ],
+            "concerns": [
+              "专业要求未明确，需官网查询",
+              "具体岗位未列出，匹配度不确定",
+              "竞争激烈"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "招聘对象为2027届应届毕业生",
+            "薪酬待遇描述",
+            "北京户口机会"
+          ],
+          "confidence": 0.8,
+          "id": "45a3c181c1ab49fe",
+          "personalized": {
+            "eligible": false,
+            "score": 54,
+            "rankingKey": 856399999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "薪资福利信息较有吸引力",
+              "报名入口明确，投递可操作性较高",
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "专业要求未明确，需官网查询",
+              "具体岗位未列出，匹配度不确定"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国石油化工集团有限公司",
+          "organizationNature": "央企",
+          "industry": "石油石化",
+          "jobTitle": "成品油销售企业岗位",
+          "jobDirections": [
+            "成品油销售企业"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上，硕士优先",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业要求未明确，需登录官网查询",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "2027年全国普通高等院校统招统分应届毕业生",
+            "回国初次就业留学生（2026.1.1-2027.12.31毕业）",
+            "西藏、青海、新疆等地区毕业生同等条件优先"
+          ],
+          "compensation": {
+            "summary": "基本工资+绩效奖金+年终奖，人均29.26万元（含社保），硕士转正第一年平均16-20w",
+            "salary": "硕士转正第一年平均16-20w",
+            "benefits": [
+              "五险一金",
+              "补充医疗险",
+              "企业年金",
+              "重疾险",
+              "意外险",
+              "带薪年假",
+              "年度体检",
+              "生日福利",
+              "结婚礼金",
+              "生育礼金",
+              "退休慰问金",
+              "急难救助金"
+            ],
+            "quality": 4
+          },
+          "deadline": "2026年11月15日24:00",
+          "applicationMethod": "网上报名",
+          "applicationUrl": "http://job.sinopec.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 58,
+            "rankingKey": 1244479,
+            "level": "medium",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级",
+              "央企平台，规模大",
+              "薪资福利优厚",
+              "明确面向应届生",
+              "北京户口机会"
+            ],
+            "concerns": [
+              "专业要求未明确，需官网查询",
+              "具体岗位未列出，匹配度不确定",
+              "竞争激烈"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "招聘对象为2027届应届毕业生",
+            "薪酬待遇描述",
+            "北京户口机会"
+          ],
+          "confidence": 0.8,
+          "id": "3ce7061821e6a6e1",
+          "personalized": {
+            "eligible": false,
+            "score": 54,
+            "rankingKey": 856399999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "薪资福利信息较有吸引力",
+              "报名入口明确，投递可操作性较高",
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "专业要求未明确，需官网查询",
+              "具体岗位未列出，匹配度不确定"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国石油化工集团有限公司",
+          "organizationNature": "央企",
+          "industry": "石油石化",
+          "jobTitle": "设计施工单位岗位",
+          "jobDirections": [
+            "设计施工单位"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上，硕士优先",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业要求未明确，需登录官网查询",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "2027年全国普通高等院校统招统分应届毕业生",
+            "回国初次就业留学生（2026.1.1-2027.12.31毕业）",
+            "西藏、青海、新疆等地区毕业生同等条件优先"
+          ],
+          "compensation": {
+            "summary": "基本工资+绩效奖金+年终奖，人均29.26万元（含社保），硕士转正第一年平均16-20w",
+            "salary": "硕士转正第一年平均16-20w",
+            "benefits": [
+              "五险一金",
+              "补充医疗险",
+              "企业年金",
+              "重疾险",
+              "意外险",
+              "带薪年假",
+              "年度体检",
+              "生日福利",
+              "结婚礼金",
+              "生育礼金",
+              "退休慰问金",
+              "急难救助金"
+            ],
+            "quality": 4
+          },
+          "deadline": "2026年11月15日24:00",
+          "applicationMethod": "网上报名",
+          "applicationUrl": "http://job.sinopec.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 58,
+            "rankingKey": 1244479,
+            "level": "medium",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级",
+              "央企平台，规模大",
+              "薪资福利优厚",
+              "明确面向应届生",
+              "北京户口机会"
+            ],
+            "concerns": [
+              "专业要求未明确，需官网查询",
+              "具体岗位未列出，匹配度不确定",
+              "竞争激烈"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "招聘对象为2027届应届毕业生",
+            "薪酬待遇描述",
+            "北京户口机会"
+          ],
+          "confidence": 0.8,
+          "id": "b2dcbfa2e60ab6e3",
+          "personalized": {
+            "eligible": false,
+            "score": 54,
+            "rankingKey": 856399999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "薪资福利信息较有吸引力",
+              "报名入口明确，投递可操作性较高",
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "专业要求未明确，需官网查询",
+              "具体岗位未列出，匹配度不确定"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国石油化工集团有限公司",
+          "organizationNature": "央企",
+          "industry": "石油石化",
+          "jobTitle": "科研单位岗位",
+          "jobDirections": [
+            "科研单位"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上，硕士优先",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业要求未明确，需登录官网查询",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "2027年全国普通高等院校统招统分应届毕业生",
+            "回国初次就业留学生（2026.1.1-2027.12.31毕业）",
+            "西藏、青海、新疆等地区毕业生同等条件优先"
+          ],
+          "compensation": {
+            "summary": "基本工资+绩效奖金+年终奖，人均29.26万元（含社保），硕士转正第一年平均16-20w",
+            "salary": "硕士转正第一年平均16-20w",
+            "benefits": [
+              "五险一金",
+              "补充医疗险",
+              "企业年金",
+              "重疾险",
+              "意外险",
+              "带薪年假",
+              "年度体检",
+              "生日福利",
+              "结婚礼金",
+              "生育礼金",
+              "退休慰问金",
+              "急难救助金"
+            ],
+            "quality": 4
+          },
+          "deadline": "2026年11月15日24:00",
+          "applicationMethod": "网上报名",
+          "applicationUrl": "http://job.sinopec.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 58,
+            "rankingKey": 1244479,
+            "level": "medium",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级",
+              "央企平台，规模大",
+              "薪资福利优厚",
+              "明确面向应届生",
+              "北京户口机会"
+            ],
+            "concerns": [
+              "专业要求未明确，需官网查询",
+              "具体岗位未列出，匹配度不确定",
+              "竞争激烈"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "招聘对象为2027届应届毕业生",
+            "薪酬待遇描述",
+            "北京户口机会"
+          ],
+          "confidence": 0.8,
+          "id": "c4fef7f875ccfbe2",
+          "personalized": {
+            "eligible": false,
+            "score": 54,
+            "rankingKey": 856399999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "薪资福利信息较有吸引力",
+              "报名入口明确，投递可操作性较高",
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "专业要求未明确，需官网查询",
+              "具体岗位未列出，匹配度不确定"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国石油化工集团有限公司",
+          "organizationNature": "央企",
+          "industry": "石油石化",
+          "jobTitle": "专业公司岗位",
+          "jobDirections": [
+            "专业公司"
+          ],
+          "locations": [
+            "全国"
+          ],
+          "headcount": null,
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "本科及以上，硕士优先",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "专业要求未明确，需登录官网查询",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "2027年全国普通高等院校统招统分应届毕业生",
+            "回国初次就业留学生（2026.1.1-2027.12.31毕业）",
+            "西藏、青海、新疆等地区毕业生同等条件优先"
+          ],
+          "compensation": {
+            "summary": "基本工资+绩效奖金+年终奖，人均29.26万元（含社保），硕士转正第一年平均16-20w",
+            "salary": "硕士转正第一年平均16-20w",
+            "benefits": [
+              "五险一金",
+              "补充医疗险",
+              "企业年金",
+              "重疾险",
+              "意外险",
+              "带薪年假",
+              "年度体检",
+              "生日福利",
+              "结婚礼金",
+              "生育礼金",
+              "退休慰问金",
+              "急难救助金"
+            ],
+            "quality": 4
+          },
+          "deadline": "2026年11月15日24:00",
+          "applicationMethod": "网上报名",
+          "applicationUrl": "http://job.sinopec.com",
+          "referralCode": null,
+          "recommendation": {
+            "score": 58,
+            "rankingKey": 1244479,
+            "level": "medium",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级",
+              "央企平台，规模大",
+              "薪资福利优厚",
+              "明确面向应届生",
+              "北京户口机会"
+            ],
+            "concerns": [
+              "专业要求未明确，需官网查询",
+              "具体岗位未列出，匹配度不确定",
+              "竞争激烈"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 4,
+          "evidence": [
+            "招聘对象为2027届应届毕业生",
+            "薪酬待遇描述",
+            "北京户口机会"
+          ],
+          "confidence": 0.8,
+          "id": "4e2ea5a41a4630ce",
+          "personalized": {
+            "eligible": false,
+            "score": 54,
+            "rankingKey": 856399999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "薪资福利信息较有吸引力",
+              "报名入口明确，投递可操作性较高",
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "专业要求未明确，需官网查询",
+              "具体岗位未列出，匹配度不确定"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": [
+        "文章未列出具体岗位，仅说明岗位类型，无法提取详细岗位信息。"
+      ]
+    },
+    {
+      "id": "9cd6306c4f1b5d1b",
+      "account": "央企求职网",
+      "title": "中国保险学会2026年度招聘公告",
+      "url": "https://mp.weixin.qq.com/s/Nhu-yJxFprtFbA0iHnZ33A",
+      "publishedAt": "2026-07-22T07:33:40.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "中国保险学会2026年度招聘公告，面向应届生招聘3人，面向社会招聘2人。",
+      "positions": [
+        {
+          "organization": "中国保险学会",
+          "organizationNature": "社会组织",
+          "industry": "保险研究",
+          "jobTitle": "《保险研究》编辑部编辑岗",
+          "jobDirections": [
+            "编辑"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": "2",
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "未明确学历要求，但面向应届生，推测本科及以上",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确专业要求，需查看附件",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "2026年8月31日前取得毕业证学位证（国内应届）或2024年1月1日后取得学位且无社保（留学）"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 3
+          },
+          "deadline": "2026-08-16",
+          "applicationMethod": "网上报名",
+          "applicationUrl": "isc.iguopin.com/job",
+          "referralCode": null,
+          "recommendation": {
+            "score": 54,
+            "rankingKey": 1243369,
+            "level": "medium",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级",
+              "面向应届生，符合求职者身份",
+              "单位性质为全国性学术团体，平台较好",
+              "招聘人数较多（2人）"
+            ],
+            "concerns": [
+              "专业要求未明确，需查看附件确认是否匹配行政管理",
+              "薪资福利未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "面向应届高校毕业生招聘3名",
+            "《保险研究》编辑部编辑岗，计划招聘2人；（校招）"
+          ],
+          "confidence": 0.7,
+          "id": "64f80604a75e72d0",
+          "personalized": {
+            "eligible": false,
+            "score": 47,
+            "rankingKey": 855699999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "报名入口明确，投递可操作性较高",
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "专业要求未明确，需查看附件确认是否匹配行政管理",
+              "薪资福利未披露"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        },
+        {
+          "organization": "中国保险学会",
+          "organizationNature": "社会组织",
+          "industry": "保险研究",
+          "jobTitle": "研究一部研究岗",
+          "jobDirections": [
+            "研究"
+          ],
+          "locations": [
+            "北京"
+          ],
+          "headcount": "1",
+          "employmentTypes": [
+            "校招"
+          ],
+          "graduateScope": "2026届",
+          "previousGraduatesEligible": "no",
+          "education": {
+            "summary": "未明确学历要求，但面向应届生，推测本科及以上",
+            "minimum": "本科",
+            "preferred": "硕士",
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "未明确专业要求，需查看附件",
+            "accepted": [],
+            "fit": "uncertain"
+          },
+          "applicationRequirements": [
+            "2026年8月31日前取得毕业证学位证（国内应届）或2024年1月1日后取得学位且无社保（留学）"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 3
+          },
+          "deadline": "2026-08-16",
+          "applicationMethod": "网上报名",
+          "applicationUrl": "isc.iguopin.com/job",
+          "referralCode": null,
+          "recommendation": {
+            "score": 54,
+            "rankingKey": 1243369,
+            "level": "medium",
+            "reasons": [
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级",
+              "面向应届生",
+              "研究岗可能与行政管理专业相关"
+            ],
+            "concerns": [
+              "专业要求未明确",
+              "仅招1人，竞争可能激烈",
+              "薪资福利未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 3,
+          "evidence": [
+            "研究一部研究岗，计划招聘1人；（校招）"
+          ],
+          "confidence": 0.7,
+          "id": "273ee3ee038aa816",
+          "personalized": {
+            "eligible": false,
+            "score": 47,
+            "rankingKey": 855699999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "报名入口明确，投递可操作性较高",
+              "专业范围尚需核对原文",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "专业要求未明确",
+              "仅招1人，竞争可能激烈"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
+    },
+    {
+      "id": "3996218363078507",
+      "account": "央企求职网",
+      "title": "国家机关、事业单位招聘信息汇总",
+      "url": "https://mp.weixin.qq.com/s/z-GyG_35pH4pumz8h6tjvw",
+      "publishedAt": "2026-07-22T07:33:40.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "检测到招聘信息及文科/管理类相关专业或不限专业条件。",
+      "positions": [
+        {
+          "organization": "详见原文",
+          "organizationNature": "未披露",
+          "industry": "未披露",
+          "jobTitle": "国家机关、事业单位招聘信息汇总",
+          "jobDirections": [],
+          "locations": [],
+          "headcount": null,
+          "employmentTypes": [
+            "校招",
+            "实习",
+            "秋招",
+            "提前批",
+            "春招"
+          ],
+          "graduateScope": "2027届",
+          "previousGraduatesEligible": "uncertain",
+          "education": {
+            "summary": "master",
+            "minimum": null,
+            "preferred": null,
+            "tier": "master",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "管理、行政、金融、财务、审计、法律、新闻、英语",
+            "accepted": [
+              "管理",
+              "行政",
+              "金融",
+              "财务",
+              "审计",
+              "法律",
+              "新闻",
+              "英语"
+            ],
+            "fit": "management"
+          },
+          "applicationRequirements": [],
+          "compensation": {
+            "summary": "未完成模型提取",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": null,
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 75,
+            "rankingKey": 1540257,
+            "level": "medium",
+            "reasons": [
+              "专业符合管理类方向",
+              "学历要求以硕士为主，符合优先级",
+              "命中专业关键词：管理、行政、金融、财务、审计、法律、新闻、英语"
+            ],
+            "concerns": [
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 2,
+          "evidence": [],
+          "confidence": 0.58,
+          "id": "1104f73ee8da53aa",
+          "personalized": {
+            "eligible": false,
+            "score": 43,
+            "rankingKey": 805299999,
+            "reasons": [
+              "明确面向应届毕业生或校园招聘",
+              "学历要求覆盖硕士研究生",
+              "专业符合管理类方向",
+              "学历要求以硕士为主，符合优先级"
+            ],
+            "concerns": [
+              "属于实习或见习岗位，不进入正式优质岗位推荐",
+              "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+              "截止日期未披露，需尽快核对原文",
+              "当前为规则降级结果，岗位细节需 DeepSeek 重新分析"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": true,
+              "major": false,
+              "notSocialRecruitment": true,
+              "notInternship": false,
+              "notPhdOnly": true,
+              "notAssociateThreshold": true,
+              "customRequirement": true
+            }
+          }
+        }
+      ],
+      "analysisSource": "heuristic",
+      "extractionComplete": false,
+      "notes": [
+        "DeepSeek 不可用，暂以文章标题作为岗位组展示"
+      ]
+    }
+  ],
+  "errors": [
+    "央企求职网 / 2027届国企秋招群，扫码加入：文章正文为空，可能遇到微信验证页或文章已删除",
+    "国企求职网 / 7月国企央企秋招正式启动！：文章正文为空，可能遇到微信验证页或文章已删除",
+    "央企求职网 / 国家机关、事业单位招聘信息汇总：DeepSeek 失败，已使用规则降级；Expected ',' or '}' after property value in JSON at position 28488 (line 1089 column 8)"
+  ]
+}
