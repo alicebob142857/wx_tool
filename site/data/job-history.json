@@ -1,18 +1,868 @@
 {
   "date": "all",
-  "generatedAt": "2026-07-22T06:30:54.575Z",
-  "total": 396,
+  "generatedAt": "2026-07-22T06:56:18.530Z",
+  "total": 403,
   "stats": {
     "accountsConfigured": 8,
     "accountsSucceeded": 8,
-    "articlesScanned": 91,
-    "newArticles": 91,
-    "candidateArticles": 91,
-    "relevantArticles": 91,
-    "positionsExtracted": 396,
+    "articlesScanned": 96,
+    "newArticles": 96,
+    "candidateArticles": 96,
+    "relevantArticles": 96,
+    "positionsExtracted": 403,
     "failedArticles": 14
   },
   "jobs": [
+    {
+      "organization": "禾赛科技",
+      "organizationNature": "民企",
+      "industry": "激光雷达",
+      "jobTitle": "技术类岗位（合并）",
+      "jobDirections": [
+        "算法类",
+        "软件类",
+        "硬件类",
+        "机械类",
+        "测试类"
+      ],
+      "locations": [
+        "上海"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业要求未明确，但技术岗位通常要求相关理工科专业",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [
+        "2027届应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "网申",
+      "applicationUrl": "https://app.mokahr.com/campus-recruitment/he-sai/20001?sourceToken=8e1e2b0b-1b2c-4f3d-8e5a-6f7c8d9e0f1a#/",
+      "referralCode": null,
+      "recommendation": {
+        "score": 45,
+        "rankingKey": 1240259,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求以硕士为主，符合优先级",
+          "面向2027届应届生，符合应届身份",
+          "公司为激光雷达行业领先企业，发展前景好"
+        ],
+        "concerns": [
+          "专业要求不明确，行政管理专业可能不匹配",
+          "学历要求本科及以上，硕士无额外优势",
+          "薪资福利未披露"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "文章标题明确为2027届校园招聘提前批",
+        "图片显示岗位方向为算法、软件、硬件、机械、测试"
+      ],
+      "confidence": 0.6,
+      "id": "448eeb7c196193e1",
+      "personalized": {
+        "eligible": false,
+        "score": 43,
+        "rankingKey": 855299999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业范围尚需核对原文",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "专业要求不明确，行政管理专业可能不匹配",
+          "学历要求本科及以上，硕士无额外优势"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北航就业",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "招聘 | 禾赛科技 | 2027届校园招聘提前批启动",
+        "url": "https://mp.weixin.qq.com/s/LEeq5N0a7515oWd2L1UIMQ",
+        "publishedAt": "2026-07-22T06:51:14.000Z",
+        "summary": "禾赛科技2027届校园招聘提前批启动，面向2027届毕业生，提供多个技术类岗位。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "商汤科技",
+      "organizationNature": "民企",
+      "industry": "人工智能",
+      "jobTitle": "顶尖人才计划（AI技术极客）",
+      "jobDirections": [
+        "基础模型与理解生成统一",
+        "Agentic模型训练与自主进化",
+        "长上下文与长程任务智能",
+        "Coding与软件工程智能体",
+        "多模态交互与AI原生创作",
+        "数据、评测与模型进化闭环"
+      ],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "面向应届生（2026.9-2027.12毕业），学历要求未明确，但通常为硕士及以上",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业要求未明确，但岗位为AI技术极客，通常要求计算机、人工智能等相关专业",
+        "accepted": [
+          "计算机科学",
+          "人工智能",
+          "数学",
+          "统计学"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "扎实的AI实践积累",
+        "独立思考能力",
+        "持续探索技术边界的热情"
+      ],
+      "compensation": {
+        "summary": "对标业内顶尖水平的薪酬",
+        "salary": null,
+        "benefits": [
+          "对标业内顶尖水平的薪酬",
+          "专属快速晋升通道",
+          "研发资源支持",
+          "一线技术导师"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": null,
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 39,
+        "rankingKey": 1144279,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级",
+          "顶尖人才计划，薪酬对标业内顶尖水平",
+          "提供专属快速晋升通道和研发资源",
+          "参与核心AI技术方向，有真实产品落地机会"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求未明确，但通常为计算机、AI等相关专业，行政管理专业匹配度低",
+          "学历要求未明确，但顶尖人才计划通常要求硕士及以上，且偏好技术背景",
+          "未披露具体工作地点和截止日期"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "面向应届生：2026.9-2027.12毕业",
+        "薪酬：对标业内顶尖水平的薪酬",
+        "专业：未明确列出，但岗位描述为AI技术极客"
+      ],
+      "confidence": 0.8,
+      "id": "550822b339a32faf",
+      "personalized": {
+        "eligible": false,
+        "score": 46,
+        "rankingKey": 855599999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "薪资福利信息较有吸引力",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求未明确，但通常为计算机、AI等相关专业，行政管理专业匹配度低"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北航就业",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "招聘 | 商汤 | 2027届顶尖人才计划",
+        "url": "https://mp.weixin.qq.com/s/Vc_JED1_YrnHYAEABn9eTw",
+        "publishedAt": "2026-07-22T06:51:14.000Z",
+        "summary": "商汤2027届顶尖人才计划招聘，面向应届生、实习生和社招，重点招募AI技术极客。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "紫光（北京）智控科技有限公司",
+      "organizationNature": "国企",
+      "industry": "电力行业信息化",
+      "jobTitle": "电气工程师",
+      "jobDirections": [
+        "电气工程"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "应届毕业生",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "未明确学历要求，但面向应届生，推测本科及以上",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "自动化、电气工程及其自动化等相关专业",
+        "accepted": [
+          "自动化",
+          "电气工程及其自动化"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 2
+      },
+      "deadline": null,
+      "applicationMethod": "网申",
+      "applicationUrl": "http://bjxapp.cn/t/NjMzOTY4Ng/",
+      "referralCode": null,
+      "recommendation": {
+        "score": 31,
+        "rankingKey": 1132389,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配，不接受行政管理"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 3,
+      "evidence": [
+        "专业需求：自动化、电气工程及其自动化等相关专业"
+      ],
+      "confidence": 0.9,
+      "id": "c13a2da242524f39",
+      "personalized": {
+        "eligible": false,
+        "score": 43,
+        "rankingKey": 855299999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配，不接受行政管理"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北航就业",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "招聘 | 紫光（北京）智控科技有限公司 | 招聘简章",
+        "url": "https://mp.weixin.qq.com/s/Eg45X5NOjy4hpBocHmPrAA",
+        "publishedAt": "2026-07-22T06:51:14.000Z",
+        "summary": "紫光智控招聘应届生，岗位为电气工程师、热能与动力工程师、控制工程师，专业要求自动化、电气工程及其自动化、热能与动力工程等，不包含行政管理，不适合求职者。",
+        "ocrUsed": true,
+        "ocrImageCount": 2,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "紫光（北京）智控科技有限公司",
+      "organizationNature": "国企",
+      "industry": "电力行业信息化",
+      "jobTitle": "热能与动力工程师",
+      "jobDirections": [
+        "热能动力"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "应届毕业生",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "未明确学历要求，但面向应届生，推测本科及以上",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "热能与动力工程等相关专业",
+        "accepted": [
+          "热能与动力工程"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 2
+      },
+      "deadline": null,
+      "applicationMethod": "网申",
+      "applicationUrl": "http://bjxapp.cn/t/NjMzOTY4Ng/",
+      "referralCode": null,
+      "recommendation": {
+        "score": 31,
+        "rankingKey": 1132389,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配，不接受行政管理"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 3,
+      "evidence": [
+        "专业需求：热能与动力工程等相关专业"
+      ],
+      "confidence": 0.9,
+      "id": "7139c0af16802beb",
+      "personalized": {
+        "eligible": false,
+        "score": 43,
+        "rankingKey": 855299999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配，不接受行政管理"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北航就业",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "招聘 | 紫光（北京）智控科技有限公司 | 招聘简章",
+        "url": "https://mp.weixin.qq.com/s/Eg45X5NOjy4hpBocHmPrAA",
+        "publishedAt": "2026-07-22T06:51:14.000Z",
+        "summary": "紫光智控招聘应届生，岗位为电气工程师、热能与动力工程师、控制工程师，专业要求自动化、电气工程及其自动化、热能与动力工程等，不包含行政管理，不适合求职者。",
+        "ocrUsed": true,
+        "ocrImageCount": 2,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "紫光（北京）智控科技有限公司",
+      "organizationNature": "国企",
+      "industry": "电力行业信息化",
+      "jobTitle": "控制工程师",
+      "jobDirections": [
+        "控制工程"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "应届毕业生",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "未明确学历要求，但面向应届生，推测本科及以上",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "自动化等相关专业",
+        "accepted": [
+          "自动化"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 2
+      },
+      "deadline": null,
+      "applicationMethod": "网申",
+      "applicationUrl": "http://bjxapp.cn/t/NjMzOTY4Ng/",
+      "referralCode": null,
+      "recommendation": {
+        "score": 31,
+        "rankingKey": 1132389,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配，不接受行政管理"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 3,
+      "evidence": [
+        "专业需求：自动化等相关专业"
+      ],
+      "confidence": 0.9,
+      "id": "0dad393f946eeb81",
+      "personalized": {
+        "eligible": false,
+        "score": 43,
+        "rankingKey": 855299999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配，不接受行政管理"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北航就业",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "招聘 | 紫光（北京）智控科技有限公司 | 招聘简章",
+        "url": "https://mp.weixin.qq.com/s/Eg45X5NOjy4hpBocHmPrAA",
+        "publishedAt": "2026-07-22T06:51:14.000Z",
+        "summary": "紫光智控招聘应届生，岗位为电气工程师、热能与动力工程师、控制工程师，专业要求自动化、电气工程及其自动化、热能与动力工程等，不包含行政管理，不适合求职者。",
+        "ocrUsed": true,
+        "ocrImageCount": 2,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "腾讯音乐娱乐集团",
+      "organizationNature": "民企",
+      "industry": "互联网/音乐",
+      "jobTitle": "技术大咖",
+      "jobDirections": [
+        "技术研发"
+      ],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "未明确学历要求，但技术岗位通常要求本科及以上",
+        "minimum": "本科",
+        "preferred": "未披露",
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确专业要求，但技术岗位通常要求计算机、软件工程等相关专业",
+        "accepted": [
+          "计算机科学与技术",
+          "软件工程"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "面向2027届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": null,
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 21,
+        "rankingKey": 1130089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配：技术岗位通常要求计算机相关专业，行政管理专业不符合；学历要求未明确，但技术岗位通常要求本科及以上，且无行政管理相关岗位。"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "文章标题为'技术大咖计划'，内容未提及行政管理岗位"
+      ],
+      "confidence": 0.9,
+      "id": "286d4ce569518013",
+      "personalized": {
+        "eligible": false,
+        "score": 33,
+        "rankingKey": 854299999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配：技术岗位通常要求计算机相关专业，行政管理专业不符合；学历要求未明确，但技术岗位通常要求本科及以上，且无行政管理相关岗位。"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北航就业",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "招聘 | 腾讯音乐娱乐集团 | 2027届技术大咖计划全球启动",
+        "url": "https://mp.weixin.qq.com/s/5668UmYLFzN2UCJHMhVGuQ",
+        "publishedAt": "2026-07-22T06:51:14.000Z",
+        "summary": "腾讯音乐娱乐集团2027届技术大咖计划全球启动，面向2027届毕业生招聘技术岗位。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "vivo",
+      "organizationNature": "民企",
+      "industry": "消费电子",
+      "jobTitle": "产品总经理储备计划",
+      "jobDirections": [
+        "产品总经理"
+      ],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "应届毕业生",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士及以上学历",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业不限",
+        "accepted": [
+          "不限"
+        ],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "应届毕业生"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 3
+      },
+      "deadline": null,
+      "applicationMethod": "点击阅读原文投递简历",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 72,
+        "rankingKey": 1343489,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级",
+          "明确面向应届毕业生，符合求职者身份",
+          "专业不限，行政管理专业可投递",
+          "硕士学历要求，与求职者学历匹配",
+          "vivo 为知名企业，发展前景好"
+        ],
+        "concerns": [
+          "薪资福利未披露",
+          "工作地点未披露",
+          "截止日期未披露",
+          "岗位方向为产品总经理，与行政管理专业关联度低"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 4,
+      "evidence": [
+        "转载自vivo招聘",
+        "面向应届毕业生",
+        "硕士及以上学历",
+        "专业不限"
+      ],
+      "confidence": 0.9,
+      "id": "0d63c6f804b06dd6",
+      "personalized": {
+        "eligible": true,
+        "score": 74,
+        "rankingKey": 2008399999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "专业限制较宽或不限专业",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "薪资福利未披露",
+          "工作地点未披露"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "招聘｜vivo 产品总经理储备计划全球招聘启动",
+        "url": "https://mp.weixin.qq.com/s/xyXzFxkA51r2FrErECYKBw",
+        "publishedAt": "2026-07-22T06:29:27.000Z",
+        "summary": "vivo 产品总经理储备计划全球招聘启动，面向应届生，专业不限，硕士优先。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
     {
       "organization": "新疆维吾尔自治区各基层单位",
       "organizationNature": "事业单位",
