@@ -240,16 +240,17 @@ export async function extractWritingExample(
 - theme 和 keywords 用于检索，可以归纳；summary 只写一句。
 - major_topic 必须且只能从“政治、经济、社会、文化、生态、科技”中选择一个。
 - subtopic 必须从对应大方向的固定选项中选择：
-  政治：理论作风、改革创新、干部担当、党建引领、基层治理、法治建设；
-  经济：产业发展、营商环境、就业人才、乡村振兴、区域协调、消费发展；
-  社会：社区服务、城市治理、公共服务、民生保障、教育发展、青年成长；
-  文化：文化传承、文明建设、文旅融合、文化自信、文艺传播；
-  生态：绿色发展、环境治理、低碳转型、生态保护、美丽中国；
-  科技：人工智能、数字治理、科技创新、数据发展、产业升级、网络安全。
+  政治：理论作风、改革法治、干部担当、党建引领；
+  经济：产业发展、营商环境、就业人才、乡村振兴；
+  社会：城乡治理、公共服务、民生保障、教育成长；
+  文化：文化传承、文明建设、文旅融合、文艺传播；
+  生态：绿色低碳、环境治理、生态保护、美丽中国；
+  科技：人工智能、数字治理、科技创新、产业升级。
+- 上述 24 个细分方向是封闭字典；即使文章表述略有不同，也必须归入最接近的已有类别，禁止创造新类别。
 - source_note 只保存文章来源注释，没有则为 null。
 
 只返回 JSON，不要 Markdown：
-{"is_example":true,"essay_title":"范文标题","theme":"主题","major_topic":"社会","subtopic":"社区服务","keywords":["关键词"],"summary":"一句话摘要","essay_text":"完整范文正文","commentary_sections":[{"section_title":"开头点评","commentary":"点评原文"}],"source_note":null,"confidence":0.9}`;
+{"is_example":true,"essay_title":"范文标题","theme":"主题","major_topic":"社会","subtopic":"城乡治理","keywords":["关键词"],"summary":"一句话摘要","essay_text":"完整范文正文","commentary_sections":[{"section_title":"开头点评","commentary":"点评原文"}],"source_note":null,"confidence":0.9}`;
   const response = await fetch(`${config.deepseekBaseUrl}/chat/completions`, {
     method: "POST",
     headers: {

@@ -104,12 +104,12 @@ export class ExporterClient {
     })).filter((account: WritingAccount) => account.fakeid && account.name);
   }
 
-  async listArticles(account: Account): Promise<WechatArticle[]> {
+  private async listArticlePage(account: Account, begin: number, size: number): Promise<WechatArticle[]> {
     if (this.usesAuthService) {
       const url = new URL(`${this.config.authServiceUrl}/api/exporter/articles`);
       url.searchParams.set("fakeid", account.fakeid);
-      url.searchParams.set("begin", "0");
-      url.searchParams.set("size", "20");
+      url.searchParams.set("begin", String(begin));
+      url.searchParams.set("size", String(size));
       const response = await fetch(url, {
         headers: { Authorization: `Bearer ${this.config.authServiceToken}` },
       });
@@ -125,8 +125,8 @@ export class ExporterClient {
     if (!this.config.exporterAuthKey) throw new AuthExpiredError("未配置 WX_EXPORTER_AUTH_KEY");
     const url = new URL(`${this.config.exporterBaseUrl}/api/public/v1/article`);
     url.searchParams.set("fakeid", account.fakeid);
-    url.searchParams.set("begin", "0");
-    url.searchParams.set("size", "20");
+    url.searchParams.set("begin", String(begin));
+    url.searchParams.set("size", String(size));
     const response = await fetch(url, {
       headers: { "X-Auth-Key": this.config.exporterAuthKey },
     });
@@ -136,6 +136,28 @@ export class ExporterClient {
       throw new Error(data?.base_resp?.err_msg || `${account.name} 文章接口失败`);
     }
     return Array.isArray(data.articles) ? data.articles : [];
+  }
+
+  async listArticles(account: Account, maxPages = 1): Promise<WechatArticle[]> {
+    const pageSize = 20;
+    const pages = Math.min(500, Math.max(1, Math.floor(maxPages)));
+    const articles: WechatArticle[] = [];
+    const seenLinks = new Set<string>();
+    for (let page = 0; page < pages; page += 1) {
+      const batch = await this.listArticlePage(account, page * pageSize, pageSize);
+      let added = 0;
+      for (const article of batch) {
+        const key = String(article.link || "").trim();
+        if (!key || seenLinks.has(key)) continue;
+        seenLinks.add(key);
+        articles.push(article);
+        added += 1;
+      }
+      console.log(`ARTICLE_PAGE ${account.name} ${page + 1}/${pages} | received=${batch.length} added=${added}`);
+      if (batch.length === 0 || added === 0) break;
+      if (page + 1 < pages) await new Promise(resolve => setTimeout(resolve, 300));
+    }
+    return articles;
   }
 
   async downloadArticleHtml(articleUrl: string): Promise<string> {
@@ -178,16 +200,25 @@ export class ExporterClient {
 
   async saveWritingReport(report: WritingReport): Promise<void> {
     if (!this.usesAuthService || !this.config.authServiceToken) return;
-    const response = await fetch(`${this.config.authServiceUrl}/api/writing-reports`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${this.config.authServiceToken}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(report),
-      signal: AbortSignal.timeout(120_000),
-    });
-    await parseJsonResponse(response);
+    const batchSize = 50;
+    const entries = Array.isArray(report.entries) ? report.entries : [];
+    const batches = entries.length
+      ? Array.from({ length: Math.ceil(entries.length / batchSize) }, (_, index) =>
+        entries.slice(index * batchSize, (index + 1) * batchSize))
+      : [[]];
+    for (let index = 0; index < batches.length; index += 1) {
+      const response = await fetch(`${this.config.authServiceUrl}/api/writing-reports`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${this.config.authServiceToken}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...report, entries: batches[index] }),
+        signal: AbortSignal.timeout(120_000),
+      });
+      await parseJsonResponse(response);
+      console.log(`WRITING_REPORT_BATCH ${index + 1}/${batches.length} | entries=${batches[index].length}`);
+    }
   }
 
   async getPreferences(): Promise<{

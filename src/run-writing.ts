@@ -81,7 +81,7 @@ async function main(): Promise<void> {
     const link = canonicalArticleUrl(article.link || "");
     if (!link || queuedUrls.has(link) || hasSeenWriting(seen, link)) return;
     article = { ...article, link };
-    if (!force && !isWithinHours(article.update_time, config.writingLookbackHours)) {
+    if (!force && !config.writingFullHistory && !isWithinHours(article.update_time, config.writingLookbackHours)) {
       markWritingSeen(seen, link);
       return;
     }
@@ -96,7 +96,7 @@ async function main(): Promise<void> {
 
   for (const account of accounts) {
     try {
-      const articles = await client.listArticles(account);
+      const articles = await client.listArticles(account, config.writingHistoryMaxPages);
       stats.accountsSucceeded += 1;
       stats.articlesScanned += articles.length;
       const seedUrl = account.seedArticleUrl ? canonicalArticleUrl(account.seedArticleUrl) : "";
@@ -211,6 +211,8 @@ async function main(): Promise<void> {
   try {
     await client.saveWritingReport(report);
   } catch (error) {
+    for (const entry of entries) delete seen.urls[entry.articleUrl];
+    await saveWritingSeen(config.rootDir, seen);
     errors.push(`范文数据库写入失败：${error instanceof Error ? error.message : String(error)}`);
   }
   const state = errors.length ? "partial" : "ok";

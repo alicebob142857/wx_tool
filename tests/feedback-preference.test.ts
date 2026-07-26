@@ -23,6 +23,8 @@ const config: AppConfig = {
   writingLookbackHours: 72,
   writingMaxArticlesPerRun: 20,
   writingArticleConcurrency: 2,
+  writingHistoryMaxPages: 1,
+  writingFullHistory: false,
 };
 
 function feedback(positionId: string, sentiment: "like" | "dislike"): FeedbackTrainingRecord {

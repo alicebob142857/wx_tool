@@ -14,6 +14,12 @@ function numberEnv(name: string, fallback: number): number {
   return value;
 }
 
+function booleanEnv(name: string, fallback: boolean): boolean {
+  const raw = process.env[name];
+  if (raw === undefined || raw === "") return fallback;
+  return ["1", "true", "yes", "on"].includes(raw.trim().toLocaleLowerCase());
+}
+
 export interface AppConfig {
   rootDir: string;
   exporterBaseUrl: string;
@@ -34,6 +40,8 @@ export interface AppConfig {
   writingLookbackHours: number;
   writingMaxArticlesPerRun: number;
   writingArticleConcurrency: number;
+  writingHistoryMaxPages: number;
+  writingFullHistory: boolean;
 }
 
 export function loadConfig(): AppConfig {
@@ -59,6 +67,8 @@ export function loadConfig(): AppConfig {
     writingLookbackHours: numberEnv("WRITING_LOOKBACK_HOURS", 72),
     writingMaxArticlesPerRun: numberEnv("WRITING_MAX_ARTICLES_PER_RUN", 20),
     writingArticleConcurrency: numberEnv("WRITING_ARTICLE_CONCURRENCY", 2),
+    writingHistoryMaxPages: numberEnv("WRITING_HISTORY_MAX_PAGES", 1),
+    writingFullHistory: booleanEnv("WRITING_FULL_HISTORY", false),
   };
 }
 

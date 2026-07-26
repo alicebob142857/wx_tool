@@ -7,7 +7,7 @@ on:
       - ".github/workflows/verify-writing.yml"
       - "scripts/sync-writing-snapshot.ts"
       - "src/writing-topics.ts"
-      - "worker/migrations/*writing_topic*.sql"
+      - "worker/migrations/*writing*topic*.sql"
   workflow_dispatch:
 
 permissions:
