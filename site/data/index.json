@@ -1,6 +1,13 @@
 {
-  "generatedAt": "2026-07-22T23:04:52.601Z",
+  "generatedAt": "2026-07-26T23:02:21.478Z",
   "days": [
+    {
+      "date": "2026-07-27",
+      "generatedAt": "2026-07-26T23:02:21.478Z",
+      "relevantCount": 16,
+      "articlesScanned": 533,
+      "accountsSucceeded": 10
+    },
     {
       "date": "2026-07-23",
       "generatedAt": "2026-07-22T23:04:52.601Z",

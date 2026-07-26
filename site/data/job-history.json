@@ -1,18 +1,1994 @@
 {
   "date": "all",
-  "generatedAt": "2026-07-22T23:04:52.601Z",
-  "total": 446,
+  "generatedAt": "2026-07-26T23:02:21.478Z",
+  "total": 462,
   "stats": {
     "accountsConfigured": 8,
     "accountsSucceeded": 8,
-    "articlesScanned": 106,
-    "newArticles": 106,
-    "candidateArticles": 106,
-    "relevantArticles": 106,
-    "positionsExtracted": 446,
-    "failedArticles": 16
+    "articlesScanned": 109,
+    "newArticles": 109,
+    "candidateArticles": 109,
+    "relevantArticles": 109,
+    "positionsExtracted": 462,
+    "failedArticles": 17
   },
   "jobs": [
+    {
+      "organization": "中国烟草系统",
+      "organizationNature": "央企",
+      "industry": "烟草",
+      "jobTitle": "专卖稽查/市场监管岗",
+      "jobDirections": [
+        "专卖稽查",
+        "市场监管"
+      ],
+      "locations": [
+        "全国"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "未披露具体学历要求",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露具体专业要求",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [
+        "未披露"
+      ],
+      "compensation": {
+        "summary": "综合年薪20万+，七险二金，带薪休假，住房补贴，免费工作餐等",
+        "salary": "20万+",
+        "benefits": [
+          "七险二金",
+          "带薪年假",
+          "住房补贴",
+          "免费工作餐"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码回复烟草获取链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 44,
+        "rankingKey": 1224230,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实",
+          "央企稳定",
+          "薪资福利优厚",
+          "校招机会"
+        ],
+        "concerns": [
+          "专业要求不明",
+          "学历要求不明",
+          "无具体截止时间"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "文章列出岗位方向但未提具体要求"
+      ],
+      "confidence": 0.3,
+      "id": "227d61ed0c192acd",
+      "personalized": {
+        "eligible": false,
+        "score": 44,
+        "rankingKey": 855399999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "薪资福利信息较有吸引力",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "专业要求不明",
+          "学历要求不明"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "中国烟草2027校招计划及薪资待遇！",
+        "url": "https://mp.weixin.qq.com/s/xiyaiWhzpi6_rLNaRn3BLQ",
+        "publishedAt": "2026-07-26T12:43:37.000Z",
+        "summary": "中国烟草2027校招计划，介绍薪资待遇及多个岗位方向，但未提供具体招聘要求。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": false
+      }
+    },
+    {
+      "organization": "中国烟草系统",
+      "organizationNature": "央企",
+      "industry": "烟草",
+      "jobTitle": "财务审计岗",
+      "jobDirections": [
+        "财务审计"
+      ],
+      "locations": [
+        "全国"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "未披露具体学历要求",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露具体专业要求",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [
+        "未披露"
+      ],
+      "compensation": {
+        "summary": "综合年薪20万+，七险二金，带薪休假，住房补贴，免费工作餐等",
+        "salary": "20万+",
+        "benefits": [
+          "七险二金",
+          "带薪年假",
+          "住房补贴",
+          "免费工作餐"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码回复烟草获取链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 44,
+        "rankingKey": 1224230,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实",
+          "央企稳定",
+          "薪资福利优厚",
+          "校招机会"
+        ],
+        "concerns": [
+          "专业要求不明",
+          "学历要求不明",
+          "无具体截止时间"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "文章列出岗位方向但未提具体要求"
+      ],
+      "confidence": 0.3,
+      "id": "a50685aae17011bc",
+      "personalized": {
+        "eligible": false,
+        "score": 44,
+        "rankingKey": 855399999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "薪资福利信息较有吸引力",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "专业要求不明",
+          "学历要求不明"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "中国烟草2027校招计划及薪资待遇！",
+        "url": "https://mp.weixin.qq.com/s/xiyaiWhzpi6_rLNaRn3BLQ",
+        "publishedAt": "2026-07-26T12:43:37.000Z",
+        "summary": "中国烟草2027校招计划，介绍薪资待遇及多个岗位方向，但未提供具体招聘要求。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": false
+      }
+    },
+    {
+      "organization": "中国烟草系统",
+      "organizationNature": "央企",
+      "industry": "烟草",
+      "jobTitle": "信息技术岗",
+      "jobDirections": [
+        "信息技术"
+      ],
+      "locations": [
+        "全国"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "未披露具体学历要求",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露具体专业要求",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [
+        "未披露"
+      ],
+      "compensation": {
+        "summary": "综合年薪20万+，七险二金，带薪休假，住房补贴，免费工作餐等",
+        "salary": "20万+",
+        "benefits": [
+          "七险二金",
+          "带薪年假",
+          "住房补贴",
+          "免费工作餐"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码回复烟草获取链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 44,
+        "rankingKey": 1224230,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实",
+          "央企稳定",
+          "薪资福利优厚",
+          "校招机会"
+        ],
+        "concerns": [
+          "专业要求不明",
+          "学历要求不明",
+          "无具体截止时间"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "文章列出岗位方向但未提具体要求"
+      ],
+      "confidence": 0.3,
+      "id": "66fb6cd0ae293b38",
+      "personalized": {
+        "eligible": false,
+        "score": 44,
+        "rankingKey": 855399999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "薪资福利信息较有吸引力",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "专业要求不明",
+          "学历要求不明"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "中国烟草2027校招计划及薪资待遇！",
+        "url": "https://mp.weixin.qq.com/s/xiyaiWhzpi6_rLNaRn3BLQ",
+        "publishedAt": "2026-07-26T12:43:37.000Z",
+        "summary": "中国烟草2027校招计划，介绍薪资待遇及多个岗位方向，但未提供具体招聘要求。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": false
+      }
+    },
+    {
+      "organization": "中国烟草系统",
+      "organizationNature": "央企",
+      "industry": "烟草",
+      "jobTitle": "设备管理岗",
+      "jobDirections": [
+        "设备管理"
+      ],
+      "locations": [
+        "全国"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "未披露具体学历要求",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露具体专业要求",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [
+        "未披露"
+      ],
+      "compensation": {
+        "summary": "综合年薪20万+，七险二金，带薪休假，住房补贴，免费工作餐等",
+        "salary": "20万+",
+        "benefits": [
+          "七险二金",
+          "带薪年假",
+          "住房补贴",
+          "免费工作餐"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码回复烟草获取链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 44,
+        "rankingKey": 1224230,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实",
+          "央企稳定",
+          "薪资福利优厚",
+          "校招机会"
+        ],
+        "concerns": [
+          "专业要求不明",
+          "学历要求不明",
+          "无具体截止时间"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "文章列出岗位方向但未提具体要求"
+      ],
+      "confidence": 0.3,
+      "id": "620d752c2af4e1ef",
+      "personalized": {
+        "eligible": false,
+        "score": 44,
+        "rankingKey": 855399999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "薪资福利信息较有吸引力",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "专业要求不明",
+          "学历要求不明"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "中国烟草2027校招计划及薪资待遇！",
+        "url": "https://mp.weixin.qq.com/s/xiyaiWhzpi6_rLNaRn3BLQ",
+        "publishedAt": "2026-07-26T12:43:37.000Z",
+        "summary": "中国烟草2027校招计划，介绍薪资待遇及多个岗位方向，但未提供具体招聘要求。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": false
+      }
+    },
+    {
+      "organization": "中国烟草系统",
+      "organizationNature": "央企",
+      "industry": "烟草",
+      "jobTitle": "物流管理岗",
+      "jobDirections": [
+        "物流管理"
+      ],
+      "locations": [
+        "全国"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "未披露具体学历要求",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露具体专业要求",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [
+        "未披露"
+      ],
+      "compensation": {
+        "summary": "综合年薪20万+，七险二金，带薪休假，住房补贴，免费工作餐等",
+        "salary": "20万+",
+        "benefits": [
+          "七险二金",
+          "带薪年假",
+          "住房补贴",
+          "免费工作餐"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码回复烟草获取链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 44,
+        "rankingKey": 1224230,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实",
+          "央企稳定",
+          "薪资福利优厚",
+          "校招机会"
+        ],
+        "concerns": [
+          "专业要求不明",
+          "学历要求不明",
+          "无具体截止时间"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "文章列出岗位方向但未提具体要求"
+      ],
+      "confidence": 0.3,
+      "id": "6646511932b9d72d",
+      "personalized": {
+        "eligible": false,
+        "score": 44,
+        "rankingKey": 855399999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "薪资福利信息较有吸引力",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "专业要求不明",
+          "学历要求不明"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "中国烟草2027校招计划及薪资待遇！",
+        "url": "https://mp.weixin.qq.com/s/xiyaiWhzpi6_rLNaRn3BLQ",
+        "publishedAt": "2026-07-26T12:43:37.000Z",
+        "summary": "中国烟草2027校招计划，介绍薪资待遇及多个岗位方向，但未提供具体招聘要求。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": false
+      }
+    },
+    {
+      "organization": "中国烟草系统",
+      "organizationNature": "央企",
+      "industry": "烟草",
+      "jobTitle": "设备维修岗",
+      "jobDirections": [
+        "设备维修"
+      ],
+      "locations": [
+        "全国"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "未披露具体学历要求",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露具体专业要求",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [
+        "未披露"
+      ],
+      "compensation": {
+        "summary": "综合年薪20万+，七险二金，带薪休假，住房补贴，免费工作餐等",
+        "salary": "20万+",
+        "benefits": [
+          "七险二金",
+          "带薪年假",
+          "住房补贴",
+          "免费工作餐"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码回复烟草获取链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 44,
+        "rankingKey": 1224230,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实",
+          "央企稳定",
+          "薪资福利优厚",
+          "校招机会"
+        ],
+        "concerns": [
+          "专业要求不明",
+          "学历要求不明",
+          "无具体截止时间"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "文章列出岗位方向但未提具体要求"
+      ],
+      "confidence": 0.3,
+      "id": "838089563e2db49d",
+      "personalized": {
+        "eligible": false,
+        "score": 44,
+        "rankingKey": 855399999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "薪资福利信息较有吸引力",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "专业要求不明",
+          "学历要求不明"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "中国烟草2027校招计划及薪资待遇！",
+        "url": "https://mp.weixin.qq.com/s/xiyaiWhzpi6_rLNaRn3BLQ",
+        "publishedAt": "2026-07-26T12:43:37.000Z",
+        "summary": "中国烟草2027校招计划，介绍薪资待遇及多个岗位方向，但未提供具体招聘要求。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": false
+      }
+    },
+    {
+      "organization": "中国烟草系统",
+      "organizationNature": "央企",
+      "industry": "烟草",
+      "jobTitle": "法律管理岗",
+      "jobDirections": [
+        "法律管理"
+      ],
+      "locations": [
+        "全国"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "未披露具体学历要求",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露具体专业要求",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [
+        "未披露"
+      ],
+      "compensation": {
+        "summary": "综合年薪20万+，七险二金，带薪休假，住房补贴，免费工作餐等",
+        "salary": "20万+",
+        "benefits": [
+          "七险二金",
+          "带薪年假",
+          "住房补贴",
+          "免费工作餐"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码回复烟草获取链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 44,
+        "rankingKey": 1224230,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实",
+          "央企稳定",
+          "薪资福利优厚",
+          "校招机会"
+        ],
+        "concerns": [
+          "专业要求不明",
+          "学历要求不明",
+          "无具体截止时间"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "文章列出岗位方向但未提具体要求"
+      ],
+      "confidence": 0.3,
+      "id": "6e47edb3077936a3",
+      "personalized": {
+        "eligible": false,
+        "score": 44,
+        "rankingKey": 855399999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "薪资福利信息较有吸引力",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "专业要求不明",
+          "学历要求不明"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "中国烟草2027校招计划及薪资待遇！",
+        "url": "https://mp.weixin.qq.com/s/xiyaiWhzpi6_rLNaRn3BLQ",
+        "publishedAt": "2026-07-26T12:43:37.000Z",
+        "summary": "中国烟草2027校招计划，介绍薪资待遇及多个岗位方向，但未提供具体招聘要求。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": false
+      }
+    },
+    {
+      "organization": "中国烟草系统",
+      "organizationNature": "央企",
+      "industry": "烟草",
+      "jobTitle": "市场经理岗",
+      "jobDirections": [
+        "市场经理"
+      ],
+      "locations": [
+        "全国"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "未披露具体学历要求",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露具体专业要求",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [
+        "未披露"
+      ],
+      "compensation": {
+        "summary": "综合年薪20万+，七险二金，带薪休假，住房补贴，免费工作餐等",
+        "salary": "20万+",
+        "benefits": [
+          "七险二金",
+          "带薪年假",
+          "住房补贴",
+          "免费工作餐"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码回复烟草获取链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 44,
+        "rankingKey": 1224230,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实",
+          "央企稳定",
+          "薪资福利优厚",
+          "校招机会"
+        ],
+        "concerns": [
+          "专业要求不明",
+          "学历要求不明",
+          "无具体截止时间"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "文章列出岗位方向但未提具体要求"
+      ],
+      "confidence": 0.3,
+      "id": "c0fea60adde91f20",
+      "personalized": {
+        "eligible": false,
+        "score": 44,
+        "rankingKey": 855399999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "薪资福利信息较有吸引力",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "专业要求不明",
+          "学历要求不明"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "中国烟草2027校招计划及薪资待遇！",
+        "url": "https://mp.weixin.qq.com/s/xiyaiWhzpi6_rLNaRn3BLQ",
+        "publishedAt": "2026-07-26T12:43:37.000Z",
+        "summary": "中国烟草2027校招计划，介绍薪资待遇及多个岗位方向，但未提供具体招聘要求。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": false
+      }
+    },
+    {
+      "organization": "中国烟草系统",
+      "organizationNature": "央企",
+      "industry": "烟草",
+      "jobTitle": "卷烟营销岗",
+      "jobDirections": [
+        "卷烟营销"
+      ],
+      "locations": [
+        "全国"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "未披露具体学历要求",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露具体专业要求",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [
+        "未披露"
+      ],
+      "compensation": {
+        "summary": "综合年薪20万+，七险二金，带薪休假，住房补贴，免费工作餐等",
+        "salary": "20万+",
+        "benefits": [
+          "七险二金",
+          "带薪年假",
+          "住房补贴",
+          "免费工作餐"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码回复烟草获取链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 44,
+        "rankingKey": 1224230,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实",
+          "央企稳定",
+          "薪资福利优厚",
+          "校招机会"
+        ],
+        "concerns": [
+          "专业要求不明",
+          "学历要求不明",
+          "无具体截止时间"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "文章列出岗位方向但未提具体要求"
+      ],
+      "confidence": 0.3,
+      "id": "ebe37da1f2831f9f",
+      "personalized": {
+        "eligible": false,
+        "score": 44,
+        "rankingKey": 855399999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "薪资福利信息较有吸引力",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "专业要求不明",
+          "学历要求不明"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "中国烟草2027校招计划及薪资待遇！",
+        "url": "https://mp.weixin.qq.com/s/xiyaiWhzpi6_rLNaRn3BLQ",
+        "publishedAt": "2026-07-26T12:43:37.000Z",
+        "summary": "中国烟草2027校招计划，介绍薪资待遇及多个岗位方向，但未提供具体招聘要求。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": false
+      }
+    },
+    {
+      "organization": "通用技术集团资产管理有限公司",
+      "organizationNature": "国企",
+      "industry": "资产管理",
+      "jobTitle": "薪酬绩效岗",
+      "jobDirections": [
+        "人力资源"
+      ],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": "1",
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不适用",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "人力资源等管理类专业硕士研究生及以上学历",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "人力资源等管理类专业",
+        "accepted": [
+          "人力资源管理"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "中共党员",
+        "8年以上人力资源管理工作经验，其中至少3年薪酬绩效经验"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-08-07 17:00",
+      "applicationMethod": "邮件投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 28,
+        "rankingKey": 1140194,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，非应届生岗位",
+          "专业要求为人力资源管理，不包括行政管理",
+          "要求8年以上工作经验，应届生无法满足",
+          "要求中共党员（如不符合则降级）"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 1,
+      "evidence": [
+        "社会招聘公告，要求8年以上人力资源管理工作经验",
+        "专业为人力资源管理",
+        "未提及应届生或校招"
+      ],
+      "confidence": 0.95,
+      "id": "e85abebe6dd8f7b3",
+      "personalized": {
+        "eligible": false,
+        "score": 59,
+        "rankingKey": 656899999,
+        "reasons": [
+          "专业要求覆盖公共管理或管理学门类",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "属于社会招聘，不符合应届求职目标",
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，非应届生岗位"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "通用技术资产公司2026社会招聘公告！",
+        "url": "https://mp.weixin.qq.com/s/mWPS_krX9jkZeclpqY9-Mg",
+        "publishedAt": "2026-07-26T12:43:37.000Z",
+        "summary": "通用技术资产公司及下属英斯泰克公司发布2026年社会招聘公告，共3个岗位，要求多年工作经验，非校园招聘。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "通用技术集团中仪英斯泰克进出口有限公司",
+      "organizationNature": "国企",
+      "industry": "广电系统集成与技术服务",
+      "jobTitle": "经营财务部部门经理",
+      "jobDirections": [
+        "财务管理"
+      ],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": "1",
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不适用",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "会计、财务管理等相关专业本科及以上学历",
+        "minimum": "本科",
+        "preferred": "未明确",
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "会计、财务管理等相关专业",
+        "accepted": [
+          "会计",
+          "财务管理"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "中共党员",
+        "8年以上会计或相关管理工作经验，其中至少3年财务团队管理经验",
+        "中级以上专业技术职称"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-08-07 17:00",
+      "applicationMethod": "邮件投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 23,
+        "rankingKey": 1130194,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，非应届生岗位，不符合求职者应届生身份",
+          "专业要求为会计、财务管理，不包括行政管理",
+          "要求8年以上工作经验，应届生无法满足",
+          "要求中共党员（如不符合则降级）"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 1,
+      "evidence": [
+        "社会招聘公告，要求8年以上相关工作经验",
+        "专业为会计、财务管理",
+        "未提及应届生或校招"
+      ],
+      "confidence": 0.95,
+      "id": "2264e6be4f03c36f",
+      "personalized": {
+        "eligible": false,
+        "score": 38,
+        "rankingKey": 654799999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，非应届生岗位，不符合求职者应届生身份"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "通用技术资产公司2026社会招聘公告！",
+        "url": "https://mp.weixin.qq.com/s/mWPS_krX9jkZeclpqY9-Mg",
+        "publishedAt": "2026-07-26T12:43:37.000Z",
+        "summary": "通用技术资产公司及下属英斯泰克公司发布2026年社会招聘公告，共3个岗位，要求多年工作经验，非校园招聘。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "通用技术集团资产管理有限公司",
+      "organizationNature": "国企",
+      "industry": "资产管理",
+      "jobTitle": "审计风控岗",
+      "jobDirections": [
+        "审计",
+        "风控"
+      ],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": "1",
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不适用",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "审计、财务管理、会计、经济、法律等相关专业本科及以上学历",
+        "minimum": "本科",
+        "preferred": "未明确",
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "审计、财务管理、会计、经济、法律等相关专业",
+        "accepted": [
+          "审计",
+          "财务管理",
+          "会计",
+          "经济",
+          "法律"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "6年以上审计、风险管理、财务等相关工作经历"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-08-07 17:00",
+      "applicationMethod": "邮件投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 23,
+        "rankingKey": 1130194,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，非应届生岗位",
+          "专业要求不包括行政管理",
+          "要求6年以上工作经验，应届生无法满足"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 1,
+      "evidence": [
+        "社会招聘公告，要求6年以上相关工作经验",
+        "专业为审计、财务管理等",
+        "未提及应届生或校招"
+      ],
+      "confidence": 0.95,
+      "id": "b999b81d1c3c43e7",
+      "personalized": {
+        "eligible": false,
+        "score": 38,
+        "rankingKey": 654799999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，非应届生岗位"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "通用技术资产公司2026社会招聘公告！",
+        "url": "https://mp.weixin.qq.com/s/mWPS_krX9jkZeclpqY9-Mg",
+        "publishedAt": "2026-07-26T12:43:37.000Z",
+        "summary": "通用技术资产公司及下属英斯泰克公司发布2026年社会招聘公告，共3个岗位，要求多年工作经验，非校园招聘。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "泡泡玛特",
+      "organizationNature": "民企",
+      "industry": "潮流文化娱乐",
+      "jobTitle": "电商运营实习生",
+      "jobDirections": [
+        "电商运营"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "实习"
+      ],
+      "graduateScope": "未明确",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "学历要求未披露，推测在校生优先",
+        "minimum": null,
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业要求未披露",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "长按识别下方二维码回复：泡泡玛特，获取岗位表、进行网上报名",
+      "applicationUrl": "https://mp.weixin.qq.com/s/gI1rN3DcoZwu_AFsTcaukw",
+      "referralCode": null,
+      "recommendation": {
+        "score": 34,
+        "rankingKey": 1220279,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实",
+          "实习岗位，积累经验",
+          "企业知名度高"
+        ],
+        "concerns": [
+          "实习岗位不属于优质岗位（硬条件要求校招）",
+          "专业要求不明确，匹配度低",
+          "实习通常不提供正式编制"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "岗位12：电商运营实习生"
+      ],
+      "confidence": 0.8,
+      "id": "2093ea674f95b229",
+      "personalized": {
+        "eligible": false,
+        "score": 4,
+        "rankingKey": 801399999,
+        "reasons": [
+          "报名入口明确，投递可操作性较高",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于实习或见习岗位，不进入正式优质岗位推荐",
+          "未能确认岗位接受本科或硕士学历",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "实习岗位不属于优质岗位（硬条件要求校招）",
+          "专业要求不明确，匹配度低"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": false,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": false,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "【POP MART泡泡玛特】2026夏季招聘！",
+        "url": "https://mp.weixin.qq.com/s/gI1rN3DcoZwu_AFsTcaukw",
+        "publishedAt": "2026-07-26T08:16:48.000Z",
+        "summary": "泡泡玛特发布2026夏季招聘，含多个正式岗和实习岗，但未明确校招或应届要求，专业和学历信息缺失。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "泡泡玛特",
+      "organizationNature": "民企",
+      "industry": "潮流文化娱乐",
+      "jobTitle": "HRBP实习生",
+      "jobDirections": [
+        "人力资源业务伙伴"
+      ],
+      "locations": [
+        "上海"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "实习"
+      ],
+      "graduateScope": "未明确",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "学历要求未披露，推测在校生优先",
+        "minimum": null,
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业要求未披露",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "长按识别下方二维码回复：泡泡玛特，获取岗位表、进行网上报名",
+      "applicationUrl": "https://mp.weixin.qq.com/s/gI1rN3DcoZwu_AFsTcaukw",
+      "referralCode": null,
+      "recommendation": {
+        "score": 34,
+        "rankingKey": 1220279,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实",
+          "实习岗位，积累HR经验",
+          "与行政管理专业有一定关联"
+        ],
+        "concerns": [
+          "实习岗位不属于优质岗位",
+          "专业要求不明确",
+          "实习通常不提供正式编制"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "岗位22：HRBP实习生"
+      ],
+      "confidence": 0.8,
+      "id": "0ad0e57504b8ca1f",
+      "personalized": {
+        "eligible": false,
+        "score": 4,
+        "rankingKey": 801399999,
+        "reasons": [
+          "报名入口明确，投递可操作性较高",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于实习或见习岗位，不进入正式优质岗位推荐",
+          "未能确认岗位接受本科或硕士学历",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "实习岗位不属于优质岗位",
+          "专业要求不明确"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": false,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": false,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "【POP MART泡泡玛特】2026夏季招聘！",
+        "url": "https://mp.weixin.qq.com/s/gI1rN3DcoZwu_AFsTcaukw",
+        "publishedAt": "2026-07-26T08:16:48.000Z",
+        "summary": "泡泡玛特发布2026夏季招聘，含多个正式岗和实习岗，但未明确校招或应届要求，专业和学历信息缺失。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "泡泡玛特",
+      "organizationNature": "民企",
+      "industry": "潮流文化娱乐",
+      "jobTitle": "北京正式岗组",
+      "jobDirections": [
+        "电商运营",
+        "税务经理/主管",
+        "数据分析",
+        "积木产品管理",
+        "欧洲清关主管",
+        "积木产品企划",
+        "招聘运营经理",
+        "Assistant CRM manager",
+        "人力资源经理/主管",
+        "海外人才招聘专家",
+        "海外创意视频编导"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "未明确",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "学历要求未披露，推测本科及以上",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业要求未披露",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "长按识别下方二维码回复：泡泡玛特，获取岗位表、进行网上报名",
+      "applicationUrl": "https://mp.weixin.qq.com/s/gI1rN3DcoZwu_AFsTcaukw",
+      "referralCode": null,
+      "recommendation": {
+        "score": 33,
+        "rankingKey": 1220169,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实",
+          "企业知名度高，潮流文化行业领先",
+          "北京地点，发展机会多"
+        ],
+        "concerns": [
+          "未明确面向应届生，可能要求工作经验",
+          "专业要求不明确，行政管理匹配度低",
+          "学历要求未披露，存在大专可能",
+          "多数岗位为经理/主管级，应届生机会小"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 1,
+      "evidence": [
+        "岗位列表：1-11（不含12）"
+      ],
+      "confidence": 0.7,
+      "id": "de5e7eca938cf7b6",
+      "personalized": {
+        "eligible": false,
+        "score": 29,
+        "rankingKey": 653899999,
+        "reasons": [
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未明确面向应届生，可能要求工作经验",
+          "专业要求不明确，行政管理匹配度低"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "【POP MART泡泡玛特】2026夏季招聘！",
+        "url": "https://mp.weixin.qq.com/s/gI1rN3DcoZwu_AFsTcaukw",
+        "publishedAt": "2026-07-26T08:16:48.000Z",
+        "summary": "泡泡玛特发布2026夏季招聘，含多个正式岗和实习岗，但未明确校招或应届要求，专业和学历信息缺失。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "泡泡玛特",
+      "organizationNature": "民企",
+      "industry": "潮流文化娱乐",
+      "jobTitle": "上海正式岗组",
+      "jobDirections": [
+        "用户运营洞察与分析",
+        "西语社媒运营",
+        "会员运营",
+        "EC Business Analyst",
+        "商品计划助理",
+        "Business Analyst Manager",
+        "商业推广",
+        "跨境运营支持（西语/葡语）",
+        "日语跨境电商运营"
+      ],
+      "locations": [
+        "上海"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "未明确",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "学历要求未披露，推测本科及以上",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业要求未披露",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "长按识别下方二维码回复：泡泡玛特，获取岗位表、进行网上报名",
+      "applicationUrl": "https://mp.weixin.qq.com/s/gI1rN3DcoZwu_AFsTcaukw",
+      "referralCode": null,
+      "recommendation": {
+        "score": 33,
+        "rankingKey": 1220169,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实",
+          "上海地点，国际化氛围",
+          "部分岗位如商品计划助理可能适合应届生"
+        ],
+        "concerns": [
+          "未明确面向应届生",
+          "专业要求不明确，行政管理匹配度低",
+          "多数岗位要求经验",
+          "学历要求未披露"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 1,
+      "evidence": [
+        "岗位列表：13-21"
+      ],
+      "confidence": 0.7,
+      "id": "9c068395ae7f673a",
+      "personalized": {
+        "eligible": false,
+        "score": 29,
+        "rankingKey": 653899999,
+        "reasons": [
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未明确面向应届生",
+          "专业要求不明确，行政管理匹配度低"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-27",
+      "article": {
+        "title": "【POP MART泡泡玛特】2026夏季招聘！",
+        "url": "https://mp.weixin.qq.com/s/gI1rN3DcoZwu_AFsTcaukw",
+        "publishedAt": "2026-07-26T08:16:48.000Z",
+        "summary": "泡泡玛特发布2026夏季招聘，含多个正式岗和实习岗，但未明确校招或应届要求，专业和学历信息缺失。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
     {
       "organization": "前海开源基金",
       "organizationNature": "民企",

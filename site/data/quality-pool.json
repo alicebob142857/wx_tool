@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T23:04:52.601Z",
+  "generatedAt": "2026-07-26T23:02:21.478Z",
   "maxSize": 30,
   "total": 30,
   "jobs": [
@@ -260,131 +260,6 @@
         "url": "https://mp.weixin.qq.com/s/qFQ7VUyyAp6lJJXpLL9Vjw",
         "publishedAt": "2026-07-21T04:00:28.000Z",
         "summary": "青海省烟草专卖局2026年第二批招聘11人，面向应届毕业生，含行政管理等专业。",
-        "ocrUsed": false,
-        "ocrImageCount": 0,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      }
-    },
-    {
-      "organization": "贵州能源集团有限公司",
-      "organizationNature": "国企",
-      "industry": "能源",
-      "jobTitle": "综合管理岗",
-      "jobDirections": [
-        "综合管理"
-      ],
-      "locations": [
-        "贵州省贵阳市"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2026届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "本科及以上学历，硕士优先",
-        "minimum": "本科",
-        "preferred": "硕士",
-        "tier": "master",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "公共管理类、工商管理类等，行政管理属于公共管理类，符合要求",
-        "accepted": [
-          "公共管理类",
-          "工商管理类"
-        ],
-        "fit": "management"
-      },
-      "applicationRequirements": [
-        "2026年应届毕业生需在2026年12月31日前取得学历学位证书",
-        "年龄计算截至报名开始之日",
-        "部分岗位可能要求中共党员（需提供证明）",
-        "部分岗位可能要求资格证书或考试成绩"
-      ],
-      "compensation": {
-        "summary": "未披露具体薪资，国企标准福利",
-        "salary": null,
-        "benefits": [
-          "未披露"
-        ],
-        "quality": 3
-      },
-      "deadline": "2026-07-24 17:00",
-      "applicationMethod": "网上报名",
-      "applicationUrl": "https://xyz.51job.com/External/Apply.aspx?CtmID=9279900",
-      "referralCode": null,
-      "recommendation": {
-        "score": 86,
-        "rankingKey": 1543494,
-        "level": "high",
-        "reasons": [
-          "专业符合管理类方向",
-          "学历要求以硕士为主，符合优先级",
-          "专业匹配：行政管理属于公共管理类，符合专业要求",
-          "学历友好：本科及以上，硕士优先，适合硕士应届生",
-          "应届生可报：明确2026届应届毕业生可报名",
-          "国企稳定：省管大型国企，福利待遇有保障"
-        ],
-        "concerns": [
-          "薪资未披露，无法评估竞争力",
-          "报名时间较短（5天），需及时准备材料",
-          "笔试面试地点在贵阳，异地考生需考虑成本",
-          "岗位具体方向未明确，可能分配至不同子公司"
-        ]
-      },
-      "customRequirement": {
-        "active": false,
-        "matched": null,
-        "score": 0,
-        "reasons": [],
-        "concerns": []
-      },
-      "accessibility": 4,
-      "evidence": [
-        "招聘公告明确面向社会，包含应届毕业生",
-        "专业要求包含公共管理类，行政管理属于该类",
-        "学历要求本科及以上，硕士优先",
-        "报名时间2026年7月20日至24日"
-      ],
-      "confidence": 0.95,
-      "id": "db0f39caf4ba1a50",
-      "personalized": {
-        "eligible": true,
-        "score": 96,
-        "rankingKey": 2010599999,
-        "reasons": [
-          "专业要求明确覆盖行政管理",
-          "明确面向应届毕业生或校园招聘",
-          "学历要求覆盖硕士研究生",
-          "报名入口明确，投递可操作性较高",
-          "专业符合管理类方向",
-          "学历要求以硕士为主，符合优先级"
-        ],
-        "concerns": [
-          "薪资未披露，无法评估竞争力",
-          "报名时间较短（5天），需及时准备材料"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      },
-      "account": "央企求职网",
-      "reportDate": "2026-07-21",
-      "article": {
-        "title": "能源集团2026年第三批公开招聘公告",
-        "url": "https://mp.weixin.qq.com/s/ftaiD280yBySeAHn_REaCw",
-        "publishedAt": "2026-07-20T07:37:53.000Z",
-        "summary": "贵州能源集团2026年第三批综合管理岗公开招聘，面向社会，含应届生，专业要求为公共管理类、工商管理类等，行政管理专业可报。",
         "ocrUsed": false,
         "ocrImageCount": 0,
         "analysisSource": "deepseek",
@@ -3406,6 +3281,111 @@
           "notAssociateThreshold": true,
           "customRequirement": true
         }
+      }
+    },
+    {
+      "organization": "中色奥博特铜铝业有限公司",
+      "organizationNature": "央企",
+      "industry": "有色金属",
+      "jobTitle": "生产性岗位",
+      "jobDirections": [
+        "生产管理"
+      ],
+      "locations": [
+        "聊城"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科",
+        "minimum": "本科",
+        "preferred": "本科",
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未明确专业，生产性岗位通常不限专业或工科，行政管理可能匹配",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-10-19",
+      "applicationMethod": "国聘官网",
+      "applicationUrl": "https://www.iguopin.com",
+      "referralCode": null,
+      "recommendation": {
+        "score": 40,
+        "rankingKey": 1230269,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "本科或大专层次可报",
+          "央企校招，本科可报"
+        ],
+        "concerns": [
+          "专业要求不明确，可能不匹配行政管理"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "生产性岗位可能不限专业"
+      ],
+      "confidence": 0.7,
+      "id": "6a2ab10d07524ab9",
+      "personalized": {
+        "eligible": true,
+        "score": 83,
+        "rankingKey": 2009299999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "报名入口明确，投递可操作性较高",
+          "专业范围尚需核对原文",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "专业要求不明确，可能不匹配行政管理"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国聘",
+      "reportDate": "2026-07-22",
+      "article": {
+        "title": "校招 | 央国企招聘信息汇总（央企及所属单位）7月（第三期）",
+        "url": "https://mp.weixin.qq.com/s/qanT6tO0VOn3QNW-RT6CmQ",
+        "publishedAt": "2026-07-21T12:10:25.000Z",
+        "summary": "国聘公众号发布的央国企校招岗位汇总，包含多家央企及所属单位的招聘信息，报名截止时间从2026年7月31日至10月19日。",
+        "ocrUsed": true,
+        "ocrImageCount": 4,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
       }
     }
   ]
