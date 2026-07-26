@@ -135,16 +135,16 @@ async function main(): Promise<void> {
   }
 
   queue.sort((a, b) => b.article.update_time - a.article.update_time);
-  const selected = queue.slice(0, config.writingMaxArticlesPerRun);
-  stats.candidateArticles = selected.length;
+  const targetExamples = config.writingMaxArticlesPerRun;
   const entries: WritingEntry[] = [];
   let cursor = 0;
   const failedUrls = new Set<string>();
 
   const processNext = async () => {
-    while (cursor < selected.length) {
+    while (cursor < queue.length && entries.length < targetExamples) {
       const index = cursor++;
-      const { account, article } = selected[index];
+      const { account, article } = queue[index];
+      stats.candidateArticles += 1;
       try {
         const html = await client.downloadArticleHtml(article.link);
         const parsed = parseWritingArticleHtml(html, article.title);
@@ -169,7 +169,8 @@ async function main(): Promise<void> {
             ocr.text,
           );
         }
-        if (extraction.isExample) {
+        let stored = false;
+        if (extraction.isExample && entries.length < targetExamples) {
           entries.push(writingEntryFromExtraction({
             account: parsed.accountName || account.name,
             accountFakeid: account.fakeid,
@@ -178,9 +179,12 @@ async function main(): Promise<void> {
             publishedAt: isoFromUnix(article.update_time),
             extraction,
           }));
+          stored = true;
         }
-        markWritingSeen(seen, article.link);
-        console.log(`WRITING ${index + 1}/${selected.length} ${account.name} | stored=${extraction.isExample}`);
+        // 并发任务可能在目标数量刚达成时同时完成。未入库的有效范文留给下次，
+        // 避免文章被标记为已处理后永久丢失。
+        if (!extraction.isExample || stored) markWritingSeen(seen, article.link);
+        console.log(`WRITING ${index + 1}/${queue.length} ${account.name} | stored=${stored}`);
       } catch (error) {
         stats.failedArticles += 1;
         failedUrls.add(article.link);
@@ -190,10 +194,9 @@ async function main(): Promise<void> {
   };
 
   await Promise.all(Array.from(
-    { length: Math.min(Math.max(1, config.writingArticleConcurrency), selected.length) },
+    { length: Math.min(Math.max(1, config.writingArticleConcurrency), queue.length) },
     processNext,
   ));
-  for (const { article } of queue.slice(config.writingMaxArticlesPerRun)) markWritingSeen(seen, article.link);
   for (const url of failedUrls) delete seen.urls[url];
   stats.examplesStored = entries.length;
   await saveWritingSeen(config.rootDir, seen);

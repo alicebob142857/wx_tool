@@ -17,7 +17,7 @@ on:
         default: "336"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: wx-writing-on-demand
@@ -57,5 +57,15 @@ jobs:
           OCR_ARTICLE_BUDGET_MS: "90000"
           WRITING_LOOKBACK_HOURS: ${{ inputs.lookback_hours || '336' }}
           WRITING_MAX_ARTICLES_PER_RUN: ${{ inputs.max_articles || '10' }}
-          WRITING_ARTICLE_CONCURRENCY: "2"
+          WRITING_ARTICLE_CONCURRENCY: "1"
         run: npm run collect:writing
+
+      - name: Persist writing scan state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/writing/data state/writing-seen.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: update writing example library"
+            git push
+          fi
