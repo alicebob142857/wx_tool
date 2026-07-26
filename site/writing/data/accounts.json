@@ -2,12 +2,16 @@
   "count": 1,
   "accounts": [
     {
-      "name": "隔壁班学习园地",
       "fakeid": "MzI4MDA4MjkzMg==",
+      "name": "隔壁班学习园地",
       "alias": "",
+      "avatarUrl": "",
       "seedArticleUrl": "https://mp.weixin.qq.com/s/UkoP5Y6mS21igFWHo1HcIw",
-      "seedPublishedAt": "2026-07-24T11:00:00.000Z"
+      "seedPublishedAt": "2026-07-24T11:00:00.000Z",
+      "status": "active",
+      "addedAt": "2026-07-26T00:00:00.000Z",
+      "updatedAt": "2026-07-26T00:00:00.000Z"
     }
   ],
-  "updatedAt": "2026-07-26T08:31:05.018Z"
+  "updatedAt": "2026-07-26T12:21:22.026Z"
 }
