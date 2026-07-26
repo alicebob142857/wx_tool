@@ -1,0 +1,37 @@
+name: Verify writing library
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/verify-writing.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read public writing library
+        env:
+          WRITING_API_URL: https://wx-job-monitor-auth.alicebob142857-wx.workers.dev
+        run: |
+          node --input-type=module <<'NODE'
+          const response = await fetch(`${process.env.WRITING_API_URL}/api/writing-entries?limit=30`);
+          if (!response.ok) throw new Error(`HTTP ${response.status}: ${await response.text()}`);
+          const data = await response.json();
+          console.log(`WRITING_TOTAL=${data.total}`);
+          for (const [index, entry] of (data.entries || []).entries()) {
+            console.log(JSON.stringify({
+              number: index + 1,
+              id: entry.id,
+              essayTitle: entry.essayTitle,
+              articleTitle: entry.articleTitle,
+              publishedAt: entry.publishedAt,
+              wordCount: entry.wordCount,
+              commentarySections: entry.commentarySections?.length || 0,
+            }));
+          }
+          NODE
