@@ -15,6 +15,14 @@ interface ReportPayload {
   errors: string[];
 }
 
+interface WritingReportPayload {
+  date: string;
+  generatedAt: string;
+  stats: Record<string, number>;
+  entries: any[];
+  errors: string[];
+}
+
 interface LoginSession {
   id: string;
   uuidCookie: string;
@@ -46,11 +54,14 @@ interface SearchCandidate {
   name: string;
   alias: string;
   avatarUrl: string;
+  seedArticleUrl?: string;
+  seedPublishedAt?: string;
 }
 
 const LOGIN_KEY = "login:current";
 const AUTH_KEY = "auth:current";
 const ACCOUNT_SEARCH_PREFIX = "account-search:";
+const WRITING_ACCOUNT_SEARCH_PREFIX = "writing-account-search:";
 const FOUR_DAYS_MS = 4 * 24 * 60 * 60 * 1000;
 const USER_AGENT =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
@@ -128,6 +139,76 @@ async function ensureRuntimeSchema(env: Env): Promise<void> {
         )`),
         env.JOB_DB.prepare(`CREATE INDEX IF NOT EXISTS idx_job_feedback_sentiment_updated
           ON job_feedback(sentiment, updated_at DESC)`),
+        env.JOB_DB.prepare(`CREATE TABLE IF NOT EXISTS writing_accounts (
+          fakeid TEXT PRIMARY KEY,
+          name TEXT NOT NULL,
+          alias TEXT NOT NULL DEFAULT '',
+          avatar_url TEXT NOT NULL DEFAULT '',
+          seed_article_url TEXT NOT NULL DEFAULT '',
+          seed_published_at TEXT,
+          status TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'paused', 'removed')),
+          source TEXT NOT NULL DEFAULT 'name_search',
+          added_at TEXT NOT NULL,
+          updated_at TEXT NOT NULL
+        )`),
+        env.JOB_DB.prepare(`CREATE INDEX IF NOT EXISTS idx_writing_accounts_status_name
+          ON writing_accounts(status, name)`),
+        env.JOB_DB.prepare(`CREATE TABLE IF NOT EXISTS writing_entries (
+          id TEXT PRIMARY KEY,
+          account_fakeid TEXT NOT NULL,
+          account_name TEXT NOT NULL,
+          article_title TEXT NOT NULL,
+          article_url TEXT NOT NULL UNIQUE,
+          published_at TEXT NOT NULL,
+          collected_at TEXT NOT NULL,
+          essay_title TEXT NOT NULL,
+          theme TEXT NOT NULL DEFAULT '',
+          keywords_json TEXT NOT NULL DEFAULT '[]',
+          summary TEXT NOT NULL DEFAULT '',
+          essay_text TEXT NOT NULL,
+          commentary_sections_json TEXT NOT NULL DEFAULT '[]',
+          commentary_text TEXT NOT NULL,
+          source_note TEXT,
+          word_count INTEGER NOT NULL DEFAULT 0,
+          analysis_source TEXT NOT NULL DEFAULT 'deepseek',
+          confidence REAL NOT NULL DEFAULT 0,
+          updated_at TEXT NOT NULL,
+          FOREIGN KEY (account_fakeid) REFERENCES writing_accounts(fakeid)
+        )`),
+        env.JOB_DB.prepare(`CREATE INDEX IF NOT EXISTS idx_writing_entries_published
+          ON writing_entries(published_at DESC)`),
+        env.JOB_DB.prepare(`CREATE INDEX IF NOT EXISTS idx_writing_entries_account_published
+          ON writing_entries(account_fakeid, published_at DESC)`),
+        env.JOB_DB.prepare(`CREATE TABLE IF NOT EXISTS writing_favorites (
+          entry_id TEXT PRIMARY KEY,
+          created_at TEXT NOT NULL,
+          FOREIGN KEY (entry_id) REFERENCES writing_entries(id) ON DELETE CASCADE
+        )`),
+        env.JOB_DB.prepare(`CREATE INDEX IF NOT EXISTS idx_writing_favorites_created
+          ON writing_favorites(created_at DESC)`),
+        env.JOB_DB.prepare(`CREATE TABLE IF NOT EXISTS writing_runs (
+          report_date TEXT PRIMARY KEY,
+          generated_at TEXT NOT NULL,
+          accounts_configured INTEGER NOT NULL DEFAULT 0,
+          accounts_succeeded INTEGER NOT NULL DEFAULT 0,
+          articles_scanned INTEGER NOT NULL DEFAULT 0,
+          new_articles INTEGER NOT NULL DEFAULT 0,
+          candidate_articles INTEGER NOT NULL DEFAULT 0,
+          examples_stored INTEGER NOT NULL DEFAULT 0,
+          failed_articles INTEGER NOT NULL DEFAULT 0,
+          errors_json TEXT NOT NULL DEFAULT '[]'
+        )`),
+        env.JOB_DB.prepare(`INSERT OR IGNORE INTO writing_accounts (
+          fakeid, name, alias, avatar_url, seed_article_url, seed_published_at,
+          status, source, added_at, updated_at
+        ) VALUES (?, '隔壁班学习园地', '', '', ?, ?, 'active', 'article_url', ?, ?)`)
+          .bind(
+            "MzI4MDA4MjkzMg==",
+            "https://mp.weixin.qq.com/s/UkoP5Y6mS21igFWHo1HcIw",
+            "2026-07-24T11:00:00.000Z",
+            now,
+            now,
+          ),
         ...DEFAULT_ACCOUNTS.map(account => env.JOB_DB.prepare(`INSERT OR IGNORE INTO monitored_accounts
           (fakeid, name, alias, avatar_url, status, source, added_at, updated_at)
           VALUES (?, ?, ?, ?, 'active', 'bootstrap', ?, ?)`)
@@ -379,6 +460,215 @@ async function updateManagedAccount(request: Request, env: Env, fakeid: string):
 async function removeManagedAccount(request: Request, env: Env, fakeid: string): Promise<Response> {
   const result = await env.JOB_DB.prepare("UPDATE monitored_accounts SET status = 'removed', updated_at = ? WHERE fakeid = ? AND status != 'removed'")
     .bind(new Date().toISOString(), fakeid).run();
+  if (!result.meta.changes) return json(request, env, { message: "没有找到该公众号" }, 404);
+  return json(request, env, { ok: true });
+}
+
+function writingAccountFromRow(row: any): any {
+  return {
+    fakeid: String(row.fakeid || ""),
+    name: String(row.name || ""),
+    alias: String(row.alias || ""),
+    avatarUrl: String(row.avatar_url || ""),
+    seedArticleUrl: String(row.seed_article_url || ""),
+    seedPublishedAt: row.seed_published_at || null,
+    status: row.status === "paused" || row.status === "removed" ? row.status : "active",
+    source: ["bootstrap", "name_search", "article_url", "manual"].includes(row.source) ? row.source : "name_search",
+    addedAt: String(row.added_at || ""),
+    updatedAt: String(row.updated_at || ""),
+  };
+}
+
+async function listWritingAccounts(request: Request, env: Env): Promise<Response> {
+  const collector = authorized(request, env);
+  const where = collector ? "status = 'active'" : "status != 'removed'";
+  const result = await env.JOB_DB.prepare(`SELECT * FROM writing_accounts
+    WHERE ${where} ORDER BY status = 'active' DESC, name COLLATE NOCASE`).all();
+  const accounts = (result.results || []).map(writingAccountFromRow);
+  return json(request, env, {
+    count: accounts.length,
+    activeCount: accounts.filter(account => account.status === "active").length,
+    accounts,
+  });
+}
+
+function decodeHtmlText(value: string): string {
+  return value
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;|&#160;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&quot;|&#34;/gi, "\"")
+    .replace(/&#39;|&apos;/gi, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function canonicalWechatArticleUrl(value: string): string {
+  const url = new URL(value);
+  if (url.protocol !== "https:" || url.hostname !== "mp.weixin.qq.com" || !url.pathname.startsWith("/s")) {
+    throw new Error("请输入有效的微信公众号文章链接");
+  }
+  if (/^\/s\/[^/]+/.test(url.pathname)) return `${url.origin}${url.pathname}`;
+  for (const key of [...url.searchParams.keys()]) {
+    if (!["__biz", "mid", "idx", "sn"].includes(key)) url.searchParams.delete(key);
+  }
+  return url.toString();
+}
+
+async function articleAccountName(articleUrl: string, auth: StoredAuth): Promise<string> {
+  const response = await fetch(articleUrl, {
+    headers: mpHeaders(cookieHeader(auth.cookies)),
+    signal: AbortSignal.timeout(30_000),
+  });
+  if (!response.ok) throw new Error(`文章读取失败（HTTP ${response.status}）`);
+  const html = await response.text();
+  if (/环境异常|完成验证后即可继续访问/.test(html)) {
+    throw new Error("微信暂时阻止了文章链接识别，请改用公众号完整名称搜索");
+  }
+  const patterns = [
+    /id=["']js_name["'][^>]*>([\s\S]*?)<\/a>/i,
+    /rich_media_meta_nickname[^>]*>([\s\S]*?)<\/span>/i,
+    /<meta[^>]+name=["']author["'][^>]+content=["']([^"']+)/i,
+  ];
+  for (const pattern of patterns) {
+    const match = html.match(pattern);
+    const name = match ? decodeHtmlText(match[1] || "") : "";
+    if (name) return name;
+  }
+  throw new Error("未能从文章中识别公众号名称，请改用公众号完整名称搜索");
+}
+
+async function queryWechatAccounts(auth: StoredAuth, keyword: string): Promise<SearchCandidate[]> {
+  const url = new URL("https://mp.weixin.qq.com/cgi-bin/searchbiz");
+  const params: Record<string, string> = {
+    action: "search_biz",
+    begin: "0",
+    count: "10",
+    query: keyword,
+    token: auth.token,
+    lang: "zh_CN",
+    f: "json",
+    ajax: "1",
+  };
+  Object.entries(params).forEach(([key, value]) => url.searchParams.set(key, value));
+  const response = await fetch(url, { headers: mpHeaders(cookieHeader(auth.cookies)) });
+  const result: any = await response.json().catch(() => null);
+  if (!response.ok || !result) throw new Error("微信公众号搜索接口返回异常");
+  const ret = Number(result?.base_resp?.ret ?? -1);
+  if (ret !== 0) {
+    if (isExpiredWechatCode(ret)) throw new Error("微信公众号授权已过期，请先扫码恢复授权");
+    throw new Error(result?.base_resp?.err_msg || `公众号搜索失败（${ret}）`);
+  }
+  const seen = new Set<string>();
+  return (Array.isArray(result.list) ? result.list : []).flatMap((raw: any) => {
+    const fakeid = String(raw?.fakeid || "").trim();
+    const name = String(raw?.nickname || raw?.name || "").trim();
+    if (!fakeid || !name || seen.has(fakeid)) return [];
+    seen.add(fakeid);
+    return [{
+      fakeid,
+      name,
+      alias: String(raw?.alias || "").trim(),
+      avatarUrl: cleanHttpsUrl(raw?.round_head_img || raw?.head_img),
+    }];
+  });
+}
+
+async function searchWritingAccounts(request: Request, env: Env): Promise<Response> {
+  const auth = await getAuth(env);
+  if (!auth) return json(request, env, { message: "微信公众号授权已过期，请先扫码恢复授权" }, 409);
+  const body = await request.json<{ query?: string }>().catch(() => ({ query: "" }));
+  const query = String(body.query || "").trim();
+  if (query.length < 2 || query.length > 500) {
+    return json(request, env, { message: "请输入公众号完整名称或一篇公众号文章链接" }, 400);
+  }
+
+  let keyword = query;
+  let seedArticleUrl = "";
+  if (/^https:\/\//i.test(query)) {
+    try {
+      seedArticleUrl = canonicalWechatArticleUrl(query);
+      keyword = await articleAccountName(seedArticleUrl, auth);
+    } catch (error) {
+      return json(request, env, { message: error instanceof Error ? error.message : String(error) }, 400);
+    }
+  }
+  let rawCandidates: SearchCandidate[];
+  try {
+    rawCandidates = await queryWechatAccounts(auth, keyword);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    if (/授权已过期/.test(message)) {
+      await env.AUTH_KV.delete(AUTH_KEY);
+      return json(request, env, { message }, 409);
+    }
+    return json(request, env, { message }, 502);
+  }
+  const candidates: Array<SearchCandidate & { candidateId: string; status: string | null }> = [];
+  for (const raw of rawCandidates) {
+    const candidate = { ...raw, seedArticleUrl: seedArticleUrl || undefined };
+    const candidateId = randomToken();
+    const existing = await env.JOB_DB.prepare("SELECT status FROM writing_accounts WHERE fakeid = ?")
+      .bind(raw.fakeid).first<{ status: string }>();
+    await env.AUTH_KV.put(`${WRITING_ACCOUNT_SEARCH_PREFIX}${candidateId}`, JSON.stringify(candidate), {
+      expirationTtl: 10 * 60,
+    });
+    candidates.push({ ...candidate, fakeid: "", candidateId, status: existing?.status || null });
+  }
+  return json(request, env, { query, resolvedName: keyword, candidates });
+}
+
+async function addWritingAccount(request: Request, env: Env): Promise<Response> {
+  const body = await request.json<{ candidateId?: string }>().catch(() => ({ candidateId: "" }));
+  const candidateId = String(body.candidateId || "");
+  if (!/^[a-f0-9]{64}$/.test(candidateId)) return json(request, env, { message: "搜索结果标识不合法" }, 400);
+  const candidate = await env.AUTH_KV.get<SearchCandidate>(`${WRITING_ACCOUNT_SEARCH_PREFIX}${candidateId}`, "json");
+  if (!candidate) return json(request, env, { message: "搜索结果已过期，请重新搜索" }, 410);
+  const now = new Date().toISOString();
+  await env.JOB_DB.prepare(`INSERT INTO writing_accounts (
+    fakeid, name, alias, avatar_url, seed_article_url, seed_published_at,
+    status, source, added_at, updated_at
+  ) VALUES (?, ?, ?, ?, ?, NULL, 'active', ?, ?, ?)
+  ON CONFLICT(fakeid) DO UPDATE SET
+    name=excluded.name, alias=excluded.alias, avatar_url=excluded.avatar_url,
+    seed_article_url=CASE WHEN excluded.seed_article_url != '' THEN excluded.seed_article_url ELSE writing_accounts.seed_article_url END,
+    status='active', source=excluded.source, updated_at=excluded.updated_at`)
+    .bind(
+      candidate.fakeid,
+      candidate.name,
+      candidate.alias,
+      candidate.avatarUrl,
+      candidate.seedArticleUrl || "",
+      candidate.seedArticleUrl ? "article_url" : "name_search",
+      now,
+      now,
+    ).run();
+  await env.AUTH_KV.delete(`${WRITING_ACCOUNT_SEARCH_PREFIX}${candidateId}`);
+  const row = await env.JOB_DB.prepare("SELECT * FROM writing_accounts WHERE fakeid = ?")
+    .bind(candidate.fakeid).first();
+  await dispatchCollection(env).catch(() => undefined);
+  return json(request, env, { ok: true, account: writingAccountFromRow(row) });
+}
+
+async function updateWritingAccount(request: Request, env: Env, fakeid: string): Promise<Response> {
+  const body = await request.json<{ status?: string }>().catch(() => ({ status: "" }));
+  if (body.status !== "active" && body.status !== "paused") {
+    return json(request, env, { message: "状态只能是 active 或 paused" }, 400);
+  }
+  const result = await env.JOB_DB.prepare(
+    "UPDATE writing_accounts SET status = ?, updated_at = ? WHERE fakeid = ? AND status != 'removed'",
+  ).bind(body.status, new Date().toISOString(), fakeid).run();
+  if (!result.meta.changes) return json(request, env, { message: "没有找到该公众号" }, 404);
+  const row = await env.JOB_DB.prepare("SELECT * FROM writing_accounts WHERE fakeid = ?").bind(fakeid).first();
+  return json(request, env, { ok: true, account: writingAccountFromRow(row) });
+}
+
+async function removeWritingAccount(request: Request, env: Env, fakeid: string): Promise<Response> {
+  const result = await env.JOB_DB.prepare(
+    "UPDATE writing_accounts SET status = 'removed', updated_at = ? WHERE fakeid = ? AND status != 'removed'",
+  ).bind(new Date().toISOString(), fakeid).run();
   if (!result.meta.changes) return json(request, env, { message: "没有找到该公众号" }, 404);
   return json(request, env, { ok: true });
 }
@@ -969,6 +1259,215 @@ async function saveReport(request: Request, env: Env): Promise<Response> {
   return json(request, env, { ok: true, date: report.date, articles: articleStatements.length, positions: positionStatements.length });
 }
 
+function writingEntryFromRow(row: any): any {
+  return {
+    id: String(row.id || ""),
+    account: String(row.account_name || ""),
+    accountFakeid: String(row.account_fakeid || ""),
+    articleTitle: String(row.article_title || ""),
+    articleUrl: String(row.article_url || ""),
+    publishedAt: String(row.published_at || ""),
+    collectedAt: String(row.collected_at || ""),
+    essayTitle: String(row.essay_title || ""),
+    theme: String(row.theme || ""),
+    keywords: parseJsonArray(row.keywords_json).map(String),
+    summary: String(row.summary || ""),
+    essayText: String(row.essay_text || ""),
+    commentarySections: parseJsonArray(row.commentary_sections_json),
+    commentaryText: String(row.commentary_text || ""),
+    sourceNote: row.source_note || null,
+    wordCount: Number(row.word_count || 0),
+    analysisSource: row.analysis_source === "heuristic" ? "heuristic" : "deepseek",
+    confidence: Number(row.confidence || 0),
+    favorite: Boolean(row.favorite),
+    favoritedAt: row.favorited_at || null,
+  };
+}
+
+const WRITING_SELECT = `SELECT e.*, CASE WHEN f.entry_id IS NULL THEN 0 ELSE 1 END AS favorite,
+  f.created_at AS favorited_at
+  FROM writing_entries e LEFT JOIN writing_favorites f ON f.entry_id = e.id`;
+
+async function saveWritingReport(request: Request, env: Env): Promise<Response> {
+  if (!authorized(request, env)) return json(request, env, { message: "Unauthorized" }, 401);
+  const length = Number(request.headers.get("content-length") || 0);
+  if (length > 8 * 1024 * 1024) return json(request, env, { message: "范文报告超过 8MB" }, 413);
+  const report = await request.json<WritingReportPayload>();
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(report?.date || "") || !Array.isArray(report?.entries)) {
+    return json(request, env, { message: "范文报告格式不合法" }, 400);
+  }
+  const stats = report.stats || {};
+  await env.JOB_DB.prepare(`INSERT INTO writing_runs (
+    report_date, generated_at, accounts_configured, accounts_succeeded, articles_scanned,
+    new_articles, candidate_articles, examples_stored, failed_articles, errors_json
+  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  ON CONFLICT(report_date) DO UPDATE SET
+    generated_at=excluded.generated_at,
+    accounts_configured=excluded.accounts_configured,
+    accounts_succeeded=excluded.accounts_succeeded,
+    articles_scanned=excluded.articles_scanned,
+    new_articles=excluded.new_articles,
+    candidate_articles=excluded.candidate_articles,
+    examples_stored=excluded.examples_stored,
+    failed_articles=excluded.failed_articles,
+    errors_json=excluded.errors_json`).bind(
+    report.date,
+    report.generatedAt,
+    stats.accountsConfigured || 0,
+    stats.accountsSucceeded || 0,
+    stats.articlesScanned || 0,
+    stats.newArticles || 0,
+    stats.candidateArticles || 0,
+    stats.examplesStored || 0,
+    stats.failedArticles || 0,
+    jsonText(report.errors),
+  ).run();
+
+  const now = new Date().toISOString();
+  const statements: D1PreparedStatement[] = [];
+  for (const entry of report.entries) {
+    if (
+      !/^[a-f0-9]{16}$/.test(String(entry?.id || ""))
+      || !entry?.articleUrl
+      || !entry?.essayText
+      || !entry?.commentaryText
+      || !entry?.accountFakeid
+    ) continue;
+    statements.push(env.JOB_DB.prepare(`INSERT INTO writing_entries (
+      id, account_fakeid, account_name, article_title, article_url, published_at, collected_at,
+      essay_title, theme, keywords_json, summary, essay_text, commentary_sections_json,
+      commentary_text, source_note, word_count, analysis_source, confidence, updated_at
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(id) DO UPDATE SET
+      account_fakeid=excluded.account_fakeid,
+      account_name=excluded.account_name,
+      article_title=excluded.article_title,
+      article_url=excluded.article_url,
+      published_at=excluded.published_at,
+      collected_at=excluded.collected_at,
+      essay_title=excluded.essay_title,
+      theme=excluded.theme,
+      keywords_json=excluded.keywords_json,
+      summary=excluded.summary,
+      essay_text=excluded.essay_text,
+      commentary_sections_json=excluded.commentary_sections_json,
+      commentary_text=excluded.commentary_text,
+      source_note=excluded.source_note,
+      word_count=excluded.word_count,
+      analysis_source=excluded.analysis_source,
+      confidence=excluded.confidence,
+      updated_at=excluded.updated_at`).bind(
+      entry.id,
+      String(entry.accountFakeid),
+      String(entry.account || ""),
+      String(entry.articleTitle || entry.essayTitle || ""),
+      String(entry.articleUrl),
+      String(entry.publishedAt || report.generatedAt),
+      String(entry.collectedAt || report.generatedAt),
+      String(entry.essayTitle || entry.articleTitle || ""),
+      String(entry.theme || ""),
+      jsonText(entry.keywords),
+      String(entry.summary || ""),
+      String(entry.essayText),
+      JSON.stringify(Array.isArray(entry.commentarySections) ? entry.commentarySections : []),
+      String(entry.commentaryText),
+      entry.sourceNote ? String(entry.sourceNote) : null,
+      Number(entry.wordCount || 0),
+      entry.analysisSource === "heuristic" ? "heuristic" : "deepseek",
+      Number(entry.confidence || 0),
+      now,
+    ));
+  }
+  await runBatches(env.JOB_DB, statements, 25);
+  return json(request, env, { ok: true, date: report.date, entries: statements.length });
+}
+
+async function writingStatus(request: Request, env: Env): Promise<Response> {
+  const [latest, counts] = await Promise.all([
+    env.JOB_DB.prepare("SELECT * FROM writing_runs ORDER BY generated_at DESC LIMIT 1").first<any>(),
+    env.JOB_DB.prepare(`SELECT COUNT(*) AS total,
+      SUM(CASE WHEN f.entry_id IS NOT NULL THEN 1 ELSE 0 END) AS favorites
+      FROM writing_entries e LEFT JOIN writing_favorites f ON f.entry_id = e.id`).first<any>(),
+  ]);
+  return json(request, env, {
+    state: latest
+      ? Number(latest.failed_articles || 0) > 0 ? "partial" : "ok"
+      : "never_run",
+    lastRunAt: latest?.generated_at || null,
+    date: latest?.report_date || null,
+    total: Number(counts?.total || 0),
+    favorites: Number(counts?.favorites || 0),
+    stats: latest ? {
+      accountsConfigured: Number(latest.accounts_configured || 0),
+      accountsSucceeded: Number(latest.accounts_succeeded || 0),
+      articlesScanned: Number(latest.articles_scanned || 0),
+      newArticles: Number(latest.new_articles || 0),
+      candidateArticles: Number(latest.candidate_articles || 0),
+      examplesStored: Number(latest.examples_stored || 0),
+      failedArticles: Number(latest.failed_articles || 0),
+    } : null,
+    errors: latest ? parseJsonArray(latest.errors_json).map(String).slice(-20) : [],
+  });
+}
+
+async function listWritingEntries(request: Request, env: Env): Promise<Response> {
+  const input = new URL(request.url);
+  const query = (input.searchParams.get("q") || "").trim().slice(0, 120);
+  const account = (input.searchParams.get("account") || "").trim().slice(0, 120);
+  const favoritesOnly = input.searchParams.get("favorite") === "1";
+  const limit = Math.min(100, Math.max(1, Number(input.searchParams.get("limit") || 30)));
+  const offset = Math.max(0, Number(input.searchParams.get("offset") || 0));
+  const conditions: string[] = [];
+  const values: Array<string | number> = [];
+  if (query) {
+    conditions.push(`(
+      e.essay_title LIKE ? OR e.article_title LIKE ? OR e.theme LIKE ?
+      OR e.keywords_json LIKE ? OR e.essay_text LIKE ? OR e.commentary_text LIKE ?
+    )`);
+    const like = `%${query}%`;
+    values.push(like, like, like, like, like, like);
+  }
+  if (account) {
+    conditions.push("e.account_fakeid = ?");
+    values.push(account);
+  }
+  if (favoritesOnly) conditions.push("f.entry_id IS NOT NULL");
+  const where = conditions.length ? ` WHERE ${conditions.join(" AND ")}` : "";
+  const [rows, count] = await Promise.all([
+    env.JOB_DB.prepare(`${WRITING_SELECT}${where}
+      ORDER BY e.published_at DESC, e.collected_at DESC LIMIT ? OFFSET ?`)
+      .bind(...values, limit, offset).all<any>(),
+    env.JOB_DB.prepare(`SELECT COUNT(*) AS total
+      FROM writing_entries e LEFT JOIN writing_favorites f ON f.entry_id = e.id${where}`)
+      .bind(...values).first<any>(),
+  ]);
+  return json(request, env, {
+    query,
+    account,
+    favorite: favoritesOnly,
+    total: Number(count?.total || 0),
+    limit,
+    offset,
+    entries: (rows.results || []).map(writingEntryFromRow),
+  });
+}
+
+async function saveWritingFavorite(request: Request, env: Env, entryId: string): Promise<Response> {
+  if (!/^[a-f0-9]{16}$/.test(entryId)) return json(request, env, { message: "范文 ID 不合法" }, 400);
+  const entry = await env.JOB_DB.prepare("SELECT id FROM writing_entries WHERE id = ?").bind(entryId).first();
+  if (!entry) return json(request, env, { message: "没有找到该范文" }, 404);
+  const createdAt = new Date().toISOString();
+  await env.JOB_DB.prepare(`INSERT INTO writing_favorites (entry_id, created_at) VALUES (?, ?)
+    ON CONFLICT(entry_id) DO UPDATE SET created_at=excluded.created_at`).bind(entryId, createdAt).run();
+  return json(request, env, { ok: true, entryId, favorite: true, createdAt });
+}
+
+async function deleteWritingFavorite(request: Request, env: Env, entryId: string): Promise<Response> {
+  if (!/^[a-f0-9]{16}$/.test(entryId)) return json(request, env, { message: "范文 ID 不合法" }, 400);
+  await env.JOB_DB.prepare("DELETE FROM writing_favorites WHERE entry_id = ?").bind(entryId).run();
+  return json(request, env, { ok: true, entryId, favorite: false });
+}
+
 async function listJobDays(request: Request, env: Env): Promise<Response> {
   const result = await env.JOB_DB.prepare(`SELECT report_date AS date, generated_at AS generatedAt,
     positions_extracted AS positionCount, articles_scanned AS articlesScanned,
@@ -1075,6 +1574,16 @@ export default {
       const feedbackMatch = url.pathname.match(/^\/api\/feedback\/([a-f0-9]{16})$/);
       if (feedbackMatch && request.method === "PUT") return saveJobFeedback(request, env, feedbackMatch[1]);
       if (feedbackMatch && request.method === "DELETE") return deleteJobFeedback(request, env, feedbackMatch[1]);
+      if (url.pathname === "/api/writing-accounts/search" && request.method === "POST") return searchWritingAccounts(request, env);
+      if (url.pathname === "/api/writing-accounts" && request.method === "GET") return listWritingAccounts(request, env);
+      if (url.pathname === "/api/writing-accounts" && request.method === "POST") return addWritingAccount(request, env);
+      const writingAccountMatch = url.pathname.match(/^\/api\/writing-accounts\/([^/]+)$/);
+      if (writingAccountMatch && request.method === "PUT") {
+        return updateWritingAccount(request, env, decodeURIComponent(writingAccountMatch[1]));
+      }
+      if (writingAccountMatch && request.method === "DELETE") {
+        return removeWritingAccount(request, env, decodeURIComponent(writingAccountMatch[1]));
+      }
       if (url.pathname === "/api/accounts/search" && request.method === "POST") return searchManagedAccounts(request, env);
       if (url.pathname === "/api/accounts" && request.method === "GET") return listManagedAccounts(request, env);
       if (url.pathname === "/api/accounts" && request.method === "POST") return addManagedAccount(request, env);
@@ -1092,6 +1601,12 @@ export default {
       if (url.pathname === "/api/exporter/articles" && request.method === "GET") return listArticles(request, env);
       if (url.pathname === "/api/exporter/content" && request.method === "GET") return downloadArticle(request, env);
       if (url.pathname === "/api/reports" && request.method === "POST") return saveReport(request, env);
+      if (url.pathname === "/api/writing-reports" && request.method === "POST") return saveWritingReport(request, env);
+      if (url.pathname === "/api/writing-status" && request.method === "GET") return writingStatus(request, env);
+      if (url.pathname === "/api/writing-entries" && request.method === "GET") return listWritingEntries(request, env);
+      const writingFavoriteMatch = url.pathname.match(/^\/api\/writing-favorites\/([a-f0-9]{16})$/);
+      if (writingFavoriteMatch && request.method === "PUT") return saveWritingFavorite(request, env, writingFavoriteMatch[1]);
+      if (writingFavoriteMatch && request.method === "DELETE") return deleteWritingFavorite(request, env, writingFavoriteMatch[1]);
       if (url.pathname === "/api/job-days" && request.method === "GET") return listJobDays(request, env);
       if (url.pathname === "/api/jobs" && request.method === "GET") return listJobs(request, env);
       if (url.pathname === "/api/job-history" && request.method === "GET") return listJobHistory(request, env);

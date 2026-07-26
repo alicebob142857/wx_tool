@@ -2,6 +2,7 @@ import "dotenv/config";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import type { Account, UserProfile } from "./types.js";
+import type { WritingAccount } from "./writing-types.js";
 
 function numberEnv(name: string, fallback: number): number {
   const raw = process.env[name];
@@ -30,6 +31,9 @@ export interface AppConfig {
   articleConcurrency: number;
   forceReprocessHours: number;
   classifierMode: "deepseek" | "heuristic";
+  writingLookbackHours: number;
+  writingMaxArticlesPerRun: number;
+  writingArticleConcurrency: number;
 }
 
 export function loadConfig(): AppConfig {
@@ -42,7 +46,7 @@ export function loadConfig(): AppConfig {
     authServiceUrl: (process.env.AUTH_SERVICE_URL || "").replace(/\/$/, ""),
     authServiceToken: process.env.AUTH_SERVICE_TOKEN || "",
     deepseekApiKey: process.env.DEEPSEEK_API_KEY || "",
-    deepseekModel: process.env.DEEPSEEK_MODEL || "deepseek-chat",
+    deepseekModel: process.env.DEEPSEEK_MODEL || "deepseek-v4-flash",
     deepseekBaseUrl: (process.env.DEEPSEEK_BASE_URL || "https://api.deepseek.com").replace(/\/$/, ""),
     lookbackHours: numberEnv("LOOKBACK_HOURS", 36),
     maxArticlesPerRun: numberEnv("MAX_ARTICLES_PER_RUN", 60),
@@ -52,6 +56,9 @@ export function loadConfig(): AppConfig {
     articleConcurrency: numberEnv("ARTICLE_CONCURRENCY", 3),
     forceReprocessHours: numberEnv("FORCE_REPROCESS_HOURS", 0),
     classifierMode,
+    writingLookbackHours: numberEnv("WRITING_LOOKBACK_HOURS", 72),
+    writingMaxArticlesPerRun: numberEnv("WRITING_MAX_ARTICLES_PER_RUN", 20),
+    writingArticleConcurrency: numberEnv("WRITING_ARTICLE_CONCURRENCY", 2),
   };
 }
 
@@ -103,4 +110,19 @@ export async function loadProfile(rootDir: string): Promise<UserProfile> {
     if (error?.code === "ENOENT") return fallback;
     throw error;
   }
+}
+
+export async function loadWritingAccounts(rootDir: string): Promise<WritingAccount[]> {
+  const content = await readFile(path.join(rootDir, "config", "writing-accounts.json"), "utf8");
+  const accounts = JSON.parse(content) as WritingAccount[];
+  if (!Array.isArray(accounts) || accounts.length === 0) {
+    throw new Error("config/writing-accounts.json 中没有公众号配置");
+  }
+  const fakeids = new Set<string>();
+  for (const account of accounts) {
+    if (!account.name || !account.fakeid) throw new Error("范文公众号配置必须包含 name 和 fakeid");
+    if (fakeids.has(account.fakeid)) throw new Error(`范文公众号 fakeid 重复：${account.fakeid}`);
+    fakeids.add(account.fakeid);
+  }
+  return accounts;
 }

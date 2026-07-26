@@ -10,7 +10,7 @@ const config: AppConfig = {
   authServiceUrl: "",
   authServiceToken: "",
   deepseekApiKey: "",
-  deepseekModel: "deepseek-chat",
+  deepseekModel: "deepseek-v4-flash",
   deepseekBaseUrl: "https://api.deepseek.com",
   lookbackHours: 36,
   maxArticlesPerRun: 60,
@@ -20,6 +20,9 @@ const config: AppConfig = {
   articleConcurrency: 3,
   forceReprocessHours: 0,
   classifierMode: "deepseek",
+  writingLookbackHours: 72,
+  writingMaxArticlesPerRun: 20,
+  writingArticleConcurrency: 2,
 };
 
 function feedback(positionId: string, sentiment: "like" | "dislike"): FeedbackTrainingRecord {

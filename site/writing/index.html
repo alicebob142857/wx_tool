@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="每日从自选微信公众号整理申论范文与逐段点评，支持全文检索和收藏。" />
+    <meta name="referrer" content="no-referrer" />
+    <meta property="og:title" content="范文点评库" />
+    <meta property="og:description" content="范文归范文，点评归点评。每日整理自选公众号中的申论学习资料。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alicebob142857.github.io/wx_tool/writing/" />
+    <meta property="og:image" content="https://alicebob142857.github.io/wx_tool/writing/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>范文点评库 · 文管学习资料</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="writing.css" />
+  </head>
+  <body>
+    <div class="page-shell writing-shell">
+      <header class="topbar">
+        <a class="brand" href="../" aria-label="返回招聘雷达">
+          <span class="brand-mark writing-mark" aria-hidden="true">析</span>
+          <span>
+            <strong>范文点评库</strong>
+            <small>Essay & commentary archive</small>
+          </span>
+        </a>
+        <div class="topbar-actions">
+          <a class="manage-link module-link" href="../">招聘岗位页</a>
+          <a class="manage-link" href="#writing-favorites">我的收藏</a>
+          <a class="manage-link" href="#writing-account-management">公众号管理</a>
+          <div id="writing-service-status" class="service-status is-loading">
+            <span class="status-dot"></span>
+            <span>正在读取状态</span>
+          </div>
+        </div>
+      </header>
+
+      <div id="writing-local-mode" class="local-mode" hidden>
+        localhost 测试模式：范文、搜索、收藏与公众号设置仍连接线上数据库。
+      </div>
+
+      <main>
+        <section class="writing-hero">
+          <div>
+            <p class="eyebrow">每日 06:00 自动更新</p>
+            <h1>范文归范文，<br /><span>点评归点评。</span></h1>
+            <p>
+              自动筛出包含完整申论范文和老师解析的推文，拆分保存后可按标题、主题、
+              关键词、范文正文或点评全文检索。
+            </p>
+          </div>
+          <div class="writing-metrics" aria-label="范文库统计">
+            <article><span>已收录</span><strong id="writing-total">—</strong><small>篇范文</small></article>
+            <article><span>收藏</span><strong id="writing-favorite-total">—</strong><small>篇资料</small></article>
+            <article><span>最近更新</span><strong id="writing-last-date">—</strong><small id="writing-last-run">尚未运行</small></article>
+          </div>
+        </section>
+
+        <section id="writing-auth-panel" class="writing-auth-panel" hidden>
+          <div>
+            <p class="eyebrow danger">需要操作</p>
+            <h2>公众号授权已过期</h2>
+            <p>扫描二维码恢复文章搜索权限，范文库与招聘页共用同一次授权。</p>
+            <div id="writing-scan-status" class="scan-status">正在生成二维码</div>
+          </div>
+          <div class="writing-qr-frame">
+            <img id="writing-auth-qr" alt="微信公众号登录二维码" hidden />
+            <span id="writing-qr-placeholder">二维码加载中…</span>
+          </div>
+        </section>
+
+        <section class="writing-search-panel" aria-labelledby="writing-search-title">
+          <div class="writing-search-copy">
+            <p class="eyebrow">Full-text search</p>
+            <h2 id="writing-search-title">检索范文与点评</h2>
+            <p>搜索会同时覆盖标题、主题、关键词、范文和点评内容。</p>
+          </div>
+          <form id="writing-search-form" class="writing-search-form" role="search">
+            <label class="sr-only" for="writing-query">搜索范文</label>
+            <input id="writing-query" type="search" maxlength="120" autocomplete="off" placeholder="例如：基层治理、青年担当、数字化、开头怎么写…" />
+            <select id="writing-account-filter" aria-label="按公众号筛选">
+              <option value="">全部公众号</option>
+            </select>
+            <label id="writing-favorites" class="writing-favorite-filter">
+              <input id="writing-favorites-only" type="checkbox" />
+              <span>只看收藏</span>
+            </label>
+            <button type="submit" class="primary-button">搜索</button>
+          </form>
+        </section>
+
+        <div class="writing-result-heading">
+          <div>
+            <p class="eyebrow">Archive</p>
+            <h2 id="writing-result-title">全部范文</h2>
+          </div>
+          <span id="writing-result-count" class="count-badge">读取中</span>
+        </div>
+        <section id="writing-results" class="writing-results" aria-live="polite"></section>
+        <section id="writing-empty" class="empty-state compact-empty" hidden>
+          <div class="empty-icon">文</div>
+          <h3>暂时没有匹配的范文</h3>
+          <p>换一个关键词，或在下方添加需要监测的公众号。</p>
+        </section>
+        <div class="writing-load-more-wrap">
+          <button id="writing-load-more" class="secondary-button" type="button" hidden>加载更多</button>
+        </div>
+
+        <section id="writing-account-management" class="account-management writing-account-management" aria-labelledby="writing-account-title">
+          <div class="management-heading">
+            <div>
+              <p class="eyebrow">Writing sources</p>
+              <h2 id="writing-account-title">范文公众号管理</h2>
+              <p>这里只管理范文来源，不会加入招聘监测。支持粘贴一篇文章链接，或输入公众号完整名称。</p>
+            </div>
+            <span id="writing-account-count" class="account-count-badge">读取中</span>
+          </div>
+          <div id="writing-account-list" class="managed-account-list" aria-live="polite"></div>
+          <section class="writing-account-add">
+            <div>
+              <p class="eyebrow">Add source</p>
+              <h3>添加范文公众号</h3>
+              <p>粘贴文章链接时会先识别公众号名称，再让你确认搜索结果。</p>
+            </div>
+            <form id="writing-account-search-form" class="writing-account-search-form">
+              <label for="writing-account-query">文章链接或公众号名称</label>
+              <div>
+                <input id="writing-account-query" required minlength="2" maxlength="500" autocomplete="off"
+                  placeholder="https://mp.weixin.qq.com/s/... 或 隔壁班学习园地" />
+                <button class="primary-button" type="submit">识别并搜索</button>
+              </div>
+              <p id="writing-account-form-status" role="status"></p>
+            </form>
+          </section>
+          <div id="writing-account-candidates" class="account-search-results" aria-live="polite"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>范文点评库 · 仅整理自选公众号中的学习资料</span>
+        <a href="../">返回招聘岗位页</a>
+      </footer>
+    </div>
+    <script src="writing.js" defer></script>
+  </body>
+</html>

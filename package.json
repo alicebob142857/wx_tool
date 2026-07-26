@@ -8,6 +8,7 @@
   },
   "scripts": {
     "collect": "tsx src/run.ts",
+    "collect:writing": "tsx src/run-writing.ts",
     "smoke": "tsx scripts/smoke.ts",
     "check": "tsc -p tsconfig.json --noEmit && tsc -p worker/tsconfig.json --noEmit",
     "test": "node --import tsx --test tests/**/*.test.ts",

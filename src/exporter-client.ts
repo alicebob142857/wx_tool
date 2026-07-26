@@ -2,6 +2,7 @@ import type { Account, DailyReport, FeedbackPreferenceProfile, WechatArticle } f
 import type { FeedbackTrainingRecord } from "./feedback-preference.js";
 import type { AppConfig } from "./config.js";
 import { validateAccounts } from "./config.js";
+import type { WritingAccount, WritingReport } from "./writing-types.js";
 
 export class AuthExpiredError extends Error {
   constructor(message = "微信公众号授权已过期") {
@@ -81,6 +82,28 @@ export class ExporterClient {
     return validateAccounts(data?.accounts || [], "D1 公众号列表", true);
   }
 
+  async getWritingAccounts(): Promise<WritingAccount[] | null> {
+    if (!this.usesAuthService || !this.config.authServiceToken) return null;
+    const response = await fetch(`${this.config.authServiceUrl}/api/writing-accounts`, {
+      headers: { Authorization: `Bearer ${this.config.authServiceToken}` },
+      signal: AbortSignal.timeout(15_000),
+    });
+    if (response.status === 404) return null;
+    const data = await parseJsonResponse(response);
+    const accounts = Array.isArray(data?.accounts) ? data.accounts : [];
+    return accounts.map((account: any) => ({
+      fakeid: String(account.fakeid || "").trim(),
+      name: String(account.name || "").trim(),
+      alias: String(account.alias || "").trim(),
+      avatarUrl: String(account.avatarUrl || "").trim(),
+      seedArticleUrl: String(account.seedArticleUrl || "").trim() || undefined,
+      seedPublishedAt: String(account.seedPublishedAt || "").trim() || undefined,
+      status: account.status === "paused" ? "paused" : "active",
+      addedAt: String(account.addedAt || "").trim() || undefined,
+      updatedAt: String(account.updatedAt || "").trim() || undefined,
+    })).filter((account: WritingAccount) => account.fakeid && account.name);
+  }
+
   async listArticles(account: Account): Promise<WechatArticle[]> {
     if (this.usesAuthService) {
       const url = new URL(`${this.config.authServiceUrl}/api/exporter/articles`);
@@ -149,6 +172,20 @@ export class ExporterClient {
       },
       body: JSON.stringify(report),
       signal: AbortSignal.timeout(90_000),
+    });
+    await parseJsonResponse(response);
+  }
+
+  async saveWritingReport(report: WritingReport): Promise<void> {
+    if (!this.usesAuthService || !this.config.authServiceToken) return;
+    const response = await fetch(`${this.config.authServiceUrl}/api/writing-reports`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${this.config.authServiceToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(report),
+      signal: AbortSignal.timeout(120_000),
     });
     await parseJsonResponse(response);
   }
