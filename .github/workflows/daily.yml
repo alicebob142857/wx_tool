@@ -93,8 +93,8 @@ jobs:
           OCR_MAX_IMAGES: "12"
           OCR_TIMEOUT_MS: "60000"
           OCR_ARTICLE_BUDGET_MS: "90000"
-          WRITING_LOOKBACK_HOURS: "72"
-          WRITING_MAX_ARTICLES_PER_RUN: "20"
+          WRITING_LOOKBACK_HOURS: "336"
+          WRITING_MAX_ARTICLES_PER_RUN: "10"
           WRITING_ARTICLE_CONCURRENCY: "2"
         run: npm run collect:writing
 
