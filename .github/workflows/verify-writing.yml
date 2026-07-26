@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/verify-writing.yml"
+      - "scripts/sync-writing-snapshot.ts"
+      - "src/writing-topics.ts"
+      - "worker/migrations/*writing_topic*.sql"
   workflow_dispatch:
 
 permissions:
