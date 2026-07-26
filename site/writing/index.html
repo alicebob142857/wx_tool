@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="每日从自选微信公众号整理申论范文与逐段点评，支持全文检索和收藏。" />
+    <meta name="description" content="每日从自选微信公众号整理申论范文与逐段点评，按政治、经济、社会、文化、生态、科技主题检索。" />
     <meta name="referrer" content="no-referrer" />
     <meta property="og:title" content="范文点评库" />
     <meta property="og:description" content="范文归范文，点评归点评。每日整理自选公众号中的申论学习资料。" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://alicebob142857.github.io/wx_tool/writing/" />
-    <meta property="og:image" content="https://alicebob142857.github.io/wx_tool/writing/og.png" />
+    <meta property="og:image" content="https://alicebob142857.github.io/wx_tool/writing/og-topics.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>范文点评库 · 文管学习资料</title>
     <link rel="stylesheet" href="../styles.css" />
@@ -39,6 +39,7 @@
       <div id="writing-local-mode" class="local-mode" hidden>
         localhost 测试模式：范文、搜索、收藏与公众号设置仍连接线上数据库。
       </div>
+      <div id="writing-data-mode" class="writing-data-mode" hidden></div>
 
       <main>
         <section class="writing-hero">
@@ -46,8 +47,8 @@
             <p class="eyebrow">每日 06:00 自动更新</p>
             <h1>范文归范文，<br /><span>点评归点评。</span></h1>
             <p>
-              自动筛出包含完整申论范文和老师解析的推文，拆分保存后可按标题、主题、
-              关键词、范文正文或点评全文检索。
+              自动筛出包含完整申论范文和老师解析的推文，按主题整理成目录。
+              先看标题，需要时再展开阅读全文与逐段点评。
             </p>
           </div>
           <div class="writing-metrics" aria-label="范文库统计">
@@ -74,7 +75,7 @@
           <div class="writing-search-copy">
             <p class="eyebrow">Full-text search</p>
             <h2 id="writing-search-title">检索范文与点评</h2>
-            <p>搜索会同时覆盖标题、主题、关键词、范文和点评内容。</p>
+            <p>搜索覆盖标题、范文正文和点评；结果默认只显示标题。</p>
           </div>
           <form id="writing-search-form" class="writing-search-form" role="search">
             <label class="sr-only" for="writing-query">搜索范文</label>
@@ -90,10 +91,26 @@
           </form>
         </section>
 
+        <section class="writing-topic-panel" aria-labelledby="writing-topic-title">
+          <div class="topic-panel-heading">
+            <div>
+              <p class="eyebrow">Topics</p>
+              <h2 id="writing-topic-title">按主题浏览</h2>
+            </div>
+            <p>选择一个大方向，再按需要多选细分方向。</p>
+          </div>
+          <div id="writing-major-filters" class="writing-major-filters" aria-label="大方向筛选"></div>
+          <div class="writing-subtopic-heading">
+            <strong>细分方向</strong>
+            <span id="writing-subtopic-count">可多选</span>
+          </div>
+          <div id="writing-subtopic-filters" class="writing-subtopic-filters" aria-label="细分方向筛选"></div>
+        </section>
+
         <div class="writing-result-heading">
           <div>
             <p class="eyebrow">Archive</p>
-            <h2 id="writing-result-title">全部范文</h2>
+            <h2 id="writing-result-title">范文目录</h2>
           </div>
           <span id="writing-result-count" class="count-badge">读取中</span>
         </div>
@@ -142,6 +159,6 @@
         <a href="../">返回招聘岗位页</a>
       </footer>
     </div>
-    <script src="writing.js" defer></script>
+    <script src="writing-v2.js" defer></script>
   </body>
 </html>

@@ -13,6 +13,7 @@
     "check": "tsc -p tsconfig.json --noEmit && tsc -p worker/tsconfig.json --noEmit",
     "test": "node --import tsx --test tests/**/*.test.ts",
     "site:build-history": "node --import tsx scripts/build-static-history.ts",
+    "site:sync-writing": "tsx scripts/sync-writing-snapshot.ts",
     "site:serve": "node scripts/serve-site.mjs",
     "worker:dev": "wrangler dev --config worker/wrangler.jsonc",
     "worker:deploy": "wrangler deploy --config worker/wrangler.jsonc",

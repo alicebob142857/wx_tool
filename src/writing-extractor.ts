@@ -2,6 +2,7 @@ import * as cheerio from "cheerio";
 import type { AppConfig } from "./config.js";
 import { extractJsonObject } from "./deepseek.js";
 import type { WritingCommentarySection, WritingEntry } from "./writing-types.js";
+import { classifyWritingTopic, normalizeWritingTopic } from "./writing-topics.js";
 import { normalizeWhitespace, stableId } from "./utils.js";
 
 interface ParsedWritingArticle {
@@ -15,6 +16,8 @@ interface WritingExtraction {
   isExample: boolean;
   essayTitle: string;
   theme: string;
+  majorTopic: import("./writing-topics.js").WritingMajorTopic;
+  subtopic: string;
   keywords: string[];
   summary: string;
   essayText: string;
@@ -151,10 +154,17 @@ function heuristicExtraction(articleTitle: string, text: string): WritingExtract
   const split = splitWritingText(articleTitle, text);
   const commentaryText = split.commentarySections.map(item => item.commentary).join("\n");
   const isExample = split.essayText.length >= 200 && commentaryText.length >= 60;
+  const topic = classifyWritingTopic({
+    title: split.essayTitle,
+    theme: split.keywords.join("、"),
+    keywords: split.keywords,
+    text: split.essayText,
+  });
   return {
     isExample,
     essayTitle: split.essayTitle,
     theme: split.keywords.join("、") || split.essayTitle,
+    ...topic,
     keywords: split.keywords,
     summary: isExample ? `${split.essayTitle}的申论范文及逐段点评。` : "未检测到可完整拆分的范文和点评。",
     essayText: split.essayText,
@@ -182,13 +192,23 @@ function parseModelExtraction(raw: string, articleTitle: string, text: string): 
   const commentarySections = useDeterministicCommentary ? deterministic.commentarySections : modelSections;
   const commentaryText = commentarySections.map(item => item.commentary).join("\n");
   const isExample = Boolean(result?.is_example) && essayText.length >= 200 && commentaryText.length >= 60;
+  const theme = String(result?.theme || deterministic.keywords.join("、") || deterministic.essayTitle).trim();
+  const keywords = safeStringArray(result?.keywords).length
+    ? safeStringArray(result.keywords)
+    : deterministic.keywords;
+  const topic = normalizeWritingTopic(result?.major_topic, result?.subtopic, {
+    title: String(result?.essay_title || deterministic.essayTitle || articleTitle),
+    theme,
+    keywords,
+    summary: String(result?.summary || ""),
+    text: essayText,
+  });
   return {
     isExample,
     essayTitle: String(result?.essay_title || deterministic.essayTitle || articleTitle).trim(),
-    theme: String(result?.theme || deterministic.keywords.join("、") || deterministic.essayTitle).trim(),
-    keywords: safeStringArray(result?.keywords).length
-      ? safeStringArray(result.keywords)
-      : deterministic.keywords,
+    theme,
+    ...topic,
+    keywords,
     summary: String(result?.summary || "").trim(),
     essayText,
     commentarySections,
@@ -218,10 +238,18 @@ export async function extractWritingExample(
 - 保留原文，不改写、不缩写、不补写；删除开头引流、课程广告、二维码和点赞转发提示。
 - commentary_sections 按原文顺序保存，每处点评只放老师的点评原文，并给出简短位置名称。
 - theme 和 keywords 用于检索，可以归纳；summary 只写一句。
+- major_topic 必须且只能从“政治、经济、社会、文化、生态、科技”中选择一个。
+- subtopic 必须从对应大方向的固定选项中选择：
+  政治：理论作风、改革创新、干部担当、党建引领、基层治理、法治建设；
+  经济：产业发展、营商环境、就业人才、乡村振兴、区域协调、消费发展；
+  社会：社区服务、城市治理、公共服务、民生保障、教育发展、青年成长；
+  文化：文化传承、文明建设、文旅融合、文化自信、文艺传播；
+  生态：绿色发展、环境治理、低碳转型、生态保护、美丽中国；
+  科技：人工智能、数字治理、科技创新、数据发展、产业升级、网络安全。
 - source_note 只保存文章来源注释，没有则为 null。
 
 只返回 JSON，不要 Markdown：
-{"is_example":true,"essay_title":"范文标题","theme":"主题","keywords":["关键词"],"summary":"一句话摘要","essay_text":"完整范文正文","commentary_sections":[{"section_title":"开头点评","commentary":"点评原文"}],"source_note":null,"confidence":0.9}`;
+{"is_example":true,"essay_title":"范文标题","theme":"主题","major_topic":"社会","subtopic":"社区服务","keywords":["关键词"],"summary":"一句话摘要","essay_text":"完整范文正文","commentary_sections":[{"section_title":"开头点评","commentary":"点评原文"}],"source_note":null,"confidence":0.9}`;
   const response = await fetch(`${config.deepseekBaseUrl}/chat/completions`, {
     method: "POST",
     headers: {
@@ -270,6 +298,8 @@ export function writingEntryFromExtraction(input: {
     collectedAt: input.collectedAt || new Date().toISOString(),
     essayTitle: input.extraction.essayTitle,
     theme: input.extraction.theme,
+    majorTopic: input.extraction.majorTopic,
+    subtopic: input.extraction.subtopic,
     keywords: input.extraction.keywords,
     summary: input.extraction.summary,
     essayText: input.extraction.essayText,

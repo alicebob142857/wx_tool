@@ -99,6 +99,12 @@ jobs:
           WRITING_ARTICLE_CONCURRENCY: "1"
         run: npm run collect:writing
 
+      - name: Sync mainland-readable writing snapshot
+        continue-on-error: true
+        env:
+          AUTH_SERVICE_URL: ${{ secrets.AUTH_SERVICE_URL }}
+        run: npm run site:sync-writing
+
       - name: Persist daily data
         run: |
           git config user.name "github-actions[bot]"

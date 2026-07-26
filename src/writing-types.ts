@@ -25,6 +25,8 @@ export interface WritingEntry {
   collectedAt: string;
   essayTitle: string;
   theme: string;
+  majorTopic: import("./writing-topics.js").WritingMajorTopic;
+  subtopic: string;
   keywords: string[];
   summary: string;
   essayText: string;

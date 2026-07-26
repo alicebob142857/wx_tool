@@ -5,6 +5,7 @@ import {
   parseWritingArticleHtml,
   splitWritingText,
 } from "../src/writing-extractor.js";
+import { classifyWritingTopic, normalizeWritingTopic } from "../src/writing-topics.js";
 
 test("writing candidate filter accepts model essays and rejects unrelated notices", () => {
   assert.equal(looksLikeWritingCandidate("申论范文：让基层治理更有温度"), true);
@@ -40,4 +41,18 @@ test("writing splitter separates essay, commentary, source note and promotions",
   assert.doesNotMatch(result.essayText, /王老师|点赞转发/);
   assert.match(result.sourceNote || "", /仅供学习/);
   assert.deepEqual(result.keywords, ["基层治理", "民生"]);
+});
+
+test("writing topic classifier uses six stable major directions and controlled subtopics", () => {
+  assert.deepEqual(classifyWritingTopic({
+    title: "以AI智变激活干部教育新动能",
+    theme: "人工智能、干部教育",
+  }), { majorTopic: "科技", subtopic: "人工智能" });
+  assert.deepEqual(classifyWritingTopic({
+    title: "走好社区服务惠民路",
+    theme: "社区、惠民、基层治理",
+  }), { majorTopic: "社会", subtopic: "社区服务" });
+  assert.deepEqual(normalizeWritingTopic("政治", "自造的过细标签", {
+    title: "将实事求是落到实处",
+  }), { majorTopic: "政治", subtopic: "理论作风" });
 });

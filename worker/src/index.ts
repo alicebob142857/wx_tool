@@ -1,3 +1,5 @@
+import { normalizeWritingTopic } from "../../src/writing-topics.js";
+
 interface Env {
   AUTH_KV: KVNamespace;
   JOB_DB: D1Database;
@@ -163,6 +165,8 @@ async function ensureRuntimeSchema(env: Env): Promise<void> {
           collected_at TEXT NOT NULL,
           essay_title TEXT NOT NULL,
           theme TEXT NOT NULL DEFAULT '',
+          major_topic TEXT NOT NULL DEFAULT '',
+          subtopic TEXT NOT NULL DEFAULT '',
           keywords_json TEXT NOT NULL DEFAULT '[]',
           summary TEXT NOT NULL DEFAULT '',
           essay_text TEXT NOT NULL,
@@ -222,6 +226,10 @@ async function ensureRuntimeSchema(env: Env): Promise<void> {
       await ensureColumn(env, "user_preferences", "feedback_updated_at", "feedback_updated_at TEXT");
       await ensureColumn(env, "user_preferences", "feedback_profile_generated_at", "feedback_profile_generated_at TEXT");
       await ensureColumn(env, "position_personalization", "feedback_preference_json", "feedback_preference_json TEXT NOT NULL DEFAULT '{}'");
+      await ensureColumn(env, "writing_entries", "major_topic", "major_topic TEXT NOT NULL DEFAULT ''");
+      await ensureColumn(env, "writing_entries", "subtopic", "subtopic TEXT NOT NULL DEFAULT ''");
+      await env.JOB_DB.prepare(`CREATE INDEX IF NOT EXISTS idx_writing_entries_topic_published
+        ON writing_entries(major_topic, subtopic, published_at DESC)`).run();
       await env.JOB_DB.prepare(`INSERT OR IGNORE INTO user_preferences
         (id, custom_requirement, updated_at) VALUES (1, '', ?)`).bind(now).run();
     })().catch(error => {
@@ -1260,6 +1268,14 @@ async function saveReport(request: Request, env: Env): Promise<Response> {
 }
 
 function writingEntryFromRow(row: any): any {
+  const keywords = parseJsonArray(row.keywords_json).map(String);
+  const topic = normalizeWritingTopic(row.major_topic, row.subtopic, {
+    title: String(row.essay_title || row.article_title || ""),
+    theme: String(row.theme || ""),
+    keywords,
+    summary: String(row.summary || ""),
+    text: String(row.essay_text || "").slice(0, 2_000),
+  });
   return {
     id: String(row.id || ""),
     account: String(row.account_name || ""),
@@ -1270,7 +1286,8 @@ function writingEntryFromRow(row: any): any {
     collectedAt: String(row.collected_at || ""),
     essayTitle: String(row.essay_title || ""),
     theme: String(row.theme || ""),
-    keywords: parseJsonArray(row.keywords_json).map(String),
+    ...topic,
+    keywords,
     summary: String(row.summary || ""),
     essayText: String(row.essay_text || ""),
     commentarySections: parseJsonArray(row.commentary_sections_json),
@@ -1335,9 +1352,9 @@ async function saveWritingReport(request: Request, env: Env): Promise<Response> 
     ) continue;
     statements.push(env.JOB_DB.prepare(`INSERT INTO writing_entries (
       id, account_fakeid, account_name, article_title, article_url, published_at, collected_at,
-      essay_title, theme, keywords_json, summary, essay_text, commentary_sections_json,
+      essay_title, theme, major_topic, subtopic, keywords_json, summary, essay_text, commentary_sections_json,
       commentary_text, source_note, word_count, analysis_source, confidence, updated_at
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ON CONFLICT(id) DO UPDATE SET
       account_fakeid=excluded.account_fakeid,
       account_name=excluded.account_name,
@@ -1347,6 +1364,8 @@ async function saveWritingReport(request: Request, env: Env): Promise<Response> 
       collected_at=excluded.collected_at,
       essay_title=excluded.essay_title,
       theme=excluded.theme,
+      major_topic=excluded.major_topic,
+      subtopic=excluded.subtopic,
       keywords_json=excluded.keywords_json,
       summary=excluded.summary,
       essay_text=excluded.essay_text,
@@ -1366,6 +1385,8 @@ async function saveWritingReport(request: Request, env: Env): Promise<Response> 
       String(entry.collectedAt || report.generatedAt),
       String(entry.essayTitle || entry.articleTitle || ""),
       String(entry.theme || ""),
+      String(entry.majorTopic || ""),
+      String(entry.subtopic || ""),
       jsonText(entry.keywords),
       String(entry.summary || ""),
       String(entry.essayText),
@@ -1415,17 +1436,18 @@ async function listWritingEntries(request: Request, env: Env): Promise<Response>
   const query = (input.searchParams.get("q") || "").trim().slice(0, 120);
   const account = (input.searchParams.get("account") || "").trim().slice(0, 120);
   const favoritesOnly = input.searchParams.get("favorite") === "1";
-  const limit = Math.min(100, Math.max(1, Number(input.searchParams.get("limit") || 30)));
+  const limit = Math.min(1000, Math.max(1, Number(input.searchParams.get("limit") || 30)));
   const offset = Math.max(0, Number(input.searchParams.get("offset") || 0));
   const conditions: string[] = [];
   const values: Array<string | number> = [];
   if (query) {
     conditions.push(`(
       e.essay_title LIKE ? OR e.article_title LIKE ? OR e.theme LIKE ?
+      OR e.major_topic LIKE ? OR e.subtopic LIKE ?
       OR e.keywords_json LIKE ? OR e.essay_text LIKE ? OR e.commentary_text LIKE ?
     )`);
     const like = `%${query}%`;
-    values.push(like, like, like, like, like, like);
+    values.push(like, like, like, like, like, like, like, like);
   }
   if (account) {
     conditions.push("e.account_fakeid = ?");
