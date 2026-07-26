@@ -115,6 +115,11 @@ function saveLocalFavorites() {
 function normalizeEntry(entry) {
   const majorTopic = MAJOR_TOPICS.includes(entry.majorTopic) ? entry.majorTopic : "社会";
   const allowedSubtopics = SUBTOPICS[majorTopic] || [];
+  const hasInlineDetail = Boolean(
+    entry.essayText
+    || entry.commentaryText
+    || (Array.isArray(entry.commentarySections) && entry.commentarySections.length),
+  );
   return {
     ...entry,
     majorTopic,
@@ -122,6 +127,7 @@ function normalizeEntry(entry) {
     keywords: Array.isArray(entry.keywords) ? entry.keywords : [],
     commentarySections: Array.isArray(entry.commentarySections) ? entry.commentarySections : [],
     favorite: Boolean(entry.favorite),
+    detailLoaded: Boolean(entry.detailLoaded || hasInlineDetail),
     expanded: location.hash === `#writing-${entry.id}`,
   };
 }
@@ -205,6 +211,21 @@ function buildEntryDetail(entry) {
   return detail;
 }
 
+async function loadEntryDetail(entry) {
+  if (entry.detailLoaded) return entry;
+  const detailPath = entry.detailPath || `data/entries/${encodeURIComponent(entry.id)}.json`;
+  const payload = await readJson(detailPath, null);
+  const detail = payload?.entry || payload;
+  if (!detail?.id) throw new Error("正文快照暂时不可用");
+  const expanded = entry.expanded;
+  const favorite = entry.favorite;
+  Object.assign(entry, normalizeEntry({ ...entry, ...detail }));
+  entry.expanded = expanded;
+  entry.favorite = favorite;
+  entry.detailLoaded = true;
+  return entry;
+}
+
 async function toggleFavorite(entry, button) {
   const next = !isFavorite(entry);
   entry.favorite = next;
@@ -253,21 +274,32 @@ function renderEntry(entry) {
   article.append(row);
 
   let detail = null;
-  const setExpanded = expanded => {
+  const setExpanded = async expanded => {
+    if (expanded && !detail) {
+      open.disabled = true;
+      open.lastElementChild.textContent = "正在加载…";
+      try {
+        await loadEntryDetail(entry);
+        detail = buildEntryDetail(entry);
+        article.append(detail);
+      } catch (error) {
+        showToast(error.message || "正文加载失败，请稍后重试", true);
+        open.lastElementChild.textContent = "阅读全文";
+        open.disabled = false;
+        return;
+      }
+      open.disabled = false;
+    }
     entry.expanded = expanded;
     article.classList.toggle("is-open", expanded);
     open.setAttribute("aria-expanded", String(expanded));
     open.lastElementChild.textContent = expanded ? "收起全文" : "阅读全文";
-    if (expanded && !detail) {
-      detail = buildEntryDetail(entry);
-      article.append(detail);
-    }
     if (detail) detail.hidden = !expanded;
     if (expanded) history.replaceState(null, "", `#writing-${entry.id}`);
     else if (location.hash === `#writing-${entry.id}`) history.replaceState(null, "", location.pathname + location.search);
   };
-  open.addEventListener("click", () => setExpanded(!entry.expanded));
-  if (entry.expanded) setExpanded(true);
+  open.addEventListener("click", () => void setExpanded(!entry.expanded));
+  if (entry.expanded) void setExpanded(true);
   return article;
 }
 
@@ -358,8 +390,6 @@ function applyFilters(resetVisible = true) {
       entry.subtopic,
       ...(entry.keywords || []),
       entry.summary,
-      entry.essayText,
-      entry.commentaryText,
     ].filter(Boolean).join("\n").toLocaleLowerCase().includes(query);
   }).sort((a, b) => String(b.publishedAt).localeCompare(String(a.publishedAt)));
   if (resetVisible) state.visibleCount = 30;
@@ -495,8 +525,28 @@ function renderCandidates(resolvedName = "") {
 }
 
 async function refreshLiveEntries() {
-  const result = await api("/api/writing-entries?limit=1000&offset=0");
-  if (Array.isArray(result.entries)) setEntries(result.entries);
+  const entries = [];
+  const limit = 250;
+  let offset = 0;
+  let total = 0;
+  do {
+    const result = await api(`/api/writing-entries?limit=${limit}&offset=${offset}`);
+    total = Number(result.total || 0);
+    const batch = Array.isArray(result.entries) ? result.entries : [];
+    entries.push(...batch);
+    offset += batch.length;
+    if (!batch.length) break;
+  } while (offset < total);
+  setEntries(entries);
+}
+
+async function refreshLiveFavorites() {
+  const result = await api("/api/writing-entries?favorite=1&limit=1000&offset=0");
+  const favoriteIds = new Set((result.entries || []).map(entry => entry.id));
+  state.allEntries.forEach(entry => {
+    entry.favorite = favoriteIds.has(entry.id);
+  });
+  applyFilters(false);
 }
 
 async function refreshLiveStatus() {
@@ -560,7 +610,7 @@ async function probeLiveService() {
     await api("/health");
     setDataMode(true);
     await Promise.allSettled([
-      refreshLiveEntries(),
+      state.allEntries.length ? refreshLiveFavorites() : refreshLiveEntries(),
       refreshLiveStatus(),
       refreshLiveAccounts(),
       loadAuthStatus(),
