@@ -1,14 +1,14 @@
 {
-  "state": "ok",
-  "message": "今日范文与点评采集完成。",
-  "lastRunAt": "2026-07-26T12:29:08.164Z",
+  "state": "partial",
+  "message": "范文采集完成，但部分内容处理失败。",
+  "lastRunAt": "2026-07-26T22:17:43.162Z",
   "stats": {
     "accountsConfigured": 1,
     "accountsSucceeded": 1,
-    "articlesScanned": 61,
-    "newArticles": 43,
-    "candidateArticles": 20,
-    "examplesStored": 10,
-    "failedArticles": 0
+    "articlesScanned": 3759,
+    "newArticles": 1441,
+    "candidateArticles": 1220,
+    "examplesStored": 348,
+    "failedArticles": 21
   }
 }
