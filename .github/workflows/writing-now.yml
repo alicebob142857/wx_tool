@@ -58,7 +58,7 @@ jobs:
       - run: npm ci
       - run: npm run check
 
-      - name: Seed scan state from stored writing entries
+      - name: Seed stored entries before unresolved-article retry
         env:
           WRITING_API_URL: https://wx-job-monitor-auth.alicebob142857-wx.workers.dev
         run: npm run state:seed-writing
