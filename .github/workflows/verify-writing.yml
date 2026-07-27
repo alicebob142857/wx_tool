@@ -46,7 +46,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add site/writing/data/entries.json
+          git add site/writing/data/entries.json site/writing/data/entries
           if ! git diff --cached --quiet; then
             git commit -m "data: refresh public writing snapshot"
             git push
