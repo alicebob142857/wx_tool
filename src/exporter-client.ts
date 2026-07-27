@@ -160,6 +160,24 @@ export class ExporterClient {
     return articles;
   }
 
+  private async downloadArticleDirect(articleUrl: string): Promise<string> {
+    const response = await fetch(articleUrl, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+          + "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+        "Accept-Language": "zh-CN,zh;q=0.9",
+      },
+      redirect: "follow",
+      signal: AbortSignal.timeout(45_000),
+    });
+    if (!response.ok) throw new Error(`微信原文直连失败（HTTP ${response.status}）`);
+    const html = await response.text();
+    if (!/id=["']js_(?:article|content)["']|rich_media_content|property=["']og:title["']/i.test(html)) {
+      throw new Error("微信原文直连返回了拦截页或无效页面");
+    }
+    return html;
+  }
+
   async downloadArticleHtml(articleUrl: string): Promise<string> {
     if (this.usesAuthService) {
       const url = new URL(`${this.config.authServiceUrl}/api/exporter/content`);
@@ -169,7 +187,13 @@ export class ExporterClient {
         signal: AbortSignal.timeout(60_000),
       });
       if (response.status === 401) throw new AuthExpiredError();
-      if (!response.ok) throw new Error(`文章代理下载失败（HTTP ${response.status}）`);
+      if (!response.ok) {
+        try {
+          return await this.downloadArticleDirect(articleUrl);
+        } catch {
+          throw new Error(`文章代理下载失败（HTTP ${response.status}）`);
+        }
+      }
       return response.text();
     }
 
@@ -180,7 +204,13 @@ export class ExporterClient {
       headers: this.config.exporterAuthKey ? { "X-Auth-Key": this.config.exporterAuthKey } : undefined,
       signal: AbortSignal.timeout(60_000),
     });
-    if (!response.ok) throw new Error(`Exporter 正文下载失败（HTTP ${response.status}）`);
+    if (!response.ok) {
+      try {
+        return await this.downloadArticleDirect(articleUrl);
+      } catch {
+        throw new Error(`Exporter 正文下载失败（HTTP ${response.status}）`);
+      }
+    }
     return response.text();
   }
 

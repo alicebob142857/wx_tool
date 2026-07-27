@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/workflows/writing-now.yml"
       - "scripts/seed-writing-seen.ts"
+      - "src/exporter-client.ts"
   workflow_dispatch:
     inputs:
       max_articles:

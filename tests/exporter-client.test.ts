@@ -101,3 +101,30 @@ test("large writing reports are uploaded in bounded batches", async () => {
     globalThis.fetch = originalFetch;
   }
 });
+
+test("article download falls back to the original WeChat page after a proxy 502", async () => {
+  const originalFetch = globalThis.fetch;
+  const requested: string[] = [];
+  globalThis.fetch = (async input => {
+    const url = String(input);
+    requested.push(url);
+    if (url.startsWith("https://worker.example/api/exporter/content")) {
+      return new Response("Bad gateway", { status: 502 });
+    }
+    return new Response(
+      "<html><head><meta property=\"og:title\" content=\"申论范文\"></head>"
+      + "<body><div id=\"js_content\">正文</div></body></html>",
+      { status: 200, headers: { "Content-Type": "text/html" } },
+    );
+  }) as typeof fetch;
+
+  try {
+    const client = new ExporterClient(config);
+    const html = await client.downloadArticleHtml("https://mp.weixin.qq.com/s/fallback");
+    assert.match(html, /id="js_content"/);
+    assert.equal(requested.length, 2);
+    assert.equal(requested[1], "https://mp.weixin.qq.com/s/fallback");
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});
