@@ -58,6 +58,21 @@ jobs:
       - run: npm ci
       - run: npm run check
 
+      - name: Finalize pending WeChat login
+        env:
+          AUTH_SERVICE_URL: ${{ secrets.AUTH_SERVICE_URL }}
+        run: |
+          for attempt in 1 2 3; do
+            response="$(curl --fail --silent --show-error --max-time 30 "$AUTH_SERVICE_URL/api/auth/poll")"
+            echo "$response"
+            if echo "$response" | grep -q '"authorized":true'; then
+              exit 0
+            fi
+            sleep 3
+          done
+          echo "The scanned WeChat login has not been confirmed." >&2
+          exit 1
+
       - name: Seed stored entries before unresolved-article retry
         env:
           WRITING_API_URL: https://wx-job-monitor-auth.alicebob142857-wx.workers.dev
