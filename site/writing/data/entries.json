@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-27T01:58:28.844Z",
-  "total": 1358,
+  "generatedAt": "2026-07-27T02:08:08.157Z",
+  "total": 1359,
   "entries": [
     {
       "id": "f749684346815950",
@@ -29650,6 +29650,35 @@
       "favorite": false,
       "favoritedAt": null,
       "detailPath": "data/entries/18c5d846cf44d708.json"
+    },
+    {
+      "id": "79740d636205f01f",
+      "account": "隔壁班学习园地",
+      "accountFakeid": "MzI4MDA4MjkzMg==",
+      "articleTitle": "1天1篇申论范文，省考考点全面覆盖！",
+      "articleUrl": "https://mp.weixin.qq.com/s/3thgaELeokiho-nqGOe7yg",
+      "publishedAt": "2023-01-25T11:22:29.000Z",
+      "collectedAt": "2026-07-27T02:02:53.084Z",
+      "essayTitle": "把城乡社区基础筑牢",
+      "theme": "社区治理",
+      "majorTopic": "社会",
+      "subtopic": "城乡治理",
+      "keywords": [
+        "社区治理",
+        "基层党建",
+        "便民服务",
+        "共建共享",
+        "城乡社区",
+        "数字化改革"
+      ],
+      "summary": "本文以杭州市萧山区为例，从基层党建、便民服务、共建共享三个角度阐述了如何筑牢城乡社区基础。",
+      "sourceNote": "本文选自《人民日报》2023年01月20日第15版，《把城乡社区基础筑牢》，按照申论考试要求进行了修改和分析，仅供学习交流使用。",
+      "wordCount": 1229,
+      "analysisSource": "deepseek",
+      "confidence": 0.9,
+      "favorite": false,
+      "favoritedAt": null,
+      "detailPath": "data/entries/79740d636205f01f.json"
     },
     {
       "id": "b0bc7b7290d52b65",

@@ -1,17 +1,175 @@
 {
   "date": "2026-07-27",
-  "generatedAt": "2026-07-26T23:02:21.478Z",
+  "generatedAt": "2026-07-27T02:07:59.992Z",
   "stats": {
     "accountsConfigured": 10,
     "accountsSucceeded": 10,
     "articlesScanned": 533,
     "newArticles": 24,
     "candidateArticles": 20,
-    "relevantArticles": 3,
-    "positionsExtracted": 16,
+    "relevantArticles": 4,
+    "positionsExtracted": 17,
     "failedArticles": 1
   },
   "items": [
+    {
+      "id": "747bd59b85b30c84",
+      "account": "国企求职网",
+      "title": "中国移动公开社会招聘！",
+      "url": "https://mp.weixin.qq.com/s/xau8cCMUEzfX_3XyIH__uA",
+      "publishedAt": "2026-07-27T01:00:00.000Z",
+      "ocrUsed": false,
+      "ocrImageCount": 0,
+      "summary": "中国移动发布2026年社会招聘公告，共1625个岗位、3946人，岗位涵盖技术、市场、综合三类，大专起报，多专业可报，应届生、往届生均可，面向全国多地。",
+      "positions": [
+        {
+          "organization": "中国移动",
+          "organizationNature": "央企",
+          "industry": "通信",
+          "jobTitle": "中国移动2026年社会招聘岗位组",
+          "jobDirections": [
+            "财务岗",
+            "通信网络工程岗",
+            "客户经理岗",
+            "管理岗",
+            "数据维护岗",
+            "系统规划与研发岗",
+            "大数据与人工智能岗",
+            "算力网络与云计算岗",
+            "产品运营管理岗",
+            "信息化专员",
+            "技术测试工程师",
+            "架构工程师"
+          ],
+          "locations": [
+            "北京",
+            "上海",
+            "天津",
+            "安徽",
+            "福建",
+            "广东",
+            "甘肃",
+            "广西",
+            "湖北",
+            "河北",
+            "黑龙江",
+            "海南"
+          ],
+          "headcount": "3946",
+          "employmentTypes": [
+            "社招"
+          ],
+          "graduateScope": "未明确",
+          "previousGraduatesEligible": "yes",
+          "education": {
+            "summary": "大专起报",
+            "minimum": "大专",
+            "preferred": null,
+            "tier": "bachelor_associate",
+            "hardPhdRequired": false
+          },
+          "majors": {
+            "summary": "多专业可报，部分岗位不限专业，包括计算机、通信、财务、法律、管理、土木等",
+            "accepted": [
+              "计算机",
+              "通信技术",
+              "网络技术",
+              "软件开发",
+              "云计算",
+              "大数据开发",
+              "经济法",
+              "民商法",
+              "人力资源管理",
+              "会计学",
+              "财务管理",
+              "电子商务"
+            ],
+            "fit": "broad"
+          },
+          "applicationRequirements": [
+            "年龄35周岁及以下",
+            "不限户籍"
+          ],
+          "compensation": {
+            "summary": "未披露",
+            "salary": null,
+            "benefits": [],
+            "quality": 0
+          },
+          "deadline": null,
+          "applicationMethod": "私信公众号【中国移动】获取投递入口",
+          "applicationUrl": null,
+          "referralCode": null,
+          "recommendation": {
+            "score": 56,
+            "rankingKey": 1330279,
+            "level": "medium",
+            "reasons": [
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "社会招聘，非校园招聘，不符合应届生偏好",
+              "学历门槛含大专，硕士无优势",
+              "专业要求宽泛，行政管理专业无明显匹配优势",
+              "薪资福利未披露"
+            ]
+          },
+          "customRequirement": {
+            "active": false,
+            "matched": null,
+            "score": 0,
+            "reasons": [],
+            "concerns": []
+          },
+          "feedbackPreference": {
+            "active": false,
+            "score": 5,
+            "reasons": [],
+            "concerns": []
+          },
+          "accessibility": 2,
+          "evidence": [
+            "应届生、往届生、社会人才均可",
+            "大专起报",
+            "多专业可报，部分岗位不限专业"
+          ],
+          "confidence": 0.8,
+          "id": "1a58fcf393d68ff0",
+          "personalized": {
+            "eligible": false,
+            "score": 50,
+            "rankingKey": 555999999,
+            "reasons": [
+              "专业不限，行政管理可以报考",
+              "明确面向应届毕业生或校园招聘",
+              "专业限制较宽或不限专业",
+              "本科或大专层次可报"
+            ],
+            "concerns": [
+              "属于社会招聘，不符合应届求职目标",
+              "学历门槛包含大专或专科，不符合优质岗位标准",
+              "截止日期未披露，需尽快核对原文",
+              "社会招聘，非校园招聘，不符合应届生偏好",
+              "学历门槛含大专，硕士无优势"
+            ],
+            "gates": {
+              "freshGraduate": true,
+              "education": false,
+              "major": true,
+              "notSocialRecruitment": false,
+              "notInternship": true,
+              "notPhdOnly": true,
+              "notAssociateThreshold": false,
+              "customRequirement": true
+            }
+          }
+        }
+      ],
+      "analysisSource": "deepseek",
+      "extractionComplete": true,
+      "notes": []
+    },
     {
       "id": "bbd12e45aeff7a3a",
       "account": "国企求职网",
