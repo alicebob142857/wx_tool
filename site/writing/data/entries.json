@@ -1,8 +1,37 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-27T02:41:16.606Z",
-  "total": 1359,
+  "generatedAt": "2026-07-27T23:12:40.813Z",
+  "total": 1360,
   "entries": [
+    {
+      "id": "446004c80c4d4211",
+      "account": "隔壁班学习园地",
+      "accountFakeid": "MzI4MDA4MjkzMg==",
+      "articleTitle": "申论范文：让为民服务既有“速度”更有“温度”",
+      "articleUrl": "https://mp.weixin.qq.com/s/UkVuDJ-hA3vfTjqxzj4OeQ",
+      "publishedAt": "2026-07-27T11:00:00.000Z",
+      "collectedAt": "2026-07-27T23:12:30.971Z",
+      "essayTitle": "让为民服务既有“速度”更有“温度”",
+      "theme": "为民服务速度与温度",
+      "majorTopic": "社会",
+      "subtopic": "公共服务",
+      "keywords": [
+        "为民服务",
+        "速度",
+        "温度",
+        "基层治理",
+        "接诉即办",
+        "一窗通办"
+      ],
+      "summary": "本文围绕为民服务中速度与温度的辩证关系，从响应之快、举措之细、机制之实三个层面论述如何提升群众获得感。",
+      "sourceNote": "本文选自《人民论坛网》《让为民服务既有“速度”更有“温度”》，按照申论考试要求进行了修改和分析，仅供学习交流使用。（全文共计1043字）",
+      "wordCount": 1025,
+      "analysisSource": "deepseek",
+      "confidence": 0.95,
+      "favorite": false,
+      "favoritedAt": null,
+      "detailPath": "data/entries/446004c80c4d4211.json"
+    },
     {
       "id": "f749684346815950",
       "account": "隔壁班学习园地",

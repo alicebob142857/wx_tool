@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T02:07:59.992Z",
+  "generatedAt": "2026-07-27T23:12:05.377Z",
   "maxSize": 30,
   "total": 30,
   "jobs": [
@@ -134,134 +134,6 @@
         "summary": "中核集团2027届校招计划，涵盖工程、技术、职能等多类岗位，全国多地有岗，提供优厚薪资福利。",
         "ocrUsed": true,
         "ocrImageCount": 1,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      }
-    },
-    {
-      "organization": "青海省烟草专卖局（公司）",
-      "organizationNature": "国企",
-      "industry": "烟草",
-      "jobTitle": "综合管理岗",
-      "jobDirections": [
-        "综合管理"
-      ],
-      "locations": [
-        "西宁",
-        "海东",
-        "格尔木",
-        "海南",
-        "黄南",
-        "玉树"
-      ],
-      "headcount": "11",
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2026届",
-      "previousGraduatesEligible": "yes",
-      "education": {
-        "summary": "本科及以上，硕士优先",
-        "minimum": "本科",
-        "preferred": "硕士",
-        "tier": "master",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "专业对口，具体见计划表，行政管理属于公共管理类",
-        "accepted": [
-          "行政管理",
-          "公共管理类"
-        ],
-        "fit": "management"
-      },
-      "applicationRequirements": [
-        "2026年应届或两年择业期内未就业",
-        "本科2000年7月31日后出生，硕士1998年后出生",
-        "符合回避要求"
-      ],
-      "compensation": {
-        "summary": "未披露具体薪资，国企标准福利",
-        "salary": null,
-        "benefits": [
-          "五险一金",
-          "国企福利"
-        ],
-        "quality": 3
-      },
-      "deadline": "2026-07-27 24:00",
-      "applicationMethod": "网上报名",
-      "applicationUrl": "https://qhtobacco.zhaopin.com",
-      "referralCode": null,
-      "recommendation": {
-        "score": 86,
-        "rankingKey": 1543489,
-        "level": "high",
-        "reasons": [
-          "专业符合管理类方向",
-          "学历要求以硕士为主，符合优先级",
-          "面向应届毕业生，含两年择业期",
-          "专业要求包含公共管理类，行政管理匹配",
-          "硕士学历符合，年龄限制宽松",
-          "国企稳定，福利较好"
-        ],
-        "concerns": [
-          "具体岗位专业要求未明确列出，需查看附件",
-          "竞争比例可能较高",
-          "工作地点在青海，可能需适应偏远地区"
-        ]
-      },
-      "customRequirement": {
-        "active": false,
-        "matched": null,
-        "score": 0,
-        "reasons": [],
-        "concerns": []
-      },
-      "accessibility": 4,
-      "evidence": [
-        "招聘对象为2026年应届及择业期内毕业生",
-        "专业要求参照学科专业目录，行政管理属于公共管理类",
-        "学历要求本科及以上，硕士优先"
-      ],
-      "confidence": 0.9,
-      "id": "344f2ce2444cf085",
-      "personalized": {
-        "eligible": true,
-        "score": 96,
-        "rankingKey": 2010599999,
-        "reasons": [
-          "专业要求明确覆盖行政管理",
-          "明确面向应届毕业生或校园招聘",
-          "学历要求覆盖硕士研究生",
-          "报名入口明确，投递可操作性较高",
-          "专业符合管理类方向",
-          "学历要求以硕士为主，符合优先级"
-        ],
-        "concerns": [
-          "具体岗位专业要求未明确列出，需查看附件",
-          "竞争比例可能较高"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      },
-      "account": "央企求职网",
-      "reportDate": "2026-07-21",
-      "article": {
-        "title": "烟草专卖局2026年第二批最新招聘公告！",
-        "url": "https://mp.weixin.qq.com/s/qFQ7VUyyAp6lJJXpLL9Vjw",
-        "publishedAt": "2026-07-21T04:00:28.000Z",
-        "summary": "青海省烟草专卖局2026年第二批招聘11人，面向应届毕业生，含行政管理等专业。",
-        "ocrUsed": false,
-        "ocrImageCount": 0,
         "analysisSource": "deepseek",
         "extractionComplete": true
       }
@@ -3043,6 +2915,147 @@
         "summary": "央企名企山东省岗位推荐，涵盖多个行业，学历要求高中至博士，部分岗位面向应届生。",
         "ocrUsed": true,
         "ocrImageCount": 3,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "华润集团",
+      "organizationNature": "央企",
+      "industry": "综合（大消费、能源、城市建设等）",
+      "jobTitle": "管培生",
+      "jobDirections": [
+        "人力资源",
+        "市场",
+        "采购",
+        "物流",
+        "营运",
+        "财务"
+      ],
+      "locations": [
+        "未披露（全国多地）"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026-2028届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上（推测，未明确）",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "人力资源管理、市场营销、采购、物流、营运、财务等，未提及行政管理",
+        "accepted": [
+          "人力资源管理",
+          "市场营销",
+          "采购",
+          "物流",
+          "财务管理"
+        ],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [
+        "面向26-28届毕业生"
+      ],
+      "compensation": {
+        "summary": "年薪可达40W+，六险二金、免费食宿、人才落户等",
+        "salary": null,
+        "benefits": [
+          "六险二金",
+          "企业年金",
+          "补充商业保险",
+          "带薪年假",
+          "员工宿舍",
+          "免费三餐",
+          "通勤班车",
+          "岗位激励"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码备注学校+毕业时间获取投递链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 51,
+        "rankingKey": 1234350,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "本科或大专层次可报",
+          "央企背景，稳定性强",
+          "福利待遇优厚，包括六险二金、落户支持",
+          "面向应届生，符合求职者应届身份"
+        ],
+        "concerns": [
+          "专业要求未明确包含行政管理，存在不确定性",
+          "学历要求未明确，可能需本科及以上，但未说明是否接受硕士优先",
+          "岗位方向较多，竞争可能激烈"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 3,
+      "evidence": [
+        "华润集团2026年招聘公告正文",
+        "面向海内外26-28届毕业生",
+        "人力资源/市场/采购/物流/营运/财务等超多管培生岗位"
+      ],
+      "confidence": 0.5,
+      "id": "f3ea5a9eed578798",
+      "personalized": {
+        "eligible": true,
+        "score": 86,
+        "rankingKey": 2009599999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "薪资福利信息较有吸引力",
+          "专业范围尚需核对原文",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "专业要求未明确包含行政管理，存在不确定性",
+          "学历要求未明确，可能需本科及以上，但未说明是否接受硕士优先"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "央企求职网",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "华润集团2026年招聘公告！顶级央企，年薪可达40W+，六险二金、免费食宿，人才落户！",
+        "url": "https://mp.weixin.qq.com/s/LexBgXT5gH90N8SknNzeyw",
+        "publishedAt": "2026-07-27T10:15:00.000Z",
+        "summary": "华润集团2026年招聘，面向26-28届毕业生，提供多方向管培生岗位，福利待遇优厚。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
         "analysisSource": "deepseek",
         "extractionComplete": true
       }

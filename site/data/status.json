@@ -1,20 +1,20 @@
 {
-  "state": "partial",
-  "message": "今日采集完成，但部分文章处理失败。",
-  "lastRunAt": "2026-07-27T02:07:59.992Z",
+  "state": "ok",
+  "message": "今日采集完成。",
+  "lastRunAt": "2026-07-27T23:12:05.377Z",
   "auth": {
     "status": "valid",
-    "expiresAt": "2026-07-30T09:09:31.520Z",
+    "expiresAt": "2026-07-31T02:31:33.517Z",
     "qrAvailable": false
   },
   "stats": {
     "accountsConfigured": 10,
     "accountsSucceeded": 10,
-    "articlesScanned": 533,
-    "newArticles": 24,
-    "candidateArticles": 20,
-    "relevantArticles": 4,
-    "positionsExtracted": 17,
-    "failedArticles": 1
+    "articlesScanned": 541,
+    "newArticles": 46,
+    "candidateArticles": 43,
+    "relevantArticles": 11,
+    "positionsExtracted": 27,
+    "failedArticles": 0
   }
 }

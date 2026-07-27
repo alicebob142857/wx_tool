@@ -1,18 +1,3326 @@
 {
   "date": "all",
-  "generatedAt": "2026-07-27T02:07:59.992Z",
-  "total": 463,
+  "generatedAt": "2026-07-27T23:12:05.377Z",
+  "total": 490,
   "stats": {
     "accountsConfigured": 8,
     "accountsSucceeded": 8,
-    "articlesScanned": 110,
-    "newArticles": 110,
-    "candidateArticles": 110,
-    "relevantArticles": 110,
-    "positionsExtracted": 463,
+    "articlesScanned": 121,
+    "newArticles": 121,
+    "candidateArticles": 121,
+    "relevantArticles": 121,
+    "positionsExtracted": 490,
     "failedArticles": 17
   },
   "jobs": [
+    {
+      "organization": "北京京国管科技服务有限公司",
+      "organizationNature": "国企",
+      "industry": "科技服务/科技成果转化",
+      "jobTitle": "综合行政岗",
+      "jobDirections": [
+        "综合行政"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不适用",
+      "previousGraduatesEligible": "yes",
+      "education": {
+        "summary": "硕士研究生及以上学历",
+        "minimum": "硕士",
+        "preferred": null,
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "公共管理、中文、行政管理、经济学等相关专业背景",
+        "accepted": [
+          "公共管理",
+          "中文",
+          "行政管理",
+          "经济学"
+        ],
+        "fit": "administrative_management"
+      },
+      "applicationRequirements": [
+        "1-3年国有企业、党政机关、大型企业综合行政相关工作经验"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "邮箱投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 83,
+        "rankingKey": 1640289,
+        "level": "high",
+        "reasons": [
+          "专业高度匹配行政管理",
+          "学历要求以硕士为主，符合优先级",
+          "专业匹配，接受行政管理",
+          "学历要求硕士，符合求职者学历"
+        ],
+        "concerns": [
+          "社会招聘，要求1-3年工作经验，不符合应届生身份",
+          "经验要求使得应届生无法投递"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "硕士研究生及以上学历，公共管理、中文、行政管理、经济学等相关专业背景",
+        "具有1-3年国有企业、党政机关、大型企业综合行政相关工作经验"
+      ],
+      "confidence": 0.9,
+      "id": "cb8805c34e67c38d",
+      "personalized": {
+        "eligible": false,
+        "score": 59,
+        "rankingKey": 656899999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "学历要求覆盖硕士研究生",
+          "专业高度匹配行政管理",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "截止日期未披露，需尽快核对原文",
+          "社会招聘，要求1-3年工作经验，不符合应届生身份",
+          "经验要求使得应届生无法投递"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "五财一贸",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "社招 | 北京京国管科技服务有限公司2026年度公开招聘",
+        "url": "https://mp.weixin.qq.com/s/gdI8h-R9vbK7o6YIrn-1rQ",
+        "publishedAt": "2026-07-27T15:30:05.000Z",
+        "summary": "北京京国管科技服务有限公司2026年度社会招聘公告，招聘技术经理人、投资总监、综合行政岗、技术总监、数据研发总监、运维工程师等岗位。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "申万菱信基金",
+      "organizationNature": "国企",
+      "industry": "金融/基金",
+      "jobTitle": "渠道总对总岗实习生",
+      "jobDirections": [
+        "渠道销售支持"
+      ],
+      "locations": [
+        "上海"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "实习"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "面向在读研究生",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "管理学类、经济学类、理学类、工学类等相关专业",
+        "accepted": [
+          "管理学类",
+          "经济学类",
+          "理学类",
+          "工学类"
+        ],
+        "fit": "management"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "实习津贴研究生100元/天，实习期满可开具实习证明",
+        "salary": "100元/天",
+        "benefits": [
+          "实习津贴",
+          "实习证明"
+        ],
+        "quality": 3
+      },
+      "deadline": null,
+      "applicationMethod": "邮箱投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 86,
+        "rankingKey": 1543489,
+        "level": "high",
+        "reasons": [
+          "专业符合管理类方向",
+          "学历要求以硕士为主，符合优先级",
+          "学历要求硕士，适合硕士研究生。",
+          "专业要求包含管理学类，行政管理属于管理学门类，有匹配可能。",
+          "实习地点上海，金融行业经验。"
+        ],
+        "concerns": [
+          "实习岗位，非正式校招。",
+          "专业要求宽泛，但未明确行政管理，存在不确定性。",
+          "实习津贴较低。"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 4,
+      "evidence": [
+        "面向在读研究生",
+        "管理学类等相关专业"
+      ],
+      "confidence": 0.9,
+      "id": "38876364edbddd10",
+      "personalized": {
+        "eligible": false,
+        "score": 38,
+        "rankingKey": 804799999,
+        "reasons": [
+          "学历要求覆盖硕士研究生",
+          "专业符合管理类方向",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于实习或见习岗位，不进入正式优质岗位推荐",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "实习岗位，非正式校招。",
+          "专业要求宽泛，但未明确行政管理，存在不确定性。"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": false,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "五财一贸",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "实习 | 渤海汇金证券+申万菱信基金+中华保险集团",
+        "url": "https://mp.weixin.qq.com/s/Cxoh-yvzizZFhHYbvdM0OA",
+        "publishedAt": "2026-07-27T15:30:05.000Z",
+        "summary": "文章提供了三个金融行业实习岗位，分别来自渤海汇金证券、申万菱信基金和中华保险集团资产管理中心，均为实习性质，非正式校招。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "货拉拉",
+      "organizationNature": "民企",
+      "industry": "物流/互联网",
+      "jobTitle": "全球拓展管培生",
+      "jobDirections": [
+        "全球拓展"
+      ],
+      "locations": [
+        "深圳",
+        "香港",
+        "海外"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "海内外顶尖高校，未明确最低学历，通常要求本科及以上",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业不限",
+        "accepted": [
+          "不限"
+        ],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "流利英语沟通能力",
+        "抗压适应能力"
+      ],
+      "compensation": {
+        "summary": "年薪36-50万，福利包括搬家补贴、团建经费、加班餐补、年度体检、节日礼品、健身房、免费咖啡",
+        "salary": "36-50万",
+        "benefits": [
+          "搬家补贴",
+          "团建经费",
+          "加班餐补",
+          "年度体检",
+          "节日礼品",
+          "健身房",
+          "免费咖啡"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": null,
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 61,
+        "rankingKey": 1324379,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "学历要求未明确，需进一步核实",
+          "薪资高，年薪36-50万",
+          "全球拓展管培生，发展空间大",
+          "福利待遇好"
+        ],
+        "concerns": [
+          "学历要求未明确，可能对双非不友好",
+          "截止日期未披露，需关注官网",
+          "专业不限但竞争激烈",
+          "存在付费推广嫌疑，需核实信息真实性"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 3,
+      "evidence": [
+        "岗位面向海内外顶尖高校2027届毕业生或工作经验在三年内的优秀毕业生",
+        "年薪范围：36-50万",
+        "福利补贴包含搬家补贴、团建经费等"
+      ],
+      "confidence": 0.8,
+      "id": "0c3678e8a110c88a",
+      "personalized": {
+        "eligible": true,
+        "score": 68,
+        "rankingKey": 2007799999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "薪资福利信息较有吸引力",
+          "专业限制较宽或不限专业",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "学历要求未明确，可能对双非不友好",
+          "截止日期未披露，需关注官网"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "五财一贸",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "秋招 | 货拉拉2027全球拓展管培生招聘启动及薪资待遇（附秋招汇总表及经验交流群）",
+        "url": "https://mp.weixin.qq.com/s/t8M1jKMP3K81PHyw0-UpoA",
+        "publishedAt": "2026-07-27T15:30:05.000Z",
+        "summary": "货拉拉2027全球拓展管培生招聘及薪资待遇，年薪36-50万，面向顶尖高校应届生或三年内毕业生。",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "西部证券",
+      "organizationNature": "国企",
+      "industry": "金融/证券",
+      "jobTitle": "ETF基金做市交易员",
+      "jobDirections": [
+        "做市交易"
+      ],
+      "locations": [
+        "上海"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不适用",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士研究生及以上学历",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "金融、理工科等相关专业",
+        "accepted": [
+          "金融",
+          "理工科"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "具有较高的政治素质，中共党员优先",
+        "通过证券行业从业人员一般业务水平评价测试",
+        "应聘人员需遵循近亲属关系回避的原则"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "西部证券招聘官网或扫描二维码",
+      "applicationUrl": "https://xBzQ.hotjob.cn",
+      "referralCode": null,
+      "recommendation": {
+        "score": 28,
+        "rankingKey": 1140194,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级",
+          "岗位属于券商核心业务，发展前景好",
+          "工作地点上海，金融中心",
+          "岗位职责清晰，能提升交易能力"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求为金融、理工科，行政管理专业不匹配",
+          "社招要求工作经验，应届生不符合",
+          "未明确面向应届毕业生"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 1,
+      "evidence": [
+        "社招",
+        "硕士研究生及以上学历，金融、理工科等相关专业",
+        "通过证券行业从业人员一般业务水平评价测试"
+      ],
+      "confidence": 0.95,
+      "id": "b571d7762ee3fc06",
+      "personalized": {
+        "eligible": false,
+        "score": 33,
+        "rankingKey": 654299999,
+        "reasons": [
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求为金融、理工科，行政管理专业不匹配"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "五财一贸",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "社招 | 西部证券权益及衍生品业务交易员岗位招聘",
+        "url": "https://mp.weixin.qq.com/s/dge-Yk39JHi_uV34AeOcCA",
+        "publishedAt": "2026-07-27T15:30:05.000Z",
+        "summary": "西部证券招聘三个交易员岗位，均为社会招聘，要求硕士学历及工作经验，专业为金融、理工科等。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "西部证券",
+      "organizationNature": "国企",
+      "industry": "金融/证券",
+      "jobTitle": "期权做市交易员",
+      "jobDirections": [
+        "期权做市"
+      ],
+      "locations": [
+        "上海"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不适用",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士研究生及以上学历",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "金融工程、数学、统计、物理、计算机等理工科相关专业",
+        "accepted": [
+          "金融工程",
+          "数学",
+          "统计",
+          "物理",
+          "计算机"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "具有较高的政治素质，中共党员优先",
+        "具有1-3年期权做市或衍生品交易相关经验",
+        "通过证券行业从业人员一般业务水平评价测试",
+        "有CFA/FRM、期货从业资格优先",
+        "应聘人员需遵循近亲属关系回避的原则"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "西部证券招聘官网或扫描二维码",
+      "applicationUrl": "https://xBzQ.hotjob.cn",
+      "referralCode": null,
+      "recommendation": {
+        "score": 28,
+        "rankingKey": 1140194,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级",
+          "期权做市岗位专业性强，发展空间大",
+          "公司是首批做市商，平台优质",
+          "上海工作地点有优势"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求理工科，行政管理不匹配",
+          "社招且要求1-3年经验，应届生不符合",
+          "未明确面向应届毕业生"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 1,
+      "evidence": [
+        "社招",
+        "硕士研究生及以上学历，金融工程、数学等理工科专业",
+        "具有1-3年期权做市或衍生品交易相关经验"
+      ],
+      "confidence": 0.95,
+      "id": "53c070503eeddc67",
+      "personalized": {
+        "eligible": false,
+        "score": 33,
+        "rankingKey": 654299999,
+        "reasons": [
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求理工科，行政管理不匹配"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "五财一贸",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "社招 | 西部证券权益及衍生品业务交易员岗位招聘",
+        "url": "https://mp.weixin.qq.com/s/dge-Yk39JHi_uV34AeOcCA",
+        "publishedAt": "2026-07-27T15:30:05.000Z",
+        "summary": "西部证券招聘三个交易员岗位，均为社会招聘，要求硕士学历及工作经验，专业为金融、理工科等。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "西部证券",
+      "organizationNature": "国企",
+      "industry": "金融/证券",
+      "jobTitle": "北交所做市交易员",
+      "jobDirections": [
+        "北交所做市"
+      ],
+      "locations": [
+        "上海"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不适用",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "硕士研究生及以上学历",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "金融工程、数学、统计、计算机等相关专业",
+        "accepted": [
+          "金融工程",
+          "数学",
+          "统计",
+          "计算机"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "具有较高的政治素质，中共党员优先",
+        "具有2年及以上做市交易或相关岗位实盘经验",
+        "通过证券行业从业人员一般业务水平评价测试",
+        "应聘人员需遵循近亲属关系回避的原则"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "西部证券招聘官网或扫描二维码",
+      "applicationUrl": "https://xBzQ.hotjob.cn",
+      "referralCode": null,
+      "recommendation": {
+        "score": 28,
+        "rankingKey": 1140194,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级",
+          "北交所做市岗位特色鲜明，具有政策红利",
+          "岗位要求技能全面，有助于职业成长",
+          "公司品牌好，上海工作"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求理工科，行政管理不匹配",
+          "社招要求2年以上经验，应届生不符合",
+          "未明确面向应届毕业生"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 1,
+      "evidence": [
+        "社招",
+        "硕士研究生及以上学历，金融工程、数学等专业",
+        "具有2年及以上做市交易或相关岗位实盘经验"
+      ],
+      "confidence": 0.95,
+      "id": "b6345a74b3228ac2",
+      "personalized": {
+        "eligible": false,
+        "score": 33,
+        "rankingKey": 654299999,
+        "reasons": [
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求理工科，行政管理不匹配"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "五财一贸",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "社招 | 西部证券权益及衍生品业务交易员岗位招聘",
+        "url": "https://mp.weixin.qq.com/s/dge-Yk39JHi_uV34AeOcCA",
+        "publishedAt": "2026-07-27T15:30:05.000Z",
+        "summary": "西部证券招聘三个交易员岗位，均为社会招聘，要求硕士学历及工作经验，专业为金融、理工科等。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "北京京国管科技服务有限公司",
+      "organizationNature": "国企",
+      "industry": "科技服务/科技成果转化",
+      "jobTitle": "投资总监",
+      "jobDirections": [
+        "投资管理"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不适用",
+      "previousGraduatesEligible": "yes",
+      "education": {
+        "summary": "硕士研究生及以上学历",
+        "minimum": "硕士",
+        "preferred": null,
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "电子信息、计算机、自动化、生物医药工程等理工科专业背景",
+        "accepted": [
+          "电子信息",
+          "计算机",
+          "自动化",
+          "生物医药工程"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "5年以上相关产业经验或3年以上股权投资经验"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "邮箱投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 28,
+        "rankingKey": 1140189,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，要求工作经验，不符合应届生身份",
+          "专业要求为理工科，行政管理不匹配",
+          "学历要求硕士，但经验门槛高"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 1,
+      "evidence": [
+        "硕士研究生及以上学历，电子信息、计算机、自动化、生物医药工程等理工科专业背景",
+        "具有5年以上……经验或3年以上股权投资经验"
+      ],
+      "confidence": 0.9,
+      "id": "54c8a00b143434f4",
+      "personalized": {
+        "eligible": false,
+        "score": 31,
+        "rankingKey": 654099999,
+        "reasons": [
+          "学历要求覆盖硕士研究生",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，要求工作经验，不符合应届生身份"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "五财一贸",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "社招 | 北京京国管科技服务有限公司2026年度公开招聘",
+        "url": "https://mp.weixin.qq.com/s/gdI8h-R9vbK7o6YIrn-1rQ",
+        "publishedAt": "2026-07-27T15:30:05.000Z",
+        "summary": "北京京国管科技服务有限公司2026年度社会招聘公告，招聘技术经理人、投资总监、综合行政岗、技术总监、数据研发总监、运维工程师等岗位。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "中国金谷国际信托有限责任公司",
+      "organizationNature": "央企",
+      "industry": "信托",
+      "jobTitle": "信息科技部部门负责人",
+      "jobDirections": [
+        "信息科技管理"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "未明确",
+      "previousGraduatesEligible": "yes",
+      "education": {
+        "summary": "硕士研究生及以上学历",
+        "minimum": "硕士",
+        "preferred": null,
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "计算机、信息工程、软件工程、人工智能、大数据等科技相关专业",
+        "accepted": [
+          "计算机",
+          "信息工程",
+          "软件工程",
+          "人工智能",
+          "大数据"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "10年以上金融行业信息科技工作经验",
+        "3年以上信息科技团队负责人或数字化转型主持经验"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "网申",
+      "applicationUrl": "https://jingutrust.hotjob.cn/",
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级",
+          "岗位级别高，部门负责人"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "社招，要求10年以上经验，不适合应届生",
+          "专业要求科技相关，行政管理完全不匹配"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "社招",
+        "信息科技部部门负责人",
+        "10年以上相关经验"
+      ],
+      "confidence": 0.9,
+      "id": "5dfc8dc614fcdf75",
+      "personalized": {
+        "eligible": false,
+        "score": 33,
+        "rankingKey": 654299999,
+        "reasons": [
+          "学历要求覆盖硕士研究生",
+          "报名入口明确，投递可操作性较高",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "社招，要求10年以上经验，不适合应届生"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "五财一贸",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "社招 | 中国金谷国际信托有限责任公司招聘公告",
+        "url": "https://mp.weixin.qq.com/s/4fw6GmmHsjcZ0-DpnvGydA",
+        "publishedAt": "2026-07-27T15:30:05.000Z",
+        "summary": "中国金谷国际信托招聘信息科技部部门负责人（社招）",
+        "ocrUsed": true,
+        "ocrImageCount": 2,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "中华保险集团资产管理中心",
+      "organizationNature": "国企",
+      "industry": "保险/资产管理",
+      "jobTitle": "另类投资部实习生",
+      "jobDirections": [
+        "另类投资"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "实习"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "非毕业年级硕士研究生或大四本科生",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "会计、财管、经济、金融、法律等专业",
+        "accepted": [
+          "会计",
+          "财管",
+          "经济",
+          "金融",
+          "法律"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "非毕业年级",
+        "可一周内到岗，每周4天以上，持续3个月起"
+      ],
+      "compensation": {
+        "summary": "现场实习150元/日，提供食堂三餐，实习满3个月可开具实习证明",
+        "salary": "150元/日",
+        "benefits": [
+          "食堂三餐",
+          "实习证明"
+        ],
+        "quality": 3
+      },
+      "deadline": null,
+      "applicationMethod": "邮箱投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 35,
+        "rankingKey": 1133489,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报",
+          "实习待遇较好，有食堂三餐。",
+          "base北京，地理位置便利。",
+          "实习内容涉及资产管理，有专业深度。"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求会计、金融等，行政管理不匹配。",
+          "明确要求非毕业年级，应届毕业生（毕业年级）不可投递。",
+          "实习岗位，非正式校招。",
+          "学历同时接受本科，硕士无优先。"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 4,
+      "evidence": [
+        "专业要求不含行政管理",
+        "非毕业年级限制"
+      ],
+      "confidence": 0.9,
+      "id": "88aff2f07bdd4bd9",
+      "personalized": {
+        "eligible": false,
+        "score": 35,
+        "rankingKey": 804499999,
+        "reasons": [
+          "学历要求覆盖硕士研究生",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于实习或见习岗位，不进入正式优质岗位推荐",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求会计、金融等，行政管理不匹配。"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": false,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "五财一贸",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "实习 | 渤海汇金证券+申万菱信基金+中华保险集团",
+        "url": "https://mp.weixin.qq.com/s/Cxoh-yvzizZFhHYbvdM0OA",
+        "publishedAt": "2026-07-27T15:30:05.000Z",
+        "summary": "文章提供了三个金融行业实习岗位，分别来自渤海汇金证券、申万菱信基金和中华保险集团资产管理中心，均为实习性质，非正式校招。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "北京京国管科技服务有限公司",
+      "organizationNature": "国企",
+      "industry": "科技服务/科技成果转化",
+      "jobTitle": "技术经理人",
+      "jobDirections": [
+        "技术转移"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不适用",
+      "previousGraduatesEligible": "yes",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "理工科或法律、金融相关专业背景",
+        "accepted": [
+          "理工科",
+          "法律",
+          "金融"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "3年以上早期项目孵化服务经验或知识产权服务和交易经验"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "邮箱投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 23,
+        "rankingKey": 1130189,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，要求3年以上工作经验，不符合应届生身份",
+          "专业要求为理工科或法律、金融，行政管理专业不匹配",
+          "学历门槛本科及以上，但经验要求高"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 1,
+      "evidence": [
+        "本科及以上学历，理工科或法律、金融相关专业背景",
+        "具有3年以上早期项目孵化服务经验"
+      ],
+      "confidence": 0.9,
+      "id": "784aef6dfd365696",
+      "personalized": {
+        "eligible": false,
+        "score": 24,
+        "rankingKey": 653399999,
+        "reasons": [
+          "学历门槛为本科，可用硕士学历报考",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，要求3年以上工作经验，不符合应届生身份"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "五财一贸",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "社招 | 北京京国管科技服务有限公司2026年度公开招聘",
+        "url": "https://mp.weixin.qq.com/s/gdI8h-R9vbK7o6YIrn-1rQ",
+        "publishedAt": "2026-07-27T15:30:05.000Z",
+        "summary": "北京京国管科技服务有限公司2026年度社会招聘公告，招聘技术经理人、投资总监、综合行政岗、技术总监、数据研发总监、运维工程师等岗位。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "北京京国管科技服务有限公司",
+      "organizationNature": "国企",
+      "industry": "科技服务/科技成果转化",
+      "jobTitle": "技术总监",
+      "jobDirections": [
+        "技术管理"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不适用",
+      "previousGraduatesEligible": "yes",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "计算机、软件工程、信息技术等相关专业",
+        "accepted": [
+          "计算机",
+          "软件工程",
+          "信息技术"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "5年及以上互联网行业研发管理经验"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "邮箱投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 21,
+        "rankingKey": 1130089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，要求5年以上经验，不符合应届生身份",
+          "专业要求为计算机等，行政管理不匹配",
+          "学历门槛本科，但经验要求极高"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "本科及以上学历，计算机、软件工程、信息技术等相关专业",
+        "5年及以上互联网行业研发管理经验"
+      ],
+      "confidence": 0.9,
+      "id": "436ef0442e0e4fa8",
+      "personalized": {
+        "eligible": false,
+        "score": 24,
+        "rankingKey": 653399999,
+        "reasons": [
+          "学历门槛为本科，可用硕士学历报考",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，要求5年以上经验，不符合应届生身份"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "五财一贸",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "社招 | 北京京国管科技服务有限公司2026年度公开招聘",
+        "url": "https://mp.weixin.qq.com/s/gdI8h-R9vbK7o6YIrn-1rQ",
+        "publishedAt": "2026-07-27T15:30:05.000Z",
+        "summary": "北京京国管科技服务有限公司2026年度社会招聘公告，招聘技术经理人、投资总监、综合行政岗、技术总监、数据研发总监、运维工程师等岗位。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "北京京国管科技服务有限公司",
+      "organizationNature": "国企",
+      "industry": "科技服务/科技成果转化",
+      "jobTitle": "数据研发总监",
+      "jobDirections": [
+        "数据研发"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不适用",
+      "previousGraduatesEligible": "yes",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "计算机、大数据、软件工程、统计学等相关专业优先",
+        "accepted": [
+          "计算机",
+          "大数据",
+          "软件工程",
+          "统计学"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "5年以上互联网数据研发团队管理经验"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "邮箱投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 21,
+        "rankingKey": 1130089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，要求5年以上经验，不符合应届生身份",
+          "专业要求为计算机等，行政管理不匹配",
+          "学历门槛本科，但经验要求高"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "本科及以上学历，计算机、大数据、软件工程、统计学等相关专业优先",
+        "5年以上互联网数据研发团队管理经验"
+      ],
+      "confidence": 0.9,
+      "id": "b5771908544b64a0",
+      "personalized": {
+        "eligible": false,
+        "score": 24,
+        "rankingKey": 653399999,
+        "reasons": [
+          "学历门槛为本科，可用硕士学历报考",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，要求5年以上经验，不符合应届生身份"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "五财一贸",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "社招 | 北京京国管科技服务有限公司2026年度公开招聘",
+        "url": "https://mp.weixin.qq.com/s/gdI8h-R9vbK7o6YIrn-1rQ",
+        "publishedAt": "2026-07-27T15:30:05.000Z",
+        "summary": "北京京国管科技服务有限公司2026年度社会招聘公告，招聘技术经理人、投资总监、综合行政岗、技术总监、数据研发总监、运维工程师等岗位。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "北京京国管科技服务有限公司",
+      "organizationNature": "国企",
+      "industry": "科技服务/科技成果转化",
+      "jobTitle": "运维工程师",
+      "jobDirections": [
+        "运维"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不适用",
+      "previousGraduatesEligible": "yes",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "计算机科学与技术、软件工程、网络工程、信息安全等相关专业",
+        "accepted": [
+          "计算机科学与技术",
+          "软件工程",
+          "网络工程",
+          "信息安全"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "5年以上系统运维相关工作经验"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "邮箱投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 21,
+        "rankingKey": 1130089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，要求5年以上经验，不符合应届生身份",
+          "专业要求为计算机等，行政管理不匹配",
+          "学历门槛本科，但经验要求高"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "本科及以上学历，计算机科学与技术、软件工程、网络工程、信息安全等相关专业",
+        "5年以上系统运维相关工作经验"
+      ],
+      "confidence": 0.9,
+      "id": "40028d8524211b9e",
+      "personalized": {
+        "eligible": false,
+        "score": 24,
+        "rankingKey": 653399999,
+        "reasons": [
+          "学历门槛为本科，可用硕士学历报考",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "社会招聘，要求5年以上经验，不符合应届生身份"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "五财一贸",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "社招 | 北京京国管科技服务有限公司2026年度公开招聘",
+        "url": "https://mp.weixin.qq.com/s/gdI8h-R9vbK7o6YIrn-1rQ",
+        "publishedAt": "2026-07-27T15:30:05.000Z",
+        "summary": "北京京国管科技服务有限公司2026年度社会招聘公告，招聘技术经理人、投资总监、综合行政岗、技术总监、数据研发总监、运维工程师等岗位。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "渤海汇金证券资产管理有限公司",
+      "organizationNature": "国企",
+      "industry": "金融/证券",
+      "jobTitle": "资产证券化承做实习生",
+      "jobDirections": [
+        "资产证券化"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "实习"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "未明确，但通常要求本科及以上",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "财务、金融相关专业",
+        "accepted": [
+          "财务",
+          "金融"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "提供实习期补助、实习满三个月提供实习证明",
+        "salary": null,
+        "benefits": [
+          "实习补助",
+          "实习证明"
+        ],
+        "quality": 2
+      },
+      "deadline": null,
+      "applicationMethod": "邮箱投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1122489,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求未明确，需进一步核实",
+          "有留用机会，可能转为正式岗位。",
+          "base北京，地理位置便利。",
+          "实习工作内容涉及资产证券化，有一定专业性。"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求财务、金融，行政管理不匹配。",
+          "实习岗位，非正式校招，不适合应届生求职。",
+          "学历要求不明确，可能含大专。"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 4,
+      "evidence": [
+        "岗位要求财务、金融相关专业",
+        "有留用机会"
+      ],
+      "confidence": 0.9,
+      "id": "340873c3e649b6e9",
+      "personalized": {
+        "eligible": false,
+        "score": 27,
+        "rankingKey": 803699999,
+        "reasons": [
+          "学历门槛为本科，可用硕士学历报考",
+          "专业匹配度较低",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于实习或见习岗位，不进入正式优质岗位推荐",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求财务、金融，行政管理不匹配。"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": false,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "五财一贸",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "实习 | 渤海汇金证券+申万菱信基金+中华保险集团",
+        "url": "https://mp.weixin.qq.com/s/Cxoh-yvzizZFhHYbvdM0OA",
+        "publishedAt": "2026-07-27T15:30:05.000Z",
+        "summary": "文章提供了三个金融行业实习岗位，分别来自渤海汇金证券、申万菱信基金和中华保险集团资产管理中心，均为实习性质，非正式校招。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "国新控股（雄安）有限公司",
+      "organizationNature": "央企",
+      "industry": "投资",
+      "jobTitle": "综合助理",
+      "jobDirections": [
+        "行政"
+      ],
+      "locations": [
+        "北京市西城区"
+      ],
+      "headcount": "1",
+      "employmentTypes": [
+        "实习"
+      ],
+      "graduateScope": "在校生",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科大三及以上在校生",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "中文、人力资源、工商管理类专业优先",
+        "accepted": [
+          "中文",
+          "人力资源",
+          "工商管理"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "本科大三及以上在校生",
+        "党员、预备党员优先"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-08-05",
+      "applicationMethod": "邮箱投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 24,
+        "rankingKey": 1130289,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报",
+          "岗位职责与行政管理相关"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "实习岗位非正式校招",
+          "专业要求未明确包含行政管理",
+          "薪资福利未披露"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "岗位要求本科大三及以上在校生",
+        "专业要求中文、人力资源、工商管理类"
+      ],
+      "confidence": 0.9,
+      "id": "2f3ca13a40e86897",
+      "personalized": {
+        "eligible": false,
+        "score": 59,
+        "rankingKey": 806899999,
+        "reasons": [
+          "专业要求覆盖公共管理或管理学门类",
+          "学历门槛为本科，可用硕士学历报考",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于实习或见习岗位，不进入正式优质岗位推荐",
+          "未发现行政管理、管理类或文科专业入口",
+          "实习岗位非正式校招"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": false,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国聘",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "国新控股（雄安）有限公司实习生岗位公开招聘公告",
+        "url": "https://mp.weixin.qq.com/s/PQZ5JianPw9GKzW3ZT1idA",
+        "publishedAt": "2026-07-27T12:29:34.000Z",
+        "summary": "国新控股（雄安）有限公司招聘投资助理和综合助理实习生",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "国新控股（雄安）有限公司",
+      "organizationNature": "央企",
+      "industry": "投资",
+      "jobTitle": "投资助理",
+      "jobDirections": [
+        "投资"
+      ],
+      "locations": [
+        "北京市西城区"
+      ],
+      "headcount": "3",
+      "employmentTypes": [
+        "实习"
+      ],
+      "graduateScope": "在校生",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科大三及以上在校生",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "经济、金融类专业优先",
+        "accepted": [
+          "经济",
+          "金融"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "本科大三及以上在校生",
+        "具备财务、金融、行业分析能力"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-08-05",
+      "applicationMethod": "邮箱投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 24,
+        "rankingKey": 1130289,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "实习岗位非正式校招",
+          "专业要求与行政管理不匹配",
+          "薪资福利未披露"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 2,
+      "evidence": [
+        "岗位要求明确本科大三及以上在校生",
+        "专业要求经济、金融类"
+      ],
+      "confidence": 0.9,
+      "id": "d43a9fe4ef59b5c8",
+      "personalized": {
+        "eligible": false,
+        "score": 24,
+        "rankingKey": 803399999,
+        "reasons": [
+          "学历门槛为本科，可用硕士学历报考",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于实习或见习岗位，不进入正式优质岗位推荐",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "未发现行政管理、管理类或文科专业入口",
+          "实习岗位非正式校招"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": false,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国聘",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "国新控股（雄安）有限公司实习生岗位公开招聘公告",
+        "url": "https://mp.weixin.qq.com/s/PQZ5JianPw9GKzW3ZT1idA",
+        "publishedAt": "2026-07-27T12:29:34.000Z",
+        "summary": "国新控股（雄安）有限公司招聘投资助理和综合助理实习生",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "北京大学创新创业学院",
+      "organizationNature": "高校",
+      "industry": "教育",
+      "jobTitle": "综合办公室（北大科协秘书处）职员",
+      "jobDirections": [
+        "行政管理（综合事务）"
+      ],
+      "locations": [
+        "北京"
+      ],
+      "headcount": "1",
+      "employmentTypes": [
+        "校内外公开招聘"
+      ],
+      "graduateScope": "不限",
+      "previousGraduatesEligible": "yes",
+      "education": {
+        "summary": "本科及以上学历",
+        "minimum": "本科",
+        "preferred": "本科",
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "专业不限",
+        "accepted": [],
+        "fit": "broad"
+      },
+      "applicationRequirements": [
+        "政治立场坚定，中共党员优先",
+        "本科及以上学历",
+        "诚实守信、作风正派、爱岗敬业",
+        "良好语言表达和写作能力",
+        "熟练使用办公软件",
+        "创新创业或高校行政管理经验优先"
+      ],
+      "compensation": {
+        "summary": "面议",
+        "salary": null,
+        "benefits": [],
+        "quality": 2
+      },
+      "deadline": "2025-03-06",
+      "applicationMethod": "邮件发送至gcxcy@pku.edu.cn，主题：姓名+应聘办公室职员",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 64,
+        "rankingKey": 1332450,
+        "level": "medium",
+        "reasons": [
+          "专业限制较宽或不限专业",
+          "本科或大专层次可报",
+          "北京大学平台优势，积累高校行政经验",
+          "岗位职责与行政管理专业相关",
+          "本科即可报考，硕士有竞争优势",
+          "专业不限，适合行政管理专业"
+        ],
+        "concerns": [
+          "劳动合同制（劳务派遣），无事业编制",
+          "不解决北京户口",
+          "未明确面向应届生，优先有工作经验者",
+          "薪资未披露，可能较低"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 4,
+      "evidence": [
+        "招聘范围：校内外公开招聘",
+        "学历要求：本科及以上",
+        "专业要求：未明确，视为不限"
+      ],
+      "confidence": 0.5,
+      "id": "801d5d8f295bc304",
+      "personalized": {
+        "eligible": false,
+        "score": 57,
+        "rankingKey": 856699999,
+        "reasons": [
+          "专业不限，行政管理可以报考",
+          "学历门槛为本科，可用硕士学历报考",
+          "专业限制较宽或不限专业",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "劳动合同制（劳务派遣），无事业编制",
+          "不解决北京户口"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "创新创业学院招聘1名劳动合同制工作人员",
+        "url": "https://mp.weixin.qq.com/s/OouycAmPBO1X-u8wjMFtHQ",
+        "publishedAt": "2026-07-27T12:16:44.000Z",
+        "summary": "北京大学创新创业学院招聘1名劳动合同制综合办公室职员，校内外公开招聘，本科及以上学历，专业不限。",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "网易游戏雷火",
+      "organizationNature": "民企",
+      "industry": "游戏",
+      "jobTitle": "2027届秋季校园招聘",
+      "jobDirections": [],
+      "locations": [],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "uncertain",
+      "education": {
+        "summary": "未披露具体学历要求，推测为本科及以上",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露专业要求",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [
+        "未披露"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": "通过点击原文链接投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 33,
+        "rankingKey": 1220130,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实",
+          "知名游戏公司，校招机会",
+          "可能不限制专业，适合行政管理背景尝试综合管理岗"
+        ],
+        "concerns": [
+          "信息缺失严重，无法判断岗位具体要求",
+          "专业匹配度不确定，竞争可能激烈"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 1,
+      "evidence": [
+        "文章标题明确为27届秋季校招",
+        "正文仅含引导语句"
+      ],
+      "confidence": 0.3,
+      "id": "f20dc1443bd8a270",
+      "personalized": {
+        "eligible": false,
+        "score": 41,
+        "rankingKey": 855099999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "信息缺失严重，无法判断岗位具体要求",
+          "专业匹配度不确定，竞争可能激烈"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北大就业",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "招聘 | 网易游戏雷火27届秋季校招全球启动！",
+        "url": "https://mp.weixin.qq.com/s/DNgfKlpdJ4DZas_8za2t1A",
+        "publishedAt": "2026-07-27T12:16:44.000Z",
+        "summary": "网易游戏雷火2027届秋季校招启动，详情见原文。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": false
+      }
+    },
+    {
+      "organization": "中国航天科技集团航天新长征大道公司",
+      "organizationNature": "央企",
+      "industry": "航空航天",
+      "jobTitle": "校招岗位",
+      "jobDirections": [],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "未披露",
+        "minimum": null,
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": null,
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 31,
+        "rankingKey": 1220020,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "信息缺失，无法评估专业、学历匹配度"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "原文未提供岗位详情"
+      ],
+      "confidence": 0.2,
+      "id": "dde174bde3f5a566",
+      "personalized": {
+        "eligible": false,
+        "score": 21,
+        "rankingKey": 853099999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "未能确认岗位接受本科或硕士学历",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "信息缺失，无法评估专业、学历匹配度"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": false,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北航就业",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "暑期促就业攻坚行动 | 招聘大礼包持续推送 | 重点企业招聘信息合辑（第18期）",
+        "url": "https://mp.weixin.qq.com/s/b3g-7G_-Gjeg04gC5WPlBg",
+        "publishedAt": "2026-07-27T11:05:14.000Z",
+        "summary": "重点企业招聘信息合辑，包括中国航天科技集团航天新长征大道公司、北京高新医疗器械企业、重庆吉芯科技有限公司、鼎阳科技、南方基金等单位的校招或实习信息。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "北京高新医疗器械企业",
+      "organizationNature": "民企",
+      "industry": "医疗器械",
+      "jobTitle": "校招岗位",
+      "jobDirections": [],
+      "locations": [
+        "北京"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "未披露",
+        "minimum": null,
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": null,
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 31,
+        "rankingKey": 1220020,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "信息缺失，无法评估专业、学历匹配度"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "原文仅提到企业名称和招聘对象"
+      ],
+      "confidence": 0.2,
+      "id": "78776a7101e89020",
+      "personalized": {
+        "eligible": false,
+        "score": 16,
+        "rankingKey": 852599999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "未能确认岗位接受本科或硕士学历",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "信息缺失，无法评估专业、学历匹配度"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": false,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北航就业",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "暑期促就业攻坚行动 | 招聘大礼包持续推送 | 重点企业招聘信息合辑（第18期）",
+        "url": "https://mp.weixin.qq.com/s/b3g-7G_-Gjeg04gC5WPlBg",
+        "publishedAt": "2026-07-27T11:05:14.000Z",
+        "summary": "重点企业招聘信息合辑，包括中国航天科技集团航天新长征大道公司、北京高新医疗器械企业、重庆吉芯科技有限公司、鼎阳科技、南方基金等单位的校招或实习信息。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "重庆吉芯科技有限公司",
+      "organizationNature": "民企",
+      "industry": "半导体",
+      "jobTitle": "校招岗位",
+      "jobDirections": [],
+      "locations": [
+        "重庆"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "未披露",
+        "minimum": null,
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": null,
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 31,
+        "rankingKey": 1220020,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "信息缺失，无法评估专业、学历匹配度"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "原文仅提到单位名称和招聘类型"
+      ],
+      "confidence": 0.2,
+      "id": "3ca979b358c18061",
+      "personalized": {
+        "eligible": false,
+        "score": 16,
+        "rankingKey": 852599999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "未能确认岗位接受本科或硕士学历",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "信息缺失，无法评估专业、学历匹配度"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": false,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北航就业",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "暑期促就业攻坚行动 | 招聘大礼包持续推送 | 重点企业招聘信息合辑（第18期）",
+        "url": "https://mp.weixin.qq.com/s/b3g-7G_-Gjeg04gC5WPlBg",
+        "publishedAt": "2026-07-27T11:05:14.000Z",
+        "summary": "重点企业招聘信息合辑，包括中国航天科技集团航天新长征大道公司、北京高新医疗器械企业、重庆吉芯科技有限公司、鼎阳科技、南方基金等单位的校招或实习信息。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "鼎阳科技",
+      "organizationNature": "民企",
+      "industry": "电子测试仪器",
+      "jobTitle": "校招岗位",
+      "jobDirections": [],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "未披露",
+        "minimum": null,
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": null,
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 31,
+        "rankingKey": 1220020,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "信息缺失，无法评估专业、学历匹配度"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "原文仅提到单位名称和招聘类型"
+      ],
+      "confidence": 0.2,
+      "id": "340cbd7b2f8ddebd",
+      "personalized": {
+        "eligible": false,
+        "score": 16,
+        "rankingKey": 852599999,
+        "reasons": [
+          "明确面向应届毕业生或校园招聘",
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "未能确认岗位接受本科或硕士学历",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "信息缺失，无法评估专业、学历匹配度"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": false,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北航就业",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "暑期促就业攻坚行动 | 招聘大礼包持续推送 | 重点企业招聘信息合辑（第18期）",
+        "url": "https://mp.weixin.qq.com/s/b3g-7G_-Gjeg04gC5WPlBg",
+        "publishedAt": "2026-07-27T11:05:14.000Z",
+        "summary": "重点企业招聘信息合辑，包括中国航天科技集团航天新长征大道公司、北京高新医疗器械企业、重庆吉芯科技有限公司、鼎阳科技、南方基金等单位的校招或实习信息。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "南方基金",
+      "organizationNature": "国企",
+      "industry": "金融",
+      "jobTitle": "暑期实习/春季补招",
+      "jobDirections": [],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "实习",
+        "补招"
+      ],
+      "graduateScope": "2027届暑期实习, 2026届春季补招",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "未披露",
+        "minimum": null,
+        "preferred": null,
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "未披露",
+        "accepted": [],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": null,
+      "applicationMethod": null,
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 31,
+        "rankingKey": 1220020,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "包含实习性质，不是全职校招；信息缺失"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "原文提到'暑期实习招聘&春季补招'"
+      ],
+      "confidence": 0.2,
+      "id": "b3dbe24dbdab9057",
+      "personalized": {
+        "eligible": false,
+        "score": 7,
+        "rankingKey": 801699999,
+        "reasons": [
+          "专业范围尚需核对原文",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于实习或见习岗位，不进入正式优质岗位推荐",
+          "未能确认岗位接受本科或硕士学历",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "截止日期未披露，需尽快核对原文",
+          "包含实习性质，不是全职校招；信息缺失"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": false,
+          "major": false,
+          "notSocialRecruitment": true,
+          "notInternship": false,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北航就业",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "暑期促就业攻坚行动 | 招聘大礼包持续推送 | 重点企业招聘信息合辑（第18期）",
+        "url": "https://mp.weixin.qq.com/s/b3g-7G_-Gjeg04gC5WPlBg",
+        "publishedAt": "2026-07-27T11:05:14.000Z",
+        "summary": "重点企业招聘信息合辑，包括中国航天科技集团航天新长征大道公司、北京高新医疗器械企业、重庆吉芯科技有限公司、鼎阳科技、南方基金等单位的校招或实习信息。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "华润集团",
+      "organizationNature": "央企",
+      "industry": "综合（大消费、能源、城市建设等）",
+      "jobTitle": "管培生",
+      "jobDirections": [
+        "人力资源",
+        "市场",
+        "采购",
+        "物流",
+        "营运",
+        "财务"
+      ],
+      "locations": [
+        "未披露（全国多地）"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2026-2028届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "本科及以上（推测，未明确）",
+        "minimum": "本科",
+        "preferred": null,
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "人力资源管理、市场营销、采购、物流、营运、财务等，未提及行政管理",
+        "accepted": [
+          "人力资源管理",
+          "市场营销",
+          "采购",
+          "物流",
+          "财务管理"
+        ],
+        "fit": "uncertain"
+      },
+      "applicationRequirements": [
+        "面向26-28届毕业生"
+      ],
+      "compensation": {
+        "summary": "年薪可达40W+，六险二金、免费食宿、人才落户等",
+        "salary": null,
+        "benefits": [
+          "六险二金",
+          "企业年金",
+          "补充商业保险",
+          "带薪年假",
+          "员工宿舍",
+          "免费三餐",
+          "通勤班车",
+          "岗位激励"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "扫描二维码备注学校+毕业时间获取投递链接",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 51,
+        "rankingKey": 1234350,
+        "level": "low",
+        "reasons": [
+          "专业范围尚需核对原文",
+          "本科或大专层次可报",
+          "央企背景，稳定性强",
+          "福利待遇优厚，包括六险二金、落户支持",
+          "面向应届生，符合求职者应届身份"
+        ],
+        "concerns": [
+          "专业要求未明确包含行政管理，存在不确定性",
+          "学历要求未明确，可能需本科及以上，但未说明是否接受硕士优先",
+          "岗位方向较多，竞争可能激烈"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 3,
+      "evidence": [
+        "华润集团2026年招聘公告正文",
+        "面向海内外26-28届毕业生",
+        "人力资源/市场/采购/物流/营运/财务等超多管培生岗位"
+      ],
+      "confidence": 0.5,
+      "id": "f3ea5a9eed578798",
+      "personalized": {
+        "eligible": true,
+        "score": 86,
+        "rankingKey": 2009599999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历门槛为本科，可用硕士学历报考",
+          "薪资福利信息较有吸引力",
+          "专业范围尚需核对原文",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "专业要求未明确包含行政管理，存在不确定性",
+          "学历要求未明确，可能需本科及以上，但未说明是否接受硕士优先"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "央企求职网",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "华润集团2026年招聘公告！顶级央企，年薪可达40W+，六险二金、免费食宿，人才落户！",
+        "url": "https://mp.weixin.qq.com/s/LexBgXT5gH90N8SknNzeyw",
+        "publishedAt": "2026-07-27T10:15:00.000Z",
+        "summary": "华润集团2026年招聘，面向26-28届毕业生，提供多方向管培生岗位，福利待遇优厚。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "资产公司党群人力部（党委组织部、党委宣传部）",
+      "organizationNature": "央企",
+      "industry": "资产管理",
+      "jobTitle": "薪酬绩效岗",
+      "jobDirections": [
+        "人力资源"
+      ],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": "1",
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不限",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "人力资源等管理类专业硕士研究生及以上学历",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "人力资源等管理类专业",
+        "accepted": [
+          "人力资源管理",
+          "管理类"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "中共党员",
+        "8年以上人力资源管理工作经验，其中3年薪酬绩效经验"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-08-07 17:00",
+      "applicationMethod": "邮件投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 26,
+        "rankingKey": 1140089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级",
+          "学历要求硕士，符合求职者学历层次"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求人力资源等管理类，行政管理不属于该类",
+          "要求8年以上工作经验，非应届生岗位",
+          "未披露薪资福利"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "人力资源等管理类专业硕士研究生及以上学历",
+        "8年以上人力资源管理工作经验"
+      ],
+      "confidence": 0.9,
+      "id": "d063adafa4ca05ec",
+      "personalized": {
+        "eligible": false,
+        "score": 59,
+        "rankingKey": 656899999,
+        "reasons": [
+          "专业要求覆盖公共管理或管理学门类",
+          "学历要求覆盖硕士研究生",
+          "专业匹配度较低",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业要求人力资源等管理类，行政管理不属于该类"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "央企求职网",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "中国通用技术集团2026夏季招聘公告",
+        "url": "https://mp.weixin.qq.com/s/liXD9gf-s6tgNThMu5tNOQ",
+        "publishedAt": "2026-07-27T04:19:02.000Z",
+        "summary": "中国通用技术集团2026夏季招聘公告，包含3个社会招聘岗位，均要求多年工作经验，非应届生岗位。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "英斯泰克公司",
+      "organizationNature": "央企",
+      "industry": "广电系统集成与技术服务",
+      "jobTitle": "经营财务部部门经理",
+      "jobDirections": [
+        "财务管理"
+      ],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": "1",
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不限",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "会计、财务管理等相关专业本科及以上学历",
+        "minimum": "本科",
+        "preferred": "本科",
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "会计、财务管理等相关专业",
+        "accepted": [
+          "会计",
+          "财务管理"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "中共党员",
+        "8年以上会计及相关管理工作经验，其中3年财务团队管理经验",
+        "中级以上专业技术职称"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-08-07 17:00",
+      "applicationMethod": "邮件投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 21,
+        "rankingKey": 1130089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配行政管理",
+          "要求8年以上工作经验，非应届生岗位",
+          "学历门槛本科，但硕士无优势",
+          "未披露薪资福利"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "会计、财务管理等相关专业本科及以上学历",
+        "8年以上会计及相关管理工作经验"
+      ],
+      "confidence": 0.9,
+      "id": "3a096ad8ea92624b",
+      "personalized": {
+        "eligible": false,
+        "score": 24,
+        "rankingKey": 653399999,
+        "reasons": [
+          "学历门槛为本科，可用硕士学历报考",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配行政管理"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "央企求职网",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "中国通用技术集团2026夏季招聘公告",
+        "url": "https://mp.weixin.qq.com/s/liXD9gf-s6tgNThMu5tNOQ",
+        "publishedAt": "2026-07-27T04:19:02.000Z",
+        "summary": "中国通用技术集团2026夏季招聘公告，包含3个社会招聘岗位，均要求多年工作经验，非应届生岗位。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "资产公司纪检审计风控部",
+      "organizationNature": "央企",
+      "industry": "资产管理",
+      "jobTitle": "审计风控岗",
+      "jobDirections": [
+        "审计",
+        "风控"
+      ],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": "1",
+      "employmentTypes": [
+        "社招"
+      ],
+      "graduateScope": "不限",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "审计、财务管理、会计、经济、法律等相关专业本科及以上学历",
+        "minimum": "本科",
+        "preferred": "本科",
+        "tier": "bachelor_associate",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "审计、财务管理、会计、经济、法律等相关专业",
+        "accepted": [
+          "审计",
+          "财务管理",
+          "会计",
+          "经济",
+          "法律"
+        ],
+        "fit": "mismatch"
+      },
+      "applicationRequirements": [
+        "6年以上审计、风险管理、财务等相关工作经历"
+      ],
+      "compensation": {
+        "summary": "未披露",
+        "salary": null,
+        "benefits": [],
+        "quality": 0
+      },
+      "deadline": "2026-08-07 17:00",
+      "applicationMethod": "邮件投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 21,
+        "rankingKey": 1130089,
+        "level": "low",
+        "reasons": [
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配行政管理",
+          "要求6年以上工作经验，非应届生岗位",
+          "未披露薪资福利"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 0,
+      "evidence": [
+        "审计、财务管理、会计、经济、法律等相关专业本科及以上学历",
+        "6年及以上审计、风险管理、财务等相关工作经历"
+      ],
+      "confidence": 0.9,
+      "id": "1bdfa514bcbdf1b2",
+      "personalized": {
+        "eligible": false,
+        "score": 24,
+        "rankingKey": 653399999,
+        "reasons": [
+          "学历门槛为本科，可用硕士学历报考",
+          "专业匹配度较低",
+          "本科或大专层次可报"
+        ],
+        "concerns": [
+          "未明确面向应届毕业生或校招",
+          "属于社会招聘，不符合应届求职目标",
+          "专业要求未明确覆盖行政管理、公共管理类或不限专业",
+          "未发现行政管理、管理类或文科专业入口",
+          "专业不匹配行政管理"
+        ],
+        "gates": {
+          "freshGraduate": false,
+          "education": true,
+          "major": false,
+          "notSocialRecruitment": false,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "央企求职网",
+      "reportDate": "2026-07-28",
+      "article": {
+        "title": "中国通用技术集团2026夏季招聘公告",
+        "url": "https://mp.weixin.qq.com/s/liXD9gf-s6tgNThMu5tNOQ",
+        "publishedAt": "2026-07-27T04:19:02.000Z",
+        "summary": "中国通用技术集团2026夏季招聘公告，包含3个社会招聘岗位，均要求多年工作经验，非应届生岗位。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
     {
       "organization": "中国移动",
       "organizationNature": "央企",
