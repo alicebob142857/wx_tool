@@ -1,8 +1,36 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-27T23:12:40.813Z",
-  "total": 1360,
+  "generatedAt": "2026-07-28T23:10:22.183Z",
+  "total": 1361,
   "entries": [
+    {
+      "id": "ae8555eef1f32d0d",
+      "account": "隔壁班学习园地",
+      "accountFakeid": "MzI4MDA4MjkzMg==",
+      "articleTitle": "申论范文：以点滴行动护山河长青",
+      "articleUrl": "https://mp.weixin.qq.com/s/v0Nq7rG1XeEqgvUApQOVYA",
+      "publishedAt": "2026-07-28T11:00:00.000Z",
+      "collectedAt": "2026-07-28T23:10:13.960Z",
+      "essayTitle": "以点滴行动护山河长青",
+      "theme": "生态环保",
+      "majorTopic": "生态",
+      "subtopic": "绿色低碳",
+      "keywords": [
+        "生态保护",
+        "绿色生活",
+        "全民参与",
+        "点滴行动",
+        "美丽中国"
+      ],
+      "summary": "强调每个人从点滴小事做起，共同守护生态环境，建设美丽中国。",
+      "sourceNote": "本文选自《人民论坛网》《以点滴行动护山河长青》，按照申论考试要求进行了修改和分析，仅供学习交流使用。（全文共计903字）",
+      "wordCount": 837,
+      "analysisSource": "deepseek",
+      "confidence": 0.95,
+      "favorite": false,
+      "favoritedAt": null,
+      "detailPath": "data/entries/ae8555eef1f32d0d.json"
+    },
     {
       "id": "446004c80c4d4211",
       "account": "隔壁班学习园地",

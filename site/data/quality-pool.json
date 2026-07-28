@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T23:12:05.377Z",
+  "generatedAt": "2026-07-28T23:09:31.060Z",
   "maxSize": 30,
   "total": 30,
   "jobs": [
@@ -260,6 +260,147 @@
           "notAssociateThreshold": true,
           "customRequirement": true
         }
+      }
+    },
+    {
+      "organization": "中国核工业集团有限公司",
+      "organizationNature": "央企",
+      "industry": "核工业",
+      "jobTitle": "职能类岗位",
+      "jobDirections": [
+        "市场开发",
+        "纪检综合",
+        "企业管理",
+        "财务会计",
+        "计算机技术",
+        "人力资源",
+        "法律合规",
+        "物业管理",
+        "文秘",
+        "行政",
+        "采购员"
+      ],
+      "locations": [
+        "全国多地"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "校招通常要求本科及以上，硕士优先",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "原文未明确，推测接受管理学门类或相关专业，行政方向明确适合行政管理",
+        "accepted": [
+          "行政管理",
+          "公共管理类",
+          "管理学门类"
+        ],
+        "fit": "management"
+      },
+      "applicationRequirements": [
+        "校招流程含笔试、面试；需在线网申"
+      ],
+      "compensation": {
+        "summary": "一线城市年薪20-30万，七险二金等",
+        "salary": "20-30万/年（一线城市）",
+        "benefits": [
+          "七险二金",
+          "年度体检",
+          "安家费/购房补贴",
+          "人才公寓或租房补贴",
+          "带薪年假"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "网申",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 77,
+        "rankingKey": 1524469,
+        "level": "high",
+        "reasons": [
+          "专业符合管理类方向",
+          "学历要求未明确，需进一步核实",
+          "央企平台，稳定性高",
+          "薪资福利优厚",
+          "包含行政、人力资源等对口方向",
+          "全国多地有岗，可灵活选择"
+        ],
+        "concerns": [
+          "专业要求未明确，可能存在竞争",
+          "具体岗位职责未披露"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 4,
+      "evidence": [
+        "文章列举职能类包括行政、人力资源等",
+        "校招面向2027届应届生",
+        "薪资福利描述清晰"
+      ],
+      "confidence": 0.7,
+      "id": "ef83cb679b6c9ab7",
+      "personalized": {
+        "eligible": true,
+        "score": 95,
+        "rankingKey": 2010499999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "薪资福利信息较有吸引力",
+          "专业符合管理类方向",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "专业要求未明确，可能存在竞争",
+          "具体岗位职责未披露"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-29",
+      "article": {
+        "title": "中核集团2027届校招计划及薪资待遇",
+        "url": "https://mp.weixin.qq.com/s/qTcAUZcA-OOS7CJQMCqm7w",
+        "publishedAt": "2026-07-28T12:00:02.000Z",
+        "summary": "中核集团2027届校招计划，招聘2378人，覆盖工程、技术、科研、职能、管理等多类岗位，全国多地有岗，薪资福利优厚。",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
       }
     },
     {
@@ -1637,6 +1778,273 @@
         "summary": "央企名企山东省岗位推荐，涵盖多个行业，学历要求高中至博士，部分岗位面向应届生。",
         "ocrUsed": true,
         "ocrImageCount": 3,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "中国核工业集团有限公司",
+      "organizationNature": "央企",
+      "industry": "核工业",
+      "jobTitle": "管理类岗位",
+      "jobDirections": [
+        "核安全管理",
+        "计划管理",
+        "仓储管理",
+        "运输管理",
+        "商务管理",
+        "设备管理",
+        "采购管理",
+        "工程管理"
+      ],
+      "locations": [
+        "全国多地"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "校招通常要求本科及以上，硕士优先",
+        "minimum": "本科",
+        "preferred": "硕士",
+        "tier": "unspecified",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "原文未明确，推测部分岗位接受管理学门类，但核安全管理等可能要求核工程",
+        "accepted": [
+          "管理学门类"
+        ],
+        "fit": "management"
+      },
+      "applicationRequirements": [
+        "校招流程含笔试、面试；需在线网申"
+      ],
+      "compensation": {
+        "summary": "一线城市年薪20-30万，七险二金等",
+        "salary": "20-30万/年（一线城市）",
+        "benefits": [
+          "七险二金",
+          "年度体检",
+          "安家费/购房补贴",
+          "人才公寓或租房补贴",
+          "带薪年假"
+        ],
+        "quality": 4
+      },
+      "deadline": null,
+      "applicationMethod": "网申",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 77,
+        "rankingKey": 1524459,
+        "level": "high",
+        "reasons": [
+          "专业符合管理类方向",
+          "学历要求未明确，需进一步核实",
+          "央企平台，稳定性高",
+          "部分岗位（如计划管理、商务管理）可能适合管理类背景",
+          "薪资福利优厚"
+        ],
+        "concerns": [
+          "部分岗位（如核安全管理）专业要求可能严格",
+          "具体职责未披露，匹配度不确定"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 4,
+      "evidence": [
+        "文章列举管理类包括计划管理、商务管理等",
+        "校招面向2027届应届生"
+      ],
+      "confidence": 0.6,
+      "id": "0e5fe8707ed19e70",
+      "personalized": {
+        "eligible": true,
+        "score": 89,
+        "rankingKey": 2009899999,
+        "reasons": [
+          "专业要求覆盖公共管理或管理学门类",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "薪资福利信息较有吸引力",
+          "专业符合管理类方向",
+          "学历要求未明确，需进一步核实"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "部分岗位（如核安全管理）专业要求可能严格",
+          "具体职责未披露，匹配度不确定"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "国企求职网",
+      "reportDate": "2026-07-29",
+      "article": {
+        "title": "中核集团2027届校招计划及薪资待遇",
+        "url": "https://mp.weixin.qq.com/s/qTcAUZcA-OOS7CJQMCqm7w",
+        "publishedAt": "2026-07-28T12:00:02.000Z",
+        "summary": "中核集团2027届校招计划，招聘2378人，覆盖工程、技术、科研、职能、管理等多类岗位，全国多地有岗，薪资福利优厚。",
+        "ocrUsed": true,
+        "ocrImageCount": 1,
+        "analysisSource": "deepseek",
+        "extractionComplete": true
+      }
+    },
+    {
+      "organization": "OPPO",
+      "organizationNature": "民企",
+      "industry": "消费电子",
+      "jobTitle": "综合职能类",
+      "jobDirections": [
+        "人力资源",
+        "行政管理",
+        "财务管理",
+        "法务",
+        "战略",
+        "公关",
+        "其他综合职能类岗位"
+      ],
+      "locations": [
+        "未披露"
+      ],
+      "headcount": null,
+      "employmentTypes": [
+        "校招"
+      ],
+      "graduateScope": "2027届",
+      "previousGraduatesEligible": "no",
+      "education": {
+        "summary": "顶尖人才计划，通常要求硕士及以上，具体未明确",
+        "minimum": "硕士",
+        "preferred": "硕士",
+        "tier": "master",
+        "hardPhdRequired": false
+      },
+      "majors": {
+        "summary": "管理、财务、人力资源、法律等相关专业",
+        "accepted": [
+          "管理学门类",
+          "工商管理",
+          "公共管理",
+          "行政管理"
+        ],
+        "fit": "management"
+      },
+      "applicationRequirements": [
+        "无额外硬性条件"
+      ],
+      "compensation": {
+        "summary": "未披露（顶尖人才计划通常具有竞争力薪酬福利）",
+        "salary": null,
+        "benefits": [
+          "未披露"
+        ],
+        "quality": 3
+      },
+      "deadline": null,
+      "applicationMethod": "扫码投递",
+      "applicationUrl": null,
+      "referralCode": null,
+      "recommendation": {
+        "score": 86,
+        "rankingKey": 1543479,
+        "level": "high",
+        "reasons": [
+          "专业符合管理类方向",
+          "学历要求以硕士为主，符合优先级",
+          "专业匹配（行政管理属于管理学门类）",
+          "公司平台好",
+          "校园招聘",
+          "顶尖计划待遇优厚"
+        ],
+        "concerns": [
+          "学历要求可能较高（硕士起）",
+          "岗位竞争激烈",
+          "地点未明确"
+        ]
+      },
+      "customRequirement": {
+        "active": false,
+        "matched": null,
+        "score": 0,
+        "reasons": [],
+        "concerns": []
+      },
+      "feedbackPreference": {
+        "active": false,
+        "score": 5,
+        "reasons": [],
+        "concerns": []
+      },
+      "accessibility": 4,
+      "evidence": [
+        "OCR文本显示‘综合职能类’及常见岗位",
+        "管理类相关专业描述"
+      ],
+      "confidence": 0.8,
+      "id": "b59a3842560aae79",
+      "personalized": {
+        "eligible": true,
+        "score": 89,
+        "rankingKey": 2009899999,
+        "reasons": [
+          "专业要求明确覆盖行政管理",
+          "明确面向应届毕业生或校园招聘",
+          "学历要求覆盖硕士研究生",
+          "专业符合管理类方向",
+          "学历要求以硕士为主，符合优先级"
+        ],
+        "concerns": [
+          "截止日期未披露，需尽快核对原文",
+          "学历要求可能较高（硕士起）",
+          "岗位竞争激烈"
+        ],
+        "gates": {
+          "freshGraduate": true,
+          "education": true,
+          "major": true,
+          "notSocialRecruitment": true,
+          "notInternship": true,
+          "notPhdOnly": true,
+          "notAssociateThreshold": true,
+          "customRequirement": true
+        }
+      },
+      "account": "北航就业",
+      "reportDate": "2026-07-29",
+      "article": {
+        "title": "招聘 | OPPO | 2027届 O-Star 顶尖人才计划",
+        "url": "https://mp.weixin.qq.com/s/ebY7iqtvn2sc-E-YHlu7Ag",
+        "publishedAt": "2026-07-28T07:37:59.000Z",
+        "summary": "OPPO面向2027届顶尖人才的O-Star计划，招聘AI/算法、软件、硬件、产品、设计、综合职能等岗位。",
+        "ocrUsed": false,
+        "ocrImageCount": 0,
         "analysisSource": "deepseek",
         "extractionComplete": true
       }
@@ -3056,347 +3464,6 @@
         "summary": "华润集团2026年招聘，面向26-28届毕业生，提供多方向管培生岗位，福利待遇优厚。",
         "ocrUsed": false,
         "ocrImageCount": 0,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      }
-    },
-    {
-      "organization": "华润集团",
-      "organizationNature": "央企",
-      "industry": "综合",
-      "jobTitle": "行政专员",
-      "jobDirections": [
-        "行政"
-      ],
-      "locations": [
-        "北京",
-        "陕西",
-        "山东",
-        "河北",
-        "广东",
-        "江苏",
-        "甘肃",
-        "山西",
-        "青海",
-        "福建",
-        "浙江",
-        "湖北"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2026届-2029届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "本科及以上学历",
-        "minimum": "本科",
-        "preferred": null,
-        "tier": "bachelor_associate",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "未明确，推测行政管理相关",
-        "accepted": [
-          "行政管理"
-        ],
-        "fit": "administrative_management"
-      },
-      "applicationRequirements": [
-        "仅限26-29届本科以上学历"
-      ],
-      "compensation": {
-        "summary": "未披露",
-        "salary": null,
-        "benefits": [],
-        "quality": 2
-      },
-      "deadline": null,
-      "applicationMethod": "扫描二维码登记报名",
-      "applicationUrl": null,
-      "referralCode": null,
-      "recommendation": {
-        "score": 85,
-        "rankingKey": 1632369,
-        "level": "high",
-        "reasons": [
-          "专业高度匹配行政管理",
-          "本科或大专层次可报",
-          "央企平台，稳定性高",
-          "专业对口可能性大",
-          "全国多地可选"
-        ],
-        "concerns": [
-          "薪资福利未披露",
-          "报名方式需扫码，无直接链接",
-          "岗位要求不明确"
-        ]
-      },
-      "accessibility": 3,
-      "evidence": [
-        "招聘岗位包括行政专员",
-        "工作地点覆盖全国多地"
-      ],
-      "confidence": 0.7,
-      "id": "9570f943bec8084b",
-      "account": "央企求职网",
-      "reportDate": "2026-07-18",
-      "article": {
-        "title": "华润集团招聘办公室人员",
-        "url": "https://mp.weixin.qq.com/s/Lj02y8NxHyYW77rhAAnonA",
-        "publishedAt": "2026-07-18T06:20:00.000Z",
-        "summary": "华润集团2026年校园招聘，涵盖多个业务单元和岗位，面向26-29届本科及以上学历毕业生。",
-        "ocrUsed": false,
-        "ocrImageCount": 0,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      },
-      "personalized": {
-        "eligible": true,
-        "score": 86,
-        "rankingKey": 2009599999,
-        "reasons": [
-          "专业要求明确覆盖行政管理",
-          "明确面向应届毕业生或校园招聘",
-          "学历门槛为本科，可用硕士学历报考",
-          "专业高度匹配行政管理",
-          "本科或大专层次可报"
-        ],
-        "concerns": [
-          "截止日期未披露，需尽快核对原文",
-          "薪资福利未披露",
-          "报名方式需扫码，无直接链接"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      }
-    },
-    {
-      "organization": "深圳信步科技",
-      "organizationNature": "民企",
-      "industry": "科技",
-      "jobTitle": "职能支持类",
-      "jobDirections": [
-        "人力资源",
-        "财务",
-        "行政"
-      ],
-      "locations": [
-        "深圳"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2027届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "本科及以上学历",
-        "minimum": "本科",
-        "preferred": null,
-        "tier": "bachelor_associate",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "人力资源管理、财务管理、行政管理等相关专业",
-        "accepted": [
-          "人力资源管理",
-          "财务管理",
-          "行政管理"
-        ],
-        "fit": "administrative_management"
-      },
-      "applicationRequirements": [
-        "2027届应届毕业生"
-      ],
-      "compensation": {
-        "summary": "未披露具体薪资，提供有竞争力薪酬福利",
-        "salary": null,
-        "benefits": [
-          "五险一金",
-          "年终奖",
-          "带薪年假"
-        ],
-        "quality": 3
-      },
-      "deadline": null,
-      "applicationMethod": "网申",
-      "applicationUrl": "https://www.seavo.com/careers",
-      "referralCode": null,
-      "recommendation": {
-        "score": 89,
-        "rankingKey": 1633479,
-        "level": "high",
-        "reasons": [
-          "专业高度匹配行政管理",
-          "本科或大专层次可报",
-          "专业匹配度高，行政管理优先",
-          "职能岗位稳定",
-          "提前批机会"
-        ],
-        "concerns": [
-          "薪资未明确",
-          "仅限2027届",
-          "岗位数量可能有限"
-        ]
-      },
-      "accessibility": 4,
-      "evidence": [
-        "面向2027届本科及以上",
-        "职能支持类岗位"
-      ],
-      "confidence": 0.8,
-      "id": "7099e01e8e69087a",
-      "account": "北航就业",
-      "reportDate": "2026-07-18",
-      "article": {
-        "title": "招聘 | 深圳信步科技 | 2027届提前批启动",
-        "url": "https://mp.weixin.qq.com/s/72XIzuMkEyVLdBuWu2gZNA",
-        "publishedAt": "2026-07-18T10:37:10.000Z",
-        "summary": "深圳信步科技2027届提前批招聘，面向2027届硕士/本科，提供技术、产品、市场、职能等岗位，工作地点深圳。",
-        "ocrUsed": false,
-        "ocrImageCount": 0,
-        "analysisSource": "deepseek",
-        "extractionComplete": true
-      },
-      "personalized": {
-        "eligible": true,
-        "score": 84,
-        "rankingKey": 2009399999,
-        "reasons": [
-          "专业要求明确覆盖行政管理",
-          "明确面向应届毕业生或校园招聘",
-          "学历门槛为本科，可用硕士学历报考",
-          "报名入口明确，投递可操作性较高",
-          "专业高度匹配行政管理",
-          "本科或大专层次可报"
-        ],
-        "concerns": [
-          "截止日期未披露，需尽快核对原文",
-          "薪资未明确",
-          "仅限2027届"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      }
-    },
-    {
-      "organization": "中色奥博特铜铝业有限公司",
-      "organizationNature": "央企",
-      "industry": "有色金属",
-      "jobTitle": "生产性岗位",
-      "jobDirections": [
-        "生产管理"
-      ],
-      "locations": [
-        "聊城"
-      ],
-      "headcount": null,
-      "employmentTypes": [
-        "校招"
-      ],
-      "graduateScope": "2026届",
-      "previousGraduatesEligible": "no",
-      "education": {
-        "summary": "本科",
-        "minimum": "本科",
-        "preferred": "本科",
-        "tier": "bachelor_associate",
-        "hardPhdRequired": false
-      },
-      "majors": {
-        "summary": "未明确专业，生产性岗位通常不限专业或工科，行政管理可能匹配",
-        "accepted": [],
-        "fit": "uncertain"
-      },
-      "applicationRequirements": [],
-      "compensation": {
-        "summary": "未披露",
-        "salary": null,
-        "benefits": [],
-        "quality": 0
-      },
-      "deadline": "2026-10-19",
-      "applicationMethod": "国聘官网",
-      "applicationUrl": "https://www.iguopin.com",
-      "referralCode": null,
-      "recommendation": {
-        "score": 40,
-        "rankingKey": 1230269,
-        "level": "low",
-        "reasons": [
-          "专业范围尚需核对原文",
-          "本科或大专层次可报",
-          "央企校招，本科可报"
-        ],
-        "concerns": [
-          "专业要求不明确，可能不匹配行政管理"
-        ]
-      },
-      "customRequirement": {
-        "active": false,
-        "matched": null,
-        "score": 0,
-        "reasons": [],
-        "concerns": []
-      },
-      "accessibility": 2,
-      "evidence": [
-        "生产性岗位可能不限专业"
-      ],
-      "confidence": 0.7,
-      "id": "6a2ab10d07524ab9",
-      "personalized": {
-        "eligible": true,
-        "score": 83,
-        "rankingKey": 2009299999,
-        "reasons": [
-          "专业要求明确覆盖行政管理",
-          "明确面向应届毕业生或校园招聘",
-          "学历门槛为本科，可用硕士学历报考",
-          "报名入口明确，投递可操作性较高",
-          "专业范围尚需核对原文",
-          "本科或大专层次可报"
-        ],
-        "concerns": [
-          "专业要求不明确，可能不匹配行政管理"
-        ],
-        "gates": {
-          "freshGraduate": true,
-          "education": true,
-          "major": true,
-          "notSocialRecruitment": true,
-          "notInternship": true,
-          "notPhdOnly": true,
-          "notAssociateThreshold": true,
-          "customRequirement": true
-        }
-      },
-      "account": "国聘",
-      "reportDate": "2026-07-22",
-      "article": {
-        "title": "校招 | 央国企招聘信息汇总（央企及所属单位）7月（第三期）",
-        "url": "https://mp.weixin.qq.com/s/qanT6tO0VOn3QNW-RT6CmQ",
-        "publishedAt": "2026-07-21T12:10:25.000Z",
-        "summary": "国聘公众号发布的央国企校招岗位汇总，包含多家央企及所属单位的招聘信息，报名截止时间从2026年7月31日至10月19日。",
-        "ocrUsed": true,
-        "ocrImageCount": 4,
         "analysisSource": "deepseek",
         "extractionComplete": true
       }
