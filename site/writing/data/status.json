@@ -1,14 +1,14 @@
 {
-  "state": "ok",
-  "message": "今日范文与点评采集完成。",
-  "lastRunAt": "2026-07-28T23:10:18.671Z",
+  "state": "auth_required",
+  "message": "微信公众号授权已过期，请在网页扫码后继续更新范文库。",
+  "lastRunAt": "2026-07-29T22:55:31.869Z",
   "stats": {
     "accountsConfigured": 1,
-    "accountsSucceeded": 1,
-    "articlesScanned": 61,
-    "newArticles": 3,
-    "candidateArticles": 2,
-    "examplesStored": 1,
+    "accountsSucceeded": 0,
+    "articlesScanned": 0,
+    "newArticles": 0,
+    "candidateArticles": 0,
+    "examplesStored": 0,
     "failedArticles": 0
   }
 }
