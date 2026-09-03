@@ -1,7 +1,7 @@
 {
   "state": "auth_required",
   "message": "微信公众号授权已过期，请在网页扫码恢复。",
-  "lastRunAt": "2026-09-02T23:45:22.649Z",
+  "lastRunAt": "2026-09-03T23:45:32.348Z",
   "auth": {
     "status": "expired",
     "expiresAt": null,
