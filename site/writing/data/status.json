@@ -1,7 +1,7 @@
 {
   "state": "auth_required",
   "message": "微信公众号授权已过期，请在网页扫码后继续更新范文库。",
-  "lastRunAt": "2026-09-07T23:53:21.309Z",
+  "lastRunAt": "2026-09-08T23:47:25.152Z",
   "stats": {
     "accountsConfigured": 1,
     "accountsSucceeded": 0,
